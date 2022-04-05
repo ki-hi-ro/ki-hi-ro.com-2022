@@ -75,6 +75,14 @@ h3,
   margin-bottom: 15px !important;
 }
 
+.col-xs-12 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .single {
   margin-bottom: 0;
   padding-bottom: 0;

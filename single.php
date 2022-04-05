@@ -21,9 +21,6 @@
     padding: 0;
     margin: 0;
   }
-  .single .author.col-xs-12 {
-    width: 900px;
-  }
   .single h2 {
     background: #f7f7f7;
     padding: 15px;
@@ -83,9 +80,24 @@
   code {
     font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
   }
+  @media (max-width: 999px) and (min-width: 768px) {
+    .author.calendar {
+        width: 720px;
+    }
+  }
   @media (min-width: 768px) {
     .sp-img {
       display: none;
+    }
+  }
+  @media (min-width: 1024px) {
+    .single .author.col-xs-12 {
+      width: 900px;
+    }
+  }
+  @media (max-width: 999px) {
+    .header-nav {
+      max-width: 720px;
     }
   }
   @media (max-width: 767px) {

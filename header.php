@@ -200,6 +200,11 @@
 				padding-right: 0;
 			}
 		}
+		@media (max-width: 999px) {
+			.header-nav {
+				max-width: 720px;
+			}
+		}
 		@media (max-width: 767px) {
 			.header-nav {
 				padding: 0 15px;
