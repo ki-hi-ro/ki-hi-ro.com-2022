@@ -205,6 +205,7 @@
 	.home .author p {
     color: #000;
     font-size: 16px;
+		font-weight: 300;
 	}
 	.skill-blog__sec-ttl {
 		text-align: center;

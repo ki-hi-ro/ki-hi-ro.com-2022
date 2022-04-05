@@ -31,13 +31,22 @@
     border-left: 6px solid #333;
     line-height: 40px;
     margin-left: 20px;
+    margin-top: 60px;
   }
   .single h3 {
     border-left: 9px solid #000;
     margin-left: 20px;
+    margin-top: 60px;
   }
   .single h4 {
     margin-left: 20px;
+  }
+  .single p {
+    margin-bottom: 60px;
+  }
+  .single p a {
+    text-decoration: none;
+    font-weight: 600;
   }
   .single article ul {
     margin-top: 10px;
@@ -45,6 +54,34 @@
   }
   .single ul li {
     color: #000;
+  }
+  .single pre {
+    font-size: 17px;
+    background-color: #fafafa;
+    padding: 40px 25px;
+    color: #5a5a5a;
+    font-weight: 500;
+    line-height: 1.5;
+    outline: 1px solid #f0f0f0;
+    border-color: #f0f0f0;
+    text-align: left;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+  .single pre.ml-adjust {
+    margin-left: 22px;
+  }
+  pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 0;
+    word-break: normal;
+  }
+  code {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
   }
   @media (min-width: 768px) {
     .sp-img {

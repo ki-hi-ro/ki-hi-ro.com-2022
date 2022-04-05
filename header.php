@@ -158,7 +158,7 @@
 				width: 750px;
 			}
 			.header-nav {
-				margin: 4rem auto 2rem;
+				margin: 40px auto 20px;
 				max-width: 100%;
 			}
 			.nav-menu__ul {
