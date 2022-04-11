@@ -30,7 +30,7 @@
 	}
 	?>
 	</title>
-	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico">
 
 	<!-- schema.org -->
 	<meta itemprop="name" content="<?php the_title(''); ?>">

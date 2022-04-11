@@ -131,6 +131,9 @@
     .single .author img {
       width: 75%;
     }
+    .single pre.ml-adjust {
+      margin-left: 0;
+    }
   }
   @media (max-width: 500px) {
     .single h1 {

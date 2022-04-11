@@ -291,6 +291,9 @@
 		.home .main-contents .author {
 			padding-bottom: 20px;
 		}
+		.home .author p {
+			padding: 0;
+		}
 		.author__contents ul {
 			padding-left: 20px;
 		}
