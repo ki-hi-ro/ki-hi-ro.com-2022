@@ -33,13 +33,18 @@
     color: #000;
     border-left: 6px solid #333;
     line-height: 40px;
-    margin-left: 20px;
-    margin-top: 60px;
+    margin: 60px 20px 40px;
   }
   .single h3 {
     border-left: 9px solid #000;
     margin-left: 20px;
     margin-top: 60px;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    padding: 0px 15px 0px;
+    font-size: 20px;
   }
   .single h4 {
     margin-left: 20px;
@@ -68,9 +73,7 @@
     outline: 1px solid #f0f0f0;
     border-color: #f0f0f0;
     text-align: left;
-    margin-right: 40px;
-    margin-bottom: 40px;
-    margin-top: 0;
+    margin: 0 20px 40px;
   }
   .single pre.ml-adjust {
     margin-left: 22px;
