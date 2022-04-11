@@ -95,7 +95,7 @@
       width: 900px;
     }
   }
-  @media (max-width: 999px) {
+  @media (max-width: 999px) and (min-width: 768px) {
     .header-nav {
       max-width: 720px;
     }

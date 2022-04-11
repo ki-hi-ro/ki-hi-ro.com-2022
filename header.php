@@ -177,10 +177,15 @@
 				width: 970px;
 			}
 		}
-		@media (min-width: 1000px) {
+		@media (min-width: 1024px) {
 			.header-nav {
 				width: 100%;
 				max-width: 900px;
+			}
+		}
+		@media (min-width: 1000px) and (max-width: 1023px) {
+			.header-nav {
+				max-width: 845px;
 			}
 		}
 		@media (min-width: 1200px) {
@@ -203,6 +208,11 @@
 		@media (max-width: 999px) {
 			.header-nav {
 				max-width: 720px;
+			}
+		}
+		@media (min-width: 721px) and (max-width: 767px) {
+			.header-nav {
+				max-width: 100%;
 			}
 		}
 		@media (max-width: 767px) {
