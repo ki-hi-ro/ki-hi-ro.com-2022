@@ -249,6 +249,11 @@
     display: inline-block;
     margin: 3px 10px;
 	}
+	.random-blog__link:not(:last-child) {
+		margin-bottom: 10px;
+		width: 100%;
+		display: inline-block;
+	}
 	.study-blog__sec-ttl {
 		text-align: center;
 	}
@@ -269,6 +274,11 @@
     text-align: center;
     display: inline-block;
     margin: 3px 10px;
+	}
+	.study-blog__link:not(:last-child) {
+		margin-bottom: 10px;
+		width: 100%;
+		display: inline-block;
 	}
 	@media (min-width: 768px) {
 		.top-schedule {
