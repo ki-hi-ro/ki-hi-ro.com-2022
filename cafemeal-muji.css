@@ -1,8 +1,5 @@
-/* Cafe&Meal MUJIのインラインスタイル */
-/* <style> */
 .single .author .wp-block-image.w-50 {
-  width: 50%;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .single p.mb-4 {
@@ -10,7 +7,7 @@
 }
 
 .single iframe.map {
-  margin-left: 25px;
+  margin-left: 20px;
 }
 
 .single .main-contents h3 {
@@ -50,5 +47,8 @@
   .single iframe.map.sp {
     display: none;
   }
+  .single .author .wp-block-image.w-50 {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
-/* </style> */
