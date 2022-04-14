@@ -10,10 +10,6 @@
   margin-left: 20px;
 }
 
-.single .main-contents h3 {
-  border-left: 6px solid #000;
-}
-
 @media (max-width: 1023px) {
   .single iframe.map.pc {
     display: none;

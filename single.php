@@ -40,7 +40,7 @@
     margin: 60px 20px 40px;
   }
   .single h3 {
-    border-left: 9px solid #000;
+    border-left: 6px solid #000;
     margin-left: 20px;
     margin-top: 60px;
     margin-bottom: 40px;
