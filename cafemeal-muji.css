@@ -47,8 +47,4 @@
   .single iframe.map.sp {
     display: none;
   }
-  .single .author .wp-block-image.w-50 {
-    width: 50%;
-    margin: 0 auto;
-  }
 }

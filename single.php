@@ -102,6 +102,10 @@
     .sp-img {
       display: none;
     }
+    .single .author .wp-block-image.w-50 {
+      width: 50%;
+      margin: 0 auto;
+    }
   }
   @media (min-width: 1024px) {
     .single .author.col-xs-12 {
