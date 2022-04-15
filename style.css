@@ -809,8 +809,7 @@ main {
   }
 }
 
-footer,
-span.sitename.sub {
+footer {
   display: none;
 }
 
@@ -1092,6 +1091,8 @@ header {
 header .blogname {
   padding: 0;
   margin-top: 0;
+  display: flex;
+  align-items: center;
 }
 
 header h1.title {
@@ -1106,6 +1107,13 @@ span.sitename.main {
   font-family: Helvetica Neue;
   letter-spacing: 0.1px;
   font-weight: 500;
+  margin-right: 14px;
+}
+
+span.sitename.sub {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 12px;
 }
 
 .nav-menu {
@@ -1134,6 +1142,7 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 0;
   }
 }
 
@@ -1194,6 +1203,10 @@ header nav ul li a:hover {
   span.sitename.main {
     font-size: 20px;
   }
+  span.sitename.sub {
+    margin-top: 4px;
+    font-size: 10px;
+  }
   .nav-menu__ul {
     padding: 0;
     margin: 0;
@@ -1203,6 +1216,26 @@ header nav ul li a:hover {
   }
   .home .nav-menu__ul {
     margin-top: 2px;
+  }
+}
+
+@media (min-width: 576px) {
+  .header-nav {
+    align-items: center;
+  }
+}
+
+@media (max-width: 575px) {
+  header .blogname {
+    align-items: flex-start;
+    flex-direction: column;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 350px) {
+  .nav-menu__ul li a {
+    font-size: 10px;
   }
 }
 
