@@ -50,15 +50,9 @@
 			<div class="header-nav row">
 
 				<div class="blogname">
-					<?php if (is_front_page()) : ?>
-						<h1 class="title">
-					<?php endif; ?>
-						<a href="<?php echo home_url(); ?>" class="sitename">
-							<span class="sitename main">ki-hi-ro.com</span>
-						</a>
-					<?php if (is_front_page()) : ?>
-						</h1>
-					<?php endif; ?>
+					<a href="<?php echo home_url(); ?>" class="sitename">
+						<span class="sitename main">ki-hi-ro.com</span>
+					</a>
 					<span class="sitename sub">WEB制作フリーランスエンジニア</span>
 				</div>
 
