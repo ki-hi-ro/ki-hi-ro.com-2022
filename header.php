@@ -36,6 +36,9 @@
 	<meta itemprop="name" content="<?php the_title(''); ?>">
 	<meta itemprop="description" content="<?php the_permalink() ?>">
 
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/slick-theme.css"/>
+
 
 	<?php wp_head(); ?>
 </head>
