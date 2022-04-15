@@ -1,0 +1,202 @@
+/* ----------------------------------------------------------------------
+	トップページ
+---------------------------------------------------------------------- */
+.author img {
+  width: 130px;
+  margin: 40px auto 0;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.author h4 {
+  text-align: center;
+  font-family: "Avenir-Next";
+  font-weight: 600;
+  margin-top: 35px;
+  font-size: 20px;
+}
+
+.author hr {
+  width: 20%;
+}
+
+.author p {
+  color: #7B7B7B;
+  font-size: 12px;
+  line-height: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 40px;
+}
+
+.home .author p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.skill-blog__sec-ttl {
+  text-align: center;
+}
+
+.skill-blog__contents {
+  max-width: 648px;
+  margin: 0 auto;
+  border: 1px solid #d2d2d2;
+  padding: 5px 10px;
+  color: #000;
+}
+
+.skill-blog__link:hover {
+  text-decoration: none;
+}
+
+.skill-blog__tag {
+  width: 24%;
+  border: 1px solid #d2d2d2;
+  padding: 0px 20px;
+  text-align: center;
+  display: inline-block;
+  margin: 3px 10px;
+}
+
+.random-blog__sec-ttl {
+  text-align: center;
+}
+
+.random-blog__contents {
+  max-width: 648px;
+  margin: 0 auto;
+  border: 1px solid #d2d2d2;
+  padding: 5px 10px;
+  color: #000;
+}
+
+.random-blog__link:hover {
+  text-decoration: none;
+}
+
+.random-blog__tag {
+  width: 24%;
+  border: 1px solid #d2d2d2;
+  padding: 0px 20px;
+  text-align: center;
+  display: inline-block;
+  margin: 3px 10px;
+}
+
+.random-blog__link:not(:last-child) {
+  margin-bottom: 10px;
+  width: 100%;
+  display: inline-block;
+}
+
+.study-blog__sec-ttl {
+  text-align: center;
+}
+
+.study-blog__contents {
+  max-width: 648px;
+  margin: 0 auto;
+  border: 1px solid #d2d2d2;
+  padding: 5px 10px;
+  color: #000;
+}
+
+.study-blog__link:hover {
+  text-decoration: none;
+}
+
+.study-blog__tag {
+  width: 24%;
+  border: 1px solid #d2d2d2;
+  padding: 0px 20px;
+  text-align: center;
+  display: inline-block;
+  margin: 3px 10px;
+}
+
+.study-blog__link:not(:last-child) {
+  margin-bottom: 10px;
+  width: 100%;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .top-schedule {
+    display: none;
+  }
+
+  .skill-blog {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .study-blog {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .random-blog {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home .main-contents .author {
+    padding-bottom: 20px;
+  }
+
+  .home .author p {
+    padding: 0;
+  }
+
+  .author__contents ul {
+    padding-left: 20px;
+  }
+
+  .top-schedule p:nth-of-type(1) {
+    margin-top: 20px;
+  }
+
+  .skill-blog__sec-ttl {
+    margin-top: 50px;
+  }
+
+  .skill-blog__tag {
+    display: none;
+  }
+
+  .skill-blog__ttl {
+    margin-left: 10px;
+  }
+
+  .random-blog__sec-ttl {
+    margin-top: 50px;
+  }
+
+  .random-blog__tag {
+    display: none;
+  }
+
+  .random-blog__ttl {
+    margin-left: 10px;
+  }
+
+  .study-blog__sec-ttl {
+    margin-top: 50px;
+  }
+
+  .study-blog__tag {
+    display: none;
+  }
+
+  .study-blog__ttl {
+    margin-left: 10px;
+  }
+}

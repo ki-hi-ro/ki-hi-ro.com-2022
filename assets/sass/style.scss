@@ -5,6 +5,7 @@ Theme URI: https://ki-hi-ro.com
 Version: 1.0
 Author: Shibata Hiroki
 */
+
 body {
   color: #333;
   margin: 0;
@@ -66,6 +67,7 @@ h3,
 }
 
 .align-items-center {
+  -ms-flex-align: center !important;
   align-items: center !important;
 }
 
@@ -264,6 +266,8 @@ h3,
 .single-works .tag {
   padding: 0.1rem 1.5rem;
   border-radius: 5%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   font-family: monospace;
 }
@@ -312,6 +316,8 @@ h3,
 
 @media (min-width: 768px) {
   .single-works .tag.sample {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
   }
 }
@@ -324,6 +330,8 @@ h3,
 
 @media (min-width: 768px) {
   .single-works .tag.original {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
   }
 }
@@ -332,9 +340,12 @@ h3,
   .single-works .tag {
     padding: 0.1rem 2rem;
     border-radius: 5%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     font-family: monospace;
   }
+
   .single-works .tag.reproduce {
     color: #000;
     background-color: #e0e0e0;
@@ -386,6 +397,8 @@ h3,
 
 @media (min-width: 768px) and (min-width: 768px) {
   .single-works .tag.sample {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
   }
 }
@@ -400,6 +413,8 @@ h3,
 
 @media (min-width: 768px) and (min-width: 768px) {
   .single-works .tag.original {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
   }
 }
@@ -434,6 +449,7 @@ h3,
   top: 90px;
   right: 100px;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -475,6 +491,8 @@ h3,
 }
 
 .single-code .table-of-contents li {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   cursor: pointer;
   color: #4275aa;
@@ -589,8 +607,9 @@ h3,
   margin-left: 1rem;
 }
 
-.author a:hover > .fa-chevron-right {
+.author a:hover>.fa-chevron-right {
   margin-left: 2rem;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -610,12 +629,17 @@ h3,
 }
 
 .category .article-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .category .article-list .article {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-bottom: 0;
 }
@@ -666,12 +690,17 @@ h3,
 }
 
 .tag .article-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .tag .article-list .article {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-bottom: 0;
 }
@@ -727,6 +756,7 @@ h3,
   .single h3 {
     margin-left: 12px;
   }
+
   .single .post-categories {
     padding-right: 0;
   }
@@ -763,6 +793,9 @@ h3,
 .single .breadcrumbs {
   padding: 2px 2px 0 2px;
 }
+
+/*# sourceMappingURL=style.css.map */
+
 main {
   background: none;
 }
@@ -804,6 +837,7 @@ main {
   .g-callendar.--pc {
     display: none;
   }
+
   .g-callendar {
     padding: 5px 0 0;
   }
@@ -859,10 +893,12 @@ span.sitename.sub {
   span.sitename.main {
     color: #313131db;
   }
+
   .author p {
     padding-left: 0;
     padding-right: 0;
   }
+
   .single .author p {
     padding-left: 0;
     padding-right: 0;
@@ -891,6 +927,7 @@ span.sitename.sub {
 }
 
 @media (max-width: 575px) {
+
   .home .author p,
   .home .author li {
     font-size: 15px;
@@ -1027,541 +1064,8 @@ span.sitename.sub {
   width: 100%;
 }
 
-/* ----------------------------------------------------------------------
-	共通スタイル
----------------------------------------------------------------------- */
-* {
-  box-sizing: border-box;
-}
-
-a {
-  color: #337ab7;
-  text-decoration: none;
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-html {
-  margin-top: 0 !important;
-}
-
-/* ----------------------------------------------------------------------
-	Bootstrap
----------------------------------------------------------------------- */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.justify-content-center {
-  justify-content: center !important;
-}
-
-.col-xs-12 {
-  width: 100%;
-  float: left;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* ----------------------------------------------------------------------
-	ヘッダー
----------------------------------------------------------------------- */
-header {
-  position: relative;
-  padding-bottom: 0;
-}
-
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.header-nav {
-  margin: 2rem auto;
-  text-align: center;
-}
-
-header .blogname {
-  padding: 0;
-  margin-top: 0;
-}
-
-header h1.title {
-  margin-top: -2px;
-  margin-bottom: 0;
-  line-height: 30px;
-}
-
-span.sitename.main {
-  color: #313131db;
-  font-size: 30px;
-  font-family: Helvetica Neue;
-  letter-spacing: 0.1px;
-  font-weight: 500;
-}
-
-.nav-menu {
-  margin-left: auto;
-}
-
-.nav-menu__ul {
-  list-style: none;
-  margin-bottom: 0;
-}
-
-header nav ul li a:hover {
-  text-decoration: none;
-  color: #313131db;
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-  .header-nav {
-    margin: 40px auto 20px;
-    max-width: 100%;
-  }
-  .nav-menu__ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .header-nav {
-    width: 100%;
-    max-width: 900px;
-  }
-}
-
-@media (min-width: 1000px) and (max-width: 1023px) {
-  .header-nav {
-    max-width: 845px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-  .header-nav {
-    margin: 4rem auto 1rem;
-  }
-  header .blogname {
-    margin: 10px 0;
-  }
-}
-
-@media (max-width: 1199px) {
-  .header-container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@media (max-width: 999px) {
-  .header-nav {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 721px) and (max-width: 767px) {
-  .header-nav {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 767px) {
-  .header-nav {
-    padding: 0 15px;
-  }
-  span.sitename.main {
-    font-size: 20px;
-  }
-  .nav-menu__ul {
-    padding: 0;
-    margin: 0;
-  }
-  .nav-menu__ul li {
-    font-size: 14px;
-  }
-  .home .nav-menu__ul {
-    margin-top: 2px;
-  }
-}
-
-/* ----------------------------------------------------------------------
-	トップページ
----------------------------------------------------------------------- */
-.author img {
-  width: 130px;
-  margin: 40px auto 0;
-}
-
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.author h4 {
-  text-align: center;
-  font-family: "Avenir-Next";
-  font-weight: 600;
-  margin-top: 35px;
-  font-size: 20px;
-}
-
-.author hr {
-  width: 20%;
-}
-
-.author p {
-  color: #7B7B7B;
-  font-size: 12px;
-  line-height: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 40px;
-}
-
-.home .author p {
-  color: #000;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.skill-blog__sec-ttl {
-  text-align: center;
-}
-
-.skill-blog__contents {
-  max-width: 648px;
-  margin: 0 auto;
-  border: 1px solid #d2d2d2;
-  padding: 5px 10px;
-  color: #000;
-}
-
-.skill-blog__link:hover {
-  text-decoration: none;
-}
-
-.skill-blog__tag {
-  width: 24%;
-  border: 1px solid #d2d2d2;
-  padding: 0px 20px;
-  text-align: center;
-  display: inline-block;
-  margin: 3px 10px;
-}
-
-.random-blog__sec-ttl {
-  text-align: center;
-}
-
-.random-blog__contents {
-  max-width: 648px;
-  margin: 0 auto;
-  border: 1px solid #d2d2d2;
-  padding: 5px 10px;
-  color: #000;
-}
-
-.random-blog__link:hover {
-  text-decoration: none;
-}
-
-.random-blog__tag {
-  width: 24%;
-  border: 1px solid #d2d2d2;
-  padding: 0px 20px;
-  text-align: center;
-  display: inline-block;
-  margin: 3px 10px;
-}
-
-.random-blog__link:not(:last-child) {
-  margin-bottom: 10px;
-  width: 100%;
-  display: inline-block;
-}
-
-.study-blog__sec-ttl {
-  text-align: center;
-}
-
-.study-blog__contents {
-  max-width: 648px;
-  margin: 0 auto;
-  border: 1px solid #d2d2d2;
-  padding: 5px 10px;
-  color: #000;
-}
-
-.study-blog__link:hover {
-  text-decoration: none;
-}
-
-.study-blog__tag {
-  width: 24%;
-  border: 1px solid #d2d2d2;
-  padding: 0px 20px;
-  text-align: center;
-  display: inline-block;
-  margin: 3px 10px;
-}
-
-.study-blog__link:not(:last-child) {
-  margin-bottom: 10px;
-  width: 100%;
-  display: inline-block;
-}
-
-@media (min-width: 768px) {
-  .top-schedule {
-    display: none;
-  }
-  .skill-blog {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .study-blog {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .random-blog {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  .home .main-contents .author {
-    padding-bottom: 20px;
-  }
-  .home .author p {
-    padding: 0;
-  }
-  .author__contents ul {
-    padding-left: 20px;
-  }
-  .top-schedule p:nth-of-type(1) {
-    margin-top: 20px;
-  }
-  .skill-blog__sec-ttl {
-    margin-top: 50px;
-  }
-  .skill-blog__tag {
-    display: none;
-  }
-  .skill-blog__ttl {
-    margin-left: 10px;
-  }
-  .random-blog__sec-ttl {
-    margin-top: 50px;
-  }
-  .random-blog__tag {
-    display: none;
-  }
-  .random-blog__ttl {
-    margin-left: 10px;
-  }
-  .study-blog__sec-ttl {
-    margin-top: 50px;
-  }
-  .study-blog__tag {
-    display: none;
-  }
-  .study-blog__ttl {
-    margin-left: 10px;
-  }
-}
-
-/* ----------------------------------------------------------------------
-	個別ページ
----------------------------------------------------------------------- */
-.single .nav-menu__ul {
-  padding: 0;
-  margin: 0;
-}
-
-.single h2 {
-  background: #f7f7f7;
-  padding: 15px;
-  color: #000;
-  border-left: 6px solid #333;
-  line-height: 40px;
-  margin: 60px 20px 40px;
-}
-
-.single h3 {
-  border-left: 6px solid #000;
-  margin-left: 20px;
-  margin-top: 60px;
-  margin-bottom: 40px;
-  color: #333;
-  font-weight: 600;
-  letter-spacing: 1.6px;
-  padding: 0px 15px 0px;
-  font-size: 20px;
-}
-
-.single h4 {
-  margin-left: 20px;
-}
-
-.single p {
-  margin-bottom: 60px;
-}
-
-.single p a {
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.single article ul {
-  margin-top: 10px;
-  margin-left: 20px;
-}
-
-.single ul li {
-  color: #000;
-}
-
-.single pre {
-  font-size: 17px;
-  background-color: #fafafa;
-  padding: 40px 25px;
-  color: #5a5a5a;
-  font-weight: 500;
-  line-height: 1.5;
-  outline: 1px solid #f0f0f0;
-  border-color: #f0f0f0;
-  text-align: left;
-  margin: 0 20px 40px;
-}
-
-.single pre.ml-adjust {
-  margin-left: 22px;
-}
-
-pre code {
-  padding: 0;
-  font-size: inherit;
-  color: inherit;
-  background-color: transparent;
-  border-radius: 0;
-  word-break: normal;
-}
-
-code {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-@media (max-width: 999px) and (min-width: 768px) {
-  .author.calendar {
-    width: 720px;
-  }
-}
-
-@media (min-width: 768px) {
-  .sp-img {
-    display: none;
-  }
-  .single .author .wp-block-image.w-50 {
-    width: 50%;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .single .author.col-xs-12 {
-    width: 900px;
-  }
-}
-
-@media (max-width: 999px) and (min-width: 768px) {
-  .header-nav {
-    max-width: 720px;
-  }
-}
-
-@media (max-width: 767px) {
-  .single h1 {
-    margin-top: 0;
-  }
-  .single h2 {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .single h3 {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .single h4 {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .single article ul {
-    margin-left: 0;
-  }
-  .pc-img {
-    display: none;
-  }
-  .single .author img {
-    width: 75%;
-  }
-  .single pre.ml-adjust {
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 500px) {
-  .single h1 {
-    margin-top: 38px;
-  }
-  .single .author img {
-    width: 100%;
-  }
-}
-
-@media (min-width: 992px) {
-  .tb-form {
-    display: none;
-  }
-}
-
-@media (max-width: 991px) {
-  .pc-form {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .sp-form {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .tb-form {
-    display: none;
-  }
-}
+@import "common";
+@import "bootstrap";
+@import "header";
+@import "index";
+@import "single";

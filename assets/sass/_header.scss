@@ -1,0 +1,149 @@
+/* ----------------------------------------------------------------------
+	ヘッダー
+---------------------------------------------------------------------- */
+header {
+  position: relative;
+  padding-bottom: 0;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header-nav {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+header .blogname {
+  padding: 0;
+  margin-top: 0;
+}
+
+header h1.title {
+  margin-top: -2px;
+  margin-bottom: 0;
+  line-height: 30px;
+}
+
+span.sitename.main {
+  color: #313131db;
+  font-size: 30px;
+  font-family: Helvetica Neue;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+}
+
+.nav-menu {
+  margin-left: auto;
+}
+
+.nav-menu__ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+header nav ul li a:hover {
+  text-decoration: none;
+  color: #313131db;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+
+  .header-nav {
+    margin: 40px auto 20px;
+    max-width: 100%;
+  }
+
+  .nav-menu__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-nav {
+    width: 100%;
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1023px) {
+  .header-nav {
+    max-width: 845px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+
+  .header-nav {
+    margin: 4rem auto 1rem;
+  }
+
+  header .blogname {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .header-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 999px) {
+  .header-nav {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 767px) {
+  .header-nav {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-nav {
+    padding: 0 15px;
+  }
+
+  span.sitename.main {
+    font-size: 20px;
+  }
+
+  .nav-menu__ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-menu__ul li {
+    font-size: 14px;
+  }
+
+  .home .nav-menu__ul {
+    margin-top: 2px;
+  }
+}
