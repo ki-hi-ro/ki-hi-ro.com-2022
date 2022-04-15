@@ -36,6 +36,7 @@
 	<meta itemprop="name" content="<?php the_title(''); ?>">
 	<meta itemprop="description" content="<?php the_permalink() ?>">
 
+
 	<?php wp_head(); ?>
 </head>
 
