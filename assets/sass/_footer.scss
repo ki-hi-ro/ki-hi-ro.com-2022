@@ -1,0 +1,44 @@
+footer {
+  margin: 0 auto 30px;
+  background-color: #454545;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  padding: 20px 35px;
+
+  .nav-contents {
+    margin-right: 54px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+
+  h4 {
+    color: #fff;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  li {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    width: 900px;
+  }
+}

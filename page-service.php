@@ -3,7 +3,6 @@
 <div class="top-box col-xs-12">
   <figure class="page-mv">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog-mv.png" alt="ブログ メイン画像">
-    <h1>ブログ一覧</h1>
   </figure>
 
 	<section class="skill-blog" id="skill-blog">
@@ -154,5 +153,18 @@
 
 	</section>
 </div>
+<style>
+  .blog .top-box.col-xs-12 {
+    padding: 0;
+  }
+
+  .page-mv {
+    margin: 0;
+  }
+
+  .page-mv img {
+    width: 100%;
+  }
+</style>
 
 <?php get_footer();?>
