@@ -1398,6 +1398,14 @@ a.top-contents__card {
   border: 1px solid #d2d2d2;
 }
 
+.card:nth-child(1) {
+  margin-right: 10px;
+}
+
+.card:nth-child(2) {
+  margin-left: 10px;
+}
+
 .card:hover {
   transform: translateY(-3px);
   transition: all .3s;
@@ -1407,16 +1415,24 @@ a.top-contents__card {
   width: 100%;
   height: auto;
   padding-top: 56.25%;
-  background-image: url(https://ki-hi-ro.com/dev-ki-hi-ro/wp-content/themes/ki-hi-ro.com-2022/assets/img/top/blog.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   box-sizing: border-box;
 }
 
+.card__imgframe.introduce {
+  background-image: url(https://ki-hi-ro.com/dev-ki-hi-ro/wp-content/themes/ki-hi-ro.com-2022/assets/img/top/introduce.png);
+  background-size: cover;
+}
+
+.card__imgframe.blog {
+  background-image: url(https://ki-hi-ro.com/dev-ki-hi-ro/wp-content/themes/ki-hi-ro.com-2022/assets/img/top/blog.png);
+}
+
 .card__textbox {
   width: 100%;
-  height: auto;
+  height: 164px;
   padding: 20px 18px 6px;
   background: #fff;
   box-sizing: border-box;
@@ -1500,6 +1516,8 @@ a.top-contents__card {
   }
   .top-contents {
     padding-bottom: 52px;
+    flex-direction: column;
+    align-items: center;
   }
   .skill-blog__sec-ttl {
     margin-top: 50px;
@@ -1527,6 +1545,13 @@ a.top-contents__card {
   }
   .study-blog__ttl {
     margin-left: 10px;
+  }
+  .card:nth-child(1) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .card:nth-child(2) {
+    margin-left: 0;
   }
   .card__img {
     height: 250px;
