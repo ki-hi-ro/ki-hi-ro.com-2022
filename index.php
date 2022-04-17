@@ -40,9 +40,20 @@
 
 			</div>
 		</a> -->
+		<a class="top-contents__card" href="<?php echo home_url('introduce'); ?>">
+			<div class="card">
+				<div class="card__imgframe introduce"></div>
+				<div class="card__textbox">
+					<div class="card__titletext">自己紹介</div>
+					<div class="card__overviewtext">
+						<p>経歴など</p>
+					</div>
+				</div>
+			</div>
+		</a>
 		<a class="top-contents__card" href="<?php echo home_url('blog'); ?>">
 			<div class="card">
-				<div class="card__imgframe"></div>
+				<div class="card__imgframe blog"></div>
 				<div class="card__textbox">
 					<div class="card__titletext">ブログ</div>
 					<div class="card__overviewtext">
