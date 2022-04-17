@@ -126,6 +126,70 @@
   display: inline-block;
 }
 
+  .author-text {
+    text-align: center;
+  }
+
+  .top-contents {
+    display: flex;
+    justify-content: center;
+  }
+
+  a.top-contents__card {
+    color: #333;
+  }
+
+ .card {
+   width: 288px;
+   height: auto;
+   border-radius: 8px;
+   overflow: hidden;
+   border: 1px solid #d2d2d2;
+
+   &:hover {
+    transform: translateY(-3px);
+    transition: all .3s;
+   }
+ }
+ .card__imgframe {
+   width: 100%;
+   height: auto;
+   padding-top: 56.25%;
+   background-image: url(https://ki-hi-ro.com/dev-ki-hi-ro/wp-content/themes/ki-hi-ro.com-2022/assets/img/top/blog.png);
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   box-sizing: border-box;
+ }
+
+ .card__textbox {
+   width: 100%;
+   height: auto;
+   padding: 20px 18px 6px;
+   background: #fff;
+   box-sizing: border-box;
+ }
+
+ .card__textbox>*+* {
+   margin-top: 10px;
+ }
+
+ .card__titletext {
+   font-size: 20px;
+   font-weight: bold;
+   line-height: 125%;
+ }
+
+ .card__overviewtext {
+   font-size: 12px;
+   line-height: 150%;
+
+   ul {
+     line-height: 1.8;
+     margin-top: 0;
+   }
+ }
+
 @media (min-width: 768px) {
   .top-schedule {
     display: none;
@@ -147,11 +211,37 @@
   }
 }
 
-@media (max-width: 767px) {
-  .home .main-contents .author {
-    padding-bottom: 20px;
+@media (min-width: 1000px) and (max-width: 1023px) {
+  .top-box {
+    width: 845px;
   }
 
+  .card__img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 999px) and (min-width: 768px) {
+  .top-box {
+    width: 720px;
+  }
+
+  .card__img {
+    height: 130px;
+  }
+
+  .card__text {
+    height: calc(100% - 130px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .top-box {
+    width: 900px;
+  }
+}
+
+@media (max-width: 767px) {
   .home .author p {
     padding: 0;
   }
@@ -162,6 +252,10 @@
 
   .top-schedule p:nth-of-type(1) {
     margin-top: 20px;
+  }
+
+  .top-contents {
+    padding-bottom: 52px;
   }
 
   .skill-blog__sec-ttl {
@@ -198,5 +292,14 @@
 
   .study-blog__ttl {
     margin-left: 10px;
+  }
+
+  .card__img {
+    height: 250px;
+    width: 100%;
+  }
+
+  .card__text {
+    height: calc(100% - 250px);
   }
 }

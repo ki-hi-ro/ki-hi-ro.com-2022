@@ -1,13 +1,19 @@
 /* ----------------------------------------------------------------------
-	個別ページ
+	固定ページ
 ---------------------------------------------------------------------- */
 
-.single .nav-menu__ul {
+.page .nav-menu__ul {
   padding: 0;
   margin: 0;
 }
 
-.single h2 {
+.page h1 {
+  color: #000;
+  text-align: center;
+  margin-top: 56px;
+}
+
+.page h2 {
   background: #f7f7f7;
   padding: 15px;
   color: #000;
@@ -16,7 +22,7 @@
   margin: 60px 20px 40px;
 }
 
-.single h3 {
+.page h3 {
   border-left: 6px solid #000;
   margin-left: 20px;
   margin-top: 60px;
@@ -28,25 +34,30 @@
   font-size: 20px;
 }
 
-.single p {
+.page p {
+  margin-top: 40px;
   margin-bottom: 60px;
+  padding: 0 20px 0 20px;
+  color: #000;
+  font-size: 16px;
+  line-height: 30px;
 }
 
-.single p a {
+.page p a {
   text-decoration: none;
   font-weight: 600;
 }
 
-.single article ul {
+.page article ul {
   margin-top: 10px;
   margin-left: 20px;
 }
 
-.single ul li {
+.page ul li {
   color: #000;
 }
 
-.single pre {
+.page pre {
   font-size: 17px;
   background-color: #fafafa;
   padding: 40px 25px;
@@ -59,7 +70,7 @@
   margin: 0 20px 40px;
 }
 
-.single pre.ml-adjust {
+.page pre.ml-adjust {
   margin-left: 22px;
 }
 
@@ -76,11 +87,11 @@ code {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.single .author .wp-block-image {
+.page .author .wp-block-image {
   text-align: center;
 }
 
-.single iframe.map {
+.page iframe.map {
   margin-left: 20px;
 }
 
@@ -89,20 +100,51 @@ code {
   margin: 0 auto;
 }
 
+.page footer nav h4 {
+  margin-left: 0;
+}
+
+.page h2 {
+  border: none;
+}
+
+.page .top-box.col-xs-12 {
+  padding: 0 0 20px;
+}
+
+.page-mv {
+  margin: 0;
+  position: relative;
+
+  h1 {
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 30px;
+    margin-top: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1023px) {
-  .single iframe.map.pc {
+  .page iframe.map.pc {
     display: none;
   }
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {
-  .single iframe.map.pc {
+  .page iframe.map.pc {
     display: none;
   }
 }
 
 @media (min-width: 1024px) {
-  .single iframe.map.tb {
+  .page iframe.map.tb {
     display: none;
   }
 }
@@ -118,18 +160,18 @@ code {
     display: none;
   }
 
-  .single .author .wp-block-image.w-50 {
+  .page .author .wp-block-image.w-50 {
     width: 50%;
     margin: 0 auto;
   }
 
-  .single iframe.map.sp {
+  .page iframe.map.sp {
     display: none;
   }
 }
 
 @media (min-width: 1024px) {
-  .single .author.col-xs-12 {
+  .page .author.col-xs-12 {
     width: 900px;
   }
 }
@@ -141,26 +183,30 @@ code {
 }
 
 @media (max-width: 767px) {
-  .single h1 {
+  .page h1 {
     margin-top: 0;
   }
 
-  .single h2 {
+  .page h2 {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .page h3 {
     margin-left: 0;
     margin-right: 0;
   }
 
-  .single h3 {
+  .page h4 {
     margin-left: 0;
     margin-right: 0;
   }
 
-  .single h4 {
-    margin-left: 0;
-    margin-right: 0;
+  .page p {
+    padding: 0;
   }
 
-  .single article ul {
+  .page article ul {
     margin-left: 0;
   }
 
@@ -168,31 +214,53 @@ code {
     display: none;
   }
 
-  .single .author img {
+  .page .author img {
     width: 75%;
+
+    &.img-circle {
+      width: 130px;
+    }
   }
 
-  .single pre.ml-adjust {
+
+
+  .page pre.ml-adjust {
     margin-left: 0;
   }
 
-  .single iframe.map.tb {
+  .page iframe.map.tb {
     display: none;
   }
 
-  .single iframe.map.sp {
+  .page iframe.map.sp {
     display: block;
     margin-left: 0;
+  }
+
+  .tb-form {
+    display: none;
+  }
+
+  .page__contents-container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .page-mv {
+    h1 {
+      font-size: 22px;
+    }
   }
 }
 
 @media (max-width: 500px) {
-  .single h1 {
-    margin-top: 38px;
-  }
-
-  .single .author img {
+  .page .author img {
     width: 100%;
+
+    &.img-circle {
+      width: 130px;
+    }
   }
 }
 
@@ -214,8 +282,4 @@ code {
   }
 }
 
-@media (max-width: 767px) {
-  .tb-form {
-    display: none;
-  }
-}
+@import "page/introduce"

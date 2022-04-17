@@ -842,10 +842,6 @@ main {
   }
 }
 
-footer {
-  display: none;
-}
-
 .single p {
   padding: 0 20px 0 20px;
   color: #000;
@@ -1067,3 +1063,5 @@ footer {
 @import "header";
 @import "index";
 @import "single";
+@import "page";
+@import "footer";
