@@ -1475,6 +1475,7 @@ a.top-contents__card {
 @media (max-width: 767px) {
   .home .author p {
     padding: 0;
+    text-align: left;
   }
   .author__contents ul {
     padding-left: 20px;
