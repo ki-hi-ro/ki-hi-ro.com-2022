@@ -281,4 +281,18 @@
   .study-blog__ttl {
     margin-left: 10px;
   }
+
+  .top-contents__card {
+    width: calc((100% - 30px));
+    margin-bottom: 50px;
+  }
+
+  .card__img {
+    height: 250px;
+    width: 100%;
+  }
+
+  .card__text {
+    height: calc(100% - 250px);
+  }
 }
