@@ -31,17 +31,28 @@
 				<p>経歴や趣味など</p>
 			</div>
 		</div> -->
-		<a class="top-contents__card" href="<?php echo home_url('blog'); ?>">
+		<!-- <a class="top-contents__card" href="<?php echo home_url('blog'); ?>">
 			<figure class="card__img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/blog.png" alt="ブログ">
+
 			</figure>
 			<div class="card__text">
 				<h3>ブログ</h3>
-				<ul>
-					<li>技術ブログ</li>
-					<li>学習ブログ</li>
-					<li>雑記ブログ</li>
-				</ul>
+
+			</div>
+		</a> -->
+		<a class="top-contents__card" href="<?php echo home_url('blog'); ?>">
+			<div class="card">
+				<div class="card__imgframe"></div>
+				<div class="card__textbox">
+					<div class="card__titletext">ブログ</div>
+					<div class="card__overviewtext">
+						<ul>
+							<li>技術ブログ</li>
+							<li>学習ブログ</li>
+							<li>雑記ブログ</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</a>
 	</section>

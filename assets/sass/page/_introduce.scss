@@ -16,4 +16,16 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  @media (max-width: 767px) {
+    p {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  .message {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  }
 }

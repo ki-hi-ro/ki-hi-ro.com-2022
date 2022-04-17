@@ -202,6 +202,10 @@ code {
     margin-right: 0;
   }
 
+  .page p {
+    padding: 0;
+  }
+
   .page article ul {
     margin-left: 0;
   }
@@ -212,7 +216,13 @@ code {
 
   .page .author img {
     width: 75%;
+
+    &.img-circle {
+      width: 130px;
+    }
   }
+
+
 
   .page pre.ml-adjust {
     margin-left: 0;
@@ -247,6 +257,10 @@ code {
 @media (max-width: 500px) {
   .page .author img {
     width: 100%;
+
+    &.img-circle {
+      width: 130px;
+    }
   }
 }
 
