@@ -2,169 +2,39 @@
 
 <div class="top-box col-xs-12">
   <figure class="page-mv">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog-mv.png" alt="ブログ メイン画像">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service/service-mv.png" alt="サービス メイン画像">
+		<h1>サービス一覧</h1>
   </figure>
 
-	<section class="skill-blog" id="skill-blog">
-		<h2 class="skill-blog__sec-ttl">技術ブログ</h2>
-		<?php
-		$args = array(
-				'category_name' => 'skill-blog',
-				'post_type' => 'post',
-				'posts_per_page' => 10,
-		);
-		$myposts = get_posts($args);
-		foreach ($myposts as $post):
-				setup_postdata($post);
-				?>
-												<a class="skill-blog__link" href="<?php the_permalink();?>">
-													<div class="skill-blog__contents">
-														<span class="skill-blog__date">
-															<?php echo get_the_date('Y.m.d'); ?>
-														</span>
-														<?php
-				$posttags = get_the_tags();
-				if ($posttags):
-				?>
-														<span class="skill-blog__tag">
-															<?php
-				foreach ($posttags as $tag) {
-						echo $tag->name . ' ';
-				}
-				?>
-														</span>
-														<?php endif;?>
-						<span class="skill-blog__ttl">
-							<?php the_title();?>
-						</span>
-					</div>
-				</a>
+	<section class="web-update" id="web-update">
+		<h2 class="web-update__sec-ttl">WEBサイトの更新サポート</h2>
+		<p class="web-update__text">WEBマーケティングの過程で発生したコーディングの対応が可能です。お申し込みは<a href="<?php echo home_url("page-service-apply");?>">こちら</a></p>
 
-				<?php
-		endforeach;
-		wp_reset_postdata();
-		?>
+		<h3 class="web-update__list-ttl">主な対応項目と料金</h3>
+		<ul class="web-update__ul">
+			<li>文言変更・項目削除など・・・2,000円(税抜)</li>
+			<li>新規セクション追加・・・4,000円(税抜)</li>
+			<li>新規ページ追加・・・7,500円(税抜)</li>
+		</ul>
 
-				<!-- <button class="skill-blog__btn">
-					<a class="skill-blog-btn__link" href="">技術ブログ一覧</a>
-				</button> -->
+		<h3 class="web-update__list-ttl">対応経験のあるCMS</h3>
+		<ul class="web-update__ul">
+			<li>WordPress</li>
+			<li>EC-CUBE</li>
+			<li>FutureShop</li>
+		</ul>
 
 	</section>
 
-	<section class="study-blog" id="study-blog">
-		<?php
-		$args = array(
-				'category_name' => 'study-blog',
-				'post_type' => 'post',
-				'posts_per_page' => 10,
-				'post_status' => 'publish',
-		);
-		$myposts = get_posts($args);
-		if ($myposts):
-		?>
-				<h2 class="study-blog__sec-ttl">学習ブログ</h2>
-				<?php
-		foreach ($myposts as $post):
-				setup_postdata($post);
-				?>
-												<a class="study-blog__link" href="<?php the_permalink();?>">
-													<div class="study-blog__contents">
-														<span class="study-blog__date">
-															<?php echo get_the_date('Y.m.d'); ?>
-														</span>
-														<?php
-				$posttags = get_the_tags();
-				if ($posttags):
-				?>
-														<span class="study-blog__tag">
-															<?php
-				foreach ($posttags as $tag) {
-						echo $tag->name . ' ';
-				}
-				?>
-														</span>
-														<?php endif;?>
-						<span class="study-blog__ttl">
-							<?php the_title();?>
-						</span>
-					</div>
-				</a>
-
-				<?php
-		endforeach;
-		endif;
-		wp_reset_postdata();
-		?>
-
-				<!-- <button class="study-blog__btn">
-					<a class="study-blog-btn__link" href="">学習ブログ一覧</a>
-				</button> -->
-
+	<section class="web-update" id="web-update">
+		<h2 class="web-update__sec-ttl">WEBサイトの更新サポート</h2>
+		<p class="web-update__text">WEBマーケティングの過程で発生したコーディングの対応が可能です。</p>
+		<p class="web-update__text">- 主な対応項目と料金</p>
+		<ul>
+			<li>文言変更・項目削除など・・・2,000円(税抜)</li>
+			<li>新規セクション追加・・・4,000円(税抜)</li>
+			<li>新規ページ追加・・・7,500円(税抜)</li>
+		</ul>
 	</section>
-
-	<section class="random-blog" id="random-blog">
-			<?php
-			$args = array(
-					'category_name' => 'random-blog',
-					'post_type' => 'post',
-					'posts_per_page' => 10,
-					'post_status' => 'publish',
-			);
-			$myposts = get_posts($args);
-			if ($myposts):
-			?>
-					<h2 class="random-blog__sec-ttl">雑記ブログ</h2>
-					<?php
-			foreach ($myposts as $post):
-					setup_postdata($post);
-					?>
-													<a class="random-blog__link" href="<?php the_permalink();?>">
-														<div class="random-blog__contents">
-															<span class="random-blog__date">
-																<?php echo get_the_date('Y.m.d'); ?>
-															</span>
-															<?php
-					$posttags = get_the_tags();
-					if ($posttags):
-					?>
-															<span class="random-blog__tag">
-																<?php
-					foreach ($posttags as $tag) {
-							echo $tag->name . ' ';
-					}
-					?>
-															</span>
-															<?php endif;?>
-							<span class="random-blog__ttl">
-								<?php the_title();?>
-							</span>
-						</div>
-					</a>
-
-					<?php
-			endforeach;
-			endif;
-			wp_reset_postdata();
-			?>
-
-			<!-- <button class="random-blog__btn">
-				<a class="random-blog-btn__link" href="">雑記ブログ一覧</a>
-			</button> -->
-
-	</section>
-</div>
-<style>
-  .blog .top-box.col-xs-12 {
-    padding: 0;
-  }
-
-  .page-mv {
-    margin: 0;
-  }
-
-  .page-mv img {
-    width: 100%;
-  }
-</style>
 
 <?php get_footer();?>

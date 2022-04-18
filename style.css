@@ -1421,6 +1421,11 @@ a.top-contents__card {
   box-sizing: border-box;
 }
 
+.card__imgframe.service {
+  background-image: url(https://ki-hi-ro.com/dev-ki-hi-ro/wp-content/themes/ki-hi-ro.com-2022/assets/img/top/service.png);
+  background-size: cover;
+}
+
 .card__imgframe.introduce {
   background-image: url(https://ki-hi-ro.com/dev-ki-hi-ro/wp-content/themes/ki-hi-ro.com-2022/assets/img/top/introduce.png);
   background-size: cover;
@@ -2061,6 +2066,14 @@ code {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+.page h2.web-update__sec-ttl {
+  border-left: 6px solid #333;
+}
+
+.page h3.web-update__list-ttl {
+  margin-bottom: 23px;
 }
 
 footer {

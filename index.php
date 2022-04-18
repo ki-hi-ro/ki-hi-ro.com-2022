@@ -13,33 +13,17 @@
 	</section>
 
 	<section class="top-contents">
-		<!-- <div class="top-contents__card">
-			<figure class="card__img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/serivice.png" alt="サービス">
-			</figure>
-			<div class="card__text">
-				<h3>サービス一覧</h3>
-				<p>WEBサイトの更新サポートや<br>新規サイト制作など</p>
+		<a class="top-contents__card" href="<?php echo home_url('service'); ?>">
+			<div class="card">
+				<div class="card__imgframe introduce"></div>
+				<div class="card__textbox">
+					<div class="card__titletext">サービス一覧</div>
+					<div class="card__overviewtext">
+						<p>WEBサイトの更新サポートや<br>新規サイト制作など</p>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="top-contents__card">
-			<figure class="card__img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/introduce.png" alt="自己紹介">
-			</figure>
-			<div class="card__text">
-				<h3>自己紹介</h3>
-				<p>経歴や趣味など</p>
-			</div>
-		</div> -->
-		<!-- <a class="top-contents__card" href="<?php echo home_url('blog'); ?>">
-			<figure class="card__img">
-
-			</figure>
-			<div class="card__text">
-				<h3>ブログ</h3>
-
-			</div>
-		</a> -->
+		</a>
 		<a class="top-contents__card" href="<?php echo home_url('introduce'); ?>">
 			<div class="card">
 				<div class="card__imgframe introduce"></div>
