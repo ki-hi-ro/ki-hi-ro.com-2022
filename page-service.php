@@ -11,7 +11,7 @@
 			<h2 class="web-update__sec-ttl">WEBサイトの更新サポート</h2>
 			<p class="web-update__text">
 				WEBマーケティングの過程で発生したコーディングの対応が可能です。<br>
-				お問い合わせは<a href="<?php echo home_url('service-apply#web-update');?>">こちら</a>
+				お問い合わせは<a href="<?php echo home_url('service-contact#web-update');?>">こちら</a>
 			</p>
 
 			<h3 class="web-update__list-ttl">主な対応項目と料金</h3>
@@ -34,7 +34,7 @@
 			<h2 class="new-site-coding__sec-ttl">新規サイトコーディング</h2>
 			<p class="new-site-coding__text">
 				HTML / CSSコーディング、LPコーディング、WordPressサイト構築が対応可能です。<br>
-				お問い合わせは<a href="<?php echo home_url('service-apply#new-site-coding');?>">こちら</a>
+				お問い合わせは<a href="<?php echo home_url('service-contact#new-site-coding');?>">こちら</a>
 			</p>
 			<h3 class="new-site-coding__list-ttl">主な対応項目と料金</h3>
 			<ul class="new-site-coding__ul">
