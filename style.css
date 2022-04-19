@@ -1998,6 +1998,10 @@ code {
     margin-left: -15px;
     margin-right: -15px;
   }
+  .page.service h2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .page h3 {
     margin-left: 0;
     margin-right: 0;
@@ -2109,6 +2113,14 @@ code {
   margin-bottom: 23px;
 }
 
+.page h2.new-site-coding__sec-ttl {
+  border-left: 6px solid #333;
+}
+
+.page h3.new-site-coding__list-ttl {
+  margin-bottom: 23px;
+}
+
 footer {
   margin: 0 auto 30px;
   background-color: #454545;
@@ -2157,6 +2169,10 @@ footer nav li {
 @media (max-width: 767px) {
   footer {
     margin-bottom: 0;
+  }
+  footer nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 

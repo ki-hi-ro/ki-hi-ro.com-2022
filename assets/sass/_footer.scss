@@ -47,6 +47,11 @@ footer nav {
   footer {
     margin-bottom: 0;
   }
+
+  footer nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 575px) {
