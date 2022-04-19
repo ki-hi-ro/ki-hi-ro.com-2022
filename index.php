@@ -13,9 +13,9 @@
 	</section>
 
 	<section class="top-contents">
-		<a class="top-contents__card" href="<?php echo home_url('service'); ?>">
+		<a class="top-contents__card --service" href="<?php echo home_url('service'); ?>">
 			<div class="card">
-				<div class="card__imgframe introduce"></div>
+				<div class="card__imgframe service"></div>
 				<div class="card__textbox">
 					<div class="card__titletext">サービス一覧</div>
 					<div class="card__overviewtext">
@@ -24,7 +24,7 @@
 				</div>
 			</div>
 		</a>
-		<a class="top-contents__card" href="<?php echo home_url('introduce'); ?>">
+		<a class="top-contents__card --introduce" href="<?php echo home_url('introduce'); ?>">
 			<div class="card">
 				<div class="card__imgframe introduce"></div>
 				<div class="card__textbox">
@@ -35,8 +35,8 @@
 				</div>
 			</div>
 		</a>
-		<a class="top-contents__card" href="<?php echo home_url('blog'); ?>">
-			<div class="card">
+		<a class="top-contents__card --blog" href="<?php echo home_url('blog'); ?>">
+			<div class="card last">
 				<div class="card__imgframe blog"></div>
 				<div class="card__textbox">
 					<div class="card__titletext">ブログ</div>

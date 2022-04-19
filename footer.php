@@ -7,13 +7,13 @@
 
 <footer>
 	<nav>
-		<!-- <div class="nav-contents">
-			<h4><a href="">サービス一覧</a></h4>
+		<div class="nav-contents">
+			<h4><a href="<?php echo home_url('service'); ?>">サービス一覧</a></h4>
 			<ul>
-				<li><a href="">WEBサイトの更新サポート</a></li>
-				<li><a href="">新規サイトコーディング</a></li>
+				<li><a href="<?php echo home_url('service#web-update'); ?>">WEBサイトの更新サポート</a></li>
+				<li><a href="<?php echo home_url('service#new-site-coding'); ?>">新規サイトコーディング</a></li>
 			</ul>
-		</div> -->
+		</div>
 		<div class="nav-contents">
 			<h4><a href="<?php echo home_url('introduce'); ?>">自己紹介</h4>
 			<ul>
