@@ -2121,20 +2121,20 @@ code {
   margin-bottom: 23px;
 }
 
-.service-apply.page h1 br {
+.service-contact.page h1 br {
   display: none;
 }
 
-.service-apply.page h2 {
+.service-contact.page h2 {
   border-left: 6px solid #333;
 }
 
-.service-apply.page .text-danger {
+.service-contact.page .text-danger {
   color: red;
   font-weight: 500;
 }
 
-.service-apply.page .submit-btn {
+.service-contact.page .submit-btn {
   padding: 0 20px;
   text-align: center;
   display: flex;
@@ -2143,16 +2143,16 @@ code {
   margin: 0 auto;
 }
 
-.service-apply.page .wpcf7-text {
+.service-contact.page .wpcf7-text {
   padding: 7px;
 }
 
-.service-apply.page .wpcf7-textarea {
+.service-contact.page .wpcf7-textarea {
   width: 100%;
   padding: 7px;
 }
 
-.service-apply.page .wpcf7-submit {
+.service-contact.page .wpcf7-submit {
   background-color: #fff;
   border: 1px solid #000;
   outline: none;
@@ -2160,7 +2160,7 @@ code {
   font-size: 17px;
 }
 
-.service-apply.page .wpcf7-submit:hover {
+.service-contact.page .wpcf7-submit:hover {
   cursor: pointer;
   background-color: #000;
   border: 1px solid #fff;
@@ -2169,30 +2169,34 @@ code {
   font-weight: bold;
 }
 
-.service-apply.page .wpcf7-response-output {
+.service-contact.page .wpcf7-response-output {
   text-align: center;
   margin: 2em 20px 1em;
 }
 
 @media (max-width: 767px) {
-  .service-apply.page h2 {
+  .service-contact.page h2 {
     margin-left: 0;
     margin-right: 0;
   }
 }
 
 @media (max-width: 575px) {
-  .service-apply.page h1 {
+  .service-contact.page h1 {
     line-height: 1.5;
   }
-  .service-apply.page h1 br {
+  .service-contact.page h1 br {
     display: block;
   }
-  .service-apply.page h2 {
+  .service-contact.page h2 {
     font-size: 18px;
   }
-  .service-apply.page .submit-btn {
+  .service-contact.page .submit-btn {
     width: 100%;
+    padding: 0;
+  }
+  .service-contact.page .wpcf7-response-output {
+    margin: 2em 0 1em;
   }
 }
 

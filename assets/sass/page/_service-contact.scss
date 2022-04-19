@@ -1,4 +1,4 @@
-.service-apply.page {
+.service-contact.page {
   h1 br {
     display: none;
   }
@@ -54,7 +54,7 @@
 }
 
 @media (max-width: 767px) {
-  .service-apply.page {
+  .service-contact.page {
     h2 {
       margin-left: 0;
       margin-right: 0;
@@ -63,7 +63,7 @@
 }
 
 @media (max-width: 575px) {
-  .service-apply.page {
+  .service-contact.page {
     h1 {
       line-height: 1.5;
 
@@ -78,6 +78,11 @@
 
     .submit-btn {
       width: 100%;
+      padding: 0;
+    }
+
+    .wpcf7-response-output {
+      margin: 2em 0 1em;
     }
   }
 }
