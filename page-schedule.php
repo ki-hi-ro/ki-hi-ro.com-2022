@@ -5,13 +5,8 @@
 	<div class="author__contents">
     <?php if(have_posts()): ?>
         <?php while(have_posts()): the_post(); ?>
-          <?php
-          $week_list = ['日','月','火','水','木','金','土'];
-          $week_num = date('w');
-          $today_week = $week_list[$week_num];
-          $minute = intval(date('i'));
-          ?>
-          <p class="last-modified-date-time">最終更新日時は、<?php the_modified_date("Y年n月j日 ${today_week}曜日 G時${minute}分"); ?>です。</p>
+          <?php $minute = intval(date('i')); ?>
+          <p class="last-modified-date-time">最終更新日時は、<?php the_modified_date("Y年n月j日 G時${minute}分"); ?>です。</p>
 
           <p>毎朝更新予定で、当日の予定は、ほとんど確定です。</p>
 
