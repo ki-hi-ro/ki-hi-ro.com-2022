@@ -1290,14 +1290,13 @@ header nav ul li a:hover {
   font-weight: 300;
 }
 
-.consultation-bnr {
-  width: 763px;
+.consultation-bnr__wrap {
   display: block;
   margin: 0 auto 40px;
   position: relative;
 }
 
-.consultation-bnr p {
+.consultation-bnr__wrap p {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1308,11 +1307,11 @@ header nav ul li a:hover {
   font-weight: bold;
 }
 
-.consultation-bnr img {
-  width: 763px;
+.consultation-bnr__wrap img {
+  width: 100%;
 }
 
-.consultation-bnr:hover {
+.consultation-bnr__wrap:hover {
   opacity: .6;
   transform: all .3s;
 }
@@ -1529,6 +1528,9 @@ a.top-contents__card.--blog {
   .card__text {
     height: calc(100% - 130px);
   }
+  .consultation-bnr__wrap {
+    padding: 0 20px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1613,6 +1615,9 @@ a.top-contents__card.--blog {
   .card {
     width: 458px;
   }
+  .consultation-bnr.--sp {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1621,9 +1626,35 @@ a.top-contents__card.--blog {
   }
 }
 
+@media (min-width: 1000px) {
+  .author {
+    margin-bottom: 0;
+  }
+  .consultation-bnr__wrap {
+    width: 763px;
+  }
+}
+
 @media (max-width: 576px) {
   .card {
     width: 288px;
+  }
+  .consultation-bnr__wrap p {
+    font-size: 29px;
+    width: 100%;
+    text-align: center;
+  }
+  .consultation-bnr__wrap img {
+    width: 288px;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 1px solid #d2d2d2;
+  }
+  .consultation-bnr {
+    display: none;
+  }
+  .consultation-bnr.--sp {
+    display: block;
   }
 }
 
@@ -2258,6 +2289,7 @@ code {
 
 .consultation .page-mv h1 {
   color: #000;
+  font-weight: bold;
 }
 
 .consultation .text-danger {

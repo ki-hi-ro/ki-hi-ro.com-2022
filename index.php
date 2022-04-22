@@ -12,9 +12,10 @@
 		</div>
 	</section>
 
-	<a href="<?php echo home_url('consultation'); ?>" class="consultation-bnr">
+	<a href="<?php echo home_url('consultation'); ?>" class="consultation-bnr__wrap">
 		<p>無料相談実施中</p>
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/consultation-bnr.png">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/consultation-bnr.png" class="consultation-bnr">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/consultation-bnr-sp.png" class="consultation-bnr --sp">
 	</a>
 
 	<section class="top-contents">
