@@ -1,0 +1,67 @@
+.consultation {
+  .page-mv h1 {
+    color: #000;
+  }
+
+  .text-danger {
+    color: red;
+    font-weight: 500;
+  }
+
+  .submit-btn {
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .wpcf7-text {
+    padding: 7px;
+  }
+
+  .wpcf7-textarea {
+    width: 100%;
+    padding: 7px;
+  }
+
+  .wpcf7-submit {
+    background-color: #fff;
+    border: 1px solid #000;
+    outline: none;
+    padding: 11px 50px;
+    font-size: 17px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #000;
+      border: 1px solid #fff;
+      color: #fff;
+      transition: all .3s;
+      font-weight: bold;
+    }
+  }
+
+  .wpcf7-response-output {
+    text-align: center;
+    margin: 2em 20px 1em;
+  }
+}
+
+@media (max-width: 575px) {
+  .consultation {
+    .page-mv span {
+      display: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 0;
+    }
+
+    .wpcf7-response-output {
+      margin: 2em 0 1em;
+    }
+  }
+}

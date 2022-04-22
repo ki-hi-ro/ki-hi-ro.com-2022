@@ -39,6 +39,33 @@
   font-weight: 300;
 }
 
+.consultation-bnr {
+  width: 763px;
+  display: block;
+  margin: 0 auto 40px;
+  position: relative;
+
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: #000;
+    font-size: 38px;
+    font-weight: bold;
+  }
+
+  img {
+    width: 763px;
+  }
+
+  &:hover {
+    opacity: .6;
+    transform: all .3s;
+  }
+}
+
 .skill-blog__sec-ttl {
   text-align: center;
 }
@@ -139,7 +166,7 @@
     color: #333;
     margin-right: 10px;
 
-    &.last {
+    &.--blog {
       margin-right: 0;
     }
   }

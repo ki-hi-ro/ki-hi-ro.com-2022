@@ -12,6 +12,11 @@
 		</div>
 	</section>
 
+	<a href="<?php echo home_url('consultation'); ?>" class="consultation-bnr">
+		<p>無料相談実施中</p>
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/consultation-bnr.png">
+	</a>
+
 	<section class="top-contents">
 		<a class="top-contents__card --service" href="<?php echo home_url('service'); ?>">
 			<div class="card">

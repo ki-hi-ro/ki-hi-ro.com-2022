@@ -1290,6 +1290,33 @@ header nav ul li a:hover {
   font-weight: 300;
 }
 
+.consultation-bnr {
+  width: 763px;
+  display: block;
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+.consultation-bnr p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #000;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.consultation-bnr img {
+  width: 763px;
+}
+
+.consultation-bnr:hover {
+  opacity: .6;
+  transform: all .3s;
+}
+
 .skill-blog__sec-ttl {
   text-align: center;
 }
@@ -1391,7 +1418,7 @@ a.top-contents__card {
   margin-right: 10px;
 }
 
-a.top-contents__card.last {
+a.top-contents__card.--blog {
   margin-right: 0;
 }
 
@@ -2196,6 +2223,68 @@ code {
     padding: 0;
   }
   .service-contact.page .wpcf7-response-output {
+    margin: 2em 0 1em;
+  }
+}
+
+.consultation .page-mv h1 {
+  color: #000;
+}
+
+.consultation .text-danger {
+  color: red;
+  font-weight: 500;
+}
+
+.consultation .submit-btn {
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.consultation .wpcf7-text {
+  padding: 7px;
+}
+
+.consultation .wpcf7-textarea {
+  width: 100%;
+  padding: 7px;
+}
+
+.consultation .wpcf7-submit {
+  background-color: #fff;
+  border: 1px solid #000;
+  outline: none;
+  padding: 11px 50px;
+  font-size: 17px;
+}
+
+.consultation .wpcf7-submit:hover {
+  cursor: pointer;
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: all .3s;
+  font-weight: bold;
+}
+
+.consultation .wpcf7-response-output {
+  text-align: center;
+  margin: 2em 20px 1em;
+}
+
+@media (max-width: 575px) {
+  .consultation .page-mv span {
+    display: none;
+  }
+  .consultation .submit-btn {
+    width: 100%;
+    padding: 0;
+  }
+  .consultation .wpcf7-response-output {
     margin: 2em 0 1em;
   }
 }
