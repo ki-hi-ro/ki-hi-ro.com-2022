@@ -1627,7 +1627,7 @@ a.top-contents__card.--blog {
 }
 
 @media (min-width: 1000px) {
-  .author {
+  .home .author {
     margin-bottom: 0;
   }
   .consultation-bnr__wrap {
@@ -2409,4 +2409,9 @@ footer nav li {
   footer nav {
     flex-direction: column;
   }
+}
+
+.wp-admin .ai1mw-lines {
+  top: 50%;
+  transform: translateY(-50%);
 }
