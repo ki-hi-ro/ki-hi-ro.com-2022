@@ -2232,11 +2232,16 @@ code {
 
 .service-contact.page .wpcf7-text {
   padding: 7px;
+  border: 1px solid #767676;
 }
 
 .service-contact.page .wpcf7-textarea {
   width: 100%;
   padding: 7px;
+}
+
+.service-contact.page .wpcf7-list-item input {
+  border: 1px solid #767676;
 }
 
 .service-contact.page .wpcf7-submit {
@@ -2281,6 +2286,11 @@ code {
   .service-contact.page .submit-btn {
     width: 100%;
     padding: 0;
+    color: #000;
+  }
+  .service-contact.page .submit-btn input {
+    color: #000;
+    font-weight: normal;
   }
   .service-contact.page .wpcf7-response-output {
     margin: 2em 0 1em;
@@ -2306,8 +2316,14 @@ code {
   margin: 0 auto;
 }
 
+.consultation .submit-btn input {
+  color: #000;
+  font-weight: normal;
+}
+
 .consultation .wpcf7-text {
   padding: 7px;
+  border: 1px solid #767676;
 }
 
 .consultation .wpcf7-textarea {

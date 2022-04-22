@@ -16,10 +16,16 @@
     flex-direction: column;
     width: 50%;
     margin: 0 auto;
+
+    input {
+      color: #000;
+      font-weight: normal;
+    }
   }
 
   .wpcf7-text {
     padding: 7px;
+    border: 1px solid rgb(118, 118, 118);
   }
 
   .wpcf7-textarea {

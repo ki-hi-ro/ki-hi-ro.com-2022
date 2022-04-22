@@ -23,11 +23,16 @@
 
   .wpcf7-text {
     padding: 7px;
+    border: 1px solid rgb(118, 118, 118);
   }
 
   .wpcf7-textarea {
     width: 100%;
     padding: 7px;
+  }
+
+  .wpcf7-list-item input {
+    border: 1px solid rgb(118, 118, 118);
   }
 
   .wpcf7-submit {
@@ -79,6 +84,12 @@
     .submit-btn {
       width: 100%;
       padding: 0;
+      color: #000;
+
+      input {
+        color: #000;
+        font-weight: normal;
+      }
     }
 
     .wpcf7-response-output {
