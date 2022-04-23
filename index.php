@@ -1,12 +1,12 @@
 <?php get_header();?>
 
 <div class="top-box col-xs-12">
+	<div id="particles-js"></div>
 	<section class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
 		<img src="https://ki-hi-ro.com/ki-hi-ro.com-2022/wp-content/uploads/2022/01/2022-profile.png" class="img-responsive img-circle">
 		<h4>
 			<span itemprop="name">Shibata Hiroki</span>
 		</h4>
-		<hr>
 		<div class="author__contents">
 			<p class="author-text">Web制作のフリーランスのエンジニアをしている柴田浩貴です。</p>
 		</div>
