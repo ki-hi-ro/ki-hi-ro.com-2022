@@ -20,10 +20,6 @@
   font-size: 20px;
 }
 
-.author hr {
-  width: 20%;
-}
-
 .author p {
   color: #7B7B7B;
   font-size: 12px;
@@ -439,3 +435,5 @@
   }
 
 }
+
+@import "index/particle";
