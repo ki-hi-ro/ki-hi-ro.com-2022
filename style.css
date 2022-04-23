@@ -1654,15 +1654,6 @@ a.top-contents__card.--blog {
   }
 }
 
-a {
-  color: #fff;
-}
-
-html,
-body {
-  height: 100%;
-}
-
 #particles-js {
   z-index: -1;
   width: 100%;
