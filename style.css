@@ -2191,6 +2191,66 @@ code {
   padding-right: 20px;
 }
 
+.introduce.page .address {
+  padding: 0 55px;
+  text-align: center;
+}
+
+.introduce.page .address h2.address__ttl {
+  font-size: 30px;
+  background-color: initial;
+  padding-left: 15px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.introduce.page .address h3 {
+  border-left: none;
+  margin-left: 0;
+  margin-bottom: 4px;
+  margin-top: 30px;
+  color: #000;
+}
+
+.introduce.page .address h3.g-map {
+  margin-top: 14px;
+}
+
+.introduce.page .address p {
+  margin-top: 0;
+  padding-left: 20px;
+}
+
+.introduce.page .twitter {
+  padding: 0 55px;
+  text-align: center;
+}
+
+.introduce.page .twitter h2.twitter__ttl {
+  font-size: 30px;
+  background-color: initial;
+  padding-left: 15px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.introduce.page .twitter h3 {
+  border-left: none;
+  margin-left: 0;
+  margin-bottom: 4px;
+  margin-top: 30px;
+  color: #000;
+}
+
+.introduce.page .twitter h3.g-map {
+  margin-top: 14px;
+}
+
+.introduce.page .twitter p {
+  margin-top: 0;
+  padding-left: 20px;
+}
+
 @media (max-width: 767px) {
   .introduce.page p {
     padding-left: 0;
@@ -2199,6 +2259,30 @@ code {
   .introduce.page .message {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .introduce.page .address {
+    padding: 0 15px;
+  }
+  .introduce.page .address p {
+    padding-left: 0;
+  }
+  .introduce.page .twitter {
+    padding: 0 15px;
+  }
+  .introduce.page .twitter p {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .introduce.page .pc-g-map {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .introduce.page .sp-g-map {
+    display: none;
   }
 }
 
