@@ -108,4 +108,16 @@
       }
     }
   }
+
+  @media (max-width: 575px) {
+    .pc-g-map {
+      display: none;
+    }
+  }
+
+  @media (min-width: 576px) {
+    .sp-g-map {
+      display: none;
+    }
+  }
 }

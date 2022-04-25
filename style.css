@@ -2274,6 +2274,18 @@ code {
   }
 }
 
+@media (max-width: 575px) {
+  .introduce.page .pc-g-map {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .introduce.page .sp-g-map {
+    display: none;
+  }
+}
+
 .page h2.web-update__sec-ttl {
   border-left: 6px solid #333;
 }
