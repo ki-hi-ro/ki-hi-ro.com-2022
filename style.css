@@ -1418,7 +1418,7 @@ a.top-contents__card.--blog {
 }
 
 .card {
-  width: 250px;
+  width: 100%;
   height: auto;
   border-radius: 8px;
   overflow: hidden;
@@ -1487,6 +1487,37 @@ a.top-contents__card.--blog {
   margin-top: 0;
 }
 
+.top-new-blog {
+  padding: 0 51px;
+  margin-top: 45px;
+}
+
+.top-new-blog .new-blog__post {
+  background-color: #f7f7f7;
+  padding: 16px 29px 3px;
+  margin-bottom: 28px;
+  position: relative;
+  display: block;
+}
+
+.top-new-blog .new-blog__post:last-child {
+  margin-bottom: 0;
+}
+
+.top-new-blog .new-blog__post p {
+  margin-top: 0;
+  color: #333;
+}
+
+.top-new-blog .new-blog__post .post__category {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #888888;
+  color: #fff;
+  padding: 10px 46px;
+}
+
 @media (min-width: 768px) {
   .top-schedule {
     display: none;
@@ -1511,6 +1542,12 @@ a.top-contents__card.--blog {
   }
   .card__img {
     height: 160px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .top-new-blog {
+    padding: 0 22px;
   }
 }
 
@@ -1570,6 +1607,7 @@ a.top-contents__card.--blog {
   }
   a.top-contents__card {
     margin-right: 0;
+    width: 100%;
   }
   .skill-blog__sec-ttl {
     margin-top: 50px;
@@ -1605,12 +1643,13 @@ a.top-contents__card.--blog {
   .card__text {
     height: calc(100% - 250px);
   }
+  .top-new-blog {
+    padding: 0;
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: 577px) {
-  .card {
-    width: 458px;
-  }
   .consultation-bnr.--sp {
     display: none;
   }
@@ -1632,16 +1671,13 @@ a.top-contents__card.--blog {
 }
 
 @media (max-width: 576px) {
-  .card {
-    width: 288px;
-  }
   .consultation-bnr__wrap p {
     font-size: 29px;
     width: 100%;
     text-align: center;
   }
   .consultation-bnr__wrap img {
-    width: 288px;
+    width: 100%;
     margin: 0 auto;
     border-radius: 8px;
     border: 1px solid #d2d2d2;
@@ -1651,6 +1687,28 @@ a.top-contents__card.--blog {
   }
   .consultation-bnr.--sp {
     display: block;
+  }
+  .top-new-blog {
+    margin-top: 108px;
+  }
+  .top-new-blog .new-blog__post {
+    padding: 26px 21px 26px;
+    margin-bottom: 118px;
+  }
+  .top-new-blog .post__date {
+    text-align: center;
+    margin-bottom: 11px;
+    font-size: 13px;
+  }
+  .top-new-blog h3 {
+    text-align: center;
+    margin-top: 0;
+  }
+  .top-new-blog .new-blog__post .post__category {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    top: -71px;
   }
 }
 
