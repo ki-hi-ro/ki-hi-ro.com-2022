@@ -33,12 +33,16 @@
 
 	<section class="address" id="address">
 		<h2 class="address__ttl">自宅兼事務所</h2>
-		<!-- <h3 class="g-map">Google map</h3> -->
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.162785317019!2d136.8825941152762!3d35.17749506504015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376c221ac3e83%3A0x740a7d00a14742b4!2z44CSNDUxLTAwNDUg5oSb55-l55yM5ZCN5Y-k5bGL5biC6KW_5Yy65ZCN6aeF77yS5LiB55uu77yV4oiS77yUIO-8te-8te-8suOCs-ODvOODiOWQjeWPpOWxi-WQjemnhQ!5e0!3m2!1sja!2sjp!4v1650798359378!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h3>住所</h3>
 		<p>〒451-0045<br>愛知県名古屋市西区名駅2丁目5-4 UURコート名古屋名駅1504</p>
 		<h3>最寄駅</h3>
 		<p>名古屋駅</p>
+	</section>
+
+	<section class="twitter" id="twitter">
+		<h2 class="twitter__ttl">Twitter</h2>
+		<a class="twitter-timeline" data-width="400" data-height="1200" href="https://twitter.com/2021_shibata?ref_src=twsrc%5Etfw">Tweets by 2021_shibata</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</section>
 
 </div>
