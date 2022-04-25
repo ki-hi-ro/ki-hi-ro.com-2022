@@ -19,7 +19,7 @@
 			<ul>
 				<li><a href="<?php echo home_url('introduce#message'); ?>">メッセージ</a></li>
 				<li><a href="<?php echo home_url('introduce#address'); ?>">自宅兼事務所</a></li>
-				<li><a href="https://twitter.com/2021_shibata" target="new">Twitter</a></li>
+				<li><a href="<?php echo home_url('introduce#twitter'); ?>">Twitter</a></li>
 			</ul>
 		</div>
 		<div class="nav-contents">
