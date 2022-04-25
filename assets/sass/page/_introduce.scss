@@ -21,10 +21,35 @@
     padding-right: 20px;
   }
 
-  h2.address__ttl {
-    font-size: 19px;
-    background-color: initial;
-    padding-left: 35px;
+  .address {
+    padding: 0 55px;
+    text-align: center;
+
+    h2.address__ttl {
+      font-size: 30px;
+      background-color: initial;
+      padding-left: 0;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    h3 {
+      border-left: none;
+      padding-left: 0;
+      margin-left: 0;
+      margin-bottom: 4px;
+      margin-top: 30px;
+      color: #000;
+
+      &.g-map {
+        margin-top: 14px;
+      }
+    }
+
+    p {
+      padding-left: 0;
+      margin-top: 0;
+    }
   }
 
   @media (max-width: 767px) {

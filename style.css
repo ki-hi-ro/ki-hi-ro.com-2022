@@ -2191,10 +2191,35 @@ code {
   padding-right: 20px;
 }
 
-.introduce.page h2.address__ttl {
-  font-size: 19px;
+.introduce.page .address {
+  padding: 0 55px;
+  text-align: center;
+}
+
+.introduce.page .address h2.address__ttl {
+  font-size: 30px;
   background-color: initial;
-  padding-left: 35px;
+  padding-left: 0;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.introduce.page .address h3 {
+  border-left: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: 4px;
+  margin-top: 30px;
+  color: #000;
+}
+
+.introduce.page .address h3.g-map {
+  margin-top: 14px;
+}
+
+.introduce.page .address p {
+  padding-left: 0;
+  margin-top: 0;
 }
 
 @media (max-width: 767px) {
