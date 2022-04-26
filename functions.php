@@ -31,3 +31,5 @@ function add_page_slug_class_name( $classes ) {
   }
   return $classes;
 }
+
+add_theme_support('post-thumbnails');

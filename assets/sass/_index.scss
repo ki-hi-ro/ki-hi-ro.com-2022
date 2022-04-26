@@ -37,7 +37,7 @@
 
 .consultation-bnr__wrap {
   display: block;
-  margin: 0 auto 40px;
+  margin: 40px auto 0;
   position: relative;
 
   p {
@@ -263,6 +263,14 @@
       color: #fff;
       padding: 10px 46px;
     }
+
+    img {
+      margin: 35px auto;
+      display: block;
+      max-width: 100%;
+      width: auto;
+      height: 300px;
+    }
   }
 }
 
@@ -421,6 +429,10 @@
     padding: 0;
     margin-bottom: 40px;
   }
+
+  .consultation-bnr__wrap {
+    margin: 0 auto 40px;
+  }
 }
 
 @media (min-width: 577px) {
@@ -471,7 +483,7 @@
 
   .top-new-blog {
     margin-top: 108px;
-    
+
     .new-blog__post {
       padding: 26px 21px 26px;
       margin-bottom: 118px;
@@ -493,6 +505,11 @@
       text-align: center;
       font-size: 18px;
       top: -71px;
+    }
+
+    .new-blog__post img {
+      width: 100%;
+      height: auto;
     }
   }
 }

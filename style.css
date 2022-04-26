@@ -1288,7 +1288,7 @@ header nav ul li a:hover {
 
 .consultation-bnr__wrap {
   display: block;
-  margin: 0 auto 40px;
+  margin: 40px auto 0;
   position: relative;
 }
 
@@ -1518,6 +1518,14 @@ a.top-contents__card.--blog {
   padding: 10px 46px;
 }
 
+.top-new-blog .new-blog__post img {
+  margin: 35px auto;
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: 300px;
+}
+
 @media (min-width: 768px) {
   .top-schedule {
     display: none;
@@ -1647,6 +1655,9 @@ a.top-contents__card.--blog {
     padding: 0;
     margin-bottom: 40px;
   }
+  .consultation-bnr__wrap {
+    margin: 0 auto 40px;
+  }
 }
 
 @media (min-width: 577px) {
@@ -1709,6 +1720,10 @@ a.top-contents__card.--blog {
     text-align: center;
     font-size: 18px;
     top: -71px;
+  }
+  .top-new-blog .new-blog__post img {
+    width: 100%;
+    height: auto;
   }
 }
 
