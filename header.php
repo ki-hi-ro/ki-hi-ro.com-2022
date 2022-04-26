@@ -61,7 +61,37 @@
 						<li><a href="<?php echo home_url('schedule'); ?>" class="schedule">スケジュールのお知らせ</a></li>
 					</ul>
 				</nav>
-
+				<nav>
+					<ul>
+						<li><a href="#">Top</a></li>
+						<li><a href="#">About</a></li>
+						<li class="has-child"><a href="#">Service</a><!--子要素を持つ li にはhas-childというクラス名をつける-->
+							<ul>
+								<li><a href="#">Service Top</a></li>
+								<li><a href="#">Service-1</a></li>
+								<li class="has-child"><a href="#">Service-2</a>
+									<ul>
+										<li><a href="#">Service-2 Top</a></li>
+										<li><a href="#">Service-2-1</a></li>
+										<li><a href="#">Service-2-2</a></li>
+										<li><a href="#">Service-2-3</a></li>
+										<li><a href="#">Service-2-4</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Service-3</a></li>
+							</ul>
+						</li>
+						<li class="has-child"><a href="#">Blog</a>
+							<ul>
+								<li><a href="#">Blog Top</a></li>
+								<li><a href="#">Blog-1</a></li>
+								<li><a href="#">Blog-2</a></li>
+								<li><a href="#">Blog-3</a></li>
+								<li><a href="#">Blog-4</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 
