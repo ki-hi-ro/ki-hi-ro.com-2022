@@ -56,38 +56,33 @@
 					<span class="sitename sub">WEB制作フリーランスエンジニア</span>
 				</div>
 
-				<nav class="nav-menu">
-					<ul class="nav-menu__ul">
-						<li><a href="<?php echo home_url('schedule'); ?>" class="schedule">スケジュールのお知らせ</a></li>
-					</ul>
-				</nav>
 				<nav>
 					<ul>
-						<li><a href="#">Top</a></li>
-						<li><a href="#">About</a></li>
-						<li class="has-child"><a href="#">Service</a><!--子要素を持つ li にはhas-childというクラス名をつける-->
+						<li class="has-child"><a href="<?php echo home_url('service'); ?>">Service</a>
 							<ul>
-								<li><a href="#">Service Top</a></li>
-								<li><a href="#">Service-1</a></li>
-								<li class="has-child"><a href="#">Service-2</a>
-									<ul>
-										<li><a href="#">Service-2 Top</a></li>
-										<li><a href="#">Service-2-1</a></li>
-										<li><a href="#">Service-2-2</a></li>
-										<li><a href="#">Service-2-3</a></li>
-										<li><a href="#">Service-2-4</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Service-3</a></li>
+								<li><a href="<?php echo home_url('service/#web-update'); ?>">WEBサイトの更新サポート</a></li>
+								<li><a href="<?php echo home_url('service/#new-site-coding'); ?>">新規サイトコーディング</a></li>
 							</ul>
 						</li>
-						<li class="has-child"><a href="#">Blog</a>
+						<li class="has-child"><a href="<?php echo home_url('introduce'); ?>">Introduce</a>
 							<ul>
-								<li><a href="#">Blog Top</a></li>
-								<li><a href="#">Blog-1</a></li>
-								<li><a href="#">Blog-2</a></li>
-								<li><a href="#">Blog-3</a></li>
-								<li><a href="#">Blog-4</a></li>
+								<li><a href="<?php echo home_url('introduce/#message'); ?>">メッセージ</a></li>
+								<li><a href="<?php echo home_url('introduce/#address'); ?>">自宅兼事務所</a></li>
+								<li><a href="<?php echo home_url('introduce/#twitter'); ?>">Twitter</a></li>
+							</ul>
+						</li>
+						<li class="has-child"><a href="<?php echo home_url('blog'); ?>">Blog</a>
+							<ul>
+								<li><a href="<?php echo home_url('blog/#skill-blog'); ?>">技術ブログ</a></li>
+								<li><a href="<?php echo home_url('blog/#study-blog'); ?>">学習ブログ</a></li>
+								<li><a href="<?php echo home_url('blog/#random-blog'); ?>">雑記ブログ</a></li>
+							</ul>
+						</li>
+						<li class="has-child"><a>Others</a>
+							<ul>
+								<li><a href="<?php echo home_url('schedule'); ?>">スケジュールのお知らせ</a></li>
+								<li><a href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
+								<li><a href="<?php echo home_url('consultation'); ?>">WEBに関する無料相談</a></li>
 							</ul>
 						</li>
 					</ul>
