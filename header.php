@@ -48,48 +48,46 @@
 	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 		<div class="container header-container">
 			<div class="header-nav row">
-
-				<div class="blogname">
-					<a href="<?php echo home_url(); ?>" class="sitename">
-						<span class="sitename main">ki-hi-ro.com</span>
-					</a>
-					<span class="sitename sub">WEB制作フリーランスエンジニア</span>
-				</div>
-
-				<nav>
-					<ul>
-						<li class="has-child"><a href="<?php echo home_url('service'); ?>">Service</a>
-							<ul>
-								<li><a href="<?php echo home_url('service/#web-update'); ?>">WEBサイトの更新サポート</a></li>
-								<li><a href="<?php echo home_url('service/#new-site-coding'); ?>">新規サイトコーディング</a></li>
-							</ul>
-						</li>
-						<li class="has-child"><a href="<?php echo home_url('introduce'); ?>">Introduce</a>
-							<ul>
-								<li><a href="<?php echo home_url('introduce/#message'); ?>">メッセージ</a></li>
-								<li><a href="<?php echo home_url('introduce/#address'); ?>">自宅兼事務所</a></li>
-								<li><a href="<?php echo home_url('introduce/#twitter'); ?>">Twitter</a></li>
-							</ul>
-						</li>
-						<li class="has-child"><a href="<?php echo home_url('blog'); ?>">Blog</a>
-							<ul>
-								<li><a href="<?php echo home_url('blog/#skill-blog'); ?>">技術ブログ</a></li>
-								<li><a href="<?php echo home_url('blog/#study-blog'); ?>">学習ブログ</a></li>
-								<li><a href="<?php echo home_url('blog/#random-blog'); ?>">雑記ブログ</a></li>
-							</ul>
-						</li>
-						<li class="has-child"><a>Others</a>
-							<ul>
-								<li><a href="<?php echo home_url('schedule'); ?>">スケジュールのお知らせ</a></li>
-								<li><a href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
-								<li><a href="<?php echo home_url('consultation'); ?>">WEBに関する無料相談</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
+					<div class="blogname">
+						<a href="<?php echo home_url(); ?>" class="sitename">
+							<span class="sitename main">ki-hi-ro.com</span>
+						</a>
+						<span class="sitename sub">WEB制作フリーランスエンジニア</span>
+					</div>
+					<img class="line" src="https://qr-official.line.me/sid/M/750dzdll.png?shortenUrl=true">
+					<nav>
+						<ul>
+							<li class="has-child"><a href="<?php echo home_url('service'); ?>">Service</a>
+								<ul>
+									<li><a href="<?php echo home_url('service/#web-update'); ?>">WEBサイトの更新サポート</a></li>
+									<li><a href="<?php echo home_url('service/#new-site-coding'); ?>">新規サイトコーディング</a></li>
+								</ul>
+							</li>
+							<li class="has-child"><a href="<?php echo home_url('introduce'); ?>">Introduce</a>
+								<ul>
+									<li><a href="<?php echo home_url('introduce/#message'); ?>">メッセージ</a></li>
+									<li><a href="<?php echo home_url('introduce/#address'); ?>">自宅兼事務所</a></li>
+									<li><a href="<?php echo home_url('introduce/#twitter'); ?>">Twitter</a></li>
+								</ul>
+							</li>
+							<li class="has-child"><a href="<?php echo home_url('blog'); ?>">Blog</a>
+								<ul>
+									<li><a href="<?php echo home_url('blog/#skill-blog'); ?>">技術ブログ</a></li>
+									<li><a href="<?php echo home_url('blog/#study-blog'); ?>">学習ブログ</a></li>
+									<li><a href="<?php echo home_url('blog/#random-blog'); ?>">雑記ブログ</a></li>
+								</ul>
+							</li>
+							<li class="has-child"><a>Others</a>
+								<ul>
+									<li><a href="<?php echo home_url('schedule'); ?>">スケジュールのお知らせ</a></li>
+									<li><a href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
+									<li><a href="<?php echo home_url('consultation'); ?>">WEBに関する無料相談</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
 			</div>
 		</div>
-
 	</header>
 
 	<main id="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
