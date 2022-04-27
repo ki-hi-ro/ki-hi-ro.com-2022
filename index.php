@@ -33,7 +33,7 @@
 
 	</section>
 	<section class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-		<img src="https://ki-hi-ro.com/ki-hi-ro.com-2022/wp-content/uploads/2022/01/2022-profile.png" class="img-responsive img-circle">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/introduce/2022-04.png" class="img-responsive img-circle">
 		<h4>
 			<span itemprop="name">Shibata Hiroki</span>
 		</h4>
