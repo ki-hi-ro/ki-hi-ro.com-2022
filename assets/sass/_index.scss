@@ -355,6 +355,25 @@
   width: 358px;
 }
 
+@media (max-width: 1199px) {
+  .top-new-blog .new-blog__post img {
+    width: 200px;
+    height: 133px;
+  }
+
+  .container {
+    padding-left: 0;
+  }
+
+  .main-column {
+    width: 67%;
+  }
+
+  .sidebar {
+    width: 291px;
+  }
+}
+
 @media (min-width: 768px) {
   .top-schedule {
     display: none;
