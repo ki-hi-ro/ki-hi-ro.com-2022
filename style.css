@@ -1410,7 +1410,7 @@ header .header-nav nav ul li a:hover {
 ---------------------------------------------------------------------- */
 .home .author {
   background-color: #f7f7f7;
-  margin-top: 20px;
+  margin-top: 28px;
 }
 
 .author img {
@@ -1566,7 +1566,7 @@ header .header-nav nav ul li a:hover {
 
 .top-contents {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 a.top-contents__card {
@@ -1696,8 +1696,8 @@ a.top-contents__card.--blog {
 }
 
 .main-column {
-  width: 88%;
-  margin-right: 18px;
+  width: 66%;
+  margin-right: 28px;
 }
 
 .main-column .new-blog__post {
@@ -1705,7 +1705,7 @@ a.top-contents__card.--blog {
   padding: 16px 29px 3px;
   position: relative;
   display: block;
-  margin-top: 20px;
+  margin-top: 28px;
 }
 
 .main-column .new-blog__post .post__date {
@@ -1737,6 +1737,10 @@ a.top-contents__card.--blog {
   width: 300px;
   height: 200px;
   object-fit: contain;
+}
+
+.sidebar {
+  width: 358px;
 }
 
 @media (min-width: 768px) {
