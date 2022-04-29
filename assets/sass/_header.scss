@@ -89,7 +89,7 @@ header .header-nav nav ul li a:hover {
   display: block;
   text-decoration: none;
   padding: 20px 63px;
-  transition: all .3s;
+  transition: all 0.3s;
   color: #000;
 }
 
@@ -105,7 +105,7 @@ header .header-nav nav ul li a:hover {
 
 /*2階層目を持つliの矢印の設定*/
 .header-nav nav ul li.has-child::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 38px;
   top: 41%;
@@ -118,7 +118,7 @@ header .header-nav nav ul li a:hover {
 
 /*3階層目を持つliの矢印の設定*/
 .header-nav nav ul ul li.has-child::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 6px;
   top: 17px;
@@ -140,14 +140,14 @@ header .header-nav nav ul li a:hover {
   background: #707070;
   visibility: hidden;
   opacity: 0;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 /*hoverしたら表示*/
-.header-nav nav li.has-child:hover>ul,
-.header-nav nav li.has-child ul li:hover>ul,
-.header-nav nav li.has-child:active>ul,
-.header-nav nav li.has-child ul li:active>ul {
+.header-nav nav li.has-child:hover > ul,
+.header-nav nav li.has-child ul li:hover > ul,
+.header-nav nav li.has-child:active > ul,
+.header-nav nav li.has-child ul li:active > ul {
   visibility: visible;
   opacity: 1;
 }
@@ -169,28 +169,23 @@ header .header-nav nav ul li a:hover {
   background: #000;
 }
 
-
 /*==3階層目*/
 
 /*3階層目の位置*/
 .header-nav nav li.has-child ul ul {
   top: 0;
   left: 182px;
-  background: #66ADF5;
+  background: #66adf5;
 }
 
 .header-nav nav li.has-child ul ul li a:hover,
 .header-nav nav li.has-child ul ul li a:active {
-  background: #448ED3;
+  background: #448ed3;
 }
 
 @media (max-width: 768px) {
   .header-nav nav {
     padding: 0;
-  }
-
-  .header-nav nav ul {
-    display: block;
   }
 
   .header-nav nav li.has-child ul,
@@ -209,10 +204,6 @@ header .header-nav nav ul li a:hover {
     /*JSで制御するためCSSのアニメーションを切る*/
   }
 
-  .header-nav nav ul li a {
-    border-bottom: 1px solid #ccc;
-  }
-
   /*矢印の位置と向き*/
 
   .header-nav nav ul li.has-child::before {
@@ -227,14 +218,9 @@ header .header-nav nav ul li a:hover {
   .header-nav nav ul li.has-child.active::before {
     transform: rotate(-45deg);
   }
-
 }
 
 @media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-
   .header-nav {
     margin: 40px auto 20px;
     max-width: 100%;
@@ -288,10 +274,6 @@ header .header-nav nav ul li a:hover {
     display: none;
   }
 
-  .header-nav nav ul li a.sp-nav__contact {
-    padding-right: 0;
-  }
-
   .header-nav nav ul li a {
     padding: 20px 38px;
   }
@@ -305,6 +287,15 @@ header .header-nav nav ul li a:hover {
 @media (max-width: 999px) {
   .header-nav {
     max-width: 720px;
+    flex-direction: column;
+
+    nav ul li a.sp-nav__contact {
+      padding-right: 0;
+    }
+
+    nav ul li a.sp-nav__service {
+      padding-left: 0;
+    }
   }
 }
 
@@ -320,8 +311,8 @@ header .header-nav nav ul li a:hover {
     justify-content: center;
     margin-bottom: 0;
 
-    nav {
-      display: none;
+    nav.sp-nav ul {
+      flex-wrap: wrap;
     }
   }
 
@@ -364,9 +355,24 @@ header .header-nav nav ul li a:hover {
   }
 }
 
+@media (max-width: 576px) {
+  .header-nav nav ul li {
+    width: 50%;
+
+    a.sp-nav__service {
+      padding-left: 38px;
+    }
+
+    a.sp-nav__contact {
+      padding-right: 38px;
+    }
+  }
+}
+
 @media (max-width: 575px) {
   header .blogname {
     line-height: 1.8;
+    align-items: center;
   }
 
   .page header .blogname {
@@ -379,6 +385,12 @@ header .header-nav nav ul li a:hover {
 
   .single .nav-menu {
     margin-top: 2px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-nav nav ul li {
+    width: 100%;
   }
 }
 
