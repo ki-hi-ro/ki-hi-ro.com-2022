@@ -2,6 +2,14 @@
 	個別ページ
 ---------------------------------------------------------------------- */
 
+.single .main-contents {
+  justify-content: center !important;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
 .single .nav-menu__ul {
   padding: 0;
   margin: 0;
