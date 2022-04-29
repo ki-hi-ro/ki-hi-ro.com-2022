@@ -265,12 +265,6 @@ header .header-nav nav ul li a:hover {
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1023px) {
-  .header-nav {
-    max-width: 845px;
-  }
-}
-
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
@@ -280,12 +274,24 @@ header .header-nav nav ul li a:hover {
     margin: 10px auto 1rem;
   }
 
+  .sp-nav {
+    display: none;
+  }
+
   header .blogname {
     margin: 10px 0;
   }
 }
 
 @media (max-width: 1199px) {
+  .pc-nav {
+    display: none;
+  }
+
+  .header-nav nav ul li a {
+    padding: 20px 38px;
+  }
+
   .header-container {
     padding-left: 0;
     padding-right: 0;
