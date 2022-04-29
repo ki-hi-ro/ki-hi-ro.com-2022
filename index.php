@@ -43,7 +43,7 @@
 					$cat_posts = get_posts(array(
 							'post_type' => 'post',
 							'category_name' => $category_name,
-							'posts_per_page' => 1,
+							'posts_per_page' => 3,
 							'orderby' => 'date',
 							'order' => 'DESC'
 					));
@@ -79,7 +79,7 @@
 						現在は、WEB制作のフリーランスとして日々活動しています。
 					</p>
 					<div class="more-link">
-						<a href="<?php home_url('introduce'); ?>">自己紹介ページ<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
+						<a href="<?php echo home_url('introduce'); ?>">自己紹介ページ<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
 					</div>
 				</div>
 			</section>
