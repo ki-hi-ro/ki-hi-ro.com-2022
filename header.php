@@ -90,7 +90,7 @@
 							<li><a href="<?php echo home_url('service'); ?>">Service</a></li>
 							<li><a href="<?php echo home_url('introduce'); ?>">Introduce</a></li>
 							<li><a href="<?php echo home_url('blog'); ?>">Blog</a></li>
-							<li><a href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
+							<li><a class="sp-nav__contact" href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
 						</ul>
 					</nav>
 			</div>

@@ -363,6 +363,7 @@
 
   .container {
     padding-left: 0;
+    padding-right: 0;
   }
 
   .main-column {
@@ -403,7 +404,7 @@
 
 @media (max-width: 1023px) {
   .top-new-blog {
-    padding: 0 22px;
+    padding: 0;
   }
   .main-colum {
     padding: 0 22px;

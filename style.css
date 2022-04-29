@@ -1330,6 +1330,9 @@ header .header-nav nav ul li a:hover {
   .pc-nav {
     display: none;
   }
+  .header-nav nav ul li a.sp-nav__contact {
+    padding-right: 0;
+  }
   .header-nav nav ul li a {
     padding: 20px 38px;
   }
@@ -1384,6 +1387,12 @@ header .header-nav nav ul li a:hover {
 @media (min-width: 576px) {
   .header-nav {
     align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header-nav {
     justify-content: space-between;
   }
 }
@@ -1775,6 +1784,7 @@ a.top-contents__card.--blog {
   }
   .container {
     padding-left: 0;
+    padding-right: 0;
   }
   .main-column {
     width: 67%;
@@ -1810,7 +1820,7 @@ a.top-contents__card.--blog {
 
 @media (max-width: 1023px) {
   .top-new-blog {
-    padding: 0 22px;
+    padding: 0;
   }
   .main-colum {
     padding: 0 22px;

@@ -184,7 +184,7 @@ header .header-nav nav ul li a:hover {
   background: #448ED3;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .header-nav nav {
     padding: 0;
   }
@@ -288,6 +288,10 @@ header .header-nav nav ul li a:hover {
     display: none;
   }
 
+  .header-nav nav ul li a.sp-nav__contact {
+    padding-right: 0;
+  }
+
   .header-nav nav ul li a {
     padding: 20px 38px;
   }
@@ -350,6 +354,12 @@ header .header-nav nav ul li a:hover {
 @media (min-width: 576px) {
   .header-nav {
     align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header-nav {
     justify-content: space-between;
   }
 }
