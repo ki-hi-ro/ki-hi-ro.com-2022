@@ -771,7 +771,6 @@ main {
   .top-box {
     width: 100%;
     max-width: 900px;
-    border: 1px solid #d2d2d2;
     margin-bottom: 2rem;
     padding-bottom: 52px;
   }
@@ -1075,6 +1074,10 @@ header {
   display: flex;
 }
 
+.sitename {
+  line-height: 1.6;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -1085,19 +1088,13 @@ header {
 .header-nav {
   margin: 2rem auto;
   text-align: center;
-  flex-direction: column;
-}
-
-.header-nav .line {
-  width: 180px;
-  margin: 10px auto 0;
 }
 
 header .blogname {
   padding: 0;
   margin-top: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 }
 
@@ -1155,7 +1152,7 @@ header .header-nav nav ul li a:hover {
 .header-nav nav ul li a {
   display: block;
   text-decoration: none;
-  padding: 20px 60px;
+  padding: 20px 63px;
   transition: all .3s;
   color: #000;
 }
@@ -1310,7 +1307,6 @@ header .header-nav nav ul li a:hover {
 @media (min-width: 1024px) {
   .header-nav {
     width: 100%;
-    max-width: 900px;
   }
 }
 
@@ -1325,7 +1321,7 @@ header .header-nav nav ul li a:hover {
     width: 1170px;
   }
   .header-nav {
-    margin: 4rem auto 1rem;
+    margin: 10px auto 1rem;
   }
   header .blogname {
     margin: 10px 0;
@@ -1384,6 +1380,7 @@ header .header-nav nav ul li a:hover {
 @media (min-width: 576px) {
   .header-nav {
     align-items: center;
+    justify-content: space-between;
   }
 }
 

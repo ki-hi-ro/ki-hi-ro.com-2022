@@ -54,7 +54,6 @@
 						</a>
 						<span class="sitename sub">WEB制作フリーランスエンジニア</span>
 					</div>
-					<img class="line" src="https://qr-official.line.me/sid/M/750dzdll.png?shortenUrl=true">
 					<nav>
 						<ul>
 							<li class="has-child"><a href="<?php echo home_url('service'); ?>">Service</a>
