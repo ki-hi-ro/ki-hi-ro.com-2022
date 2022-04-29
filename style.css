@@ -1693,6 +1693,11 @@ a.top-contents__card.--blog {
   color: #333;
 }
 
+.top-new-blog .new-blog__post .excerpt p {
+  height: 105px;
+  overflow-y: hidden;
+}
+
 .top-new-blog .new-blog__post .post__category {
   position: absolute;
   right: 0;

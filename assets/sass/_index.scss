@@ -281,6 +281,11 @@
       color: #333;
     }
 
+    .excerpt p {
+      height: 105px;
+      overflow-y: hidden;
+    }
+
     .post__category {
       position: absolute;
       right: 0;

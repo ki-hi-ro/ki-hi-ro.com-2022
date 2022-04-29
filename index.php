@@ -23,7 +23,9 @@
 					<?php if(has_post_thumbnail()): ?>
 						<?php the_post_thumbnail(); ?>
 					<?php endif; ?>
-					<?php the_excerpt(); ?>
+					<div class="excerpt">
+						<?php the_excerpt(); ?>
+					</div>
 				</a>
 			<?php endforeach; endif; wp_reset_postdata(); ?>
 
