@@ -1719,6 +1719,7 @@ a.top-contents__card.--blog {
 .main-column {
   width: 66%;
   margin-right: 28px;
+  margin-bottom: 28px;
 }
 
 .main-column .new-blog__post {
@@ -2809,7 +2810,6 @@ code {
 }
 
 footer {
-  margin: 0 auto 30px;
   background-color: #454545;
 }
 
