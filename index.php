@@ -37,31 +37,36 @@
 		<section class="main-column">
 
 				<?php
-				$category_names = ["skill-blog", "study-blog", "random-blog"];
+				$offset_num = 0;
+				for ($i = 1; $i <= 3; $i++) :
 
-				foreach($category_names as $category_name) :
-					$cat_posts = get_posts(array(
-							'post_type' => 'post',
-							'category_name' => $category_name,
-							'posts_per_page' => 3,
-							'orderby' => 'date',
-							'order' => 'DESC'
-					));
-					global $post;
-					if($cat_posts): foreach($cat_posts as $post): setup_postdata($post); ?>
-						<a href="<?php the_permalink() ?>" class="new-blog__post">
-							<p class="post__date"><?php the_time('Y/m/d') ?></p>
-							<h3><?php the_title(); ?></h3>
-							<span class="post__category"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></span>
-							<?php if(has_post_thumbnail()): ?>
-								<?php the_post_thumbnail(); ?>
-							<?php endif; ?>
-							<?php the_excerpt(); ?>
-						</a>
-					<?php endforeach; endif; wp_reset_postdata(); ?>
+					$offset_num ++;
+					$category_names = ["skill-blog", "study-blog", "random-blog"];
 
+					foreach($category_names as $category_name) :
+						$cat_posts = get_posts(array(
+								'post_type' => 'post',
+								'category_name' => $category_name,
+								'offset' => $offset_num,
+								'posts_per_page' => 1,
+								'orderby' => 'date',
+								'order' => 'DESC'
+						));
+						global $post;
+						if($cat_posts): foreach($cat_posts as $post): setup_postdata($post); ?>
+							<a href="<?php the_permalink() ?>" class="new-blog__post">
+								<p class="post__date"><?php the_time('Y/m/d') ?></p>
+								<h3><?php the_title(); ?></h3>
+								<span class="post__category"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></span>
+								<?php if(has_post_thumbnail()): ?>
+									<?php the_post_thumbnail(); ?>
+								<?php endif; ?>
+								<?php the_excerpt(); ?>
+							</a>
+						<?php endforeach; endif; wp_reset_postdata(); ?>
 				<?php
-				endforeach;
+					endforeach;
+				endfor;
 				?>
 
 		</section>
