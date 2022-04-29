@@ -72,8 +72,15 @@
 				<h4>
 					<span itemprop="name">Shibata Hiroki</span>
 				</h4>
+				<hr>
 				<div class="author__contents">
-					<p class="author-text">Web制作のフリーランスのエンジニアをしている柴田浩貴です。</p>
+					<p class="author-text">
+						造園学科の大学を卒業後、とあるビジネスホテルのフロント職を経験し、TECH::EXPERTでプログラミングを学びました。<br>
+						現在は、WEB制作のフリーランスとして日々活動しています。
+					</p>
+					<div class="more-link">
+						<a href="<?php home_url('introduce'); ?>">自己紹介ページ<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
+					</div>
 				</div>
 			</section>
 

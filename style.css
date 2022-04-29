@@ -579,6 +579,7 @@ h3,
 
 .author hr {
   border: 1px solid #ddd;
+  width: 20%;
 }
 
 .author p {
@@ -1411,6 +1412,7 @@ header .header-nav nav ul li a:hover {
 .home .author {
   background-color: #f7f7f7;
   margin-top: 28px;
+  padding-top: 26px;
 }
 
 .author img {
@@ -1560,8 +1562,22 @@ header .header-nav nav ul li a:hover {
   display: inline-block;
 }
 
-.author-text {
-  text-align: center;
+.more-link {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.more-link a {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  color: #000;
+}
+
+.more-link a img {
+  width: 7px;
+  margin-left: 8px;
+  margin-right: 0;
 }
 
 .top-contents {
