@@ -102,6 +102,11 @@ code {
   margin: 0 auto;
 }
 
+.related-post {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 1023px) {
   .single iframe.map.pc {
     display: none;
