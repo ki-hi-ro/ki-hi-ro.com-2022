@@ -2203,6 +2203,8 @@ code {
 .related-post {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  padding-left: 20px;
 }
 
 @media (max-width: 1023px) {

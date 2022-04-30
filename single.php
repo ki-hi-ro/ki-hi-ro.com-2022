@@ -17,28 +17,50 @@
             <?php the_content(); ?>
         <?php endwhile; ?>
     <?php endif; ?>
-    <h4>関連記事</h4>
     <?php
-        $my_query = new WP_Query();
-        global $post;
-        $post_id = $post->ID;
-        $taxonomy = 'post_tag';
-        $term = get_the_terms($post_id, $taxonomy);
-        $term_slug =  $term[0]->slug;
+          $my_query = new WP_Query();
+          global $post;
+          $post_id = $post->ID;
+          $taxonomy = 'post_tag';
+          $term = get_the_terms($post_id, $taxonomy);
+          $term_slug =  $term[0]->slug;
 
-        $args = array(
-          'post_type' => 'post',
-          'tag'    => $term_slug,
-          'post__not_in'   => array( $post->ID ),
-          'posts_per_page' => 6,
-          'orderby' => 'date',
-          'order' => 'DESC',
-        );
-        $my_query->query( $args ); //データ取得
-    ?>
-    <?php if( $my_query->have_posts() ): while( $my_query->have_posts() ) : $my_query->the_post();?>
-        <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-    <?php endwhile; endif; wp_reset_postdata(); ?>
+          $args = array(
+            'post_type' => 'post',
+            'tag'    => $term_slug,
+            'post__not_in'   => array( $post->ID ),
+            'posts_per_page' => 6,
+            'orderby' => 'date',
+            'order' => 'DESC',
+          );
+          $my_query->query( $args );
+          if( $my_query->have_posts() ):
+      ?>
+          <h4>関連記事</h4>
+          <div class="related-post">
+           <?php while( $my_query->have_posts() ) : $my_query->the_post();?>
+            <a class="skill-blog__link" href="<?php the_permalink();?>">
+              <div class="skill-blog__contents">
+                <span class="skill-blog__date">
+                  <?php echo get_the_date('Y.m.d'); ?>
+                </span>
+                <span class="skill-blog__tag">
+                  <?php
+								  $posttags = get_the_tags();
+                  foreach ($posttags as $tag) {
+                    echo $tag->name . ' ';
+                  }
+                  ?>
+                </span>
+                <span class="skill-blog__ttl">
+                  <?php the_title();?>
+                </span>
+              </div>
+            </a>
+          <?php
+          endwhile; endif; wp_reset_postdata();
+          ?>
+    </div>
 
 	</div>
 </div>
