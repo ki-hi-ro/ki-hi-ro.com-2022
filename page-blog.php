@@ -19,28 +19,28 @@
 			foreach ($myposts as $post):
 					setup_postdata($post);
 					?>
-													<a class="skill-blog__link" href="<?php the_permalink();?>">
-														<div class="skill-blog__contents">
-															<span class="skill-blog__date">
-																<?php echo get_the_date('Y.m.d'); ?>
-															</span>
-															<?php
-					$posttags = get_the_tags();
-					if ($posttags):
-					?>
-															<span class="skill-blog__tag">
-																<?php
-					foreach ($posttags as $tag) {
-							echo $tag->name . ' ';
-					}
-					?>
-															</span>
-															<?php endif;?>
-							<span class="skill-blog__ttl">
-								<?php the_title();?>
-							</span>
-						</div>
-					</a>
+			<a class="skill-blog__link" href="<?php the_permalink();?>">
+				<div class="skill-blog__contents">
+					<span class="skill-blog__date">
+						<?php echo get_the_date('Y.m.d'); ?>
+					</span>
+					<?php
+								$posttags = get_the_tags();
+								if ($posttags):
+								?>
+					<span class="skill-blog__tag">
+						<?php
+								foreach ($posttags as $tag) {
+										echo $tag->name . ' ';
+								}
+						?>
+					</span>
+					<?php endif;?>
+					<span class="skill-blog__ttl">
+						<?php the_title();?>
+					</span>
+				</div>
+			</a>
 
 					<?php
 			endforeach;
@@ -69,23 +69,23 @@
 			foreach ($myposts as $post):
 					setup_postdata($post);
 					?>
-													<a class="study-blog__link" href="<?php the_permalink();?>">
-														<div class="study-blog__contents">
-															<span class="study-blog__date">
-																<?php echo get_the_date('Y.m.d'); ?>
-															</span>
-															<?php
+<a class="study-blog__link" href="<?php the_permalink();?>">
+	<div class="study-blog__contents">
+		<span class="study-blog__date">
+			<?php echo get_the_date('Y.m.d'); ?>
+		</span>
+		<?php
 					$posttags = get_the_tags();
 					if ($posttags):
 					?>
-															<span class="study-blog__tag">
-																<?php
+		<span class="study-blog__tag">
+			<?php
 					foreach ($posttags as $tag) {
 							echo $tag->name . ' ';
 					}
 					?>
-															</span>
-															<?php endif;?>
+		</span>
+		<?php endif;?>
 							<span class="study-blog__ttl">
 								<?php the_title();?>
 							</span>
@@ -120,23 +120,23 @@
 				foreach ($myposts as $post):
 						setup_postdata($post);
 						?>
-														<a class="random-blog__link" href="<?php the_permalink();?>">
-															<div class="random-blog__contents">
-																<span class="random-blog__date">
-																	<?php echo get_the_date('Y.m.d'); ?>
-																</span>
-																<?php
+	<a class="random-blog__link" href="<?php the_permalink();?>">
+		<div class="random-blog__contents">
+			<span class="random-blog__date">
+				<?php echo get_the_date('Y.m.d'); ?>
+			</span>
+			<?php
 						$posttags = get_the_tags();
 						if ($posttags):
 						?>
-																<span class="random-blog__tag">
-																	<?php
+			<span class="random-blog__tag">
+				<?php
 						foreach ($posttags as $tag) {
 								echo $tag->name . ' ';
 						}
 						?>
-																</span>
-																<?php endif;?>
+			</span>
+			<?php endif;?>
 								<span class="random-blog__ttl">
 									<?php the_title();?>
 								</span>

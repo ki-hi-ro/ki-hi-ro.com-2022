@@ -102,6 +102,33 @@ code {
   margin: 0 auto;
 }
 
+.related-post {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-left: 20px;
+
+  .related-post__link:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .related-post__contents {
+    max-width: 648px;
+    border: 1px solid #d2d2d2;
+    padding: 5px 10px;
+    color: #000;
+  }
+
+  .related-post__tag {
+    width: 24%;
+    border: 1px solid #d2d2d2;
+    padding: 0px 20px;
+    text-align: center;
+    display: inline-block;
+    margin: 3px 10px;
+  }
+}
+
 @media (max-width: 1023px) {
   .single iframe.map.pc {
     display: none;
@@ -225,6 +252,25 @@ code {
   .youtube-wrapper--pc {
     display: none;
     text-align: center;
+  }
+
+  .related-post {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .related-post .related-post__contents {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .related-post .related-post__tag {
+    display: none;
+  }
+
+  .related-post__date {
+    margin-right: 10px;
   }
 }
 
