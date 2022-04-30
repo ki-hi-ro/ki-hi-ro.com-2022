@@ -39,12 +39,12 @@
           <h4>関連記事</h4>
           <div class="related-post">
            <?php while( $my_query->have_posts() ) : $my_query->the_post();?>
-            <a class="skill-blog__link" href="<?php the_permalink();?>">
-              <div class="skill-blog__contents">
-                <span class="skill-blog__date">
+            <a class="related-post__link" href="<?php the_permalink();?>">
+              <div class="related-post__contents">
+                <span class="related-post__date">
                   <?php echo get_the_date('Y.m.d'); ?>
                 </span>
-                <span class="skill-blog__tag">
+                <span class="related-post__tag">
                   <?php
 								  $posttags = get_the_tags();
                   foreach ($posttags as $tag) {
@@ -52,7 +52,7 @@
                   }
                   ?>
                 </span>
-                <span class="skill-blog__ttl">
+                <span class="related-post__ttl">
                   <?php the_title();?>
                 </span>
               </div>
