@@ -343,9 +343,10 @@
     img {
       margin: 35px auto;
       display: block;
-      width: 300px;
+      width: 100%;
       max-width: 100%;
-      height: 200px;
+      height: auto;
+      max-height: 450px;
       object-fit: contain;
     }
   }
