@@ -70,6 +70,7 @@
 					endforeach;
 				endfor;
 				?>
+				<a class="top-blog-list-link" href="<?php echo home_url('blog'); ?>">ブログ一覧</a>
 
 		</section>
 

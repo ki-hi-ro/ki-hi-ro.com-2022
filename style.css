@@ -1728,6 +1728,26 @@ a.top-contents__card.--blog {
   object-fit: contain;
 }
 
+.main-column .top-blog-list-link {
+  border: 1px solid #707070;
+  padding: 9px 0;
+  text-align: center;
+  color: #000;
+  margin: 30px auto 32px;
+  display: block;
+  width: 450px;
+  max-width: 100%;
+}
+
+.main-column .top-blog-list-link:hover {
+  cursor: pointer;
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: all .3s;
+  font-weight: bold;
+}
+
 .sidebar {
   width: 358px;
 }
@@ -1925,6 +1945,9 @@ a.top-contents__card.--blog {
   }
   .consultation-bnr__wrap {
     margin: 0 auto 40px;
+  }
+  .main-column .top-blog-list-link {
+    width: 100%;
   }
 }
 
