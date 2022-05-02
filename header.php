@@ -85,14 +85,18 @@
 							</li>
 						</ul>
 					</nav>
+
+					<div class="openbtn1"><span></span><span></span><span></span></div>
 					<nav class="sp-nav">
 						<ul>
+							<li><a class="sp-nav__top" href="<?php echo home_url(); ?>">Top</a></li>
 							<li><a class="sp-nav__service" href="<?php echo home_url('service'); ?>">Service</a></li>
 							<li><a href="<?php echo home_url('introduce'); ?>">Introduce</a></li>
 							<li><a href="<?php echo home_url('blog'); ?>">Blog</a></li>
-							<li><a class="sp-nav__contact" href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
+							<li><a class="sp-nav__contact" href="<?php echo home_url('contact'); ?>">Contact</a></li>
 						</ul>
 					</nav>
+
 			</div>
 		</div>
 	</header>
