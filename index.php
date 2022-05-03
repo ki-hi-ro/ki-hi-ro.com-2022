@@ -103,6 +103,53 @@
 				<p>の3軸で発信していきます。</p>
 			</section>
 
+			<section class="sidebar__skill-blog">
+				<h4>技術ブログ</h4>
+
+				<?php
+				$args = array(
+						'category_name' => 'skill-blog',
+						'post_type' => 'post',
+						'posts_per_page' => 10,
+				);
+				$myposts = get_posts($args);
+				foreach ($myposts as $post):
+						setup_postdata($post);
+				?>
+					<a class="skill-blog__link" href="<?php the_permalink();?>">
+						<div class="skill-blog__contents">
+							<div class="skill-blog__meta">
+								<span class="skill-blog__date">
+									<?php echo get_the_date('Y.m.d'); ?>
+								</span>
+								<?php
+								$posttags = get_the_tags();
+								if ($posttags):
+								?>
+									<span class="skill-blog__tag">
+										<?php foreach ($posttags as $tag) { echo $tag->name . ' '; } ?>
+									</span>
+								<?php
+								endif;
+								?>
+							</div>
+
+							<span class="skill-blog__ttl">
+								<?php the_title();?>
+							</span>
+						</div>
+					</a>
+				<?php
+				endforeach;
+				wp_reset_postdata();
+				?>
+
+				<div class="more-link">
+					<a href="<?php echo home_url('blog#skill-blog'); ?>">技術ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
+				</div>
+			</section>
+
+
 		</aside>
 	</section>
 

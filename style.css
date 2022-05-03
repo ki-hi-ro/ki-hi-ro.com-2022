@@ -1938,6 +1938,49 @@ a.top-contents__card.--blog {
 
 .sidebar .concept li {
   font-size: 17px;
+  color: #000;
+}
+
+.sidebar .concept p {
+  color: #000;
+}
+
+.sidebar .sidebar__skill-blog {
+  background-color: #f7f7f7;
+  margin-top: 28px;
+  padding: 26px 20px 27px;
+}
+
+.sidebar .sidebar__skill-blog .skill-blog__contents {
+  background-color: #fff;
+  flex-direction: column;
+  display: flex;
+}
+
+.sidebar .sidebar__skill-blog .skill-blog__meta {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .sidebar__skill-blog .skill-blog__meta .skill-blog__tag {
+  width: 150px;
+  margin-left: 16px;
+  font-size: 13px;
+}
+
+.sidebar .sidebar__skill-blog .skill-blog__ttl {
+  font-size: 16px;
+}
+
+.sidebar .sidebar__skill-blog h4 {
+  font-size: 20px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.sidebar .sidebar__skill-blog .more-link {
+  padding-right: 0;
+  margin-top: 12px;
 }
 
 @media (max-width: 1199px) {
@@ -1957,10 +2000,12 @@ a.top-contents__card.--blog {
   }
   .sidebar .concept li {
     font-size: 16px;
-    color: #000;
   }
-  .sidebar .concept p {
-    color: #000;
+  .sidebar .skill-blog__meta {
+    flex-direction: column;
+  }
+  .sidebar .skill-blog__ttl {
+    text-align: center;
   }
 }
 
@@ -2146,6 +2191,9 @@ a.top-contents__card.--blog {
   }
   .main-column .top-blog-list-link {
     width: 100%;
+  }
+  .sidebar__skill-blog {
+    display: none;
   }
 }
 

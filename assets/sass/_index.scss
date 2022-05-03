@@ -392,6 +392,49 @@
 
     li {
       font-size: 17px;
+      color: #000;
+    }
+
+    p {
+      color: #000;
+    }
+  }
+
+  .sidebar__skill-blog {
+    background-color: #f7f7f7;
+    margin-top: 28px;
+    padding: 26px 20px 27px;
+
+    .skill-blog__contents {
+      background-color: #fff;
+      flex-direction: column;
+      display: flex;
+    }
+
+    .skill-blog__meta {
+      display: flex;
+      align-items: center;
+
+      .skill-blog__tag {
+        width: 150px;
+        margin-left: 16px;
+        font-size: 13px;
+      }
+    }
+
+    .skill-blog__ttl {
+      font-size: 16px;
+    }
+
+    h4 {
+      font-size: 20px;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .more-link {
+      padding-right: 0;
+      margin-top: 12px;
     }
   }
 }
@@ -414,15 +457,17 @@
   .sidebar {
     width: 291px;
     .concept {
-      
       li {
         font-size: 16px;
-        color: #000;
       }
+    }
 
-      p {
-        color: #000;
-      }
+    .skill-blog__meta {
+      flex-direction: column;
+    }
+
+    .skill-blog__ttl {
+      text-align: center;
     }
   }
 }
@@ -649,6 +694,10 @@
 
   .main-column .top-blog-list-link {
     width: 100%;
+  }
+
+  .sidebar__skill-blog {
+    display: none;
   }
 }
 
