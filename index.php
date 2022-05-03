@@ -149,6 +149,98 @@
 				</div>
 			</section>
 
+			<section class="sidebar__study-blog">
+				<h4>学習ブログ</h4>
+
+				<?php
+				$args = array(
+						'category_name' => 'study-blog',
+						'post_type' => 'post',
+						'posts_per_page' => 10,
+				);
+				$myposts = get_posts($args);
+				foreach ($myposts as $post):
+						setup_postdata($post);
+				?>
+					<a class="study-blog__link" href="<?php the_permalink();?>">
+						<div class="study-blog__contents">
+							<div class="study-blog__meta">
+								<span class="study-blog__date">
+									<?php echo get_the_date('Y.m.d'); ?>
+								</span>
+								<?php
+								$posttags = get_the_tags();
+								if ($posttags):
+								?>
+									<span class="study-blog__tag">
+										<?php foreach ($posttags as $tag) { echo $tag->name . ' '; } ?>
+									</span>
+								<?php
+								endif;
+								?>
+							</div>
+
+							<span class="study-blog__ttl">
+								<?php the_title();?>
+							</span>
+						</div>
+					</a>
+				<?php
+				endforeach;
+				wp_reset_postdata();
+				?>
+
+				<div class="more-link">
+					<a href="<?php echo home_url('blog#study-blog'); ?>">学習ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
+				</div>
+			</section>
+
+			<section class="sidebar__random-blog">
+				<h4>雑記ブログ</h4>
+
+				<?php
+				$args = array(
+						'category_name' => 'random-blog',
+						'post_type' => 'post',
+						'posts_per_page' => 10,
+				);
+				$myposts = get_posts($args);
+				foreach ($myposts as $post):
+						setup_postdata($post);
+				?>
+					<a class="random-blog__link" href="<?php the_permalink();?>">
+						<div class="random-blog__contents">
+							<div class="random-blog__meta">
+								<span class="random-blog__date">
+									<?php echo get_the_date('Y.m.d'); ?>
+								</span>
+								<?php
+								$posttags = get_the_tags();
+								if ($posttags):
+								?>
+									<span class="random-blog__tag">
+										<?php foreach ($posttags as $tag) { echo $tag->name . ' '; } ?>
+									</span>
+								<?php
+								endif;
+								?>
+							</div>
+
+							<span class="random-blog__ttl">
+								<?php the_title();?>
+							</span>
+						</div>
+					</a>
+				<?php
+				endforeach;
+				wp_reset_postdata();
+				?>
+
+				<div class="more-link">
+					<a href="<?php echo home_url('blog#random-blog'); ?>">雑記ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
+				</div>
+			</section>
+
 
 		</aside>
 	</section>

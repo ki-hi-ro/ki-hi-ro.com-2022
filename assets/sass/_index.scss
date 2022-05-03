@@ -99,8 +99,6 @@
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
   color: #000;
-  display: flex;
-  align-items: center;
 }
 
 .random-blog__link:hover {
@@ -437,6 +435,82 @@
       margin-top: 12px;
     }
   }
+
+  .sidebar__study-blog {
+    background-color: #f7f7f7;
+    margin-top: 28px;
+    padding: 26px 20px 27px;
+
+    .study-blog__contents {
+      background-color: #fff;
+      flex-direction: column;
+      display: flex;
+    }
+
+    .study-blog__meta {
+      display: flex;
+      align-items: center;
+
+      .study-blog__tag {
+        width: 150px;
+        margin-left: 16px;
+        font-size: 13px;
+      }
+    }
+
+    .study-blog__ttl {
+      font-size: 16px;
+    }
+
+    h4 {
+      font-size: 20px;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .more-link {
+      padding-right: 0;
+      margin-top: 12px;
+    }
+  }
+
+  .sidebar__random-blog {
+    background-color: #f7f7f7;
+    margin-top: 28px;
+    padding: 26px 20px 27px;
+
+    .random-blog__contents {
+      background-color: #fff;
+      flex-direction: column;
+      display: flex;
+    }
+
+    .random-blog__meta {
+      display: flex;
+      align-items: center;
+
+      .random-blog__tag {
+        width: 150px;
+        margin-left: 16px;
+        font-size: 13px;
+      }
+    }
+
+    .random-blog__ttl {
+      font-size: 16px;
+    }
+
+    h4 {
+      font-size: 20px;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .more-link {
+      padding-right: 0;
+      margin-top: 12px;
+    }
+  }
 }
 
 @media (max-width: 1199px) {
@@ -467,6 +541,14 @@
     }
 
     .skill-blog__ttl {
+      text-align: center;
+    }
+
+    .random-blog__meta {
+      flex-direction: column;
+    }
+
+    .random-blog__ttl {
       text-align: center;
     }
   }
@@ -697,6 +779,14 @@
   }
 
   .sidebar__skill-blog {
+    display: none;
+  }
+
+  .sidebar__study-blog {
+    display: none;
+  }
+
+  .sidebar__random-blog {
     display: none;
   }
 }

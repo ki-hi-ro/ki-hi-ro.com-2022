@@ -1641,8 +1641,6 @@ header .header-nav nav ul li a:hover {
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
   color: #000;
-  display: flex;
-  align-items: center;
 }
 
 .random-blog__link:hover {
@@ -1983,6 +1981,82 @@ a.top-contents__card.--blog {
   margin-top: 12px;
 }
 
+.sidebar .sidebar__study-blog {
+  background-color: #f7f7f7;
+  margin-top: 28px;
+  padding: 26px 20px 27px;
+}
+
+.sidebar .sidebar__study-blog .study-blog__contents {
+  background-color: #fff;
+  flex-direction: column;
+  display: flex;
+}
+
+.sidebar .sidebar__study-blog .study-blog__meta {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .sidebar__study-blog .study-blog__meta .study-blog__tag {
+  width: 150px;
+  margin-left: 16px;
+  font-size: 13px;
+}
+
+.sidebar .sidebar__study-blog .study-blog__ttl {
+  font-size: 16px;
+}
+
+.sidebar .sidebar__study-blog h4 {
+  font-size: 20px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.sidebar .sidebar__study-blog .more-link {
+  padding-right: 0;
+  margin-top: 12px;
+}
+
+.sidebar .sidebar__random-blog {
+  background-color: #f7f7f7;
+  margin-top: 28px;
+  padding: 26px 20px 27px;
+}
+
+.sidebar .sidebar__random-blog .random-blog__contents {
+  background-color: #fff;
+  flex-direction: column;
+  display: flex;
+}
+
+.sidebar .sidebar__random-blog .random-blog__meta {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .sidebar__random-blog .random-blog__meta .random-blog__tag {
+  width: 150px;
+  margin-left: 16px;
+  font-size: 13px;
+}
+
+.sidebar .sidebar__random-blog .random-blog__ttl {
+  font-size: 16px;
+}
+
+.sidebar .sidebar__random-blog h4 {
+  font-size: 20px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.sidebar .sidebar__random-blog .more-link {
+  padding-right: 0;
+  margin-top: 12px;
+}
+
 @media (max-width: 1199px) {
   .top-new-blog .new-blog__post img {
     width: 200px;
@@ -2005,6 +2079,12 @@ a.top-contents__card.--blog {
     flex-direction: column;
   }
   .sidebar .skill-blog__ttl {
+    text-align: center;
+  }
+  .sidebar .random-blog__meta {
+    flex-direction: column;
+  }
+  .sidebar .random-blog__ttl {
     text-align: center;
   }
 }
@@ -2193,6 +2273,12 @@ a.top-contents__card.--blog {
     width: 100%;
   }
   .sidebar__skill-blog {
+    display: none;
+  }
+  .sidebar__study-blog {
+    display: none;
+  }
+  .sidebar__random-blog {
     display: none;
   }
 }
