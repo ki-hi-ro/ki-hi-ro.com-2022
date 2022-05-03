@@ -110,7 +110,7 @@
 				$args = array(
 						'category_name' => 'skill-blog',
 						'post_type' => 'post',
-						'posts_per_page' => 10,
+						'posts_per_page' => 5,
 				);
 				$myposts = get_posts($args);
 				foreach ($myposts as $post):
@@ -156,7 +156,7 @@
 				$args = array(
 						'category_name' => 'study-blog',
 						'post_type' => 'post',
-						'posts_per_page' => 10,
+						'posts_per_page' => 5,
 				);
 				$myposts = get_posts($args);
 				foreach ($myposts as $post):
@@ -202,7 +202,7 @@
 				$args = array(
 						'category_name' => 'random-blog',
 						'post_type' => 'post',
-						'posts_per_page' => 10,
+						'posts_per_page' => 5,
 				);
 				$myposts = get_posts($args);
 				foreach ($myposts as $post):
