@@ -24,7 +24,7 @@
 }
 
 .author p {
-  color: #7B7B7B;
+  color: #7b7b7b;
   font-size: 12px;
   line-height: 25px;
   padding-left: 20px;
@@ -59,8 +59,8 @@
   }
 
   &:hover {
-    opacity: .6;
-    transform: all .3s;
+    opacity: 0.6;
+    transform: all 0.3s;
   }
 }
 
@@ -168,88 +168,88 @@
     }
   }
 }
-  .top-contents {
-    display: flex;
-    justify-content: space-between;
+.top-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+a.top-contents__card {
+  color: #333;
+  margin-right: 10px;
+
+  &.--blog {
+    margin-right: 0;
   }
+}
 
-  a.top-contents__card {
-    color: #333;
-    margin-right: 10px;
+.card {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #d2d2d2;
 
-    &.--blog {
-      margin-right: 0;
-    }
-  }
-
- .card {
-   width: 100%;
-   height: auto;
-   border-radius: 8px;
-   overflow: hidden;
-   border: 1px solid #d2d2d2;
-
-   &:hover {
+  &:hover {
     transform: translateY(-3px);
-    transition: all .3s;
-   }
- }
- .card__imgframe {
-   width: 100%;
-   height: auto;
-   padding-top: 56.25%;
-   background-repeat: no-repeat;
-   background-size: contain;
-   background-position: center;
-   box-sizing: border-box;
+    transition: all 0.3s;
+  }
+}
+.card__imgframe {
+  width: 100%;
+  height: auto;
+  padding-top: 56.25%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  box-sizing: border-box;
 
-   &.service {
-      background-image: url(assets/img/top/service.png);
-      background-size: cover;
-      background-position-y: 75%;
-   }
+  &.service {
+    background-image: url(assets/img/top/service.png);
+    background-size: cover;
+    background-position-y: 75%;
+  }
 
-   &.introduce {
-     background-image: url(assets/img/top/introduce.png);
-     background-size: cover;
-   }
+  &.introduce {
+    background-image: url(assets/img/top/introduce.png);
+    background-size: cover;
+  }
 
-   &.blog {
-     background-image: url(assets/img/top/blog.png);
-   }
- }
+  &.blog {
+    background-image: url(assets/img/top/blog.png);
+  }
+}
 
- .card__textbox {
-   width: 100%;
-   height: 164px;
-   padding: 20px 18px 6px;
-   background: #fff;
-   box-sizing: border-box;
- }
+.card__textbox {
+  width: 100%;
+  height: 164px;
+  padding: 20px 18px 6px;
+  background: #fff;
+  box-sizing: border-box;
+}
 
- .card__textbox>*+* {
-   margin-top: 10px;
- }
+.card__textbox > * + * {
+  margin-top: 10px;
+}
 
- .card__titletext {
-   font-size: 20px;
-   font-weight: bold;
-   line-height: 125%;
- }
+.card__titletext {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 125%;
+}
 
- .card__overviewtext {
-   font-size: 12px;
-   line-height: 150%;
+.card__overviewtext {
+  font-size: 12px;
+  line-height: 150%;
 
-   p {
-     font-size: 15px;
-   }
+  p {
+    font-size: 15px;
+  }
 
-   ul {
-     line-height: 1.8;
-     margin-top: 0;
-   }
- }
+  ul {
+    line-height: 1.8;
+    margin-top: 0;
+  }
+}
 
 .top-new-blog {
   margin-top: 8px;
@@ -364,151 +364,8 @@
       background-color: #000;
       border: 1px solid #fff;
       color: #fff;
-      transition: all .3s;
+      transition: all 0.3s;
       font-weight: bold;
-    }
-  }
-}
-
-.sidebar {
-  width: 358px;
-
-  .concept {
-    background-color: #f7f7f7;
-    margin-top: 28px;
-    padding: 26px 20px 10px;
-
-    h4 {
-      font-size: 20px;
-      margin-top: 0;
-      text-align: center;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      font-size: 17px;
-      color: #000;
-    }
-
-    p {
-      color: #000;
-    }
-  }
-
-  .sidebar__skill-blog {
-    background-color: #f7f7f7;
-    margin-top: 28px;
-    padding: 26px 20px 27px;
-
-    .skill-blog__contents {
-      background-color: #fff;
-      flex-direction: column;
-      display: flex;
-    }
-
-    .skill-blog__meta {
-      display: flex;
-      align-items: center;
-
-      .skill-blog__tag {
-        width: 150px;
-        margin-left: 16px;
-        font-size: 13px;
-      }
-    }
-
-    .skill-blog__ttl {
-      font-size: 16px;
-    }
-
-    h4 {
-      font-size: 20px;
-      margin-top: 0;
-      text-align: center;
-    }
-
-    .more-link {
-      padding-right: 0;
-      margin-top: 12px;
-    }
-  }
-
-  .sidebar__study-blog {
-    background-color: #f7f7f7;
-    margin-top: 28px;
-    padding: 26px 20px 27px;
-
-    .study-blog__contents {
-      background-color: #fff;
-      flex-direction: column;
-      display: flex;
-    }
-
-    .study-blog__meta {
-      display: flex;
-      align-items: center;
-
-      .study-blog__tag {
-        width: 150px;
-        margin-left: 16px;
-        font-size: 13px;
-      }
-    }
-
-    .study-blog__ttl {
-      font-size: 16px;
-    }
-
-    h4 {
-      font-size: 20px;
-      margin-top: 0;
-      text-align: center;
-    }
-
-    .more-link {
-      padding-right: 0;
-      margin-top: 12px;
-    }
-  }
-
-  .sidebar__random-blog {
-    background-color: #f7f7f7;
-    margin-top: 28px;
-    padding: 26px 20px 27px;
-
-    .random-blog__contents {
-      background-color: #fff;
-      flex-direction: column;
-      display: flex;
-    }
-
-    .random-blog__meta {
-      display: flex;
-      align-items: center;
-
-      .random-blog__tag {
-        width: 150px;
-        margin-left: 16px;
-        font-size: 13px;
-      }
-    }
-
-    .random-blog__ttl {
-      font-size: 16px;
-    }
-
-    h4 {
-      font-size: 20px;
-      margin-top: 0;
-      text-align: center;
-    }
-
-    .more-link {
-      padding-right: 0;
-      margin-top: 12px;
     }
   }
 }
@@ -527,45 +384,11 @@
   .main-column {
     width: 67%;
   }
-
-  .sidebar {
-    width: 291px;
-    .concept {
-      li {
-        font-size: 16px;
-      }
-    }
-
-    .skill-blog__meta {
-      flex-direction: column;
-    }
-
-    .skill-blog__ttl {
-      text-align: center;
-    }
-
-    .random-blog__meta {
-      flex-direction: column;
-    }
-
-    .random-blog__ttl {
-      text-align: center;
-    }
-  }
 }
 
 @media (max-width: 991px) {
   .main-column {
     width: 48%;
-  }
-
-  .sidebar {
-    width: 48%;
-    .concept {
-      li {
-        font-size: 17px;
-      }
-    }
   }
 
   .top-new-blog .new-blog__post img {
@@ -764,10 +587,6 @@
       margin-right: 0;
       width: 100%;
     }
-
-    .sidebar {
-      width: 100%;
-    }
   }
 
   .consultation-bnr__wrap {
@@ -776,18 +595,6 @@
 
   .main-column .top-blog-list-link {
     width: 100%;
-  }
-
-  .sidebar__skill-blog {
-    display: none;
-  }
-
-  .sidebar__study-blog {
-    display: none;
-  }
-
-  .sidebar__random-blog {
-    display: none;
   }
 }
 
@@ -908,10 +715,7 @@
       height: auto;
     }
   }
-
-  .sidebar .concept li {
-      font-size: 16px;
-  }
 }
 
 @import "index/particle";
+@import "index/sidebar";
