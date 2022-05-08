@@ -103,7 +103,7 @@
 				<p>の3軸で発信していきます。</p>
 			</section>
 
-			<section class="sidebar__skill-blog">
+			<section class="sidebar__blog">
 				<h4>技術ブログ</h4>
 
 				<?php
@@ -116,29 +116,7 @@
 				foreach ($myposts as $post):
 						setup_postdata($post);
 				?>
-					<a class="skill-blog__link" href="<?php the_permalink();?>">
-						<div class="skill-blog__contents">
-							<div class="skill-blog__meta">
-								<span class="skill-blog__date">
-									<?php echo get_the_date('Y.m.d'); ?>
-								</span>
-								<?php
-								$posttags = get_the_tags();
-								if ($posttags):
-								?>
-									<span class="skill-blog__tag">
-										<?php foreach ($posttags as $tag) { echo $tag->name . ' '; } ?>
-									</span>
-								<?php
-								endif;
-								?>
-							</div>
-
-							<span class="skill-blog__ttl">
-								<?php the_title();?>
-							</span>
-						</div>
-					</a>
+					<?php echo get_template_part('template-parts/sidebar-blog'); ?>
 				<?php
 				endforeach;
 				wp_reset_postdata();
@@ -149,7 +127,7 @@
 				</div>
 			</section>
 
-			<section class="sidebar__study-blog">
+			<section class="sidebar__blog">
 				<h4>学習ブログ</h4>
 
 				<?php
@@ -162,29 +140,7 @@
 				foreach ($myposts as $post):
 						setup_postdata($post);
 				?>
-					<a class="study-blog__link" href="<?php the_permalink();?>">
-						<div class="study-blog__contents">
-							<div class="study-blog__meta">
-								<span class="study-blog__date">
-									<?php echo get_the_date('Y.m.d'); ?>
-								</span>
-								<?php
-								$posttags = get_the_tags();
-								if ($posttags):
-								?>
-									<span class="study-blog__tag">
-										<?php foreach ($posttags as $tag) { echo $tag->name . ' '; } ?>
-									</span>
-								<?php
-								endif;
-								?>
-							</div>
-
-							<span class="study-blog__ttl">
-								<?php the_title();?>
-							</span>
-						</div>
-					</a>
+					<?php echo get_template_part('template-parts/sidebar-blog'); ?>
 				<?php
 				endforeach;
 				wp_reset_postdata();
@@ -208,29 +164,7 @@
 				foreach ($myposts as $post):
 						setup_postdata($post);
 				?>
-					<a class="sidebar-blog__link" href="<?php the_permalink();?>">
-						<div class="sidebar-blog__contents">
-							<div class="sidebar-blog__meta">
-								<span class="sidebar-blog__date">
-									<?php echo get_the_date('Y.m.d'); ?>
-								</span>
-								<?php
-								$posttags = get_the_tags();
-								if ($posttags):
-								?>
-									<span class="sidebar-blog__tag">
-										<?php foreach ($posttags as $tag) { echo $tag->name . ' '; } ?>
-									</span>
-								<?php
-								endif;
-								?>
-							</div>
-
-							<span class="sidebar-blog__ttl">
-								<?php the_title();?>
-							</span>
-						</div>
-					</a>
+					<?php echo get_template_part('template-parts/sidebar-blog'); ?>
 				<?php
 				endforeach;
 				wp_reset_postdata();
