@@ -1566,7 +1566,7 @@ header .header-nav nav ul li a:hover {
 }
 
 .author p {
-  color: #7B7B7B;
+  color: #7b7b7b;
   font-size: 12px;
   line-height: 25px;
   padding-left: 20px;
@@ -1602,8 +1602,8 @@ header .header-nav nav ul li a:hover {
 }
 
 .consultation-bnr__wrap:hover {
-  opacity: .6;
-  transform: all .3s;
+  opacity: 0.6;
+  transform: all 0.3s;
 }
 
 .skill-blog__sec-ttl {
@@ -1735,7 +1735,7 @@ a.top-contents__card.--blog {
 
 .card:hover {
   transform: translateY(-3px);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .card__imgframe {
@@ -1910,151 +1910,8 @@ a.top-contents__card.--blog {
   background-color: #000;
   border: 1px solid #fff;
   color: #fff;
-  transition: all .3s;
+  transition: all 0.3s;
   font-weight: bold;
-}
-
-.sidebar {
-  width: 358px;
-}
-
-.sidebar .concept {
-  background-color: #f7f7f7;
-  margin-top: 28px;
-  padding: 26px 20px 10px;
-}
-
-.sidebar .concept h4 {
-  font-size: 20px;
-  margin-top: 0;
-  text-align: center;
-}
-
-.sidebar .concept ul {
-  padding-left: 20px;
-}
-
-.sidebar .concept li {
-  font-size: 17px;
-  color: #000;
-}
-
-.sidebar .concept p {
-  color: #000;
-}
-
-.sidebar .sidebar__skill-blog {
-  background-color: #f7f7f7;
-  margin-top: 28px;
-  padding: 26px 20px 27px;
-}
-
-.sidebar .sidebar__skill-blog .skill-blog__contents {
-  background-color: #fff;
-  flex-direction: column;
-  display: flex;
-}
-
-.sidebar .sidebar__skill-blog .skill-blog__meta {
-  display: flex;
-  align-items: center;
-}
-
-.sidebar .sidebar__skill-blog .skill-blog__meta .skill-blog__tag {
-  width: 150px;
-  margin-left: 16px;
-  font-size: 13px;
-}
-
-.sidebar .sidebar__skill-blog .skill-blog__ttl {
-  font-size: 16px;
-}
-
-.sidebar .sidebar__skill-blog h4 {
-  font-size: 20px;
-  margin-top: 0;
-  text-align: center;
-}
-
-.sidebar .sidebar__skill-blog .more-link {
-  padding-right: 0;
-  margin-top: 12px;
-}
-
-.sidebar .sidebar__study-blog {
-  background-color: #f7f7f7;
-  margin-top: 28px;
-  padding: 26px 20px 27px;
-}
-
-.sidebar .sidebar__study-blog .study-blog__contents {
-  background-color: #fff;
-  flex-direction: column;
-  display: flex;
-}
-
-.sidebar .sidebar__study-blog .study-blog__meta {
-  display: flex;
-  align-items: center;
-}
-
-.sidebar .sidebar__study-blog .study-blog__meta .study-blog__tag {
-  width: 150px;
-  margin-left: 16px;
-  font-size: 13px;
-}
-
-.sidebar .sidebar__study-blog .study-blog__ttl {
-  font-size: 16px;
-}
-
-.sidebar .sidebar__study-blog h4 {
-  font-size: 20px;
-  margin-top: 0;
-  text-align: center;
-}
-
-.sidebar .sidebar__study-blog .more-link {
-  padding-right: 0;
-  margin-top: 12px;
-}
-
-.sidebar .sidebar__random-blog {
-  background-color: #f7f7f7;
-  margin-top: 28px;
-  padding: 26px 20px 27px;
-}
-
-.sidebar .sidebar__random-blog .random-blog__contents {
-  background-color: #fff;
-  flex-direction: column;
-  display: flex;
-}
-
-.sidebar .sidebar__random-blog .random-blog__meta {
-  display: flex;
-  align-items: center;
-}
-
-.sidebar .sidebar__random-blog .random-blog__meta .random-blog__tag {
-  width: 150px;
-  margin-left: 16px;
-  font-size: 13px;
-}
-
-.sidebar .sidebar__random-blog .random-blog__ttl {
-  font-size: 16px;
-}
-
-.sidebar .sidebar__random-blog h4 {
-  font-size: 20px;
-  margin-top: 0;
-  text-align: center;
-}
-
-.sidebar .sidebar__random-blog .more-link {
-  padding-right: 0;
-  margin-top: 12px;
 }
 
 @media (max-width: 1199px) {
@@ -2069,35 +1926,11 @@ a.top-contents__card.--blog {
   .main-column {
     width: 67%;
   }
-  .sidebar {
-    width: 291px;
-  }
-  .sidebar .concept li {
-    font-size: 16px;
-  }
-  .sidebar .skill-blog__meta {
-    flex-direction: column;
-  }
-  .sidebar .skill-blog__ttl {
-    text-align: center;
-  }
-  .sidebar .random-blog__meta {
-    flex-direction: column;
-  }
-  .sidebar .random-blog__ttl {
-    text-align: center;
-  }
 }
 
 @media (max-width: 991px) {
   .main-column {
     width: 48%;
-  }
-  .sidebar {
-    width: 48%;
-  }
-  .sidebar .concept li {
-    font-size: 17px;
   }
   .top-new-blog .new-blog__post img {
     width: 168px;
@@ -2263,23 +2096,11 @@ a.top-contents__card.--blog {
     margin-right: 0;
     width: 100%;
   }
-  .top-contents .sidebar {
-    width: 100%;
-  }
   .consultation-bnr__wrap {
     margin: 0 auto 40px;
   }
   .main-column .top-blog-list-link {
     width: 100%;
-  }
-  .sidebar__skill-blog {
-    display: none;
-  }
-  .sidebar__study-blog {
-    display: none;
-  }
-  .sidebar__random-blog {
-    display: none;
   }
 }
 
@@ -2380,9 +2201,6 @@ a.top-contents__card.--blog {
     width: 100%;
     height: auto;
   }
-  .sidebar .concept li {
-    font-size: 16px;
-  }
 }
 
 #particles-js {
@@ -2393,6 +2211,216 @@ a.top-contents__card.--blog {
   top: 0;
   left: 0;
   padding: 0 15px;
+}
+
+.sidebar {
+  width: 358px;
+}
+
+.sidebar .concept {
+  background-color: #f7f7f7;
+  margin-top: 28px;
+  padding: 26px 20px 10px;
+}
+
+.sidebar .concept h4 {
+  font-size: 20px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.sidebar .concept ul {
+  padding-left: 20px;
+}
+
+.sidebar .concept li {
+  font-size: 17px;
+  color: #000;
+}
+
+.sidebar .concept p {
+  color: #000;
+}
+
+.sidebar .sidebar__skill-blog {
+  background-color: #f7f7f7;
+  margin-top: 28px;
+  padding: 26px 20px 27px;
+}
+
+.sidebar .sidebar__skill-blog .skill-blog__contents {
+  background-color: #fff;
+  flex-direction: column;
+  display: flex;
+}
+
+.sidebar .sidebar__skill-blog .skill-blog__meta {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .sidebar__skill-blog .skill-blog__meta .skill-blog__tag {
+  width: 150px;
+  margin-left: 16px;
+  font-size: 13px;
+}
+
+.sidebar .sidebar__skill-blog .skill-blog__ttl {
+  font-size: 16px;
+}
+
+.sidebar .sidebar__skill-blog h4 {
+  font-size: 20px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.sidebar .sidebar__skill-blog .more-link {
+  padding-right: 0;
+  margin-top: 12px;
+}
+
+.sidebar .sidebar__study-blog {
+  background-color: #f7f7f7;
+  margin-top: 28px;
+  padding: 26px 20px 27px;
+}
+
+.sidebar .sidebar__study-blog .study-blog__contents {
+  background-color: #fff;
+  flex-direction: column;
+  display: flex;
+}
+
+.sidebar .sidebar__study-blog .study-blog__meta {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .sidebar__study-blog .study-blog__meta .study-blog__tag {
+  width: 150px;
+  margin-left: 16px;
+  font-size: 13px;
+}
+
+.sidebar .sidebar__study-blog .study-blog__ttl {
+  font-size: 16px;
+}
+
+.sidebar .sidebar__study-blog h4 {
+  font-size: 20px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.sidebar .sidebar__study-blog .more-link {
+  padding-right: 0;
+  margin-top: 12px;
+}
+
+.sidebar .sidebar__blog {
+  background-color: #f7f7f7;
+  margin-top: 28px;
+  padding: 26px 20px 27px;
+}
+
+.sidebar .sidebar__blog .sidebar-blog__link:not(:last-child) {
+  margin-bottom: 10px;
+  width: 100%;
+  display: inline-block;
+}
+
+.sidebar .sidebar__blog .sidebar-blog__contents {
+  background-color: #fff;
+  flex-direction: column;
+  display: flex;
+  max-width: 648px;
+  margin: 0 auto;
+  border: 1px solid #d2d2d2;
+  padding: 5px 10px;
+  color: #000;
+}
+
+.sidebar .sidebar__blog .sidebar-blog__meta {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .sidebar__blog .sidebar-blog__meta .sidebar-blog__tag {
+  width: 150px;
+  margin-left: 16px;
+  font-size: 13px;
+  border: 1px solid #d2d2d2;
+  padding: 0px 20px;
+  text-align: center;
+  display: inline-block;
+  margin: 3px 10px;
+}
+
+.sidebar .sidebar__blog .sidebar-blog__ttl {
+  font-size: 16px;
+}
+
+.sidebar .sidebar__blog h4 {
+  font-size: 20px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.sidebar .sidebar__blog .more-link {
+  padding-right: 0;
+  margin-top: 12px;
+}
+
+@media (max-width: 1199px) {
+  .sidebar {
+    width: 291px;
+  }
+  .sidebar .concept li {
+    font-size: 16px;
+  }
+  .sidebar .skill-blog__meta {
+    flex-direction: column;
+  }
+  .sidebar .skill-blog__ttl {
+    text-align: center;
+  }
+  .sidebar .sidebar-blog__meta {
+    flex-direction: column;
+  }
+  .sidebar .sidebar-blog__ttl {
+    text-align: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    width: 48%;
+  }
+  .sidebar .concept li {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    width: 100%;
+  }
+  .sidebar .sidebar__skill-blog {
+    display: none;
+  }
+  .sidebar .sidebar__study-blog {
+    display: none;
+  }
+  .sidebar .sidebar__blog {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .sidebar .concept li {
+    font-size: 16px;
+  }
 }
 
 .single .main-contents {

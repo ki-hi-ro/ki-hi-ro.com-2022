@@ -195,7 +195,7 @@
 				</div>
 			</section>
 
-			<section class="sidebar__random-blog">
+			<section class="sidebar__blog">
 				<h4>雑記ブログ</h4>
 
 				<?php
@@ -208,17 +208,17 @@
 				foreach ($myposts as $post):
 						setup_postdata($post);
 				?>
-					<a class="random-blog__link" href="<?php the_permalink();?>">
-						<div class="random-blog__contents">
-							<div class="random-blog__meta">
-								<span class="random-blog__date">
+					<a class="sidebar-blog__link" href="<?php the_permalink();?>">
+						<div class="sidebar-blog__contents">
+							<div class="sidebar-blog__meta">
+								<span class="sidebar-blog__date">
 									<?php echo get_the_date('Y.m.d'); ?>
 								</span>
 								<?php
 								$posttags = get_the_tags();
 								if ($posttags):
 								?>
-									<span class="random-blog__tag">
+									<span class="sidebar-blog__tag">
 										<?php foreach ($posttags as $tag) { echo $tag->name . ' '; } ?>
 									</span>
 								<?php
@@ -226,7 +226,7 @@
 								?>
 							</div>
 
-							<span class="random-blog__ttl">
+							<span class="sidebar-blog__ttl">
 								<?php the_title();?>
 							</span>
 						</div>
