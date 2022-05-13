@@ -2222,25 +2222,13 @@ a.top-contents__card.--blog {
   margin-bottom: 30px;
 }
 
-.sidebar .schedule {
+.sidebar .sidebar__contents {
   background-color: #fff;
   margin-top: 28px;
   padding: 26px 20px 10px;
 }
 
-.sidebar .schedule h4 {
-  font-size: 20px;
-  margin-top: 0;
-  text-align: center;
-}
-
-.sidebar .concept {
-  background-color: #fff;
-  margin-top: 28px;
-  padding: 26px 20px 10px;
-}
-
-.sidebar .concept h4 {
+.sidebar .sidebar__contents h4 {
   font-size: 20px;
   margin-top: 0;
   text-align: center;
@@ -2257,12 +2245,6 @@ a.top-contents__card.--blog {
 
 .sidebar .concept p {
   color: #000;
-}
-
-.sidebar .sidebar__skill-blog {
-  background-color: #fff;
-  margin-top: 28px;
-  padding: 26px 20px 27px;
 }
 
 .sidebar .sidebar__skill-blog .skill-blog__contents {
@@ -2286,21 +2268,9 @@ a.top-contents__card.--blog {
   font-size: 16px;
 }
 
-.sidebar .sidebar__skill-blog h4 {
-  font-size: 20px;
-  margin-top: 0;
-  text-align: center;
-}
-
 .sidebar .sidebar__skill-blog .more-link {
   padding-right: 0;
   margin-top: 12px;
-}
-
-.sidebar .sidebar__study-blog {
-  background-color: #fff;
-  margin-top: 28px;
-  padding: 26px 20px 27px;
 }
 
 .sidebar .sidebar__study-blog .study-blog__contents {
@@ -2324,21 +2294,9 @@ a.top-contents__card.--blog {
   font-size: 16px;
 }
 
-.sidebar .sidebar__study-blog h4 {
-  font-size: 20px;
-  margin-top: 0;
-  text-align: center;
-}
-
 .sidebar .sidebar__study-blog .more-link {
   padding-right: 0;
   margin-top: 12px;
-}
-
-.sidebar .sidebar__blog {
-  background-color: #fff;
-  margin-top: 28px;
-  padding: 26px 20px 27px;
 }
 
 .sidebar .sidebar__blog .sidebar-blog__link:not(:last-child) {
@@ -2376,12 +2334,6 @@ a.top-contents__card.--blog {
 
 .sidebar .sidebar__blog .sidebar-blog__ttl {
   font-size: 16px;
-}
-
-.sidebar .sidebar__blog h4 {
-  font-size: 20px;
-  margin-top: 0;
-  text-align: center;
 }
 
 .sidebar .sidebar__blog .more-link {

@@ -2,7 +2,7 @@
   width: 358px;
   margin-bottom: 30px;
 
-  .schedule {
+  .sidebar__contents {
     background-color: #fff;
     margin-top: 28px;
     padding: 26px 20px 10px;    
@@ -15,16 +15,6 @@
   }
 
   .concept {
-    background-color: #fff;
-    margin-top: 28px;
-    padding: 26px 20px 10px;
-
-    h4 {
-      font-size: 20px;
-      margin-top: 0;
-      text-align: center;
-    }
-
     ul {
       padding-left: 20px;
     }
@@ -40,9 +30,6 @@
   }
 
   .sidebar__skill-blog {
-    background-color: #fff;
-    margin-top: 28px;
-    padding: 26px 20px 27px;
 
     .skill-blog__contents {
       background-color: #fff;
@@ -65,12 +52,6 @@
       font-size: 16px;
     }
 
-    h4 {
-      font-size: 20px;
-      margin-top: 0;
-      text-align: center;
-    }
-
     .more-link {
       padding-right: 0;
       margin-top: 12px;
@@ -78,9 +59,6 @@
   }
 
   .sidebar__study-blog {
-    background-color: #fff;
-    margin-top: 28px;
-    padding: 26px 20px 27px;
 
     .study-blog__contents {
       background-color: #fff;
@@ -103,12 +81,6 @@
       font-size: 16px;
     }
 
-    h4 {
-      font-size: 20px;
-      margin-top: 0;
-      text-align: center;
-    }
-
     .more-link {
       padding-right: 0;
       margin-top: 12px;
@@ -116,9 +88,6 @@
   }
 
   .sidebar__blog {
-    background-color: #fff;
-    margin-top: 28px;
-    padding: 26px 20px 27px;
 
     .sidebar-blog__link:not(:last-child) {
       margin-bottom: 10px;
@@ -155,12 +124,6 @@
 
     .sidebar-blog__ttl {
       font-size: 16px;
-    }
-
-    h4 {
-      font-size: 20px;
-      margin-top: 0;
-      text-align: center;
     }
 
     .more-link {
