@@ -1,6 +1,18 @@
 .sidebar {
   width: 358px;
 
+  .schedule {
+    background-color: #f7f7f7;
+    margin-top: 28px;
+    padding: 26px 20px 10px;    
+
+    h4 {
+      font-size: 20px;
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+
   .concept {
     background-color: #f7f7f7;
     margin-top: 28px;

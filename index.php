@@ -92,6 +92,12 @@
 				</div>
 			</section>
 
+			<section class="schedule">
+				<h4>スケジュール</h4>
+				<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;showTabs=0&amp;showDate=1&amp;showPrint=0&amp;showTitle=0&amp;showNav=0&amp;showCalendars=0&amp;mode=AGENDA&amp;showTz=0&amp;src=a2hpcm8yMTM4QGdtYWlsLmNvbQ&amp;color=%23039BE5" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+				<p>※safariで閲覧すると「私はロボットではありません」という表示が出て、カレンダーが表示されない現象が起こる場合があります。カレンダーを表示させるには、Chromeなどの別のブラウザでご覧いただくか、設定 &gt; Safariの「サイト越えトラッキングを防ぐ」の設定をOFFしてください。</p>
+			</section>
+
 			<section class="concept">
 				<h4>サイトのコンセプト</h4>
 				<p>こちらのサイトでは、</p>
