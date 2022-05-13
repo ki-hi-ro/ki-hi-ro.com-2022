@@ -74,7 +74,7 @@
 
 		<aside class="sidebar">
 			<section class="author sidebar__contents" itemprop="author" itemscope itemtype="http://schema.org/Person">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/introduce/2022-04.png" class="img-responsive img-circle">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/introduce/2022-04.png" class="img-responsive img-circle author__img">
 				<h4>
 					<span itemprop="name">Shibata Hiroki</span>
 				</h4>

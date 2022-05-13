@@ -799,6 +799,14 @@ h3,
 
 main {
   background: none;
+  padding: 0 15px;
+  margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+  main {
+    padding: 0;
+  } 
 }
 
 @media (min-width: 768px) {
@@ -932,7 +940,7 @@ main {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .single .author {
     margin-top: 0;
   }
@@ -966,6 +974,10 @@ main {
   text-decoration: none;
 }
 
+.single-wrap {
+  background-color: #fff;
+}
+
 @media (min-width: 1000px) {
   .single-wrap {
     width: 900px;
@@ -976,7 +988,6 @@ main {
   .single-wrap {      
     margin-bottom: 2rem;
     margin-top: 0;
-    background-color: #fff;
   }
 }
 

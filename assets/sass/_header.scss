@@ -44,6 +44,12 @@ span.sitename.main {
   font-weight: 500;
 }
 
+@media (max-width: 575px) {
+  span.sitename.main {
+    font-size: 28px;
+  } 
+}
+
 span.sitename.sub {
   display: inline-block;
   font-size: 12px;
@@ -112,7 +118,7 @@ header .header-nav nav ul li a:hover {
   left: 35px;
   top: 71px;
   z-index: 4;
-  background: #707070;
+  background: #202020;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s;
@@ -177,7 +183,7 @@ header .header-nav nav ul li a:hover {
   position: fixed;
   z-index: 9999;
   top: 27px;
-  right: 5px;
+  right: 0;
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -308,11 +314,15 @@ header .header-nav nav ul li a:hover {
 // max-width
 @media (max-width: 1199px) {
   header {
-    padding-bottom: 39px;
+    padding-bottom: 10px;
   }
 
   .pc-nav {
     display: none;
+  }
+
+  .header-nav {
+    position: relative;
   }
 
   .header-nav nav ul {
@@ -323,9 +333,24 @@ header .header-nav nav ul li a:hover {
     padding: 20px 38px;
   }
 
+  .openbtn1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .header-container {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .openbtn1 {
+    position: fixed;
+    top: 33px;
+    right: 6px;
+    transform: none;
   }
 }
 

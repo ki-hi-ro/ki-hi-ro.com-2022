@@ -4,9 +4,24 @@
   padding-top: 26px;
 }
 
+.post__category {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #202020;
+  border-radius: 0 9px 0 10px;
+  color: #fff;
+  padding: 12px 35px;
+  font-size: 12px;
+}
+
 .author img {
   width: 130px;
   margin: 0 auto;
+}
+
+.author .author__img {
+  margin-bottom: 20px;
 }
 
 .img-responsive {
@@ -263,6 +278,8 @@ a.top-contents__card {
 
   .new-blog__post {
     background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #000;
     padding: 16px 29px 3px;
     position: relative;
     display: block;
@@ -289,16 +306,6 @@ a.top-contents__card {
       overflow-y: hidden;
     }
 
-    .post__category {
-      position: absolute;
-      right: 0;
-      top: 0;
-      background-color: #888888;
-      color: #fff;
-      padding: 12px 35px;
-      font-size: 12px;
-    }
-
     img {
       margin: 35px auto;
       display: block;
@@ -316,6 +323,8 @@ a.top-contents__card {
 
   .new-blog__post {
     background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #000;
     padding: 16px 29px 3px;
     position: relative;
     display: block;
@@ -332,16 +341,6 @@ a.top-contents__card {
     p {
       margin-top: 0;
       color: #333;
-    }
-
-    .post__category {
-      position: absolute;
-      right: 0;
-      top: 0;
-      background-color: #888888;
-      color: #fff;
-      padding: 12px 35px;
-      font-size: 12px;
     }
 
     img {
@@ -362,7 +361,7 @@ a.top-contents__card {
     color: #000;
     margin: 30px auto 32px;
     display: block;
-    width: 450px;
+    width: 100%;
     max-width: 100%;
 
     &:hover {
@@ -408,6 +407,7 @@ a.top-contents__card {
     .post__category {
       width: 100%;
       text-align: center;
+      border-radius: 9px 9px 0 0;
     }
 
     .post__date {
@@ -651,15 +651,14 @@ a.top-contents__card {
   }
 
   .top-new-blog {
-    margin-top: 80px;
 
     .new-blog__post {
-      padding: 26px 21px 26px;
-      margin-bottom: 74px;
+      margin-bottom: 10px;
+      padding-top: 89px;
     }
 
     .new-blog__post:nth-child(2) {
-      margin: 28px 0 105px;
+      margin: 28px 0 35px;
     }
 
     .new-blog__post:last-child {
@@ -681,7 +680,7 @@ a.top-contents__card {
       width: 100%;
       text-align: center;
       font-size: 18px;
-      top: -71px;
+      top: 0;
     }
 
     .new-blog__post img {
@@ -713,7 +712,7 @@ a.top-contents__card {
       width: 100%;
       text-align: center;
       font-size: 18px;
-      top: -71px;
+      top: 0;
     }
 
     .new-blog__post img {

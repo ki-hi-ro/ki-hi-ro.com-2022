@@ -766,6 +766,14 @@ h3,
 }
 main {
   background: none;
+  padding: 0 15px;
+  margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+  main {
+    padding: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -895,7 +903,7 @@ main {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .single .author {
     margin-top: 0;
   }
@@ -929,6 +937,10 @@ main {
   text-decoration: none;
 }
 
+.single-wrap {
+  background-color: #fff;
+}
+
 @media (min-width: 1000px) {
   .single-wrap {
     width: 900px;
@@ -939,7 +951,6 @@ main {
   .single-wrap {
     margin-bottom: 2rem;
     margin-top: 0;
-    background-color: #fff;
   }
 }
 
@@ -1101,6 +1112,12 @@ span.sitename.main {
   font-weight: 500;
 }
 
+@media (max-width: 575px) {
+  span.sitename.main {
+    font-size: 28px;
+  }
+}
+
 span.sitename.sub {
   display: inline-block;
   font-size: 12px;
@@ -1169,7 +1186,7 @@ header .header-nav nav ul li a:hover {
   left: 35px;
   top: 71px;
   z-index: 4;
-  background: #707070;
+  background: #202020;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s;
@@ -1234,7 +1251,7 @@ header .header-nav nav ul li a:hover {
   position: fixed;
   z-index: 9999;
   top: 27px;
-  right: 5px;
+  right: 0;
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -1364,10 +1381,13 @@ header .header-nav nav ul li a:hover {
 
 @media (max-width: 1199px) {
   header {
-    padding-bottom: 39px;
+    padding-bottom: 10px;
   }
   .pc-nav {
     display: none;
+  }
+  .header-nav {
+    position: relative;
   }
   .header-nav nav ul {
     flex-direction: column;
@@ -1375,9 +1395,23 @@ header .header-nav nav ul li a:hover {
   .header-nav nav ul li a {
     padding: 20px 38px;
   }
+  .openbtn1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   .header-container {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .openbtn1 {
+    position: fixed;
+    top: 33px;
+    right: 6px;
+    transform: none;
   }
 }
 
@@ -1544,9 +1578,24 @@ header .header-nav nav ul li a:hover {
   padding-top: 26px;
 }
 
+.post__category {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #202020;
+  border-radius: 0 9px 0 10px;
+  color: #fff;
+  padding: 12px 35px;
+  font-size: 12px;
+}
+
 .author img {
   width: 130px;
   margin: 0 auto;
+}
+
+.author .author__img {
+  margin-bottom: 20px;
 }
 
 .img-responsive {
@@ -1806,6 +1855,8 @@ a.top-contents__card.--blog {
 
 .top-new-blog .new-blog__post {
   background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #000;
   padding: 16px 29px 3px;
   position: relative;
   display: block;
@@ -1833,16 +1884,6 @@ a.top-contents__card.--blog {
   overflow-y: hidden;
 }
 
-.top-new-blog .new-blog__post .post__category {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: #888888;
-  color: #fff;
-  padding: 12px 35px;
-  font-size: 12px;
-}
-
 .top-new-blog .new-blog__post img {
   margin: 35px auto;
   display: block;
@@ -1859,6 +1900,8 @@ a.top-contents__card.--blog {
 
 .main-column .new-blog__post {
   background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #000;
   padding: 16px 29px 3px;
   position: relative;
   display: block;
@@ -1878,16 +1921,6 @@ a.top-contents__card.--blog {
   color: #333;
 }
 
-.main-column .new-blog__post .post__category {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: #888888;
-  color: #fff;
-  padding: 12px 35px;
-  font-size: 12px;
-}
-
 .main-column .new-blog__post img {
   margin: 35px auto;
   display: block;
@@ -1905,7 +1938,7 @@ a.top-contents__card.--blog {
   color: #000;
   margin: 30px auto 32px;
   display: block;
-  width: 450px;
+  width: 100%;
   max-width: 100%;
 }
 
@@ -1946,6 +1979,7 @@ a.top-contents__card.--blog {
   .top-new-blog .new-blog__post .post__category {
     width: 100%;
     text-align: center;
+    border-radius: 9px 9px 0 0;
   }
   .top-new-blog .new-blog__post .post__date {
     text-align: center;
@@ -2147,15 +2181,12 @@ a.top-contents__card.--blog {
   .consultation-bnr.--sp {
     display: block;
   }
-  .top-new-blog {
-    margin-top: 80px;
-  }
   .top-new-blog .new-blog__post {
-    padding: 26px 21px 26px;
-    margin-bottom: 74px;
+    margin-bottom: 10px;
+    padding-top: 89px;
   }
   .top-new-blog .new-blog__post:nth-child(2) {
-    margin: 28px 0 105px;
+    margin: 28px 0 35px;
   }
   .top-new-blog .new-blog__post:last-child {
     margin-bottom: 0;
@@ -2173,7 +2204,7 @@ a.top-contents__card.--blog {
     width: 100%;
     text-align: center;
     font-size: 18px;
-    top: -71px;
+    top: 0;
   }
   .top-new-blog .new-blog__post img {
     width: 100%;
@@ -2199,7 +2230,7 @@ a.top-contents__card.--blog {
     width: 100%;
     text-align: center;
     font-size: 18px;
-    top: -71px;
+    top: 0;
   }
   .main-colum .new-blog__post img {
     width: 100%;
@@ -2223,6 +2254,8 @@ a.top-contents__card.--blog {
 }
 
 .sidebar .sidebar__contents {
+  border-radius: 10px;
+  border: 1px solid #000;
   background-color: #fff;
   margin-top: 28px;
   padding: 26px 20px 10px;
@@ -2560,9 +2593,20 @@ code {
   }
 }
 
+.single .author.col-xs-12 {
+  border-radius: 15px;
+  border: 1px solid #000;
+}
+
 @media (min-width: 1024px) {
   .single .author.col-xs-12 {
     width: 900px;
+  }
+}
+
+@media (min-width: 992px) {
+  .single .author.col-xs-12 {
+    width: 970px;
   }
 }
 
@@ -2582,8 +2626,8 @@ code {
   article {
     width: 100%;
   }
-  .single h1 {
-    margin-top: 0;
+  .single main {
+    padding: 0 15px;
   }
   .single h2 {
     margin-left: 0;
@@ -2683,6 +2727,17 @@ code {
     text-align: center;
     margin-bottom: 27px;
   }
+}
+
+.page article {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #000;
+  margin-bottom: 30px;
+}
+
+.page-mv img {
+  border-radius: 9px 9px 0 0;
 }
 
 .page .main-contents {
@@ -2862,6 +2917,7 @@ code {
 @media (min-width: 1024px) {
   .page .author.col-xs-12 {
     width: 900px;
+    border-radius: 10px;
   }
 }
 
@@ -2872,12 +2928,18 @@ code {
 }
 
 @media (max-width: 767px) {
+  .page main {
+    padding: 0 15px;
+  }
   .page h1 {
     margin-top: 0;
   }
   .page h2 {
     margin-left: -15px;
     margin-right: -15px;
+    background: none;
+    margin-top: 30px;
+    margin-bottom: 10px;
   }
   .page.service h2 {
     margin-left: 0;
@@ -3249,13 +3311,15 @@ code {
 }
 
 footer {
-  background-color: #454545;
+  background-color: #202020;
 }
 
 footer nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding: 20px 15px;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 footer nav .nav-contents {

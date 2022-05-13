@@ -1,11 +1,13 @@
 footer {
-  background-color: #454545;
+  background-color: #202020;
 }
 
 footer nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding: 20px 15px;
+  max-width: 1140px;
+  margin: 0 auto;
 
   .nav-contents {
     margin-right: 54px;
