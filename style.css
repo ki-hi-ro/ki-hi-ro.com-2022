@@ -1616,6 +1616,8 @@ header .header-nav nav ul li a:hover {
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
   color: #000;
+  display: flex;
+  align-items: center;
 }
 
 .skill-blog__link:hover {
@@ -1641,6 +1643,8 @@ header .header-nav nav ul li a:hover {
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
   color: #000;
+  display: flex;
+  align-items: center;
 }
 
 .random-blog__link:hover {
@@ -1672,6 +1676,8 @@ header .header-nav nav ul li a:hover {
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
   color: #000;
+  display: flex;
+  align-items: center;
 }
 
 .study-blog__link:hover {
@@ -2550,6 +2556,8 @@ code {
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
   color: #000;
+  display: flex;
+  align-items: center;
 }
 
 .related-post .related-post__tag {
