@@ -1,7 +1,5 @@
 <?php get_header();?>
 
-	<div id="particles-js"></div>
-
 	<section class="top-new-blog">
 		<?php
 		$category_names = ["skill-blog", "study-blog", "random-blog"];
