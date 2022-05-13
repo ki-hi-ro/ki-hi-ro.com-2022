@@ -780,7 +780,6 @@ main {
 @media (min-width: 1000px) {
   .author {
     width: 100%;
-    max-width: 900px;
   }
 }
 
@@ -873,7 +872,6 @@ main {
 @media (min-width: 1000px) {
   .author {
     width: 100%;
-    max-width: 900px;
   }
 }
 
@@ -934,15 +932,14 @@ main {
 @media (min-width: 1000px) {
   .single-wrap {
     width: 900px;
-    max-width: 900px;
   }
 }
 
 @media (min-width: 768px) {
   .single-wrap {
-    border: 1px solid #d2d2d2;
     margin-bottom: 2rem;
     margin-top: 0;
+    background-color: #fff;
   }
 }
 
@@ -1035,6 +1032,7 @@ a {
 
 html {
   margin-top: 0 !important;
+  background-color: #f7f7f7;
 }
 
 .row {
@@ -1541,7 +1539,7 @@ header .header-nav nav ul li a:hover {
 }
 
 .home .author {
-  background-color: #f7f7f7;
+  background-color: #fff;
   margin-top: 28px;
   padding-top: 26px;
 }
@@ -1807,7 +1805,7 @@ a.top-contents__card.--blog {
 }
 
 .top-new-blog .new-blog__post {
-  background-color: #f7f7f7;
+  background-color: #fff;
   padding: 16px 29px 3px;
   position: relative;
   display: block;
@@ -1860,7 +1858,7 @@ a.top-contents__card.--blog {
 }
 
 .main-column .new-blog__post {
-  background-color: #f7f7f7;
+  background-color: #fff;
   padding: 16px 29px 3px;
   position: relative;
   display: block;
@@ -2221,10 +2219,11 @@ a.top-contents__card.--blog {
 
 .sidebar {
   width: 358px;
+  margin-bottom: 30px;
 }
 
 .sidebar .schedule {
-  background-color: #f7f7f7;
+  background-color: #fff;
   margin-top: 28px;
   padding: 26px 20px 10px;
 }
@@ -2236,7 +2235,7 @@ a.top-contents__card.--blog {
 }
 
 .sidebar .concept {
-  background-color: #f7f7f7;
+  background-color: #fff;
   margin-top: 28px;
   padding: 26px 20px 10px;
 }
@@ -2261,7 +2260,7 @@ a.top-contents__card.--blog {
 }
 
 .sidebar .sidebar__skill-blog {
-  background-color: #f7f7f7;
+  background-color: #fff;
   margin-top: 28px;
   padding: 26px 20px 27px;
 }
@@ -2299,7 +2298,7 @@ a.top-contents__card.--blog {
 }
 
 .sidebar .sidebar__study-blog {
-  background-color: #f7f7f7;
+  background-color: #fff;
   margin-top: 28px;
   padding: 26px 20px 27px;
 }
@@ -2337,7 +2336,7 @@ a.top-contents__card.--blog {
 }
 
 .sidebar .sidebar__blog {
-  background-color: #f7f7f7;
+  background-color: #fff;
   margin-top: 28px;
   padding: 26px 20px 27px;
 }
@@ -2612,6 +2611,12 @@ code {
 @media (min-width: 1024px) {
   .single .author.col-xs-12 {
     width: 900px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .single .author.col-xs-12 {
+    width: 1140px;
   }
 }
 

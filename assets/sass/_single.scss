@@ -169,10 +169,17 @@ code {
   }
 }
 
+
 @media (min-width: 1024px) {
   .single .author.col-xs-12 {
     width: 900px;
   }
+}
+
+@media (min-width: 1200px) {
+  .single .author.col-xs-12 {
+    width: 1140px;
+  }  
 }
 
 @media (max-width: 999px) and (min-width: 768px) {
