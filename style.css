@@ -2761,6 +2761,31 @@ code {
   margin: 60px 20px 40px;
 }
 
+.blog.page h2 {
+  background: none;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 575px) {
+  .blog.page h2 {
+    margin-bottom: 0;
+  }
+}
+
+.blog .page__contents-container {
+  padding: 0;
+}
+
+.blog .skill-blog__sec-ttl {
+  margin-top: 20px;
+}
+
+@media (max-width: 575px) {
+  .blog .skill-blog__sec-ttl {
+    margin-top: 0;
+  }
+}
+
 .page h3 {
   border-left: 6px solid #000;
   margin-left: 20px;
