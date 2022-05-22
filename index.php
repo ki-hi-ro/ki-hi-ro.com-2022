@@ -14,7 +14,7 @@
 			));
 			global $post;
 			if($cat_posts): foreach($cat_posts as $post): setup_postdata($post); ?>
-				<a href="<?php the_permalink() ?>" class="new-blog__post">
+				<a href="<?php the_permalink() ?>" class="new-blog__post top-card">
 					<p class="post__date"><?php the_time('Y/m/d') ?></p>
 					<h3><?php the_title(); ?></h3>
 					<span class="post__category"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></span>
@@ -54,7 +54,7 @@
 						));
 						global $post;
 						if($cat_posts): foreach($cat_posts as $post): setup_postdata($post); ?>
-							<a href="<?php the_permalink() ?>" class="new-blog__post">
+							<a href="<?php the_permalink() ?>" class="new-blog__post top-card">
 								<p class="post__date"><?php the_time('Y/m/d') ?></p>
 								<h3><?php the_title(); ?></h3>
 								<span class="post__category"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></span>
@@ -73,7 +73,7 @@
 		</section>
 
 		<aside class="sidebar">
-			<section class="author sidebar__contents" itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<section class="author sidebar__contents top-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/introduce/2022-04.png" class="img-responsive img-circle author__img">
 				<h4>
 					<span itemprop="name">Shibata Hiroki</span>
@@ -90,13 +90,13 @@
 				</div>
 			</section>
 
-			<section class="schedule sidebar__contents">
+			<section class="schedule sidebar__contents top-card">
 				<h4>スケジュール</h4>
 				<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;showTabs=0&amp;showDate=1&amp;showPrint=0&amp;showTitle=0&amp;showNav=0&amp;showCalendars=0&amp;mode=AGENDA&amp;showTz=0&amp;src=a2hpcm8yMTM4QGdtYWlsLmNvbQ&amp;color=%23039BE5" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
 				<p>※safariで閲覧すると「私はロボットではありません」という表示が出て、カレンダーが表示されない現象が起こる場合があります。カレンダーを表示させるには、Chromeなどの別のブラウザでご覧いただくか、設定 &gt; Safariの「サイト越えトラッキングを防ぐ」の設定をOFFしてください。</p>
 			</section>
 
-			<section class="concept sidebar__contents">
+			<section class="concept sidebar__contents top-card">
 				<h4>サイトのコンセプト</h4>
 				<p>こちらのサイトでは、</p>
 				<ul>
@@ -107,7 +107,7 @@
 				<p>の3軸で発信していきます。</p>
 			</section>
 
-			<section class="sidebar__blog sidebar__contents">
+			<section class="sidebar__blog sidebar__contents top-card">
 				<h4>技術ブログ</h4>
 
 				<?php
@@ -131,7 +131,7 @@
 				</div>
 			</section>
 
-			<section class="sidebar__blog sidebar__contents">
+			<section class="sidebar__blog sidebar__contents top-card">
 				<h4>学習ブログ</h4>
 
 				<?php
@@ -155,7 +155,7 @@
 				</div>
 			</section>
 
-			<section class="sidebar__blog sidebar__contents">
+			<section class="sidebar__blog sidebar__contents top-card">
 				<h4>雑記ブログ</h4>
 
 				<?php

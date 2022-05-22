@@ -1,5 +1,8 @@
+.top-card {
+  background-color: #F7F7F7;
+}
+
 .home .author {
-  background-color: #fff;
   margin-top: 28px;
   padding-top: 26px;
 }
@@ -8,8 +11,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #202020;
-  border-radius: 0 9px 0 10px;
+  background-color: #888888;
   color: #fff;
   padding: 12px 35px;
   font-size: 12px;
@@ -206,7 +208,6 @@ a.top-contents__card {
 .card {
   width: 100%;
   height: auto;
-  border-radius: 8px;
   overflow: hidden;
   border: 1px solid #d2d2d2;
 
@@ -277,9 +278,6 @@ a.top-contents__card {
   display: flex;
 
   .new-blog__post {
-    background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid #000;
     padding: 16px 29px 3px;
     position: relative;
     display: block;
@@ -322,9 +320,6 @@ a.top-contents__card {
   margin-bottom: 28px;
 
   .new-blog__post {
-    background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid #000;
     padding: 16px 29px 3px;
     position: relative;
     display: block;
@@ -363,15 +358,6 @@ a.top-contents__card {
     display: block;
     width: 100%;
     max-width: 100%;
-
-    &:hover {
-      cursor: pointer;
-      background-color: #000;
-      border: 1px solid #fff;
-      color: #fff;
-      transition: all 0.3s;
-      font-weight: bold;
-    }
   }
 }
 
@@ -407,7 +393,6 @@ a.top-contents__card {
     .post__category {
       width: 100%;
       text-align: center;
-      border-radius: 9px 9px 0 0;
     }
 
     .post__date {
@@ -637,7 +622,6 @@ a.top-contents__card {
     img {
       width: 100%;
       margin: 0 auto;
-      border-radius: 8px;
       border: 1px solid #d2d2d2;
     }
   }

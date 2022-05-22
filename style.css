@@ -1571,8 +1571,11 @@ header .header-nav nav ul li a:hover {
   }
 }
 
+.top-card {
+  background-color: #F7F7F7;
+}
+
 .home .author {
-  background-color: #fff;
   margin-top: 28px;
   padding-top: 26px;
 }
@@ -1581,8 +1584,7 @@ header .header-nav nav ul li a:hover {
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #202020;
-  border-radius: 0 9px 0 10px;
+  background-color: #888888;
   color: #fff;
   padding: 12px 35px;
   font-size: 12px;
@@ -1780,7 +1782,6 @@ a.top-contents__card.--blog {
 .card {
   width: 100%;
   height: auto;
-  border-radius: 8px;
   overflow: hidden;
   border: 1px solid #d2d2d2;
 }
@@ -1853,9 +1854,6 @@ a.top-contents__card.--blog {
 }
 
 .top-new-blog .new-blog__post {
-  background-color: #fff;
-  border-radius: 10px;
-  border: 1px solid #000;
   padding: 16px 29px 3px;
   position: relative;
   display: block;
@@ -1898,9 +1896,6 @@ a.top-contents__card.--blog {
 }
 
 .main-column .new-blog__post {
-  background-color: #fff;
-  border-radius: 10px;
-  border: 1px solid #000;
   padding: 16px 29px 3px;
   position: relative;
   display: block;
@@ -1941,15 +1936,6 @@ a.top-contents__card.--blog {
   max-width: 100%;
 }
 
-.main-column .top-blog-list-link:hover {
-  cursor: pointer;
-  background-color: #000;
-  border: 1px solid #fff;
-  color: #fff;
-  transition: all 0.3s;
-  font-weight: bold;
-}
-
 @media (max-width: 1199px) {
   .top-new-blog .new-blog__post img {
     width: 200px;
@@ -1978,7 +1964,6 @@ a.top-contents__card.--blog {
   .top-new-blog .new-blog__post .post__category {
     width: 100%;
     text-align: center;
-    border-radius: 9px 9px 0 0;
   }
   .top-new-blog .new-blog__post .post__date {
     text-align: center;
@@ -2171,7 +2156,6 @@ a.top-contents__card.--blog {
   .consultation-bnr__wrap img {
     width: 100%;
     margin: 0 auto;
-    border-radius: 8px;
     border: 1px solid #d2d2d2;
   }
   .consultation-bnr {
@@ -2253,9 +2237,6 @@ a.top-contents__card.--blog {
 }
 
 .sidebar .sidebar__contents {
-  border-radius: 10px;
-  border: 1px solid #000;
-  background-color: #fff;
   margin-top: 28px;
   padding: 26px 20px 10px;
 }
