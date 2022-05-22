@@ -24,11 +24,7 @@
 		</div>
 		<div class="nav-contents">
 			<h4><a href="<?php echo home_url('blog'); ?>">ブログ</a></h4>
-			<ul>
-				<li><a href="<?php echo home_url('blog#skill-blog'); ?>">技術ブログ</a></li>
-				<li><a href="<?php echo home_url('blog#study-blog'); ?>">学習ブログ</a></li>
-				<li><a href="<?php echo home_url('blog#random-blog'); ?>">雑記ブログ</a></li>
-			</ul>
+			<?php echo get_template_part('template-parts/nav-blog'); ?>
 		</div>
 		<div class="nav-contents">
 			<h4>その他</h4>
