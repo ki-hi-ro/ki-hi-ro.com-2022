@@ -159,9 +159,16 @@ code {
     display: none;
   }
 
-  .single .author .wp-block-image.w-50 {
-    width: 50%;
+  .single .author .wp-block-image {
     margin: 40px auto;
+
+    &.w-20 {
+      width: 20%;
+    }
+
+    &.w-50 {
+      width: 50%;
+    }
   }
 
   .single iframe.map.sp {

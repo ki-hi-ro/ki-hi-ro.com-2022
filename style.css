@@ -2564,9 +2564,14 @@ code {
   .sp-img {
     display: none;
   }
+  .single .author .wp-block-image {
+    margin: 40px auto;
+  }
+  .single .author .wp-block-image.w-20 {
+    width: 20%;
+  }
   .single .author .wp-block-image.w-50 {
     width: 50%;
-    margin: 40px auto;
   }
   .single iframe.map.sp {
     display: none;
