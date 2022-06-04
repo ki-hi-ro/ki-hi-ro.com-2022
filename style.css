@@ -3332,6 +3332,37 @@ code {
   background: none;
 }
 
+.page .random-blog__tag-section {
+  background-color: #f7f7f7;
+}
+
+.page .random-blog__tag-section .tag__wrap {
+  display: flex;
+}
+
+.page .random-blog__tag-section .tag__wrap .tag {
+  margin-right: 10px;
+}
+
+.page .random-blog__tag-section .tag__wrap .tag:last-child {
+  margin-right: 0;
+}
+
+.page .random-blog__latest .top-new-blog {
+  flex-wrap: wrap;
+}
+
+.page .random-blog__latest .top-new-blog .new-blog__post {
+  padding: 0;
+  width: 20%;
+  margin: 0;
+}
+
+.page .random-blog__latest .top-new-blog .new-blog__post img {
+  width: 100%;
+  margin: 0;
+}
+
 footer {
   background-color: #202020;
 }
