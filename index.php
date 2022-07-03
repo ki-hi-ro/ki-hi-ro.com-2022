@@ -22,10 +22,28 @@
 
 <p>もともとブランドページとメンズブランドページ、レディースブランドページの3種類存在し、メンズブランドページに何故かスカートとワンピースのリンクが設定されていました。</p>
 
-<p class="mb-0">以下のコードにすることでメンズの時にはスカートとワンピースが表示されないようにしました。</p>
+<p class="mb-0">
+	以下のコードにすることでメンズの時にはスカートとワンピースが表示されないようにしました。
+	<small class="d-pc-none">※改行の関係でインデントは省略しています。</small>
+</p>
 
-<pre class="wp-block-code mt-0">
+<pre class="wp-block-code mt-0 d-pc-block">
 	<code>&lt;p class=“brand_filtering”&gt;
+	アイテムを絞り込む :
+		{% for name, url in item_navigation_for_brand %}
+			{% if app.request.query.get(‘gender’) != “” and app.request.query.get(‘gender’) == 0 %}
+				{% if name != ‘スカート’ and name != ‘ワンピース’ %}
+					<span>&nbsp;|&nbsp;</span><a href=“{{ url }}”>{{ name }}</a>
+				{% endif %}
+			{% else %}
+				<span>&nbsp;|&nbsp;</span><a href=“{{ url }}”>{{ name }}</a>
+			{% endif %}
+	{% endfor %}
+&lt;/p&gt;</code>
+</pre>
+
+<pre class="wp-block-code mt-0 d-pc-none mb-0">
+<code>&lt;p class=“brand_filtering”&gt;
 アイテムを絞り込む :
 {% for name, url in item_navigation_for_brand %}
 {% if app.request.query.get(‘gender’) != “” and app.request.query.get(‘gender’) == 0 %}
@@ -38,6 +56,7 @@
 {% endfor %}
 &lt;/p&gt;</code>
 </pre>
+WEBサイトの改善でお困りの方、ぜひ<a href="<?php echo home_url('contact'); ?>">こちらのお問い合わせフォームより</a>お問い合わせください。
 </section>
 
 	<section class="top-new-blog">

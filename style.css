@@ -2251,12 +2251,25 @@ a.top-contents__card.--blog {
   margin-bottom: 0;
 }
 
+.recentry .d-pc-none {
+  display: none;
+}
+
 @media (max-width: 575px) {
   .recentry {
     padding: 10px 20px;
   }
   .recentry p {
     font-size: 16px;
+  }
+  .recentry .d-pc-block {
+    display: none;
+  }
+  .recentry .d-pc-none {
+    display: block;
+  }
+  .recentry .d-pc-none.wp-block-code {
+    margin-top: 10px;
   }
 }
 

@@ -735,11 +735,27 @@ a.top-contents__card {
     margin-bottom: 0;
   }
 
+  .d-pc-none {
+    display: none;
+  }
+
   @media (max-width: 575px) {
     padding: 10px 20px;
 
     p {
       font-size: 16px   
+    }
+
+    .d-pc-block {
+      display: none;
+    }
+
+    .d-pc-none {
+      display: block;
+
+      &.wp-block-code {
+        margin-top: 10px;
+      }
     }
   }
 }
