@@ -2221,6 +2221,45 @@ a.top-contents__card.--blog {
   }
 }
 
+.recentry {
+  background-color: #F7F7F7;
+  padding: 10px 40px;
+  margin-bottom: 40px;
+}
+
+.recentry h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.recentry h3 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.recentry h4 {
+  margin-bottom: 0;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.recentry .mt-0 {
+  margin-top: 0;
+}
+
+.recentry .mb-0 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+  .recentry {
+    padding: 10px 20px;
+  }
+  .recentry p {
+    font-size: 16px;
+  }
+}
+
 #particles-js {
   z-index: -1;
   width: 100%;

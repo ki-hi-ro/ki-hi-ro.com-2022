@@ -1,5 +1,45 @@
 <?php get_header();?>
 
+<section class="recentry">
+<h2>最近対応した項目</h2>
+<h3>サイトの修正（検収日: 7/1）</h3>
+<p>WordPressとEC-CUBEで作成されたサイトそれぞれの最適化のためのコーディングを行いました。</p>
+<h4>WordPress</h4>
+<p class="mt-0">
+- バナーのリンク先変更<br>
+- 不要なInstagramウィジェットの削除
+</p>
+<h4>EC-CUBE</h4>
+<p class="mt-0">
+- ブランドページのテキスト内容の変更<br>
+- ブログメイン画像の見切れ修正<br>
+- スマホハンバーガーメニューのブランドロゴの横に分かりやすいように文字を追加<br>
+- ブランド絞り込みの表記変更<br>
+- メンズの時はスカートとワンピースを削除
+</p>
+
+<p>「メンズの時はスカートとワンピースを削除」について詳しく説明します。</p>
+
+<p>もともとブランドページとメンズブランドページ、レディースブランドページの3種類存在し、メンズブランドページに何故かスカートとワンピースのリンクが設定されていました。</p>
+
+<p class="mb-0">以下のコードにすることでメンズの時にはスカートとワンピースが表示されないようにしました。</p>
+
+<pre class="wp-block-code mt-0">
+	<code>&lt;p class=“brand_filtering”&gt;
+アイテムを絞り込む :
+{% for name, url in item_navigation_for_brand %}
+{% if app.request.query.get(‘gender’) != “” and app.request.query.get(‘gender’) == 0 %}
+{% if name != ‘スカート’ and name != ‘ワンピース’ %}
+<span>&nbsp;|&nbsp;</span><a href=“{{ url }}”>{{ name }}</a>
+{% endif %}
+{% else %}
+<span>&nbsp;|&nbsp;</span><a href=“{{ url }}”>{{ name }}</a>
+{% endif %}
+{% endfor %}
+&lt;/p&gt;</code>
+</pre>
+</section>
+
 	<section class="top-new-blog">
 		<?php
 		$category_names = ["skill-blog", "study-blog", "random-blog"];
