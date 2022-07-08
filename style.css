@@ -2220,7 +2220,57 @@ a.top-contents__card.--blog {
     height: auto;
   }
 }
+.recentry {
+  background-color: #F7F7F7;
+  padding: 10px 40px;
+  margin-bottom: 40px;
+}
 
+.recentry h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.recentry h3 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.recentry h4 {
+  margin-bottom: 0;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.recentry .mt-0 {
+  margin-top: 0;
+}
+
+.recentry .mb-0 {
+  margin-bottom: 0;
+}
+
+.recentry .d-pc-none {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .recentry {
+    padding: 10px 20px;
+  }
+  .recentry p {
+    font-size: 16px;
+  }
+  .recentry .d-pc-block {
+    display: none;
+  }
+  .recentry .d-pc-none {
+    display: block;
+  }
+  .recentry .d-pc-none.wp-block-code {
+    margin-top: 10px;
+  }
+}
 #particles-js {
   z-index: -1;
   width: 100%;
@@ -2564,9 +2614,17 @@ code {
   .sp-img {
     display: none;
   }
+  .single .author .wp-block-image {
+    margin: 40px auto;
+    padding: 0 22px;
+  }
+  .single .author .wp-block-image.w-20 {
+    width: 20%;
+    padding: 0;
+  }
   .single .author .wp-block-image.w-50 {
     width: 50%;
-    margin: 40px auto;
+    padding: 0;
   }
   .single iframe.map.sp {
     display: none;
@@ -2643,7 +2701,10 @@ code {
     display: none;
   }
   .single .author img {
-    width: 75%;
+    width: 100%;
+  }
+  .single .author .w-20 img {
+    width: 50%;
   }
   .single .wp-block-image {
     margin: 40px 0;
@@ -3328,41 +3389,6 @@ code {
   }
 }
 
-.page .random-blog__sec-ttl {
-  background: none;
-}
-
-.page .random-blog__tag-section {
-  background-color: #f7f7f7;
-}
-
-.page .random-blog__tag-section .tag__wrap {
-  display: flex;
-}
-
-.page .random-blog__tag-section .tag__wrap .tag {
-  margin-right: 10px;
-}
-
-.page .random-blog__tag-section .tag__wrap .tag:last-child {
-  margin-right: 0;
-}
-
-.page .random-blog__latest .top-new-blog {
-  flex-wrap: wrap;
-}
-
-.page .random-blog__latest .top-new-blog .new-blog__post {
-  padding: 0;
-  width: 20%;
-  margin: 0;
-}
-
-.page .random-blog__latest .top-new-blog .new-blog__post img {
-  width: 100%;
-  margin: 0;
-}
-
 footer {
   background-color: #202020;
 }
@@ -3422,4 +3448,14 @@ footer nav li {
 .wp-admin .ai1mw-lines {
   top: 50%;
   transform: translateY(-50%);
+}
+
+@media (max-width: 660px) {
+  .mcWRN .teQAzf {
+      width: 100%;
+  }
+}
+
+.teQAzf {
+  max-width: 100vw;
 }
