@@ -72,11 +72,12 @@
 					<div class="openbtn1"><span></span><span></span><span></span></div>
 					<nav class="sp-nav">
 						<ul>
-							<li><a class="sp-nav__top" href="<?php echo home_url(); ?>">Top</a></li>
-							<li><a class="sp-nav__service" href="<?php echo home_url('service'); ?>">Service</a></li>
-							<li><a href="<?php echo home_url('introduce'); ?>">Introduce</a></li>
-							<li><a href="<?php echo home_url('blog'); ?>">Blog</a></li>
-							<li><a class="sp-nav__contact" href="<?php echo home_url('contact'); ?>">Contact</a></li>
+							<li><a class="sp-nav__top" href="<?php echo home_url(); ?>">お問い合わせ</a></li>
+							<li><a class="sp-nav__top" href="<?php echo home_url(); ?>">対応可能な項目</a></li>
+							<li><a class="sp-nav__top" href="<?php echo home_url(); ?>">これまでの対応内容</a></li>
+							<li><a class="sp-nav__top" href="<?php echo home_url(); ?>">技術ブログ</a></li>
+							<li><a class="sp-nav__top" href="<?php echo home_url(); ?>">学習ブログ</a></li>
+							<li><a class="sp-nav__top" href="<?php echo home_url(); ?>">雑記ブログ</a></li>
 						</ul>
 					</nav>
 

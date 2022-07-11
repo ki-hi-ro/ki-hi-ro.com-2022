@@ -787,7 +787,7 @@ main {
 
 @media (min-width: 1000px) {
   .author {
-    width: 100%;
+    width: 450px;
   }
 }
 
@@ -3458,4 +3458,72 @@ footer nav li {
 
 .teQAzf {
   max-width: 100vw;
+}
+
+@media (min-width: 1000px) {
+  .author {
+      width: 450px;
+  }
+}
+
+.top-section h4 {
+  text-align: center;
+}
+
+.top-section p {
+  width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+.top-section p {
+  width: 100%;
+}
+}
+
+.contact.top-section .submit-btn {
+      padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contact.top-section .submit-btn input {
+      color: #000;
+    font-weight: normal;
+        background-color: #fff;
+    border: 1px solid #000;
+    outline: none;
+    padding: 11px 50px;
+    font-size: 17px;
+}
+
+.contact.top-section .submit-btn input:hover {
+  cursor: pointer;
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all .3s;
+    font-weight: bold;
+}
+
+.contact.top-section .text-danger {
+      color: red;
+    font-weight: 500;
+}
+
+.contact.top-section textarea {
+    width: 100%;
+}
+
+.more-link.--top-sec {
+  width: 650px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+.more-link.--top-sec {
+  width: 100%;
+}
 }
