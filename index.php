@@ -23,19 +23,16 @@
   </div>
 </section>
 
-<section class="top-section what-i-can">
+<section class="top-section" id="what-i-can">
   <h4>対応可能な項目</h4>
-  <p>WordPress, EC-CUBE, LPサイトなどWebサイト全般のコーディングが対応可能です。
-対応可能な言語は、HTML / CSS, Sass, PHP, Twigなどです。
+  <p>WordPress, EC-CUBE, LPサイトなどWebサイト全般のコーディングが対応可能です。対応可能な言語は、HTML / CSS, Sass, PHP, Twigなどです。
 <a href="#contact">こちら</a>よりご相談内容をお送りいただければ、金額と納期をお知らせします。
-金額と納期をお知らせする以前に、対応が難しい場合はその旨もご連絡します。
-対応可能項目を増やすために学習ブログを更新しています。</p>
+金額と納期をお知らせする以前に、対応が難しい場合はその旨もご連絡します。対応可能項目を増やすために<a href="#study-blog">学習ブログ</a>を更新しています。</p>
 </section>
 
-<section class="top-section what-i-did">
+<section class="top-section" id="what-i-did">
   <h4>これまでの対応内容</h4>
-  <p>これまでにクラウドソーシングや、エージェント、地元のWEB制作会社経由で様々なお仕事を
-経験しました。どんな仕事をしてきたのかを掲載できる範囲で投稿していきます。</p>
+  <p>これまでにクラウドソーシングや、エージェント、地元のWEB制作会社経由で様々なお仕事を経験しました。どんな仕事をしてきたのかを、掲載可能な範囲で投稿していきます。</p>
   <?php
 				$args = array(
 						'category_name' =>
@@ -55,7 +52,7 @@
 
 </section>
 
-<section class="top-section sidebar__blog sidebar__contents">
+<section class="top-section sidebar__blog sidebar__contents" id="skill-blog">
   <h4>技術ブログ</h4>
 
   <p>これまでに身につけてきたWEB制作に必要なスキルを、テーマを決めて投稿していきます。</p>
@@ -78,7 +75,7 @@
     </div>
 </section>
 
-<section class="top-section sidebar__blog sidebar__contents ">
+<section class="top-section sidebar__blog sidebar__contents" id="study-blog">
   <h4>学習ブログ</h4>
 
   <p>参考書などで学んだことをテーマにしたブログ記事を投稿していきます。</p>
@@ -101,7 +98,7 @@
     </div>
 </section>
 
-<section class="top-section sidebar__blog sidebar__contents ">
+<section class="top-section sidebar__blog sidebar__contents" id="random-blog">
   <h4>雑記ブログ</h4>
 
   <p>日常で感動したことなどを、息抜きに投稿していきます。</p>
