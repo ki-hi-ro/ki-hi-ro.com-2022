@@ -1672,12 +1672,16 @@ header .header-nav nav ul li a:hover {
   align-items: center;
 }
 
+.home .skill-blog__contents {
+  max-width: 750px;
+}
+
 .skill-blog__link:hover {
   text-decoration: none;
 }
 
 .skill-blog__tag {
-  width: 24%;
+  width: 60%;
   border: 1px solid #d2d2d2;
   padding: 0px 20px;
   text-align: center;
@@ -1688,6 +1692,7 @@ header .header-nav nav ul li a:hover {
 @media (max-width: 767px) {
   .skill-blog__tag {
     width: 60%;
+    font-size: 11px;
   }
 }
 
@@ -1696,7 +1701,7 @@ header .header-nav nav ul li a:hover {
 }
 
 .random-blog__contents {
-  max-width: 648px;
+  max-width: 750px;
   margin: 0 auto;
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
@@ -1710,12 +1715,18 @@ header .header-nav nav ul li a:hover {
 }
 
 .random-blog__tag {
-  width: 24%;
+  width: 60%;
   border: 1px solid #d2d2d2;
   padding: 0px 20px;
   text-align: center;
   display: inline-block;
   margin: 3px 10px;
+}
+@media (max-width: 767px) {
+  .random-blog__tag {
+    width: 60%;
+    font-size: 11px;
+  }
 }
 
 .random-blog__link:not(:last-child) {
@@ -1729,7 +1740,7 @@ header .header-nav nav ul li a:hover {
 }
 
 .study-blog__contents {
-  max-width: 648px;
+  max-width: 750px;
   margin: 0 auto;
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
@@ -1743,12 +1754,18 @@ header .header-nav nav ul li a:hover {
 }
 
 .study-blog__tag {
-  width: 24%;
+  width: 60%;
   border: 1px solid #d2d2d2;
   padding: 0px 20px;
   text-align: center;
   display: inline-block;
   margin: 3px 10px;
+}
+@media (max-width: 767px) {
+  .study-blog__tag {
+    width: 60%;
+    font-size: 11px;
+  }
 }
 
 .study-blog__link:not(:last-child) {
@@ -2081,20 +2098,8 @@ a.top-contents__card.--blog {
   .random-blog__sec-ttl {
     margin-top: 50px;
   }
-  .random-blog__tag {
-    display: none;
-  }
-  .random-blog__ttl {
-    margin-left: 10px;
-  }
   .study-blog__sec-ttl {
     margin-top: 50px;
-  }
-  .study-blog__tag {
-    display: none;
-  }
-  .study-blog__ttl {
-    margin-left: 10px;
   }
   .card__img {
     height: 250px;
@@ -3557,13 +3562,16 @@ footer nav li {
 }
 
 @media (max-width: 767px) {
-  .skill-blog__contents {
+  .skill-blog__contents,
+  .study-blog__contents,
+  .random-blog__contents {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .skill-blog__meta {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -3571,7 +3579,17 @@ footer nav li {
   .skill-blog__meta {
     width: 38%;
   }
-  .skill-blog__tag {
+  .home .skill-blog__tag {
     width: 60%;
   }
+}
+
+@media (max-width: 767px) {
+  .home .skill-blog__tag {
+    font-size: 11px;
+  }
+}
+
+section#contact {
+    margin: 100px 0;
 }

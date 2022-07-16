@@ -56,14 +56,14 @@
 					</div>
 					<nav class="pc-nav">
 						<ul>
-							<li><a href="#contact">お問い合わせ</a></li>
-							<li><a href="#what-i-can">対応可能な項目</a></li>
-							<li><a href="#what-i-did">これまでの対応内容</a></li>
-							<li class="has-child"><a href="/">ブログ</a>
+							<li><a href="<?php echo home_url('#contact'); ?>">お問い合わせ</a></li>
+							<li><a href="<?php echo home_url('#what-i-can'); ?>">対応可能な項目</a></li>
+							<li><a href="<?php echo home_url('#what-i-did'); ?>">これまでの対応内容</a></li>
+							<li class="has-child"><a href="<?php echo home_url('blog/#skill-blog'); ?>">ブログ</a>
 								<ul>
-									<li><a href="#skill-blog">技術ブログ</a></li>
-									<li><a href="#study-blog">学習ブログ</a></li>
-									<li><a href="#random-blog">雑記ブログ</a></li>
+									<li><a href="<?php echo home_url('#skill-blog'); ?>">技術ブログ</a></li>
+									<li><a href="<?php echo home_url('#study-blog'); ?>">学習ブログ</a></li>
+									<li><a href="<?php echo home_url('#random-blog'); ?>">雑記ブログ</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -72,12 +72,12 @@
 					<div class="openbtn1"><span></span><span></span><span></span></div>
 					<nav class="sp-nav">
 						<ul>
-							<li><a class="sp-nav__top" href="#contact">お問い合わせ</a></li>
-							<li><a class="sp-nav__top" href="#what-i-can">対応可能な項目</a></li>
-							<li><a class="sp-nav__top" href="#what-i-did">これまでの<br class="only-sp">対応内容</a></li>
-							<li><a class="sp-nav__top" href="#skill-blog">技術ブログ</a></li>
-							<li><a class="sp-nav__top" href="#study-blog">学習ブログ</a></li>
-							<li><a class="sp-nav__top" href="#random-blog">雑記ブログ</a></li>
+							<li><a class="sp-nav__top" href="<?php echo home_url('#contact'); ?>">お問い合わせ</a></li>
+							<li><a class="sp-nav__top" href="<?php echo home_url('#what-i-can'); ?>">対応可能な項目</a></li>
+							<li><a class="sp-nav__top" href="<?php echo home_url('#what-i-did'); ?>">これまでの<br class="only-sp">対応内容</a></li>
+							<li><a class="sp-nav__top" href="<?php echo home_url('#skill-blog'); ?>">技術ブログ</a></li>
+							<li><a class="sp-nav__top" href="<?php echo home_url('#study-blog'); ?>">学習ブログ</a></li>
+							<li><a class="sp-nav__top" href="<?php echo home_url('#random-blog'); ?>">雑記ブログ</a></li>
 						</ul>
 					</nav>
 
