@@ -827,7 +827,7 @@ main {
   padding: 0 20px 0 20px;
   color: #000;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.8;
   margin-top: 40px;
 }
 
@@ -864,7 +864,7 @@ main {
     padding-left: 0;
     padding-right: 0;
   }
-  .single .author p {
+  .single .single-wrap p {
     padding-left: 0;
     padding-right: 0;
   }
@@ -1024,7 +1024,7 @@ main {
   width: calc(100% - 20px * 2);
 }
 
-.single .author img {
+.single .single-wrap img {
   margin: 0 auto;
   width: 100%;
 }
@@ -1630,6 +1630,7 @@ header .header-nav nav ul li a:hover {
   color: #000;
   font-size: 16px;
   font-weight: 300;
+  line-height: 1.8;
 }
 
 .consultation-bnr__wrap {
@@ -2068,6 +2069,7 @@ a.top-contents__card.--blog {
   }
   .home .author p {
     text-align: left;
+    line-height: 1.8;
   }
   .author__contents ul {
     padding-left: 20px;
@@ -2471,6 +2473,16 @@ a.top-contents__card.--blog {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  width: 70%;
+  padding-right: 50px;
+}
+
+.single .main-contents article {
+  width: 100%;
+}
+
+.single .main-contents article .single-wrap {
+  width: 100%;
 }
 
 .single .nav-menu__ul {
@@ -2499,12 +2511,12 @@ a.top-contents__card.--blog {
   font-size: 20px;
 }
 
-.single .author h4 {
+.single .single-wrap h4 {
   text-align: left;
   padding-left: 20px;
 }
 
-.single p {
+.single .single-wrap p {
   margin-bottom: 60px;
 }
 
@@ -2686,9 +2698,7 @@ code {
   article {
     width: 100%;
   }
-  .single main {
-    padding: 0 15px;
-  }
+
   .single h2 {
     margin-left: 0;
     margin-right: 0;
@@ -2710,7 +2720,7 @@ code {
   .pc-img {
     display: none;
   }
-  .single .author img {
+  .single .single-wrap img {
     width: 100%;
   }
   .single .author .w-20 img {
@@ -2758,7 +2768,7 @@ code {
 }
 
 @media (max-width: 500px) {
-  .single .author img {
+  .single .single-wrap img {
     width: 100%;
   }
 }
@@ -3598,4 +3608,33 @@ section#contact {
 
 .sp-nav .blogname {
   padding-top: 35px;
+}
+
+.single-page-wrap {
+  display: flex;
+}
+
+.single aside {
+  width: 30%;
+}
+
+@media (max-width: 999px) {
+  .single-page-wrap {
+    flex-direction: column;
+  }
+
+  .single .main-contents {
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .single aside {
+      width: 100%;
+  }
+}
+
+.page main {
+  margin-bottom: 3rem;
 }

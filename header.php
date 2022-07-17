@@ -90,9 +90,3 @@
 			</div>
 		</div>
 	</header>
-
-	<main id="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
-		<div class="container">
-			<div class="main-contents">
-
-				<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
