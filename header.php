@@ -71,6 +71,12 @@
 
 					<div class="openbtn1"><span></span><span></span><span></span></div>
 					<nav class="sp-nav">
+					<div class="blogname">
+						<a href="<?php echo home_url(); ?>" class="sitename">
+							<span class="sitename main">ki-hi-ro.com</span>
+						</a>
+						<span class="sitename sub">WEB制作フリーランスエンジニア</span>
+					</div>
 						<ul>
 							<li><a class="sp-nav__top" href="<?php echo home_url('#contact'); ?>">お問い合わせ</a></li>
 							<li><a class="sp-nav__top" href="<?php echo home_url('#what-i-can'); ?>">対応可能な項目</a></li>
@@ -84,9 +90,3 @@
 			</div>
 		</div>
 	</header>
-
-	<main id="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
-		<div class="container">
-			<div class="main-contents">
-
-				<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">

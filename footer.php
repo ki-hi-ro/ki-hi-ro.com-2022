@@ -1,8 +1,3 @@
-		</div>
-</div>
-
-</main>
-
 <?php wp_reset_query(); ?>
 
 <footer>

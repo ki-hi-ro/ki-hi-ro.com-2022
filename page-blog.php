@@ -1,195 +1,71 @@
-<?php get_header(); ?>
+<?php get_header();?>
 
-<div class="top-box col-xs-12">
+<main class="container">
+	<section class="top-section" id="what-i-did">
+		<h4>これまでの対応内容</h4>
+		<p>これまでにクラウドソーシングや、エージェント、地元のWEB制作会社経由で様々なお仕事を経験しました。どんな仕事をしてきたのかを、掲載可能な範囲で投稿していきます。</p>
+		<?php
+					$args = array(
+							'category_name' =>
+		'what-i-did', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts =
+		get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
+		<?php echo get_template_part('template-parts/sidebar-blog'); ?>
+		<?php
+					endforeach;
+					wp_reset_postdata();
+					?>
+	</section>
 
-	<div class="page__contents-container">
-		<section class="skill-blog" id="what-i-did">
-			<h2 class="skill-blog__sec-ttl">これまでの対応内容</h2>
-			<?php
-			$args = array(
-				'category_name' => 'what-i-did',
-				'post_type' => 'post',
-				'posts_per_page' => -1,
-			);
-			$myposts = get_posts($args);
-			foreach ($myposts as $post) :
-				setup_postdata($post);
-			?>
-				<a class="skill-blog__link" href="<?php the_permalink(); ?>">
-					<div class="skill-blog__contents">
-						<div class="skill-blog__meta">
-							<span class="skill-blog__date">
-								<?php echo get_the_date('Y.m.d'); ?>
-							</span>
-							<?php
-							$posttags = get_the_tags();
-							if ($posttags) :
-							?>
-								<span class="skill-blog__tag">
-									<?php
-									foreach ($posttags as $tag) {
-										echo $tag->name . ' ';
-									}
-									?>
-								</span>
-							<?php endif; ?>
-						</div>
-						<span class="skill-blog__ttl">
-							<?php the_title(); ?>
-						</span>
-					</div>
-				</a>
+	<section class="top-section sidebar__blog sidebar__contents" id="skill-blog">
+		<h4>技術ブログ</h4>
 
-			<?php
-			endforeach;
-			wp_reset_postdata();
-			?>
+		<p>これまでに身につけてきたWEB制作に必要なスキルを、テーマを決めて投稿していきます。</p>
 
-		</section>
+		<?php
+					$args = array(
+							'category_name' =>
+		'skill-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts =
+		get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
+		<?php echo get_template_part('template-parts/sidebar-blog'); ?>
+		<?php
+					endforeach;
+					wp_reset_postdata();
+					?>
+	</section>
 
-		<section class="skill-blog" id="skill-blog">
-			<h2 class="skill-blog__sec-ttl">技術ブログ</h2>
-			<?php
-			$args = array(
-				'category_name' => 'skill-blog',
-				'post_type' => 'post',
-				'posts_per_page' => -1,
-			);
-			$myposts = get_posts($args);
-			foreach ($myposts as $post) :
-				setup_postdata($post);
-			?>
-				<a class="skill-blog__link" href="<?php the_permalink(); ?>">
-					<div class="skill-blog__contents">
-						<div class="skill-blog__meta">
-							<span class="skill-blog__date">
-								<?php echo get_the_date('Y.m.d'); ?>
-							</span>
-							<?php
-							$posttags = get_the_tags();
-							if ($posttags) :
-							?>
-								<span class="skill-blog__tag">
-									<?php
-									foreach ($posttags as $tag) {
-										echo $tag->name . ' ';
-									}
-									?>
-								</span>
-							<?php endif; ?>
-						</div>
-						<span class="skill-blog__ttl">
-							<?php the_title(); ?>
-						</span>
-					</div>
-				</a>
+	<section class="top-section sidebar__blog sidebar__contents" id="study-blog">
+		<h4>学習ブログ</h4>
 
-			<?php
-			endforeach;
-			wp_reset_postdata();
-			?>
+		<p>参考書などで学んだことをテーマにしたブログ記事を投稿していきます。</p>
 
-		</section>
+		<?php
+					$args = array(
+							'category_name' =>
+		'study-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts =
+		get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
+		<?php echo get_template_part('template-parts/sidebar-blog'); ?>
+		<?php
+					endforeach;
+					wp_reset_postdata();
+					?>
+	</section>
 
-		<section class="study-blog" id="study-blog">
-			<?php
-			$args = array(
-				'category_name' => 'study-blog',
-				'post_type' => 'post',
-				'posts_per_page' => -1,
-				'post_status' => 'publish',
-			);
-			$myposts = get_posts($args);
-			if ($myposts) :
-			?>
-				<h2 class="study-blog__sec-ttl">学習ブログ</h2>
-				<?php
-				foreach ($myposts as $post) :
-					setup_postdata($post);
-				?>
-					<a class="study-blog__link" href="<?php the_permalink(); ?>">
-						<div class="study-blog__contents">
-							<div class="skill-blog__meta">
-								<span class="study-blog__date">
-									<?php echo get_the_date('Y.m.d'); ?>
-								</span>
-								<?php
-								$posttags = get_the_tags();
-								if ($posttags) :
-								?>
-									<span class="study-blog__tag">
-										<?php
-										foreach ($posttags as $tag) {
-											echo $tag->name . ' ';
-										}
-										?>
-									</span>
-								<?php endif; ?>
-							</div>
-							<span class="study-blog__ttl">
-								<?php the_title(); ?>
-							</span>
-						</div>
-					</a>
+	<section class="top-section sidebar__blog sidebar__contents" id="random-blog">
+		<h4>雑記ブログ</h4>
 
-			<?php
-				endforeach;
-			endif;
-			wp_reset_postdata();
-			?>
+		<p>日常で感動したことなどを、息抜きに投稿していきます。</p>
 
-		</section>
+		<?php
+					$args = array(
+							'category_name' =>
+		'random-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts =
+		get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
+		<?php echo get_template_part('template-parts/sidebar-blog'); ?>
+		<?php
+					endforeach;
+					wp_reset_postdata();
+					?>
+	</section>
+</main>
 
-		<section class="random-blog" id="random-blog">
-			<?php
-			$args = array(
-				'category_name' => 'random-blog',
-				'post_type' => 'post',
-				'posts_per_page' => -1,
-				'post_status' => 'publish',
-			);
-			$myposts = get_posts($args);
-			if ($myposts) :
-			?>
-				<h2 class="random-blog__sec-ttl">雑記ブログ</h2>
-				<?php
-				foreach ($myposts as $post) :
-					setup_postdata($post);
-				?>
-					<a class="random-blog__link" href="<?php the_permalink(); ?>">
-						<div class="random-blog__contents">
-							<div class="skill-blog__meta">
-								<span class="random-blog__date">
-									<?php echo get_the_date('Y.m.d'); ?>
-								</span>
-								<?php
-								$posttags = get_the_tags();
-								if ($posttags) :
-								?>
-									<span class="random-blog__tag">
-										<?php
-										foreach ($posttags as $tag) {
-											echo $tag->name . ' ';
-										}
-										?>
-									</span>
-								<?php endif; ?>
-							</div>
-							<span class="random-blog__ttl">
-								<?php the_title(); ?>
-							</span>
-						</div>
-					</a>
-
-			<?php
-				endforeach;
-			endif;
-			wp_reset_postdata();
-			?>
-
-		</section>
-	</div>
-
-</div>
-
-<?php get_footer(); ?>
+<?php get_footer();?>
