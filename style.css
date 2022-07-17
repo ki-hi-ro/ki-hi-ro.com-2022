@@ -3595,3 +3595,7 @@ footer nav li {
 section#contact {
   margin: 100px 0;
 }
+
+.sp-nav .blogname {
+  padding-top: 35px;
+}
