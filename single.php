@@ -4,6 +4,9 @@
 		<div class="container single-page-wrap">
 			<div class="main-contents">
 				<article>
+          <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+              <?php if(function_exists('bcn_display')) { bcn_display(); } ?>
+          </div>
           <div class="author calendar single-wrap">
             <h1><?php the_title(); ?></h1>
             <div class="author__contents">

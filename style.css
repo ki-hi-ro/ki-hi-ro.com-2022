@@ -845,11 +845,6 @@ main {
   }
 }
 
-.breadcrumbs {
-  background: none;
-  display: none;
-}
-
 @media (max-width: 479px) {
   header {
     background: none;
