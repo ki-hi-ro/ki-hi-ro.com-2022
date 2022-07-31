@@ -762,7 +762,7 @@ h3,
 }
 
 .single .breadcrumbs {
-  padding: 2px 2px 0 2px;
+  padding: 2px 2px 0 15px;
 }
 main {
   background: none;
@@ -3632,4 +3632,14 @@ section#contact {
 
 .page main {
   margin-bottom: 3rem;
+}
+
+.category .top-section {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1000px) {
+  .single .author-card {
+      margin-top: 0;
+  }
 }
