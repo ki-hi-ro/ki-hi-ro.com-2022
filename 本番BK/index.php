@@ -26,7 +26,7 @@
           wp_reset_postdata();
           ?>
               <div class="more-link --top-sec">
-        <a href="<?php echo home_url('category/what-i-did'); ?>"
+        <a href="<?php echo home_url('blog/#what-i-did'); ?>"
           >これまでの対応内容をもっと見る<img
             src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"
         /></a>
@@ -50,7 +50,7 @@
           wp_reset_postdata();
           ?>
               <div class="more-link --top-sec">
-        <a href="<?php echo home_url('category/skill-blog/'); ?>"
+        <a href="<?php echo home_url('blog/#skill-blog'); ?>"
           >技術ブログをもっと見る<img
             src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"
         /></a>
@@ -73,7 +73,7 @@
           wp_reset_postdata();
           ?>
       <div class="more-link --top-sec">
-        <a href="<?php echo home_url('category/study-blog/'); ?>"
+        <a href="<?php echo home_url('blog/#study-blog'); ?>"
           >学習ブログをもっと見る<img
             src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"
         /></a>
@@ -97,7 +97,7 @@
           ?>
 
               <div class="more-link --top-sec">
-        <a href="<?php echo home_url('category/random-blog/'); ?>"
+        <a href="<?php echo home_url('blog/#random-blog'); ?>"
           >雑記ブログをもっと見る<img
             src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"
         /></a>
