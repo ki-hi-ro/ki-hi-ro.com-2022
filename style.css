@@ -764,6 +764,13 @@ h3,
 .single .breadcrumbs {
   padding: 2px 2px 0 15px;
 }
+
+@media (max-width: 767px) {
+  .single .breadcrumbs {
+    padding: 0;
+  }
+}
+
 main {
   background: none;
   padding: 0 15px;
