@@ -1,5 +1,9 @@
 <?php get_header();?>
 
+<div class="mv">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/mv-pc.png" alt="PCのメインビジュアル">
+</div>
+
 <main class="container">
   <?php echo get_template_part('template-parts/author'); ?>
 
