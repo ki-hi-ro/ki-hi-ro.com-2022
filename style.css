@@ -3679,3 +3679,47 @@ section#contact {
   bottom: 34vw;
   width: 73%;
 }
+
+.mv .scrolldown1 {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  height: 50px;
+}
+
+.mv .scrolldown1 span {
+  position: absolute;
+  left: -20px;
+  top: -18px;
+  color: #eee;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+}
+
+.mv .scrolldown1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 25px;
+  background: #eee;
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 10px;
+    opacity: 0;
+  }
+  30% {
+    height: 25px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}

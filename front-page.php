@@ -6,6 +6,7 @@
   <a href="<?php echo home_url('#contact'); ?>" class="contact-btn">
     <img class="sp-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/contact-btn.png?20220806" alt="お問い合わせボタン">
   </a>
+  <div class="scrolldown1"><span>Scroll</span></div>
 </div>
 
 <main class="container">
