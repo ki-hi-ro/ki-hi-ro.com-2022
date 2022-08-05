@@ -4,7 +4,7 @@
   <img class="pc-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/mv-pc.png?20220804" alt="PCのメインビジュアル">
   <img class="sp-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/mv-sp.png?20220804" alt="スマホのメインビジュアル">
   <a href="<?php echo home_url('#contact'); ?>" class="contact-btn">
-    <img class="sp-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/contact-btn.png?20220804" alt="お問い合わせボタン">
+    <img class="sp-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/contact-btn.png?20220806" alt="お問い合わせボタン">
   </a>
 </div>
 
