@@ -3727,3 +3727,22 @@ section#contact {
 .home .top-section {
   padding-top: 20px;
 }
+
+.date h1 {
+  text-align: center;
+}
+
+.date .top-section {
+  margin-bottom: 20px;
+}
+
+.sidebar-archive-list {
+  list-style: none;
+  padding-left: 21px;
+  margin-bottom: 30px;
+}
+
+h3.sidebar-ttl {
+  margin-bottom: 15px;
+  margin-left: 0;
+}
