@@ -64,6 +64,10 @@
       </div>
       <aside>
         <?php echo get_template_part('template-parts/author'); ?>
+        <h3 class="sidebar-ttl">過去記事アーカイブ</h3>
+        <ul class="sidebar-archive-list">
+          <?php wp_get_archives( 'post_type=post&type=monthly&show_post_count=1' ); ?>
+        </ul>
       </aside>
     </div>
 </main>
