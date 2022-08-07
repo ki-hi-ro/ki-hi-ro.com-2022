@@ -34,7 +34,9 @@
                   $my_query->query( $args );
                   if( $my_query->have_posts() ):
                 ?>
-                  <h4>関連記事</h4>
+                  <h4>
+                    <?php $tags = get_the_tags(); if ($tags) { foreach($tags as $tag) { echo $tag->name; } } ?>の記事一覧
+                  </h4>
                   <div class="related-post">
                         <?php while( $my_query->have_posts() ) : $my_query->the_post(); ?>
                           <a class="related-post__link" href="<?php the_permalink();?>">
@@ -44,7 +46,7 @@
                               </span>
                               <span class="related-post__tag">
                                 <?php
-                                $posttags = get_the_tags();
+                                $posttags = get_the_tags(); 
                                 foreach ($posttags as $tag) {
                                   echo $tag->name . ' ';
                                 }

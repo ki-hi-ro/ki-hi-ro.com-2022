@@ -3628,6 +3628,7 @@ footer nav li {
   .top-contents__wrap .skill-blog__meta {
     width: 50%;
     text-align: center;
+    flex-direction: column;
   }
   .home .skill-blog__tag {
     width: 100%;
