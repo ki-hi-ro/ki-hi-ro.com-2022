@@ -3622,6 +3622,8 @@ footer nav li {
 @media (min-width: 768px) {
   .skill-blog__meta {
     width: 38%;
+    display: flex;
+    align-items: center;
   }
   .top-contents__wrap .skill-blog__meta {
     width: 50%;
@@ -3826,6 +3828,7 @@ h3.sidebar-ttl {
   }
 }
 
-.archive .skill-blog__date {
+.archive .skill-blog__date,
+.page .skill-blog__date {
   margin-right: 10px;
 }
