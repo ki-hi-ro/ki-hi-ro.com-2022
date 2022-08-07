@@ -219,20 +219,8 @@ h3,
   }
 }
 
-@media (min-width: 1200px) {
-  .single-works .img__large {
-    display: none;
-  }
-}
-
 .single-works .img__extra-large {
   display: none;
-}
-
-@media (min-width: 1200px) {
-  .single-works .img__extra-large {
-    display: block;
-  }
 }
 
 .single-works .tag {
@@ -248,15 +236,11 @@ h3,
   width: 56px;
 }
 
-
-
 .single-works .tag.actual-project {
   color: #fff;
   background-color: #33b5e5;
   width: 69px;
 }
-
-
 
 .single-works .tag.learning {
   color: #fff;
@@ -264,28 +248,17 @@ h3,
   width: 56px;
 }
 
-
-
 .single-works .tag.sample {
   color: #fff;
   background-color: #fbc02d;
   width: 82px;
 }
 
-
-
 .single-works .tag.original {
   color: #fff;
   background-color: #388e3c;
   width: 95px;
 }
-
-
-
-
-
-
-
 
 .single-works .sns_button,
 .single-works .keywords,
@@ -453,7 +426,6 @@ h3,
   max-width: 780px;
   margin: 3rem auto;
 }
-
 
 .author hr {
   border: 1px solid #ddd;
@@ -633,12 +605,6 @@ h3,
   padding: 12px 15px;
 }
 
-@media (min-width: 1200px) {
-  .breadcrumbs .breadcrumb {
-    padding: 16px 22px 15px;
-  }
-}
-
 .single .breadcrumbs {
   padding: 2px 2px 0 15px;
 }
@@ -660,7 +626,6 @@ main {
     padding: 0;
   }
 }
-
 
 @media (min-width: 1000px) {
   .author {
@@ -712,16 +677,6 @@ main {
   margin: 0;
 }
 
-@media (min-width: 1200px) {
-  .breadcrumbs .breadcrumb {
-    width: 900px;
-    margin: 0 auto 3rem;
-    background: none;
-    padding-left: 0;
-    padding-top: 0;
-  }
-}
-
 @media (max-width: 479px) {
   header {
     background: none;
@@ -741,7 +696,6 @@ main {
     padding-right: 0;
   }
 }
-
 
 @media (min-width: 1000px) {
   .author {
@@ -812,8 +766,6 @@ main {
     width: 900px;
   }
 }
-
-
 
 .single .nav-menu li {
   margin-bottom: 0;
@@ -1390,8 +1342,6 @@ header .header-nav nav ul li a:hover {
   }
 }
 
-
-
 @media (min-width: 992px) {
   .container {
     width: 970px;
@@ -1407,24 +1357,6 @@ header .header-nav nav ul li a:hover {
 @media (min-width: 1000px) {
   .header-nav {
     justify-content: space-between;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-  .header-nav {
-    margin: 0 auto;
-  }
-  .sp-nav {
-    display: none;
-  }
-  header .blogname {
-    margin: 10px 0;
-  }
-  .openbtn1 {
-    display: none;
   }
 }
 
@@ -1860,8 +1792,6 @@ a.top-contents__card.--blog {
   }
 }
 
-
-
 @media (min-width: 1000px) and (max-width: 1023px) {
   .card__img {
     height: 160px;
@@ -1985,8 +1915,6 @@ a.top-contents__card.--blog {
     display: none;
   }
 }
-
-
 
 @media (min-width: 1000px) {
   .home .author {
@@ -2468,8 +2396,6 @@ code {
   }
 }
 
-
-
 .single .author.col-xs-12 {
   border: 1px solid #bcbcbc;
 }
@@ -2490,12 +2416,6 @@ code {
 @media (min-width: 992px) {
   .single .author.col-xs-12 {
     width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .single .author.col-xs-12 {
-    width: 1140px;
   }
 }
 
@@ -2607,8 +2527,6 @@ code {
     display: none;
   }
 }
-
-
 
 .page article {
   background-color: #fff;
@@ -2805,7 +2723,6 @@ code {
   }
 }
 
-
 @media (min-width: 1024px) {
   .page .author.col-xs-12 {
     width: 900px;
@@ -2904,7 +2821,6 @@ code {
     display: none;
   }
 }
-
 
 .introduce.page .author hr {
   width: 20%;
@@ -3375,8 +3291,6 @@ footer nav li {
   }
 }
 
-
-
 @media (max-width: 767px) {
   .home .skill-blog__tag {
     font-size: 11px;
@@ -3490,3 +3404,5 @@ section#contact {
     opacity: 0;
   }
 }
+
+@import "responsive";
