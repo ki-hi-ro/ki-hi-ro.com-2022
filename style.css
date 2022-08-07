@@ -189,23 +189,9 @@ h3,
   font-size: 13px;
 }
 
-@media (min-width: 768px) {
-  .single-works .article.col-sm-8 .tag {
-    line-height: 40px;
-    top: 60px;
-    left: 40px;
-  }
-}
-
 .single-works .article.col-sm-8 a.lead {
   padding-left: 19px;
   margin-bottom: 0;
-}
-
-@media (min-width: 768px) {
-  .single-works .article.col-sm-8 a.lead {
-    padding-left: 40px;
-  }
 }
 
 .single-works .article.col-sm-8 i {
@@ -213,20 +199,8 @@ h3,
   color: #23527c;
 }
 
-@media (min-width: 768px) {
-  .single-works .img {
-    display: none;
-  }
-}
-
 .single-works .img__medium {
   display: none;
-}
-
-@media (min-width: 768px) {
-  .single-works .img__medium {
-    display: block;
-  }
 }
 
 @media (min-width: 992px) {
@@ -274,22 +248,10 @@ h3,
   width: 56px;
 }
 
-@media (min-width: 768px) {
-  .single-works .tag.reproduce {
-    width: 66px;
-  }
-}
-
 .single-works .tag.actual-project {
   color: #fff;
   background-color: #33b5e5;
   width: 69px;
-}
-
-@media (min-width: 768px) {
-  .single-works .tag.actual-project {
-    width: 79px;
-  }
 }
 
 .single-works .tag.learning {
@@ -298,110 +260,16 @@ h3,
   width: 56px;
 }
 
-@media (min-width: 768px) {
-  .single-works .tag.learning {
-    width: 66px;
-  }
-}
-
 .single-works .tag.sample {
   color: #fff;
   background-color: #fbc02d;
   width: 82px;
 }
 
-@media (min-width: 768px) {
-  .single-works .tag.sample {
-    width: max-content;
-  }
-}
-
 .single-works .tag.original {
   color: #fff;
   background-color: #388e3c;
   width: 95px;
-}
-
-@media (min-width: 768px) {
-  .single-works .tag.original {
-    width: max-content;
-  }
-}
-
-@media (min-width: 768px) {
-  .single-works .tag {
-    padding: 0.1rem 2rem;
-    border-radius: 5%;
-    width: max-content;
-    font-family: monospace;
-  }
-  .single-works .tag.reproduce {
-    color: #000;
-    background-color: #e0e0e0;
-    width: 56px;
-  }
-}
-
-@media (min-width: 768px) and (min-width: 768px) {
-  .single-works .tag.reproduce {
-    width: 66px;
-  }
-}
-
-@media (min-width: 768px) {
-  .single-works .tag.actual-project {
-    color: #fff;
-    background-color: #33b5e5;
-    width: 69px;
-  }
-}
-
-@media (min-width: 768px) and (min-width: 768px) {
-  .single-works .tag.actual-project {
-    width: 79px;
-  }
-}
-
-@media (min-width: 768px) {
-  .single-works .tag.learning {
-    color: #fff;
-    background-color: #59698d;
-    width: 56px;
-  }
-}
-
-@media (min-width: 768px) and (min-width: 768px) {
-  .single-works .tag.learning {
-    width: 66px;
-  }
-}
-
-@media (min-width: 768px) {
-  .single-works .tag.sample {
-    color: #fff;
-    background-color: #fbc02d;
-    width: 82px;
-  }
-}
-
-@media (min-width: 768px) and (min-width: 768px) {
-  .single-works .tag.sample {
-    width: max-content;
-  }
-}
-
-@media (min-width: 768px) {
-  .single-works .tag.original {
-    color: #fff;
-    background-color: #388e3c;
-    width: 95px;
-  }
-}
-
-@media (min-width: 768px) and (min-width: 768px) {
-  .single-works .tag.original {
-    width: max-content;
-  }
 }
 
 .single-works .sns_button,
@@ -569,12 +437,6 @@ h3,
 .author {
   max-width: 780px;
   margin: 3rem auto;
-}
-
-@media (min-width: 768px) {
-  .author {
-    width: 740px;
-  }
 }
 
 .author hr {
@@ -783,15 +645,6 @@ main {
   }
 }
 
-@media (min-width: 768px) {
-  .top-box {
-    width: 100%;
-    max-width: 900px;
-    margin-bottom: 2rem;
-    padding-bottom: 52px;
-  }
-}
-
 @media (min-width: 1000px) {
   .author {
     width: 450px;
@@ -872,13 +725,6 @@ main {
   }
 }
 
-@media (min-width: 768px) {
-  .author {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
 @media (min-width: 1000px) {
   .author {
     width: 100%;
@@ -946,13 +792,6 @@ main {
 @media (min-width: 1000px) {
   .single-wrap {
     width: 900px;
-  }
-}
-
-@media (min-width: 768px) {
-  .single-wrap {
-    margin-bottom: 2rem;
-    margin-top: 0;
   }
 }
 
@@ -1531,22 +1370,6 @@ header .header-nav nav ul li a:hover {
   }
 }
 
-@media (min-width: 768px) {
-  .header-nav {
-    margin: 40px auto 20px;
-    max-width: 100%;
-  }
-  .nav-menu__ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 0;
-  }
-  .openbtn1 {
-    top: 40px;
-  }
-}
-
 @media (min-width: 992px) {
   .container {
     width: 970px;
@@ -2017,24 +1840,6 @@ a.top-contents__card.--blog {
   }
 }
 
-@media (min-width: 768px) {
-  .top-schedule {
-    display: none;
-  }
-  .skill-blog {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .study-blog {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .random-blog {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
 @media (min-width: 1000px) and (max-width: 1023px) {
   .card__img {
     height: 160px;
@@ -2156,12 +1961,6 @@ a.top-contents__card.--blog {
 @media (min-width: 577px) {
   .consultation-bnr.--sp {
     display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .card {
-    width: 250px;
   }
 }
 
@@ -2647,30 +2446,6 @@ code {
   }
 }
 
-@media (min-width: 768px) {
-  .author__contents {
-    padding-bottom: 30px;
-  }
-  .sp-img {
-    display: none;
-  }
-  .single .author .wp-block-image {
-    margin: 40px auto;
-    padding: 0 22px;
-  }
-  .single .author .wp-block-image.w-20 {
-    width: 20%;
-    padding: 0;
-  }
-  .single .author .wp-block-image.w-50 {
-    width: 50%;
-    padding: 0;
-  }
-  .single iframe.map.sp {
-    display: none;
-  }
-}
-
 .single .author.col-xs-12 {
   border: 1px solid #bcbcbc;
 }
@@ -2805,20 +2580,6 @@ code {
 @media (max-width: 991px) {
   .pc-form {
     display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .sp-form {
-    display: none;
-  }
-  .youtube-wrapper--sp {
-    display: none;
-    text-align: center;
-  }
-  .youtube-wrapper--pc {
-    text-align: center;
-    margin-bottom: 27px;
   }
 }
 
@@ -3017,19 +2778,6 @@ code {
   }
 }
 
-@media (min-width: 768px) {
-  .sp-img {
-    display: none;
-  }
-  .page .author .wp-block-image.w-50 {
-    width: 50%;
-    margin: 0 auto;
-  }
-  .page iframe.map.sp {
-    display: none;
-  }
-}
-
 @media (min-width: 1024px) {
   .page .author.col-xs-12 {
     width: 900px;
@@ -3125,12 +2873,6 @@ code {
 
 @media (max-width: 991px) {
   .pc-form {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .sp-form {
     display: none;
   }
 }
@@ -3603,15 +3345,6 @@ footer nav li {
   .skill-blog__meta {
     display: flex;
     align-items: center;
-  }
-}
-
-@media (min-width: 768px) {
-  .skill-blog__meta {
-    width: 38%;
-  }
-  .home .skill-blog__tag {
-    width: 60%;
   }
 }
 
