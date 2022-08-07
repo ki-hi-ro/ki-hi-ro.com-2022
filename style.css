@@ -3519,7 +3519,7 @@ footer nav li {
 }
 
 @media (min-width: 768px) {
-  .top-section.sidebar__blog p {
+  .home .top-section.sidebar__blog p {
     text-align: center;
   }
 }
@@ -3612,12 +3612,18 @@ footer nav li {
   .skill-blog__meta {
     display: flex;
     align-items: center;
+  }
+
+  .home  .skill-blog__meta {
     flex-direction: column;
   }
 }
 
 @media (min-width: 768px) {
   .skill-blog__meta {
+    width: 38%;
+  }
+  .top-contents__wrap .skill-blog__meta {
     width: 50%;
     text-align: center;
   }
@@ -3818,4 +3824,8 @@ h3.sidebar-ttl {
   .more-link.--top-sec {
     margin-top: 10px;
   }
+}
+
+.archive .skill-blog__date {
+  margin-right: 10px;
 }
