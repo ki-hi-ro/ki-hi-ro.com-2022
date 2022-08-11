@@ -58,7 +58,7 @@
 						<ul>
 							<li><a href="<?php echo home_url('#contact'); ?>">お問い合わせ</a></li>
 							<li><a href="<?php echo home_url('#what-i-can'); ?>">対応可能な項目</a></li>
-							<li><a href="<?php echo home_url('category/what-i-did/'); ?>">これまでの対応内容</a></li>
+							<li><a href="<?php echo home_url('category/what-i-did/'); ?>">これまでの仕事</a></li>
 							<li class="has-child"><a href="<?php echo home_url('blog/#skill-blog'); ?>">ブログ</a>
 								<ul>
 									<li><a href="<?php echo home_url('category/skill-blog/'); ?>">技術ブログ</a></li>
