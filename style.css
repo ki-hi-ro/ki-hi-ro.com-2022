@@ -1744,6 +1744,7 @@ header .header-nav nav ul li a:hover {
   display: inline-block;
   margin: 3px 10px;
 }
+
 @media (max-width: 767px) {
   .random-blog__tag {
     width: 60%;
@@ -1783,6 +1784,7 @@ header .header-nav nav ul li a:hover {
   display: inline-block;
   margin: 3px 10px;
 }
+
 @media (max-width: 767px) {
   .study-blog__tag {
     width: 60%;
@@ -2253,6 +2255,7 @@ a.top-contents__card.--blog {
     height: auto;
   }
 }
+
 .recentry {
   background-color: #f7f7f7;
   padding: 10px 40px;
@@ -2304,6 +2307,7 @@ a.top-contents__card.--blog {
     margin-top: 10px;
   }
 }
+
 #particles-js {
   z-index: -1;
   width: 100%;
@@ -2719,7 +2723,6 @@ code {
   article {
     width: 100%;
   }
-
   .single h2 {
     margin-left: 0;
     margin-right: 0;
@@ -3513,6 +3516,10 @@ footer nav li {
   margin-bottom: 5px;
 }
 
+.blog-tab-content.top-section h4 {
+  margin-top: 0;
+}
+
 .top-section p {
   width: 750px;
   margin: 0 auto 20px;
@@ -3586,15 +3593,18 @@ footer nav li {
   margin: 50px auto 0;
   padding-right: 0;
 }
+
 @media (max-width: 767px) {
   .more-link.--top-sec {
     width: 100%;
     margin-top: 5px;
   }
 }
+
 .sp-nav__top .only-sp {
   display: none;
 }
+
 @media (max-width: 350px) {
   .sp-nav__top .only-sp {
     display: block;
@@ -3608,13 +3618,11 @@ footer nav li {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .skill-blog__meta {
     display: flex;
     align-items: center;
   }
-
-  .home  .skill-blog__meta {
+  .home .skill-blog__meta {
     flex-direction: column;
   }
 }
@@ -3661,14 +3669,12 @@ section#contact {
   .single-page-wrap {
     flex-direction: column;
   }
-
   .single .main-contents {
     width: 100%;
     padding-right: 0;
     margin-right: 0;
     margin-left: 0;
   }
-
   .single aside {
     width: 100%;
   }
@@ -3753,6 +3759,10 @@ section#contact {
   padding-top: 20px;
 }
 
+.home .top-section.blog-tab-content {
+  padding-top: 10px;
+}
+
 .date h1 {
   text-align: center;
 }
@@ -3806,14 +3816,11 @@ h3.sidebar-ttl {
     height: 100px;
     margin-bottom: 15px;
   }
-
   .top-contents__wrap span.skill-blog__ttl {
     display: -webkit-box;
-    -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
   }
-
   .top-contents__wrap .skill-blog__contents {
     height: 251px;
   }
@@ -3823,7 +3830,6 @@ h3.sidebar-ttl {
   .top-contents__wrap .skill-blog__contents {
     height: 357px;
   }
-
   .more-link.--top-sec {
     margin-top: 10px;
   }
@@ -3832,4 +3838,52 @@ h3.sidebar-ttl {
 .archive .skill-blog__date,
 .page .skill-blog__date {
   margin-right: 10px;
+}
+
+.notShowMe {
+  display: none;
+}
+
+.blog-tab {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  padding-left: 0;
+}
+
+.blog-tab li {
+  width: calc((100% - 15px * 2) / 3);
+  text-align: center;
+  cursor: pointer;
+  background-color: #e3e3e3;
+  height: 60px;
+  line-height: 60px;
+}
+
+.blog-tab li.blog-tab__study {
+  margin: 0 15px;
+}
+
+@media (max-width: 575px) {
+  .blog-tab li {
+    width: calc((100% - 10px * 2) / 3);
+    font-size: 12px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .blog-tab li.blog-tab__study {
+    margin: 0 10px;
+  }
+}
+
+.top-section.--blog {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.blog-tab__item.current-tab {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
 }
