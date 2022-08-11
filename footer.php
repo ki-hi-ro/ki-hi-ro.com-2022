@@ -11,7 +11,7 @@
 				<div class="nav-contents">
 			<ul>
 				<li><a href="<?php echo home_url('#what-i-can'); ?>">対応可能な項目</a></li>
-				<li><a href="<?php echo home_url('#what-i-did'); ?>">これまでの対応内容</a></li>
+				<li><a href="<?php echo home_url('#what-i-did'); ?>">これまでの仕事</a></li>
 			</ul>
 		</div>
 
