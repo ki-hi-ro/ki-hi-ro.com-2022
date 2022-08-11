@@ -544,6 +544,12 @@ h3,
   border-top: none;
 }
 
+@media (min-width: 768px) {
+  .category.archive ul li {
+    margin-bottom: 5px;
+  }
+}
+
 @media (min-width: 992px) {
   .category article {
     width: 66%;
@@ -3440,7 +3446,7 @@ footer {
 footer nav {
   display: flex;
   justify-content: space-around;
-  padding: 20px 15px;
+  padding: 10px 15px;
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -3460,7 +3466,14 @@ footer nav a {
 footer nav h4 {
   color: #fff;
   font-size: 17px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  footer nav h4 {
+    margin-bottom: 10px;
+  }
 }
 
 footer nav ul {
