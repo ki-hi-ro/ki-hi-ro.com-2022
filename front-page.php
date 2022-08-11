@@ -37,7 +37,7 @@
         </div>
     </section>
 
-    <div class="top-section --blog">
+    <div class="top-section --blog" id="blog">
       <h4>ブログ</h4>
     </div>
     <ul class="blog-tab">
