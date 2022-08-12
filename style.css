@@ -3735,7 +3735,7 @@ section#contact {
   position: absolute;
   left: -20px;
   top: -18px;
-  color: #eee;
+  color: #fff;
   font-size: 1em;
   letter-spacing: 0.05em;
 }
@@ -3746,7 +3746,7 @@ section#contact {
   top: 0;
   width: 1px;
   height: 25px;
-  background: #eee;
+  background: #fff;
   animation: pathmove 1.4s ease-in-out infinite;
   opacity: 0;
 }
@@ -3904,5 +3904,15 @@ h3.sidebar-ttl {
 @media (max-width: 1199px) {
   .header-nav nav ul li a.sp-nav-blog {
     padding-bottom: 0;
+  }
+}
+
+.author-card .more-link {
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .author-card .more-link {
+    display: none;
   }
 }

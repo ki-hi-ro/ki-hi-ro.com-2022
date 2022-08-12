@@ -18,8 +18,11 @@
       / CSS, WordPress, EC-CUBE, FutureShopなどを使用して、Webサイトの新規制作や改修を行なってきました。
     </p>
   </div>
+  <div class="more-link --top-sec">
+    <a href="<?php echo home_url('#contact'); ?>">お問い合わせ<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
+  </div>
 </section>
-<style> 
+<style>
   .author-card {
     padding-top: 26px;
     background-color: #f7f7f7;
