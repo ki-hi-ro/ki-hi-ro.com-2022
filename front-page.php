@@ -1,9 +1,9 @@
 <?php get_header();?>
 
 <div class="mv">
-    <img class="pc-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/mv-pc.png?20220813"
+    <img class="pc-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/mv-pc.png?20220815"
         alt="PCのメインビジュアル">
-    <img class="sp-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/mv-sp.png?202208013"
+    <img class="sp-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/mv-sp.png?202208015"
         alt="スマホのメインビジュアル">
     <div class="scrolldown1"><span>Scroll</span></div>
 </div>
