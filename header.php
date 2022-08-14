@@ -30,6 +30,7 @@
 	}
 	?>
 	</title>
+	<meta name=”description” content=”WEB制作のコーディングをフリーランスとして行なっています。対応可能な業務は、WordPressやEC-CUBEなどです。レスポンシブコーディングも出来ます。“>
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico">
 
 	<!-- schema.org -->
