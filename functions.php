@@ -28,3 +28,13 @@ function new_excerpt_more($more) {
         return ' ... ';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+function my_tags_in_cat( $cat_id ){
+	// 現在のカテゴリーに属する投稿のIDを配列で取得
+	$post_ids = get_objects_in_term( $cat_id, 'category' );
+
+	// 現在のカテゴリーに属する投稿で利用しているタグのオブジェクトを取得
+	$tags_object = wp_get_object_terms( $post_ids, 'post_tag' );
+
+	return $tags_object;
+}

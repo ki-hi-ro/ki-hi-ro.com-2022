@@ -26,6 +26,24 @@
 					?>
 	</section>
 
+<?php
+// カテゴリーアーカイブの場合
+if ( is_category() ) {
+	// 現在のカテゴリーのIDを取得
+	$cat_id = get_query_var( 'cat' );
+	// 作成した関数からタグのオブジェクトを取得
+	$posttags = my_tags_in_cat( $cat_id );
+	// タグのオブジェクトを利用しタグ一覧を作成
+	if( $posttags ){
+		echo '<ul class="tag-list">';
+		foreach( $posttags as $tag ){
+			echo '<li><a href="'. get_tag_link( $tag->term_id ) . '">' . $tag->name . '</a></li>';
+		}
+		echo '</ul>';
+	}
+}
+?>
+
 </main>
 
 <?php get_footer();?>
