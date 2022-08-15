@@ -26,6 +26,7 @@
 					?>
 	</section>
 
+<h4 class="tag-ttl">タグ</h4>
 <?php
 // カテゴリーアーカイブの場合
 if ( is_category() ) {
@@ -37,7 +38,7 @@ if ( is_category() ) {
 	if( $posttags ){
 		echo '<ul class="tag-list">';
 		foreach( $posttags as $tag ){
-			echo '<li><a href="'. get_tag_link( $tag->term_id ) . '">' . $tag->name . '</a></li>';
+			echo '<li><a href="'. get_tag_link( $tag->term_id ) . '">' . "#". $tag->name . '</a></li>';
 		}
 		echo '</ul>';
 	}
