@@ -71,8 +71,11 @@
           <?php wp_get_archives( 'post_type=post&type=monthly&show_post_count=1' ); ?>
         </ul>
 
-        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
-        <?php endif; ?>
+        <div class="aside-table-of-contents">
+          <h3 class="sidebar-ttl">目次</h3>
+          <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
+          <?php endif; ?>
+        </div>
       </aside>
     </div>
 </main>
