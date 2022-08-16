@@ -46,7 +46,7 @@
                               </span>
                               <span class="related-post__tag">
                                 <?php
-                                $posttags = get_the_tags(); 
+                                $posttags = get_the_tags();
                                 foreach ($posttags as $tag) {
                                   echo $tag->name . ' ';
                                 }
@@ -70,6 +70,12 @@
         <ul class="sidebar-archive-list">
           <?php wp_get_archives( 'post_type=post&type=monthly&show_post_count=1' ); ?>
         </ul>
+
+        <div class="aside-table-of-contents">
+          <h3 class="sidebar-ttl">目次</h3>
+          <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
+          <?php endif; ?>
+        </div>
       </aside>
     </div>
 </main>

@@ -3961,3 +3961,20 @@ h3.sidebar-ttl {
 .tag h2 {
   text-align: center;
 }
+
+.aside-table-of-contents {
+  position: sticky;
+  top: 10px;
+}
+
+@media (min-width: 768px) {
+  div#ez-toc-container {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .aside-table-of-contents {
+    display: none;
+  }
+}
