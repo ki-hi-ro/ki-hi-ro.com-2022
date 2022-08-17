@@ -10,7 +10,7 @@
           <?php if(have_posts()): ?>
             <?php while(have_posts()): the_post(); ?>
           <div class="author calendar single-wrap">
-            <span class="post-date">投稿日: <?php the_date(); ?></span>
+            <span class="post-date">投稿日: <?php echo get_the_date( 'Y.m.d' ); ?></span>
             <h1><?php the_title(); ?></h1>
             <div class="author__contents">
                       <?php the_content(); ?>
