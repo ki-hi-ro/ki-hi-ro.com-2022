@@ -11,6 +11,7 @@
             <?php while(have_posts()): the_post(); ?>
           <div class="author calendar single-wrap">
             <span class="post-date">投稿日: <?php echo get_the_date( 'Y.m.d' ); ?></span>
+            <span class="modify-date">最終更新日: <?php echo get_the_modified_date( 'Y.m.d' ); ?></span>
             <h1><?php the_title(); ?></h1>
             <div class="author__contents">
                       <?php the_content(); ?>
