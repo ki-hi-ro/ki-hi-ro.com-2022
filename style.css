@@ -3978,6 +3978,10 @@ h3.sidebar-ttl {
   .aside-table-of-contents {
     display: none;
   }
+
+  div#ez-toc-container {
+    width: 100%;
+  }
 }
 
 .post-meta {
