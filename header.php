@@ -62,9 +62,9 @@
 							<li><a href="<?php echo home_url('category/what-i-did/'); ?>">これまでの仕事</a></li>
 							<li class="has-child"><a href="<?php echo home_url('#blog'); ?>">ブログ</a>
 								<ul>
-									<li><a href="<?php echo home_url('category/skill-blog/'); ?>">技術ブログ</a></li>
-									<li><a href="<?php echo home_url('category/study-blog/'); ?>">学習ブログ</a></li>
-									<li><a href="<?php echo home_url('category/random-blog/'); ?>">雑記ブログ</a></li>
+									<li class="pc-nav__skill"><a href="<?php echo home_url('category/skill-blog/'); ?>">技術ブログ</a></li>
+									<li class="pc-nav__study"><a href="<?php echo home_url('category/study-blog/'); ?>">学習ブログ</a></li>
+									<li class="pc-nav__random"><a href="<?php echo home_url('category/random-blog/'); ?>">雑記ブログ</a></li>
 								</ul>
 							</li>
 						</ul>
