@@ -2528,16 +2528,16 @@ a.top-contents__card.--blog {
 }
 
 .single h2 {
-  background: #f7f7f7;
   padding: 15px;
   color: #000;
-  border-left: 6px solid #333;
+  border-left: 6px solid;
+  background: #0a2c541a;
   line-height: 40px;
   margin: 60px 20px 40px;
 }
 
 .single h3 {
-  border-left: 6px solid #000;
+  border-left: 6px solid;
   margin-left: 20px;
   margin-top: 60px;
   margin-bottom: 40px;
@@ -2546,6 +2546,11 @@ a.top-contents__card.--blog {
   letter-spacing: 1.6px;
   padding: 0px 15px 0px;
   font-size: 20px;
+}
+
+.single .skill-blog h2,
+.single .skill-blog h3 {
+  border-color: var(--skill-color);
 }
 
 .single .single-wrap h4 {
