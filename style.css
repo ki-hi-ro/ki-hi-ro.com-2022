@@ -4005,3 +4005,7 @@ h3.sidebar-ttl {
     margin-right: 10px;
   }
 }
+
+.single .ez-toc-widget-container li.active > a {
+  font-weight: 500;
+}
