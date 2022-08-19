@@ -3969,7 +3969,8 @@ h3.sidebar-ttl {
 
 @media (min-width: 768px) {
   div#ez-toc-container {
-    display: none;
+    width: calc(100% - 35px);
+    margin: 0 auto;
   }
 }
 
