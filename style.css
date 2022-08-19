@@ -5,6 +5,12 @@ Theme URI: https://ki-hi-ro.com
 Version: 1.0
 Author: Shibata Hiroki
 */
+:root {
+  --skill-color: #0A2C54;
+  --study-color: #FFD766;
+  --random-color: #F4E5D2;
+}
+
 body {
   color: #333;
   margin: 0;
