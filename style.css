@@ -2565,6 +2565,15 @@ a.top-contents__card.--blog {
   background: #59a0761a;
 }
 
+.single .random-blog h2,
+.single .random-blog h3 {
+  border-color: var(--random-color);
+}
+
+.single .random-blog h2 {
+  background: #88466e1a;
+}
+
 .single .single-wrap h4 {
   text-align: left;
   padding-left: 20px;
