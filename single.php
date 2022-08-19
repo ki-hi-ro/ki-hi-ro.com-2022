@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-
-<main id="main">
+<?php $category = get_the_category(); $cat = $category[0]; ?>
+<main id="main" class="<?php echo $cat->slug; ?>">
 		<div class="container single-page-wrap">
 			<div class="main-contents">
 				<article>
@@ -9,14 +9,13 @@
           </div>
           <?php if(have_posts()): ?>
             <?php while(have_posts()): the_post(); ?>
-              <?php $category = get_the_category(); $cat = $category[0]; ?>
           <div class="author calendar single-wrap">
             <div class="post-meta">
               <span class="post-date">投稿日: <?php echo get_the_date( 'Y.m.d' ); ?></span>
               <span class="modify-date">更新日: <?php echo get_the_modified_date( 'Y.m.d' ); ?></span>
             </div>
             <h1><?php the_title(); ?></h1>
-            <div class="author__contents <?php echo $cat->slug; ?>">
+            <div class="author__contents">
               <?php the_content(); ?>
             <?php endwhile; ?>
           <?php endif; ?>

@@ -2531,7 +2531,6 @@ a.top-contents__card.--blog {
   padding: 15px;
   color: #000;
   border-left: 6px solid;
-  background: #0a2c541a;
   line-height: 40px;
   margin: 60px 20px 40px;
 }
@@ -2551,6 +2550,19 @@ a.top-contents__card.--blog {
 .single .skill-blog h2,
 .single .skill-blog h3 {
   border-color: var(--skill-color);
+}
+
+.single .skill-blog h2 {
+  background: #0a2c541a;
+}
+
+.single .study-blog h2,
+.single .study-blog h3 {
+  border-color: var(--study-color);
+}
+
+.single .study-blog h2 {
+  background: #59a0761a;
 }
 
 .single .single-wrap h4 {
