@@ -19,7 +19,7 @@
     </p>
   </div>
   <div class="more-link --top-sec">
-    <a href="<?php echo home_url('#contact'); ?>">お問い合わせ<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
+    <a href="<?php echo home_url('self-produce'); ?>">自己紹介<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
   </div>
 </section>
 <style>
