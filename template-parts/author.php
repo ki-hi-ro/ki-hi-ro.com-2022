@@ -49,14 +49,12 @@
     line-height: 1.8;
     padding: 0 20px;
     margin-top: 40px;
+    margin-bottom: 0;
   }
   @media (min-width: 768px) {
     .author-card {
       width: 100%;
       max-width: 100%;
-    }
-    .author__contents {
-        padding-bottom: 30px;
     }
   }
   @media (min-width: 1000px) {
