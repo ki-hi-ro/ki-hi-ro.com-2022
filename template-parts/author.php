@@ -13,10 +13,7 @@
   </h4>
   <hr />
   <div class="author__contents">
-    <p class="author-text">
-      2019年末にプログラミングスクールTECH::EXPERTを受講して以来、フリーランスとして、HTML
-      / CSS, WordPress, EC-CUBE, FutureShopなどを使用して、Webサイトの新規制作や改修を行なってきました。
-    </p>
+    <p class="author-text">自分のパフォーマンスを最大限に出せる時間帯と場所で働きたいと思ったため、フリーランスのWEB制作エンジニアになりました。2019年末にTECH::EXPERTを受講し、現在はWEB制作会社の担当者の方から定期的に仕事のご依頼を受けています。</p>
   </div>
   <div class="more-link --top-sec">
     <a href="<?php echo home_url('self-produce'); ?>">自己紹介<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
