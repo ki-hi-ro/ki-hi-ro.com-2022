@@ -4083,3 +4083,62 @@ h3.sidebar-ttl {
 .single .ez-toc-widget-container li.active > a {
   font-weight: 500;
 }
+
+.mv-text-wrap {
+  background-color: #fff;
+  padding: 12px 30px;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+}
+
+.mv-text {
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .mv-text .only-sp {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mv-text-wrap {
+    padding: 17px 38px;
+  }
+
+  .mv-text {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .mv-text-wrap {
+    padding: 25px 47px;
+  }
+
+  .mv-text {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mv-text-wrap {
+    width: 90%;
+    padding: 25px;
+    line-height: 1.8;
+  }
+
+  .mv-text {
+    font-size: 5.8vw;
+  }
+
+  .mv-text .sp-none {
+    display: none;
+  }
+}
