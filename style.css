@@ -3598,7 +3598,7 @@ footer nav li {
   margin-bottom: 5px;
 }
 
-.blog-tab-content.top-section h4 {
+.blog-tab-content--skill.top-section h4 {
   margin-top: 0;
 }
 
@@ -3841,7 +3841,7 @@ section#contact {
   padding-top: 20px;
 }
 
-.home .top-section.blog-tab-content {
+.home .top-section.blog-tab-content--skill {
   padding-top: 10px;
 }
 
@@ -3964,20 +3964,20 @@ h3.sidebar-ttl {
   margin-bottom: 20px;
 }
 
-.blog-tab__item.current-tab {
+.blog-tab__item--skill.current-tab {
   color: #fff;
   font-weight: bold;
 }
 
-.blog-tab__item.current-tab.blog-tab__skill {
+.blog-tab__item--skill.current-tab.blog-tab__skill {
   background-color: var(--skill-color);
 }
 
-.blog-tab__item.current-tab.blog-tab__study {
+.blog-tab__item--skill.current-tab.blog-tab__study {
   background-color: var(--study-color);
 }
 
-.blog-tab__item.current-tab.blog-tab__random {
+.blog-tab__item--skill.current-tab.blog-tab__random {
   background-color: var(--random-color);
 }
 

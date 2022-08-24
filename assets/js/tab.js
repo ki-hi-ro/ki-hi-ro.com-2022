@@ -1,5 +1,5 @@
-const blogTabItem = document.querySelectorAll(".blog-tab__item");
-const blogContents = document.querySelectorAll(".blog-tab-content");
+const blogTabItem = document.querySelectorAll(".blog-tab__item--skill");
+const blogContents = document.querySelectorAll(".blog-tab-content--skill");
 
 window.addEventListener(
   "load",
