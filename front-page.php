@@ -85,8 +85,8 @@
 
     <!-- 学習 -->
     <ul class="blog-tab">
-      <li class="blog-tab-content--study blog-tab__study" contentId="study-blog">学習ブログ</li>
-      <li class="blog-tab-content--study blog-tab__skill current-tab" contentId="skill-blog">技術ブログ</li>
+      <li class="blog-tab-content--study blog-tab__skill" contentId="skill-blog">技術ブログ</li>
+      <li class="blog-tab-content--study blog-tab__study current-tab" contentId="study-blog">学習ブログ</li>
       <li class="blog-tab-content--study blog-tab__random" contentId="random-blog">雑記ブログ</li>
     </ul>
     <div class="blog-tab-contents">
