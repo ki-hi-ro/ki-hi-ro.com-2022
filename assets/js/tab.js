@@ -1,22 +1,22 @@
-const blogTabItem = document.querySelectorAll(".blog-tab__item--skill");
-const blogContents = document.querySelectorAll(".blog-tab-content--skill");
+const blogTabItem_skill = document.querySelectorAll(".blog-tab__item--skill");
+const blogContents_skill = document.querySelectorAll(".blog-tab-content--skill");
 
 window.addEventListener(
   "load",
   function () {
-    addTabMotion(blogTabItem, blogContents);
+    addTabMotion(blogTabItem_skill, blogContents_skill);
   },
   false
 );
 
-var addTabMotion = function (blogTabItem, blogContents) {
-  var tabs = blogTabItem;
+var addTabMotion = function (blogTabItem_skill, blogContents_skill) {
+  var tabs = blogTabItem_skill;
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener(
       "click",
       function () {
         tabOptionAllHidden();
-        tabAllHidden(blogContents);
+        tabAllHidden(blogContents_skill);
         var id = this.getAttribute("contentId");
         var content = document.getElementById(id);
         content.className = content.className.replace(/ notShowMe/g, "");
@@ -27,8 +27,8 @@ var addTabMotion = function (blogTabItem, blogContents) {
   }
 };
 
-var tabAllHidden = function (blogContents) {
-  var contents = blogContents;
+var tabAllHidden = function (blogContents_skill) {
+  var contents = blogContents_skill;
   for (var i = 0; i < contents.length; i++) {
     contents[i].className = contents[i].className.replace(/ notShowMe/g, "");
     contents[i].className += " notShowMe";
@@ -36,7 +36,7 @@ var tabAllHidden = function (blogContents) {
 };
 
 var tabOptionAllHidden = function () {
-  var tabs = blogTabItem;
+  var tabs = blogTabItem_skill;
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].classList.remove("current-tab");
   }
