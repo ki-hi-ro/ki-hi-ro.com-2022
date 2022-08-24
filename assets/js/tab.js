@@ -27,7 +27,8 @@ var addTabMotion = function () {
 var tabAllHidden = function () {
   var contents = document.querySelectorAll(".blog-tab-content");
   for (var i = 0; i < contents.length; i++) {
-    contents[i].className += " notShowMea";
+    contents[i].className = contents[i].className.replace(/ notShowMe/g, "");
+    contents[i].className += " notShowMe";
   }
 };
 
