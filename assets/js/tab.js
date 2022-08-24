@@ -1,3 +1,5 @@
+const blogTabItem = document.querySelectorAll(".blog-tab__item");
+
 window.addEventListener(
   "load",
   function () {
@@ -7,7 +9,7 @@ window.addEventListener(
 );
 
 var addTabMotion = function () {
-  var tabs = document.querySelectorAll(".blog-tab__item");
+  var tabs = blogTabItem;
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener(
       "click",
@@ -33,7 +35,7 @@ var tabAllHidden = function () {
 };
 
 var tabOptionAllHidden = function () {
-  var tabs = document.querySelectorAll(".blog-tab__item");
+  var tabs = blogTabItem;
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].classList.remove("current-tab");
   }
