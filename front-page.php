@@ -39,8 +39,8 @@
       <h4>ブログ</h4>
     </div>
     <ul class="blog-tab">
-      <li class="blog-tab__item blog-tab__skill current-tab" contentId="skill-blog">技術ブログ</li>
       <li class="blog-tab__item blog-tab__study" contentId="study-blog">学習ブログ</li>
+      <li class="blog-tab__item blog-tab__skill current-tab" contentId="skill-blog">技術ブログ</li>
       <li class="blog-tab__item blog-tab__random" contentId="random-blog">雑記ブログ</li>
     </ul>
     <div class="blog-tab-contents">

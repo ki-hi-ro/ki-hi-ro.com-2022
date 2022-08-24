@@ -3942,7 +3942,7 @@ h3.sidebar-ttl {
   line-height: 60px;
 }
 
-.blog-tab li.blog-tab__study {
+.blog-tab li:nth-child(2) {
   margin: 0 15px;
 }
 
