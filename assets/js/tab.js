@@ -16,7 +16,7 @@ var addTabMotion = function (blogTabItem) {
       "click",
       function () {
         tabOptionAllHidden();
-        tabAllHidden();
+        tabAllHidden(blogContents);
         var id = this.getAttribute("contentId");
         var content = document.getElementById(id);
         content.className = content.className.replace(/ notShowMe/g, "");
@@ -27,7 +27,7 @@ var addTabMotion = function (blogTabItem) {
   }
 };
 
-var tabAllHidden = function () {
+var tabAllHidden = function (blogContents) {
   var contents = blogContents;
   for (var i = 0; i < contents.length; i++) {
     contents[i].className = contents[i].className.replace(/ notShowMe/g, "");
