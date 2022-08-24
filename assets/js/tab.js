@@ -4,12 +4,12 @@ const blogContents = document.querySelectorAll(".blog-tab-content--skill");
 window.addEventListener(
   "load",
   function () {
-    addTabMotion(blogTabItem);
+    addTabMotion(blogTabItem, blogContents);
   },
   false
 );
 
-var addTabMotion = function (blogTabItem) {
+var addTabMotion = function (blogTabItem, blogContents) {
   var tabs = blogTabItem;
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener(
