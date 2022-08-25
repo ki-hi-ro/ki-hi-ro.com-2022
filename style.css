@@ -3937,7 +3937,8 @@ h3.sidebar-ttl {
   width: calc((100% - 15px * 2) / 3);
   text-align: center;
   cursor: pointer;
-  background-color: #e3e3e3;
+  background-color: #e3e3e354;
+  color: #a9a9a9;
   height: 60px;
   line-height: 60px;
 }
