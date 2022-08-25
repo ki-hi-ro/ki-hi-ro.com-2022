@@ -12,8 +12,8 @@ window.addEventListener(
   false
 );
 
-var addTabMotion = function (blogTabItem_skill, blogContents_skill) {
-  var tabs = blogTabItem_skill;
+var addTabMotion = function (tabItem, blogContents_skill) {
+  var tabs = tabItem;
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener(
       "click",
@@ -38,8 +38,8 @@ var tabAllHidden = function (blogContents_skill) {
   }
 };
 
-var tabOptionAllHidden = function () {
-  var tabs = blogTabItem_skill;
+var tabOptionAllHidden = function (tabItem) {
+  var tabs = tabItem;
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].classList.remove("current-tab");
   }
