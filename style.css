@@ -3955,6 +3955,11 @@ h3.sidebar-ttl {
   }
 }
 
+.blog__skill,
+.blog__study {
+  margin-bottom: 50px;
+}
+
 .top-section.--blog {
   margin-top: 60px;
   margin-bottom: 20px;
