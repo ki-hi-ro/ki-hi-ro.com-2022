@@ -2,12 +2,15 @@ const blogTabItem_skill = document.querySelectorAll(".blog-tab__item--skill");
 const blogContents_skill = document.querySelectorAll(".blog-tab-content--skill");
 const blogTabItem_study = document.querySelectorAll(".blog-tab__item--study");
 const blogContents_study = document.querySelectorAll(".blog-tab-content--study");
+const blogTabItem_random = document.querySelectorAll(".blog-tab__item--random");
+const blogContents_random = document.querySelectorAll(".blog-tab-content--random");
 
 window.addEventListener(
   "load",
   function () {
     addTabMotion(blogTabItem_skill, blogContents_skill);
     addTabMotion(blogTabItem_study, blogContents_study);
+    addTabMotion(blogTabItem_random, blogContents_random);
   },
   false
 );
