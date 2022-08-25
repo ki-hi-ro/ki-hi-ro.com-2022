@@ -18,7 +18,7 @@ var addTabMotion = function (tabItem, tabContents) {
     tabs[i].addEventListener(
       "click",
       function () {
-        tabOptionAllHidden();
+        tabOptionAllHidden(tabItem);
         tabAllHidden(tabContents);
         var id = this.getAttribute("contentId");
         var content = document.getElementById(id);
