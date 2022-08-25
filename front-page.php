@@ -90,7 +90,7 @@
       <li class="blog-tab-content--study blog-tab__random" contentId="random-blog--study">雑記ブログ</li>
     </ul>
     <div class="blog-tab-contents">
-      <section class="blog-tab-content--skill top-section sidebar__blog sidebar__contents notShowMe" id="skill-blog--study">
+      <section class="blog-tab-content--study top-section sidebar__blog sidebar__contents notShowMe" id="skill-blog--study">
           <p>これまでに身につけてきたWEB制作に必要なスキルを、テーマを決めて投稿していきます。</p>
           <div class="top-contents__wrap">
             <?php $args = array( 'category_name' => 'skill-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts = get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
@@ -102,7 +102,7 @@
           </div>
       </section>
 
-      <section class="blog-tab-content--skill top-section sidebar__blog sidebar__contents" id="study-blog--study">
+      <section class="blog-tab-content--study top-section sidebar__blog sidebar__contents" id="study-blog--study">
           <p>参考書などで学んだことをテーマにしたブログ記事を投稿していきます。</p>
           <div class="top-contents__wrap">
             <?php $args = array( 'category_name' => 'study-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts = get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
@@ -114,7 +114,7 @@
           </div>
       </section>
 
-      <section class="blog-tab-content--skill top-section sidebar__blog sidebar__contents notShowMe" id="random-blog--study">
+      <section class="blog-tab-content--study top-section sidebar__blog sidebar__contents notShowMe" id="random-blog--study">
           <p>日常で感動したことなどを、息抜きに投稿していきます。</p>
           <div class="top-contents__wrap">
             <?php $args = array( 'category_name' => 'random-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts = get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
