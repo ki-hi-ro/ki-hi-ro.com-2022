@@ -6,7 +6,6 @@ const blogContents_study = document.querySelectorAll(".blog-tab-content--study")
 window.addEventListener(
   "load",
   function () {
-    addTabMotion(blogTabItem_skill, blogContents_skill);
     addTabMotion(blogTabItem_study, blogContents_study);
   },
   false

@@ -85,9 +85,9 @@
 
     <!-- 学習 -->
     <ul class="blog-tab">
-      <li class="blog-tab-item--study blog-tab__skill" contentId="skill-blog--study">技術ブログ</li>
-      <li class="blog-tab-item--study blog-tab__study current-tab" contentId="study-blog--study">学習ブログ</li>
-      <li class="blog-tab-item--study blog-tab__random" contentId="random-blog--study">雑記ブログ</li>
+      <li class="blog-tab__item--study blog-tab__skill" contentId="skill-blog--study">技術ブログ</li>
+      <li class="blog-tab__item--study blog-tab__study current-tab" contentId="study-blog--study">学習ブログ</li>
+      <li class="blog-tab__item--study blog-tab__random" contentId="random-blog--study">雑記ブログ</li>
     </ul>
     <div class="blog-tab-contents">
       <section class="blog-tab-content--study top-section sidebar__blog sidebar__contents notShowMe" id="skill-blog--study">
