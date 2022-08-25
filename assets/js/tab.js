@@ -12,14 +12,14 @@ window.addEventListener(
   false
 );
 
-var addTabMotion = function (tabItem, blogContents_skill) {
+var addTabMotion = function (tabItem, tabContents) {
   var tabs = tabItem;
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener(
       "click",
       function () {
         tabOptionAllHidden();
-        tabAllHidden(blogContents_skill);
+        tabAllHidden(tabContents);
         var id = this.getAttribute("contentId");
         var content = document.getElementById(id);
         content.className = content.className.replace(/ notShowMe/g, "");
@@ -30,8 +30,8 @@ var addTabMotion = function (tabItem, blogContents_skill) {
   }
 };
 
-var tabAllHidden = function (blogContents_skill) {
-  var contents = blogContents_skill;
+var tabAllHidden = function (tabContents) {
+  var contents = tabContents;
   for (var i = 0; i < contents.length; i++) {
     contents[i].className = contents[i].className.replace(/ notShowMe/g, "");
     contents[i].className += " notShowMe";
