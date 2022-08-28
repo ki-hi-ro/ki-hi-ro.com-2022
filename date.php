@@ -4,8 +4,13 @@
   <h1><?php echo get_the_date('Y年n月'); ?>の記事一覧</h1>
 	<section class="top-section sidebar__blog sidebar__contents">
     <?php
+    $current_url =  get_pagenum_link(get_query_var('paged'));
+    $uri = rtrim($current_url, '/');
+    $uri = substr($uri, strrpos($uri, '/') + 1);
+    $uri = abs($uri);
     $args = array(
-        'tag__not_in'   => array( 105 ),
+        'tag__not_in'   => array( 116 ),
+        'monthnum' => $uri,
     );
     $query = new WP_Query( $args );
     ?>
