@@ -1473,7 +1473,7 @@ header .header-nav nav ul li a:hover {
 @media (max-width: 575px) {
   .openbtn1 {
     position: fixed;
-    top: 18px;
+    top: 25px;
     right: 6px;
     transform: none;
   }
@@ -3732,7 +3732,7 @@ footer nav li {
 }
 
 section#contact {
-  margin: 100px 0;
+  margin: 60px 0;
 }
 
 .sp-nav .blogname {
@@ -3962,7 +3962,7 @@ h3.sidebar-ttl {
 }
 
 .top-section.--blog {
-  margin-top: 60px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -4151,4 +4151,14 @@ h3.sidebar-ttl {
   .mv-text .sp-none {
     display: none;
   }
+}
+
+/*JSを使いfixedクラスが付与された際の設定*/
+#header.fixed {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
 }

@@ -46,7 +46,7 @@
 
 <body <?php body_class(); ?>>
 
-	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader" id="header">
 		<div class="container header-container">
 			<div class="header-nav row">
 					<div class="blogname">
