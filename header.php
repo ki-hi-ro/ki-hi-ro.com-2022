@@ -57,7 +57,14 @@
 					</div>
 					<nav class="pc-nav">
 						<ul>
-							<li><a href="#contact" class="header-nav-link">お問い合わせ</a></li>
+							<?php
+							if ( is_home() || is_front_page() ) {
+								$contact_link = '#contact';
+							} else {
+								$contact_link = home_url('#contact');
+							}
+							?>
+							<li><a href="<?php echo $contact_link; ?>" class="header-nav-link">お問い合わせ</a></li>
 							<li><a href="<?php echo home_url('#what-i-can'); ?>">対応可能な項目</a></li>
 							<li><a href="<?php echo home_url('category/what-i-did/'); ?>">これまでの仕事</a></li>
 							<li class="has-child"><a href="<?php echo home_url('#blog'); ?>">ブログ</a>
