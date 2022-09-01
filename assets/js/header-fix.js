@@ -1,6 +1,5 @@
 jQuery(function ($) {
   var $header = $("#header");
-  var $nav_link = $(".header-nav-link");
 
   function FixedAnime() {
     var headerH = $header.outerHeight(true);
