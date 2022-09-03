@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+.header__container {
+  width: 1170px;
+}
+
+@media (max-width: 1199px) {
+  .header-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -727,15 +727,6 @@ h3,
   display: none;
 }
 
-/* ----------------------------------------------------------------------
- スマホヘッダー
----------------------------------------------------------------------- */
-@media (max-width: 479px) {
-  header .pushy {
-    padding-left: 0;
-  }
-}
-
 .single article .url {
   padding-left: 40px;
 }
@@ -868,12 +859,6 @@ main {
   }
 }
 
-@media (max-width: 479px) {
-  header {
-    background: none;
-  }
-}
-
 @media (max-width: 767px) {
   span.sitename.main {
     color: #313131db;
@@ -901,12 +886,7 @@ main {
   }
 }
 
-@media (max-width: 1199px) {
-  .header-container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
+
 
 @media (max-width: 575px) {
   .home .author p,
@@ -3793,6 +3773,13 @@ section#contact {
 .mv {
   width: 100%;
   position: relative;
+  padding-top: 60px;
+}
+
+@media (max-width: 575px) {
+  .mv {
+    padding-top: 108px;
+  }
 }
 
 .mv img {
@@ -4108,11 +4095,17 @@ h3.sidebar-ttl {
   background-color: #fff;
   padding: 12px 30px;
   position: absolute;
-  top: 44%;
+  top: 51%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 575px) {
+  .mv-text-wrap {
+    top: 54%;
+  }
 }
 
 .mv-text {
@@ -4129,7 +4122,7 @@ h3.sidebar-ttl {
 
 @media (min-width: 1200px) {
   .mv-text-wrap {
-    padding: 17px 38px;
+    padding: 17px 32px;
   }
 
   .mv-text {
@@ -4161,14 +4154,4 @@ h3.sidebar-ttl {
   .mv-text .sp-none {
     display: none;
   }
-}
-
-/*JSを使いfixedクラスが付与された際の設定*/
-#header.fixed {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
 }
