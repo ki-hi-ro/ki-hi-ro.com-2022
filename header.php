@@ -51,7 +51,7 @@
 <body <?php body_class(); ?>>
 
 	<header class="header">
-		<div class="header__container container header-container">
+		<div class="header__container">
 			<div class="header__contents header-nav row">
 				<div class="header__logo blogname">
 					<a class="header__sitename-link" href="<?php echo home_url(); ?>">
