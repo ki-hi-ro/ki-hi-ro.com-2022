@@ -614,10 +614,6 @@ h3,
 /* ----------------------------------------------------------------------
  カテゴリー一覧ページ
 ---------------------------------------------------------------------- */
-.category .main-contents.row {
-  margin: 0;
-}
-
 .category .other h1 {
   font-size: 22px;
 }
@@ -670,10 +666,6 @@ h3,
 /* ----------------------------------------------------------------------
  タグ一覧ページ
 ---------------------------------------------------------------------- */
-.tag .main-contents.row {
-  margin: 0;
-}
-
 .tag .other h1 {
   font-size: 22px;
 }
@@ -886,8 +878,6 @@ main {
   }
 }
 
-
-
 @media (max-width: 575px) {
   .home .author p,
   .home .author li {
@@ -1047,13 +1037,6 @@ html {
   margin-top: 0 !important;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
 .justify-content-center {
   justify-content: center !important;
 }
@@ -1065,10 +1048,6 @@ html {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-}
-
-header {
-  position: relative;
 }
 
 .header-top {
@@ -1086,24 +1065,7 @@ header {
   padding-right: 15px;
 }
 
-.header-nav {
-  margin: 2rem auto;
-  text-align: center;
-}
 
-@media (max-width: 767px) {
-  .header-nav {
-    margin-top: 24px;
-  }
-}
-
-header .blogname {
-  padding: 0;
-  margin-top: 0;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
 
 header h1.title {
   margin-top: -2px;
@@ -1418,15 +1380,10 @@ header .header-nav nav ul li a:hover {
 }
 
 @media (max-width: 1199px) {
-  header {
-    padding-bottom: 20px;
-  }
   .pc-nav {
     display: none;
   }
-  .header-nav {
-    position: relative;
-  }
+
   .header-nav nav ul {
     flex-direction: column;
   }
@@ -1455,15 +1412,7 @@ header .header-nav nav ul li a:hover {
   }
 }
 
-@media (max-width: 999px) {
-  .header-nav {
-    max-width: 720px;
-    flex-direction: column;
-  }
-  header .blogname {
-    align-items: center;
-  }
-}
+
 
 @media (max-width: 768px) {
   .header-nav nav {
@@ -1482,11 +1431,6 @@ header .header-nav nav ul li a:hover {
 }
 
 @media (max-width: 767px) {
-  .header-nav {
-    padding: 0 15px;
-    justify-content: center;
-    margin-bottom: 0;
-  }
   .header-nav nav.sp-nav ul {
     flex-wrap: wrap;
   }
@@ -1521,15 +1465,6 @@ header .header-nav nav ul li a:hover {
 }
 
 @media (max-width: 575px) {
-  header .blogname {
-    line-height: 1.8;
-  }
-  .page header .blogname {
-    margin-top: -3px;
-  }
-  .single header .blogname {
-    margin-top: -3px;
-  }
   .single .nav-menu {
     margin-top: 2px;
   }
@@ -1547,18 +1482,7 @@ header .header-nav nav ul li a:hover {
   }
 }
 
-@media (min-width: 576px) {
-  .header-nav {
-    align-items: center;
-    justify-content: center;
-  }
-}
-
 @media (min-width: 768px) {
-  .header-nav {
-    margin: 40px auto 20px;
-    max-width: 100%;
-  }
   .nav-menu__ul {
     display: flex;
     align-items: center;
@@ -1576,39 +1500,17 @@ header .header-nav nav ul li a:hover {
   }
 }
 
-@media (min-width: 1024px) {
-  .header-nav {
-    width: 100%;
-  }
-}
-
-@media (min-width: 1000px) {
-  .header-nav {
-    justify-content: space-between;
-  }
-}
-
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
-  .header-nav {
-    margin: 0 auto;
-  }
+
   .sp-nav {
     display: none;
   }
-  header .blogname {
-    margin: 10px 0;
-  }
+
   .openbtn1 {
     display: none;
-  }
-}
-
-@media (min-width: 721px) and (max-width: 767px) {
-  .header-nav {
-    max-width: 100%;
   }
 }
 
@@ -2776,12 +2678,6 @@ code {
   }
 }
 
-@media (max-width: 999px) and (min-width: 768px) {
-  .header-nav {
-    max-width: 720px;
-  }
-}
-
 @media (max-width: 767px) {
   article {
     width: 100%;
@@ -3104,12 +3000,6 @@ code {
   .page .author.col-xs-12 {
     width: 900px;
     border-radius: 10px;
-  }
-}
-
-@media (max-width: 999px) and (min-width: 768px) {
-  .header-nav {
-    max-width: 720px;
   }
 }
 

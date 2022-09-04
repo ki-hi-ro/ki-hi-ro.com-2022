@@ -3,7 +3,7 @@
     {
       "format": "expanded",
       "extensionName": ".css",
-      "savePath": "/"
+      "savePath": "/assets/css"
     }
   ],
   "intelephense.stubs": [
@@ -79,5 +79,8 @@
     "zip",
     "zlib",
     "wordpress"
+  ],
+  "liveSassCompile.settings.autoprefix": [
+
   ]
 }
