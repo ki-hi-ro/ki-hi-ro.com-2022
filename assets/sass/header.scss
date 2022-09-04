@@ -31,9 +31,6 @@ header
 .header__container {
   margin: 0 auto;
   padding: 0 15px;
-  @include mq(sm) {
-    padding: 0 30px;
-  }
   @include mq(xl) {
     width: 1170px;
   }
@@ -45,6 +42,7 @@ header
   justify-content: center;
   @include mq(xl) {
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -60,9 +58,6 @@ header
     margin: 10px 0;
     align-items: flex-start;
   }
-}
-.page .header__logo {
-  margin-top: -3px;
 }
 .single .header__logo {
   margin-top: -3px;

@@ -3572,6 +3572,11 @@ section#contact {
 
 .page main {
   margin-bottom: 3rem;
+  margin-top: 0;
+}
+
+.archive main {
+  margin-top: 0;
 }
 
 .category .top-section {
