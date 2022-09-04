@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php $category = get_the_category(); $cat = $category[0]; ?>
-<main id="main" class="<?php echo $cat->slug; ?>">
+<main id="main" class="blog-article__main <?php echo $cat->slug; ?>">
 		<div class="container single-page-wrap">
 			<div class="main-contents">
 				<article>
@@ -68,14 +68,14 @@
           </div>
         </article>
       </div>
-      <aside>
+      <aside class="blog-article__sitebar">
         <?php echo get_template_part('template-parts/author'); ?>
         <h3 class="sidebar-ttl">過去記事アーカイブ</h3>
         <ul class="sidebar-archive-list">
           <?php wp_get_archives( 'post_type=post&type=monthly&show_post_count=1' ); ?>
         </ul>
 
-        <div class="aside-table-of-contents">
+        <div class="blog-article__aside-table-of-contents">
           <h3 class="sidebar-ttl">目次</h3>
           <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
           <?php endif; ?>

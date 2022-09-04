@@ -3769,7 +3769,7 @@ section#contact {
 .mv {
   width: 100%;
   position: relative;
-  padding-top: 60px;
+  padding-top: 102px;
 }
 
 @media (max-width: 575px) {
@@ -4039,9 +4039,10 @@ h3.sidebar-ttl {
   text-align: center;
 }
 
-.aside-table-of-contents {
+.blog-article__aside-table-of-contents {
   position: sticky;
   top: 10px;
+  padding-top: 102px;
 }
 
 @media (min-width: 768px) {
@@ -4052,7 +4053,7 @@ h3.sidebar-ttl {
 }
 
 @media (max-width: 767px) {
-  .aside-table-of-contents {
+  .blog-article__aside-table-of-contents {
     display: none;
   }
 
@@ -4150,4 +4151,8 @@ h3.sidebar-ttl {
   .mv-text .sp-none {
     display: none;
   }
+}
+
+.blog-article__main {
+  padding-top: 102px;
 }
