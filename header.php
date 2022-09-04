@@ -55,7 +55,7 @@
 			<div class="header__contents header-nav">
 				<div class="header__logo blogname">
 					<a class="header__sitename-link" href="<?php echo home_url(); ?>">
-						<span class="header__sitename-text sitename main">ki-hi-ro.com</span>
+						<span class="header__sitename-text sitename main">Shiata Hiroki</span>
 					</a>
 					<span class="header__sub-sitename sitename sub">WEB制作フリーランスエンジニア</span>
 				</div>
@@ -81,7 +81,7 @@
 				<nav class="header__nav-sp sp-nav">
 					<div class="header__sp-site-ttl header__logo blogname">
 						<a class="header__sitename-link sitename" href="<?php echo home_url(); ?>">
-							<span class="header__sp-sitename-logo sitename main">ki-hi-ro.com</span>
+							<span class="header__sp-sitename-logo sitename main">Shiata Hiroki</span>
 						</a>
 						<span class="header__sp-sitename-sub sitename sub">WEB制作フリーランスエンジニア</span>
 					</div>

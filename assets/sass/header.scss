@@ -43,6 +43,9 @@ header
 .header__contents {
   display: flex;
   justify-content: center;
+  @include mq(xl) {
+    justify-content: space-between;
+  }
 }
 
 /* __logo */
@@ -55,7 +58,7 @@ header
   flex-direction: column;
   @include mq(xl) {
     margin: 10px 0;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 .page .header__logo {
@@ -68,6 +71,9 @@ header
 /* __nav-pc */
 .header__nav-pc {
   display: none;
+  @include mq(xl) {
+    display: flex;
+  }
 }
 
 /* __ul-pc */

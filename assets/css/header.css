@@ -39,6 +39,12 @@ header
   justify-content: center;
 }
 
+@media (min-width: 1200px) {
+  .header__contents {
+    justify-content: space-between;
+  }
+}
+
 /* __logo */
 .header__logo {
   line-height: 1;
@@ -52,7 +58,7 @@ header
 @media (min-width: 1200px) {
   .header__logo {
     margin: 10px 0;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -67,6 +73,12 @@ header
 /* __nav-pc */
 .header__nav-pc {
   display: none;
+}
+
+@media (min-width: 1200px) {
+  .header__nav-pc {
+    display: flex;
+  }
 }
 
 /* __ul-pc */
