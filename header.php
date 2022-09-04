@@ -59,12 +59,12 @@
 					</a>
 					<span class="header__sub-sitename sitename sub">WEB制作フリーランスエンジニア</span>
 				</div>
-				<nav class="header__nav pc-nav">
-					<ul class="header__ul">
-						<li class="header__li"><a class="header__li-link header-nav-link" href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
-						<li class="header__li"><a class="header__li-link" href=" <?php echo home_url('what-i-can'); ?>">対応可能な項目</a></li>
-						<li class="header__li"><a class="header__li-link" href=" <?php echo home_url('what-i-did/'); ?>">これまでの仕事</a></li>
-						<li class="header__li header__li--haschild has-child"><a href="<?php echo home_url('blog'); ?>">ブログ</a>
+				<nav class="header__nav-pc pc-nav">
+					<ul class="header__ul-pc">
+						<li class="header__li-pc"><a class="header__li-pc-link header-nav-link" href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link" href=" <?php echo home_url('what-i-can'); ?>">対応可能な項目</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link" href=" <?php echo home_url('what-i-did/'); ?>">これまでの仕事</a></li>
+						<li class="header__li-pc header__li-pc--haschild has-child"><a href="<?php echo home_url('blog'); ?>">ブログ</a>
 							<ul class="header__has-child-ul">
 								<li class="header__has-child-li pc-nav__skill"><a class="header__has-child-li-link" href=" <?php echo home_url('category/skill-blog/'); ?>">技術ブログ</a></li>
 								<li class="header__has-child-li pc-nav__study"><a class="header__has-child-li-link" href="<?php echo home_url('category/study-blog/'); ?>">学習ブログ</a></li>
@@ -79,8 +79,8 @@
 					<span class="header__open-btn-line"></span>
 				</div>
 				<nav class="header__nav-sp sp-nav">
-					<div class="header__sp-sitettl blogname">
-						<a class="header__sp-sitename-link sitename" href="<?php echo home_url(); ?>">
+					<div class="header__sp-site-ttl header__logo blogname">
+						<a class="header__sitename-link sitename" href="<?php echo home_url(); ?>">
 							<span class="header__sp-sitename-logo sitename main">ki-hi-ro.com</span>
 						</a>
 						<span class="header__sp-sitename-sub sitename sub">WEB制作フリーランスエンジニア</span>

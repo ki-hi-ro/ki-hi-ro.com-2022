@@ -852,9 +852,6 @@ main {
 }
 
 @media (max-width: 767px) {
-  span.sitename.main {
-    color: #313131db;
-  }
   .author p {
     padding-left: 0;
     padding-right: 0;
@@ -1065,26 +1062,10 @@ html {
   padding-right: 15px;
 }
 
-
-
 header h1.title {
   margin-top: -2px;
   margin-bottom: 0;
   line-height: 30px;
-}
-
-span.sitename.main {
-  color: #313131db;
-  font-size: 30px;
-  font-family: Helvetica Neue;
-  letter-spacing: 0.1px;
-  font-weight: 500;
-}
-
-@media (max-width: 575px) {
-  span.sitename.main {
-    font-size: 28px;
-  }
 }
 
 span.sitename.sub {
@@ -1257,29 +1238,6 @@ header .header-nav nav ul li a:hover {
   height: 50px;
 }
 
-.openbtn1 span {
-  display: inline-block;
-  transition: all 0.4s;
-  position: absolute;
-  left: 14px;
-  height: 3px;
-  border-radius: 2px;
-  background-color: #313131db;
-  width: 45%;
-}
-
-.openbtn1 span:nth-of-type(1) {
-  top: 15px;
-}
-
-.openbtn1 span:nth-of-type(2) {
-  top: 23px;
-}
-
-.openbtn1 span:nth-of-type(3) {
-  top: 31px;
-}
-
 .openbtn1.active span:nth-of-type(1) {
   top: 18px;
   left: 18px;
@@ -1380,10 +1338,6 @@ header .header-nav nav ul li a:hover {
 }
 
 @media (max-width: 1199px) {
-  .pc-nav {
-    display: none;
-  }
-
   .header-nav nav ul {
     flex-direction: column;
   }
@@ -1403,21 +1357,7 @@ header .header-nav nav ul li a:hover {
   }
 }
 
-@media (max-width: 575px) {
-  .openbtn1 {
-    position: fixed;
-    top: 25px;
-    right: 6px;
-    transform: none;
-  }
-}
-
-
-
 @media (max-width: 768px) {
-  .header-nav nav {
-    padding: 0;
-  }
   .header-nav nav ul li.has-child::before {
     left: 20px;
   }
@@ -1503,14 +1443,6 @@ header .header-nav nav ul li a:hover {
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
-  }
-
-  .sp-nav {
-    display: none;
-  }
-
-  .openbtn1 {
-    display: none;
   }
 }
 
@@ -3613,10 +3545,6 @@ footer nav li {
 
 section#contact {
   margin: 60px 0;
-}
-
-.sp-nav .blogname {
-  padding-top: 35px;
 }
 
 .single-page-wrap {
