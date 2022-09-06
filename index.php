@@ -28,12 +28,12 @@ $term_desc = $term->description;
 			'posts_per_page' => -1,
 		);
 		$myposts = get_posts($args);
-		foreach ($myposts as $post) : setup_postdata($post); ?>
-			<?php echo get_template_part('template-parts/blog-list'); ?>
-		<?php
-		endforeach;
-		wp_reset_postdata();
 		?>
+		<ul class="template-blog-list__wrap">
+			<?php foreach ($myposts as $post) : setup_postdata($post); ?>
+				<?php echo get_template_part('template-parts/blog-list'); ?>
+			<?php endforeach; wp_reset_postdata(); ?>
+		</ul>
 	</section>
 
 	<h4 class="tag-ttl">タグ</h4>

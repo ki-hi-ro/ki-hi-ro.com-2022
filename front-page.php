@@ -27,7 +27,7 @@
         <p>これまでにクラウドソーシングや、エージェント、地元のWEB制作会社経由で様々なお仕事を経験しました。どんな仕事をしてきたのかを、掲載可能な範囲で投稿していきます。</p>
         <div class="top-contents__wrap">
           <?php $args = array( 'category_name' =>'what-i-did', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts = get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
-            <?php echo get_template_part('template-parts/top-contents'); ?>
+            <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
           <?php endforeach; wp_reset_postdata(); ?>
         </div>
         <div class="more-link --top-sec">
@@ -51,7 +51,7 @@
             <p>これまでに身につけてきたWEB制作に必要なスキルを、テーマを決めて投稿していきます。</p>
             <div class="top-contents__wrap">
               <?php $args = array( 'category_name' => 'skill-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts = get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
-                <?php echo get_template_part('template-parts/top-contents'); ?>
+                <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
               <?php endforeach; wp_reset_postdata(); ?>
             </div>
             <div class="more-link --top-sec">
@@ -63,7 +63,7 @@
             <p>参考書などで学んだことをテーマにしたブログ記事を投稿していきます。</p>
             <div class="top-contents__wrap">
               <?php $args = array( 'category_name' => 'study-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts = get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
-                <?php echo get_template_part('template-parts/top-contents'); ?>
+                <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
               <?php endforeach; wp_reset_postdata(); ?>
             </div>
             <div class="more-link --top-sec">
@@ -75,7 +75,7 @@
             <p>日常で感動したことなどを、息抜きに投稿していきます。</p>
             <div class="top-contents__wrap">
               <?php $args = array( 'category_name' => 'random-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts = get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
-                <?php echo get_template_part('template-parts/top-contents'); ?>
+                <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
               <?php endforeach; wp_reset_postdata(); ?>
             </div>
             <div class="more-link --top-sec">
@@ -97,7 +97,7 @@
             <p>これまでに身につけてきたWEB制作に必要なスキルを、テーマを決めて投稿していきます。</p>
             <div class="top-contents__wrap">
               <?php $args = array( 'category_name' => 'skill-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts = get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
-                <?php echo get_template_part('template-parts/top-contents'); ?>
+                <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
               <?php endforeach; wp_reset_postdata(); ?>
             </div>
             <div class="more-link --top-sec">
@@ -109,7 +109,7 @@
             <p>参考書などで学んだことをテーマにしたブログ記事を投稿していきます。</p>
             <div class="top-contents__wrap">
               <?php $args = array( 'category_name' => 'study-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts = get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
-                <?php echo get_template_part('template-parts/top-contents'); ?>
+                <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
               <?php endforeach; wp_reset_postdata(); ?>
             </div>
             <div class="more-link --top-sec">
@@ -121,7 +121,7 @@
             <p>日常で感動したことなどを、息抜きに投稿していきます。</p>
             <div class="top-contents__wrap">
               <?php $args = array( 'category_name' => 'random-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts = get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
-                <?php echo get_template_part('template-parts/top-contents'); ?>
+                <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
               <?php endforeach; wp_reset_postdata(); ?>
             </div>
             <div class="more-link --top-sec">
@@ -143,7 +143,7 @@
             <p>これまでに身につけてきたWEB制作に必要なスキルを、テーマを決めて投稿していきます。</p>
             <div class="top-contents__wrap">
               <?php $args = array( 'category_name' => 'skill-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts = get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
-                <?php echo get_template_part('template-parts/top-contents'); ?>
+                <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
               <?php endforeach; wp_reset_postdata(); ?>
             </div>
             <div class="more-link --top-sec">
@@ -155,7 +155,7 @@
             <p>参考書などで学んだことをテーマにしたブログ記事を投稿していきます。</p>
             <div class="top-contents__wrap">
               <?php $args = array( 'category_name' => 'study-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts = get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
-                <?php echo get_template_part('template-parts/top-contents'); ?>
+                <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
               <?php endforeach; wp_reset_postdata(); ?>
             </div>
             <div class="more-link --top-sec">
@@ -167,7 +167,7 @@
             <p>日常で感動したことなどを、息抜きに投稿していきます。</p>
             <div class="top-contents__wrap">
               <?php $args = array( 'category_name' => 'random-blog', 'post_type' => 'post', 'posts_per_page' => -1, ); $myposts = get_posts($args); foreach ($myposts as $post): setup_postdata($post); ?>
-                <?php echo get_template_part('template-parts/top-contents'); ?>
+                <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
               <?php endforeach; wp_reset_postdata(); ?>
             </div>
             <div class="more-link --top-sec">

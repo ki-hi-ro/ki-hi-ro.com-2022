@@ -1,5 +1,5 @@
-<a class="skill-blog__link" href="<?php the_permalink();?>">
-	<div class="skill-blog__contents">
+<a class="template-blog-list__link" href="<?php the_permalink();?>">
+	<div class="template-blog-list__contents">
 
 		<div class="skill-blog__meta">
 			<span class="skill-blog__date">
