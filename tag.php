@@ -12,10 +12,9 @@
 		<h4><?php echo $term_name; ?>の記事一覧</h4>
 		<p><?php echo $term_desc; ?></p>
   <?php
-  $current_tag = single_tag_title('', false);
   $args = array(
     'posts_per_page' => -1,
-    'tag' => $current_tag
+    'tag' => $term_slug
   );
   $the_query = new WP_Query($args);
   if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -23,8 +22,8 @@
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
     <?php else: ?>
-	<h2>記事がありません</h2>
-  <?php endif; ?>
+	    <h2>記事がありません</h2>
+    <?php endif; ?>
 
 	</section>
 
