@@ -894,7 +894,7 @@ main {
   }
 }
 
-.skill-blog__sec-ttl {
+.blog-list-scroll__sec-ttl {
   text-align: center;
 }
 
@@ -906,7 +906,7 @@ main {
   display: inline-block;
 }
 
-.skill-blog__tag {
+.blog-list-scroll__tag {
   border: 1px solid #d2d2d2;
   padding: 0px 20px;
   text-align: center;
@@ -949,14 +949,14 @@ main {
   margin-right: 31px;
 }
 
-.skill-blog__btn {
+.blog-list-scroll__btn {
   padding: 0;
   margin: 10px 0 0 auto;
   display: block;
   border: none;
 }
 
-.skill-blog-btn__link {
+.blog-list-scroll-btn__link {
   display: inline-block;
   height: 100%;
   padding: 3px 0 3px 13px;
@@ -965,7 +965,7 @@ main {
   color: #000;
 }
 
-.skill-blog-btn__link::after {
+.blog-list-scroll-btn__link::after {
   content: "";
   background-image: url(https://ki-hi-ro.com/dev-ki-hi-ro/wp-content/themes/ki-hi-ro.com/assets/img/nav-right.png);
   display: inline-block;
@@ -976,7 +976,7 @@ main {
   background-repeat: no-repeat;
 }
 
-.skill-blog-btn__link:hover {
+.blog-list-scroll-btn__link:hover {
   color: #333;
   text-decoration: none;
 }
@@ -1526,7 +1526,7 @@ header .header-nav nav ul li a:hover {
   transform: all 0.3s;
 }
 
-.skill-blog__sec-ttl {
+.blog-list-scroll__sec-ttl {
   text-align: center;
 }
 
@@ -1550,7 +1550,7 @@ header .header-nav nav ul li a:hover {
 }
 
 @media (max-width: 767px) {
-  .top-contents__wrap .template-blog-list__contents {
+  .blog-list-scroll .template-blog-list__contents {
     align-items: center;
   }
 
@@ -1563,7 +1563,7 @@ header .header-nav nav ul li a:hover {
   text-decoration: none;
 }
 
-.skill-blog__tag {
+.blog-list-scroll__tag {
   width: 100%;
   border: 1px solid #d2d2d2;
   padding: 0px 20px;
@@ -1572,12 +1572,12 @@ header .header-nav nav ul li a:hover {
   margin: 3px 0;
 }
 
-.archive .skill-blog__tag {
+.archive .blog-list-scroll__tag {
   width: 60%;
 }
 
 @media (max-width: 767px) {
-  .skill-blog__tag {
+  .blog-list-scroll__tag {
     width: 100%;
     font-size: 11px;
   }
@@ -1893,7 +1893,7 @@ a.top-contents__card.--blog {
   .top-schedule {
     display: none;
   }
-  .skill-blog {
+  .blog-list-scroll {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -1982,7 +1982,7 @@ a.top-contents__card.--blog {
     margin-right: 0;
     width: 100%;
   }
-  .skill-blog__sec-ttl {
+  .blog-list-scroll__sec-ttl {
     margin-top: 50px;
   }
   .random-blog__sec-ttl {
@@ -2217,28 +2217,28 @@ a.top-contents__card.--blog {
   color: #000;
 }
 
-.sidebar .sidebar__skill-blog .template-blog-list__contents {
+.sidebar .sidebar__blog-list-scroll .template-blog-list__contents {
   background-color: #fff;
   flex-direction: column;
   display: flex;
 }
 
-.sidebar .sidebar__skill-blog .skill-blog__meta {
+.sidebar .sidebar__blog-list-scroll .blog-list-scroll__meta {
   display: flex;
   align-items: center;
 }
 
-.sidebar .sidebar__skill-blog .skill-blog__meta .skill-blog__tag {
+.sidebar .sidebar__blog-list-scroll .blog-list-scroll__meta .blog-list-scroll__tag {
   width: 150px;
   margin-left: 16px;
   font-size: 13px;
 }
 
-.sidebar .sidebar__skill-blog .skill-blog__ttl {
+.sidebar .sidebar__blog-list-scroll .blog-list-scroll__ttl {
   font-size: 16px;
 }
 
-.sidebar .sidebar__skill-blog .more-link {
+.sidebar .sidebar__blog-list-scroll .more-link {
   padding-right: 0;
   margin-top: 12px;
 }
@@ -2318,10 +2318,10 @@ a.top-contents__card.--blog {
   .sidebar .concept li {
     font-size: 16px;
   }
-  .sidebar .skill-blog__meta {
+  .sidebar .blog-list-scroll__meta {
     flex-direction: column;
   }
-  .sidebar .skill-blog__ttl {
+  .sidebar .blog-list-scroll__ttl {
     text-align: center;
   }
   .sidebar .sidebar-blog__meta {
@@ -2345,7 +2345,7 @@ a.top-contents__card.--blog {
   .sidebar {
     width: 100%;
   }
-  .sidebar .sidebar__skill-blog {
+  .sidebar .sidebar__blog-list-scroll {
     display: none;
   }
   .sidebar .sidebar__study-blog {
@@ -2405,12 +2405,12 @@ a.top-contents__card.--blog {
   font-size: 20px;
 }
 
-.single .skill-blog h2,
-.single .skill-blog h3 {
+.single .blog-list-scroll h2,
+.single .blog-list-scroll h3 {
   border-color: var(--skill-color);
 }
 
-.single .skill-blog h2 {
+.single .blog-list-scroll h2 {
   background: #0a2c541a;
 }
 
@@ -2768,12 +2768,12 @@ code {
   padding: 0;
 }
 
-.blog .skill-blog__sec-ttl {
+.blog .blog-list-scroll__sec-ttl {
   margin-top: 20px;
 }
 
 @media (max-width: 575px) {
-  .blog .skill-blog__sec-ttl {
+  .blog .blog-list-scroll__sec-ttl {
     margin-top: 0;
   }
 }
@@ -3506,35 +3506,35 @@ footer nav li {
     flex-direction: column;
     align-items: flex-start;
   }
-  .skill-blog__meta {
+  .blog-list-scroll__meta {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
 
-  .archive .skill-blog__meta {
+  .archive .blog-list-scroll__meta {
     flex-direction: row;
   }
 }
 
 @media (min-width: 768px) {
-  .skill-blog__meta {
+  .blog-list-scroll__meta {
     width: 38%;
     display: flex;
     align-items: center;
   }
-  .top-contents__wrap .skill-blog__meta {
+  .blog-list-scroll .blog-list-scroll__meta {
     width: 50%;
     text-align: center;
     flex-direction: column;
   }
-  .home .skill-blog__tag {
+  .home .blog-list-scroll__tag {
     width: 100%;
   }
 }
 
 @media (max-width: 767px) {
-  .home .skill-blog__tag {
+  .home .blog-list-scroll__tag {
     font-size: 11px;
   }
 }
@@ -3676,52 +3676,52 @@ h3.sidebar-ttl {
   margin-left: 0;
 }
 
-.top-contents__wrap {
+.blog-list-scroll {
   display: flex;
   width: 100%;
   overflow-x: scroll;
   padding-bottom: 5px;
 }
 
-.thumb-nail-wrap {
+.blog-list-scroll__thumb-nail-wrap {
   width: 300px;
   height: 200px;
   margin-bottom: 15px;
 }
 
-.thumb-nail-wrap img {
+.blog-list-scroll__thumb-nail-wrap img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.top-contents__wrap .template-blog-list__link:not(:last-child) {
+.blog-list-scroll .template-blog-list__link:not(:last-child) {
   margin-right: 20px;
   display: flex;
 }
 
-.top-contents__wrap .template-blog-list__contents {
+.blog-list-scroll .template-blog-list__contents {
   padding: 10px;
 }
 
 @media (max-width: 767px) {
-  .thumb-nail-wrap {
+  .blog-list-scroll__thumb-nail-wrap {
     width: 170px;
     height: 100px;
     margin-bottom: 15px;
   }
-  .top-contents__wrap span.skill-blog__ttl {
+  .blog-list-scroll span.blog-list-scroll__ttl {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     overflow: hidden;
   }
-  .top-contents__wrap .template-blog-list__contents {
+  .blog-list-scroll .template-blog-list__contents {
     height: 251px;
   }
 }
 
 @media (min-width: 768px) {
-  .top-contents__wrap .template-blog-list__contents {
+  .blog-list-scroll .template-blog-list__contents {
     height: 357px;
   }
   .more-link.--top-sec {
@@ -3729,8 +3729,8 @@ h3.sidebar-ttl {
   }
 }
 
-.archive .skill-blog__date,
-.page .skill-blog__date {
+.archive .blog-list-scroll__date,
+.page .blog-list-scroll__date {
   margin-right: 10px;
 }
 

@@ -1,60 +1,72 @@
-.top-contents__wrap {
+.blog-list-scroll {
   display: flex;
   width: 100%;
   overflow-x: scroll;
   padding-bottom: 5px;
 }
 
-.skill-blog__link:not(:last-child) {
-  margin-bottom: 10px;
+.blog-list-scroll__link:not(:last-child) {
+  margin: 0 20px 10px 0;
   width: 100%;
-  display: inline-block;
-}
-
-.top-contents__wrap .skill-blog__link:not(:last-child) {
-  margin-right: 20px;
   display: flex;
 }
 
-.skill-blog__contents {
+.blog-list-scroll__contents {
   max-width: 750px;
-  flex-direction: column;
-}
-
-.top-contents__wrap .skill-blog__contents {
   padding: 10px;
+  height: 251px;
+  margin: 0 auto;
+  border: 1px solid #d2d2d2;
+  color: #000;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
-  .top-contents__wrap .skill-blog__contents {
+  .blog-list-scroll__contents {
     height: 357px;
   }
 }
 
-.thumb-nail-wrap {
+.blog-list-scroll__thumb-nail-wrap {
   width: 300px;
   height: 200px;
   margin-bottom: 15px;
 }
 
+.blog-list-scroll__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 @media (min-width: 768px) {
-  .top-contents__wrap .skill-blog__meta {
+  .blog-list-scroll__meta {
     width: 50%;
     text-align: center;
     flex-direction: column;
   }
 }
 
-@media (max-width: 767px) {
-  .top-contents__wrap span.skill-blog__ttl {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
+.blog-list-scroll__tag {
+  border: 1px solid #d2d2d2;
+  text-align: center;
+  display: inline-block;
+  padding: 0px 20px;
+  margin: 3px 0;
+}
+
+@media (min-width: 768px) {
+  .blog-list-scroll__tag {
+    width: 100%;
   }
 }
 
-@media (max-width: 767px) {
-  .top-contents__wrap .skill-blog__contents {
-    height: 251px;
+@media (min-width: 768px) {
+  .blog-list-scroll__ttl {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
 }
