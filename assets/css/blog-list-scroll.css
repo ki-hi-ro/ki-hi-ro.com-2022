@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   overflow-x: scroll;
-  padding-bottom: 5px;
+  padding: 0 20px 5px 20px;
 }
 
 .blog-list-scroll__link:not(:last-child) {
@@ -55,11 +55,13 @@
   display: inline-block;
   padding: 0px 20px;
   margin: 3px 0;
+  font-size: 11px;
 }
 
 @media (min-width: 768px) {
   .blog-list-scroll__tag {
     width: 100%;
+    font-size: 14px;
   }
 }
 

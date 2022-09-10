@@ -4,7 +4,7 @@
   display: flex;
   width: 100%;
   overflow-x: scroll;
-  padding-bottom: 5px;
+  padding: 0 20px 5px 20px;
   &__link {
     &:not(:last-child) {
       margin: 0 20px 10px 0;
@@ -52,8 +52,10 @@
     display: inline-block;
     padding: 0px 20px;
     margin: 3px 0;
+    font-size: 11px;
     @include mq(md) {
       width: 100%;
+      font-size: 14px;
     }
   }
   &__ttl {

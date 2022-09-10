@@ -894,24 +894,10 @@ main {
   }
 }
 
-.blog-list-scroll__sec-ttl {
-  text-align: center;
-}
-
-
-
 .template-blog-list__link:not(:last-child) {
   margin-bottom: 10px;
   width: 100%;
   display: inline-block;
-}
-
-.blog-list-scroll__tag {
-  border: 1px solid #d2d2d2;
-  padding: 0px 20px;
-  text-align: center;
-  display: inline-block;
-  margin: 3px 0;
 }
 
 .template-blog-list__link:hover {
@@ -947,38 +933,6 @@ main {
 
 .nav-menu__ul li:not(:last-child) {
   margin-right: 31px;
-}
-
-.blog-list-scroll__btn {
-  padding: 0;
-  margin: 10px 0 0 auto;
-  display: block;
-  border: none;
-}
-
-.blog-list-scroll-btn__link {
-  display: inline-block;
-  height: 100%;
-  padding: 3px 0 3px 13px;
-  background-color: #fff;
-  outline: none;
-  color: #000;
-}
-
-.blog-list-scroll-btn__link::after {
-  content: "";
-  background-image: url(https://ki-hi-ro.com/dev-ki-hi-ro/wp-content/themes/ki-hi-ro.com/assets/img/nav-right.png);
-  display: inline-block;
-  height: 14.5px;
-  width: 18px;
-  margin-left: 3px;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.blog-list-scroll-btn__link:hover {
-  color: #333;
-  text-decoration: none;
 }
 
 .twitter {
@@ -1526,10 +1480,6 @@ header .header-nav nav ul li a:hover {
   transform: all 0.3s;
 }
 
-.blog-list-scroll__sec-ttl {
-  text-align: center;
-}
-
 .template-blog-list__contents {
   max-width: 750px;
   margin: 0 auto;
@@ -1550,10 +1500,6 @@ header .header-nav nav ul li a:hover {
 }
 
 @media (max-width: 767px) {
-  .blog-list-scroll .template-blog-list__contents {
-    align-items: center;
-  }
-
   .archive .template-blog-list__contents {
     flex-direction: column;
   }
@@ -1563,24 +1509,8 @@ header .header-nav nav ul li a:hover {
   text-decoration: none;
 }
 
-.blog-list-scroll__tag {
-  width: 100%;
-  border: 1px solid #d2d2d2;
-  padding: 0px 20px;
-  text-align: center;
-  display: inline-block;
-  margin: 3px 0;
-}
-
 .archive .blog-list-scroll__tag {
   width: 60%;
-}
-
-@media (max-width: 767px) {
-  .blog-list-scroll__tag {
-    width: 100%;
-    font-size: 11px;
-  }
 }
 
 .random-blog__sec-ttl {
@@ -1893,10 +1823,6 @@ a.top-contents__card.--blog {
   .top-schedule {
     display: none;
   }
-  .blog-list-scroll {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .study-blog {
     padding-left: 20px;
     padding-right: 20px;
@@ -1981,9 +1907,6 @@ a.top-contents__card.--blog {
   a.top-contents__card {
     margin-right: 0;
     width: 100%;
-  }
-  .blog-list-scroll__sec-ttl {
-    margin-top: 50px;
   }
   .random-blog__sec-ttl {
     margin-top: 50px;
@@ -2228,7 +2151,10 @@ a.top-contents__card.--blog {
   align-items: center;
 }
 
-.sidebar .sidebar__blog-list-scroll .blog-list-scroll__meta .blog-list-scroll__tag {
+.sidebar
+  .sidebar__blog-list-scroll
+  .blog-list-scroll__meta
+  .blog-list-scroll__tag {
   width: 150px;
   margin-left: 16px;
   font-size: 13px;
