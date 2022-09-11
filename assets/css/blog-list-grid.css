@@ -1,5 +1,7 @@
 .blog-list-grid {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .blog-list-grid__link:not(:last-child) {
@@ -28,15 +30,6 @@
 
 .blog-list-grid__thumb-nail-wrap {
   margin-bottom: 15px;
-  width: 170px;
-  height: 100px;
-}
-
-@media (min-width: 768px) {
-  .blog-list-grid__thumb-nail-wrap {
-    width: 300px;
-    height: 200px;
-  }
 }
 
 .blog-list-grid__img {
