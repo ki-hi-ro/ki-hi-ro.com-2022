@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   overflow-x: scroll;
-  padding: 0 20px 5px 20px;
+  padding-bottom: 5px;
 }
 
 .blog-list-scroll__link:not(:last-child) {
@@ -30,9 +30,16 @@
 }
 
 .blog-list-scroll__thumb-nail-wrap {
-  width: 300px;
-  height: 200px;
   margin-bottom: 15px;
+  width: 170px;
+  height: 100px;
+}
+
+@media (min-width: 768px) {
+  .blog-list-scroll__thumb-nail-wrap {
+    width: 300px;
+    height: 200px;
+  }
 }
 
 .blog-list-scroll__img {
