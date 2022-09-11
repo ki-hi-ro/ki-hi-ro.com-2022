@@ -2,8 +2,18 @@
 @import "color";
 .blog-list-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 20px;
+  padding-left: 0;
+  grid-template-columns: 1fr 1fr;
+  @include mq(md) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include mq(lg) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @include mq(xl) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
   &__link {
     &:not(:last-child) {
       margin: 0 20px 10px 0;

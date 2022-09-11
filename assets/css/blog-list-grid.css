@@ -1,7 +1,26 @@
 .blog-list-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 20px;
+  padding-left: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 768px) {
+  .blog-list-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .blog-list-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .blog-list-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
 .blog-list-grid__link:not(:last-child) {
