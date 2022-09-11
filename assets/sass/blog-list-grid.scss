@@ -36,7 +36,7 @@
   }
   &__img {
     width: 100%;
-    height: 100%;
+    height: 27.2vw;
     object-fit: contain;
     @include mq(md) {
       height: 135px;
