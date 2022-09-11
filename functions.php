@@ -2,10 +2,10 @@
 
 // css
 wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], date("YmdHi"));
+wp_enqueue_style('kihiro-common', get_template_directory_uri() . '/assets/css/kihiro-common.css', [], date("YmdHi"));
 wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.css', [], date("YmdHi"));
 wp_enqueue_style('blog-list-grid', get_template_directory_uri() . '/assets/css/blog-list-grid.css', [], date("YmdHi"));
 wp_enqueue_style('blog-list-scroll', get_template_directory_uri() . '/assets/css/blog-list-scroll.css', [], date("YmdHi"));
-
 
 // js
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);
@@ -14,6 +14,7 @@ wp_enqueue_script('cdn-slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slic
 wp_enqueue_script('slick', get_template_directory_uri() . '/assets/js/slick.js' , null, null, true);
 wp_enqueue_script('hamburger', get_template_directory_uri() . '/assets/js/hamburger.js' , null, date("YmdHi"), true);
 wp_enqueue_script('tab', get_template_directory_uri() . '/assets/js/tab.js' , null, date("YmdHi"), true);
+wp_enqueue_script('view-port', get_template_directory_uri() . '/assets/js/view-port.js', null, date("YmdHi"), true);
 
 // body_class()にページスラッグを追加
 add_filter( 'body_class', 'add_page_slug_class_name' );

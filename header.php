@@ -48,7 +48,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('kihiro-body'); ?>>
 
 	<header class="header">
 		<div class="header__container">
