@@ -1,5 +1,6 @@
 .blog-list-grid {
   display: grid;
+  display: -ms-grid;
   gap: 20px;
   padding-left: 0;
   grid-template-columns: 1fr 1fr;
