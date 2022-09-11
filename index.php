@@ -29,10 +29,11 @@ $term_desc = $term->description;
 		);
 		$myposts = get_posts($args);
 		?>
-		<ul class="template-blog-list__wrap">
+		<ul class="blog-list-grid">
 			<?php foreach ($myposts as $post) : setup_postdata($post); ?>
-				<?php echo get_template_part('template-parts/blog-list'); ?>
-			<?php endforeach; wp_reset_postdata(); ?>
+				<?php echo get_template_part('template-parts/blog-list-grid'); ?>
+			<?php endforeach;
+			wp_reset_postdata(); ?>
 		</ul>
 	</section>
 
