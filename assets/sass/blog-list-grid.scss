@@ -32,7 +32,7 @@
     display: flex;
     align-items: center;
     @include mq(md) {
-      height: 357px;
+      height: auto;
     }
   }
   &__thumb-nail-wrap {
@@ -45,7 +45,6 @@
   }
   &__meta {
     @include mq(md) {
-      width: 50%;
       text-align: center;
       flex-direction: column;
     }
