@@ -30,7 +30,7 @@
 }
 
 .blog-list-grid__contents {
-  max-width: 750px;
+  width: 100%;
   padding: 10px;
   margin: 0 auto;
   border: 1px solid #d2d2d2;
