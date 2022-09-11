@@ -14,7 +14,7 @@
 
             <?php
             $posttags = get_the_tags();
-            if ($posttags) :
+            if ($posttags) :    
             ?>
                 <span class="blog-list-scroll__tag">
                     <?php foreach ($posttags as $tag) {
