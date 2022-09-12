@@ -12,7 +12,6 @@ Author: Shibata Hiroki
 }
 
 body {
-  color: #333;
   margin: 0;
   font-size: 14px;
   font-weight: 300;
@@ -1032,11 +1031,6 @@ span.sitename.sub {
   margin-bottom: 0;
 }
 
-header .header-nav nav ul li a:hover {
-  text-decoration: none;
-  color: #313131db;
-}
-
 .header-nav nav ul {
   list-style: none;
   display: flex;
@@ -1056,7 +1050,6 @@ header .header-nav nav ul li a:hover {
   display: block;
   text-decoration: none;
   transition: all 0.3s;
-  color: #000;
   padding: 20px 24px;
 }
 
@@ -1066,10 +1059,6 @@ header .header-nav nav ul li a:hover {
 
 .header-nav nav ul li.has-child li a {
   padding: 10px 26px;
-}
-
-.header-nav nav ul li a:hover {
-  color: #fff;
 }
 
 .header-nav nav ul li.has-child::before {
@@ -1124,24 +1113,6 @@ header .header-nav nav ul li a:hover {
 
 .header-nav nav li.has-child ul li:last-child a {
   border-bottom: none;
-}
-
-.header-nav nav li.has-child ul .pc-nav__skill a:hover,
-.header-nav nav li.has-child ul .pc-nav__skill a:active {
-  background: var(--skill-color);
-  color: #fff;
-}
-
-.header-nav nav li.has-child ul .pc-nav__study a:hover,
-.header-nav nav li.has-child ul .pc-nav__study a:active {
-  background: var(--study-color);
-  color: #fff;
-}
-
-.header-nav nav li.has-child ul .pc-nav__random a:hover,
-.header-nav nav li.has-child ul .pc-nav__random a:active {
-  background: var(--random-color);
-  color: #fff;
 }
 
 .sp-nav {
@@ -2309,63 +2280,6 @@ a.top-contents__card.--blog {
 .single .nav-menu__ul {
   padding: 0;
   margin: 0;
-}
-
-.single h2 {
-  padding: 15px;
-  color: #000;
-  background-color: #0000001a;
-  border-left: 6px solid;
-  line-height: 40px;
-  margin: 60px 20px 40px;
-}
-
-.single h3 {
-  border-left: 6px solid;
-  margin-left: 20px;
-  margin-top: 60px;
-  margin-bottom: 40px;
-  color: #333;
-  font-weight: 600;
-  letter-spacing: 1.6px;
-  padding: 0px 15px 0px;
-  font-size: 20px;
-}
-
-.single .blog-list-scroll h2,
-.single .blog-list-scroll h3 {
-  border-color: var(--skill-color);
-}
-
-.single .blog-list-scroll h2 {
-  background: #0a2c541a;
-}
-
-.single .skill-blog h2,
-.single .skill-blog h3 {
-  border-color: var(--skill-color);
-}
-
-.single .skill-blog h2 {
-  background: #0a2b521a;
-}
-
-.single .study-blog h2,
-.single .study-blog h3 {
-  border-color: var(--study-color);
-}
-
-.single .study-blog h2 {
-  background: #59a0761a;
-}
-
-.single .random-blog h2,
-.single .random-blog h3 {
-  border-color: var(--random-color);
-}
-
-.single .random-blog h2 {
-  background: #88466e1a;
 }
 
 .single .single-wrap h4 {
@@ -3701,24 +3615,6 @@ h3.sidebar-ttl {
 .blog-tab__item--random.current-tab {
   color: #fff;
   font-weight: bold;
-}
-
-.blog-tab__item--skill.current-tab.blog-tab__skill,
-.blog-tab__item--study.current-tab.blog-tab__skill,
-.blog-tab__item--random.current-tab.blog-tab__skill {
-  background-color: var(--skill-color);
-}
-
-.blog-tab__item--skill.current-tab.blog-tab__study,
-.blog-tab__item--study.current-tab.blog-tab__study,
-.blog-tab__item--random.current-tab.blog-tab__study {
-  background-color: var(--study-color);
-}
-
-.blog-tab__item--skill.current-tab.blog-tab__random,
-.blog-tab__item--study.current-tab.blog-tab__random,
-.blog-tab__item--random.current-tab.blog-tab__random {
-  background-color: var(--random-color);
 }
 
 @media (max-width: 1199px) {

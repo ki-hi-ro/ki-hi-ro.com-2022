@@ -70,3 +70,20 @@
     }
   }
 }
+.blog-tab__item--skill.current-tab.blog-tab__skill,
+.blog-tab__item--study.current-tab.blog-tab__skill,
+.blog-tab__item--random.current-tab.blog-tab__skill {
+  background-color: var(--skill-color);
+}
+
+.blog-tab__item--skill.current-tab.blog-tab__study,
+.blog-tab__item--study.current-tab.blog-tab__study,
+.blog-tab__item--random.current-tab.blog-tab__study {
+  background-color: var(--study-color);
+}
+
+.blog-tab__item--skill.current-tab.blog-tab__random,
+.blog-tab__item--study.current-tab.blog-tab__random,
+.blog-tab__item--random.current-tab.blog-tab__random {
+  background-color: var(--random-color);
+}

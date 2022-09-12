@@ -1,0 +1,41 @@
+.single h2 {
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-left: 6px solid;
+  line-height: 40px;
+  margin: 60px 20px 40px;
+}
+
+.single h3 {
+  border-left: 6px solid;
+  margin-left: 20px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  padding: 0px 15px 0px;
+  font-size: 20px;
+}
+
+.single .skill-blog h2,
+.single .skill-blog h3 {
+  border-color: #0a2c54;
+  background: rgba(10, 44, 84, 0.1);
+}
+
+.single .study-blog h2,
+.single .study-blog h3 {
+  border-color: var(--study-color);
+  background: rgba(89, 160, 118, 0.1);
+}
+
+.single .random-blog h2,
+.single .random-blog h3 {
+  border-color: var(--random-color);
+}
+
+.single .random-blog h2 {
+  background: #88466e1a;
+}

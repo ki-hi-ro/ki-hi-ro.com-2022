@@ -46,43 +46,24 @@
       display: flex;
     }
   }
-
-  /* __ul-pc */
-  // &__ul-pc {
-
-  // }
-
-  /* __li-pc */
-  // &__li-pc {
-
-  // }
-
-  /* __li-pc-link */
-  // &__li-pc-link {
-
-  // }
-
-  /* __li-pc--haschild */
-  // &__li-pc--haschild {
-
-  // }
-
-  /* __has-child-ul */
-  // &__has-child-ul {
-
-  // }
-
-  /* __has-child-li */
-  // &__has-child-li {
-
-  // }
-
-  /* __has-child-li-link */
-  // &__has-child-li-link {
-
-  // }
-
-  /* __open-btn */
+  &__li-pc-link {
+    color: $black;
+  }
+  &__has-child-li-link {
+    color: $black;
+    &:hover {
+      color: $white;
+    }
+    &.--skill:hover {
+      background: $skill-color;
+    }
+    &.--study:hover {
+      background: $study-color;
+    }
+    &.--random:hover {
+      background: $random-color;
+    }
+  }
   &__open-btn {
     position: fixed;
     top: 25px;
@@ -92,8 +73,6 @@
       display: none;
     }
   }
-
-  /* __open-btn-line */
   &__open-btn-line {
     display: inline-block;
     transition: all 0.4s;
@@ -130,8 +109,6 @@
       }
     }
   }
-
-  /* __nav-sp */
   &__nav-sp {
     position: fixed;
     z-index: 999;
@@ -148,23 +125,9 @@
       top: 0;
     }
   }
-
-  /* __sp-site-ttl */
   &__sp-site-ttl {
     padding-top: 35px;
   }
-
-  /* __sp-sitename-link */
-  // &__sp-sitename-link {
-
-  // }
-
-  /* __sp-sitename-logo */
-  // &__sp-sitename-logo {
-
-  // }
-
-  /* header__sitename-link */
   &__sitename-link {
     font-size: 28px;
     color: #313131db;
@@ -175,8 +138,4 @@
       font-size: 30px;
     }
   }
-
-  /* header__sitename-text */
-  // &__sitename-text {
-  // }
 }

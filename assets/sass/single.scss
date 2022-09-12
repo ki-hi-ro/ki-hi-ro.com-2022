@@ -1,0 +1,48 @@
+@import "color";
+.single {
+  h2 {
+    color: $black;
+    background-color: $black-bg-color;
+    padding: 15px;
+    border-left: 6px solid;
+    line-height: 40px;
+    margin: 60px 20px 40px;
+  }
+
+  h3 {
+    border-left: 6px solid;
+    margin-left: 20px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    padding: 0px 15px 0px;
+    font-size: 20px;
+  }
+
+  .skill-blog {
+    h2,
+    h3 {
+      border-color: $skill-color;
+      background: $skill-bg-color;
+    }
+  }
+
+  .study-blog {
+    h2,
+    h3 {
+      border-color: var(--study-color);
+      background: $study-bg-color;
+    }
+  }
+
+  .random-blog h2,
+  .random-blog h3 {
+    border-color: var(--random-color);
+  }
+
+  .random-blog h2 {
+    background: #88466e1a;
+  }
+}
