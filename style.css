@@ -2340,6 +2340,15 @@ a.top-contents__card.--blog {
   background: #0a2c541a;
 }
 
+.single .skill-blog h2,
+.single .skill-blog h3 {
+  border-color: var(--skill-color);
+}
+
+.single .skill-blog h2 {
+  background: #0a2b521a;
+}
+
 .single .study-blog h2,
 .single .study-blog h3 {
   border-color: var(--study-color);
