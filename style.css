@@ -2314,6 +2314,7 @@ a.top-contents__card.--blog {
 .single h2 {
   padding: 15px;
   color: #000;
+  background-color: #0000001a;
   border-left: 6px solid;
   line-height: 40px;
   margin: 60px 20px 40px;
