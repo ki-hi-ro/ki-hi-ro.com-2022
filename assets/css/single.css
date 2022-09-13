@@ -22,12 +22,18 @@
 .single .skill-blog h2,
 .single .skill-blog h3 {
   border-color: #0a2c54;
+}
+
+.single .skill-blog h2 {
   background: rgba(10, 44, 84, 0.1);
 }
 
 .single .study-blog h2,
 .single .study-blog h3 {
   border-color: var(--study-color);
+}
+
+.single .study-blog h2 {
   background: rgba(89, 160, 118, 0.1);
 }
 

@@ -25,6 +25,8 @@
     h2,
     h3 {
       border-color: $skill-color;
+    }
+    h2 {
       background: $skill-bg-color;
     }
   }
@@ -33,6 +35,8 @@
     h2,
     h3 {
       border-color: var(--study-color);
+    }
+    h2 {
       background: $study-bg-color;
     }
   }
