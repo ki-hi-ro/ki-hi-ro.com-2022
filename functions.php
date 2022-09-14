@@ -7,6 +7,7 @@ wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.cs
 wp_enqueue_style('blog-list-grid', get_template_directory_uri() . '/assets/css/blog-list-grid.css', [], date("YmdHi"));
 wp_enqueue_style('blog-list-scroll', get_template_directory_uri() . '/assets/css/blog-list-scroll.css', [], date("YmdHi"));
 wp_enqueue_style('single', get_template_directory_uri() . '/assets/css/single.css', [], date("YmdHi"));
+wp_enqueue_style('top-skill-blog', get_template_directory_uri() . '/assets/css/top-skill-blog.css', [], date("YmdHi"));
 
 // js
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);
