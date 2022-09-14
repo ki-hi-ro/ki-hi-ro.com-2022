@@ -41,15 +41,33 @@
     <h2 class="top-skill-blog__ttl">技術ブログ</h2>
     <p class="top-skill-blog__desc">これまでに身につけてきたWEB制作に必要なスキルを、テーマを決めて投稿していきます。</p>
     <hr class="top-skill-blog__hr">
+    <?php
+    $args = array('category_name' => 'skill-blog', 'post_type' => 'post', 'posts_per_page' => -1,);
+    $myposts = get_posts($args);
+    foreach ($myposts as $post) : setup_postdata($post);
+    ?>
+      <?php
+      $posttags = get_the_tags();
+      if ($posttags) :
+      ?>
+        <span class="top-skill-blog__tag">
+          <?php foreach ($posttags as $tag) {
+            echo $tag->name . ' ';
+          } ?>
+        </span>
+      <?php
+      endif;
+      ?>
+    <?php
+    endforeach;
+    wp_reset_postdata();
+    ?>
+
+
     <div class="blog-tab-contents">
       <section class="blog-tab-content--skill top-section sidebar__blog sidebar__contents" id="skill-blog--skill">
         <div class="blog-list-scroll">
-          <?php $args = array('category_name' => 'skill-blog', 'post_type' => 'post', 'posts_per_page' => -1,);
-          $myposts = get_posts($args);
-          foreach ($myposts as $post) : setup_postdata($post); ?>
-            <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
-          <?php endforeach;
-          wp_reset_postdata(); ?>
+          <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
         </div>
         <div class="more-link --top-sec">
           <a href="<?php echo home_url('category/skill-blog/'); ?>">技術ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
