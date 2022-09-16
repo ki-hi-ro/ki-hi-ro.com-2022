@@ -46,14 +46,14 @@
     if ($posttags) {
       echo '<ul class="top-skill-blog__tag-ul">';
       foreach ($posttags as $tag) {
-        echo '<li class="top-skill-blog__tag-li">#' . $tag->name . '</li>';
+        echo '<li class="top-skill-blog__tag-li" contentid="' . $tag->slug . '">#' . $tag->name . '</li>';
       }
       echo '</ul>';
     }
     ?>
     <div class="blog-list-scroll--skill blog-list-scroll">
       <?php
-      $args = array('category_name' => 'skill-blog', 'post_type' => 'post', 'posts_per_page' => -1,);
+      $args = array('category_name' => 'skill-blog', 'post_type' => 'post', 'posts_per_page' => -1);
       $myposts = get_posts($args);
       foreach ($myposts as $post) : setup_postdata($post);
       ?>

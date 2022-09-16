@@ -1,8 +1,11 @@
-<a class="blog-list-scroll__link" href="<?php the_permalink(); ?>">
+<?php $posttags = get_the_tags(); if ($posttags) : foreach ($posttags as $tag) : ?>
+    <a class="<?php echo $tag->slug; ?> blog-list-scroll__link" href="<?php the_permalink(); ?>">
+<?php endforeach; endif; ?>
     <div class="blog-list-scroll__contents">
         <div class="blog-list-scroll__thumb-nail-wrap">
             <?php
-            if (has_post_thumbnail()) : the_post_thumbnail('full', ['class' => 'blog-list-scroll__img']); else :
+            if (has_post_thumbnail()) : the_post_thumbnail('full', ['class' => 'blog-list-scroll__img']);
+            else :
             ?>
                 <img class="blog-list-scroll__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/no-image.png" alt="no-image" />
             <?php endif; ?>
@@ -14,7 +17,7 @@
 
             <?php
             $posttags = get_the_tags();
-            if ($posttags) :    
+            if ($posttags) :
             ?>
                 <span class="blog-list-scroll__tag">
                     <?php foreach ($posttags as $tag) {
@@ -31,4 +34,4 @@
         </span>
 
     </div>
-</a>
+        </a>

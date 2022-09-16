@@ -3570,6 +3570,14 @@ h3.sidebar-ttl {
   display: none;
 }
 
+.blog-list-scroll__contents.notShowMe {
+  display: none;
+}
+
+.blog-list-scroll__link:not(:last-child).notShowMe {
+  display: none;
+}
+
 .blog-tab {
   display: flex;
   list-style: none;
