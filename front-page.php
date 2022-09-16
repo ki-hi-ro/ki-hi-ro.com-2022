@@ -41,19 +41,17 @@
     <h2 class="top-skill-blog__ttl">技術ブログ</h2>
     <p class="top-skill-blog__desc">これまでに身につけてきたWEB制作に必要なスキルを、テーマを決めて投稿していきます。</p>
     <hr class="top-skill-blog__hr">
-    <span class="top-skill-blog__tag">
-      <?php
-      $posttags = my_tags_in_cat(60);
-      if ($posttags) {
-      echo '<ul class="tag-list">';
-        foreach ($posttags as $tag) {
-        echo '<li><a href="' . get_tag_link($tag->term_id) . '">' . "#" . $tag->name . '</a></li>';
-        }
-        echo '</ul>';
+    <?php
+    $posttags = my_tags_in_cat(60);
+    if ($posttags) {
+      echo '<ul class="top-skill-blog__tag-ul">';
+      foreach ($posttags as $tag) {
+        echo '<li class="top-skill-blog__tag-li">#' . $tag->name . '</li>';
       }
-      ?>
-    </span>
-    <div class="blog-list-scroll">
+      echo '</ul>';
+    }
+    ?>
+    <div class="blog-list-scroll--skill blog-list-scroll">
       <?php
       $args = array('category_name' => 'skill-blog', 'post_type' => 'post', 'posts_per_page' => -1,);
       $myposts = get_posts($args);

@@ -5,6 +5,11 @@ const blogContents_study = document.querySelectorAll(".blog-tab-content--study")
 const blogTabItem_random = document.querySelectorAll(".blog-tab__item--random");
 const blogContents_random = document.querySelectorAll(".blog-tab-content--random");
 
+const topBlogTag_skill = document.querySelectorAll(".top-skill-blog__tag-li");
+const topBlogTagContent_skill = document.querySelectorAll(
+  ".blog-list-scroll--skill"
+);
+
 window.addEventListener(
   "load",
   function () {
