@@ -1,7 +1,5 @@
 const topBlogTag_skill = document.querySelectorAll(".top-skill-blog__tag-li");
-const topBlogTagContent_skill = document.querySelectorAll(
-  ".blog-list-scroll__link"
-);
+const topBlogTagContent_skill = document.querySelectorAll(".blog-list-scroll__link--skill-blog");
 
 window.addEventListener(
   "load",

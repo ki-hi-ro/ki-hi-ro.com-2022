@@ -78,7 +78,7 @@
   <!-- 学習 -->
   <div class="top-study-blog">
     <h2 class="top-study-blog__ttl">学習ブログ</h2>
-    <p class="top-study-blog__desc">これまでに身につけてきたWEB制作に必要なスキルを、テーマを決めて投稿していきます。</p>
+    <p class="top-study-blog__desc">参考書などで学んだことをテーマにしたブログ記事を投稿していきます。</p>
     <hr class="top-study-blog__hr">
     <?php
     $posttags = my_tags_in_cat(60);

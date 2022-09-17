@@ -1,6 +1,11 @@
-<?php $posttags = get_the_tags(); if ($posttags) : foreach ($posttags as $tag) : ?>
-    <a class="<?php echo $tag->slug; ?> blog-list-scroll__link" href="<?php the_permalink(); ?>">
-<?php endforeach; endif; ?>
+<?php $posttags = get_the_tags();
+if ($posttags) : foreach ($posttags as $tag) :
+        $category = get_the_category();
+        $cat_slug = $category[0]->category_nicename;
+?>
+        <a class="<?php echo $tag->slug; ?> blog-list-scroll__link blog-list-scroll__link--<?php echo $cat_slug; ?>" href="<?php the_permalink(); ?>">
+    <?php endforeach;
+endif; ?>
     <div class="blog-list-scroll__contents">
         <div class="blog-list-scroll__thumb-nail-wrap">
             <?php
