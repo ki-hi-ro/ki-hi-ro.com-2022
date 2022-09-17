@@ -33,6 +33,12 @@
   color: #fff;
 }
 
+.top-skill-blog__tag-li.active {
+  transition: all 0.3s;
+  background-color: #0a2c54;
+  color: #fff;
+}
+
 .top-skill-blog__ttl {
   color: #0a2c54;
   text-align: center;
