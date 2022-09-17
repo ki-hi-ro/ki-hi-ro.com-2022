@@ -19,3 +19,13 @@ window.addEventListener(
   },
   false
 );
+
+topBlogTag_skill.forEach(function (tag) {
+  tag.addEventListener('click', function () {
+    const allTag = document.querySelectorAll(".top-skill-blog__tag-li");
+    allTag.forEach(function (oneTag) {
+      oneTag.classList.remove('active');
+    })
+    tag.classList.add('active');
+  })
+});
