@@ -76,112 +76,41 @@
   </div>
 
   <!-- 学習 -->
-  <div class="blog__study">
-    <ul class="blog-tab">
-      <li class="blog-tab__item--study blog-tab__skill" contentId="skill-blog--study">技術ブログ</li>
-      <li class="blog-tab__item--study blog-tab__study current-tab" contentId="study-blog--study">学習ブログ</li>
-      <li class="blog-tab__item--study blog-tab__random" contentId="random-blog--study">雑記ブログ</li>
-    </ul>
-    <div class="blog-tab-contents">
-      <section class="blog-tab-content--study top-section sidebar__blog sidebar__contents notShowMe" id="skill-blog--study">
-        <p>これまでに身につけてきたWEB制作に必要なスキルを、テーマを決めて投稿していきます。</p>
-        <div class="blog-list-scroll">
-          <?php $args = array('category_name' => 'skill-blog', 'post_type' => 'post', 'posts_per_page' => -1,);
-          $myposts = get_posts($args);
-          foreach ($myposts as $post) : setup_postdata($post); ?>
-            <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
-          <?php endforeach;
-          wp_reset_postdata(); ?>
-        </div>
-        <div class="more-link --top-sec">
-          <a href="<?php echo home_url('category/skill-blog/'); ?>">技術ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
-        </div>
-      </section>
-
-      <section class="blog-tab-content--study top-section sidebar__blog sidebar__contents" id="study-blog--study">
-        <p>参考書などで学んだことをテーマにしたブログ記事を投稿していきます。</p>
-        <div class="blog-list-scroll">
-          <?php $args = array('category_name' => 'study-blog', 'post_type' => 'post', 'posts_per_page' => -1,);
-          $myposts = get_posts($args);
-          foreach ($myposts as $post) : setup_postdata($post); ?>
-            <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
-          <?php endforeach;
-          wp_reset_postdata(); ?>
-        </div>
-        <div class="more-link --top-sec">
-          <a href="<?php echo home_url('category/study-blog/'); ?>">学習ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
-        </div>
-      </section>
-
-      <section class="blog-tab-content--study top-section sidebar__blog sidebar__contents notShowMe" id="random-blog--study">
-        <p>日常で感動したことなどを、息抜きに投稿していきます。</p>
-        <div class="blog-list-scroll">
-          <?php $args = array('category_name' => 'random-blog', 'post_type' => 'post', 'posts_per_page' => -1,);
-          $myposts = get_posts($args);
-          foreach ($myposts as $post) : setup_postdata($post); ?>
-            <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
-          <?php endforeach;
-          wp_reset_postdata(); ?>
-        </div>
-        <div class="more-link --top-sec">
-          <a href="<?php echo home_url('category/random-blog/'); ?>">雑記ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
-        </div>
-      </section>
+  <div class="top-study-blog">
+    <h2 class="top-study-blog__ttl">学習ブログ</h2>
+    <p class="top-study-blog__desc">これまでに身につけてきたWEB制作に必要なスキルを、テーマを決めて投稿していきます。</p>
+    <hr class="top-study-blog__hr">
+    <?php
+    $posttags = my_tags_in_cat(60);
+    if ($posttags) {
+      echo '<ul class="top-study-blog__tag-ul">';
+      foreach ($posttags as $tag) {
+        echo '<li class="top-study-blog__tag-li" contentid="' . $tag->slug . '">#' . $tag->name . '</li>';
+      }
+      echo '</ul>';
+    }
+    ?>
+    <div class="blog-list-scroll--skill blog-list-scroll">
+      <?php
+      $args = array('category_name' => 'study-blog', 'post_type' => 'post', 'posts_per_page' => -1);
+      $myposts = get_posts($args);
+      foreach ($myposts as $post) : setup_postdata($post);
+      ?>
+        <?php
+        $posttags = get_the_tags();
+        if ($posttags) :
+        ?>
+          <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
+        <?php
+        endif;
+        ?>
+      <?php
+      endforeach;
+      wp_reset_postdata();
+      ?>
     </div>
-  </div>
-
-  <!-- 雑記 -->
-  <div class="blog__random">
-    <ul class="blog-tab">
-      <li class="blog-tab__item--random blog-tab__skill" contentId="skill-blog--random">技術ブログ</li>
-      <li class="blog-tab__item--random blog-tab__random current-tab" contentId="random-blog--random">雑記ブログ</li>
-      <li class="blog-tab__item--random blog-tab__study" contentId="study-blog--random">学習ブログ</li>
-    </ul>
-    <div class="blog-tab-contents">
-      <section class="blog-tab-content--random top-section sidebar__blog sidebar__contents notShowMe" id="skill-blog--random">
-        <p>これまでに身につけてきたWEB制作に必要なスキルを、テーマを決めて投稿していきます。</p>
-        <div class="blog-list-scroll">
-          <?php $args = array('category_name' => 'skill-blog', 'post_type' => 'post', 'posts_per_page' => -1,);
-          $myposts = get_posts($args);
-          foreach ($myposts as $post) : setup_postdata($post); ?>
-            <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
-          <?php endforeach;
-          wp_reset_postdata(); ?>
-        </div>
-        <div class="more-link --top-sec">
-          <a href="<?php echo home_url('category/skill-blog/'); ?>">技術ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
-        </div>
-      </section>
-
-      <section class="blog-tab-content--random top-section sidebar__blog sidebar__contents notShowMe" id="study-blog--random">
-        <p>参考書などで学んだことをテーマにしたブログ記事を投稿していきます。</p>
-        <div class="blog-list-scroll">
-          <?php $args = array('category_name' => 'study-blog', 'post_type' => 'post', 'posts_per_page' => -1,);
-          $myposts = get_posts($args);
-          foreach ($myposts as $post) : setup_postdata($post); ?>
-            <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
-          <?php endforeach;
-          wp_reset_postdata(); ?>
-        </div>
-        <div class="more-link --top-sec">
-          <a href="<?php echo home_url('category/study-blog/'); ?>">学習ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
-        </div>
-      </section>
-
-      <section class="blog-tab-content--random top-section sidebar__blog sidebar__contents" id="random-blog--random">
-        <p>日常で感動したことなどを、息抜きに投稿していきます。</p>
-        <div class="blog-list-scroll">
-          <?php $args = array('category_name' => 'random-blog', 'post_type' => 'post', 'posts_per_page' => -1,);
-          $myposts = get_posts($args);
-          foreach ($myposts as $post) : setup_postdata($post); ?>
-            <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
-          <?php endforeach;
-          wp_reset_postdata(); ?>
-        </div>
-        <div class="more-link --top-sec">
-          <a href="<?php echo home_url('category/random-blog/'); ?>">雑記ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
-        </div>
-      </section>
+    <div class="more-link --top-sec">
+      <a href="<?php echo home_url('category/study-blog/'); ?>">学習ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
     </div>
   </div>
 
