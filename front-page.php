@@ -9,7 +9,7 @@
   <div class="scrolldown1"><span>Scroll</span></div>
 </div>
 
-<main>
+<main class="l-container">
   <?php echo get_template_part('template-parts/author'); ?>
 
   <section class="top-section" id="what-i-can">

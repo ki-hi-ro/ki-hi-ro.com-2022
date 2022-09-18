@@ -1,6 +1,7 @@
 .top-skill-blog {
   background-color: rgba(10, 44, 84, 0.1);
   padding: 50px;
+  margin: 0 -15px;
 }
 
 .top-skill-blog__tag-ul {
