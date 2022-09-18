@@ -38,11 +38,23 @@
 
   <!-- 技術 -->
   <div class="top-skill-blog">
-    <h2 class="top-skill-blog__ttl">技術ブログ</h2>
-    <p class="top-skill-blog__desc">これまでに身につけてきたWEB制作に必要なスキルを、テーマを決めて投稿していきます。</p>
+    <?php
+    $cat_id = 60;
+    $categories = get_categories(array(
+      'include' => $cat_id
+    ));
+    foreach ($categories as $category) {
+      $cat_name = $category->name;
+      $cat_slug = $category->slug;
+      $cat_desc = $category->description;
+      $cat_link = get_category_link($category->term_id);
+    }
+    ?>
+    <h2 class="top-skill-blog__ttl"><?php echo $cat_name; ?></h2>
+    <p class="top-skill-blog__desc"><?php echo  $cat_desc; ?></p>
     <hr class="top-skill-blog__hr">
     <?php
-    $posttags = my_tags_in_cat(60);
+    $posttags = my_tags_in_cat($cat_id);
     if ($posttags) {
       echo '<ul class="top-skill-blog__tag-ul">';
       foreach ($posttags as $tag) {
@@ -53,7 +65,7 @@
     ?>
     <div class="blog-list-scroll--skill blog-list-scroll">
       <?php
-      $args = array('category_name' => 'skill-blog', 'post_type' => 'post', 'posts_per_page' => -1);
+      $args = array('category_name' => $cat_slug, 'post_type' => 'post', 'posts_per_page' => -1);
       $myposts = get_posts($args);
       foreach ($myposts as $post) : setup_postdata($post);
       ?>
@@ -71,7 +83,7 @@
       ?>
     </div>
     <div class="more-link --top-sec">
-      <a href="<?php echo home_url('category/skill-blog/'); ?>">技術ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
+      <a href="<?php echo $cat_link; ?>"><?php echo $cat_name; ?>一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
     </div>
   </div>
 
