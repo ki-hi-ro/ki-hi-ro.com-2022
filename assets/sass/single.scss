@@ -15,14 +15,16 @@
 
   h3 {
     border-left: 6px solid;
-    margin-left: 20px;
-    margin-top: 60px;
-    margin-bottom: 40px;
     color: #333;
     font-weight: 600;
     letter-spacing: 1.6px;
     padding: 0px 15px 0px;
     font-size: 20px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    @include mq(xl) {
+      margin-left: 20px;
+    }
   }
 
   .skill-blog {
