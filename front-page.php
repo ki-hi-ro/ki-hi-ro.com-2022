@@ -36,10 +36,10 @@
     </div>
   </section>
 
-  <!-- 技術 -->
-  <div class="top-skill-blog">
-    <?php
-    $cat_id = 60;
+  <!-- 技術ブログ・学習ブログ・雑記ブログ -->
+  <?php
+  $cat_id_array = [60, 69, 67];
+  foreach($cat_id_array as $cat_id) :
     $categories = get_categories(array(
       'include' => $cat_id
     ));
@@ -49,125 +49,47 @@
       $cat_desc = $category->description;
       $cat_link = get_category_link($category->term_id);
     }
-    ?>
-    <h2 class="top-skill-blog__ttl"><?php echo $cat_name; ?></h2>
-    <p class="top-skill-blog__desc"><?php echo  $cat_desc; ?></p>
-    <hr class="top-skill-blog__hr">
-    <?php
-    $posttags = my_tags_in_cat($cat_id);
-    if ($posttags) {
-      echo '<ul class="top-skill-blog__tag-ul">';
-      foreach ($posttags as $tag) {
-        echo '<li class="top-skill-blog__tag-li" contentid="' . $tag->slug . '">#' . $tag->name . '</li>';
-      }
-      echo '</ul>';
-    }
-    ?>
-    <div class="blog-list-scroll--skill blog-list-scroll">
+  ?>
+    <div class="top-<?php echo $cat_slug; ?>">
+      <h2 class="top-<?php echo $cat_slug; ?>__ttl"><?php echo $cat_name; ?></h2>
+      <p class="top-<?php echo $cat_slug; ?>__desc"><?php echo  $cat_desc; ?></p>
+      <hr class="top-<?php echo $cat_slug; ?>__hr">
       <?php
-      $args = array('category_name' => $cat_slug, 'post_type' => 'post', 'posts_per_page' => -1);
-      $myposts = get_posts($args);
-      foreach ($myposts as $post) : setup_postdata($post);
-      ?>
-        <?php
-        $posttags = get_the_tags();
-        if ($posttags) :
-        ?>
-          <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
-        <?php
-        endif;
-        ?>
-      <?php
-      endforeach;
-      wp_reset_postdata();
-      ?>
-    </div>
-    <div class="more-link --top-sec">
-      <a href="<?php echo $cat_link; ?>"><?php echo $cat_name; ?>一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
-    </div>
-  </div>
-
-  <!-- 学習 -->
-  <div class="top-study-blog">
-    <h2 class="top-study-blog__ttl">学習ブログ</h2>
-    <p class="top-study-blog__desc">参考書などで学んだことをテーマにしたブログ記事を投稿していきます。</p>
-    <hr class="top-study-blog__hr">
-    <?php
-    $posttags = my_tags_in_cat(69);
-    if ($posttags) {
-      echo '<ul class="top-study-blog__tag-ul">';
-      foreach ($posttags as $tag) {
-        if ($tag->count >= 1) {
-          echo '<li class="top-study-blog__tag-li" contentid="' . $tag->slug . '">#' . $tag->name . '</li>';
+      $posttags = my_tags_in_cat($cat_id);
+      if ($posttags) {
+        echo '<ul class="top-' . $cat_slug . '__tag-ul">';
+        foreach ($posttags as $tag) {
+          if ($tag->count >= 1) {
+            echo '<li class="top-' . $cat_slug . '__tag-li" contentid="' . $tag->slug . '">#' . $tag->name . '</li>';
+          }
         }
+        echo '</ul>';
       }
-      echo '</ul>';
-    }
-    ?>
-    <div class="blog-list-scroll--skill blog-list-scroll">
-      <?php
-      $args = array('category_name' => 'study-blog', 'post_type' => 'post', 'posts_per_page' => -1);
-      $myposts = get_posts($args);
-      foreach ($myposts as $post) : setup_postdata($post);
       ?>
+      <div class="blog-list-scroll">
         <?php
-        $posttags = get_the_tags();
-        if ($posttags) :
+        $args = array('category_name' => $cat_slug, 'post_type' => 'post', 'posts_per_page' => -1);
+        $myposts = get_posts($args);
+        foreach ($myposts as $post) : setup_postdata($post);
         ?>
-          <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
+          <?php
+          $posttags = get_the_tags();
+          if ($posttags) :
+          ?>
+            <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
+          <?php
+          endif;
+          ?>
         <?php
-        endif;
+        endforeach;
+        wp_reset_postdata();
         ?>
-      <?php
-      endforeach;
-      wp_reset_postdata();
-      ?>
+      </div>
+      <div class="more-link --top-sec">
+        <a href="<?php echo $cat_link; ?>"><?php echo $cat_name; ?>一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
+      </div>
     </div>
-    <div class="more-link --top-sec">
-      <a href="<?php echo home_url('category/study-blog/'); ?>">学習ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
-    </div>
-  </div>
-
-  <!-- 雑記 -->
-  <div class="top-random-blog">
-    <h2 class="top-random-blog__ttl">雑記ブログ</h2>
-    <p class="top-random-blog__desc">日常で感動したことなどを、息抜きに投稿していきます。</p>
-    <hr class="top-random-blog__hr">
-    <?php
-    $posttags = my_tags_in_cat(67);
-    if ($posttags) {
-      echo '<ul class="top-random-blog__tag-ul">';
-      foreach ($posttags as $tag) {
-        if ($tag->count >= 1) {
-          echo '<li class="top-random-blog__tag-li" contentid="' . $tag->slug . '">#' . $tag->name . '</li>';
-        }
-      }
-      echo '</ul>';
-    }
-    ?>
-    <div class="blog-list-scroll--skill blog-list-scroll">
-      <?php
-      $args = array('category_name' => 'random-blog', 'post_type' => 'post', 'posts_per_page' => -1);
-      $myposts = get_posts($args);
-      foreach ($myposts as $post) : setup_postdata($post);
-      ?>
-        <?php
-        $posttags = get_the_tags();
-        if ($posttags) :
-        ?>
-          <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
-        <?php
-        endif;
-        ?>
-      <?php
-      endforeach;
-      wp_reset_postdata();
-      ?>
-    </div>
-    <div class="more-link --top-sec">
-      <a href="<?php echo home_url('category/random-blog/'); ?>">雑記ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
-    </div>
-  </div>
+  <?php endforeach; ?>
 
   <section class="contact top-section" id="contact">
     <h4>お問い合わせ</h4>
