@@ -2,7 +2,7 @@ const whatidid_tag = document.querySelectorAll(".top-what-i-did__tag-li");
 const whatidid_article = document.querySelectorAll(
   ".blog-list-scroll__link--what-i-did"
 );
-const skil_tag = document.querySelectorAll(".top-skill-blog__tag-li");
+const skill_tag = document.querySelectorAll(".top-skill-blog__tag-li");
 const skill_article = document.querySelectorAll(
   ".blog-list-scroll__link--skill-blog"
 );
@@ -16,7 +16,7 @@ const random_article = document.querySelectorAll(
 );
 
 tag_motion(whatidid_tag, whatidid_article);
-tag_motion(skil_tag, skill_article);
+tag_motion(skill_tag, skill_article);
 tag_motion(study_tag, study_article);
 tag_motion(random_tag, random_article);
 
