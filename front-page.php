@@ -12,14 +12,6 @@
 <main class="l-container">
   <?php echo get_template_part('template-parts/author'); ?>
 
-  <section class="top-section" id="what-i-can">
-    <h4>対応可能な項目</h4>
-    <p>
-      WordPress, EC-CUBE, LPサイトなどWebサイト全般のコーディングが対応可能です。対応可能な言語は、HTML / CSS, Sass, PHP, Twigなどです。<a href="contact">こちら</a>よりご相談内容をお送りいただければ、金額と納期をお知らせします。
-      金額と納期をお知らせする以前に、対応が難しい場合はその旨もご連絡します。対応可能項目を増やすために<a href="<?php echo home_url('/category/study-blog/'); ?>">学習ブログ</a>を更新しています。
-    </p>
-  </section>
-
   <!-- これまでの仕事・技術ブログ・学習ブログ・雑記ブログ -->
   <?php
   $cat_id_array = [98, 60, 69, 67];
