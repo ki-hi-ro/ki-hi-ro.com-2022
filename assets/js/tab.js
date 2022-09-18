@@ -15,31 +15,12 @@ const article_list_random = document.querySelectorAll(
   ".blog-list-scroll__link--random-blog"
 );
 
-tag_motion(tag_list_whatidid, article_list_whatidid, "add-contents");
-tag_motion(tag_list_skill, article_list_skill, "html-css");
-tag_motion(tag_list_study, article_list_study, "typescript");
-tag_motion(tag_list_random, article_list_random, "music");
+tag_motion(tag_list_whatidid, article_list_whatidid);
+tag_motion(tag_list_skill, article_list_skill);
+tag_motion(tag_list_study, article_list_study);
+tag_motion(tag_list_random, article_list_random);
 
 function tag_motion(tag_list, article_list, default_article) {
-  window.addEventListener(
-    "load",
-    function () {
-      tag_list.forEach(function (tag) {
-        tag_contentid = tag.getAttribute("contentid");
-        if (tag_contentid == default_article) {
-          tag.classList.add("active");
-        }
-      });
-
-      article_list.forEach(function (article) {
-        if (!article.classList.contains(default_article)) {
-          article.classList.add("notShowMe");
-        }
-      });
-    },
-    false
-  );
-
   tag_list.forEach(function (tag) {
     tag.addEventListener("click", function () {
       tag_list.forEach(function (all_tag) {
