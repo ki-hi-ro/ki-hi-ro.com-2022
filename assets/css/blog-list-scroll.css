@@ -5,16 +5,31 @@
   padding-bottom: 5px;
 }
 
+@media (min-width: 1200px) {
+  .blog-list-scroll {
+    margin: 0 auto;
+    width: 1170px;
+  }
+}
+
+.blog-list-scroll__link {
+  width: 190px;
+}
+
+@media (min-width: 768px) {
+  .blog-list-scroll__link {
+    width: 322px;
+  }
+}
+
 .blog-list-scroll__link:not(:last-child) {
   margin: 0 10px 10px 0;
-  width: 190px;
   display: flex;
 }
 
 @media (min-width: 1200px) {
   .blog-list-scroll__link:not(:last-child) {
     margin: 0 20px 10px 0;
-    width: 322px;
   }
 }
 

@@ -71,7 +71,7 @@
   margin-top: 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 576px) {
   .top-random-blog__desc {
     text-align: center;
   }
@@ -80,4 +80,11 @@
 .top-random-blog__hr {
   border: 2px solid #88466e;
   width: 53px;
+}
+
+@media (min-width: 1200px) {
+  .top-random-blog .more-link.--top-sec {
+    width: 1170px;
+    margin: 0 auto;
+  }
 }

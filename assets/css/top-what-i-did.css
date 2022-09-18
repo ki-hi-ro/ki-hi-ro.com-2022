@@ -71,7 +71,7 @@
   margin-top: 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 576px) {
   .top-what-i-did__desc {
     text-align: center;
   }
@@ -80,4 +80,11 @@
 .top-what-i-did__hr {
   border: 2px solid #000;
   width: 53px;
+}
+
+@media (min-width: 1200px) {
+  .top-what-i-did .more-link.--top-sec {
+    width: 1170px;
+    margin: 0 auto;
+  }
 }

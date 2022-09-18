@@ -5,13 +5,19 @@
   width: 100%;
   overflow-x: scroll;
   padding-bottom: 5px;
+  @include mq(xl) {
+    margin: 0 auto;
+    width: 1170px;
+  }
   &__link {
+    width: 190px;
+    @include mq(md) {
+      width: 322px;
+    }
     &:not(:last-child) {
       margin: 0 10px 10px 0;
-      width: 190px;
       @include mq(xl) {
         margin: 0 20px 10px 0;
-        width: 322px;
       }
       display: flex;
     }

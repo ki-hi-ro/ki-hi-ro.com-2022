@@ -52,12 +52,18 @@
   &__desc {
     margin-bottom: 20px;
     margin-top: 0;
-    @include mq(xl) {
+    @include mq(sm) {
       text-align: center;
     }
   }
   &__hr {
     border: 2px solid $blog-color;
     width: 53px;
+  }
+  .more-link.--top-sec {
+    @include mq(xl) {
+      width: 1170px;
+      margin: 0 auto;
+    }
   }
 }
