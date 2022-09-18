@@ -82,5 +82,8 @@
   ],
   "liveSassCompile.settings.autoprefix": [
 
+  ],
+  "eslint.validate": [
+  
   ]
 }
