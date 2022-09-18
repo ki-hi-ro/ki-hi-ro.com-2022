@@ -1,11 +1,22 @@
-const tag_list_skil = document.querySelectorAll(".top-skill-blog__tag-li");
-const article_list_skil = document.querySelectorAll(".blog-list-scroll__link--skill-blog");
+const tag_list_whatidid = document.querySelectorAll(".top-what-i-did__tag-li");
+const article_list_whatidid = document.querySelectorAll(
+  ".blog-list-scroll__link--what-i-did"
+);
+const tag_list_skill = document.querySelectorAll(".top-skill-blog__tag-li");
+const article_list_skill = document.querySelectorAll(
+  ".blog-list-scroll__link--skill-blog"
+);
 const tag_list_study = document.querySelectorAll(".top-study-blog__tag-li");
-const article_list_study = document.querySelectorAll(".blog-list-scroll__link--study-blog");
+const article_list_study = document.querySelectorAll(
+  ".blog-list-scroll__link--study-blog"
+);
 const tag_list_random = document.querySelectorAll(".top-random-blog__tag-li");
-const article_list_random = document.querySelectorAll(".blog-list-scroll__link--random-blog");
+const article_list_random = document.querySelectorAll(
+  ".blog-list-scroll__link--random-blog"
+);
 
-tag_motion(tag_list_skil, article_list_skil, "html-css");
+tag_motion(tag_list_whatidid, article_list_whatidid, "add-contents");
+tag_motion(tag_list_skill, article_list_skill, "html-css");
 tag_motion(tag_list_study, article_list_study, "typescript");
 tag_motion(tag_list_random, article_list_random, "music");
 
@@ -33,7 +44,7 @@ function tag_motion(tag_list, article_list, default_article) {
     tag.addEventListener("click", function () {
       tag_list.forEach(function (all_tag) {
         all_tag.classList.remove("active");
-      })
+      });
       tag.classList.add("active");
       tag_contentid = tag.getAttribute("contentid");
       article_list.forEach(function (article) {

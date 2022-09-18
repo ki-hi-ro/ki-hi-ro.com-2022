@@ -1,0 +1,52 @@
+.top-what-i-did {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 50px;
+}
+
+.top-what-i-did__tag-ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 10px;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.top-what-i-did__tag-li {
+  margin: 9px;
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 0 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.top-what-i-did__tag-li:hover {
+  transition: all 0.3s;
+  background-color: #000;
+  color: #fff;
+}
+
+.top-what-i-did__tag-li.active {
+  transition: all 0.3s;
+  background-color: #000;
+  color: #fff;
+}
+
+.top-what-i-did__ttl {
+  color: #000;
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+}
+
+.top-what-i-did__desc {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.top-what-i-did__hr {
+  border: 2px solid #000;
+  width: 53px;
+}
