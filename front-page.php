@@ -85,8 +85,8 @@
     if ($posttags) {
       echo '<ul class="top-study-blog__tag-ul">';
       foreach ($posttags as $tag) {
-        if($tag->count >= 1) {
-          echo '<li class="top-study-blog__tag-li" contentid="' . $tag->slug . '">#' . $tag->name. '</li>';
+        if ($tag->count >= 1) {
+          echo '<li class="top-study-blog__tag-li" contentid="' . $tag->slug . '">#' . $tag->name . '</li>';
         }
       }
       echo '</ul>';
@@ -113,6 +113,47 @@
     </div>
     <div class="more-link --top-sec">
       <a href="<?php echo home_url('category/study-blog/'); ?>">学習ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
+    </div>
+  </div>
+
+  <!-- 雑記 -->
+  <div class="top-random-blog">
+    <h2 class="top-random-blog__ttl">雑記ブログ</h2>
+    <p class="top-random-blog__desc">日常で感動したことなどを、息抜きに投稿していきます。</p>
+    <hr class="top-random-blog__hr">
+    <?php
+    $posttags = my_tags_in_cat(67);
+    if ($posttags) {
+      echo '<ul class="top-random-blog__tag-ul">';
+      foreach ($posttags as $tag) {
+        if ($tag->count >= 1) {
+          echo '<li class="top-random-blog__tag-li" contentid="' . $tag->slug . '">#' . $tag->name . '</li>';
+        }
+      }
+      echo '</ul>';
+    }
+    ?>
+    <div class="blog-list-scroll--skill blog-list-scroll">
+      <?php
+      $args = array('category_name' => 'random-blog', 'post_type' => 'post', 'posts_per_page' => -1);
+      $myposts = get_posts($args);
+      foreach ($myposts as $post) : setup_postdata($post);
+      ?>
+        <?php
+        $posttags = get_the_tags();
+        if ($posttags) :
+        ?>
+          <?php echo get_template_part('template-parts/blog-list-scroll'); ?>
+        <?php
+        endif;
+        ?>
+      <?php
+      endforeach;
+      wp_reset_postdata();
+      ?>
+    </div>
+    <div class="more-link --top-sec">
+      <a href="<?php echo home_url('category/random-blog/'); ?>">雑記ブログ一覧<img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg" /></a>
     </div>
   </div>
 
