@@ -1,6 +1,7 @@
 .top-study-blog {
   background-color: rgba(89, 160, 118, 0.1);
   padding: 50px;
+  margin: 0 -15px;
 }
 
 .top-study-blog__tag-ul {

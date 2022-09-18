@@ -1,6 +1,7 @@
 .top-what-i-did {
   background-color: rgba(0, 0, 0, 0.05);
   padding: 50px;
+  margin: 0 -15px;
 }
 
 .top-what-i-did__tag-ul {

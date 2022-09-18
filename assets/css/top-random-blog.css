@@ -1,6 +1,7 @@
 .top-random-blog {
   background-color: rgba(136, 70, 110, 0.1);
   padding: 50px;
+  margin: 0 -15px;
 }
 
 .top-random-blog__tag-ul {

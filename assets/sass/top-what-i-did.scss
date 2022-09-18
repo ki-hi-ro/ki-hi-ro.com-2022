@@ -1,47 +1,6 @@
 @import "color";
 @import "breakpoint";
+@import "top-blog";
 .top-what-i-did {
-  background-color: $whatidid-bg-color;
-  padding: 50px;
-  &__tag-ul {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-    padding-bottom: 10px;
-    width: 100%;
-    overflow-x: scroll;
-  }
-  &__tag-li {
-    margin: 9px;
-    border-radius: 16px;
-    background-color: $white;
-    padding: 0 12px;
-    cursor: pointer;
-    white-space: nowrap;
-    &:hover {
-      transition: all 0.3s;
-      background-color: $black;
-      color: $white;
-    }
-    &.active {
-      transition: all 0.3s;
-      background-color: $black;
-      color: $white;
-    }
-  }
-  &__ttl {
-    color: $black;
-    text-align: center;
-    font-size: 40px;
-    margin: 0;
-  }
-  &__desc {
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 0;
-  }
-  &__hr {
-    border: 2px solid $black;
-    width: 53px;
-  }
+  @include top-blog($whatidid-bg-color, $black);
 }
