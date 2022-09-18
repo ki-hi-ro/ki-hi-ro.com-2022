@@ -81,7 +81,7 @@
     <p class="top-study-blog__desc">参考書などで学んだことをテーマにしたブログ記事を投稿していきます。</p>
     <hr class="top-study-blog__hr">
     <?php
-    $posttags = my_tags_in_cat(60);
+    $posttags = my_tags_in_cat(69);
     if ($posttags) {
       echo '<ul class="top-study-blog__tag-ul">';
       foreach ($posttags as $tag) {
