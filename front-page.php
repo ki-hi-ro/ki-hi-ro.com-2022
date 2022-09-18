@@ -36,7 +36,7 @@
         echo '<ul class="top-' . $cat_slug . '__tag-ul">';
         foreach ($posttags as $tag) {
           if ($tag->count >= 1) {
-            echo '<li class="top-' . $cat_slug . '__tag-li" contentid="' . $tag->slug . '">#' . $tag->name . '</li>';
+            echo '<li class="top-' . $cat_slug . '__tag-li" tagslug="' . $tag->slug . '">#' . $tag->name . '</li>';
           }
         }
         echo '</ul>';
