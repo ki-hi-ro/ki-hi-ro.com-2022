@@ -7,8 +7,12 @@
   padding-bottom: 5px;
   &__link {
     &:not(:last-child) {
-      margin: 0 20px 10px 0;
-      width: 100%;
+      margin: 0 10px 10px 0;
+      width: 190px;
+      @include mq(xl) {
+        margin: 0 20px 10px 0;
+        width: 322px;
+      }
       display: flex;
     }
   }
@@ -22,6 +26,7 @@
     flex-direction: column;
     display: flex;
     align-items: center;
+    background-color: $white;
     @include mq(md) {
       height: 357px;
     }

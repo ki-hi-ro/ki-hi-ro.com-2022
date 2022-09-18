@@ -1,7 +1,13 @@
 .top-study-blog {
   background-color: rgba(89, 160, 118, 0.1);
-  padding: 50px;
   margin: 0 -15px;
+  padding: 25px 15px;
+}
+
+@media (min-width: 1200px) {
+  .top-study-blog {
+    padding: 50px;
+  }
 }
 
 .top-study-blog__tag-ul {
@@ -13,13 +19,32 @@
   overflow-x: scroll;
 }
 
+@media (min-width: 1200px) {
+  .top-study-blog__tag-ul {
+    width: 1170px;
+    margin: 0 auto;
+  }
+}
+
 .top-study-blog__tag-li {
-  margin: 9px;
   border-radius: 16px;
   background-color: #fff;
   padding: 0 12px;
   cursor: pointer;
   white-space: nowrap;
+  margin: 5px;
+  font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+  .top-study-blog__tag-li {
+    margin: 9px;
+    font-size: 16px;
+  }
+}
+
+.top-study-blog__tag-li:first-child {
+  margin-left: 0;
 }
 
 .top-study-blog__tag-li:hover {
@@ -42,9 +67,14 @@
 }
 
 .top-study-blog__desc {
-  text-align: center;
   margin-bottom: 20px;
   margin-top: 0;
+}
+
+@media (min-width: 1200px) {
+  .top-study-blog__desc {
+    text-align: center;
+  }
 }
 
 .top-study-blog__hr {

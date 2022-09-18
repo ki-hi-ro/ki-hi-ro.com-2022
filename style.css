@@ -1850,7 +1850,6 @@ a.top-contents__card.--blog {
 @media (max-width: 767px) {
   .home .author {
     padding-bottom: 20px;
-    margin-bottom: 0;
   }
   .home .author p {
     text-align: left;
