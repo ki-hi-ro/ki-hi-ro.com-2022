@@ -85,7 +85,9 @@
     if ($posttags) {
       echo '<ul class="top-study-blog__tag-ul">';
       foreach ($posttags as $tag) {
-        echo '<li class="top-study-blog__tag-li" contentid="' . $tag->slug . '">#' . $tag->name . '</li>';
+        if($tag->count >= 1) {
+          echo '<li class="top-study-blog__tag-li" contentid="' . $tag->slug . '">#' . $tag->name. '</li>';
+        }
       }
       echo '</ul>';
     }
