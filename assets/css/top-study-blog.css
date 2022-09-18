@@ -12,12 +12,6 @@
   overflow-x: scroll;
 }
 
-@media (min-width: 1200px) {
-  .top-study-blog__tag-ul {
-    justify-content: center;
-  }
-}
-
 .top-study-blog__tag-li {
   margin: 9px;
   border-radius: 16px;
