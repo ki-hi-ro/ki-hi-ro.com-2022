@@ -1139,7 +1139,7 @@ span.sitename.sub {
   text-align: center;
 }
 
-.sp-nav li a {
+.header_sp-li-link {
   color: #333;
   text-decoration: none;
   padding: 10px;
@@ -1147,6 +1147,10 @@ span.sitename.sub {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: bold;
+}
+
+.sp-nav-blog {
+  padding-bottom: 0;
 }
 
 .openbtn1 {
