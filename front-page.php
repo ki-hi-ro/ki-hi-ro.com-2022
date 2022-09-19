@@ -15,7 +15,7 @@
   <!-- これまでの仕事・技術ブログ・学習ブログ・雑記ブログ -->
   <?php
   $cat_id_array = [98, 60, 69, 67];
-  foreach($cat_id_array as $cat_id) :
+  foreach ($cat_id_array as $cat_id) :
     $categories = get_categories(array(
       'include' => $cat_id
     ));
@@ -26,7 +26,7 @@
       $cat_link = get_category_link($category->term_id);
     }
   ?>
-    <div class="top-<?php echo $cat_slug; ?>">
+    <div id="<?php echo $cat_slug; ?>" class="top-<?php echo $cat_slug; ?>">
       <h2 class="top-<?php echo $cat_slug; ?>__ttl"><?php echo $cat_name; ?></h2>
       <p class="top-<?php echo $cat_slug; ?>__desc"><?php echo  $cat_desc; ?></p>
       <hr class="top-<?php echo $cat_slug; ?>__hr">

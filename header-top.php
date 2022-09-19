@@ -61,14 +61,14 @@
 				</div>
 				<nav class="header__nav-pc pc-nav">
 					<ul class="header__ul-pc">
-						<li class="header__li-pc"><a class="header__li-pc-link header-nav-link" href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link header-nav-link" href="#contact">お問い合わせ</a></li>
 						<li class="header__li-pc"><a class="header__li-pc-link" href="#author">自己紹介</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link" href=" <?php echo home_url('what-i-did'); ?>">これまでの仕事</a></li>
-						<li class="header__li-pc header__li-pc--haschild has-child"><a class="header__li-pc-link" href="<?php echo home_url('blog'); ?>">ブログ</a>
+						<li class="header__li-pc"><a class="header__li-pc-link" href="#what-i-did">これまでの仕事</a></li>
+						<li class="header__li-pc header__li-pc--haschild has-child"><a class="header__li-pc-link" href="#blog">ブログ</a>
 							<ul class="header__has-child-ul">
-								<li class="header__has-child-li pc-nav__skill"><a class="header__has-child-li-link --skill" href=" <?php echo home_url('category/skill-blog/'); ?>">技術ブログ</a></li>
-								<li class="header__has-child-li pc-nav__study"><a class="header__has-child-li-link --study" href="<?php echo home_url('category/study-blog/'); ?>">学習ブログ</a></li>
-								<li class="header__has-child-li pc-nav__random"><a class="header__has-child-li-link --random" href="<?php echo home_url('category/random-blog/'); ?>">雑記ブログ</a></li>
+								<li class="header__has-child-li pc-nav__skill"><a class="header__has-child-li-link --skill" href="#skill-blog">技術ブログ</a></li>
+								<li class="header__has-child-li pc-nav__study"><a class="header__has-child-li-link --study" href="#study-blog">学習ブログ</a></li>
+								<li class="header__has-child-li pc-nav__random"><a class="header__has-child-li-link --random" href="#random-blog">雑記ブログ</a></li>
 							</ul>
 						</li>
 					</ul>

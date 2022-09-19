@@ -9,9 +9,13 @@ window.addEventListener("DOMContentLoaded", () => {
       const targetElement = document.querySelector(targetId);
       var targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;
       const href = link.getAttribute('href');
-      if (href == '#author') {
-        var targetOffsetTop = targetOffsetTop - 130;
+      var scroll_adjust = 100;
+      if (href == "#author") {
+        var scroll_adjust = 130;
+      } else if (href == "#contact") {
+        var scroll_adjust = 50;
       }
+      var targetOffsetTop = targetOffsetTop - scroll_adjust;
       window.scrollTo({
         top: targetOffsetTop,
         behavior: "smooth",
