@@ -62,7 +62,7 @@
 				<nav class="header__nav-pc pc-nav">
 					<ul class="header__ul-pc">
 						<li class="header__li-pc"><a class="header__li-pc-link header-nav-link" href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link" href=" <?php echo home_url('self-produce'); ?>">自己紹介</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link" href="#author">自己紹介</a></li>
 						<li class="header__li-pc"><a class="header__li-pc-link" href=" <?php echo home_url('what-i-did'); ?>">これまでの仕事</a></li>
 						<li class="header__li-pc header__li-pc--haschild has-child"><a class="header__li-pc-link" href="<?php echo home_url('blog'); ?>">ブログ</a>
 							<ul class="header__has-child-ul">

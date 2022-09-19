@@ -1,13 +1,5 @@
-<section
-  class="author author-card sidebar__contents"
-  itemprop="author"
-  itemscope
-  itemtype="http://schema.org/Person"
->
-  <img
-    src="<?php echo get_template_directory_uri(); ?>/assets/img/introduce/2022-04.png"
-    class="img-responsive img-circle author__img"
-  />
+<section id="author" class="author author-card sidebar__contents" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/introduce/2022-04.png" class="img-responsive img-circle author__img" />
   <h4>
     <span itemprop="name">Shibata Hiroki</span>
   </h4>
@@ -24,10 +16,12 @@
     padding-top: 26px;
     background-color: #f7f7f7;
   }
+
   .author__img {
     width: 130px;
     margin: 0 auto 20px;
   }
+
   .author-card h4 {
     text-align: center;
     font-family: "Avenir-Next";
@@ -35,10 +29,12 @@
     margin-top: 35px;
     font-size: 20px;
   }
+
   .author-card hr {
     border: 1px solid #ddd;
     width: 20%;
   }
+
   .author-text {
     color: #000;
     font-size: 16px;
@@ -48,18 +44,21 @@
     margin-top: 40px;
     margin-bottom: 0;
   }
+
   @media (min-width: 768px) {
     .author-card {
       width: 100%;
       max-width: 100%;
     }
   }
+
   @media (min-width: 1000px) {
     .author-card {
       margin-top: 50px;
       width: 370px;
     }
   }
+
   @media (max-width: 767px) {
     .author-card {
       padding-bottom: 20px;

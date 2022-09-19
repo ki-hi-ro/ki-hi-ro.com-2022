@@ -21,6 +21,8 @@ wp_enqueue_script('slick', get_template_directory_uri() . '/assets/js/slick.js' 
 wp_enqueue_script('hamburger', get_template_directory_uri() . '/assets/js/hamburger.js' , null, date("YmdHi"), true);
 wp_enqueue_script('tag', get_template_directory_uri() . '/assets/js/tag.js' , null, date("YmdHi"), true);
 wp_enqueue_script('view-port', get_template_directory_uri() . '/assets/js/view-port.js', null, date("YmdHi"), true);
+wp_enqueue_script('smoothscroll', get_template_directory_uri() . '/assets/js/smoothscroll.js', null, date("YmdHi"), true);
+wp_enqueue_script('page-link', get_template_directory_uri() . '/assets/js/page-link.js', null, date("YmdHi"), true);
 
 // body_class()にページスラッグを追加
 add_filter( 'body_class', 'add_page_slug_class_name' );
