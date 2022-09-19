@@ -5,6 +5,10 @@ window.addEventListener("DOMContentLoaded", () => {
   anchorLinksArr.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
+      var humburger_lines = document.querySelectorAll('.header__open-btn-line');
+      humburger_lines.forEach(function (humburger_line) {
+        humburger_line.classList.remove('active');
+      })
       const targetId = link.hash;
       const targetElement = document.querySelector(targetId);
       var targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;
