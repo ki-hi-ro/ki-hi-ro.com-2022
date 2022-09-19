@@ -87,7 +87,7 @@
 					</div>
 					<ul class="header__sp-ul">
 						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="#contact">お問い合わせ</a></li>
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="#self-produce">自己紹介</a></li>
+						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="#author">自己紹介</a></li>
 						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="#what-i-did">これまでの仕事</a></li>
 						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top sp-nav-blog" href="#blog">--- ブログ ---</a></li>
 						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="#skill-blog">技術ブログ</a></li>
