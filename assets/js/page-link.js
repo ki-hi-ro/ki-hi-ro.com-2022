@@ -7,8 +7,11 @@ window.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const targetId = link.hash;
       const targetElement = document.querySelector(targetId);
-      const targetOffsetTop =
-        window.pageYOffset + targetElement.getBoundingClientRect().top;
+      var targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;
+      const href = link.getAttribute('href');
+      if (href == '#author') {
+        var targetOffsetTop = targetOffsetTop - 130;
+      }
       window.scrollTo({
         top: targetOffsetTop,
         behavior: "smooth",
