@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('top'); ?>
 
 <div class="mv">
   <div class="mv-text-wrap">
