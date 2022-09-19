@@ -25,6 +25,10 @@
     @include mq(xl) {
       margin-left: 20px;
     }
+    &.sidebar-ttl {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 
   .skill-blog {
@@ -54,5 +58,13 @@
 
   .random-blog h2 {
     background: #88466e1a;
+  }
+
+  .ez-toc-widget-container ul.ez-toc-list {
+    padding: 10px;
+    height: 50vh;
+    overflow-y: scroll;
+    border: 1px solid #0a2c54;
+    margin-left: 20px;
   }
 }

@@ -30,6 +30,11 @@
   }
 }
 
+.single h3.sidebar-ttl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .single .skill-blog h2,
 .single .skill-blog h3 {
   border-color: #0a2c54;
@@ -55,4 +60,12 @@
 
 .single .random-blog h2 {
   background: #88466e1a;
+}
+
+.single .ez-toc-widget-container ul.ez-toc-list {
+  padding: 10px;
+  height: 50vh;
+  overflow-y: scroll;
+  border: 1px solid #0a2c54;
+  margin-left: 20px;
 }

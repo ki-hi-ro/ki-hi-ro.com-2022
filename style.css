@@ -3691,11 +3691,13 @@ h3.sidebar-ttl {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 999px) {
   .blog-article__aside-table-of-contents {
     display: none;
   }
+}
 
+@media (max-width: 767px) {
   div#ez-toc-container {
     width: 100%;
   }
