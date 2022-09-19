@@ -31,6 +31,14 @@
     }
   }
 
+  .ez-toc-widget-container ul.ez-toc-list {
+    padding: 10px;
+    height: 50vh;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+  }
+
   .skill-blog {
     h2,
     h3 {
@@ -51,20 +59,13 @@
     }
   }
 
-  .random-blog h2,
-  .random-blog h3 {
-    border-color: var(--random-color);
-  }
-
-  .random-blog h2 {
-    background: #88466e1a;
-  }
-
-  .ez-toc-widget-container ul.ez-toc-list {
-    padding: 10px;
-    height: 50vh;
-    overflow-y: scroll;
-    border: 1px solid #0a2c54;
-    margin-left: 20px;
+  .random-blog {
+    h2,
+    h3 {
+      border-color: var(--random-color);
+    }
+    h2 {
+      background: #88466e1a;
+    }
   }
 }
