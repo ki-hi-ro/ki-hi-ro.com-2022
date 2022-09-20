@@ -12,6 +12,7 @@ wp_enqueue_style('top-study-blog', get_template_directory_uri() . '/assets/css/t
 wp_enqueue_style('top-random-blog', get_template_directory_uri() . '/assets/css/top-random-blog.css', [], date("YmdHi"));
 wp_enqueue_style('top-what-i-did', get_template_directory_uri() . '/assets/css/top-what-i-did.css', [], date("YmdHi"));
 wp_enqueue_style('utility', get_template_directory_uri() . '/assets/css/utility.css', [], date("YmdHi"));
+wp_enqueue_style('blog-archive', get_template_directory_uri() . '/assets/css/blog-archive.css', [], date("YmdHi"));
 
 // js
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);

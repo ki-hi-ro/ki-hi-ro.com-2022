@@ -1,0 +1,25 @@
+.blog-archive__mv-text-wrap {
+  color: #fff;
+}
+
+@media (min-width: 1200px) {
+  .blog-archive__mv-text-wrap {
+    padding: 17px 64px;
+  }
+}
+
+.blog-archive__mv-text {
+  font-weight: normal;
+}
+
+.category-skill-blog .blog-archive__mv-text-wrap {
+  background-color: #0a2c54;
+}
+
+.category-study-blog .blog-archive__mv-text-wrap {
+  background-color: #59a076;
+}
+
+.category-random-blog .blog-archive__mv-text-wrap {
+  background-color: #88466e;
+}

@@ -5,12 +5,12 @@ $term_slug = $term->slug;
 $term_name = $term->name;
 $term_desc = $term->description;
 ?>
-<div class="mv">
-	<div class="mv-text-wrap">
-		<div class="mv-text"><?php echo $term_name; ?></div>
+<div class="blog-archive__mv mv">
+	<div class="blog-archive__mv-text-wrap mv-text-wrap">
+		<div class="blog-archive__mv-text mv-text"><?php echo $term_name; ?></div>
 	</div>
-	<img class="pc-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/mv-pc.png?20220823-1" alt="PCのメインビジュアル">
-	<img class="sp-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/mv-sp.png?20220823-1" alt="スマホのメインビジュアル">
+	<img class="blog-archive__pc-img pc-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/mv-pc.png?20220823-1" alt="PCのメインビジュアル">
+	<img class="blog-archive__sp-img sp-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/mv-sp.png?20220823-1" alt="スマホのメインビジュアル">
 	<div class="scrolldown1"><span>Scroll</span></div>
 </div>
 
