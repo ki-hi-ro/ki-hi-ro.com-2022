@@ -1,0 +1,15 @@
+.mv__text-wrap.--blog {
+  color: #fff;
+}
+
+.mv__text-wrap.--skill {
+  background-color: #0a2c54;
+}
+
+.mv__text-wrap.--study {
+  background-color: #59a076;
+}
+
+.mv__text-wrap.--random {
+  background-color: #88466e;
+}

@@ -1,0 +1,17 @@
+@import "color";
+.mv {
+  &__text-wrap {
+    &.--blog {
+      color: $white;
+    }
+    &.--skill {
+      background-color: $skill-color;
+    }
+    &.--study {
+      background-color: $study-color;
+    }
+    &.--random {
+      background-color: $random-color;
+    }
+  }
+}
