@@ -10,11 +10,17 @@
   &__mv-text {
     font-weight: normal;
   }
+  &__scroll::after {
+    background: $black;
+  }
+  &__scroll-text {
+    color: $black;
+  }
 }
-@mixin mv-text-wrap-bg-color($bg-color) {
+@mixin mv-text-wrap-bg-color($blog-color) {
   .blog-archive {
     &__mv-text-wrap {
-      background-color: $bg-color;
+      background-color: $blog-color;
     }
   }
 }

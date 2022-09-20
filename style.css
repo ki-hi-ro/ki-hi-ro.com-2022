@@ -3468,7 +3468,7 @@ section#contact {
   height: 50px;
 }
 
-.mv .scrolldown1 span {
+.blog-archive__scroll-text {
   position: absolute;
   left: -20px;
   top: -18px;
@@ -3477,7 +3477,7 @@ section#contact {
   letter-spacing: 0.05em;
 }
 
-.mv .scrolldown1::after {
+.blog-archive__scroll::after {
   content: "";
   position: absolute;
   top: 0;

@@ -12,6 +12,14 @@
   font-weight: normal;
 }
 
+.blog-archive__scroll::after {
+  background: #000;
+}
+
+.blog-archive__scroll-text {
+  color: #000;
+}
+
 .category-skill-blog .blog-archive__mv-text-wrap {
   background-color: #0a2c54;
 }
