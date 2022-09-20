@@ -37,7 +37,8 @@
 
 .single .ez-toc-widget-container ul.ez-toc-list {
   padding: 10px;
-  height: 50vh;
+  max-height: 50vh;
+  height: auto;
   overflow-y: scroll;
   border: 1px solid #ddd;
   margin-left: 20px;
