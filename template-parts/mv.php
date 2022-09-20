@@ -30,7 +30,7 @@ if (is_front_page() || is_home()) {
 ?>
 <div class="mv">
   <div class="mv__text-wrap <?php echo $modify; ?> mv-text-wrap">
-    <div class="mv-text"><?php echo $mv_text; ?></div>
+    <div class="mv__text <?php echo $modify; ?> mv-text"><?php echo $mv_text; ?></div>
   </div>
   <img class="pc-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/<?php echo $mv_pc; ?>.png?20220823-1" alt="PCのメインビジュアル">
   <img class="sp-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/<?php echo $mv_sp; ?>.png?20220823-1" alt="スマホのメインビジュアル">

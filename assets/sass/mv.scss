@@ -1,6 +1,10 @@
 @import "color";
+@import "breakpoint";
 .mv {
   &__text-wrap {
+    @include mq(xl) {
+      padding: 17px 64px;
+    }
     &.--blog {
       color: $white;
     }
@@ -12,6 +16,11 @@
     }
     &.--random {
       background-color: $random-color;
+    }
+  }
+  &__text {
+    &.--blog {
+      font-weight: normal;
     }
   }
 }

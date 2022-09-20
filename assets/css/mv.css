@@ -1,3 +1,9 @@
+@media (min-width: 1200px) {
+  .mv__text-wrap {
+    padding: 17px 64px;
+  }
+}
+
 .mv__text-wrap.--blog {
   color: #fff;
 }
@@ -12,4 +18,8 @@
 
 .mv__text-wrap.--random {
   background-color: #88466e;
+}
+
+.mv__text.--blog {
+  font-weight: normal;
 }
