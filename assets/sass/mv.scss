@@ -23,4 +23,48 @@
       font-weight: normal;
     }
   }
+  &__scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    height: 50px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 25px;
+      animation: pathmove 1.4s ease-in-out infinite;
+      opacity: 0;
+    }
+    @keyframes pathmove {
+      0% {
+        height: 0;
+        top: 10px;
+        opacity: 0;
+      }
+      30% {
+        height: 25px;
+        opacity: 1;
+      }
+      100% {
+        height: 0;
+        top: 50px;
+        opacity: 0;
+      }
+    }
+    &.--what-i-did::after {
+      background: $white;
+    }
+  }
+  &__scroll-text {
+    position: absolute;
+    left: -20px;
+    top: -18px;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    &.--what-i-did {
+      color: $white;
+    }
+  }
 }

@@ -18,6 +18,10 @@ if ($term_name == '技術ブログ') {
   $mv_pc = 'mv-pc-random';
   $mv_sp = 'mv-sp-random';
   $modify = '--blog --random';
+} else if ($term_name == 'これまでの仕事') {
+  $mv_pc = 'mv-pc';
+  $mv_sp = 'mv-sp';
+  $modify = '--what-i-did';
 }
 
 if (is_front_page() || is_home()) {
@@ -26,6 +30,9 @@ if (is_front_page() || is_home()) {
 } else if (is_archive()) {
   $mv_text = $term_name;
   $class_block = 'blog-archive';
+} else if (is_page('what-i-did')) {
+  $mv_text = 'これまでの仕事';
+  $class_block = 'page-what-i-did';
 }
 ?>
 <div class="mv">
@@ -34,7 +41,7 @@ if (is_front_page() || is_home()) {
   </div>
   <img class="pc-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/<?php echo $mv_pc; ?>.png?20220823-1" alt="PCのメインビジュアル">
   <img class="sp-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/<?php echo $mv_sp; ?>.png?20220823-1" alt="スマホのメインビジュアル">
-  <div class="<?php echo $class_block; ?>__scroll scrolldown1">
-    <span class="<?php echo $class_block; ?>__scroll-text">Scroll</span>
+  <div class="mv__scroll <?php echo $class_block; ?>__scroll <?php echo $modify; ?>">
+    <span class="mv__scroll-text <?php echo $class_block; ?>__scroll-text <?php echo $modify; ?>">Scroll</span>
   </div>
 </div>
