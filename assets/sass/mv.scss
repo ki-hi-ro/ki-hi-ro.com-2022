@@ -54,7 +54,9 @@
       }
     }
     &.--what-i-did::after,
-    &.--tag::after {
+    &.--page-blog::after,
+    &.--tag::after,
+    &.--date::after {
       background: $white;
     }
   }
@@ -65,7 +67,9 @@
     font-size: 1em;
     letter-spacing: 0.05em;
     &.--what-i-did,
-    &.--tag {
+    &.--page-blog,
+    &.--tag,
+    &.--date {
       color: $white;
     }
   }

@@ -33,10 +33,18 @@ if (is_front_page() || is_home()) {
 } else if (is_page('what-i-did')) {
   $mv_text = 'これまでの仕事';
   $class_block = 'page-what-i-did';
+} else if (is_page('blog')) {
+  $mv_text = 'ブログ一覧';
+  $class_block = 'page-blog';
+  $modify = '--page-blog';
 } else if (is_tag()) {
   $mv_text = $term_name;
   $class_block = 'tag';
   $modify = '--tag';
+} else if (is_date()) {
+  $mv_text = get_the_date('Y年n月');
+  $class_block = 'date';
+  $modify = '--date';
 }
 ?>
 <div class="mv">

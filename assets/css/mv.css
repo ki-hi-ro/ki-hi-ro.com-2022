@@ -58,7 +58,7 @@
   }
 }
 
-.mv__scroll.--what-i-did::after, .mv__scroll.--tag::after {
+.mv__scroll.--what-i-did::after, .mv__scroll.--page-blog::after, .mv__scroll.--tag::after, .mv__scroll.--date::after {
   background: #fff;
 }
 
@@ -70,6 +70,6 @@
   letter-spacing: 0.05em;
 }
 
-.mv__scroll-text.--what-i-did, .mv__scroll-text.--tag {
+.mv__scroll-text.--what-i-did, .mv__scroll-text.--page-blog, .mv__scroll-text.--tag, .mv__scroll-text.--date {
   color: #fff;
 }
