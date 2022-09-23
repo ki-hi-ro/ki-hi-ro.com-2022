@@ -18,6 +18,7 @@
   width: 100%;
   overflow-x: scroll;
   scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .top-skill-blog__tag-ul::-webkit-scrollbar {

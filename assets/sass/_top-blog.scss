@@ -16,6 +16,7 @@
       display: none;
     }
     scrollbar-width: none;
+    -ms-overflow-style: none;
     @include mq(xl) {
       width: 1170px;
       margin: 0 auto;
