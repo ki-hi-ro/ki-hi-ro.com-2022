@@ -27,7 +27,7 @@ if ($term_name == '技術ブログ') {
 if (is_front_page() || is_home()) {
   $mv_text = 'WEB制作のコーディングで<span class="sp-none">、</span><br class="only-sp">価値を提供する';
   $class_block = 'front-page';
-} else if (is_archive() && !is_tag()) {
+} else if (is_archive() && !is_tag() && !is_date()) {
   $mv_text = $term_name;
   $class_block = 'blog-archive';
 } else if (is_page('what-i-did')) {
