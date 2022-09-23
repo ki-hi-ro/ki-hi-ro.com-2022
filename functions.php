@@ -16,6 +16,7 @@ wp_enqueue_style('blog-archive', get_template_directory_uri() . '/assets/css/blo
 wp_enqueue_style('front-page', get_template_directory_uri() . '/assets/css/front-page.css', [], date("YmdHi"));
 wp_enqueue_style('mv', get_template_directory_uri() . '/assets/css/mv.css', [], date("YmdHi"));
 wp_enqueue_style('page-what-i-did', get_template_directory_uri() . '/assets/css/page-what-i-did.css', [], date("YmdHi"));
+wp_enqueue_style('top-contact', get_template_directory_uri() . '/assets/css/top-contact.css', [], date("YmdHi"));
 
 // js
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);

@@ -60,7 +60,7 @@
     </div>
   <?php endforeach; ?>
 
-  <section class="contact top-section" id="contact">
+  <section class="contact top-section top-contact" id="contact">
     <h4>お問い合わせ</h4>
     <?php echo do_shortcode('[contact-form-7 id="3467" title="お問い合わせ"]'); ?>
   </section>
