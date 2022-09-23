@@ -2,6 +2,13 @@
 
 <?php echo get_template_part('template-parts/mv'); ?>
 
+<?php
+$term = get_queried_object();
+$term_slug = $term->slug;
+$term_name = $term->name;
+$term_desc = $term->description;
+?>
+
 <main class="container">
 
 	<section class="top-section sidebar__blog sidebar__contents">
