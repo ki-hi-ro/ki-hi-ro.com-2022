@@ -53,7 +53,8 @@
         opacity: 0;
       }
     }
-    &.--what-i-did::after {
+    &.--what-i-did::after,
+    &.--tag::after {
       background: $white;
     }
   }
@@ -63,7 +64,8 @@
     top: -18px;
     font-size: 1em;
     letter-spacing: 0.05em;
-    &.--what-i-did {
+    &.--what-i-did,
+    &.--tag {
       color: $white;
     }
   }
