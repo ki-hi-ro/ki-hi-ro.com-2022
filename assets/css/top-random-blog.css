@@ -19,6 +19,10 @@
   overflow-x: scroll;
 }
 
+.top-random-blog__tag-ul::-webkit-scrollbar {
+  display: none;
+}
+
 @media (min-width: 1200px) {
   .top-random-blog__tag-ul {
     width: 1170px;

@@ -12,6 +12,9 @@
     padding-bottom: 10px;
     width: 100%;
     overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     @include mq(xl) {
       width: 1170px;
       margin: 0 auto;
