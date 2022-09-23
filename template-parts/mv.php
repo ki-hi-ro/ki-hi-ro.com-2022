@@ -58,8 +58,8 @@ if (is_front_page() || is_home()) {
   <div class="mv__text-wrap <?php echo $modify; ?> mv-text-wrap">
     <div class="mv__text <?php echo $modify; ?> mv-text"><?php echo $mv_text; ?></div>
   </div>
-  <img class="pc-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/<?php echo $mv_pc; ?>.png?20220823-1" alt="PCのメインビジュアル">
-  <img class="sp-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/<?php echo $mv_sp; ?>.png?20220823-1" alt="スマホのメインビジュアル">
+  <img class="pc-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/<?php echo $mv_pc; ?>.png?20220923" alt="PCのメインビジュアル">
+  <img class="sp-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/<?php echo $mv_sp; ?>.png?20220923" alt="スマホのメインビジュアル">
   <div class="mv__scroll <?php echo $class_block; ?>__scroll <?php echo $modify; ?>">
     <span class="mv__scroll-text <?php echo $class_block; ?>__scroll-text <?php echo $modify; ?>">Scroll</span>
   </div>
