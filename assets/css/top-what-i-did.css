@@ -17,6 +17,7 @@
   padding-bottom: 10px;
   width: 100%;
   overflow-x: scroll;
+  scrollbar-width: none;
 }
 
 .top-what-i-did__tag-ul::-webkit-scrollbar {
