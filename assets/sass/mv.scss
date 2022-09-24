@@ -53,7 +53,8 @@
         opacity: 0;
       }
     }
-    &.--what-i-did::after,
+    &.--page-what-i-did::after,
+    &.--page-what-i-can::after,
     &.--page-blog::after,
     &.--tag::after,
     &.--date::after {
@@ -66,7 +67,8 @@
     top: -18px;
     font-size: 1em;
     letter-spacing: 0.05em;
-    &.--what-i-did,
+    &.--page-what-i-did,
+    &.--page-what-i-can,
     &.--page-blog,
     &.--tag,
     &.--date {
