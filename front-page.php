@@ -3,6 +3,8 @@
 <?php echo get_template_part('template-parts/mv'); ?>
 
 <main class="l-container">
+  <?php echo get_template_part('template-parts/news'); ?>
+
   <?php echo get_template_part('template-parts/author'); ?>
 
   <!-- これまでの仕事・技術ブログ・学習ブログ・雑記ブログ -->
