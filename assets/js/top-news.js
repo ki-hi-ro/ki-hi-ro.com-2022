@@ -13,7 +13,7 @@ jQuery(function ($) {
         controls: false, //前後のコントロールを表示させない。
         auto: "true", //自動的にスライド
         pager: false, //ページ送り無効化
-        pause: 3000
+        pause: 3500
       });
       sliderFlag = true;
     } else if (windowWidth < breakpoint && sliderFlag) {
