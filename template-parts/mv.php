@@ -20,10 +20,6 @@ if (!is_front_page() && !is_home()) {
       $mv_pc = 'mv-pc-random';
       $mv_sp = 'mv-sp-random';
       $modify = '--blog --random';
-    } else if ($term_name == 'これまでの仕事') {
-      $mv_pc = 'mv-pc';
-      $mv_sp = 'mv-sp';
-      $modify = '--what-i-did';
     }
   }
 } else {
