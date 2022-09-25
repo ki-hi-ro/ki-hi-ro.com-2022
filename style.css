@@ -3427,10 +3427,6 @@ section#contact {
   margin-top: 0;
 }
 
-.category .top-section {
-  margin-bottom: 20px;
-}
-
 @media (min-width: 1000px) {
   .single .author-card {
     margin-top: 0;
@@ -3632,7 +3628,7 @@ h3.sidebar-ttl {
 
 .archive .tag-list {
   list-style: none;
-  max-width: 750px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 5px 0;
   color: #000;

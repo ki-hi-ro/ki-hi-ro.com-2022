@@ -18,6 +18,7 @@ wp_enqueue_style('mv', get_template_directory_uri() . '/assets/css/mv.css', [], 
 wp_enqueue_style('top-contact', get_template_directory_uri() . '/assets/css/top-contact.css', [], date("YmdHi"));
 wp_enqueue_style('news-ticker', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css', [], date("YmdHi"));
 wp_enqueue_style('top-news', get_template_directory_uri() . '/assets/css/top-news.css', [], date("YmdHi"));
+wp_enqueue_style('index-template', get_template_directory_uri() . '/assets/css/index-template.css', [], date("YmdHi"));
 
 // js
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);

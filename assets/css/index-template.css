@@ -1,0 +1,14 @@
+.index-template__ttl {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.index-template__section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.index-template__desc {
+  width: 100%;
+}

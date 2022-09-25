@@ -63,7 +63,7 @@
 					<ul class="header__ul-pc">
 						<li class="header__li-pc"><a class="header__li-pc-link header-nav-link" href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
 						<li class="header__li-pc"><a class="header__li-pc-link" href=" <?php echo home_url('self-produce'); ?>">自己紹介</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link" href=" <?php echo home_url('what-i-did'); ?>">これまでの仕事</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link" href=" <?php echo home_url('category/what-i-did'); ?>">これまでの仕事</a></li>
 						<li class="header__li-pc header__li-pc--haschild has-child"><a class="header__li-pc-link" href="<?php echo home_url('blog'); ?>">ブログ</a>
 							<ul class="header__has-child-ul">
 								<li class="header__has-child-li pc-nav__skill"><a class="header__has-child-li-link --skill" href=" <?php echo home_url('category/skill-blog/'); ?>">技術ブログ</a></li>
@@ -88,7 +88,7 @@
 					<ul class="header__sp-ul">
 						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
 						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="<?php echo home_url('self-produce'); ?>">自己紹介</a></li>
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="<?php echo home_url('what-i-did'); ?>">これまでの仕事</a></li>
+						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="<?php echo home_url('category/what-i-did'); ?>">これまでの仕事</a></li>
 						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top sp-nav-blog" href="<?php echo home_url('blog'); ?>">--- ブログ ---</a></li>
 						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="<?php echo home_url('category/skill-blog/'); ?>">技術ブログ</a></li>
 						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="<?php echo home_url('category/study-blog/'); ?>">学習ブログ</a></li>
