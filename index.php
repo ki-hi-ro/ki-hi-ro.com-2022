@@ -21,7 +21,9 @@ $term_desc = $term->description;
 			if ($posttags) {
 				echo '<ul class="tag-list">';
 				foreach ($posttags as $tag) {
-					echo '<li><a href="' . get_tag_link($tag->term_id) . '">' . "#" . $tag->name . '</a></li>';
+					if($tag->count >= 1) {
+						echo '<li><a href="' . get_tag_link($tag->term_id) . '">' . "#" . $tag->name . '</a></li>';
+					}
 				}
 				echo '</ul>';
 			}
