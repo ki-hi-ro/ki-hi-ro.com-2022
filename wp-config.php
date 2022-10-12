@@ -97,6 +97,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
-
-update_option('siteurl', 'https://ki-hi-ro.com/ki-hi-ro.com-2022');
-update_option('home', 'https://ki-hi-ro.com');
