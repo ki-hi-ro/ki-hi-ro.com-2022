@@ -85,13 +85,12 @@ $table_prefix = 'wp_';
 define( 'WP_DEBUG', false );
 
 /* カスタム値は、この行と「編集が必要なのはここまでです」の行の間に追加してください。 */
-
-
+	
+define('WP_SITEURL', 'https://ki-hi-ro.com/ki-hi-ro.com-2022'); // WordPressアドレス
+define('WP_HOME', 'https://ki-hi-ro.com'); // サイトアドレス
 
 /* 編集が必要なのはここまでです ! WordPress でのパブリッシングをお楽しみください。 */
 
-define('WP_SITEURL', 'https://ki-hi-ro.com/ki-hi-ro.com-2022'); // WordPressアドレス
-define('WP_HOME', 'https://ki-hi-ro.com'); // サイトアドレス
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
