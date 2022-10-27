@@ -1,6 +1,5 @@
 @mixin top-blog($blog-bg-color, $blog-color) {
   background-color: $blog-bg-color;
-  margin: 0 -15px;
   padding: 25px 15px;
   @include mq(xl) {
     padding: 50px;

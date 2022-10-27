@@ -1,0 +1,21 @@
+.author-box {
+  background-color: #f7f7f7;
+  padding: 26px 20px 20px;
+}
+
+.author-box__img-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.author-box__my-name {
+  margin-top: 35px;
+}
+
+.author-box__line {
+  border: 1px solid #ddd;
+  width: 20%;
+}
