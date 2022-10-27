@@ -1,8 +1,15 @@
 .author-box {
   background-color: #fff;
   padding: 26px 20px 20px;
-  margin-top: 15px;
+  margin: 15px auto 0;
   border: 1px solid #d2d2d2;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .author-box {
+    width: auto;
+  }
 }
 
 .author-box__img-circle {
@@ -25,6 +32,10 @@
 .author-box__line {
   border: 1px solid #ddd;
   width: 20%;
+}
+
+.author-box__text {
+  font-size: 15px;
 }
 
 .author-box__link {

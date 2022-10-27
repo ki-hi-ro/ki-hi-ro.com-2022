@@ -1,9 +1,14 @@
 @import "color";
+@import "breakpoint";
 .author-box {
   background-color: $white;
   padding: 26px 20px 20px;
-  margin-top: 15px;
+  margin: 15px auto 0;
   border: 1px solid $gray;
+  width: 100%;
+  @include mq(lg) {
+    width: auto;
+  }
   &__img-circle {
     width: 130px;
     height: 130px;
@@ -24,6 +29,7 @@
     width: 20%;
   }
   &__text {
+    font-size: 15px;
   }
   &__more {
   }

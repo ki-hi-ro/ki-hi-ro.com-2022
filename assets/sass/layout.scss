@@ -1,15 +1,30 @@
+@import "breakpoint"; 
+
 .l-container {
-  padding: 101px 0 0;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   max-width: 1140px;
+  padding: 101px 20px 0;
+  @include mq(lg) {
+    flex-direction: row;
+  }
+  @include mq(xl) {
+    padding: 101px 0 0;
+  }
 }
 
 .l-pc-left {
-  width: calc((100% - 20px) / 12 * 8);
   margin-right: 20px;
+  width: 100%;
+  @include mq(lg) {
+    width: calc((100% - 20px) / 12 * 8);
+  }
 }
 
 .l-pc-right {
-  width: calc((100% - 20px) / 12 * 4);
+  width: 100%;
+  @include mq(lg) {
+    width: calc((100% - 20px) / 12 * 4);
+  }
 }

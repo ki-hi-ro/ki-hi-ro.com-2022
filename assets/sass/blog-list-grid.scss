@@ -1,4 +1,4 @@
-@import "breakpoint";
+ @import "breakpoint";
 @import "color";
 .blog-list-grid {
   display: grid;
@@ -8,12 +8,6 @@
   grid-template-columns: 1fr 1fr;
   margin-top: 15px;
   @include mq(md) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  @include mq(lg) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  @include mq(xl) {
     grid-template-columns: 1fr 1fr 1fr;
   }
   &__link {
@@ -39,11 +33,8 @@
   }
   &__img {
     width: 100%;
-    height: 27.2vw;
+    height: auto;
     object-fit: contain;
-    @include mq(md) {
-      height: 135px;
-    }
   }
   &__meta {
     display: flex;
