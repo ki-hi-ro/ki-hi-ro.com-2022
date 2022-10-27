@@ -9,3 +9,14 @@
     color: $white;
   }
 }
+
+.new-article {
+  &__ttl {
+    font-family: Noto, Hiragino Sans, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+  }
+}

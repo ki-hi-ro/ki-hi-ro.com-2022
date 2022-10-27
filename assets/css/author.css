@@ -1,6 +1,8 @@
 .author-box {
-  background-color: #f7f7f7;
+  background-color: #fff;
   padding: 26px 20px 20px;
+  margin-top: 15px;
+  border: 1px solid #d2d2d2;
 }
 
 .author-box__img-circle {
@@ -13,9 +15,27 @@
 
 .author-box__my-name {
   margin-top: 35px;
+  text-align: center;
+  font-family: "Avenir-Next";
+  font-weight: 600;
+  margin-top: 35px;
+  font-size: 20px;
 }
 
 .author-box__line {
   border: 1px solid #ddd;
   width: 20%;
+}
+
+.author-box__link {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  color: #000;
+}
+
+.author-box__link-icon {
+  width: 7px;
+  margin-left: 8px;
+  margin-right: 0;
 }

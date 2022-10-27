@@ -1,7 +1,9 @@
 @import "color";
 .author-box {
-  background-color: $gray-bg;
+  background-color: $white;
   padding: 26px 20px 20px;
+  margin-top: 15px;
+  border: 1px solid $gray;
   &__img-circle {
     width: 130px;
     height: 130px;
@@ -11,18 +13,29 @@
   }
   &__my-name {
     margin-top: 35px;
+    text-align: center;
+    font-family: "Avenir-Next";
+    font-weight: 600;
+    margin-top: 35px;
+    font-size: 20px;
   }
   &__line {
     border: 1px solid $line-color-gray;
     width: 20%;
   }
   &__text {
-
   }
   &__more {
-
   }
   &__link {
-
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: $black;
+  }
+  &__link-icon {
+    width: 7px;
+    margin-left: 8px;
+    margin-right: 0;
   }
 }
