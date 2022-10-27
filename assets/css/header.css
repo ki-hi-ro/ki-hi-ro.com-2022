@@ -42,7 +42,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  margin: 10px 0;
+  margin: 10px 0 0;
   align-items: center;
 }
 
@@ -212,7 +212,7 @@
 }
 
 .header__sitename-link {
-  font-size: 28px;
+  font-size: 40px;
   color: #313131db;
   font-family: Helvetica Neue;
   letter-spacing: 0.1px;
