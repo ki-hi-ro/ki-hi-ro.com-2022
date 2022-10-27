@@ -45,10 +45,6 @@
   align-items: center;
 }
 
-.single .header__logo {
-  margin-top: -3px;
-}
-
 .header__nav-pc {
   display: flex;
 }
