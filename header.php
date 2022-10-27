@@ -74,7 +74,7 @@
 						?>
 						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_i_did; ?>" href="/category/what-i-did"><span class="header__sp-none">これまでの</span>仕事</a></li>
 						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_skill; ?>" href="/category/skill-blog/">技術<span class="header__sp-none">ブログ</span></a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_study; ?>" href="study-blog/">学習<span class="header__sp-none">ブログ</span></a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_study; ?>" href="/category/study-blog/">学習<span class="header__sp-none">ブログ</span></a></li>
 						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_random; ?>" href="/category/random-blog/">雑記<span class="header__sp-none">ブログ</span></a></li>
 					</ul>
 				</nav>
