@@ -1023,11 +1023,6 @@ header h1.title {
   line-height: 30px;
 }
 
-span.sitename.sub {
-  display: inline-block;
-  font-size: 12px;
-}
-
 .nav-menu {
   margin-left: auto;
 }
@@ -1037,26 +1032,8 @@ span.sitename.sub {
   margin-bottom: 0;
 }
 
-.header-nav nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding-left: 0;
-}
-
 .header-nav nav ul ul {
   display: block;
-}
-
-.header-nav nav ul li {
-  position: relative;
-}
-
-.header-nav nav ul li a {
-  display: block;
-  text-decoration: none;
-  transition: all 0.3s;
-  padding: 20px 24px;
 }
 
 .header-nav nav ul li.has-child a {
@@ -1269,14 +1246,6 @@ span.sitename.sub {
 }
 
 @media (max-width: 1199px) {
-  .header-nav nav ul {
-    flex-direction: column;
-  }
-
-  .header-nav nav ul li a {
-    padding: 20px 0;
-  }
-
   .openbtn1 {
     position: absolute;
     top: 50%;
@@ -1349,12 +1318,6 @@ span.sitename.sub {
 @media (max-width: 575px) {
   .single .nav-menu {
     margin-top: 2px;
-  }
-}
-
-@media (max-width: 450px) {
-  .header-nav nav ul li {
-    width: 100%;
   }
 }
 

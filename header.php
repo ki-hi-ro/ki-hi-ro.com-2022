@@ -57,7 +57,7 @@
 					<a class="header__sitename-link" href="<?php echo home_url(); ?>">
 						<span class="header__sitename-text sitename main">Shiata Hiroki</span>
 					</a>
-					<span class="header__sub-sitename sitename sub">WEB制作フリーランスエンジニア</span>
+					<span class="header__sub-sitename">WEB制作フリーランスエンジニア</span>
 				</div>
 				<nav class="header__nav-pc pc-nav">
 					<ul class="header__ul-pc">
@@ -73,13 +73,13 @@
 							$current_class_random = "--random-blog --current";  	
 						endif; 
 						?>
-						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_i_did; ?>" href="/category/what-i-did">これまでの仕事</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_skill; ?>" href="/category/skill-blog/">技術ブログ</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_study; ?>" href="study-blog/">学習ブログ</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_random; ?>" href="/category/random-blog/">雑記ブログ</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_i_did; ?>" href="/category/what-i-did"><span class="header__sp-none">これまでの</span>仕事</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_skill; ?>" href="/category/skill-blog/">技術<span class="header__sp-none">ブログ</span></a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_study; ?>" href="study-blog/">学習<span class="header__sp-none">ブログ</span></a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_random; ?>" href="/category/random-blog/">雑記<span class="header__sp-none">ブログ</span></a></li>
 					</ul>
 				</nav>
-				<div class="header__open-btn openbtn1">
+				<!-- <div class="header__open-btn openbtn1">
 					<span class="header__open-btn-line"></span>
 					<span class="header__open-btn-line"></span>
 					<span class="header__open-btn-line"></span>
@@ -100,7 +100,7 @@
 						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="#study-blog">学習ブログ</a></li>
 						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="#random-blog">雑記ブログ</a></li>
 					</ul>
-				</nav>
+				</nav> -->
 			</div>
 		</div>
 	</header>
