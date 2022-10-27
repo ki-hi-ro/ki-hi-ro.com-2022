@@ -1393,11 +1393,6 @@ span.sitename.sub {
   background-color: #f7f7f7;
 }
 
-.home .author {
-  margin-top: 28px;
-  padding-top: 26px;
-}
-
 .post__category {
   position: absolute;
   right: 0;
@@ -1986,10 +1981,6 @@ a.top-contents__card.--blog {
 }
 
 @media (min-width: 1000px) {
-  .home .author {
-    margin-top: 50px;
-  }
-
   .author-card {
     padding-bottom: 20px;
   }

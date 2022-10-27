@@ -27,7 +27,6 @@
 
 @media (min-width: 1200px) {
   .top-what-i-did__tag-ul {
-    width: 1170px;
     margin: 0 auto;
   }
 }
@@ -90,7 +89,6 @@
 
 @media (min-width: 1200px) {
   .top-what-i-did .more-link.--top-sec {
-    width: 1170px;
     margin: 0 auto;
   }
 }

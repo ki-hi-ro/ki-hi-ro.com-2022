@@ -27,7 +27,6 @@
 
 @media (min-width: 1200px) {
   .top-random-blog__tag-ul {
-    width: 1170px;
     margin: 0 auto;
   }
 }
@@ -90,7 +89,6 @@
 
 @media (min-width: 1200px) {
   .top-random-blog .more-link.--top-sec {
-    width: 1170px;
     margin: 0 auto;
   }
 }

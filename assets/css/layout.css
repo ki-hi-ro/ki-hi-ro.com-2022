@@ -1,0 +1,15 @@
+.l-container {
+  padding: 102px 15px 0;
+  margin: 0 auto;
+  display: flex;
+  max-width: 1140px;
+}
+
+.l-pc-left {
+  width: calc((100% - 20px) / 4 * 3);
+  margin-right: 20px;
+}
+
+.l-pc-right {
+  width: calc((100% - 20px) / 4);
+}
