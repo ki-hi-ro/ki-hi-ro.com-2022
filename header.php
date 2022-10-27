@@ -34,7 +34,7 @@
 		}
 		?>
 	</title>
-	<meta name=”description” content=”WEB制作のコーディングをフリーランスとして行なっています。対応可能な業務は、WordPressやEC-CUBEなどです。レスポンシブコーディングも出来ます。“>
+	<meta name=”description” content=”2019年末、TECH::EXPERTでプログラミングを経験後に、WEB制作のフリーランスとして活動を続けてきました。このブログでは、「これまでの仕事」「技術」「学習」「雑記」の4つのカテゴリーで発信していきます。“>
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico">
 
 	<!-- schema.org -->
@@ -55,9 +55,8 @@
 			<div class="header__contents header-nav">
 				<div class="header__logo blogname">
 					<a class="header__sitename-link" href="<?php echo home_url(); ?>">
-						<span class="header__sitename-text sitename main">Shiata Hiroki</span>
+						<span class="header__sitename-text sitename main">ki-hi-ro.com</span>
 					</a>
-					<span class="header__sub-sitename">WEB制作フリーランスエンジニア</span>
 				</div>
 				<nav class="header__nav-pc pc-nav">
 					<ul class="header__ul-pc">
