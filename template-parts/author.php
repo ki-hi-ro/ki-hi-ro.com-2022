@@ -1,5 +1,5 @@
 <section id="author" class="author author-card sidebar__contents" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/introduce/2022-04.png" class="img-responsive img-circle author__img" />
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/introduce/2022-09.jpg?20220925" class="img-responsive img-circle author__img" />
   <h4>
     <span itemprop="name">Shibata Hiroki</span>
   </h4>
