@@ -15,7 +15,7 @@
       <ul class="blog-list-grid">
         <?php foreach ($myposts as $post) : setup_postdata($post); ?>
           <?php echo get_template_part('template-parts/blog-list-grid'); ?>
-        <?php endforeach;	
+        <?php endforeach;
         wp_reset_postdata(); ?>
       </ul>
     </div>
@@ -26,4 +26,4 @@
 
 </main>
 
-<?php get_footer('top'); ?>
+<?php get_footer(); ?>

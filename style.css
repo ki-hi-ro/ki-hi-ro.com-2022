@@ -763,7 +763,7 @@ h3,
 }
 
 .single .breadcrumbs {
-  padding: 2px 2px 0 15px;
+  padding: 2px 2px 0 0;
 }
 
 @media (max-width: 767px) {
@@ -3253,6 +3253,7 @@ code {
 
 footer {
   background-color: #202020;
+  margin-top: 20px;
 }
 
 footer nav {
@@ -3296,6 +3297,7 @@ footer nav ul {
 
 footer nav li {
   font-size: 15px;
+  margin-bottom: 7px;
 }
 
 @media (max-width: 767px) {
@@ -3305,7 +3307,6 @@ footer nav li {
 
   footer nav {
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 }
 
