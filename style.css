@@ -3769,7 +3769,7 @@ h3.sidebar-ttl {
 
 .blog-article__aside-table-of-contents {
   position: sticky;
-  top: 170px;
+  top: 20px;
   padding-top: 0;
 }
 
@@ -3884,6 +3884,6 @@ h3.sidebar-ttl {
 }
 
 .blog-article__main {
-  padding-top: 177px;
+  padding-top: 20px;
   margin-top: 0;
 }
