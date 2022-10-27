@@ -62,9 +62,9 @@
 				<nav class="header__nav-pc pc-nav">
 					<ul class="header__ul-pc">
 						<li class="header__li-pc"><a class="header__li-pc-link" href="#what-i-did">これまでの仕事</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link" href="#skill-blog">技術ブログ</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link" href="#study-blog">学習ブログ</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link" href="#random-blog">雑記ブログ</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link" href="/category/skill-blog/">技術ブログ</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link" href="/category/study-blog/">学習ブログ</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link" href="/category/random-blog/">雑記ブログ</a></li>
 					</ul>
 				</nav>
 				<div class="header__open-btn openbtn1">

@@ -48,7 +48,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class('kihiro-body'); ?>>
+<body <?php body_class('kihiro-body front-page'); ?>>
 
 	<header class="header">
 		<div class="header__container">
@@ -61,16 +61,10 @@
 				</div>
 				<nav class="header__nav-pc pc-nav">
 					<ul class="header__ul-pc">
-						<li class="header__li-pc"><a class="header__li-pc-link header-nav-link" href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link" href=" <?php echo home_url('self-produce'); ?>">自己紹介</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link" href=" <?php echo home_url('category/what-i-did'); ?>">これまでの仕事</a></li>
-						<li class="header__li-pc header__li-pc--haschild has-child"><a class="header__li-pc-link" href="<?php echo home_url('blog'); ?>">ブログ</a>
-							<ul class="header__has-child-ul">
-								<li class="header__has-child-li pc-nav__skill"><a class="header__has-child-li-link --skill" href=" <?php echo home_url('category/skill-blog/'); ?>">技術ブログ</a></li>
-								<li class="header__has-child-li pc-nav__study"><a class="header__has-child-li-link --study" href="<?php echo home_url('category/study-blog/'); ?>">学習ブログ</a></li>
-								<li class="header__has-child-li pc-nav__random"><a class="header__has-child-li-link --random" href="<?php echo home_url('category/random-blog/'); ?>">雑記ブログ</a></li>
-							</ul>
-						</li>
+						<li class="header__li-pc"><a class="header__li-pc-link" href="/category/what-i-did">これまでの仕事</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link" href="/category/skill-blog/">技術ブログ</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link" href="/category/study-blog/">学習ブログ</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link" href="/category/random-blog/">雑記ブログ</a></li>
 					</ul>
 				</nav>
 				<div class="header__open-btn openbtn1">
@@ -86,13 +80,13 @@
 						<span class="header__sp-sitename-sub sitename sub">WEB制作フリーランスエンジニア</span>
 					</div>
 					<ul class="header__sp-ul">
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="<?php echo home_url('contact'); ?>">お問い合わせ</a></li>
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="<?php echo home_url('self-produce'); ?>">自己紹介</a></li>
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="<?php echo home_url('category/what-i-did'); ?>">これまでの仕事</a></li>
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top sp-nav-blog" href="<?php echo home_url('blog'); ?>">--- ブログ ---</a></li>
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="<?php echo home_url('category/skill-blog/'); ?>">技術ブログ</a></li>
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="<?php echo home_url('category/study-blog/'); ?>">学習ブログ</a></li>
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="<?php echo home_url('category/random-blog/'); ?>">雑記ブログ</a></li>
+						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="#contact">お問い合わせ</a></li>
+						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="#author">自己紹介</a></li>
+						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="#what-i-did">これまでの仕事</a></li>
+						<li class="header__sp-li"><span class="header_sp-li-link sp-nav__top sp-nav-blog">--- ブログ ---</span></li>
+						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="#skill-blog">技術ブログ</a></li>
+						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="#study-blog">学習ブログ</a></li>
+						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="#random-blog">雑記ブログ</a></li>
 					</ul>
 				</nav>
 			</div>
