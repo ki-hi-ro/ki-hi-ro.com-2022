@@ -61,10 +61,22 @@
 				</div>
 				<nav class="header__nav-pc pc-nav">
 					<ul class="header__ul-pc">
-						<li class="header__li-pc"><a class="header__li-pc-link" href="/category/what-i-did">これまでの仕事</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link" href="/category/skill-blog/">技術ブログ</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link" href="/category/study-blog/">学習ブログ</a></li>
-						<li class="header__li-pc"><a class="header__li-pc-link" href="/category/random-blog/">雑記ブログ</a></li>
+						<?php $current_cat_slug = get_query_var('category_name'); ?>
+						<?php 
+						if($current_cat_slug == "what-i-did") : 
+							$current_class_i_did = "--what-i-did --current";
+						elseif($current_cat_slug == "skill-blog") : 
+							$current_class_skill = "--skill-blog --current";  
+						elseif($current_cat_slug == "study-blog") : 
+							$current_class_study = "--study-blog --current";  
+						elseif($current_cat_slug == "random-blog") : 
+							$current_class_random = "--random-blog --current";  	
+						endif; 
+						?>
+						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_i_did; ?>" href="/category/what-i-did">これまでの仕事</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_skill; ?>" href="/category/skill-blog/">技術ブログ</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_study; ?>" href="study-blog/">学習ブログ</a></li>
+						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_random; ?>" href="/category/random-blog/">雑記ブログ</a></li>
 					</ul>
 				</nav>
 				<div class="header__open-btn openbtn1">

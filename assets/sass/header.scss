@@ -48,6 +48,18 @@
   }
   &__li-pc-link {
     color: $black;
+    &.--current {
+      font-weight: bold;
+    }
+    &.--skill-blog {
+      color: $skill-color;
+    }
+    &.--study-blog {
+      color: $study-color;
+    }
+    &.--random-blog {
+      color: $random-color;
+    }
   }
   &__has-child-li-link {
     color: $black;

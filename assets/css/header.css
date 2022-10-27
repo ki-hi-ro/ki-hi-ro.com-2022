@@ -67,6 +67,22 @@
   color: #000;
 }
 
+.header__li-pc-link.--current {
+  font-weight: bold;
+}
+
+.header__li-pc-link.--skill-blog {
+  color: #0a2c54;
+}
+
+.header__li-pc-link.--study-blog {
+  color: #59a076;
+}
+
+.header__li-pc-link.--random-blog {
+  color: #88466e;
+}
+
 .header__has-child-li-link {
   color: #000;
 }
