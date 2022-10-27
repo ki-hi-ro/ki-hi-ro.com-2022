@@ -3769,8 +3769,8 @@ h3.sidebar-ttl {
 
 .blog-article__aside-table-of-contents {
   position: sticky;
-  top: 10px;
-  padding-top: 102px;
+  top: 170px;
+  padding-top: 0;
 }
 
 @media (min-width: 768px) {
@@ -3884,5 +3884,6 @@ h3.sidebar-ttl {
 }
 
 .blog-article__main {
-  padding-top: 102px;
+  padding-top: 177px;
+  margin-top: 0;
 }

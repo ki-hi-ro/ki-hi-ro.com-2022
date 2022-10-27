@@ -36,6 +36,7 @@
 
 .author-box__text {
   font-size: 15px;
+  padding: 0 !important;
 }
 
 .author-box__link {
