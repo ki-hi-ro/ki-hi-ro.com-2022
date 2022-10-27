@@ -763,7 +763,7 @@ h3,
 }
 
 .single .breadcrumbs {
-  padding: 2px 2px 0 0;
+  padding: 2px 2px 0 20px;
 }
 
 @media (max-width: 767px) {
@@ -947,8 +947,14 @@ main {
 
 .single h1 {
   color: #000;
-  text-align: center;
   margin-top: 10px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .single h1 {
+    padding-left: 20px;
+  }
 }
 
 .single article ul {
