@@ -832,6 +832,11 @@ main {
   margin-top: 40px;
 }
 
+.single p.page-top {
+  padding: 0;
+  margin: 0;
+}
+
 .single .author p {
   padding: 0 20px 0 20px;
   color: #000;
@@ -2333,6 +2338,9 @@ a.top-contents__card.--blog {
 .single p a {
   text-decoration: none;
   font-weight: 600;
+}
+.single p a.page-top__link {
+  font-weight: normal;
 }
 
 .single article ul {

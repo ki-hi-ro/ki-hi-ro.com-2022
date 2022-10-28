@@ -20,6 +20,7 @@ wp_enqueue_style('news-ticker', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider
 wp_enqueue_style('top-news', get_template_directory_uri() . '/assets/css/top-news.css', [], date("YmdHi"));
 wp_enqueue_style('index-template', get_template_directory_uri() . '/assets/css/index-template.css', [], date("YmdHi"));
 wp_enqueue_style('author', get_template_directory_uri() . '/assets/css/author.css', [], date("YmdHi"));
+wp_enqueue_style('page-top', get_template_directory_uri() . '/assets/css/page-top.css', [], date("YmdHi"));
 
 // js
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);
@@ -33,6 +34,7 @@ wp_enqueue_script('smoothscroll', get_template_directory_uri() . '/assets/js/smo
 wp_enqueue_script('page-link', get_template_directory_uri() . '/assets/js/page-link.js', null, date("YmdHi"), true);
 wp_enqueue_script('bxSlider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js', null, null, true);
 wp_enqueue_script('top-news', get_template_directory_uri() . '/assets/js/top-news.js', null, date("YmdHi"), true);
+wp_enqueue_script('page-top', get_template_directory_uri() . '/assets/js/page-top.js', null, date("YmdHi"), true);
 
 // body_class()にページスラッグを追加
 add_filter( 'body_class', 'add_page_slug_class_name' );

@@ -20,6 +20,8 @@
 	</nav>
 </footer>
 
+<p class="page-top"><a class="page-top__link" href="#">ページ<br>最上部へ</a></p>
+
 <?php wp_footer(); ?>
 </body>
 
