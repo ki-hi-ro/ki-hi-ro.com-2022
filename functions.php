@@ -21,14 +21,15 @@ wp_enqueue_style('top-news', get_template_directory_uri() . '/assets/css/top-new
 wp_enqueue_style('index-template', get_template_directory_uri() . '/assets/css/index-template.css', [], date("YmdHi"));
 wp_enqueue_style('author', get_template_directory_uri() . '/assets/css/author.css', [], date("YmdHi"));
 wp_enqueue_style('page-top', get_template_directory_uri() . '/assets/css/page-top.css', [], date("YmdHi"));
+wp_enqueue_style('single-post', get_template_directory_uri() . '/assets/css/single-post.css', [], date("YmdHi"));
 
 // js
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);
-wp_enqueue_script('jquery', null , null, null, true);
-wp_enqueue_script('cdn-slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js' , null, null, true);
-wp_enqueue_script('slick', get_template_directory_uri() . '/assets/js/slick.js' , null, null, true);
-wp_enqueue_script('hamburger', get_template_directory_uri() . '/assets/js/hamburger.js' , null, date("YmdHi"), true);
-wp_enqueue_script('tag', get_template_directory_uri() . '/assets/js/tag.js' , null, date("YmdHi"), true);
+wp_enqueue_script('jquery', null, null, null, true);
+wp_enqueue_script('cdn-slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', null, null, true);
+wp_enqueue_script('slick', get_template_directory_uri() . '/assets/js/slick.js', null, null, true);
+wp_enqueue_script('hamburger', get_template_directory_uri() . '/assets/js/hamburger.js', null, date("YmdHi"), true);
+wp_enqueue_script('tag', get_template_directory_uri() . '/assets/js/tag.js', null, date("YmdHi"), true);
 wp_enqueue_script('view-port', get_template_directory_uri() . '/assets/js/view-port.js', null, date("YmdHi"), true);
 wp_enqueue_script('smoothscroll', get_template_directory_uri() . '/assets/js/smoothscroll.js', null, date("YmdHi"), true);
 wp_enqueue_script('page-link', get_template_directory_uri() . '/assets/js/page-link.js', null, date("YmdHi"), true);
@@ -37,10 +38,11 @@ wp_enqueue_script('top-news', get_template_directory_uri() . '/assets/js/top-new
 wp_enqueue_script('page-top', get_template_directory_uri() . '/assets/js/page-top.js', null, date("YmdHi"), true);
 
 // body_class()にページスラッグを追加
-add_filter( 'body_class', 'add_page_slug_class_name' );
-function add_page_slug_class_name( $classes ) {
-  if ( is_page() ) {
-    $page = get_post( get_the_ID() );
+add_filter('body_class', 'add_page_slug_class_name');
+function add_page_slug_class_name($classes)
+{
+  if (is_page()) {
+    $page = get_post(get_the_ID());
     $classes[] = $page->post_name;
   }
   return $classes;
@@ -48,19 +50,21 @@ function add_page_slug_class_name( $classes ) {
 
 add_theme_support('post-thumbnails');
 
-function new_excerpt_more($more) {
-        return ' ... ';
+function new_excerpt_more($more)
+{
+  return ' ... ';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
-function my_tags_in_cat( $cat_id ){
-	// 現在のカテゴリーに属する投稿のIDを配列で取得
-	$post_ids = get_objects_in_term( $cat_id, 'category' );
+function my_tags_in_cat($cat_id)
+{
+  // 現在のカテゴリーに属する投稿のIDを配列で取得
+  $post_ids = get_objects_in_term($cat_id, 'category');
 
-	// 現在のカテゴリーに属する投稿で利用しているタグのオブジェクトを取得
-	$tags_object = wp_get_object_terms( $post_ids, 'post_tag' );
+  // 現在のカテゴリーに属する投稿で利用しているタグのオブジェクトを取得
+  $tags_object = wp_get_object_terms($post_ids, 'post_tag');
 
-	return $tags_object;
+  return $tags_object;
 }
 
 register_sidebar(array(
