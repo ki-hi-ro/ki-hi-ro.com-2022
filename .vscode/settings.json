@@ -80,10 +80,7 @@
     "zlib",
     "wordpress"
   ],
-  "liveSassCompile.settings.autoprefix": [
-
-  ],
-  "eslint.validate": [
-  
-  ]
+  "liveSassCompile.settings.autoprefix": [],
+  "eslint.validate": [],
+  "phpfmt.detect_indent": true
 }

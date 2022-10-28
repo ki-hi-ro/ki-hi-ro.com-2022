@@ -78,17 +78,6 @@ $cat = $category[0]; ?>
           </div>
     </article>
   </div>
-  <div class="l-pc-right">
-    <?php echo get_template_part('template-parts/author'); ?>
-    <h3 class="sidebar-ttl">過去記事アーカイブ</h3>
-    <ul class="sidebar-archive-list">
-      <?php wp_get_archives('post_type=post&type=monthly&show_post_count=1'); ?>
-    </ul>
-    <div class="blog-article__aside-table-of-contents">
-      <h3 class="sidebar-ttl">目次</h3>
-      <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()) : ?>
-      <?php endif; ?>
-    </div>
-  </div>
+  <?php get_sidebar(); ?>
 </main>
 <?php get_footer(); ?>

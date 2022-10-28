@@ -20,10 +20,7 @@
       </ul>
     </div>
   </div>
-  <div class="l-pc-right">
-    <?php echo get_template_part('template-parts/author'); ?>
-  </div>
-
+  <?php get_sidebar(); ?>
 </main>
 
 <?php get_footer(); ?>

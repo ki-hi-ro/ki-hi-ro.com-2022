@@ -3501,10 +3501,6 @@ section#contact {
   display: flex;
 }
 
-.single aside {
-  width: 30%;
-}
-
 @media (max-width: 999px) {
   .single-page-wrap {
     flex-direction: column;
@@ -3515,10 +3511,6 @@ section#contact {
     padding-right: 0;
     margin-right: 0;
     margin-left: 0;
-  }
-
-  .single aside {
-    width: 100%;
   }
 }
 
