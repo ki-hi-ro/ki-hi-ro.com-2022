@@ -1,0 +1,19 @@
+@import "breakpoint";
+
+.single-article {
+  &__bread {
+    @include mq(md) {
+      padding: 2px 2px 0 20px;
+    }
+  }
+  &__post {
+    width: 100%;
+    .wp-block-image.w-50 {
+      padding: 0;
+      margin: 40px auto;
+      @include mq(md) {
+        width: 50%;
+      }
+    }
+  }
+}

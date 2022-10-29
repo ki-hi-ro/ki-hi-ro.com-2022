@@ -3,15 +3,15 @@
 $cat = $category[0]; ?>
 <main class="l-container">
   <div class="l-pc-left">
-    <article>
-      <div class="breadcrumbs">
+    <article class="single-article">
+      <div class="single-article__bread breadcrumbs">
         <?php if (function_exists('bcn_display')) {
           bcn_display();
         } ?>
       </div>
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
-          <div class="single-post author calendar single-wrap">
+          <div class="single-article__post author calendar single-wrap">
             <div class="post-meta">
               <span class="post-date">投稿日: <?php echo get_the_date('Y.m.d'); ?></span>
               <span class="modify-date">更新日: <?php echo get_the_modified_date('Y.m.d'); ?></span>

@@ -24,6 +24,8 @@ wp_enqueue_style('page-top', get_template_directory_uri() . '/assets/css/page-to
 wp_enqueue_style('single-post', get_template_directory_uri() . '/assets/css/single-post.css', [], date("YmdHi"));
 wp_enqueue_style('sidebar-archive', get_template_directory_uri() . '/assets/css/sidebar-archive.css', [], date("YmdHi"));
 wp_enqueue_style('twitter', get_template_directory_uri() . '/assets/css/twitter.css', [], date("YmdHi"));
+wp_enqueue_style('html-tag', get_template_directory_uri() . '/assets/css/html-tag.css', [], date("YmdHi"));
+wp_enqueue_style('single-article', get_template_directory_uri() . '/assets/css/single-article.css', [], date("YmdHi"));
 
 // js
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);

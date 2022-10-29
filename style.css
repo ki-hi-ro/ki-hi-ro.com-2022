@@ -6,55 +6,6 @@ Theme URI: https://ki-hi-ro.com
 Version: 1.0
 Author: Shibata Hiroki
 */
-:root {
-  --skill-color: #0a2c54;
-  --study-color: #59a076;
-  --random-color: #88466e;
-}
-
-body {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 300;
-}
-
-p,
-li {
-  font-size: 17px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1;
-  color: inherit;
-}
-
-body,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Noto, Hiragino Sans, Helvetica, Arial, sans-serif;
-  text-rendering: optimizeLegibility;
-  background: transparent;
-  -webkit-font-smoothing: antialiased;
-  line-height: 2;
-}
 
 h1,
 h2 {
@@ -122,10 +73,6 @@ h3,
 .single .sns_button,
 .single #sidebar {
   display: none;
-}
-
-.single .breadcrumbs {
-  padding: 10px 0 25px;
 }
 
 .single .wp-block-image {
@@ -759,16 +706,6 @@ h3,
 @media (min-width: 1200px) {
   .breadcrumbs .breadcrumb {
     padding: 16px 22px 15px;
-  }
-}
-
-.single .breadcrumbs {
-  padding: 2px 2px 0 20px;
-}
-
-@media (max-width: 767px) {
-  .single .breadcrumbs {
-    padding: 0;
   }
 }
 

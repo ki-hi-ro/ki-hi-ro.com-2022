@@ -61,16 +61,16 @@
 				<nav class="header__nav-pc pc-nav">
 					<ul class="header__ul-pc">
 						<?php $current_cat_slug = get_query_var('category_name'); ?>
-						<?php 
-						if($current_cat_slug == "what-i-did") : 
+						<?php
+						if($current_cat_slug == "what-i-did") :
 							$current_class_i_did = "--what-i-did --current";
-						elseif($current_cat_slug == "skill-blog") : 
-							$current_class_skill = "--skill-blog --current";  
-						elseif($current_cat_slug == "study-blog") : 
-							$current_class_study = "--study-blog --current";  
-						elseif($current_cat_slug == "random-blog") : 
-							$current_class_random = "--random-blog --current";  	
-						endif; 
+						elseif($current_cat_slug == "skill-blog") :
+							$current_class_skill = "--skill-blog --current";
+						elseif($current_cat_slug == "study-blog") :
+							$current_class_study = "--study-blog --current";
+						elseif($current_cat_slug == "random-blog") :
+							$current_class_random = "--random-blog --current";
+						endif;
 						?>
 						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_i_did; ?>" href="/category/what-i-did"><span class="header__sp-none">これまでの</span>仕事</a></li>
 						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_skill; ?>" href="/category/skill-blog/">技術<span class="header__sp-none">ブログ</span></a></li>

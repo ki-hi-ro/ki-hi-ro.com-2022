@@ -1,0 +1,20 @@
+@media (min-width: 768px) {
+  .single-article__bread {
+    padding: 2px 2px 0 20px;
+  }
+}
+
+.single-article__post {
+  width: 100%;
+}
+
+.single-article__post .wp-block-image.w-50 {
+  padding: 0;
+  margin: 40px auto;
+}
+
+@media (min-width: 768px) {
+  .single-article__post .wp-block-image.w-50 {
+    width: 50%;
+  }
+}
