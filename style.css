@@ -994,6 +994,7 @@ a {
   background-color: transparent;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  word-break: break-all;
 }
 
 html {
