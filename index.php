@@ -15,15 +15,12 @@
       <ul class="blog-list-grid">
         <?php foreach ($myposts as $post) : setup_postdata($post); ?>
           <?php echo get_template_part('template-parts/blog-list-grid'); ?>
-        <?php endforeach;	
+        <?php endforeach;
         wp_reset_postdata(); ?>
       </ul>
     </div>
   </div>
-  <div class="l-pc-right">
-    <?php echo get_template_part('template-parts/author'); ?>
-  </div>
-
+  <?php get_sidebar(); ?>
 </main>
 
-<?php get_footer('top'); ?>
+<?php get_footer(); ?>

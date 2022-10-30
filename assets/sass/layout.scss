@@ -1,19 +1,19 @@
-@import "breakpoint"; 
+@import "breakpoint";
 
 .l-container {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   max-width: 1140px;
-  padding: 161px 20px 0;
+  padding: 0 20px;
   @include mq(sm) {
-    padding-top: 177px;
+    padding-top: 0;
   }
   @include mq(lg) {
     flex-direction: row;
   }
   @include mq(xl) {
-    padding: 177px 0 0;
+    padding: 0;
   }
 }
 

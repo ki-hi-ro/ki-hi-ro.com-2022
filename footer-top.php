@@ -3,10 +3,6 @@
 <footer>
 	<nav>
 		<div class="nav-contents">
-			<h4><a href="#contact">お問い合わせ</a></h4>
-		</div>
-
-		<div class="nav-contents">
 			<h4>仕事</h4>
 			<ul>
 				<li><a href="#what-i-did">これまでの仕事</a></li>
