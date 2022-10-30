@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php $category = get_the_category();
 $cat = $category[0]; ?>
-<main class="l-container">
+<main class="l-container <?php echo $cat->slug; ?>">
   <div class="l-pc-left">
     <article>
       <div class="breadcrumbs">
