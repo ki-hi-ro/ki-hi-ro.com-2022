@@ -3,11 +3,12 @@
 .author-box {
   background-color: $white;
   padding: 26px 20px 20px;
-  margin: 15px auto 0;
+  margin: 30px auto 0;
   border: 1px solid $gray;
   width: 100%;
   @include mq(lg) {
     width: auto;
+    margin-top: 15px;
   }
   &__img-circle {
     width: 130px;

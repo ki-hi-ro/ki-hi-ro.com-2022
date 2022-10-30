@@ -7,7 +7,7 @@
       $current_cat_id = get_query_var('cat');
       $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 9,
+        'posts_per_page' => 15,
         'category' => $current_cat_id,
       );
       $myposts = get_posts($args);
