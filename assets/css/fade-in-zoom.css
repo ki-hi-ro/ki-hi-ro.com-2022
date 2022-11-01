@@ -47,8 +47,16 @@
 }
 
 .fadein {
-  width: 1140px;
+  width: 100%;
   margin: 0 auto;
+  padding: 15px;
+}
+
+@media (min-width: 1200px) {
+  .fadein {
+    width: 1140px;
+    padding: 0;
+  }
 }
 
 .fadein__ttl {
@@ -60,8 +68,8 @@
 .fadein__contents {
   display: grid;
   display: -ms-grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .fadein__img {
