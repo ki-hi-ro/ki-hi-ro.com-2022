@@ -3613,10 +3613,6 @@ section#contact {
   display: flex;
 }
 
-.single aside {
-  width: 30%;
-}
-
 @media (max-width: 999px) {
   .single-page-wrap {
     flex-direction: column;
@@ -3797,4 +3793,13 @@ h3.sidebar-ttl {
 .google-auto-placed,
 .mys-wrapper {
   display: none;
+}
+
+.blog-article__aside-table-of-contents {
+  position: sticky;
+  top: 20px;
+  padding-top: 0;
+}
+.single .ez-toc-widget-container li.active>a {
+  font-weight: 500;
 }
