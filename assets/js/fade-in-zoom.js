@@ -21,11 +21,12 @@ if (windowwidth > 768) {
 
 jQuery("#slider").vegas({
   overlay: false, 
-  transition: "blur", 
-  transitionDuration: 2000, 
-  delay: 10000,
-  animationDuration: 20000,
+  transition: "fade", 
+  transitionDuration: 3000, 
+  delay: 5000,
+  animationDuration: 60000,
   animation: "kenburns", 
   slides: responsiveImage, 
   timer:false,
+  shuffle:true,
 });
