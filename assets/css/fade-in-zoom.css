@@ -5,9 +5,34 @@
 }
 
 .zoom-slider {
-  height: 100vh;
-  width: 1140px;
+  height: 60vh;
   margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .zoom-slider {
+    width: 1140px;
+  }
+}
+
+.zoom-slider__text {
+  position: absolute;
+  z-index: 2;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 54px;
+}
+
+@media (min-width: 1200px) {
+  .zoom-slider__text {
+    font-size: 72px;
+  }
 }
 
 @keyframes kenburns {
