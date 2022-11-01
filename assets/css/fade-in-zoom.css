@@ -48,7 +48,7 @@
 
 .fadein {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   padding: 15px;
 }
 
@@ -80,4 +80,34 @@
 
 .fadein__img {
   width: 100%;
+}
+
+.fadein__img.--fadeInTrigger {
+  opacity: 0;
+}
+
+.fadein__img.--fadeInTrigger-sp {
+  opacity: 0;
+}
+
+@media (min-width: 576px) {
+  .fadein__img.--fadeInTrigger-sp {
+    opacity: 1;
+  }
+}
+
+.fadein__img.--fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
