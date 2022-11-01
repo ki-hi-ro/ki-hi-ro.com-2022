@@ -1,8 +1,11 @@
-.fade-in-zoom .google-auto-placed {
+.fade-in-zoom .google-auto-placed,
+.fade-in-zoom .mys-wrapper,
+.fade-in-zoom .page-top {
   display: none;
 }
 
 .zoom-slider {
-  width: 100%;
   height: 100vh;
+  width: 1140px;
+  margin: 0 auto;
 }
