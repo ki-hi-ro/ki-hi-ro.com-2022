@@ -27,5 +27,5 @@ jQuery("#slider").vegas({
   animationDuration: 20000, //スライドアニメーション時間をミリ秒単位で設定
   animation: "kenburns", //スライドアニメーションの種類。http://vegas.jaysalvat.com/documentation/transitions/参照。kenburns、kenburnsUp、kenburnsDown、kenburnsRight、kenburnsLeft、kenburnsUpLeft、kenburnsUpRight、kenburnsDownLeft、kenburnsDownRight、randomが設定可能。
   slides: responsiveImage, //画像設定を読む
-  //timer:false,// プログレスバーを非表示したい場合はこのコメントアウトを外してください
+  timer:false,// プログレスバーを非表示したい場合はこのコメントアウトを外してください
 });
