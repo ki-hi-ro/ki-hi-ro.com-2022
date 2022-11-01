@@ -19,13 +19,15 @@
   &__text {
     position: absolute;
     z-index: 2;
-    top: 45%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: $white;
+    color: $white !important;
+    margin-top: 0 !important;
+    font-weight: normal !important;
     font-size: 54px;
     @include mq(xl) {
       font-size: 72px;
@@ -41,5 +43,24 @@
   100% {
     -webkit-transform: scale(1.5);
     transform: scale(1.5);
+  }
+}
+
+.fadein {
+  width: 1140px;
+  margin: 0 auto;
+  &__ttl {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center;
+  }
+  &__contents {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+  }
+  &__img {
+    width: 100%;
   }
 }

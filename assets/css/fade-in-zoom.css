@@ -19,13 +19,15 @@
 .zoom-slider__text {
   position: absolute;
   z-index: 2;
-  top: 45%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #fff;
+  color: #fff !important;
+  margin-top: 0 !important;
+  font-weight: normal !important;
   font-size: 54px;
 }
 
@@ -42,4 +44,26 @@
   100% {
     transform: scale(1.5);
   }
+}
+
+.fadein {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.fadein__ttl {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: center;
+}
+
+.fadein__contents {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.fadein__img {
+  width: 100%;
 }
