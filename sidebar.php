@@ -14,7 +14,6 @@
 
     <?php if(is_single()) : ?>
       <div class="blog-article__aside-table-of-contents">
-        <h3 class="sidebar-ttl">目次</h3>
         <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()): ?>
         <?php endif;?>
       </div>

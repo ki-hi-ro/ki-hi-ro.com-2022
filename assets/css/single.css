@@ -71,3 +71,8 @@
 .single .random-blog h2 {
   background: #88466e1a;
 }
+
+.ez-toc-widget-container h3 {
+  margin-left: 0;
+  margin-bottom: 30px;
+}
