@@ -19,7 +19,7 @@
 .zoom-slider__text {
   position: absolute;
   z-index: 2;
-  top: 47%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -69,7 +69,13 @@
   display: grid;
   display: -ms-grid;
   gap: 15px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 768px) {
+  .fadein__contents {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .fadein__img {

@@ -19,7 +19,7 @@
   &__text {
     position: absolute;
     z-index: 2;
-    top: 47%;
+    top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -63,7 +63,10 @@
     display: grid;
     display: -ms-grid;
     gap: 15px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    @include mq(md) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
   &__img {
     width: 100%;
