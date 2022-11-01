@@ -11,3 +11,14 @@
   width: 1140px;
   margin: 0 auto;
 }
+
+@keyframes kenburns {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
