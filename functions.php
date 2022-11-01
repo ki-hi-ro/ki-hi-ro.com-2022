@@ -27,6 +27,9 @@ wp_enqueue_style('twitter', get_template_directory_uri() . '/assets/css/twitter.
 wp_enqueue_style('html-tag', get_template_directory_uri() . '/assets/css/html-tag.css', [], date("YmdHi"));
 wp_enqueue_style('single-article', get_template_directory_uri() . '/assets/css/single-article.css', [], date("YmdHi"));
 wp_enqueue_style('wp-pagenavi', get_template_directory_uri() . '/assets/css/wp-pagenavi.css', [], date("YmdHi"));
+wp_enqueue_style('vegas', 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css', [], date("YmdHi"));
+wp_enqueue_style('fade-in-zoom', get_template_directory_uri() . '/assets/css/fade-in-zoom.css', [], date("YmdHi"));
+
 
 // js
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);
@@ -41,6 +44,9 @@ wp_enqueue_script('page-link', get_template_directory_uri() . '/assets/js/page-l
 wp_enqueue_script('bxSlider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js', null, null, true);
 wp_enqueue_script('top-news', get_template_directory_uri() . '/assets/js/top-news.js', null, date("YmdHi"), true);
 wp_enqueue_script('page-top', get_template_directory_uri() . '/assets/js/page-top.js', null, date("YmdHi"), true);
+wp_enqueue_script('vegas', 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js', [], date("YmdHi"));
+wp_enqueue_script('fade-in-zoom', get_template_directory_uri() . '/assets/js/fade-in-zoom.js', null, date("YmdHi"), true);
+
 
 // body_class()にページスラッグを追加
 add_filter('body_class', 'add_page_slug_class_name');
