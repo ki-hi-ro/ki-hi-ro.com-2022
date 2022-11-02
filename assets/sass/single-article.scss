@@ -19,12 +19,12 @@
   &__post-meta {
     margin-top: 20px;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
     @include mq(md) {
       margin-top: 40px;
       margin-bottom: 20px;
       padding-right: 20px;
-      display: flex;
-      flex-direction: column;
     }
     @include mq(lg) {
       text-align: right;
