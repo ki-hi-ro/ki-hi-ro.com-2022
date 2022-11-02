@@ -3803,3 +3803,8 @@ h3.sidebar-ttl {
 .single .ez-toc-widget-container li.active>a {
   font-weight: 500;
 }
+
+div#ez-toc-container {
+  width: calc(100% - 35px);
+  margin: 0 auto;
+}
