@@ -4,6 +4,7 @@
   <div class="l-pc-left">
     <?php
     $current_cat_id = get_query_var('cat');
+    $current_cat_slug = get_query_var('category_name');
     if ($current_cat_id == "") {
       $post_list_ttl = "これまでに書いた記事";
     } elseif ($current_cat_id == "98") {
@@ -16,7 +17,7 @@
       $post_list_ttl = "雑記ブログ";
     }
     ?>
-    <h1 class="post-list-ttl"><?php echo $post_list_ttl; ?>の記事一覧</h1>
+    <h1 class="post-list-ttl --<?php echo $current_cat_slug; ?>"><?php echo $post_list_ttl; ?></h1>
     <div class="new-article">
       <?php
       $args = array(

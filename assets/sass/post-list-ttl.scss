@@ -1,10 +1,32 @@
+@import "color";
+@import "breakpoint";
+
 .post-list-ttl {
-  margin: 0;
-  margin-bottom: 30px;
-  border-left: 6px solid;
-  color: #333;
+  text-align: center;
+  margin-top: 30px;
   font-weight: 600;
   letter-spacing: 1.6px;
   padding: 0px 15px 0px;
   font-size: 25px;
+  color: #333;
+  @include mq(lg) {
+    text-align: left;
+    border-left: 6px solid;
+    margin: 0 0 30px 0;
+  }
+  &.--what-i-did {
+    border-color: $black;
+  }
+  &.--skill-blog {
+    border-color: $skill-color;
+    color: $skill-color;
+  }
+  &.--study-blog {
+    border-color: $study-color;
+    color: $study-color;
+  }
+  &.--random-blog {
+    border-color: $random-color;
+    color: $random-color;
+  }
 }
