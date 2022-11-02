@@ -7,7 +7,7 @@
       $current_cat_id = get_query_var('cat');
       $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 15,
+        'posts_per_page' => 30,
         'paged' => get_query_var('paged'),
         'category' => $current_cat_id,
         'post__not_in' => array(3874)
