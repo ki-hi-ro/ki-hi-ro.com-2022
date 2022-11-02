@@ -7,7 +7,7 @@ $term_desc = $term->description;
 ?>
 <main class="l-container">
   <div class="l-pc-left">
-    <h1 class="tag-page__ttl"><?php echo $term_name; ?>の記事一覧</h1>
+    <h1 class="post-list-ttl"><?php echo $term_name; ?>の記事一覧</h1>
     <div class="new-article">
       <?php
       $current_url =  get_pagenum_link(get_query_var('paged'));

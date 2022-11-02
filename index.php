@@ -2,6 +2,7 @@
 
 <main class="l-container test">
   <div class="l-pc-left">
+    <h1 class="post-list-ttl">これまでに書いた記事一覧</h1>
     <div class="new-article">
       <?php
       $current_cat_id = get_query_var('cat');
