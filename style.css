@@ -3796,7 +3796,15 @@ h3.sidebar-ttl {
   position: sticky;
   top: 20px;
   padding-top: 0;
+  display: none;
 }
+
+@media (min-width: 992px) {
+  .blog-article__aside-table-of-contents {
+    display: block;
+  }
+}
+
 .single .ez-toc-widget-container li.active>a {
   font-weight: 500;
 }
