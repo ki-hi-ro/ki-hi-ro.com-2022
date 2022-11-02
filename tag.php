@@ -10,10 +10,6 @@ $term_desc = $term->description;
     <h1 class="post-list-ttl"><?php echo $term_name; ?>の記事一覧</h1>
     <div class="new-article">
       <?php
-      $current_url =  get_pagenum_link(get_query_var('paged'));
-      $uri = rtrim($current_url, '/');
-      $uri = substr($uri, strrpos($uri, '/') + 1);
-      $uri = abs($uri);
       $args = array(
         'post_type' => 'post',
         'posts_per_page' => 30,
