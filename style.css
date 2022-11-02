@@ -3804,6 +3804,12 @@ h3.sidebar-ttl {
 }
 
 div#ez-toc-container {
-  width: calc(100% - 35px);
+  width: 100%;
   margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  div#ez-toc-container {
+    width: calc(100% - 35px);
+  }
 }
