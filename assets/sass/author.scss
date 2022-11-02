@@ -9,7 +9,7 @@
   width: 100%;
   @include mq(lg) {
     width: auto;
-    margin-top: 15px;
+    margin-top: 0;
   }
   &__img-circle {
     width: 130px;
