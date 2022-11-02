@@ -13,6 +13,7 @@
 @media (min-width: 1200px) {
   .zoom-slider {
     width: 1140px;
+    margin-top: 30px;
   }
 }
 
