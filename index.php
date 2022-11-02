@@ -2,10 +2,23 @@
 
 <main class="l-container test">
   <div class="l-pc-left">
-    <h1 class="post-list-ttl">これまでに書いた記事一覧</h1>
+    <?php
+    $current_cat_id = get_query_var('cat');
+    if ($current_cat_id == "") {
+      $post_list_ttl = "これまでに書いた記事";
+    } elseif ($current_cat_id == "98") {
+      $post_list_ttl = "これまでの仕事";
+    } elseif ($current_cat_id == "60") {
+      $post_list_ttl = "技術ブログ";
+    } elseif ($current_cat_id == "69") {
+      $post_list_ttl = "学習ブログ";
+    } elseif ($current_cat_id == "67") {
+      $post_list_ttl = "雑記ブログ";
+    }
+    ?>
+    <h1 class="post-list-ttl"><?php echo $post_list_ttl; ?>の記事一覧</h1>
     <div class="new-article">
       <?php
-      $current_cat_id = get_query_var('cat');
       $args = array(
         'post_type' => 'post',
         'posts_per_page' => 30,
