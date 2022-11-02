@@ -11,6 +11,7 @@
 @media (min-width: 1200px) {
   .page-top {
     right: calc((50% - 1140px / 2));
+    padding-right: 0 !important;
   }
 }
 

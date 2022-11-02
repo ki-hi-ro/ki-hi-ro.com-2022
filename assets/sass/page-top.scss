@@ -11,6 +11,7 @@
   right: 10px;
   @include mq(xl) {
     right: calc((50% - 1140px / 2));
+    padding-right: 0!important;
   }
   &.--up-move {
     animation: UpAnime 0.5s forwards;
