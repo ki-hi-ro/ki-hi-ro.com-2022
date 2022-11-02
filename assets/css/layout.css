@@ -26,14 +26,14 @@
 }
 
 .l-pc-left {
-  margin-right: 20px;
+  margin-right: 40px;
   margin-bottom: 30px;
   width: 100%;
 }
 
 @media (min-width: 992px) {
   .l-pc-left {
-    width: calc((100% - 20px) / 12 * 8);
+    width: calc((100% - 40px) / 12 * 8);
   }
 }
 
@@ -43,6 +43,6 @@
 
 @media (min-width: 992px) {
   .l-pc-right {
-    width: calc((100% - 20px) / 12 * 4);
+    width: calc((100% - 40px) / 12 * 4);
   }
 }
