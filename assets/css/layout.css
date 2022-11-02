@@ -21,6 +21,7 @@
 @media (min-width: 1200px) {
   .l-container {
     padding: 0;
+    margin-top: 30px;
   }
 }
 

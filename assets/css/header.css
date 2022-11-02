@@ -81,7 +81,7 @@
 
 @media (min-width: 768px) {
   .header__li-pc-link {
-    padding: 20px 24px;
+    padding: 15px 24px 20px;
   }
 }
 
