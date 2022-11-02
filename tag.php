@@ -1,37 +1,34 @@
 <?php get_header(); ?>
-
 <?php
 $term = get_queried_object();
 $term_slug = $term->slug;
 $term_name = $term->name;
 $term_desc = $term->description;
 ?>
-
-<?php echo get_template_part('template-parts/mv'); ?>
-
-<main class="container">
-
-  <section class="top-section sidebar__blog sidebar__contents">
-    <h4><?php echo $term_name; ?>の記事一覧</h4>
-    <p><?php echo $term_desc; ?></p>
-    <ul class="blog-list-grid">
+<main class="l-container">
+  <div class="l-pc-left">
+    <h1><?php echo $term_name; ?>の記事一覧</h1>
+    <div class="new-article">
       <?php
+      $current_url =  get_pagenum_link(get_query_var('paged'));
+      $uri = rtrim($current_url, '/');
+      $uri = substr($uri, strrpos($uri, '/') + 1);
+      $uri = abs($uri);
       $args = array(
-        'posts_per_page' => -1,
+        'post_type' => 'post',
+        'posts_per_page' => 30,
         'tag' => $term_slug
       );
-      $the_query = new WP_Query($args);
-      if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
+      $myposts = get_posts($args);
+      ?>
+      <ul class="blog-list-grid">
+        <?php foreach ($myposts as $post) : setup_postdata($post); ?>
           <?php echo get_template_part('template-parts/blog-list-grid'); ?>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-      <?php else : ?>
-        <h2>記事がありません</h2>
-      <?php endif; ?>
-    </ul>
-
-  </section>
-
+        <?php endforeach;
+        wp_reset_postdata(); ?>
+      </ul>
+    </div>
+  </div>
+  <?php get_sidebar();?>
 </main>
-
 <?php get_footer(); ?>
