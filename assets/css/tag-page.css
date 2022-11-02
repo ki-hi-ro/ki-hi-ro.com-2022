@@ -1,0 +1,10 @@
+.tag-page__ttl {
+  margin: 0;
+  margin-bottom: 30px;
+  border-left: 6px solid;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  padding: 0px 15px 0px;
+  font-size: 25px;
+}
