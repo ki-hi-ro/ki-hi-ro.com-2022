@@ -3814,3 +3814,9 @@ div#ez-toc-container {
     width: calc(100% - 35px);
   }
 }
+
+@media (max-width: 575px) {
+  .s-sp-none {
+    display: none;
+  }
+}
