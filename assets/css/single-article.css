@@ -38,3 +38,8 @@
     text-align: right;
   }
 }
+
+.single-article .book-img {
+  width: 150px;
+  margin: 0 auto;
+}
