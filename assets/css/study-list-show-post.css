@@ -8,6 +8,6 @@
   margin-left: 0;
 }
 
-.study-list-show-post .wp-show-posts-columns#wpsp-5266 .wp-show-posts-inner:nth-of-type(2n + 1) {
-  margin-left: -2em;
+.study-list-show-post .wp-show-posts-columns#wpsp-5266 .wp-show-posts-single:nth-child(2n + 1) .wp-show-posts-inner {
+  margin-left: 0;
 }

@@ -8,8 +8,8 @@
   }
   .wp-show-posts-columns#wpsp-5266 {
     margin-left: 0;
-  }
-  .wp-show-posts-columns#wpsp-5266 .wp-show-posts-inner:nth-of-type(2n + 1) {
-      margin-left: -2em;
+    .wp-show-posts-single:nth-child(2n + 1) .wp-show-posts-inner {
+      margin-left: 0;
+    }
   }
 }
