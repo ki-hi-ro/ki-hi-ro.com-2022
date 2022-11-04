@@ -36,8 +36,11 @@
   ul,
   ol {
     margin-top: 10px;
+    padding-left: 20px;
+    font-size: 16px;
     @include mq(md) {
       margin-left: 20px;
+      padding-left: 40px;
     }
   }
 }
