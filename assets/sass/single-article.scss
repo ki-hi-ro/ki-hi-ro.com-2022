@@ -33,7 +33,8 @@
     width: 150px;
     margin: 0 auto;
   }
-  ul {
+  ul,
+  ol {
     margin-top: 10px;
     @include mq(md) {
       margin-left: 20px;

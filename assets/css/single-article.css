@@ -44,12 +44,14 @@
   margin: 0 auto;
 }
 
-.single-article ul {
+.single-article ul,
+.single-article ol {
   margin-top: 10px;
 }
 
 @media (min-width: 768px) {
-  .single-article ul {
+  .single-article ul,
+  .single-article ol {
     margin-left: 20px;
   }
 }
