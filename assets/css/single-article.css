@@ -48,7 +48,6 @@
 .single-article ol {
   margin-top: 10px;
   padding-left: 20px;
-  font-size: 16px !important;
 }
 
 @media (min-width: 768px) {
@@ -57,4 +56,9 @@
     margin-left: 20px;
     padding-left: 40px;
   }
+}
+
+.single-article ul li,
+.single-article ol li {
+  font-size: 16px !important;
 }
