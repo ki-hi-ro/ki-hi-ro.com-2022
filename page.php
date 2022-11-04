@@ -1,7 +1,5 @@
 <?php get_header(); ?>
-<?php $category = get_the_category();
-$cat = $category[0]; ?>
-<main class="l-container <?php echo $cat->slug; ?>">
+<main class="l-container">
   <div class="l-pc-left">
     <article class="single-article">
       <div class="single-article__bread breadcrumbs">
