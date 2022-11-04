@@ -8,11 +8,13 @@
       $uri = rtrim($current_url, '/');
       $uri = substr($uri, strrpos($uri, '/') + 1);
       $uri = abs($uri);
+      $year = get_query_var('year');
       $args = array(
         'post_type' => 'post',
         'posts_per_page' => -1,
         'tag__not_in'   => array(116),
         'monthnum' => $uri,
+        'year' => $year
       );
       $myposts = get_posts($args);
       ?>
