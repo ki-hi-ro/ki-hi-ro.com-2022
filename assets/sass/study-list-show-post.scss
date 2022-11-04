@@ -1,0 +1,9 @@
+@import "color";
+
+.study-list-show-post {
+  .wp-show-posts {
+    border: 1px solid $gray;
+    padding: 20px;
+    margin: 20px;
+  }
+}

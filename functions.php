@@ -29,6 +29,7 @@ wp_enqueue_style('wp-pagenavi', get_template_directory_uri() . '/assets/css/wp-p
 wp_enqueue_style('vegas', 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css', [], date("YmdHi"));
 wp_enqueue_style('fade-in-zoom', get_template_directory_uri() . '/assets/css/fade-in-zoom.css', [], date("YmdHi"));
 wp_enqueue_style('post-list-ttl', get_template_directory_uri() . '/assets/css/post-list-ttl.css', [], date("YmdHi"));
+wp_enqueue_style('study-list-show-post', get_template_directory_uri() . '/assets/css/study-list-show-post.css', [], date("YmdHi"));
 
 // js
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);
