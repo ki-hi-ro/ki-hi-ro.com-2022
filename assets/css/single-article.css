@@ -38,3 +38,27 @@
     text-align: right;
   }
 }
+
+.single-article .book-img {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.single-article ul,
+.single-article ol {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .single-article ul,
+  .single-article ol {
+    margin-left: 20px;
+    padding-left: 40px;
+  }
+}
+
+.single-article ul li,
+.single-article ol li {
+  font-size: 16px !important;
+}
