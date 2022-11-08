@@ -15,6 +15,18 @@
         width: 50%;
       }
     }
+    ul,
+    ol {
+      margin-top: 10px;
+      padding-left: 20px;
+      @include mq(md) {
+        margin-left: 20px;
+        padding-left: 40px;
+      }
+      li {
+        font-size: 16px !important;
+      }
+    }
   }
   &__post-meta {
     margin-top: 20px;
@@ -32,17 +44,5 @@
   .book-img {
     width: 150px;
     margin: 0 auto;
-  }
-  ul,
-  ol {
-    margin-top: 10px;
-    padding-left: 20px;
-    @include mq(md) {
-      margin-left: 20px;
-      padding-left: 40px;
-    }
-    li {
-      font-size: 16px !important;
-    }
   }
 }

@@ -1,0 +1,10 @@
+.related-post__ttl {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .related-post__ttl {
+    margin: 0 0 15px;
+  }
+}

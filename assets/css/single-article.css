@@ -19,6 +19,25 @@
   }
 }
 
+.single-article__post ul,
+.single-article__post ol {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .single-article__post ul,
+  .single-article__post ol {
+    margin-left: 20px;
+    padding-left: 40px;
+  }
+}
+
+.single-article__post ul li,
+.single-article__post ol li {
+  font-size: 16px !important;
+}
+
 .single-article__post-meta {
   margin-top: 20px;
   margin-bottom: 40px;
@@ -42,23 +61,4 @@
 .single-article .book-img {
   width: 150px;
   margin: 0 auto;
-}
-
-.single-article ul,
-.single-article ol {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-@media (min-width: 768px) {
-  .single-article ul,
-  .single-article ol {
-    margin-left: 20px;
-    padding-left: 40px;
-  }
-}
-
-.single-article ul li,
-.single-article ol li {
-  font-size: 16px !important;
 }

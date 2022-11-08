@@ -1,0 +1,11 @@
+@import "breakpoint";
+
+.related-post {
+  &__ttl {
+    font-size: 20px;
+    margin-bottom: 0;
+    @include mq(md) {
+      margin: 0 0 15px;
+    }
+  }
+}
