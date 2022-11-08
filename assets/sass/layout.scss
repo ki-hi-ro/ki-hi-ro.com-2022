@@ -15,6 +15,9 @@
   @include mq(xl) {
     padding: 0;
     margin-top: 30px;
+    &.--mt-xl-0 {
+      margin-top: 0;
+    }
   }
 }
 

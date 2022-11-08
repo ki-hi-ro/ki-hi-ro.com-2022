@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-<main class="l-container test">
+<main class="l-container --mt-xl-0">
   <div class="l-pc-left">
     <?php
     $current_cat_id = get_query_var('cat');
