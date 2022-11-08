@@ -49,7 +49,7 @@
 
 	<header class="header">
 		<div class="header__container">
-			<div class="header__contents header-nav">
+			<div class="header__contents">
 				<div class="header__logo blogname">
 					<a class="header__sitename-link" href="<?php echo home_url(); ?>">
 						<span class="header__sitename-text sitename main">ki-hi-ro.com</span>
