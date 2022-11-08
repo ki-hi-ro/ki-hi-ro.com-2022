@@ -53,6 +53,10 @@
   align-items: center;
 }
 
+.header__sitename-text {
+  line-height: 1.6;
+}
+
 .header__nav-pc {
   display: flex;
 }

@@ -859,10 +859,6 @@ main {
 }
 
 @media (max-width: 767px) {
-  span.sitename.main {
-    color: #313131db;
-  }
-
   .author p {
     padding-left: 0;
     padding-right: 0;
@@ -1071,10 +1067,6 @@ html {
   display: flex;
 }
 
-.sitename {
-  line-height: 1.6;
-}
-
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -1086,11 +1078,6 @@ header h1.title {
   margin-top: -2px;
   margin-bottom: 0;
   line-height: 30px;
-}
-
-span.sitename.sub {
-  display: inline-block;
-  font-size: 12px;
 }
 
 .nav-menu {
@@ -1399,14 +1386,6 @@ header .header-nav nav ul li a:hover {
 @media (max-width: 767px) {
   .header-nav nav.sp-nav ul {
     flex-wrap: wrap;
-  }
-
-  span.sitename.sub {
-    font-size: 10px;
-  }
-
-  .home span.sitename.sub {
-    margin-top: 3px;
   }
 
   .nav-menu__ul {

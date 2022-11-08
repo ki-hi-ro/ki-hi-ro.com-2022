@@ -52,7 +52,7 @@
 			<div class="header__contents">
 				<div class="header__logo">
 					<a class="header__sitename-link" href="<?php echo home_url(); ?>">
-						<span class="header__sitename-text sitename main">ki-hi-ro.com</span>
+						<span class="header__sitename-text">ki-hi-ro.com</span>
 					</a>
 				</div>
 				<nav class="header__nav-pc pc-nav">

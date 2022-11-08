@@ -40,6 +40,9 @@
     flex-direction: column;
     align-items: center;
   }
+  &__sitename-text {
+    line-height: 1.6;
+  }
   &__nav-pc {
     display: flex;
   }
