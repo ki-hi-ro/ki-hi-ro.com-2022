@@ -75,28 +75,6 @@
 						<li class="header__li-pc"><a class="header__li-pc-link <?php echo $current_class_random; ?>" href="/category/random-blog/">雑記<span class="header__sp-none">ブログ</span></a></li>
 					</ul>
 				</nav>
-				<!-- <div class="header__open-btn openbtn1">
-					<span class="header__open-btn-line"></span>
-					<span class="header__open-btn-line"></span>
-					<span class="header__open-btn-line"></span>
-				</div>
-				<nav class="header__nav-sp sp-nav">
-					<div class="header__sp-site-ttl header__logo blogname">
-						<a class="header__sitename-link sitename" href="<?php echo home_url(); ?>">
-							<span class="header__sp-sitename-logo sitename main">Shiata Hiroki</span>
-						</a>
-						<span class="header__sp-sitename-sub sitename sub">WEB制作フリーランスエンジニア</span>
-					</div>
-					<ul class="header__sp-ul">
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="#contact">お問い合わせ</a></li>
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="#author">自己紹介</a></li>
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav__top" href="#what-i-did">これまでの仕事</a></li>
-						<li class="header__sp-li"><span class="header_sp-li-link sp-nav__top sp-nav-blog">--- ブログ ---</span></li>
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="#skill-blog">技術ブログ</a></li>
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="#study-blog">学習ブログ</a></li>
-						<li class="header__sp-li"><a class="header_sp-li-link sp-nav-blog" href="#random-blog">雑記ブログ</a></li>
-					</ul>
-				</nav> -->
 			</div>
 		</div>
 	</header>
