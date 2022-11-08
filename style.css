@@ -1333,10 +1333,6 @@ header .header-nav nav ul li a:hover {
 }
 
 @media (max-width: 1199px) {
-  .pc-nav {
-    display: none;
-  }
-
   .openbtn1 {
     position: absolute;
     top: 50%;

@@ -41,7 +41,7 @@
 
 @media (min-width: 768px) {
   .header__contents {
-    margin: 2rem auto;
+    margin-bottom: 2rem;
   }
 }
 
@@ -57,11 +57,7 @@
   line-height: 1.6;
 }
 
-.header__nav-pc {
-  display: flex;
-}
-
-.header__ul-pc {
+.header__ul {
   flex-direction: row;
   list-style: none;
   display: flex;
@@ -71,45 +67,44 @@
   flex-wrap: wrap;
 }
 
-.header__li-pc {
-  position: relative;
+.header__li {
   width: 25%;
 }
 
 @media (min-width: 576px) {
-  .header__li-pc {
+  .header__li {
     width: auto;
   }
 }
 
-.header__li-pc-link {
+.header__li-link {
   color: #000;
   display: block;
   text-decoration: none;
   transition: all 0.3s;
   text-align: center;
-  padding: 20px 21px;
+  padding: 15px 18px 20px;
 }
 
 @media (min-width: 768px) {
-  .header__li-pc-link {
+  .header__li-link {
     padding: 15px 24px 20px;
   }
 }
 
-.header__li-pc-link.--current {
+.header__li-link.--current {
   font-weight: bold;
 }
 
-.header__li-pc-link.--skill-blog {
+.header__li-link.--skill-blog {
   color: #0a2c54;
 }
 
-.header__li-pc-link.--study-blog {
+.header__li-link.--study-blog {
   color: #59a076;
 }
 
-.header__li-pc-link.--random-blog {
+.header__li-link.--random-blog {
   color: #88466e;
 }
 
