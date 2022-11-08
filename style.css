@@ -1082,14 +1082,6 @@ html {
   padding-right: 15px;
 }
 
-header .blogname {
-  padding: 0;
-  margin-top: 0;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
 header h1.title {
   margin-top: -2px;
   margin-bottom: 0;
@@ -1385,12 +1377,6 @@ header .header-nav nav ul li a:hover {
   }
 }
 
-@media (max-width: 999px) {
-  header .blogname {
-    align-items: center;
-  }
-}
-
 @media (max-width: 768px) {
   .header-nav nav {
     padding: 0;
@@ -1452,18 +1438,6 @@ header .header-nav nav ul li a:hover {
 }
 
 @media (max-width: 575px) {
-  header .blogname {
-    line-height: 1.8;
-  }
-
-  .page header .blogname {
-    margin-top: -3px;
-  }
-
-  .single header .blogname {
-    margin-top: -3px;
-  }
-
   .single .nav-menu {
     margin-top: 2px;
   }
