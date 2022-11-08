@@ -34,6 +34,15 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin: 1rem auto 0;
+  text-align: center;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .header__contents {
+    margin: 2rem auto;
+  }
 }
 
 .header__logo {
