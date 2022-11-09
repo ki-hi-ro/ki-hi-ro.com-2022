@@ -1,0 +1,35 @@
+@import "color";
+@import "breakpoint";
+.blog-archive {
+  &__mv-text-wrap {
+    color: $white;
+    @include mq(xl) {
+      padding: 17px 64px;
+    }
+  }
+  &__mv-text {
+    font-weight: normal;
+  }
+  &__scroll::after {
+    background: $black;
+  }
+  &__scroll-text {
+    color: $black;
+  }
+}
+@mixin mv-text-wrap-bg-color($blog-color) {
+  .blog-archive {
+    &__mv-text-wrap {
+      background-color: $blog-color;
+    }
+  }
+}
+.category-skill-blog {
+  @include mv-text-wrap-bg-color($skill-color);
+}
+.category-study-blog {
+  @include mv-text-wrap-bg-color($study-color);
+}
+.category-random-blog {
+  @include mv-text-wrap-bg-color($random-color);
+}

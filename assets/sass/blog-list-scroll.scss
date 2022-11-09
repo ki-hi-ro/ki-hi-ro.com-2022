@@ -1,0 +1,99 @@
+@import "breakpoint";
+@import "color";
+.blog-list-scroll {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  padding-bottom: 5px;
+  @include mq(xl) {
+    margin: 0 auto;
+  }
+  &__link {
+    width: 190px;
+    @include mq(md) {
+      width: 322px;
+    }
+    &:not(:last-child) {
+      margin: 0 10px 10px 0;
+      @include mq(xl) {
+        margin: 0 20px 10px 0;
+      }
+      display: flex;
+    }
+  }
+  &__contents {
+    max-width: 750px;
+    padding: 10px;
+    height: 251px;
+    margin: 0 auto;
+    border: 1px solid $gray;
+    color: $black;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    @include mq(md) {
+      height: 357px;
+    }
+  }
+  &__thumb-nail-wrap {
+    margin-bottom: 15px;
+    width: 170px;
+    height: 100px;
+    @include mq(md) {
+      width: 300px;
+      height: 200px;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  &__meta {
+    @include mq(md) {
+      width: 50%;
+      text-align: center;
+      flex-direction: column;
+    }
+  }
+  // &__date {
+
+  // }
+  &__tag {
+    border: 1px solid #d2d2d2;
+    text-align: center;
+    display: inline-block;
+    padding: 0px 20px;
+    margin: 3px 0;
+    font-size: 11px;
+    @include mq(md) {
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+  &__ttl {
+    @include mq(md) {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+  }
+}
+.blog-tab__item--skill.current-tab.blog-tab__skill,
+.blog-tab__item--study.current-tab.blog-tab__skill,
+.blog-tab__item--random.current-tab.blog-tab__skill {
+  background-color: var(--skill-color);
+}
+
+.blog-tab__item--skill.current-tab.blog-tab__study,
+.blog-tab__item--study.current-tab.blog-tab__study,
+.blog-tab__item--random.current-tab.blog-tab__study {
+  background-color: var(--study-color);
+}
+
+.blog-tab__item--skill.current-tab.blog-tab__random,
+.blog-tab__item--study.current-tab.blog-tab__random,
+.blog-tab__item--random.current-tab.blog-tab__random {
+  background-color: var(--random-color);
+}

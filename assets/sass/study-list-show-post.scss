@@ -1,0 +1,15 @@
+@import "color";
+
+.study-list-show-post {
+  &__container {
+    border: 1px solid $gray;
+    padding: 20px;
+    margin: 20px;
+  }
+  .wp-show-posts-columns#wpsp-5266 {
+    margin-left: 0;
+    .wp-show-posts-single:nth-child(2n + 1) .wp-show-posts-inner {
+      margin-left: 0;
+    }
+  }
+}

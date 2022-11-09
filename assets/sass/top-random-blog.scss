@@ -1,0 +1,6 @@
+@import "color";
+@import "breakpoint";
+@import "top-blog";
+.top-random-blog {
+  @include top-blog($random-bg-color, $random-color);
+}

@@ -1,0 +1,41 @@
+@import "color";
+
+.wp-pagenavi {
+  text-align: center;
+  color: $black;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  @mixin link-common($color, $bgc, $has-border) {
+    color: $color;
+    background-color: $bgc;
+    padding: 11px 25px;
+    @if $has-border == true {
+      border: 1px solid $gray;
+    }
+  }
+  .first {
+    @include link-common($black, $white, true);
+  }
+  .previouspostslink {
+    @include link-common($black, $white, true);
+    margin-right: auto;
+  }
+  .page {
+    @include link-common($black, $white, true);
+  }
+  .current {
+    @include link-common($white, $black, false);
+    padding: 0;
+    font-size: 16px;
+    line-height: 52px;
+    width: 52px;
+  }
+  .nextpostslink {
+    @include link-common($black, $white, true);
+    margin-left: auto;
+  }
+  .last {
+    @include link-common($black, $white, true);
+  }
+}

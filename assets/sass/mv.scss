@@ -1,0 +1,78 @@
+@import "color";
+@import "breakpoint";
+.mv {
+  &__text-wrap {
+    @include mq(xl) {
+      padding: 17px 64px;
+    }
+    &.--blog {
+      color: $white;
+    }
+    &.--skill {
+      background-color: $skill-color;
+    }
+    &.--study {
+      background-color: $study-color;
+    }
+    &.--random {
+      background-color: $random-color;
+    }
+  }
+  &__text {
+    &.--blog {
+      font-weight: normal;
+    }
+  }
+  &__scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    height: 50px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 25px;
+      animation: pathmove 1.4s ease-in-out infinite;
+      opacity: 0;
+    }
+    @keyframes pathmove {
+      0% {
+        height: 0;
+        top: 10px;
+        opacity: 0;
+      }
+      30% {
+        height: 25px;
+        opacity: 1;
+      }
+      100% {
+        height: 0;
+        top: 50px;
+        opacity: 0;
+      }
+    }
+    &.--page-what-i-did::after,
+    &.--page-what-i-can::after,
+    &.--page-blog::after,
+    &.--tag::after,
+    &.--date::after {
+      background: $white;
+    }
+  }
+  &__scroll-text {
+    position: absolute;
+    left: -20px;
+    top: -18px;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    &.--page-what-i-did,
+    &.--page-what-i-can,
+    &.--page-blog,
+    &.--tag,
+    &.--date {
+      color: $white;
+    }
+  }
+}

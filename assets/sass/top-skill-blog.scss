@@ -1,0 +1,6 @@
+@import "color";
+@import "breakpoint";
+@import "top-blog";
+.top-skill-blog {
+  @include top-blog($skill-bg-color, $skill-color);
+}
