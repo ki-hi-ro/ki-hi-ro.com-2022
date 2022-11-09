@@ -18,7 +18,14 @@ $cat = $category[0]; ?>
             </div>
             <h1><?php the_title(); ?></h1>
             <div class="author__contents">
-              <?php the_content(); ?>
+              <?php 
+              if(!in_category('drink-comparison-record')) {
+                the_content(); 
+              } else {              
+                $images = get_field('item-img');
+                if($images){echo '<img src="'.$images.'">';}
+              }
+              ?>
             </div>
           </div>
         <?php endwhile; ?>
