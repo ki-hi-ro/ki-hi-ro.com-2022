@@ -25,7 +25,8 @@
         'posts_per_page' => 30,
         'paged' => get_query_var('paged'),
         'category' => $current_cat_id,
-        'post__not_in' => array(3874)
+        'post__not_in' => array(3874),
+        'category__not_in' => array(133), 
       );
       $myposts = get_posts($args);
       ?>
