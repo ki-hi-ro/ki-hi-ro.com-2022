@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-<main class="l-container --mt-xl-0">
+<main class="l-container test">
   <div class="l-pc-left">
     <?php
     $current_cat_id = get_query_var('cat');
@@ -25,7 +25,8 @@
         'posts_per_page' => 30,
         'paged' => get_query_var('paged'),
         'category' => $current_cat_id,
-        'post__not_in' => array(3874)
+        'post__not_in' => array(3874),
+        'category__not_in' => array(133), 
       );
       $myposts = get_posts($args);
       ?>
