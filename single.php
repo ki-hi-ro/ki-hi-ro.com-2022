@@ -19,13 +19,23 @@ $cat = $category[0]; ?>
             <h1><?php the_title(); ?></h1>
             <div class="author__contents">
               <?php 
-              if(!in_category('drink-comparison-record')) {
+              if(!in_category('drink-comparison-record')) :
                 the_content(); 
-              } else {              
-                $images = get_field('item-img');
-                if($images){echo '<img src="'.$images.'">';}
-              }
+              else :
               ?>
+              <div class="single-article__drink-comparison-record-slide-wrap">              
+                <div class="single-article__drink-comparison-record-slide">
+                  <?php
+                    $img_arr = ['item-img', 'place', 'item-img-2', 'price'];
+                    foreach($img_arr as $img_value) :
+                    $img_variable = get_field($img_value);
+                      if($img_variable){echo '<img src="'.$img_variable.'">';}
+                    endforeach;
+                  ?>
+                </div>
+                <div class="thumbs_dots"></div>
+              </div>
+              <?php endif; ?>
             </div>
           </div>
         <?php endwhile; ?>
