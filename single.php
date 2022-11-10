@@ -23,6 +23,8 @@ $cat = $category[0]; ?>
                 the_content(); 
               else :
               ?>
+              <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'single-article__thumb']  );?>
+              <h2 class="--drink-comparison">画像</h2>
               <div class="single-article__drink-comparison-record-slide-wrap">              
                 <div id="drink-comparision-slide" class="single-article__drink-comparison-record-slide">
                   <?php

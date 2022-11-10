@@ -146,6 +146,14 @@
   }
 }
 
+.single-article__thumb {
+  margin: 40px auto 50px !important;
+  width: auto !important;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .drink-comparison-record h3 {
   border-color: #F2C12E;
 }
