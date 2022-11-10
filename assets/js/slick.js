@@ -3,7 +3,7 @@ jQuery(".slick").slick({
 });
 
 jQuery(function ($) {
-  var drink_comparison_record_slide =  ".single-article__drink-comparison-record-slide";
+  var drink_comparison_record_slide =  "#drink-comparision-slide";
 
   /*--- 連動サムネイル（ドット）設定 -----------------------*/
   // スライダー初期化時

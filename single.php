@@ -24,7 +24,7 @@ $cat = $category[0]; ?>
               else :
               ?>
               <div class="single-article__drink-comparison-record-slide-wrap">              
-                <div class="single-article__drink-comparison-record-slide">
+                <div id="drink-comparision-slide" class="single-article__drink-comparison-record-slide">
                   <?php
                     $img_arr = ['item-img','item-img-2', 'price', 'place'];
                     foreach($img_arr as $img_value) :
