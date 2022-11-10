@@ -20,7 +20,6 @@ jQuery(function ($) {
 			  return $(this).data("slick-index") === i;
 			})
 			.clone();
-			console.log(slideImg);
 			// n番目のドットを取得
 			var dot = $(".thumbs_list").find("li").eq(i);
 			// n番目のスライド画像のURLを取得
