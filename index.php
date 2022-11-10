@@ -15,6 +15,8 @@
       $post_list_ttl = "学習ブログ";
     } elseif ($current_cat_id == "67") {
       $post_list_ttl = "雑記ブログ";
+    } elseif ($current_cat_id == "133") {
+      $post_list_ttl = "飲み比べ記録";
     }
     ?>
     <h1 class="post-list-ttl --<?php echo $current_cat_slug; ?>"><?php echo $post_list_ttl; ?></h1>
@@ -26,7 +28,6 @@
         'paged' => get_query_var('paged'),
         'category' => $current_cat_id,
         'post__not_in' => array(3874),
-        'category__not_in' => array(133), 
       );
       $myposts = get_posts($args);
       ?>

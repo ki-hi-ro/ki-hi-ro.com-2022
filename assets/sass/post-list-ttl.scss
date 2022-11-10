@@ -29,4 +29,8 @@
     border-color: $random-color;
     color: $random-color;
   }
+  &.--drink-comparison-record {
+    border-color: $drink-comparison-color;
+    color: $drink-comparison-color;
+  }
 }
