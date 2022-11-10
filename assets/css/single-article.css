@@ -64,13 +64,19 @@
 }
 
 .single-article__drink-comparison-record-slide-wrap {
-  width: 600px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   position: relative;
 }
 
+@media (min-width: 768px) {
+  .single-article__drink-comparison-record-slide-wrap {
+    width: 600px;
+  }
+}
+
 .single-article__drink-comparison-record-slide .slick-slide {
-  height: 400px;
+  height: 600px;
+  object-fit: cover;
   overflow: hidden;
 }
 
@@ -89,15 +95,57 @@
   margin: 10px 0 0;
 }
 
+.single-article .thumbs_list {
+  padding-left: 0;
+  margin: 0;
+}
+
 .single-article .thumbs_list li {
   display: inline-block;
-  width: 150px;
-  height: 80px;
   opacity: 0.4;
   cursor: pointer;
   transition: opacity 0.3s;
+  width: calc(100% / 4);
+  height: 90px;
+}
+
+@media (min-width: 576px) {
+  .single-article .thumbs_list li {
+    height: 180px;
+  }
 }
 
 .single-article .thumbs_list li.slick-active {
   opacity: 1;
+}
+
+.single-article h2.--drink-comparison {
+  background: rgba(242, 193, 46, 0.1);
+  border-color: #F2C12E;
+  margin: 30px 0 30px;
+}
+
+@media (min-width: 768px) {
+  .single-article h2.--drink-comparison {
+    margin: 30px 65px 30px;
+  }
+}
+
+.single-article h2.--purchase {
+  margin-bottom: 60px;
+}
+
+.single-article p.--drink-comparison {
+  line-height: 2;
+  margin: 20px 0 60px;
+}
+
+@media (min-width: 768px) {
+  .single-article p.--drink-comparison {
+    margin: 20px 65px 60px;
+  }
+}
+
+.drink-comparison-record h3 {
+  border-color: #F2C12E;
 }

@@ -12,6 +12,10 @@
   font-size: 20px;
 }
 
+.sidebar-archive__ttl.--drink-comparison-record {
+  margin-top: 30px;
+}
+
 .sidebar-archive__list-wrap {
   list-style: none;
   padding-left: 21px;

@@ -26,7 +26,7 @@ $cat = $category[0]; ?>
               <div class="single-article__drink-comparison-record-slide-wrap">              
                 <div class="single-article__drink-comparison-record-slide">
                   <?php
-                    $img_arr = ['item-img', 'place', 'item-img-2', 'price'];
+                    $img_arr = ['item-img','item-img-2', 'price', 'place'];
                     foreach($img_arr as $img_value) :
                     $img_variable = get_field($img_value);
                       if($img_variable){echo '<img src="'.$img_variable.'">';}
@@ -35,7 +35,14 @@ $cat = $category[0]; ?>
                 </div>
                 <div class="thumbs_dots"></div>
               </div>
+              <h2 class="--drink-comparison">感想</h2>
+              <?php
+              $review = get_field('review');
+              if($review){echo '<p class="--drink-comparison">' . $review . '</p>';}
+              ?>
               <?php endif; ?>
+              <h2 class="--drink-comparison --purchase">ご購入はこちら</h2>
+              <?php the_content(); ?>
             </div>
           </div>
         <?php endwhile; ?>
