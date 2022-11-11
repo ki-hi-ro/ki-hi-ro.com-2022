@@ -23,28 +23,28 @@ $cat = $category[0]; ?>
                 the_content(); 
               else :
               ?>
-              <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'single-article__thumb']  );?>
-              <h2 class="--drink-comparison">画像</h2>
-              <div class="single-article__drink-comparison-record-slide-wrap">              
-                <div id="drink-comparision-slide" class="single-article__drink-comparison-record-slide">
-                  <?php
-                    $img_arr = ['item-img','item-img-2', 'price', 'place'];
-                    foreach($img_arr as $img_value) :
-                    $img_variable = get_field($img_value);
-                      if($img_variable){echo '<img src="'.$img_variable.'">';}
-                    endforeach;
-                  ?>
+                <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'single-article__thumb']  );?>
+                <h2 class="--drink-comparison">画像</h2>
+                <div class="single-article__drink-comparison-record-slide-wrap">              
+                  <div id="drink-comparision-slide" class="single-article__drink-comparison-record-slide">
+                    <?php
+                      $img_arr = ['item-img','item-img-2', 'price', 'place'];
+                      foreach($img_arr as $img_value) :
+                      $img_variable = get_field($img_value);
+                        if($img_variable){echo '<img src="'.$img_variable.'">';}
+                      endforeach;
+                    ?>
+                  </div>
+                  <div class="thumbs_dots"></div>
                 </div>
-                <div class="thumbs_dots"></div>
-              </div>
-              <h2 class="--drink-comparison">感想</h2>
-              <?php
-              $review = get_field('review');
-              if($review){echo '<p class="--drink-comparison">' . $review . '</p>';}
-              ?>
+                <h2 class="--drink-comparison">感想</h2>
+                <?php
+                $review = get_field('review');
+                if($review){echo '<p class="--drink-comparison">' . $review . '</p>';}
+                ?>
+                <h2 class="--drink-comparison --purchase">ご購入はこちら</h2>
+                <?php the_content(); ?>
               <?php endif; ?>
-              <h2 class="--drink-comparison --purchase">ご購入はこちら</h2>
-              <?php the_content(); ?>
             </div>
           </div>
         <?php endwhile; ?>
