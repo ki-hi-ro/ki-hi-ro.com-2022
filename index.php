@@ -15,8 +15,8 @@
       $post_list_ttl = "学習ブログ";
     } elseif ($current_cat_id == "67") {
       $post_list_ttl = "雑記ブログ";
-    } elseif ($current_cat_slug == "drink-comparison-record") {
-      $post_list_ttl = "飲み比べ記録";
+    } elseif ($current_cat_slug == "drink-comparison") {
+      $post_list_ttl = "飲み比べ";
     }
     ?>
     <h1 class="post-list-ttl --<?php echo $current_cat_slug; ?>"><?php echo $post_list_ttl; ?></h1>

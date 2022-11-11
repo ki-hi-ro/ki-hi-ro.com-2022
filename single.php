@@ -19,7 +19,7 @@ $cat = $category[0]; ?>
             <h1><?php the_title(); ?></h1>
             <div class="author__contents">
               <?php 
-              if(!in_category('drink-comparison-record')) :
+              if(!in_category('drink-comparison')) :
                 the_content(); 
               else :
               ?>

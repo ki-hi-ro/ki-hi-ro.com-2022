@@ -5,7 +5,7 @@
       <a class="twitter-timeline" data-width="100%" data-height="475" data-theme="light" href="https://twitter.com/2021_shibata?ref_src=twsrc%5Etfw">Tweets by 2021_shibata</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div> -->
 
-    <h3 class="sidebar-archive__ttl sidebar-ttl --drink-comparison-record">飲み比べ記録</h3>
+    <h3 class="sidebar-archive__ttl sidebar-ttl --drink-comparison-record">飲み比べ</h3>
     <ul class="sidebar-archive__list-wrap sidebar-archive-list --drink-comparison-record">
       <?php
         $tags = get_tags();
