@@ -127,7 +127,7 @@
 
 @media (min-width: 768px) {
   .single-article h2.--drink-comparison {
-    margin: 30px 65px 30px;
+    margin: 30px 20px 30px;
   }
 }
 
@@ -142,7 +142,7 @@
 
 @media (min-width: 768px) {
   .single-article p.--drink-comparison {
-    margin: 20px 65px 60px;
+    margin: 20px 20px 60px;
   }
 }
 

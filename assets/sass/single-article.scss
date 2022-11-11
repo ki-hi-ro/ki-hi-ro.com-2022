@@ -95,7 +95,7 @@
     border-color: $drink-comparison-color;
     margin: 30px 0 30px;
     @include mq(md) {
-      margin: 30px 65px 30px;
+      margin: 30px 20px 30px;
     }
   }
   h2.--purchase {
@@ -105,7 +105,7 @@
     line-height: 2;
     margin: 20px 0 60px;
     @include mq(md) {
-      margin: 20px 65px 60px;
+      margin: 20px 20px 60px;
     }
   }
   &__thumb {
