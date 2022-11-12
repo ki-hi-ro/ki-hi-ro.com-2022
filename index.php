@@ -21,7 +21,7 @@
     ?>
     
       <?php
-      $new_article_array = array(['全ての記事','','all-article'], ['WordPress','wordpress','tag/wordpress/'], ['TypeScript','typescript','tag/typescript/']);
+      $new_article_array = array(['全ての記事','','all-article'], ['WordPress','wordpress','tag/wordpress/'], ['TypeScript','typescript','tag/typescript/'], ['HTML / CSS','html-css','tag/html-css/'], ['音楽','music','tag/music/'], ['フリーランス','フリーランス','tag/フリーランス/'], ['Vue.js','vue-js','tag/vue-js/'], ['本','本','tag/本/']);
       foreach ($new_article_array as $new_article) :
         $args = array(
           'post_type' => 'post',
