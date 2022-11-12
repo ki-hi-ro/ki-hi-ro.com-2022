@@ -19,6 +19,7 @@
       $post_list_ttl = "飲み比べ";
     }
     ?>
+    
     <h1 class="post-list-ttl --<?php echo $current_cat_slug; ?>"><?php echo $post_list_ttl; ?></h1>
     <div class="new-article">
       <?php
@@ -40,11 +41,6 @@
         <a class="author-box__link" href="<?php echo home_url('all-article'); ?>">全ての記事を見る<img class="author-box__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
       </div>
     </div>
-
-    <div id="app">
- <my-component v-for="(item, index) in myArray" v-bind:my-name="item" >   
- </my-component>
-</div>
 
     <h1 class="post-list-ttl --<?php echo $current_cat_slug; ?>"><?php echo $post_list_ttl; ?></h1>
     <div class="new-article">
