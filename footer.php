@@ -3,9 +3,9 @@
 <footer>
 	<nav>
 		<div class="nav-contents">
-			<h4>仕事</h4>
+			<h4>趣味</h4>
 			<ul>
-				<li><a href="/category/what-i-did">これまでの仕事</a></li>
+				<li><a href="/category/drink-comparison/">飲み記録</a></li>
 			</ul>
 		</div>
 
