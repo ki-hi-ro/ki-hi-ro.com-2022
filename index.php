@@ -41,6 +41,11 @@
       </div>
     </div>
 
+    <div id="app">
+ <my-component v-for="(item, index) in myArray" v-bind:my-name="item" >   
+ </my-component>
+</div>
+
     <h1 class="post-list-ttl --<?php echo $current_cat_slug; ?>"><?php echo $post_list_ttl; ?></h1>
     <div class="new-article">
       <?php
