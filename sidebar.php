@@ -1,22 +1,6 @@
   <aside class="l-pc-right">
     <?php echo get_template_part('template-parts/author'); ?>
 
-    <!-- <div class="twitter">
-      <a class="twitter-timeline" data-width="100%" data-height="475" data-theme="light" href="https://twitter.com/2021_shibata?ref_src=twsrc%5Etfw">Tweets by 2021_shibata</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div> -->
-
-    <h3 class="sidebar-archive__ttl sidebar-ttl --drink-comparison-record">飲み比べ</h3>
-    <ul class="sidebar-archive__list-wrap sidebar-archive-list --drink-comparison-record">
-      <?php
-        $tags = get_tags();
-        foreach( $tags as $tag) {
-          if($tag->name == 'お酒' || $tag->name == 'コーヒー') {
-            echo '<li><a href="'. get_tag_link($tag->term_id) .'">' . $tag->name . '</a>（' . $tag->count . '）</li>';
-          }
-        }
-      ?>
-    </ul>
-
     <div class="sidebar-archive">
       <h3 class="sidebar-archive__ttl sidebar-ttl">過去記事アーカイブ</h3>
       <ul class="sidebar-archive__list-wrap sidebar-archive-list">
