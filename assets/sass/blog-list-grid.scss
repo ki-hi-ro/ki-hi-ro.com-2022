@@ -18,6 +18,14 @@
       width: 100%;
       display: flex;
     }
+    &.--top-page {
+      &:last-of-type {
+        display: none;
+        @include mq(md) {
+          display: block;
+        }
+      }
+    }
   }
   &__contents {
     width: 100%;

@@ -1,4 +1,4 @@
-<a class="blog-list-grid__link" href="<?php the_permalink(); ?>">
+<a class="blog-list-grid__link <?php if ( is_home() || is_front_page() ) : ?>--top-page<?php endif; ?>" href="<?php the_permalink(); ?>">
 	<div class="blog-list-grid__contents">
 		<div class="blog-list-grid__thumb-nail-wrap">
 			<?php
