@@ -1,5 +1,5 @@
 jQuery(function ($) {
   $(function () {
-    $(".blog-list-grid__contents").matchHeight();
+    $(".front-page .blog-list-grid__contents").matchHeight();
   });
 });
