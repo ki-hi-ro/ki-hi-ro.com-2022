@@ -2,11 +2,6 @@
 
 <main class="l-container test">
   <div class="l-pc-left">
-    <div class="breadcrumbs">
-        <?php if (function_exists('bcn_display')) {
-          bcn_display();
-        } ?>
-    </div>
     <h1 class="post-list-ttl --all-article"><?php the_title(); ?></h1>
     <div class="new-article">
       <?php
