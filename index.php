@@ -21,7 +21,7 @@
     ?>
     
       <?php
-      $new_article_array = array(['全ての記事',''], ['WordPress','wordpress'], ['TypeScript','typescript']);
+      $new_article_array = array(['全ての記事','','all-article'], ['WordPress','wordpress','tag/wordpress/'], ['TypeScript','typescript','tag/typescript/']);
       foreach ($new_article_array as $new_article) :
         $args = array(
           'post_type' => 'post',
@@ -39,7 +39,7 @@
           <?php endforeach; wp_reset_postdata();?>
         </ul>
         <div class="author-box__more">
-          <a class="author-box__link" href="<?php echo home_url('all-article'); ?>">全ての記事を見る<img class="author-box__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
+          <a class="author-box__link" href="<?php echo home_url($new_article[2]); ?>">全ての記事を見る<img class="author-box__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
         </div>
       </div>
      <?php endforeach; ?>
