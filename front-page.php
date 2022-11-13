@@ -21,13 +21,14 @@
     ?>
     
       <?php
-      $new_article_array = array(['最近書いた記事','','all-article'], ['WordPress','wordpress','tag/wordpress/'], ['TypeScript','typescript','tag/typescript/'], ['HTML / CSS','html-css','tag/html-css/'], ['音楽','music','tag/music/'], ['フリーランス','フリーランス','tag/フリーランス/'], ['Vue.js','vue-js','tag/vue-js/'], ['本','本','tag/本/']);
+      $new_article_array = array(['最近書いた記事','','all-article',''], ['Vue.js','vue-js','tag/vue-js/',''], ['飲み記録', '', 'category/drink-comparison/','drink-comparison'], ['WordPress','wordpress','tag/wordpress/',''], ['TypeScript','typescript','tag/typescript/',''], ['HTML / CSS','html-css','tag/html-css/',''], ['音楽','music','tag/music/',''], ['フリーランス','フリーランス','tag/フリーランス/',''], ['本','本','tag/本/','']);
       foreach ($new_article_array as $new_article) :
         $args = array(
           'post_type' => 'post',
           'posts_per_page' => 3,
           'paged' => get_query_var('paged'),
-          'tag' => $new_article[1]
+          'tag' => $new_article[1],
+          'category_name' => $new_article[3]
         );
         $myposts = get_posts($args);
         ?>
