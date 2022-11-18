@@ -1,5 +1,11 @@
 <?php get_header();?>
 
+<div class="loading" id="splash">
+  <div class="loading__logo-wrap" id="splash_logo">
+    <img class="loading__logo fadeUp" src="img/loading.svg" alt="">
+  </div>
+</div>
+
 <main class="l-container test">
   <div class="l-pc-left">
     <?php
@@ -19,7 +25,7 @@
       $post_list_ttl = "飲み比べ";
     }
     ?>
-    
+
       <?php
       $new_article_array = array(['最近書いた記事','','all-article',''], ['Vue.js','vue-js','tag/vue-js/',''], ['飲み記録', '', 'category/drink-comparison/','drink-comparison'], ['WordPress','wordpress','tag/wordpress/',''], ['TypeScript','typescript','tag/typescript/',''], ['HTML / CSS','html-css','tag/html-css/',''], ['音楽','music','tag/music/',''], ['フリーランス','フリーランス','tag/フリーランス/',''], ['本','本','tag/本/','']);
       foreach ($new_article_array as $new_article) :

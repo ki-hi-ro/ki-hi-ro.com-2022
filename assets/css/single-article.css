@@ -157,13 +157,3 @@
 .drink-comparison h3 {
   border-color: #D9AA52;
 }
-
-.g-map {
-  max-width: 100%;
-}
-
-@media (min-width: 768px) {
-  .g-map {
-    padding: 0 20px;
-  }
-}
