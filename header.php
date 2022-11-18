@@ -69,10 +69,10 @@
 							$current_class_random = "--random-blog --current";
 						endif;
 						?>
-						<li class="header__li"><a class="header__li-link <?php echo $current_class_i_did; ?>" href="/category/what-i-did"><span class="header__sp-none">これまでの</span>仕事</a></li>
-						<li class="header__li"><a class="header__li-link <?php echo $current_class_skill; ?>" href="/category/skill-blog/">技術<span class="header__sp-none">ブログ</span></a></li>
 						<li class="header__li"><a class="header__li-link <?php echo $current_class_study; ?>" href="/category/study-blog/">学習<span class="header__sp-none">ブログ</span></a></li>
+						<li class="header__li"><a class="header__li-link <?php echo $current_class_i_did; ?>" href="/category/drink-comparison/">飲み<span class="header__sp-none">記録</span></a></li>
 						<li class="header__li"><a class="header__li-link <?php echo $current_class_random; ?>" href="/category/random-blog/">雑記<span class="header__sp-none">ブログ</span></a></li>
+						<li class="header__li"><a class="header__li-link <?php echo $current_class_skill; ?>" href="/category/skill-blog/">技術<span class="header__sp-none">ブログ</span></a></li>
 					</ul>
 				</nav>
 			</div>

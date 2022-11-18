@@ -20,6 +20,16 @@
   display: flex;
 }
 
+.blog-list-grid__link.--top-page:last-of-type {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .blog-list-grid__link.--top-page:last-of-type {
+    display: block;
+  }
+}
+
 .blog-list-grid__contents {
   width: 100%;
   padding: 10px;

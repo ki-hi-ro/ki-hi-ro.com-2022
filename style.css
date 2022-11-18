@@ -761,7 +761,7 @@ h3,
 }
 
 .single .breadcrumbs {
-  padding: 2px 2px 0 15px;
+  padding: 2px 2px 0 20px;
 }
 
 @media (max-width: 767px) {
@@ -2790,8 +2790,6 @@ code {
 
 .page h1 {
   color: #000;
-  text-align: center;
-  margin-top: 56px;
 }
 
 .page h2 {

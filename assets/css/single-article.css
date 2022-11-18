@@ -120,14 +120,14 @@
 }
 
 .single-article h2.--drink-comparison {
-  background: rgba(242, 190, 92, 0.1);
-  border-color: #F2BE5C;
+  background: rgba(217, 170, 82, 0.1);
+  border-color: #D9AA52;
   margin: 30px 0 30px;
 }
 
 @media (min-width: 768px) {
   .single-article h2.--drink-comparison {
-    margin: 30px 65px 30px;
+    margin: 30px 20px 30px;
   }
 }
 
@@ -142,7 +142,7 @@
 
 @media (min-width: 768px) {
   .single-article p.--drink-comparison {
-    margin: 20px 65px 60px;
+    margin: 20px 20px 60px;
   }
 }
 
@@ -154,6 +154,16 @@
   height: auto;
 }
 
-.drink-comparison-record h3 {
-  border-color: #F2C12E;
+.drink-comparison h3 {
+  border-color: #D9AA52;
+}
+
+.g-map {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .g-map {
+    padding: 0 20px;
+  }
 }
