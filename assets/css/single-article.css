@@ -154,8 +154,10 @@
   height: auto;
 }
 
-.single-article .wp-block-table {
-  margin: 0 20px 1em;
+@media (min-width: 768px) {
+  .single-article .wp-block-table {
+    margin: 0 20px 1em;
+  }
 }
 
 .single-article table {

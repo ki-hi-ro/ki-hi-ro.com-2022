@@ -116,7 +116,9 @@
     height: auto;
   }
   .wp-block-table {
-    margin: 0 20px 1em;
+    @include mq(md) {
+      margin: 0 20px 1em;
+    }
   }
   table {
     text-align: center;
