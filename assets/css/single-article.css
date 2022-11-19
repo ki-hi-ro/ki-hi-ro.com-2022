@@ -177,6 +177,16 @@
   color: #000;
 }
 
+.single-article .g-map {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .single-article .g-map {
+    padding: 0 20px;
+  }
+}
+
 .random-blog th {
   background-color: rgba(136, 70, 110, 0.1);
   border-color: rgba(64, 38, 54, 0.6);

@@ -134,6 +134,12 @@
     border: solid 1px $black;
     color: $black;
   }
+  .g-map {
+    max-width: 100%;
+    @include mq(md) {
+      padding: 0 20px;
+    }
+  }
 }
 
 .random-blog {
