@@ -115,6 +115,33 @@
     max-width: 100%;
     height: auto;
   }
+  .wp-block-table {
+    margin: 0 20px 1em;
+  }
+  table {
+    text-align: center;
+    border-spacing: 0;
+  }
+  th {
+    padding: 10px;
+    border: solid 1px $black;
+    color: $black;
+  }
+  td {
+    padding: 10px;
+    border: solid 1px $black;
+    color: $black;
+  }
+}
+
+.random-blog {
+  th {
+    background-color: $random-bg-color;
+    border-color: $random-table-color;
+  }
+  td {
+    border-color: $random-table-color;
+  }
 }
 
 .drink-comparison {

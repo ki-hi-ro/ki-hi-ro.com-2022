@@ -121,7 +121,7 @@
 
 .single-article h2.--drink-comparison {
   background: rgba(217, 170, 82, 0.1);
-  border-color: #D9AA52;
+  border-color: #d9aa52;
   margin: 30px 0 30px;
 }
 
@@ -154,6 +154,36 @@
   height: auto;
 }
 
+.single-article .wp-block-table {
+  margin: 0 20px 1em;
+}
+
+.single-article table {
+  text-align: center;
+  border-spacing: 0;
+}
+
+.single-article th {
+  padding: 10px;
+  border: solid 1px #000;
+  color: #000;
+}
+
+.single-article td {
+  padding: 10px;
+  border: solid 1px #000;
+  color: #000;
+}
+
+.random-blog th {
+  background-color: rgba(136, 70, 110, 0.1);
+  border-color: rgba(64, 38, 54, 0.6);
+}
+
+.random-blog td {
+  border-color: rgba(64, 38, 54, 0.6);
+}
+
 .drink-comparison h3 {
-  border-color: #D9AA52;
+  border-color: #d9aa52;
 }
