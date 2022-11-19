@@ -17,6 +17,8 @@
       $post_list_ttl = "雑記ブログ";
     } elseif ($current_cat_slug == "drink-comparison") {
       $post_list_ttl = "飲み記録";
+    } elseif ($current_cat_slug == "diary") {
+      $post_list_ttl = "日記";
     }
     ?>
     <h1 class="post-list-ttl --<?php echo $current_cat_slug; ?>"><?php echo $post_list_ttl; ?></h1>

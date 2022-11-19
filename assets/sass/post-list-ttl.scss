@@ -33,4 +33,8 @@
     border-color: $drink-comparison-color;
     color: $drink-comparison-color;
   }
+  &.--diary {
+    border-color: $diary-color;
+    color: $diary-color;
+  }
 }
