@@ -7,7 +7,7 @@ $term_desc = $term->description;
 ?>
 <main class="l-container">
   <div class="l-pc-left">
-    <h1 class="post-list-ttl"><?php echo $term_name; ?>の記事一覧</h1>
+    <h1 class="post-list-ttl"><?php echo $term_name; ?>の記事一覧（<?php echo $term->count; ?>）</h1>
     <div class="new-article">
       <?php
       $args = array(
