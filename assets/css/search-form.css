@@ -26,10 +26,11 @@
   height: 46px;
   cursor: pointer;
   border: none;
+  background-color: #efefef;
 }
 
 .search-form__icon-img {
-  width: 65%;
+  width: 22px;
   padding-top: 4px;
   padding-left: 4px;
 }
