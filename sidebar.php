@@ -1,4 +1,6 @@
   <aside class="l-pc-right">
+    <?php get_search_form() ; ?>
+
     <?php echo get_template_part('template-parts/author'); ?>
 
     <div class="sidebar-archive">

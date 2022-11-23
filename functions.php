@@ -32,6 +32,7 @@ wp_enqueue_style('fade-in-zoom', get_template_directory_uri() . '/assets/css/fad
 wp_enqueue_style('post-list-ttl', get_template_directory_uri() . '/assets/css/post-list-ttl.css', [], date("YmdHi"));
 wp_enqueue_style('study-list-show-post', get_template_directory_uri() . '/assets/css/study-list-show-post.css', [], date("YmdHi"));
 wp_enqueue_style('loading', get_template_directory_uri() . '/assets/css/loading.css', [], date("YmdHi"));
+wp_enqueue_style('search-form', get_template_directory_uri() . '/assets/css/search-form.css', [], date("YmdHi"));
 
 // js
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);
