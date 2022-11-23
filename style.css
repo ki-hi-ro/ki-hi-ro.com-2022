@@ -761,7 +761,7 @@ h3,
 }
 
 .single .breadcrumbs {
-  padding: 2px 2px 0 20px;
+  padding: 2px 2px 0 0;
 }
 
 @media (max-width: 767px) {
@@ -2527,7 +2527,6 @@ code {
 .related-post {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
 }
 
 .related-post .related-post__link:not(:last-child) {
@@ -3817,12 +3816,6 @@ h3.sidebar-ttl {
 div#ez-toc-container {
   width: 100%;
   margin: 0 auto;
-}
-
-@media (min-width: 992px) {
-  div#ez-toc-container {
-    width: calc(100% - 35px);
-  }
 }
 
 @media (max-width: 575px) {

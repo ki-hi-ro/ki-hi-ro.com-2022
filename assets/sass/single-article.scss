@@ -36,7 +36,6 @@
     flex-direction: column;
     @include mq(md) {
       margin-bottom: 20px;
-      padding-right: 20px;
     }
     @include mq(lg) {
       text-align: right;

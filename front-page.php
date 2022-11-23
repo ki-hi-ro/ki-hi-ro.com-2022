@@ -23,7 +23,13 @@
     ?>
 
       <?php
-      $new_article_array = array(['最近書いた記事','','all-article',''], ['Vue.js','vue-js','tag/vue-js/',''], ['飲み記録', '', 'category/drink-comparison/','drink-comparison'], ['WordPress','wordpress','tag/wordpress/',''], ['TypeScript','typescript','tag/typescript/',''], ['HTML / CSS','html-css','tag/html-css/',''], ['音楽','music','tag/music/',''], ['フリーランス','フリーランス','tag/フリーランス/',''], ['本','本','tag/本/','']);
+      $new_article_array = array(
+        ['最近書いた記事','','all-article',''], ['日記','日記','category/diary',''],
+        ['Vue.js','vue-js','tag/vue-js/',''], ['React', 'react', 'tag/react/',''],
+        ['TypeScript','typescript','tag/typescript/',''], ['WordPress','wordpress','tag/wordpress/',''],
+        ['HTML / CSS','html-css','tag/html-css/',''], ['フリーランス','フリーランス','tag/フリーランス/',''],
+        ['音楽','music','tag/music/',''], ['本','本','tag/本/','']
+        );
       foreach ($new_article_array as $new_article) :
         $args = array(
           'post_type' => 'post',

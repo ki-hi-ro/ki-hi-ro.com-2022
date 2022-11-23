@@ -7,12 +7,6 @@
   margin: 60px 0 40px;
 }
 
-@media (min-width: 768px) {
-  .single h2 {
-    margin: 60px 20px 40px;
-  }
-}
-
 .single h3 {
   border-left: 6px solid;
   color: #333;
@@ -26,7 +20,7 @@
 
 @media (min-width: 1200px) {
   .single h3 {
-    margin-left: 20px;
+    margin-left: 0;
   }
 }
 
