@@ -42,7 +42,7 @@
         ?>
       <div class="new-article">
         <h1 class="post-list-ttl --<?php echo $current_cat_slug; ?>"><?php echo $new_article[0]; ?></h1>
-        <ul class="blog-list-grid">
+        <ul class="blog-list-grid --<?php echo $new_article[1]; ?>">
           <?php foreach ($myposts as $post): setup_postdata($post);?>
               <?php echo get_template_part('template-parts/blog-list-grid'); ?>
           <?php endforeach; wp_reset_postdata();?>
