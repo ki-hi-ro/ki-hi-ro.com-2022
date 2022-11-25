@@ -17,15 +17,24 @@ $cat = $category[0]; ?>
               <span class="modify-date">更新日: <?php echo get_the_modified_date('Y.m.d'); ?></span>
             </div>
             <h1><?php the_title(); ?></h1>
-            <div class="author__contents">
-              <?php 
-              if(!in_category('drink-comparison')) :
-                the_content(); 
-              else :
-              ?>
+            <?php if(have_rows('what-you-know')): ?>
                 <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'single-article__thumb']  );?>
+                <h2>この記事を読むと分かること</h2>
+                <ul>
+                  <?php while(have_rows('what-you-know')): the_row(); ?>
+                    <li><?php the_sub_field('text'); ?></li>
+                  <?php endwhile; ?>
+                </ul>
+                <h2>はじめに</h2>
+            <?php endif; ?>
+            <div class="author__contents">
+              <?php
+              if(!in_category('drink-comparison')) :
+                the_content();
+                else :
+                  ?>
                 <h2 class="--drink-comparison">画像</h2>
-                <div class="single-article__drink-comparison-record-slide-wrap">              
+                <div class="single-article__drink-comparison-record-slide-wrap">
                   <div id="drink-comparision-slide" class="single-article__drink-comparison-record-slide">
                     <?php
                       $img_arr = ['item-img','item-img-2', 'price', 'place'];
