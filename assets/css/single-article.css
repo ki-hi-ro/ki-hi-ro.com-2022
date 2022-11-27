@@ -21,15 +21,15 @@
 
 .single-article__post ul,
 .single-article__post ol {
+  color: #000;
   margin-top: 10px;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 @media (min-width: 768px) {
   .single-article__post ul,
   .single-article__post ol {
     margin-left: 20px;
-    padding-left: 40px;
   }
 }
 

@@ -18,11 +18,11 @@
     }
     ul,
     ol {
+      color: #000;
       margin-top: 10px;
-      padding-left: 20px;
+      padding-left: 40px;
       @include mq(md) {
         margin-left: 20px;
-        padding-left: 40px;
       }
       li {
         font-size: 16px !important;
