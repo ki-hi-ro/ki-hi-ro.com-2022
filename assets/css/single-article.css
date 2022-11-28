@@ -1,3 +1,9 @@
+.single-article .amazon-link a {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) {
   .single-article__bread {
     padding: 2px 2px 0 20px;
