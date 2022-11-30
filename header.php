@@ -47,7 +47,7 @@
 
 <body <?php body_class('kihiro-body front-page'); ?>>
 
-	<header class="header">
+	<header id="header" class="header">
 		<div class="header__container">
 			<div class="header__contents">
 				<div class="header__logo">

@@ -53,6 +53,7 @@ wp_enqueue_script('my-vue', get_template_directory_uri() . '/assets/js/my-vue.js
 wp_enqueue_script('cdn-matchHeight', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js', null, null, true);
 wp_enqueue_script('my-match-height', get_template_directory_uri() . '/assets/js/my-match-height.js', null, null, true);
 wp_enqueue_script('loading', get_template_directory_uri() . '/assets/js/loading.js', null, null, true);
+wp_enqueue_script('header-fix', get_template_directory_uri() . '/assets/js/header-fix.js', null, null, true);
 
 // body_class()にページスラッグを追加
 add_filter('body_class', 'add_page_slug_class_name');
