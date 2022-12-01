@@ -58,21 +58,10 @@
 				<nav>
 					<ul class="header__ul">
 						<?php $current_cat_slug = get_query_var('category_name'); ?>
-						<?php
-						if($current_cat_slug == "what-i-did") :
-							$current_class_i_did = "--what-i-did --current";
-						elseif($current_cat_slug == "skill-blog") :
-							$current_class_skill = "--skill-blog --current";
-						elseif($current_cat_slug == "study-blog") :
-							$current_class_study = "--study-blog --current";
-						elseif($current_cat_slug == "random-blog") :
-							$current_class_random = "--random-blog --current";
-						endif;
-						?>
-						<li class="header__li"><a class="header__li-link <?php echo $current_class_skill; ?>" href="/tag/vue-js/">Vue.js<span class="header__sp-none"></span></a></li>
-						<li class="header__li"><a class="header__li-link <?php echo $current_class_random; ?>" href="/tag/wordpress/">WordPress<span class="header__sp-none"></span></a></li>
-						<li class="header__li"><a class="header__li-link <?php echo $current_class_random; ?>" href="/category/diary/">日記</a></li>
-						<li class="header__li"><a class="header__li-link <?php echo $current_class_study; ?>" href="/tag/本/">本</a></li>
+						<li class="header__li"><a class="header__li-link" href="/tag/vue-js/">Vue.js<span class="header__sp-none"></span></a></li>
+						<li class="header__li"><a class="header__li-link" href="/tag/wordpress/">WordPress<span class="header__sp-none"></span></a></li>
+						<li class="header__li"><a class="header__li-link" href="/category/diary/">日記</a></li>
+						<li class="header__li"><a class="header__li-link" href="/tag/本/">本</a></li>
 					</ul>
 				</nav>
 			</div>
