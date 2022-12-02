@@ -11,6 +11,8 @@
   color: #333;
   @include mq(lg) {
     text-align: left;
+    display: flex;
+    justify-content: space-between;
     border-left: 6px solid;
     margin: 0 0 30px 0;
   }
@@ -36,5 +38,14 @@
   &.--diary {
     border-color: $diary-color;
     color: $diary-color;
+  }
+  &__study-list {
+    color: $black;
+    display: flex;
+    align-items: center;
+  }
+  &__study-list-img {
+    width: 24px;
+    height: 24px;
   }
 }
