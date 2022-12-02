@@ -59,9 +59,6 @@
 					<ul class="header__ul">
 						<?php $current_cat_slug = get_query_var('category_name'); ?>
 						<li class="header__li"><a class="header__li-link" href="/tag/vue-js/">Vue.js<span class="header__sp-none"></span></a></li>
-						<li class="header__li"><a class="header__li-link" href="/tag/wordpress/">WordPress<span class="header__sp-none"></span></a></li>
-						<li class="header__li"><a class="header__li-link" href="/category/diary/">日記</a></li>
-						<li class="header__li"><a class="header__li-link" href="/tag/本/">本</a></li>
 					</ul>
 				</nav>
 			</div>

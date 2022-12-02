@@ -3397,7 +3397,7 @@ footer {
 
 footer nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding: 20px 15px;
   max-width: 1140px;
   margin: 0 auto;

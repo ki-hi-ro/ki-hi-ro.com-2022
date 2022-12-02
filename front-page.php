@@ -24,16 +24,12 @@
 
       <?php
       $new_article_array = array(
-        ['最近書いた記事','','all-article',''], ['日記','日記','category/diary',''],
-        ['Vue.js','vue-js','tag/vue-js/',''], ['React', 'react', 'tag/react/',''],
-        ['TypeScript','typescript','tag/typescript/',''], ['WordPress','wordpress','tag/wordpress/',''],
-        ['HTML / CSS','html-css','tag/html-css/',''], ['フリーランス','フリーランス','tag/フリーランス/',''],
-        ['音楽','music','tag/music/',''], ['本','本','tag/本/','']
+        ['Vue.js','vue-js','tag/vue-js/','']
         );
       foreach ($new_article_array as $new_article) :
         $args = array(
           'post_type' => 'post',
-          'posts_per_page' => 3,
+          'posts_per_page' => -1,
           'paged' => get_query_var('paged'),
           'tag' => $new_article[1],
           'category_name' => $new_article[3]
@@ -47,9 +43,9 @@
               <?php echo get_template_part('template-parts/blog-list-grid'); ?>
           <?php endforeach; wp_reset_postdata();?>
         </ul>
-        <div class="author-box__more">
+        <!-- <div class="author-box__more">
           <a class="author-box__link" href="<?php echo home_url($new_article[2]); ?>">もっと見る<img class="author-box__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
-        </div>
+        </div> -->
       </div>
      <?php endforeach; ?>
   </div>
