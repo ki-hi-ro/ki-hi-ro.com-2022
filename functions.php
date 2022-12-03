@@ -24,7 +24,7 @@ wp_enqueue_style('page-top', get_template_directory_uri() . '/assets/css/page-to
 wp_enqueue_style('single-post', get_template_directory_uri() . '/assets/css/single-post.css', [], date("YmdHi"));
 wp_enqueue_style('sidebar-archive', get_template_directory_uri() . '/assets/css/sidebar-archive.css', [], date("YmdHi"));
 wp_enqueue_style('twitter', get_template_directory_uri() . '/assets/css/twitter.css', [], date("YmdHi"));
-wp_enqueue_style('single-article', get_template_directory_uri() . '/assets/css/single-article.css', [], date("YmdHi"));
+wp_enqueue_style('post', get_template_directory_uri() . '/assets/css/post.css', [], date("YmdHi"));
 wp_enqueue_style('related-post', get_template_directory_uri() . '/assets/css/related-post.css', [], date("YmdHi"));
 wp_enqueue_style('wp-pagenavi', get_template_directory_uri() . '/assets/css/wp-pagenavi.css', [], date("YmdHi"));
 wp_enqueue_style('vegas', 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css', [], date("YmdHi"));

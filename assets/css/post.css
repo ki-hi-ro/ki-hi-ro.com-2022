@@ -1,0 +1,241 @@
+.post .meta {
+  margin: 20px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .post .meta {
+    text-align: right;
+  }
+}
+
+.post__ttl {
+  color: #000;
+  text-align: center;
+  margin-top: 36px;
+}
+
+@media (min-width: 768px) {
+  .post .w-50 {
+    width: 50%;
+    margin: 40px auto;
+  }
+}
+
+.post h2 {
+  background: rgba(89, 160, 118, 0.1);
+  border-left: 6px solid;
+  border-color: #59a076;
+  color: #000;
+  padding: 15px;
+  line-height: 40px;
+  margin: 60px 0 40px;
+}
+
+.post .amazon-link a {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .post__bread {
+    padding: 2px 2px 0 20px;
+  }
+}
+
+.post__contents {
+  width: 100%;
+}
+
+.post__contents .wp-block-image.w-50 {
+  padding: 0;
+  margin: 40px auto;
+}
+
+@media (min-width: 768px) {
+  .post__contents .wp-block-image.w-50 {
+    width: 50%;
+  }
+}
+
+.post__contents ul,
+.post__contents ol {
+  color: #000;
+  margin-top: 10px;
+  padding-left: 40px;
+}
+
+@media (min-width: 768px) {
+  .post__contents ul,
+  .post__contents ol {
+    margin-left: 20px;
+  }
+}
+
+.post__contents ul li,
+.post__contents ol li {
+  font-size: 16px !important;
+}
+
+.post__post-meta {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .post__post-meta {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .post__post-meta {
+    text-align: right;
+  }
+}
+
+.post .book-img {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.post__drink-comparison-record-slide-wrap {
+  margin: 30px auto 0;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .post__drink-comparison-record-slide-wrap {
+    width: 600px;
+  }
+}
+
+.post__drink-comparison-record-slide .slick-slide {
+  height: 600px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.post__drink-comparison-record-slide .slick-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post .thumbs_dots {
+  margin: 10px 0 0;
+}
+
+.post .thumbs_dots {
+  margin: 10px 0 0;
+}
+
+.post .thumbs_list {
+  padding-left: 0;
+  margin: 0;
+}
+
+.post .thumbs_list li {
+  display: inline-block;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  width: calc(100% / 4);
+  height: 90px;
+}
+
+@media (min-width: 576px) {
+  .post .thumbs_list li {
+    height: 180px;
+  }
+}
+
+.post .thumbs_list li.slick-active {
+  opacity: 1;
+}
+
+.post h2.--drink-comparison {
+  background: rgba(217, 170, 82, 0.1);
+  border-color: #d9aa52;
+  margin: 30px 0 30px;
+}
+
+@media (min-width: 768px) {
+  .post h2.--drink-comparison {
+    margin: 30px 20px 30px;
+  }
+}
+
+.post h2.--purchase {
+  margin-bottom: 60px;
+}
+
+.post p.--drink-comparison {
+  line-height: 2;
+  margin: 20px 0 60px;
+}
+
+@media (min-width: 768px) {
+  .post p.--drink-comparison {
+    margin: 20px 20px 60px;
+  }
+}
+
+.post__thumb {
+  margin: 40px auto 50px !important;
+  width: auto !important;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .post .wp-block-table {
+    margin: 0 20px 1em;
+  }
+}
+
+.post table {
+  text-align: center;
+  border-spacing: 0;
+}
+
+.post th {
+  padding: 10px;
+  border: solid 1px #000;
+  color: #000;
+}
+
+.post td {
+  padding: 10px;
+  border: solid 1px #000;
+  color: #000;
+}
+
+.post .g-map {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .post .g-map {
+    padding: 0 20px;
+  }
+}
+
+.random-blog th {
+  background-color: rgba(136, 70, 110, 0.1);
+  border-color: rgba(64, 38, 54, 0.6);
+}
+
+.random-blog td {
+  border-color: rgba(64, 38, 54, 0.6);
+}
+
+.drink-comparison h3 {
+  border-color: #d9aa52;
+}

@@ -1,7 +1,28 @@
 @import "breakpoint";
 @import "color";
 
-.single-article {
+.post {
+  @import "post/meta";
+  &__ttl {
+    color: $black;
+    text-align: center;
+    margin-top: 36px;
+  }
+  .w-50 {
+    @include mq(md) {
+      width: 50%;
+      margin: 40px auto;
+    }
+  }
+  h2 {
+    background: $study-bg-color;
+    border-left: 6px solid;
+    border-color: $study-color;
+    color: $black;
+    padding: 15px;
+    line-height: 40px;
+    margin: 60px 0 40px;
+  }
   .amazon-link a {
     width: 300px;
     display: block;
@@ -12,7 +33,7 @@
       padding: 2px 2px 0 20px;
     }
   }
-  &__post {
+  &__contents {
     width: 100%;
     .wp-block-image.w-50 {
       padding: 0;
