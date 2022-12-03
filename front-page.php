@@ -39,7 +39,7 @@
       <div class="new-article">
         <h1 class="post-list-ttl --<?php echo $current_cat_slug; ?>">
           <?php echo $new_article[0]; ?>
-          <a class="post-list-ttl__study-list" href="">学習計画はこちら<img class="post-list-ttl__study-list-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/study-list-arrow-right.svg"></a>
+          <a class="post-list-ttl__study-list" href="<?php echo home_url('vue-js-study-plan'); ?>">学習計画はこちら<img class="post-list-ttl__study-list-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/study-list-arrow-right.svg"></a>
         </h1>
         <ul class="blog-list-grid --<?php echo $new_article[1]; ?>">
           <?php foreach ($myposts as $post): setup_postdata($post);?>
