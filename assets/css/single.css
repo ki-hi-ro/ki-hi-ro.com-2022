@@ -7,6 +7,12 @@
   margin: 60px 0 40px;
 }
 
+@media (min-width: 768px) {
+  .single h2 {
+    margin: 60px 20px 40px;
+  }
+}
+
 .single h3 {
   border-left: 6px solid;
   color: #333;
@@ -20,7 +26,7 @@
 
 @media (min-width: 1200px) {
   .single h3 {
-    margin-left: 0;
+    margin-left: 20px;
   }
 }
 
@@ -28,6 +34,12 @@
   margin-top: 30px;
   margin-bottom: 0;
   margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .single .cp_embed_wrapper {
+    padding: 0 20px;
+  }
 }
 
 .single .ez-toc-widget-container ul.ez-toc-list {
@@ -64,15 +76,6 @@
 
 .single .random-blog h2 {
   background: #88466e1a;
-}
-
-.single .diary h2,
-.single .diary h3 {
-  border-color: #5a8ea1;
-}
-
-.single .diary h2 {
-  background: rgba(90, 142, 161, 0.1);
 }
 
 .ez-toc-widget-container h3 {

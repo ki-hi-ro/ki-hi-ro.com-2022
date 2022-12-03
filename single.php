@@ -22,7 +22,6 @@
                 ?>
               </div>
             <?php endwhile; endif; ?>
-            <?php get_template_part('template-parts/related-post'); ?>
         </article>
     </div>
     <?php get_sidebar(); ?>

@@ -823,11 +823,16 @@ main {
 }
 
 .single p {
-  padding: 0 20px 0 20px;
   color: #000;
   font-size: 16px;
   line-height: 30px;
   margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .single p {
+    padding: 0 20px;
+  }
 }
 
 .single .author p {
@@ -3813,9 +3818,14 @@ h3.sidebar-ttl {
   font-weight: 500;
 }
 
+div#ez-toc-container {
+  width: 100%;
+  margin: 0;
+} 
+
 @media (min-width: 768px) {
   div#ez-toc-container {
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     margin: 0 0 0 20px;
   }
 }
@@ -3823,5 +3833,15 @@ h3.sidebar-ttl {
 @media (max-width: 575px) {
   .s-sp-none {
     display: none;
+  }
+}
+
+footer nav {
+  margin-top: 30px;
+}
+
+@media (min-width: 992px) {
+  footer nav {
+    margin-top: 0;
   }
 }

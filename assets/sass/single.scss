@@ -33,6 +33,12 @@
     }
   }
 
+  @media (min-width: 768px) {
+    .cp_embed_wrapper {
+      padding: 0 20px;
+    }
+  }
+
   .ez-toc-widget-container ul.ez-toc-list {
     padding: 10px;
     max-height: 50vh;
