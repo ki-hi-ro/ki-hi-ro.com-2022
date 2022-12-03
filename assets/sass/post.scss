@@ -23,6 +23,15 @@
     line-height: 40px;
     margin: 60px 0 40px;
   }
+  h3 {
+    border-left: 6px solid $study-color;
+    color: $font-color;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    padding: 0px 15px 0px;
+    font-size: 20px;
+    margin: 60px 0 40px 0;
+  }
   .amazon-link a {
     width: 300px;
     display: block;
