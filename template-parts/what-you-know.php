@@ -1,4 +1,4 @@
-<?php the_post_thumbnail( array( 366, 244 ), ['class' => 'single-article__thumb']  );?>
+<?php the_post_thumbnail( array( 366, 244 ), ['class' => 'post__thumb']  );?>
 <h2>この記事を読むと分かること</h2>
 <ul>
     <?php while(have_rows('what-you-know')): the_row(); ?>

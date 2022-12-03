@@ -9,6 +9,9 @@
     border-left: 6px solid;
     line-height: 40px;
     margin: 60px 0 40px;
+    @include mq(md) {
+      margin: 60px 20px 40px;
+    }
   }
 
   h3 {
@@ -21,7 +24,7 @@
     margin-top: 60px;
     margin-bottom: 40px;
     @include mq(xl) {
-      margin-left: 0;
+      margin-left: 20px;
     }
     &.sidebar-ttl {
       margin-top: 30px;
@@ -66,16 +69,6 @@
     }
     h2 {
       background: #88466e1a;
-    }
-  }
-
-  .diary {
-    h2,
-    h3 {
-      border-color: $diary-color;
-    }
-    h2 {
-      background: $diary-bg-color;
     }
   }
 }

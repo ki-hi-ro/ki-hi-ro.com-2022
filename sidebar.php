@@ -1,9 +1,5 @@
   <aside class="l-pc-right">
-    <?php 
-    if(!is_page('vue-js-study-plan')) {
-      get_search_form() ; 
-    }
-    ?>
+    <?php get_search_form() ; ?>
 
     <?php echo get_template_part('template-parts/author'); ?>
 
