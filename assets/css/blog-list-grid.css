@@ -81,7 +81,3 @@
     overflow: hidden;
   }
 }
-
-.blog-list-grid.--react .blog-list-grid__link.--top-page:last-of-type {
-  display: block;
-}
