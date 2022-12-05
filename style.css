@@ -3849,3 +3849,15 @@ footer nav {
 .wp-block-image figcaption {
   text-align: center;
 }
+
+div#ez-toc-container ul.ez-toc-list a {
+  font-size: 16px;
+}
+
+.single ul li {
+  font-size: 16px;
+}
+
+.single ol li {
+  font-size: 16px;
+}
