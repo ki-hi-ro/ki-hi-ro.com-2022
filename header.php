@@ -59,7 +59,7 @@
 					<ul class="header__ul">
 						<?php $current_cat_slug = get_query_var('category_name'); ?>
 						<li class="header__li"><a class="header__li-link" href="/tag/vue-js/">Vue.js<span class="header__sp-none"></span></a></li>
-						<li class="header__li"><a class="header__li-link" href="<?php home_url('all-article'); ?>">これまで書いた記事<span class="header__sp-none"></span></a></li>
+						<li class="header__li"><a class="header__li-link" href="<?php echo home_url('all-article'); ?>">これまでに書いた記事<span class="header__sp-none"></span></a></li>
 					</ul>
 				</nav>
 			</div>
