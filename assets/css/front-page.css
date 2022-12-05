@@ -6,10 +6,6 @@
   color: #fff;
 }
 
-.new-article {
-  margin-bottom: 30px;
-}
-
 .new-article__ttl {
   font-family: Noto, Hiragino Sans, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
