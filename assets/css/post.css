@@ -41,6 +41,7 @@
   padding: 0px 15px 0px;
   font-size: 20px;
   margin: 60px 0 40px 0;
+  overflow-wrap: break-word;
 }
 
 .post .amazon-link a {
@@ -171,7 +172,7 @@
 
 .post h2.--drink-comparison {
   background: rgba(217, 170, 82, 0.1);
-  border-color: #d9aa52;
+  border-color: #D9AA52;
   margin: 30px 0 30px;
 }
 
@@ -247,5 +248,5 @@
 }
 
 .drink-comparison h3 {
-  border-color: #d9aa52;
+  border-color: #D9AA52;
 }
