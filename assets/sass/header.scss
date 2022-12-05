@@ -52,12 +52,6 @@
     margin: 0;
     flex-wrap: wrap;
   }
-  &__li {
-    width: 25%;
-    @include mq(sm) {
-      width: auto;
-    }
-  }
   &__li-link {
     color: $black;
     display: block;

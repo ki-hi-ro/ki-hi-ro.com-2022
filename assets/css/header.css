@@ -67,16 +67,6 @@
   flex-wrap: wrap;
 }
 
-.header__li {
-  width: 25%;
-}
-
-@media (min-width: 576px) {
-  .header__li {
-    width: auto;
-  }
-}
-
 .header__li-link {
   color: #000;
   display: block;
