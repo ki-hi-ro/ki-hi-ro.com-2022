@@ -3845,3 +3845,7 @@ footer nav {
     margin-top: 0;
   }
 }
+
+.wp-block-image figcaption {
+  text-align: center;
+}
