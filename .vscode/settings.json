@@ -82,5 +82,6 @@
   ],
   "liveSassCompile.settings.autoprefix": [],
   "eslint.validate": [],
-  "phpfmt.detect_indent": true
+  "phpfmt.detect_indent": true,
+  "git.ignoreLimitWarning": true
 }
