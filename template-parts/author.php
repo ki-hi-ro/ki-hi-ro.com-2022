@@ -3,8 +3,8 @@
     <h4 class="author-box__my-name">Shibata Hiroki</h4>
     <hr class="author-box__line">
     <p class="author-box__text">
-        ▼ 個人サイトのリポジトリ<br>
-        <a href="https://github.com/ki-hi-ro/ki-hi-ro.com-2022">https://github.com/ki-hi-ro/ki-hi-ro.com-2022</a><br><br>
+        ▼ 当サイトのリポジトリ<br>
+        <a href="https://github.com/ki-hi-ro/ki-hi-ro.com-2022" target="new">https://github.com/ki-hi-ro/ki-hi-ro.com-2022</a><br><br>
 
         ※転職活動中です。<br><br>
 
