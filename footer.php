@@ -3,9 +3,9 @@
 <footer>
 	<nav>
 		<div class="nav-contents">
-			<h4>WEB開発</h4>
+			<!-- <h4>WEB開発</h4> -->
 			<ul>
-				<li><a href="/tag/vue-js">Vue.js</a></li>
+				<!-- <li><a href="/tag/vue-js">Vue.js</a></li> -->
 				<!-- <li><a href="/tag/react">React</a></li>
 				<li><a href="/tag/typescript">TypeScript</a></li> -->
 			</ul>

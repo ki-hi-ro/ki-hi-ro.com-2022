@@ -42,6 +42,10 @@
 @media (min-width: 768px) {
   .header__contents {
     margin-bottom: 2rem;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
   }
 }
 
@@ -78,7 +82,7 @@
 
 @media (min-width: 768px) {
   .header__li-link {
-    padding: 15px 24px 20px;
+    padding: 15px 0 20px 24px;
   }
 }
 

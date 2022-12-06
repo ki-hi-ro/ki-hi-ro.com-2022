@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-<?php echo get_template_part('template-parts/loading'); ?>
+<?php // echo get_template_part('template-parts/loading'); ?>
 
 <main class="l-container test">
   <div class="l-pc-left">
@@ -24,31 +24,36 @@
 
       <?php
       $new_article_array = array(
-        ['Vue.js','vue-js','tag/vue-js/','']
-        );
+        ["title" => "最近書いた記事", "tag" => "", "link" => "all-article/", "link-text" => "すべての記事", "category" => "", "per-page" => "1"],
+        ["title" => "技術ブログ", "tag" => "", "link" => "category/skill-blog/", "link-text" => "技術ブログの一覧", "category" => "skill-blog/", "per-page" => "1"],
+        ["title" => "学習ブログ", "tag" => "", "link" => "category/study-blog/", "link-text" => "学習ブログの一覧", "category" => "study-blog", "per-page" => "1"],
+        ["title" => "日記", "tag" => "", "link" => "category/diary/", "link-text" => "日記の一覧", "category" => "diary", "per-page" => "1"],
+        ["title" => "雑記ブログ", "tag" => "", "link" => "category/random-blog/", "link-text" => "雑記ブログの一覧", "category" => "random-blog", "per-page" => "1"],
+        ["title" => "飲み記録", "tag" => "", "link" => "category/drink-comparison/", "link-text" => "飲み記録の一覧", "category" => "drink-comparison", "per-page" => "1"],
+      );
       foreach ($new_article_array as $new_article) :
         $args = array(
           'post_type' => 'post',
-          'posts_per_page' => -1,
+          'posts_per_page' => $new_article["per-page"],
           'paged' => get_query_var('paged'),
-          'tag' => $new_article[1],
-          'category_name' => $new_article[3]
+          'tag' => $new_article["tag"],
+          'category_name' => $new_article["category"]
         );
         $myposts = get_posts($args);
         ?>
       <div class="new-article">
-        <h1 class="post-list-ttl --<?php echo $current_cat_slug; ?>">
-          <?php echo $new_article[0]; ?>
-          <a class="post-list-ttl__study-list" href="<?php echo home_url('vue-js-study-plan'); ?>">学習計画はこちら<img class="post-list-ttl__study-list-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/study-list-arrow-right.svg"></a>
+        <h1 class="post-list-ttl --<?php echo $current_cat_slug; ?> --<?php echo $new_article["category"]; ?>">
+          <?php echo $new_article['title']; ?>
+          <!-- <a class="post-list-ttl__study-list" href="<?php echo home_url('vue-js-study-plan'); ?>">学習計画はこちら<img class="post-list-ttl__study-list-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/study-list-arrow-right.svg"></a> -->
         </h1>
-        <ul class="blog-list-grid --<?php echo $new_article[1]; ?>">
+        <ul class="blog-list-grid --<?php echo $new_article["tag"]; ?>">
           <?php foreach ($myposts as $post): setup_postdata($post);?>
               <?php echo get_template_part('template-parts/blog-list-grid'); ?>
           <?php endforeach; wp_reset_postdata();?>
         </ul>
-        <!-- <div class="author-box__more">
-          <a class="author-box__link" href="<?php echo home_url($new_article[2]); ?>">もっと見る<img class="author-box__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
-        </div> -->
+        <div class="author-box__more">
+          <a class="author-box__link" href="<?php echo home_url($new_article["link"]); ?>"><?php echo $new_article["link-text"]; ?><img class="author-box__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
+        </div>
       </div>
      <?php endforeach; ?>
   </div>
