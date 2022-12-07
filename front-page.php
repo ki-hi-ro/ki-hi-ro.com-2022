@@ -24,7 +24,7 @@
 
       <?php
       $new_article_array = array(
-        ["title" => "最近書いた記事", "tag" => "", "link" => "all-article/", "link-text" => "すべての記事", "category" => "", "per-page" => "1"],
+        ["title" => "最近書いた記事", "tag" => "", "link" => "all-article/", "link-text" => "これまでに書いた記事", "category" => "", "per-page" => "1"],
         ["title" => "技術ブログ", "tag" => "", "link" => "category/skill-blog/", "link-text" => "技術ブログの一覧", "category" => "skill-blog/", "per-page" => "1"],
         ["title" => "学習ブログ", "tag" => "", "link" => "category/study-blog/", "link-text" => "学習ブログの一覧", "category" => "study-blog", "per-page" => "1"],
         ["title" => "日記", "tag" => "", "link" => "category/diary/", "link-text" => "日記の一覧", "category" => "diary", "per-page" => "1"],
