@@ -3856,6 +3856,7 @@ div#ez-toc-container ul.ez-toc-list a {
 
 .single ul li {
   font-size: 16px;
+  word-break: break-all;
 }
 
 .single ol li {
