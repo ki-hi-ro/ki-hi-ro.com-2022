@@ -9,7 +9,8 @@
     </div>
     <div class="blog-list-grid__meta">
         <span class="blog-list-grid__date">
-            <?php echo get_the_date('Y.m.d'); ?>
+            <span class="meta__date">投稿日: <?php echo get_the_date('Y.m.d'); ?></span>
+            <span class="meta__date">更新日: <?php echo get_the_modified_date('Y.m.d'); ?></span>
         </span>
         <?php
 			$posttags = get_the_tags();

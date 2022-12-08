@@ -41,6 +41,12 @@
   text-align: center;
 }
 
+.blog-list-grid__date {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: 768px) {
   .blog-list-grid__tag-wrap {
     width: 100%;
