@@ -78,11 +78,12 @@
   transition: all 0.3s;
   text-align: center;
   padding: 15px 18px 20px;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
   .header__li-link {
-    padding: 15px 0 20px 24px;
+    padding: 0;
   }
 }
 
@@ -100,6 +101,11 @@
 
 .header__li-link.--random-blog {
   color: #88466e;
+}
+
+.header__li-link:hover {
+  opacity: .5;
+  transition: all .3;
 }
 
 .header__has-child-li-link {
@@ -213,4 +219,14 @@
   font-family: Helvetica Neue;
   letter-spacing: 0.1px;
   font-weight: 500;
+}
+
+.header__sitename-link:hover {
+  opacity: .5;
+  transition: all .3;
+}
+
+.header__twitter {
+  width: 30px;
+  display: block;
 }

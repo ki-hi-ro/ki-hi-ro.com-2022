@@ -42,6 +42,10 @@
     align-items: center;
     justify-content: right;
     color: $black;
+    &:hover {
+      opacity: .5;
+      transition: all .3;
+    }
   }
   &__link-icon {
     width: 7px;

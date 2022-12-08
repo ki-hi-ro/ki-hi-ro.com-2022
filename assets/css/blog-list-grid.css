@@ -13,18 +13,9 @@
   }
 }
 
-.blog-list-grid__link {
-  width: 100%;
-  display: flex;
-}
-
-.blog-list-grid__link:hover {
-  opacity: 0.7;
-}
-
 .blog-list-grid__contents {
   width: 100%;
-  padding: 10px;
+  padding: 19px;
   margin: 0 auto;
   border: 1px solid #d2d2d2;
   background-color: #fff;
@@ -63,6 +54,7 @@
   padding: 0px 20px;
   margin: 3px 0;
   font-size: 11px;
+  color: #000;
 }
 
 @media (min-width: 768px) {
@@ -71,10 +63,90 @@
   }
 }
 
+.blog-list-grid__tag:hover {
+  opacity: .5;
+  transition: all .3;
+}
+
 @media (min-width: 768px) {
   .blog-list-grid__ttl {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     overflow: hidden;
   }
+}
+
+.blog-list-grid__what-you-know-ttl {
+  margin-bottom: 0;
+  border-left: 6px solid;
+  color: #000;
+  margin: 20px 0 20px;
+  text-align: left;
+  border-color: #59a076;
+  background: rgba(89, 160, 118, 0.1);
+  padding: 14px;
+  line-height: 35px;
+  font-size: 19px;
+}
+
+@media (min-width: 576px) {
+  .blog-list-grid__what-you-know-ttl {
+    padding: 15px;
+    line-height: 40px;
+    font-size: 25px;
+  }
+}
+
+.blog-list-grid__what-you-know-ttl.--what-i-did {
+  border-color: #000;
+}
+
+.blog-list-grid__what-you-know-ttl.--skill-blog {
+  border-color: #0a2c54;
+  background: rgba(10, 44, 84, 0.1);
+}
+
+.blog-list-grid__what-you-know-ttl.--study-blog {
+  border-color: #59a076;
+  background: rgba(89, 160, 118, 0.1);
+}
+
+.blog-list-grid__what-you-know-ttl.--random-blog {
+  border-color: #88466e;
+  background: rgba(136, 70, 110, 0.1);
+}
+
+.blog-list-grid__what-you-know-ttl.--drink-comparison {
+  border-color: #D9AA52;
+  color: #D9AA52;
+}
+
+.blog-list-grid__what-you-know-ttl.--diary {
+  border-color: #5A8EA1;
+  background: rgba(90, 142, 161, 0.1);
+}
+
+.blog-list-grid__what-you-know-li {
+  font-size: 16px;
+}
+
+.blog-list-grid__what-you-know-ttl-wrap {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.blog-list-grid__link-btn {
+  border: 1px solid #d2d2d2;
+  color: #000;
+  text-align: center;
+  display: block;
+  padding: 10px 0;
+  margin: 17px auto 0;
+  width: 258px;
+  font-size: 16px;
+}
+
+.blog-list-grid__link-btn:hover {
+  opacity: .5;
+  transition: all .3;
 }

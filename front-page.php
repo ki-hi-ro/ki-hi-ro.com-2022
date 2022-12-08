@@ -25,6 +25,7 @@
       <?php
       $new_article_array = array(
         ["title" => "最近書いた記事", "tag" => "", "link" => "all-article/", "link-text" => "これまでに書いた記事", "category" => "", "per-page" => "1"],
+        ["title" => "これまでの仕事について", "tag" => "", "link" => "category/what-i-did/", "link-text" => "これまでの仕事についての記事一覧", "category" => "what-i-did/", "per-page" => "1"],
         ["title" => "技術ブログ", "tag" => "", "link" => "category/skill-blog/", "link-text" => "技術ブログの一覧", "category" => "skill-blog/", "per-page" => "1"],
         ["title" => "学習ブログ", "tag" => "", "link" => "category/study-blog/", "link-text" => "学習ブログの一覧", "category" => "study-blog", "per-page" => "1"],
         ["title" => "日記", "tag" => "", "link" => "category/diary/", "link-text" => "日記の一覧", "category" => "diary", "per-page" => "1"],
@@ -51,9 +52,11 @@
               <?php echo get_template_part('template-parts/blog-list-grid'); ?>
           <?php endforeach; wp_reset_postdata();?>
         </ul>
-        <div class="author-box__more">
-          <a class="author-box__link" href="<?php echo home_url($new_article["link"]); ?>"><?php echo $new_article["link-text"]; ?><img class="author-box__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
-        </div>
+        <?php if($new_article["link"]): ?>
+          <div class="author-box__more">
+            <a class="author-box__link" href="<?php echo home_url($new_article["link"]); ?>"><?php echo $new_article["link-text"]; ?><img class="author-box__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg"></a>
+          </div>
+        <?php endif; ?>
       </div>
      <?php endforeach; ?>
   </div>

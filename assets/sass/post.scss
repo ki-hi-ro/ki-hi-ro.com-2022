@@ -78,8 +78,12 @@
     }
   }
   .book-img {
-    width: 150px;
-    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    @include mq(md) {
+      width: 150px;
+      margin: 0 auto;
+    }
   }
   &__drink-comparison-record-slide-wrap {
     margin: 30px auto 0;

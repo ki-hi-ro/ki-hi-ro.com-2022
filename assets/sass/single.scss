@@ -77,6 +77,16 @@
       background: #88466e1a;
     }
   }
+
+  .diary {
+    h2,
+    h3 {
+      border-color: $diary-color;
+    }
+    h2 {
+      background: $diary-bg-color;
+    }
+  }
 }
 
 .ez-toc-widget-container {

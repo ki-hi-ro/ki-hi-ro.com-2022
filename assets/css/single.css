@@ -78,6 +78,15 @@
   background: #88466e1a;
 }
 
+.single .diary h2,
+.single .diary h3 {
+  border-color: #5A8EA1;
+}
+
+.single .diary h2 {
+  background: rgba(90, 142, 161, 0.1);
+}
+
 .ez-toc-widget-container h3 {
   margin-left: 0;
   margin-bottom: 30px;

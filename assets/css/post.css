@@ -110,8 +110,15 @@
 }
 
 .post .book-img {
-  width: 150px;
-  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .post .book-img {
+    width: 150px;
+    margin: 0 auto;
+  }
 }
 
 .post__drink-comparison-record-slide-wrap {
