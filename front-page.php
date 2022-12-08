@@ -24,13 +24,14 @@
 
       <?php
       $new_article_array = array(
-        ["title" => "最近書いた記事", "tag" => "", "link" => "all-article/", "link-text" => "これまでに書いた記事", "category" => "", "per-page" => "1"],
-        ["title" => "これまでの仕事について", "tag" => "", "link" => "category/what-i-did/", "link-text" => "これまでの仕事についての記事一覧", "category" => "what-i-did/", "per-page" => "1"],
-        ["title" => "技術ブログ", "tag" => "", "link" => "category/skill-blog/", "link-text" => "技術ブログの一覧", "category" => "skill-blog/", "per-page" => "1"],
-        ["title" => "学習ブログ", "tag" => "", "link" => "category/study-blog/", "link-text" => "学習ブログの一覧", "category" => "study-blog", "per-page" => "1"],
-        ["title" => "日記", "tag" => "", "link" => "category/diary/", "link-text" => "日記の一覧", "category" => "diary", "per-page" => "1"],
-        ["title" => "雑記ブログ", "tag" => "", "link" => "category/random-blog/", "link-text" => "雑記ブログの一覧", "category" => "random-blog", "per-page" => "1"],
-        ["title" => "飲み記録", "tag" => "", "link" => "category/drink-comparison/", "link-text" => "飲み記録の一覧", "category" => "drink-comparison", "per-page" => "1"],
+        ["title" => "最近更新した記事", "tag" => "", "link" => "all-article/", "link-text" => "これまでに書いた記事", "category" => "", "per-page" => "1", "orderby" => 'modified'],
+        ["title" => "最近投稿した記事", "tag" => "", "link" => "all-article/", "link-text" => "これまでに書いた記事", "category" => "", "per-page" => "1", "orderby" => 'date'],
+        ["title" => "これまでの仕事について", "tag" => "", "link" => "category/what-i-did/", "link-text" => "これまでの仕事についての記事一覧", "category" => "what-i-did/", "per-page" => "1", "orderby" => 'date'],
+        ["title" => "技術ブログ", "tag" => "", "link" => "category/skill-blog/", "link-text" => "技術ブログの一覧", "category" => "skill-blog/", "per-page" => "1", "orderby" => 'date'],
+        ["title" => "学習ブログ", "tag" => "", "link" => "category/study-blog/", "link-text" => "学習ブログの一覧", "category" => "study-blog", "per-page" => "1", "orderby" => 'date'],
+        ["title" => "日記", "tag" => "", "link" => "category/diary/", "link-text" => "日記の一覧", "category" => "diary", "per-page" => "1", "orderby" => 'date'],
+        ["title" => "雑記ブログ", "tag" => "", "link" => "category/random-blog/", "link-text" => "雑記ブログの一覧", "category" => "random-blog", "per-page" => "1", "orderby" => 'date'],
+        ["title" => "飲み記録", "tag" => "", "link" => "category/drink-comparison/", "link-text" => "飲み記録の一覧", "category" => "drink-comparison", "per-page" => "1", "orderby" => 'date'],
       );
       foreach ($new_article_array as $new_article) :
         $args = array(
@@ -38,7 +39,8 @@
           'posts_per_page' => $new_article["per-page"],
           'paged' => get_query_var('paged'),
           'tag' => $new_article["tag"],
-          'category_name' => $new_article["category"]
+          'category_name' => $new_article["category"],
+          'orderby' => $new_article["orderby"]
         );
         $myposts = get_posts($args);
         ?>
