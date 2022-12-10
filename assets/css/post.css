@@ -1,11 +1,12 @@
 .post .meta {
-  margin: 20px 0;
+  margin: 13px 0;
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: 992px) {
   .post .meta {
+    margin: 20px 0;
     text-align: right;
   }
 }

@@ -1,8 +1,9 @@
 .meta {
-    margin: 20px 0;
+    margin: 13px 0;
     display: flex;
     flex-direction: column;
     @include mq(lg) {
+        margin: 20px 0;
         text-align: right;
     }
 }
