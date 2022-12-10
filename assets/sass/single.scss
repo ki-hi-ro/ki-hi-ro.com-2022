@@ -87,6 +87,20 @@
       background: $diary-bg-color;
     }
   }
+
+  .blog-list-grid__tag-wrap {
+    @include mq(lg) {
+      text-align: right;
+    }
+  }
+
+  .blog-list-grid__tag {
+    margin-right: 3px;
+    @include mq(lg) {
+      margin-right: 0;
+        margin-left: 3px;
+    }
+  }
 }
 
 .ez-toc-widget-container {

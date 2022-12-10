@@ -87,6 +87,23 @@
   background: rgba(90, 142, 161, 0.1);
 }
 
+@media (min-width: 992px) {
+  .single .blog-list-grid__tag-wrap {
+    text-align: right;
+  }
+}
+
+.single .blog-list-grid__tag {
+  margin-right: 3px;
+}
+
+@media (min-width: 992px) {
+  .single .blog-list-grid__tag {
+    margin-right: 0;
+    margin-left: 3px;
+  }
+}
+
 .ez-toc-widget-container h3 {
   margin-left: 0;
   margin-bottom: 30px;
