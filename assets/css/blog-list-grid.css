@@ -132,6 +132,11 @@
   background: rgba(90, 142, 161, 0.1);
 }
 
+.blog-list-grid__what-you-know-ttl.--exercise-record {
+  border-color: #490A54;
+  background: rgba(73, 10, 84, 0.1);
+}
+
 .blog-list-grid__what-you-know-li {
   font-size: 16px;
 }

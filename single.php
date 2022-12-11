@@ -12,9 +12,9 @@
                 if ($posttags) :
                   foreach ($posttags as $tag) : 
                 ?>
-                    <a class="blog-list-grid__tag" href="<?php echo home_url('tag/'.$tag->slug.''); ?>">
-                        <?php echo $tag->name; ?>
-                    </a>
+                <a class="blog-list-grid__tag" href="<?php echo home_url('tag/'.$tag->slug.''); ?>">
+                    <?php echo $tag->name; ?>
+                </a>
                 <?php 
                   endforeach; 
                 endif;
@@ -28,10 +28,12 @@
               ?>
             <div class="post__content">
                 <?php
-                if(!in_category('drink-comparison')) : 
-                  the_content(); 
-                else :
+                if(in_category('drink-comparison')) : 
                   get_template_part('template-parts/drink-comparision'); 
+                elseif(in_category('exercise-record')) :
+                  get_template_part('template-parts/exercise-record');
+                else :
+                  the_content(); 
                 endif; 
                 ?>
             </div>

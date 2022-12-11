@@ -87,6 +87,15 @@
   background: rgba(90, 142, 161, 0.1);
 }
 
+.single .exercise-record h2,
+.single .exercise-record h3 {
+  border-color: #490A54;
+}
+
+.single .exercise-record h2 {
+  background: rgba(73, 10, 84, 0.1);
+}
+
 @media (min-width: 992px) {
   .single .blog-list-grid__tag-wrap {
     text-align: right;

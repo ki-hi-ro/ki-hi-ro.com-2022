@@ -88,6 +88,16 @@
     }
   }
 
+  .exercise-record {
+    h2,
+    h3 {
+      border-color: $exercise-color;
+    }
+    h2 {
+      background: $exercise-bg-color;
+    }
+  }
+
   .blog-list-grid__tag-wrap {
     @include mq(lg) {
       text-align: right;

@@ -107,6 +107,10 @@
       border-color: $diary-color;
       background: $diary-bg-color;
     }
+    &.--exercise-record {
+      border-color: $exercise-color;
+      background: $exercise-bg-color;
+    }
   }
   &__what-you-know-li {
     font-size: 16px;

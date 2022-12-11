@@ -19,6 +19,8 @@
       $post_list_ttl = "飲み記録";
     } elseif ($current_cat_slug == "diary") {
       $post_list_ttl = "日記";
+    } elseif ($current_cat_slug == "exercise-record") {
+      $post_list_ttl = "エクササイズ";
     }
     ?>
     <h1 class="post-list-ttl --<?php echo $current_cat_slug; ?>"><?php echo $post_list_ttl; ?></h1>
