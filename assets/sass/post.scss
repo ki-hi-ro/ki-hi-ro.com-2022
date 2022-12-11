@@ -179,6 +179,66 @@
       padding: 0 20px;
     }
   }
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+    padding-left: 0;
+    &__link {
+      color: $black;
+      display: flex;
+      &:hover {
+        opacity: .5;
+        transition: all .3;
+      } 
+    }
+    &__nav {
+      width: 50%;
+      list-style: none;
+      span {
+        display: flex;
+        align-items: center;
+      }
+      &.--pre {
+        .nav-links__link-icon {
+          transform: rotate(-180deg);
+          margin-right: 5px;
+          @include mq(xl) {
+            margin-right: 15px;
+          }
+        }
+      }
+      &.--next {
+        text-align: right;
+        display: flex;
+        span {
+          justify-content: flex-end;
+        }
+        .nav-links__link-icon {
+          margin-left: 5px;
+          @include mq(xl) {
+            margin-left: 15px;
+          }
+        }
+        .nav-links__link {
+          justify-content: flex-end;
+        }
+      }
+    }
+    &__link-icon {
+      width: 5px;
+      @include mq(xl) {
+        width: 10px;
+      }
+    }
+    &__thumb {
+      max-width: 85%;
+      @include mq(xl) {
+        max-width: 70%;
+      }
+      height: auto;
+    }
+  }
 }
 
 .random-blog {

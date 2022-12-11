@@ -37,6 +37,34 @@
                 endif; 
                 ?>
             </div>
+            <?php 
+            // $args = array(
+            //   'in_same_term' => true
+            // );
+            // the_post_navigation($args); 
+            $prevpost = get_adjacent_post(true, '', true);
+            $nextpost = get_adjacent_post(true, '', false);
+            if( $prevpost or $nextpost) :
+            ?>
+            <ul class="nav-links">
+                <?php if( $prevpost ) : ?>
+                <li class="nav-links__nav --pre">
+                    <a class="nav-links__link" href="<?php echo get_permalink($prevpost->ID); ?>">
+                      <img class="nav-links__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg">
+                      <?php echo get_the_post_thumbnail($prevpost->ID, '', array( 'class' => 'nav-links__thumb' )); ?>
+                    </a>
+                </li>
+                <?php endif; ?>
+                <?php if( $nextpost ) : ?>
+                <li class="nav-links__nav --next">
+                    <a class="nav-links__link" href="<?php echo get_permalink($nextpost->ID); ?>">
+                      <?php echo get_the_post_thumbnail($nextpost->ID, '', array( 'class' => 'nav-links__thumb' )); ?>
+                      <img class="nav-links__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg">
+                    </a>
+                </li>
+                <?php endif; ?>
+            </ul>
+            <?php endif; ?>
             <?php endwhile; endif; ?>
         </article>
     </div>
