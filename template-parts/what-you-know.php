@@ -5,4 +5,8 @@
     <li><?php the_sub_field('text'); ?></li>
     <?php endwhile; ?>
 </ul>
-<h2>はじめに</h2>
+<?php if(!in_category('exercise-record')) : ?>
+    <h2>はじめに</h2>
+<?php elseif(in_category('exercise-record')) : ?>
+    <h2>目次</h2>
+<?php endif; ?>
