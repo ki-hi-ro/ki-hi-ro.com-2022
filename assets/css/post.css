@@ -25,9 +25,9 @@
 }
 
 .post h2 {
-  background: rgba(89, 160, 118, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   border-left: 6px solid;
-  border-color: #59a076;
+  border-color: #000;
   color: #000;
   padding: 15px;
   line-height: 40px;
@@ -35,7 +35,7 @@
 }
 
 .post h3 {
-  border-left: 6px solid #59a076;
+  border-left: 6px solid #000;
   color: #333;
   font-weight: 600;
   letter-spacing: 1.6px;
