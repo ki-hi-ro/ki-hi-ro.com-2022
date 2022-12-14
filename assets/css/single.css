@@ -113,6 +113,16 @@
   }
 }
 
+.single .table-of-contents-ttl {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .single .table-of-contents-ttl {
+    margin-left: 20px;
+  }
+}
+
 .ez-toc-widget-container h3 {
   margin-left: 0;
   margin-bottom: 30px;

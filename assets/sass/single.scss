@@ -108,7 +108,14 @@
     margin-right: 3px;
     @include mq(lg) {
       margin-right: 0;
-        margin-left: 3px;
+      margin-left: 3px;
+    }
+  }
+
+  .table-of-contents-ttl {
+    margin-bottom: 16px;
+    @include mq(md) {
+      margin-left: 20px;
     }
   }
 }
