@@ -48,7 +48,6 @@
   height: auto;
   overflow-y: scroll;
   border: 1px solid #ddd;
-  margin-left: 20px;
 }
 
 .single .skill-blog h2,
@@ -125,6 +124,6 @@
 
 .ez-toc-widget-container h3 {
   margin-left: 0;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   margin-top: 0;
 }
