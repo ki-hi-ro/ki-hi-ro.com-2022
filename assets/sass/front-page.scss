@@ -1,17 +1,6 @@
 @import "color";
 @import "breakpoint";
 
-.front-page {
-  &__scroll {
-    &::after {
-      background: $white;
-    }
-  }
-  &__scroll-text {
-    color: $white;
-  }
-}
-
 .new-article {
   margin-bottom: 60px;
   &__ttl {
