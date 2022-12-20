@@ -3,7 +3,7 @@
 // css
 wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], date("YmdHi"));
 wp_enqueue_style('kihiro-common', get_template_directory_uri() . '/assets/css/kihiro-common.css', [], date("YmdHi"));
-wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.css', [], date("YmdHi"));
+
 wp_enqueue_style('blog-list-grid', get_template_directory_uri() . '/assets/css/blog-list-grid.css', [], date("YmdHi"));
 wp_enqueue_style('blog-list-scroll', get_template_directory_uri() . '/assets/css/blog-list-scroll.css', [], date("YmdHi"));
 wp_enqueue_style('single', get_template_directory_uri() . '/assets/css/single.css', [], date("YmdHi"));
@@ -34,6 +34,7 @@ wp_enqueue_style('post-list-ttl', get_template_directory_uri() . '/assets/css/po
 wp_enqueue_style('study-list-show-post', get_template_directory_uri() . '/assets/css/study-list-show-post.css', [], date("YmdHi"));
 wp_enqueue_style('loading', get_template_directory_uri() . '/assets/css/loading.css', [], date("YmdHi"));
 wp_enqueue_style('search-form', get_template_directory_uri() . '/assets/css/search-form.css', [], date("YmdHi"));
+
 
 // js
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);
