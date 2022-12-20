@@ -4,9 +4,8 @@
 wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], date("YmdHi"));
 wp_enqueue_style('kihiro-common', get_template_directory_uri() . '/assets/css/kihiro-common.css', [], date("YmdHi"));
 wp_enqueue_style('blog-list', get_template_directory_uri() . '/assets/css/blog-list.css', [], date("YmdHi"));
-
 wp_enqueue_style('single', get_template_directory_uri() . '/assets/css/single.css', [], date("YmdHi"));
-wp_enqueue_style('single-post', get_template_directory_uri() . '/assets/css/single-post.css', [], date("YmdHi"));
+
 
 wp_enqueue_style('top-skill-blog', get_template_directory_uri() . '/assets/css/top-skill-blog.css', [], date("YmdHi"));
 wp_enqueue_style('top-study-blog', get_template_directory_uri() . '/assets/css/top-study-blog.css', [], date("YmdHi"));
