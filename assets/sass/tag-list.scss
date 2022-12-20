@@ -1,0 +1,23 @@
+.tag-list {
+  margin-top: 30px;
+  &__ttl {
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin: 0;
+    border-left: 6px solid;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    padding: 0px 15px 0px;
+    font-size: 20px;
+  }
+  &__wrap {
+    list-style: none;
+    padding-left: 21px;
+    margin-bottom: 30px;
+  }
+  &__li {
+    margin-bottom: 7px;
+    font-size: 17px;
+  }
+}
