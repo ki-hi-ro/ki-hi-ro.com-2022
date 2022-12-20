@@ -13,7 +13,6 @@ wp_enqueue_style('related-post', get_template_directory_uri() . '/assets/css/rel
 wp_enqueue_style('vegas', 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css', [], date("YmdHi"));
 wp_enqueue_style('fade-in-zoom', get_template_directory_uri() . '/assets/css/fade-in-zoom.css', [], date("YmdHi"));
 wp_enqueue_style('list-ttl', get_template_directory_uri() . '/assets/css/list-ttl.css', [], date("YmdHi"));
-
 wp_enqueue_style('loading', get_template_directory_uri() . '/assets/css/loading.css', [], date("YmdHi"));
 wp_enqueue_style('search-form', get_template_directory_uri() . '/assets/css/search-form.css', [], date("YmdHi"));
 
