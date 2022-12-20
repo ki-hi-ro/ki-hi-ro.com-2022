@@ -6,6 +6,8 @@ wp_enqueue_style('kihiro-common', get_template_directory_uri() . '/assets/css/ki
 wp_enqueue_style('blog-list', get_template_directory_uri() . '/assets/css/blog-list.css', [], date("YmdHi"));
 
 wp_enqueue_style('single', get_template_directory_uri() . '/assets/css/single.css', [], date("YmdHi"));
+wp_enqueue_style('single-post', get_template_directory_uri() . '/assets/css/single-post.css', [], date("YmdHi"));
+
 wp_enqueue_style('top-skill-blog', get_template_directory_uri() . '/assets/css/top-skill-blog.css', [], date("YmdHi"));
 wp_enqueue_style('top-study-blog', get_template_directory_uri() . '/assets/css/top-study-blog.css', [], date("YmdHi"));
 wp_enqueue_style('top-random-blog', get_template_directory_uri() . '/assets/css/top-random-blog.css', [], date("YmdHi"));
@@ -20,8 +22,7 @@ wp_enqueue_style('top-news', get_template_directory_uri() . '/assets/css/top-new
 wp_enqueue_style('index-template', get_template_directory_uri() . '/assets/css/index-template.css', [], date("YmdHi"));
 wp_enqueue_style('author', get_template_directory_uri() . '/assets/css/author.css', [], date("YmdHi"));
 wp_enqueue_style('page-top', get_template_directory_uri() . '/assets/css/page-top.css', [], date("YmdHi"));
-wp_enqueue_style('single-post', get_template_directory_uri() . '/assets/css/single-post.css', [], date("YmdHi"));
-wp_enqueue_style('single-article', get_template_directory_uri() . '/assets/css/single-article.css', [], date("YmdHi"));
+
 wp_enqueue_style('sidebar-archive', get_template_directory_uri() . '/assets/css/sidebar-archive.css', [], date("YmdHi"));
 wp_enqueue_style('twitter', get_template_directory_uri() . '/assets/css/twitter.css', [], date("YmdHi"));
 wp_enqueue_style('post', get_template_directory_uri() . '/assets/css/post.css', [], date("YmdHi"));
