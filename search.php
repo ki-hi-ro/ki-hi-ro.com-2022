@@ -9,11 +9,11 @@
         <ul class="blog-list-grid">
           <?php if (have_posts()): ?>
             <?php while(have_posts()) : the_post();?>
-          <?php echo get_template_part('template-parts/blog-list-grid'); ?>
-          <?php endwhile; ?>
-          <?php else: ?>
-           <p>該当する記事はありませんでした。</p>
-          <?php endif ; ?>
+              <?php echo get_template_part('template-parts/blog-list-grid'); ?>
+            <?php endwhile; ?>
+            <?php else: ?>
+              <p>該当する記事はありませんでした。</p>
+            <?php endif ; ?>
         </ul>
       </div>
   </div>
