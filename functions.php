@@ -7,13 +7,10 @@ wp_enqueue_style('blog-list', get_template_directory_uri() . '/assets/css/blog-l
 wp_enqueue_style('single', get_template_directory_uri() . '/assets/css/single.css', [], date("YmdHi"));
 wp_enqueue_style('layout', get_template_directory_uri() . '/assets/css/layout.css', [], date("YmdHi"));
 wp_enqueue_style('front-page', get_template_directory_uri() . '/assets/css/front-page.css', [], date("YmdHi"));
-
-wp_enqueue_style('index-template', get_template_directory_uri() . '/assets/css/index-template.css', [], date("YmdHi"));
 wp_enqueue_style('author', get_template_directory_uri() . '/assets/css/author.css', [], date("YmdHi"));
-wp_enqueue_style('page-top', get_template_directory_uri() . '/assets/css/page-top.css', [], date("YmdHi"));
 
-wp_enqueue_style('sidebar-archive', get_template_directory_uri() . '/assets/css/sidebar-archive.css', [], date("YmdHi"));
 wp_enqueue_style('twitter', get_template_directory_uri() . '/assets/css/twitter.css', [], date("YmdHi"));
+
 wp_enqueue_style('post', get_template_directory_uri() . '/assets/css/post.css', [], date("YmdHi"));
 wp_enqueue_style('related-post', get_template_directory_uri() . '/assets/css/related-post.css', [], date("YmdHi"));
 wp_enqueue_style('wp-pagenavi', get_template_directory_uri() . '/assets/css/wp-pagenavi.css', [], date("YmdHi"));

@@ -60,11 +60,11 @@
 						<?php $current_cat_slug = get_query_var('category_name'); ?>
 						<!-- <li class="header__li"><a class="header__li-link" href="/tag/vue-js/">Vue.js<span class="header__sp-none"></span></a></li> -->
 						<li class="header__li"><a class="header__li-link" href="<?php echo home_url('all-article'); ?>">これまでに書いた記事<span class="header__sp-none"></span></a></li>
-						<!-- <li class="header__li">
+						<li class="header__li">
 							<a class="header__li-link" href="https://twitter.com/2021_shibata">
 								<img class="header__twitter" src="<?php echo get_template_directory_uri(); ?>/assets/img/twitter.png" alt="twitterのアイコン">
 							</a>
-						</li> -->
+						</li>
 					</ul>
 				</nav>
 			</div>
