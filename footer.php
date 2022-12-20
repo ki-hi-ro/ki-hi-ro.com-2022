@@ -1,17 +1,17 @@
 <?php wp_reset_query(); ?>
 
 <footer>
-	<nav>
-		<div class="nav-contents">
-			<!-- <h4>WEB開発</h4> -->
-			<ul>
-				<!-- <li><a href="/tag/vue-js">Vue.js</a></li> -->
-				<!-- <li><a href="/tag/react">React</a></li>
+  <nav>
+    <div class="nav-contents">
+      <!-- <h4>WEB開発</h4> -->
+      <ul>
+        <!-- <li><a href="/tag/vue-js">Vue.js</a></li> -->
+        <!-- <li><a href="/tag/react">React</a></li>
 				<li><a href="/tag/typescript">TypeScript</a></li> -->
-			</ul>
-		</div>
+      </ul>
+    </div>
 
-		<!-- <div class="nav-contents">
+    <!-- <div class="nav-contents">
 			<h4>WEB制作</h4>
 			<ul>
 				<li><a href="/tag/wordpress/">WordPress</a></li>
@@ -35,7 +35,7 @@
 			</ul>
 		</div> -->
 
-	</nav>
+  </nav>
 </footer>
 
 <p class="page-top"><a class="page-top__link" href="#">ページ<br>最上部へ</a></p>

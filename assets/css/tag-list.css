@@ -2,10 +2,13 @@
   margin-top: 30px;
 }
 
+.tag-list .tag-list__wrap {
+  flex-direction: row;
+}
+
 .tag-list__ttl {
-  margin-bottom: 15px;
-  margin-left: 0;
-  margin: 0;
+  margin-bottom: 14px !important;
+  margin-left: 0 !important;
   border-left: 6px solid;
   color: #333;
   font-weight: 600;
@@ -18,9 +21,16 @@
   list-style: none;
   padding-left: 21px;
   margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tag-list__li {
   margin-bottom: 7px;
   font-size: 17px;
+}
+
+.tag-list .tag-li {
+  margin-right: 5px;
+  padding: 0;
 }

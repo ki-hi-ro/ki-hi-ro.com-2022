@@ -61,25 +61,6 @@
       </div>
     <?php endforeach; ?>
 
-    <div class="tag-list">
-      <h3 class="tag-list__ttl">タグ</h3>
-      <ul class="tag-list__wrap">
-        <?php
-        $tags = get_tags();
-        foreach( $tags as $tag) {
-          if($tag->name != 'サンプル') {
-            echo '
-              <li class="tag-list__li">
-                <a href="'. get_tag_link($tag->term_id) .'">
-                  ' . $tag->name . '
-                </a>（' . $tag->count . '）
-              </li>';
-          }
-        }
-        ?>
-      </ul>
-    </div>
-
   </div>
   <?php get_sidebar();?>
 </main>

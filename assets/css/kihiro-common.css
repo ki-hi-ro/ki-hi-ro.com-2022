@@ -323,3 +323,31 @@
   margin-bottom: 7px;
   font-size: 17px;
 }
+
+.tag-li {
+  border: 1px solid #d2d2d2;
+  text-align: center;
+  display: inline-block;
+  padding: 0px 20px;
+  margin: 3px 0;
+  font-size: 13px;
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .tag-li {
+    font-size: 14px;
+  }
+}
+
+.tag-li:hover {
+  opacity: .5;
+  transition: all .3;
+}
+
+.tag-li__link {
+  color: #000;
+  display: block;
+  width: 100%;
+  padding: 0px 20px;
+}
