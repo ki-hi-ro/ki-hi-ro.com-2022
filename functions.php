@@ -6,11 +6,6 @@ wp_enqueue_style('kihiro-common', get_template_directory_uri() . '/assets/css/ki
 wp_enqueue_style('blog-list', get_template_directory_uri() . '/assets/css/blog-list.css', [], date("YmdHi"));
 wp_enqueue_style('single', get_template_directory_uri() . '/assets/css/single.css', [], date("YmdHi"));
 
-
-wp_enqueue_style('top-skill-blog', get_template_directory_uri() . '/assets/css/top-skill-blog.css', [], date("YmdHi"));
-wp_enqueue_style('top-study-blog', get_template_directory_uri() . '/assets/css/top-study-blog.css', [], date("YmdHi"));
-wp_enqueue_style('top-random-blog', get_template_directory_uri() . '/assets/css/top-random-blog.css', [], date("YmdHi"));
-wp_enqueue_style('top-what-i-did', get_template_directory_uri() . '/assets/css/top-what-i-did.css', [], date("YmdHi"));
 wp_enqueue_style('layout', get_template_directory_uri() . '/assets/css/layout.css', [], date("YmdHi"));
 wp_enqueue_style('blog-archive', get_template_directory_uri() . '/assets/css/blog-archive.css', [], date("YmdHi"));
 wp_enqueue_style('front-page', get_template_directory_uri() . '/assets/css/front-page.css', [], date("YmdHi"));
