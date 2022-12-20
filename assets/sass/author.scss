@@ -25,6 +25,9 @@
     font-weight: 600;
     margin-top: 35px;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &__line {
     border: 1px solid $line-color-gray;
