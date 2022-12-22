@@ -338,6 +338,15 @@
   border-color: rgba(64, 38, 54, 0.6);
 }
 
+.study-blog th {
+  background-color: rgba(89, 160, 118, 0.1);
+  border-color: rgba(64, 38, 54, 0.6);
+}
+
+.study-blog td {
+  border-color: rgba(64, 38, 54, 0.6);
+}
+
 .drink-comparison h3 {
   border-color: #D9AA52;
 }

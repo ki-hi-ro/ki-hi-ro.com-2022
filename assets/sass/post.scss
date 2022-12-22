@@ -242,15 +242,19 @@
   }
 }
 
-.random-blog {
-  th {
-    background-color: $random-bg-color;
-    border-color: $random-table-color;
-  }
-  td {
-    border-color: $random-table-color;
-  }
+@mixin table($cat, $bg-color, $border-color) {
+  .#{$cat}-blog {
+    th {
+      background-color: $bg-color;
+      border-color: $border-color;
+    }
+    td {
+      border-color: $border-color;
+    }
+  }  
 }
+@include table('random', $random-bg-color, $random-table-color);
+@include table('study', $study-bg-color, $random-table-color);
 
 .drink-comparison {
   h3 {
