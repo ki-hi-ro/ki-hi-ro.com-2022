@@ -10,60 +10,56 @@
                 <?php
                 $posttags = get_the_tags();
                 if ($posttags) :
-                  foreach ($posttags as $tag) : 
+                  foreach ($posttags as $tag) :
                 ?>
                 <a class="blog-list-grid__tag" href="<?php echo home_url('tag/'.$tag->slug.''); ?>">
                     <?php echo $tag->name; ?>
                 </a>
-                <?php 
-                  endforeach; 
+                <?php
+                  endforeach;
                 endif;
                 ?>
             </div>
             <h1 class="post__ttl"><?php the_title(); ?></h1>
-            <?php 
-              if(have_rows('what-you-know')): 
-                get_template_part('template-parts/what-you-know'); 
-              endif; 
+            <?php
+              if(have_rows('what-you-know')):
+                get_template_part('template-parts/what-you-know');
+              endif;
               ?>
             <div class="post__content">
                 <?php
-                if(in_category('drink-comparison')) : 
-                  get_template_part('template-parts/drink-comparision'); 
+                if(in_category('drink-comparison')) :
+                  get_template_part('template-parts/drink-comparision');
                 elseif(in_category('exercise-record')) :
                   get_template_part('template-parts/exercise-record');
                 else :
-                  the_content(); 
-                endif; 
+                  the_content();
+                endif;
                 ?>
             </div>
-            <?php 
-            // $args = array(
-            //   'in_same_term' => true
-            // );
-            // the_post_navigation($args); 
+            <?php
             $prevpost = get_adjacent_post(true, '', true);
             $nextpost = get_adjacent_post(true, '', false);
             if( $prevpost or $nextpost) :
             ?>
-            <ul class="nav-links">
-                <?php if( $prevpost ) : ?>
-                <li class="nav-links__nav --pre">
-                    <a class="nav-links__link" href="<?php echo get_permalink($prevpost->ID); ?>">
-                      <img class="nav-links__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg">
-                      <?php echo get_the_post_thumbnail($prevpost->ID, '', array( 'class' => 'nav-links__thumb' )); ?>
-                    </a>
-                </li>
-                <?php endif; ?>
-                <?php if( $nextpost ) : ?>
-                <li class="nav-links__nav --next">
-                    <a class="nav-links__link" href="<?php echo get_permalink($nextpost->ID); ?>">
-                      <?php echo get_the_post_thumbnail($nextpost->ID, '', array( 'class' => 'nav-links__thumb' )); ?>
-                      <img class="nav-links__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg">
-                    </a>
-                </li>
-                <?php endif; ?>
-            </ul>
+              <ul class="nav-links">
+                  <?php if( $prevpost ) : ?>
+                  <li class="nav-links__nav --pre">
+                      <a class="nav-links__link" href="<?php echo get_permalink($prevpost->ID); ?>">
+                        <img class="nav-links__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg">
+                        <?php echo get_the_post_thumbnail($prevpost->ID, '', array( 'class' => 'nav-links__thumb' )); ?>
+                      </a>
+                  </li>
+                  <?php endif; ?>
+                  <?php if( $nextpost ) : ?>
+                  <li class="nav-links__nav --next">
+                      <a class="nav-links__link" href="<?php echo get_permalink($nextpost->ID); ?>">
+                        <?php echo get_the_post_thumbnail($nextpost->ID, '', array( 'class' => 'nav-links__thumb' )); ?>
+                        <img class="nav-links__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg">
+                      </a>
+                  </li>
+                  <?php endif; ?>
+              </ul>
             <?php endif; ?>
             <?php endwhile; endif; ?>
         </article>

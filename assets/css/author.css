@@ -1,7 +1,7 @@
 .author-box {
   background-color: #fff;
   padding: 26px 20px 20px;
-  margin: 30px auto 0;
+  margin: 30px auto;
   border: 1px solid #d2d2d2;
   width: 100%;
 }
@@ -28,6 +28,9 @@
   font-weight: 600;
   margin-top: 35px;
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .author-box__line {

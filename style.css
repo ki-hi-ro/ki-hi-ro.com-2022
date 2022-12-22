@@ -3796,8 +3796,12 @@ h3.sidebar-ttl {
 .blog-article__aside-table-of-contents {
   position: sticky;
   top: 20px;
-  padding-top: 0;
-  display: none;
+}
+
+@media (max-width: 767px) {
+  .blog-article__aside-table-of-contents {
+    display: none;
+  }
 }
 
 .single .ez-toc-widget-container li.active>a {
@@ -3807,7 +3811,7 @@ h3.sidebar-ttl {
 div#ez-toc-container {
   width: 100%;
   margin: 0;
-} 
+}
 
 @media (min-width: 768px) {
   div#ez-toc-container {

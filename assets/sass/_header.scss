@@ -1,5 +1,6 @@
 @import "color";
 @import "breakpoint";
+
 .header {
   z-index: 1;
   top: 0;
@@ -62,11 +63,7 @@
     text-decoration: none;
     transition: all 0.3s;
     text-align: center;
-    padding: 15px 18px 20px;
     font-size: 16px;
-    @include mq(md) {
-      padding: 0;
-    }
     &.--current {
       font-weight: bold;
     }
@@ -182,5 +179,6 @@
   &__twitter {
     width: 30px;
     display: block;
+    margin-left: 15px;
   }
 }

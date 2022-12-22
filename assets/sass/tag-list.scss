@@ -1,0 +1,33 @@
+@import "breakpoint";
+
+.tag-list {
+  margin-top: 30px;
+  .tag-list__wrap {
+    flex-direction: row;
+  }
+  &__ttl {
+    margin-bottom: 14px!important;
+    margin-left: 0!important;
+    border-left: 6px solid;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    padding: 0px 15px 0px;
+    font-size: 20px;
+  }
+  &__wrap {
+    list-style: none;
+    padding-left: 21px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__li {
+    margin-bottom: 7px;
+    font-size: 17px;
+  }
+  .tag-li {
+    margin-right: 5px;
+    padding: 0;
+  }
+}

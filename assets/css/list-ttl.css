@@ -1,0 +1,64 @@
+.post-list-ttl {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  font-size: 25px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 0;
+}
+
+@media (min-width: 992px) {
+  .post-list-ttl {
+    flex-direction: row;
+    text-align: left;
+    border-left: 6px solid;
+    margin: 0 0 30px 0;
+    padding: 0px 15px 0px;
+  }
+}
+
+.post-list-ttl.--what-i-did {
+  border-color: #000;
+}
+
+.post-list-ttl.--skill-blog {
+  border-color: #0a2c54;
+  color: #0a2c54;
+}
+
+.post-list-ttl.--study-blog {
+  border-color: #59a076;
+  color: #59a076;
+}
+
+.post-list-ttl.--random-blog {
+  border-color: #88466e;
+  color: #88466e;
+}
+
+.post-list-ttl.--drink-comparison {
+  border-color: #D9AA52;
+  color: #D9AA52;
+}
+
+.post-list-ttl.--diary {
+  border-color: #5A8EA1;
+  color: #5A8EA1;
+}
+
+.post-list-ttl__study-list {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-list-ttl__study-list-img {
+  width: 24px;
+  height: 24px;
+}
