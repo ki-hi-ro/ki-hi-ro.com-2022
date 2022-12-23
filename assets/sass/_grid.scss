@@ -112,6 +112,9 @@
       background: $exercise-bg-color;
     }
   }
+  &__what-you-know-ul {
+    list-style: disc;
+  }
   &__what-you-know-li {
     font-size: 16px;
   }

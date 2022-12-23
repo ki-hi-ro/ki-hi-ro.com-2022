@@ -137,6 +137,10 @@
   background: rgba(73, 10, 84, 0.1);
 }
 
+.blog-list-grid__what-you-know-ul {
+  list-style: disc;
+}
+
 .blog-list-grid__what-you-know-li {
   font-size: 16px;
 }

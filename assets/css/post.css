@@ -51,6 +51,12 @@
   margin: 0 auto;
 }
 
+@media (min-width: 992px) {
+  .post div#ez-toc-container {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .post__bread {
     padding: 2px 2px 0 20px;

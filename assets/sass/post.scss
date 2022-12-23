@@ -38,6 +38,11 @@
     display: block;
     margin: 0 auto;
   }
+  @include mq(lg) {
+    div#ez-toc-container {
+      display: none;
+    }
+  }
   &__bread {
     @include mq(md) {
       padding: 2px 2px 0 20px;

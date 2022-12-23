@@ -21,11 +21,8 @@
                 ?>
             </div>
             <h1 class="post__ttl"><?php the_title(); ?></h1>
-            <?php
-              if(have_rows('what-you-know')):
-                get_template_part('template-parts/what-you-know');
-              endif;
-              ?>
+            <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'post__thumb']  );?>
+            <h2>はじめに</h2>
             <div class="post__content">
                 <?php
                 if(in_category('drink-comparison')) :
