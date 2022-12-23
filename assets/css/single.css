@@ -1,3 +1,7 @@
+.single main {
+  margin-top: 30px;
+}
+
 .single h2 {
   color: #000;
   background-color: rgba(0, 0, 0, 0.1);

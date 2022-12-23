@@ -2,6 +2,10 @@
 @import "breakpoint";
 
 .single {
+  main {
+    margin-top: 30px;
+  }
+
   h2 {
     color: $black;
     background-color: $black-bg-color;
