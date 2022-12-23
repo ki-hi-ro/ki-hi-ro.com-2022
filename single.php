@@ -34,9 +34,10 @@
                 endif;
                 ?>
             </div>
+
             <?php
-            $prevpost = get_adjacent_post(true, '', true);
-            $nextpost = get_adjacent_post(true, '', false);
+            $prevpost = get_adjacent_post(true, '', true, 'post_tag');
+            $nextpost = get_adjacent_post(true, '', false, 'post_tag');
             if( $prevpost or $nextpost) :
             ?>
               <ul class="nav-links">
@@ -59,6 +60,7 @@
               </ul>
             <?php endif; ?>
             <?php endwhile; endif; ?>
+
         </article>
     </div>
     <?php get_sidebar(); ?>
