@@ -2,7 +2,7 @@
 
 <?php // echo get_template_part('template-parts/loading'); ?>
 
-<main class="l-container test">
+<main class="l-container">
   <div class="l-pc-left">
     <?php
     $current_cat_id = get_query_var('cat');

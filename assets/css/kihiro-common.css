@@ -25,11 +25,14 @@
 .header__container {
   margin: 0 auto;
   padding: 20px 15px 0;
+  width: 100%;
+  max-width: 1140px;
 }
 
 @media (min-width: 1200px) {
   .header__container {
     width: 1170px;
+    max-width: none;
   }
 }
 
@@ -45,11 +48,16 @@
 
 @media (min-width: 768px) {
   .header__contents {
-    margin-bottom: 2rem;
     justify-content: space-between;
-    flex-direction: row;
     align-items: center;
     padding: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .header__contents {
+    flex-direction: row;
+    margin-bottom: 2rem;
   }
 }
 

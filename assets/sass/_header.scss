@@ -18,8 +18,11 @@
   &__container {
     margin: 0 auto;
     padding: 20px 15px 0;
+    width: 100%;
+    max-width: 1140px;
     @include mq(xl) {
       width: 1170px;
+      max-width: none;
     }
   }
   &__contents {
@@ -31,11 +34,13 @@
     text-align: center;
     padding: 0 15px;
     @include mq(md) {
-      margin-bottom: 2rem;
       justify-content: space-between;
-      flex-direction: row;
       align-items: center;
       padding: 0;
+    }
+    @include mq(lg) {
+      flex-direction: row;
+      margin-bottom: 2rem;
     }
   }
   &__logo {
