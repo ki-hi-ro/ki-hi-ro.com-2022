@@ -116,6 +116,7 @@
   }
 
   .table-of-contents-ttl {
+    display: none;
     margin-bottom: 16px;
     @include mq(md) {
       margin-left: 20px;

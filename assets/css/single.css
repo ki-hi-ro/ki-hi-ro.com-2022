@@ -117,6 +117,7 @@
 }
 
 .single .table-of-contents-ttl {
+  display: none;
   margin-bottom: 16px;
 }
 
