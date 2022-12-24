@@ -1,5 +1,6 @@
 @import "breakpoint";
 @import "color";
+@import "mixin";
 
 .post {
   @import "post/meta";
@@ -196,10 +197,7 @@
     &__link {
       color: $black;
       display: flex;
-      &:hover {
-        opacity: .5;
-        transition: all .3;
-      }
+      @include link-hover;
     }
     &__nav {
       width: 50%;

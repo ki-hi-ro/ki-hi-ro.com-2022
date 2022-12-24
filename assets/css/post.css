@@ -270,8 +270,8 @@
 }
 
 .post .nav-links__link:hover {
-  opacity: .5;
-  transition: all .3;
+  opacity: 0.5;
+  transition: all 0.3;
 }
 
 .post .nav-links__nav {
