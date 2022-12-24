@@ -419,3 +419,7 @@
 .wp-pagenavi a:hover {
   border-color: #bfbfbf !important;
 }
+
+.wp-pagenavi a.nextpostslink {
+  margin-left: auto;
+}
