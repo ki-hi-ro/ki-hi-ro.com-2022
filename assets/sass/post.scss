@@ -138,9 +138,6 @@
     background: $drink-comparison-bg-color;
     border-color: $drink-comparison-color;
     margin: 30px 0 30px;
-    @include mq(md) {
-      margin: 30px 20px 30px;
-    }
   }
   h2.--purchase {
     margin-bottom: 60px;

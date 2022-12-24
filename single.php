@@ -22,7 +22,9 @@
             </div>
             <h1 class="post__ttl"><?php the_title(); ?></h1>
             <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'post__thumb']  );?>
-            <h2>はじめに</h2>
+            <?php if(!in_category('drink-comparison')): ?>
+              <h2>はじめに</h2>
+            <?php endif; ?>
             <div class="post__content">
                 <?php
                 if(in_category('drink-comparison')) :
