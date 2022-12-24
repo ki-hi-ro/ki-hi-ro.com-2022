@@ -45,6 +45,17 @@
   overflow-wrap: break-word;
 }
 
+.post h4 {
+  margin: 40px 0 -20px;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .post h4 {
+    padding: 0 20px;
+  }
+}
+
 .post .amazon-link a {
   width: 300px;
   display: block;
