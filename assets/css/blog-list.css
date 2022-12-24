@@ -352,3 +352,70 @@
   width: 24px;
   height: 24px;
 }
+
+.all-article .blog-list-grid {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .all-article .blog-list-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .all-article .blog-list-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.all-article .l-pc-left {
+  width: 100%;
+  margin-right: 0;
+}
+
+.all-article .l-pc-right {
+  display: none;
+}
+
+.all-article .blog-list-grid__what-you-know-ttl {
+  font-size: 19px;
+}
+
+@media (min-width: 576px) {
+  .all-article .blog-list-grid__what-you-know-ttl {
+    font-size: 21px;
+  }
+}
+
+.all-article .blog-list-grid__tag-wrap {
+  overflow-y: hidden;
+  height: 34px;
+}
+
+.wp-pagenavi {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wp-pagenavi a {
+  padding: 13px 33px !important;
+  color: #000;
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  .wp-pagenavi a {
+    padding: 13px 49px !important;
+  }
+}
+
+.wp-pagenavi a:hover {
+  opacity: 0.5;
+  transition: all 0.3;
+}
+
+.wp-pagenavi a:hover {
+  border-color: #bfbfbf !important;
+}

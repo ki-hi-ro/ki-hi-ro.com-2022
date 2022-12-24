@@ -1,0 +1,19 @@
+@import "mixin";
+
+.wp-pagenavi {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  a {
+    padding: 13px 33px !important;
+    @include mq(sm) {
+      padding: 13px 49px !important;
+    }
+    color: $black;
+    font-size: 16px;
+    @include link-hover;
+    &:hover {
+      border-color: rgb(191, 191, 191) !important;
+    }
+  }
+}
