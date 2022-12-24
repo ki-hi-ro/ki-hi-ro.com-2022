@@ -1,5 +1,6 @@
 @import "color";
 @import "breakpoint";
+@import "mixin";
 
 .author-box {
   background-color: $white;
@@ -19,11 +20,10 @@
     display: block;
   }
   &__my-name {
-    margin-top: 35px;
     text-align: center;
     font-family: "Avenir-Next";
     font-weight: 600;
-    margin-top: 35px;
+    margin-top: 30px;
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -54,5 +54,11 @@
     width: 7px;
     margin-left: 8px;
     margin-right: 0;
+  }
+  &__sns-link {
+    @include link-hover;
+  }
+  &__sns-icon {
+    width: 30px;
   }
 }

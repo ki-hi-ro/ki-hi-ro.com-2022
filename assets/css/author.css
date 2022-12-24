@@ -22,11 +22,10 @@
 }
 
 .author-box__my-name {
-  margin-top: 35px;
   text-align: center;
   font-family: "Avenir-Next";
   font-weight: 600;
-  margin-top: 35px;
+  margin-top: 30px;
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -62,4 +61,13 @@
   width: 7px;
   margin-left: 8px;
   margin-right: 0;
+}
+
+.author-box__sns-link:hover {
+  opacity: 0.5;
+  transition: all 0.3;
+}
+
+.author-box__sns-icon {
+  width: 30px;
 }
