@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php  $category = get_the_category(); $cat = $category[0]; ?>
 <main class="l-container <?php echo $cat->slug; ?>">
-    <div class="l-pc-left">
+    <div class="l-pc-left --single">
         <article class="post">
             <?php get_template_part('template-parts/bread'); ?>
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -23,7 +23,7 @@
             <h1 class="post__ttl"><?php the_title(); ?></h1>
             <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'post__thumb']  );?>
             <?php if(!in_category('drink-comparison')): ?>
-              <h2>はじめに</h2>
+              <h2 id="first-ttl">はじめに</h2>
             <?php endif; ?>
             <div class="post__content">
                 <?php

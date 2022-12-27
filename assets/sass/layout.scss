@@ -1,4 +1,5 @@
 @import "breakpoint";
+@import "color";
 
 .l-container {
   margin: 0 auto;
@@ -27,6 +28,10 @@
   width: 100%;
   @include mq(lg) {
     width: calc((100% - 40px) / 12 * 8);
+    &.--single {
+      border: 1px solid $line-color-gray;
+      padding: 25px;
+    }
   }
 }
 

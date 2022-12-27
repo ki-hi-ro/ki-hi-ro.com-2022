@@ -19,7 +19,18 @@
     </nav>
 </footer>
 
-<p class="page-top"><a class="page-top__link" href="#">ページ<br>最上部へ</a></p>
+<?php 
+$page_top_text = "";
+$is_single_class = "";
+if(is_single()) {
+    $page_top_text = "目次へ";
+    $is_single_class = " --single";
+} else {
+    $page_top_text = "ページ<br>最上部へ";
+}
+?>
+
+<p class="page-top<?php echo $is_single_class; ?>"><a class="page-top__link" href="#"><?php echo $page_top_text; ?></a></p>
 
 <?php wp_footer(); ?>
 </body>

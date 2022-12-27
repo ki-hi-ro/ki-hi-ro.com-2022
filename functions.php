@@ -27,9 +27,7 @@ wp_enqueue_script('hamburger', get_template_directory_uri() . '/assets/js/hambur
 wp_enqueue_script('tag', get_template_directory_uri() . '/assets/js/tag.js', null, date("YmdHi"), true);
 wp_enqueue_script('view-port', get_template_directory_uri() . '/assets/js/view-port.js', null, date("YmdHi"), true);
 wp_enqueue_script('smoothscroll', get_template_directory_uri() . '/assets/js/smoothscroll.js', null, date("YmdHi"), true);
-wp_enqueue_script('page-link', get_template_directory_uri() . '/assets/js/page-link.js', null, date("YmdHi"), true);
 wp_enqueue_script('bxSlider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js', null, null, true);
-wp_enqueue_script('page-top', get_template_directory_uri() . '/assets/js/page-top.js', null, date("YmdHi"), true);
 wp_enqueue_script('vegas', 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js', [], date("YmdHi"));
 wp_enqueue_script('fade-in-zoom', get_template_directory_uri() . '/assets/js/fade-in-zoom.js', null, date("YmdHi"), true);
 wp_enqueue_script('cdn-vue', 'https://unpkg.com/vue@3/dist/vue.global.js', null, null, true);
@@ -37,6 +35,16 @@ wp_enqueue_script('my-vue', get_template_directory_uri() . '/assets/js/my-vue.js
 wp_enqueue_script('cdn-matchHeight', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js', null, null, true);
 wp_enqueue_script('my-match-height', get_template_directory_uri() . '/assets/js/my-match-height.js', null, null, true);
 wp_enqueue_script('loading', get_template_directory_uri() . '/assets/js/loading.js', null, null, true);
+
+function add_link_files() {
+  if ( is_single() ) {
+    wp_enqueue_script('page-top-single', get_template_directory_uri() . '/assets/js/page-top-single.js', null, date("YmdHi"), true);
+  } else {
+    wp_enqueue_script('page-top', get_template_directory_uri() . '/assets/js/page-top.js', null, date("YmdHi"), true);
+  }
+}
+add_action( 'wp_enqueue_scripts', 'add_link_files' );
+
 
 // body_class()にページスラッグを追加
 add_filter('body_class', 'add_page_slug_class_name');

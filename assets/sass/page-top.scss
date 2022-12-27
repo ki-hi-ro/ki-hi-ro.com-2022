@@ -57,4 +57,9 @@
     line-height: 1.8;
     font-weight: 600;
   }
+  &.--single {
+    @include mq(lg) {
+      display: none;
+    }
+  }
 }

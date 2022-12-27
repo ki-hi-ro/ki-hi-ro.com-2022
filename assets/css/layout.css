@@ -38,6 +38,10 @@
   .l-pc-left {
     width: calc((100% - 40px) / 12 * 8);
   }
+  .l-pc-left.--single {
+    border: 1px solid #ddd;
+    padding: 25px;
+  }
 }
 
 .l-pc-right {

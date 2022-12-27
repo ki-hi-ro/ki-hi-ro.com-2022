@@ -1013,6 +1013,10 @@ main {
   margin-bottom: 7px;
 }
 
+.single ul li.header__child-li {
+  margin-bottom: 0;
+}
+
 #ez-toc-container {
   width: calc(100% - 20px * 2);
 }

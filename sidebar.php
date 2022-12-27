@@ -1,4 +1,6 @@
   <aside class="l-pc-right">
+    <?php if(!is_single()) : ?>
+      
     <?php get_search_form() ; ?>
 
     <?php echo get_template_part('template-parts/author'); ?>
@@ -10,7 +12,6 @@
       </ul>
     </div>
 
-    <?php if(!is_single()) : ?>
       <div class="tag-list">
         <h3 class="tag-list__ttl">タグ</h3>
         <ul class="tag-list__wrap">
