@@ -1,3 +1,5 @@
+<?php require('data/navigation.php'); ?>
+
 <!DOCTYPE HTML>
 <html lang="ja">
 
@@ -57,8 +59,19 @@
 				</div>
 				<nav>
 					<ul class="header__ul">
-						<?php $current_cat_slug = get_query_var('category_name'); ?>
-						<!-- <li class="header__li"><a class="header__li-link" href="/tag/vue-js/">Vue.js<span class="header__sp-none"></span></a></li> -->
+						<?php 
+						$current_cat_slug = get_query_var('category_name'); 
+						foreach ($nav as $nav_item) :
+						?>
+							<li class="header__li --has-child">
+								<div class="header__has-child-li"><img class="header__has-child-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/expand-more.svg"><?php echo $nav_item['ttl']; ?></div>
+								<ul class="header__child-ul">
+									<?php for($i = 0; $i < count($nav_item['tag']); $i++) : ?>
+										<li class="header__child-li"><a class="header__child-li-link" href="/tag/<?php echo $nav_item['tag'][$i][0]; ?>"><?php echo $nav_item['tag'][$i][1]; ?></a></li>
+									<?php endfor; ?>
+								</ul>
+							</li>
+						<?php endforeach; ?>
 						<li class="header__li"><a class="header__li-link" href="<?php echo home_url('all-article'); ?>">これまでに書いた記事<span class="header__sp-none"></span></a></li>
 					</ul>
 				</nav>

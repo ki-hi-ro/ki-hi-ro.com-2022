@@ -1,5 +1,6 @@
 @import "color";
 @import "breakpoint";
+@import "mixin";
 
 .header {
   z-index: 1;
@@ -35,7 +36,7 @@
     padding: 0 15px;
     @include mq(md) {
       justify-content: space-between;
-      align-items: center;
+      align-items: baseline;
       padding: 0;
     }
     @include mq(lg) {
@@ -185,5 +186,58 @@
     width: 30px;
     display: block;
     margin-left: 15px;
+  }
+  &__child-ul {
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    position: absolute;
+    padding: 10px 0;
+    width: calc(100% + 57px);
+    box-sizing: content-box;
+    z-index: 1;
+    background-color: $gray-bg-color;
+  }
+  &__li {
+    font-size: 16px;
+    &.--has-child {
+      margin-right: 35px;
+      text-align: right;
+      position: relative;
+      &:hover {
+        > .header__child-ul {
+          visibility: visible;
+          opacity: 1;
+        }
+        .header__has-child-img {
+          transform: rotate(-180deg);
+          transition: all .3s;
+        }
+      }
+    }
+  }
+  &__has-child-li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    padding-bottom: 10px;
+  }
+  &__child-li {
+    text-align: left;
+    padding: 0 0 5px 34px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  &__child-li-link {
+    font-size: 16px;
+    color: $black;
+    @include link-hover;
+  }
+  &__has-child-img {
+    width: 27px;
+    margin-right: 5px;
   }
 }
