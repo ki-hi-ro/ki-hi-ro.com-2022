@@ -67,13 +67,18 @@
 								<div class="header__has-child-li"><img class="header__has-child-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/expand-more.svg"><?php echo $nav_item['ttl']; ?></div>
 								<ul class="header__child-ul">
 									<?php for($i = 0; $i < count($nav_item['tag']); $i++) : ?>
-										<li class="header__child-li"><a class="header__child-li-link" href="/tag/<?php echo $nav_item['tag'][$i][0]; ?>"><?php echo $nav_item['tag'][$i][1]; ?></a></li>
+										<li class="header__child-li">
+											<a class="header__child-li-link" href="/tag/<?php echo $nav_item['tag'][$i][0]; ?>"><span class="header__sp-child-line">- </span><?php echo $nav_item['tag'][$i][1]; ?></a>
+										</li>
 									<?php endfor; ?>
 								</ul>
 							</li>
 						<?php endforeach; ?>
 						<li class="header__li"><a class="header__li-link" href="<?php echo home_url('all-article'); ?>">これまでに書いた記事<span class="header__sp-none"></span></a></li>
 					</ul>
+					<div class="header__hamburger">
+						<span></span><span></span>
+					</div>
 				</nav>
 			</div>
 		</div>

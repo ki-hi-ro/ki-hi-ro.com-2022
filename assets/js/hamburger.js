@@ -1,10 +1,11 @@
 jQuery(function ($) {
-    var open_triggar = $(".header__open-btn");
-    var header_nav_sp = $(".header__nav-sp");
+    var open_triggar = $(".header__hamburger");
+    var header_nav_sp = $(".header__ul");
 
     open_triggar.on('click', function () {
-        $(this).find('.header__open-btn-line').toggleClass('active');
+        $(this).toggleClass('active');
         header_nav_sp.toggleClass('active');
+        $("body").toggleClass('fixed');
     });
 
     $(".sp-nav a").on('click', function () {
