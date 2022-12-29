@@ -3772,3 +3772,7 @@ div#ez-toc-container ul.ez-toc-list a {
   font-size: 16px;
   color: #000;
 }
+
+.amazon-link {
+  text-align: center;
+}
