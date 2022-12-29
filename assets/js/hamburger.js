@@ -5,7 +5,6 @@ jQuery(function ($) {
     open_triggar.on('click', function () {
         $(this).toggleClass('active');
         header_nav_sp.toggleClass('active');
-        $("body").toggleClass('fixed');
     });
 
     $(".sp-nav a").on('click', function () {
