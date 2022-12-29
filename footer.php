@@ -8,7 +8,13 @@
 		foreach ($nav as $nav_item) :
 		?>
         <div class="footer__nav-contents nav-contents">
-            <h4><?php echo $nav_item['ttl']; ?></h4>
+            <h4>
+                <?php if ($nav_item['ttl'][0]) : ?>
+                    <a href="<?php echo $nav_item['ttl'][0]; ?>"><?php echo $nav_item['ttl'][1]; ?></a>
+                <?php else : ?>
+                    <?php echo $nav_item['ttl'][1]; ?>
+                <?php endif; ?>
+            </h4>
             <ul>
 				<?php for($i = 0; $i < count($nav_item['tag']); $i++) : ?>
 					<li><a href="/tag/<?php echo $nav_item['tag'][$i][0]; ?>/">- <?php echo $nav_item['tag'][$i][1]; ?></a></li>

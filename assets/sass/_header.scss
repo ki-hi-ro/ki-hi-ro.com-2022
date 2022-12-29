@@ -262,6 +262,9 @@ body.fixed {
       font-size: 16px;
     }
   }
+  &__has-child-link {
+    color: $black;
+  }
   &__child-li {
     text-align: left;
     padding: 0 0 5px 7px;
