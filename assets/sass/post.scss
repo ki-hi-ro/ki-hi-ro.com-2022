@@ -262,6 +262,7 @@
 }
 @include table('random', $random-bg-color, $random-table-color);
 @include table('study', $study-bg-color, $random-table-color);
+@include table('skill', $skill-bg-color, $skill-table-color);
 
 .drink-comparison {
   h3 {
