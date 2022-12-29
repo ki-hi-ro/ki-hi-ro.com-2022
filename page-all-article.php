@@ -23,7 +23,7 @@
     ?>
 
       <?php
-      $new_article_array = ["title" => "これまでに書いた記事", "tag" => "", "link" => "", "link-text" => "", "category" => "", "per-page" => "9"];
+      $new_article_array = ["title" => "これまでに書いた記事", "tag" => "", "link" => "", "link-text" => "", "category" => "", "per-page" => "6"];
       $paged = get_query_var('paged') ? get_query_var('paged') : 1;
       $my_query = new WP_Query(array(
         'post_type' => 'post',

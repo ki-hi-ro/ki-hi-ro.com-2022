@@ -12,7 +12,8 @@ $term_desc = $term->description;
       <?php
       $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 30,
+        'posts_per_page' => 6,
+        'paged' => get_query_var('paged'),
         'tag' => $term_slug
       );
       $myposts = get_posts($args);
@@ -23,6 +24,7 @@ $term_desc = $term->description;
         <?php endforeach;
         wp_reset_postdata(); ?>
       </ul>
+      <?php wp_pagenavi(); ?>
     </div>
   </div>
   <?php get_sidebar();?>

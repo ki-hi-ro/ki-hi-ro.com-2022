@@ -3,27 +3,18 @@
   <div class="l-pc-left">
     <h1 class="post-list-ttl"><?php echo get_the_date('Y年n月'); ?>の記事一覧</h1>
     <div class="new-article">
-      <?php
-      $current_url =  get_pagenum_link(get_query_var('paged'));
-      $uri = rtrim($current_url, '/');
-      $uri = substr($uri, strrpos($uri, '/') + 1);
-      $uri = abs($uri);
-      $year = get_query_var('year');
-      $args = array(
-        'post_type' => 'post',
-        'posts_per_page' => -1,
-        'tag__not_in'   => array(116),
-        'monthnum' => $uri,
-        'year' => $year
-      );
-      $myposts = get_posts($args);
-      ?>
-      <ul class="blog-list-grid">
-        <?php foreach ($myposts as $post) : setup_postdata($post); ?>
-          <?php echo get_template_part('template-parts/blog-list-grid'); ?>
-        <?php endforeach;
-        wp_reset_postdata(); ?>
-      </ul>
+    <?php
+      $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+      if(have_posts()): ?>
+        <div class="new-article">
+          <ul class="blog-list-grid">
+            <?php while(have_posts()): the_post(); ?>            
+              <?php echo get_template_part('template-parts/blog-list-grid'); ?>
+            <?php endwhile; ?>      
+          </ul>
+        </div>
+      <?php endif; ?>
+      <?php wp_pagenavi(); ?>
     </div>
   </div>
   <?php get_sidebar();?>
