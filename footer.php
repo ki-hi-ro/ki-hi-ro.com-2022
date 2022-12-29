@@ -10,7 +10,7 @@
         <div class="footer__nav-contents nav-contents">
             <h4>
                 <?php if ($nav_item['ttl'][0]) : ?>
-                    <a href="/tag/<?php echo $nav_item['ttl'][0]; ?>"><?php echo $nav_item['ttl'][1]; ?></a>
+                    <a href="<?php echo $nav_item['ttl'][0]; ?>"><?php echo $nav_item['ttl'][1]; ?></a>
                 <?php else : ?>
                     <?php echo $nav_item['ttl'][1]; ?>
                 <?php endif; ?>

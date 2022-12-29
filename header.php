@@ -65,7 +65,7 @@
 						?>
                         <li class="header__li --has-child">
 							<?php if ($nav_item['ttl'][0]) : ?>
-								<a class="header__has-child-link" href="/tag/<?php echo $nav_item['ttl'][0]; ?>">
+								<a class="header__has-child-link" href="<?php echo $nav_item['ttl'][0]; ?>">
 									<div class="header__has-child-li"><img class="header__has-child-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/expand-more.svg"><?php echo $nav_item['ttl'][1]; ?></div>
 								</a>
 							<?php else : ?>
