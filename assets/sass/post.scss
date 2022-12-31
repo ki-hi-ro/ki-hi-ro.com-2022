@@ -136,7 +136,7 @@
     width: calc(100% / 4);
     height: 90px;
     @include mq(sm) {
-      height: 180px;
+      height: calc(180px / 2);
     }
   }
   .thumbs_list li.slick-active {
@@ -258,7 +258,7 @@
     td {
       border-color: $border-color;
     }
-  }  
+  }
 }
 @include table('random', $random-bg-color, $random-table-color);
 @include table('study', $study-bg-color, $random-table-color);

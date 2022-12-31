@@ -127,6 +127,28 @@
   }
 }
 
+.single .drink-comparison .l-pc-right {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .single .drink-comparison .l-pc-left {
+    width: 75%;
+    margin: 0 auto 30px;
+  }
+}
+
+@media (min-width: 576px) {
+  .single .drink-comparison #drink-comparision-slide {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .single .drink-comparison .post .thumbs_list {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
 .ez-toc-widget-container h3 {
   margin-left: 0;
   margin-bottom: 10px;

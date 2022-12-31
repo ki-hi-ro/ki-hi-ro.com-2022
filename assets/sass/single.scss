@@ -122,6 +122,28 @@
       margin-left: 20px;
     }
   }
+
+  .drink-comparison {
+    .l-pc-right {
+      display: none;
+    }
+    .l-pc-left {
+      @include mq(lg) {
+        width: 75%;
+        margin: 0 auto 30px;
+      }
+    }
+    @include mq(sm) {
+      #drink-comparision-slide {
+        width: 50%;
+        margin: 0 auto;
+      }
+      .post .thumbs_list {
+        margin: 0 auto;
+        width: 50%;
+      }
+    }
+  }
 }
 
 .ez-toc-widget-container {
