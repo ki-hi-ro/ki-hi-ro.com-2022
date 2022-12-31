@@ -1,5 +1,6 @@
 @import "breakpoint";
 @import "color";
+@import "mixin";
 
 .blog-list-grid {
   display: grid;
@@ -131,9 +132,10 @@
     margin: 17px auto 0;
     width: 258px;
     font-size: 16px;
-    &:hover {
-      opacity: .5;
-      transition: all .3;
-    }
+    @include link-hover;
+  }
+  &__thumb-link {
+    @include link-hover;
+    display: block;
   }
 }
