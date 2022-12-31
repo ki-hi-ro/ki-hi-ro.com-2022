@@ -148,6 +148,7 @@
 .blog-list-grid__what-you-know-ttl-wrap {
   width: 100%;
   margin-bottom: 10px;
+  display: none;
 }
 
 .blog-list-grid__link-btn {
