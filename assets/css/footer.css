@@ -22,6 +22,11 @@ footer nav a {
   color: #fff;
 }
 
+footer nav a:hover {
+  opacity: 0.5;
+  transition: all 0.3;
+}
+
 footer nav h4 {
   color: #fff;
   font-size: 18px;

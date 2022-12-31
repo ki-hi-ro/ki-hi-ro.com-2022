@@ -2,6 +2,11 @@
   margin-top: 30px;
 }
 
+.sidebar-archive a:hover {
+  opacity: 0.5;
+  transition: all 0.3;
+}
+
 .sidebar-archive__ttl {
   margin: 0;
   border-left: 6px solid;

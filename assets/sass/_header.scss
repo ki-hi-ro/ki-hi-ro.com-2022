@@ -227,7 +227,7 @@ body.fixed {
       position: absolute;
       visibility: hidden;
       opacity: 0;
-      background-color: $gray-bg-color; 
+      background-color: $gray-bg-color;
     }
   }
   &__li {
@@ -264,6 +264,7 @@ body.fixed {
   }
   &__has-child-link {
     color: $black;
+    @include link-hover;
   }
   &__child-li {
     text-align: left;
