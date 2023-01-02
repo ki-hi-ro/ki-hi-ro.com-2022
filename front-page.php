@@ -30,7 +30,7 @@
         ["title" => "学習ブログ", "tag" => "", "link" => "category/study-blog/", "link-text" => "学習ブログの一覧", "category" => "study-blog", "per-page" => "1", "orderby" => 'date', "orderby" => 'rand'],
         ["title" => "日記", "tag" => "", "link" => "category/diary/", "link-text" => "日記の一覧", "category" => "diary", "per-page" => "1", "orderby" => 'date', "orderby" => 'rand'],
         ["title" => "雑記ブログ", "tag" => "", "link" => "category/random-blog/", "link-text" => "雑記ブログの一覧", "category" => "random-blog", "per-page" => "1", "orderby" => 'date', "orderby" => 'rand'],
-        ["title" => "飲み記録", "tag" => "", "link" => "category/drink-comparison/", "link-text" => "飲み記録の一覧", "category" => "drink-comparison", "per-page" => "1", "orderby" => 'date', "orderby" => 'rand'],
+        ["title" => "記録", "tag" => "", "link" => "category/record/", "link-text" => "記録の一覧", "category" => "record", "per-page" => "1", "orderby" => 'date', "orderby" => 'rand'],
       );
       foreach ($new_article_array as $new_article) :
         $args = array(
