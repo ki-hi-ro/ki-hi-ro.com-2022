@@ -15,8 +15,8 @@
       $post_list_ttl = "学習ブログ";
     } elseif ($current_cat_id == "67") {
       $post_list_ttl = "雑記ブログ";
-    } elseif ($current_cat_slug == "drink-comparison") {
-      $post_list_ttl = "飲み記録";
+    } elseif ($current_cat_slug == "record") {
+      $post_list_ttl = "記録";
     } elseif ($current_cat_slug == "diary") {
       $post_list_ttl = "日記";
     } elseif ($current_cat_slug == "exercise-record") {
