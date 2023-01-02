@@ -22,19 +22,19 @@
       </div>
       <h1 class="post__ttl"><?php the_title(); ?></h1>
       <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'post__thumb']  );?>
-      <?php if(!in_category('drink-comparison')): ?>
-      <h2 id="first-ttl">はじめに</h2>
+      <?php if(!in_category('record')): ?>
+        <h2 id="first-ttl">はじめに</h2>
       <?php endif; ?>
       <div class="post__content">
         <?php
-                if(in_category('drink-comparison')) :
-                  get_template_part('template-parts/drink-comparision');
-                elseif(in_category('exercise-record')) :
-                  get_template_part('template-parts/exercise-record');
-                else :
-                  the_content();
-                endif;
-                ?>
+          if(in_category('record')) :
+            get_template_part('template-parts/record');
+          elseif(in_category('exercise-record')) :
+            get_template_part('template-parts/exercise-record');
+          else :
+            the_content();
+          endif;
+        ?>
       </div>
 
       <?php

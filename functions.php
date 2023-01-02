@@ -22,7 +22,7 @@ wp_enqueue_style('footer', get_template_directory_uri() . '/assets/css/footer.cs
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);
 wp_enqueue_script('jquery', null, null, null, true);
 wp_enqueue_script('cdn-slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', null, null, true);
-wp_enqueue_script('slick', get_template_directory_uri() . '/assets/js/slick.js', null, null, true);
+wp_enqueue_script('slick', get_template_directory_uri() . '/assets/js/slick.js', null, date("YmdHi"), true);
 wp_enqueue_script('hamburger', get_template_directory_uri() . '/assets/js/hamburger.js', null, date("YmdHi"), true);
 wp_enqueue_script('tag', get_template_directory_uri() . '/assets/js/tag.js', null, date("YmdHi"), true);
 wp_enqueue_script('view-port', get_template_directory_uri() . '/assets/js/view-port.js', null, date("YmdHi"), true);
@@ -37,7 +37,7 @@ wp_enqueue_script('my-match-height', get_template_directory_uri() . '/assets/js/
 wp_enqueue_script('loading', get_template_directory_uri() . '/assets/js/loading.js', null, null, true);
 
 function add_link_files() {
-  if ( is_single() ) {
+  if ( is_single() && !in_category('record') ) {
     wp_enqueue_script('page-top-single', get_template_directory_uri() . '/assets/js/page-top-single.js', null, date("YmdHi"), true);
   } else {
     wp_enqueue_script('page-top', get_template_directory_uri() . '/assets/js/page-top.js', null, date("YmdHi"), true);

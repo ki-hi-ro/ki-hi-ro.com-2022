@@ -127,23 +127,23 @@
   }
 }
 
-.single .drink-comparison .l-pc-right {
+.single .record .l-pc-right {
   display: none;
 }
 
 @media (min-width: 992px) {
-  .single .drink-comparison .l-pc-left {
+  .single .record .l-pc-left {
     width: 75%;
     margin: 0 auto 30px;
   }
 }
 
 @media (min-width: 576px) {
-  .single .drink-comparison #drink-comparision-slide {
+  .single .record #record-slide {
     width: 50%;
     margin: 0 auto;
   }
-  .single .drink-comparison .post .thumbs_list {
+  .single .record .post .thumbs_list {
     margin: 0 auto;
     width: 50%;
   }

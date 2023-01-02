@@ -25,10 +25,10 @@
     </nav>
 </footer>
 
-<?php 
+<?php
 $page_top_text = "";
 $is_single_class = "";
-if(is_single()) {
+if(is_single() && !in_category('record')) {
     $page_top_text = "目次へ";
     $is_single_class = " --single";
 } else {

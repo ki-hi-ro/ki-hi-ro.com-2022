@@ -139,24 +139,24 @@
   }
 }
 
-.post__drink-comparison-record-slide-wrap {
+.post__record-slide-wrap {
   margin: 30px auto 0;
   position: relative;
 }
 
 @media (min-width: 768px) {
-  .post__drink-comparison-record-slide-wrap {
+  .post__record-slide-wrap {
     width: 600px;
   }
 }
 
-.post__drink-comparison-record-slide .slick-slide {
+.post__record-slide .slick-slide {
   height: 600px;
   object-fit: cover;
   overflow: hidden;
 }
 
-.post__drink-comparison-record-slide .slick-slide img {
+.post__record-slide .slick-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -195,7 +195,7 @@
   opacity: 1;
 }
 
-.post h2.--drink-comparison {
+.post h2.--record {
   background: rgba(217, 170, 82, 0.1);
   border-color: #D9AA52;
   margin: 30px 0 30px;
@@ -205,13 +205,13 @@
   margin-bottom: 60px;
 }
 
-.post p.--drink-comparison {
+.post p.--record {
   line-height: 2;
   margin: 20px 0 60px;
 }
 
 @media (min-width: 768px) {
-  .post p.--drink-comparison {
+  .post p.--record {
     margin: 20px 20px 60px;
   }
 }
@@ -367,7 +367,16 @@
   border-color: rgba(10, 44, 84, 0.6);
 }
 
-.drink-comparison h3 {
+.record th {
+  background-color: rgba(217, 170, 82, 0.1);
+  border-color: rgba(10, 44, 84, 0.6);
+}
+
+.record td {
+  border-color: rgba(10, 44, 84, 0.6);
+}
+
+.record h3 {
   border-color: #D9AA52;
 }
 

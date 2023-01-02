@@ -123,7 +123,7 @@
     }
   }
 
-  .drink-comparison {
+  .record {
     .l-pc-right {
       display: none;
     }
@@ -134,7 +134,7 @@
       }
     }
     @include mq(sm) {
-      #drink-comparision-slide {
+      #record-slide {
         width: 50%;
         margin: 0 auto;
       }
