@@ -344,6 +344,10 @@
   margin: 0 auto;
 }
 
+.post .wp-block-embed__wrapper {
+  text-align: center;
+}
+
 .random-blog th {
   background-color: rgba(136, 70, 110, 0.1);
   border-color: rgba(64, 38, 54, 0.6);

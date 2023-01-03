@@ -250,6 +250,9 @@
   .twitter-tweet {
     margin: 0 auto;
   }
+  .wp-block-embed__wrapper {
+    text-align: center;
+  }
 }
 
 @mixin table($cat, $bg-color, $border-color) {
