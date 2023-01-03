@@ -340,6 +340,10 @@
   }
 }
 
+.post .twitter-tweet {
+  margin: 0 auto;
+}
+
 .random-blog th {
   background-color: rgba(136, 70, 110, 0.1);
   border-color: rgba(64, 38, 54, 0.6);
