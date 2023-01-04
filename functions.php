@@ -3,7 +3,6 @@
 // css
 wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], date("YmdHi"));
 
-wp_enqueue_style('front-page', get_template_directory_uri() . '/assets/css/front-page.css', [], date("YmdHi"));
 wp_enqueue_style('author', get_template_directory_uri() . '/assets/css/author.css', [], date("YmdHi"));
 wp_enqueue_style('post', get_template_directory_uri() . '/assets/css/post.css', [], date("YmdHi"));
 wp_enqueue_style('related-post', get_template_directory_uri() . '/assets/css/related-post.css', [], date("YmdHi"));
