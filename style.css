@@ -4890,3 +4890,160 @@ body.fixed {
   margin-left: auto;
 }
 
+.single main {
+  margin-top: 30px;
+}
+
+.single h2 {
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-left: 6px solid;
+  line-height: 40px;
+  margin: 60px 0 40px;
+}
+
+@media (min-width: 768px) {
+  .single h2 {
+    margin: 60px 20px 40px;
+  }
+}
+
+.single h3 {
+  border-left: 6px solid;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  padding: 0px 15px 0px;
+  font-size: 20px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1200px) {
+  .single h3 {
+    margin-left: 20px;
+  }
+}
+
+.single h3.sidebar-ttl {
+  margin-top: 30px;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .single .cp_embed_wrapper {
+    padding: 0 20px;
+  }
+}
+
+.single .ez-toc-widget-container ul.ez-toc-list {
+  padding: 10px;
+  max-height: 50vh;
+  height: auto;
+  overflow-y: scroll;
+  border: 1px solid #ddd;
+}
+
+.single .skill-blog h2,
+.single .skill-blog h3 {
+  border-color: #0a2c54;
+}
+
+.single .skill-blog h2 {
+  background: rgba(10, 44, 84, 0.1);
+}
+
+.single .study-blog h2,
+.single .study-blog h3 {
+  border-color: #59a076;
+}
+
+.single .study-blog h2 {
+  background: rgba(89, 160, 118, 0.1);
+}
+
+.single .random-blog h2,
+.single .random-blog h3 {
+  border-color: #88466e;
+}
+
+.single .random-blog h2 {
+  background: #88466e1a;
+}
+
+.single .diary h2,
+.single .diary h3 {
+  border-color: #5A8EA1;
+}
+
+.single .diary h2 {
+  background: rgba(90, 142, 161, 0.1);
+}
+
+.single .exercise-record h2,
+.single .exercise-record h3 {
+  border-color: #490A54;
+}
+
+.single .exercise-record h2 {
+  background: rgba(73, 10, 84, 0.1);
+}
+
+@media (min-width: 992px) {
+  .single .blog-list-grid__tag-wrap {
+    text-align: right;
+  }
+}
+
+.single .blog-list-grid__tag {
+  margin-right: 3px;
+}
+
+@media (min-width: 992px) {
+  .single .blog-list-grid__tag {
+    margin-right: 0;
+    margin-left: 3px;
+  }
+}
+
+.single .table-of-contents-ttl {
+  display: none;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .single .table-of-contents-ttl {
+    margin-left: 20px;
+  }
+}
+
+.single .record .l-pc-right {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .single .record .l-pc-left {
+    width: 75%;
+    margin: 0 auto 30px;
+  }
+}
+
+@media (min-width: 576px) {
+  .single .record #record-slide {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .single .record .post .thumbs_list {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
+.ez-toc-widget-container h3 {
+  margin-left: 0;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
