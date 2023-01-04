@@ -8,6 +8,7 @@ Author: Shibata Hiroki
 */
 
 @import "breakpoint";
+@import "color";
 
 body {
   color: #333;
@@ -269,7 +270,7 @@ h3,
 }
 
 .single-works .tag.reproduce {
-  color: #000;
+  color: $black;
   background-color: #e0e0e0;
   width: 56px;
 }
@@ -337,7 +338,7 @@ h3,
   }
 
   .single-works .tag.reproduce {
-    color: #000;
+    color: $black;
     background-color: #e0e0e0;
     width: 56px;
   }
@@ -629,7 +630,7 @@ h3,
 }
 
 .category .article-list .article .title a {
-  color: #000;
+  color: $black;
 }
 
 .category .article-list .article .meta,
@@ -685,7 +686,7 @@ h3,
 }
 
 .tag .article-list .article .title a {
-  color: #000;
+  color: $black;
 }
 
 .tag .article-list .article .meta,
@@ -727,7 +728,7 @@ h3,
 ---------------------------------------------------------------------- */
 .home .author p,
 .home .author li {
-  color: #000;
+  color: $black;
   font-size: 16px;
 }
 
@@ -813,7 +814,7 @@ main {
 }
 
 .single p {
-  color: #000;
+  color: $black;
   font-size: 16px;
   line-height: 30px;
   margin-top: 40px;
@@ -827,7 +828,7 @@ main {
 
 .single .author p {
   padding: 0 20px 0 20px;
-  color: #000;
+  color: $black;
   font-size: 16px;
   line-height: 1.8;
   margin-top: 40px;
@@ -912,7 +913,7 @@ main {
 .skill-blog__contents {
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
-  color: #000;
+  color: $black;
 }
 
 .skill-blog__link:not(:last-child) {
@@ -977,7 +978,7 @@ main {
   padding: 3px 0 3px 13px;
   background-color: #fff;
   outline: none;
-  color: #000;
+  color: $black;
 }
 
 .skill-blog-btn__link::after {
@@ -1002,7 +1003,7 @@ main {
 }
 
 .single h1 {
-  color: #000;
+  color: $black;
   text-align: center;
   margin-top: 36px;
 }
@@ -1162,7 +1163,7 @@ header .header-nav nav ul li a:hover {
 
 .header-nav nav li.has-child ul li a:hover,
 .header-nav nav li.has-child ul li a:active {
-  background: #000;
+  background: $black;
 }
 
 .sp-nav {
@@ -1508,7 +1509,7 @@ header .header-nav nav ul li a:hover {
 }
 
 .home .author p {
-  color: #000;
+  color: $black;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.8;
@@ -1526,7 +1527,7 @@ header .header-nav nav ul li a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
-  color: #000;
+  color: $black;
   font-size: 38px;
   font-weight: bold;
 }
@@ -1549,7 +1550,7 @@ header .header-nav nav ul li a:hover {
   margin: 0 auto;
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
-  color: #000;
+  color: $black;
   display: flex;
   align-items: center;
 }
@@ -1594,7 +1595,7 @@ header .header-nav nav ul li a:hover {
   margin: 0 auto;
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
-  color: #000;
+  color: $black;
   display: flex;
   align-items: center;
 }
@@ -1634,7 +1635,7 @@ header .header-nav nav ul li a:hover {
   margin: 0 auto;
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
-  color: #000;
+  color: $black;
   display: flex;
   align-items: center;
 }
@@ -1674,7 +1675,7 @@ header .header-nav nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: right;
-  color: #000;
+  color: $black;
 }
 
 .more-link a img {
@@ -1847,7 +1848,7 @@ a.top-contents__card.--blog {
   border: 1px solid #707070;
   padding: 9px 0;
   text-align: center;
-  color: #000;
+  color: $black;
   margin: 30px auto 32px;
   display: block;
   width: 100%;
@@ -2257,11 +2258,11 @@ a.top-contents__card.--blog {
 
 .sidebar .concept li {
   font-size: 17px;
-  color: #000;
+  color: $black;
 }
 
 .sidebar .concept p {
-  color: #000;
+  color: $black;
 }
 
 .sidebar .sidebar__skill-blog .skill-blog__contents {
@@ -2330,7 +2331,7 @@ a.top-contents__card.--blog {
   margin: 0 auto;
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
-  color: #000;
+  color: $black;
 }
 
 .sidebar .sidebar__blog .sidebar-blog__meta {
@@ -2444,14 +2445,14 @@ a.top-contents__card.--blog {
 .single h2 {
   background: #f7f7f7;
   padding: 15px;
-  color: #000;
+  color: $black;
   border-left: 6px solid #333;
   line-height: 40px;
   margin: 60px 20px 40px;
 }
 
 .single h3 {
-  border-left: 6px solid #000;
+  border-left: 6px solid $black;
   margin-left: 20px;
   margin-top: 60px;
   margin-bottom: 40px;
@@ -2477,7 +2478,7 @@ a.top-contents__card.--blog {
 }
 
 .single ul li {
-  color: #000;
+  color: $black;
 }
 
 .single pre {
@@ -2536,7 +2537,7 @@ code {
   max-width: 648px;
   border: 1px solid #d2d2d2;
   padding: 5px 10px;
-  color: #000;
+  color: $black;
   display: flex;
   align-items: center;
 }
@@ -2787,13 +2788,13 @@ code {
 }
 
 .page h1 {
-  color: #000;
+  color: $black;
 }
 
 .page h2 {
   background: #f7f7f7;
   padding: 15px;
-  color: #000;
+  color: $black;
   border-left: 6px solid #333;
   line-height: 40px;
 }
@@ -2824,7 +2825,7 @@ code {
 }
 
 .page h3 {
-  border-left: 6px solid #000;
+  border-left: 6px solid $black;
   margin-left: 20px;
   margin-top: 60px;
   margin-bottom: 40px;
@@ -2839,7 +2840,7 @@ code {
   margin-top: 40px;
   margin-bottom: 60px;
   padding: 0 20px 0 20px;
-  color: #000;
+  color: $black;
   font-size: 16px;
   line-height: 30px;
 }
@@ -2855,7 +2856,7 @@ code {
 }
 
 .page ul li {
-  color: #000;
+  color: $black;
 }
 
 .page pre {
@@ -3109,7 +3110,7 @@ code {
   margin-left: 0;
   margin-bottom: 4px;
   margin-top: 30px;
-  color: #000;
+  color: $black;
 }
 
 .introduce.page .address h3.g-map {
@@ -3139,7 +3140,7 @@ code {
   margin-left: 0;
   margin-bottom: 4px;
   margin-top: 30px;
-  color: #000;
+  color: $black;
 }
 
 .introduce.page .twitter h3.g-map {
@@ -3245,7 +3246,7 @@ code {
 
 .service-contact.page .wpcf7-submit {
   background-color: #fff;
-  border: 1px solid #000;
+  border: 1px solid $black;
   outline: none;
   padding: 11px 50px;
   font-size: 17px;
@@ -3253,7 +3254,7 @@ code {
 
 .service-contact.page .wpcf7-submit:hover {
   cursor: pointer;
-  background-color: #000;
+  background-color: $black;
   border: 1px solid #fff;
   color: #fff;
   transition: all 0.3s;
@@ -3288,11 +3289,11 @@ code {
   .service-contact.page .submit-btn {
     width: 100%;
     padding: 0;
-    color: #000;
+    color: $black;
   }
 
   .service-contact.page .submit-btn input {
-    color: #000;
+    color: $black;
     font-weight: normal;
   }
 
@@ -3302,7 +3303,7 @@ code {
 }
 
 .consultation .page-mv h1 {
-  color: #000;
+  color: $black;
   font-weight: bold;
 }
 
@@ -3321,7 +3322,7 @@ code {
 }
 
 .consultation .submit-btn input {
-  color: #000;
+  color: $black;
   font-weight: normal;
 }
 
@@ -3337,7 +3338,7 @@ code {
 
 .consultation .wpcf7-submit {
   background-color: #fff;
-  border: 1px solid #000;
+  border: 1px solid $black;
   outline: none;
   padding: 11px 50px;
   font-size: 17px;
@@ -3345,7 +3346,7 @@ code {
 
 .consultation .wpcf7-submit:hover {
   cursor: pointer;
-  background-color: #000;
+  background-color: $black;
   border: 1px solid #fff;
   color: #fff;
   transition: all 0.3s;
@@ -3426,10 +3427,10 @@ code {
 }
 
 .contact.top-section .submit-btn input {
-  color: #000;
+  color: $black;
   font-weight: normal;
   background-color: #fff;
-  border: 1px solid #000;
+  border: 1px solid $black;
   outline: none;
   padding: 11px 50px;
   font-size: 17px;
@@ -3437,7 +3438,7 @@ code {
 
 .contact.top-section .submit-btn input:hover {
   cursor: pointer;
-  background-color: #000;
+  background-color: $black;
   border: 1px solid #fff;
   color: #fff;
   transition: all 0.3s;
@@ -3773,7 +3774,7 @@ div#ez-toc-container ul.ez-toc-list a {
 
 .single ol li {
   font-size: 16px;
-  color: #000;
+  color: $black;
 }
 
 .amazon-link {
@@ -3899,7 +3900,7 @@ body.fixed {
 }
 
 .header__li-link {
-  color: #000;
+  color: $black;
   display: block;
   text-decoration: none;
   transition: all 0.3s;
@@ -3929,7 +3930,7 @@ body.fixed {
 }
 
 .header__has-child-li-link {
-  color: #000;
+  color: $black;
 }
 
 .header__has-child-li-link:hover {
@@ -4110,7 +4111,7 @@ body.fixed {
 }
 
 .header__has-child-link {
-  color: #000;
+  color: $black;
 }
 
 .header__has-child-link:hover {
@@ -4141,7 +4142,7 @@ body.fixed {
 
 .header__child-li-link {
   font-size: 16px;
-  color: #000;
+  color: $black;
 }
 
 .header__child-li-link:hover {
@@ -4176,7 +4177,7 @@ body.fixed {
   position: absolute;
   left: 13px;
   height: 2px;
-  background-color: #000;
+  background-color: $black;
 }
 
 .header__hamburger span:nth-of-type(1) {
@@ -4259,7 +4260,7 @@ body.fixed {
   border-radius: 5px;
   width: 60px;
   height: 60px;
-  color: #000;
+  color: $black;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -4316,7 +4317,7 @@ body.fixed {
   padding: 0px 20px;
   margin: 3px 0;
   font-size: 13px;
-  color: #000;
+  color: $black;
 }
 
 @include mq(md) {
@@ -4331,7 +4332,7 @@ body.fixed {
 }
 
 .tag-li__link {
-  color: #000;
+  color: $black;
   display: block;
   width: 100%;
   padding: 0px 20px;
@@ -4358,7 +4359,7 @@ body.fixed {
   margin: 0 auto;
   border: 1px solid #d2d2d2;
   background-color: #fff;
-  color: #000;
+  color: $black;
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -4399,7 +4400,7 @@ body.fixed {
   padding: 0px 20px;
   margin: 3px 0;
   font-size: 13px;
-  color: #000;
+  color: $black;
 }
 
 @include mq(md) {
@@ -4424,7 +4425,7 @@ body.fixed {
 .blog-list-grid__what-you-know-ttl {
   margin-bottom: 0;
   border-left: 6px solid;
-  color: #000;
+  color: $black;
   margin: 20px 0 20px;
   text-align: left;
   border-color: #59a076;
@@ -4443,7 +4444,7 @@ body.fixed {
 }
 
 .blog-list-grid__what-you-know-ttl.--what-i-did {
-  border-color: #000;
+  border-color: $black;
 }
 
 .blog-list-grid__what-you-know-ttl.--skill-blog {
@@ -4492,7 +4493,7 @@ body.fixed {
 
 .blog-list-grid__link-btn {
   border: 1px solid #d2d2d2;
-  color: #000;
+  color: $black;
   text-align: center;
   display: block;
   padding: 10px 0;
@@ -4555,7 +4556,7 @@ body.fixed {
   height: 251px;
   margin: 0 auto;
   border: 1px solid #d2d2d2;
-  color: #000;
+  color: $black;
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -4662,7 +4663,7 @@ body.fixed {
 }
 
 .post-list-ttl.--what-i-did {
-  border-color: #000;
+  border-color: $black;
 }
 
 .post-list-ttl.--skill-blog {
@@ -4691,7 +4692,7 @@ body.fixed {
 }
 
 .post-list-ttl__study-list {
-  color: #000;
+  color: $black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4870,7 +4871,7 @@ body.fixed {
 
 .wp-pagenavi a {
   padding: 13px 33px !important;
-  color: #000;
+  color: $black;
   font-size: 16px;
 }
 
@@ -4898,7 +4899,7 @@ body.fixed {
 }
 
 .single h2 {
-  color: #000;
+  color: $black;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 15px;
   border-left: 6px solid;
@@ -5163,14 +5164,14 @@ body.fixed {
   padding: 0 !important;
   margin-top: 16px !important;
   line-height: 2 !important;
-  color: #000;
+  color: $black;
 }
 
 .author-box__link {
   display: flex;
   align-items: center;
   justify-content: right;
-  color: #000;
+  color: $black;
 }
 
 .author-box__link:hover {
@@ -5207,7 +5208,7 @@ body.fixed {
 }
 
 .post__ttl {
-  color: #000;
+  color: $black;
   text-align: center;
   margin-top: 36px;
 }
@@ -5222,15 +5223,15 @@ body.fixed {
 .post h2 {
   background: rgba(120, 120, 120, 0.1);
   border-left: 6px solid;
-  border-color: #000;
-  color: #000;
+  border-color: $black;
+  color: $black;
   padding: 15px;
   line-height: 40px;
   margin: 60px 0 40px;
 }
 
 .post h3 {
-  border-left: 6px solid #000;
+  border-left: 6px solid $black;
   color: #333;
   font-weight: 600;
   letter-spacing: 1.6px;
@@ -5286,7 +5287,7 @@ body.fixed {
 
 .post__contents ul,
 .post__contents ol {
-  color: #000;
+  color: $black;
   margin-top: 10px;
   padding-left: 40px;
 }
@@ -5432,14 +5433,14 @@ body.fixed {
 
 .post th {
   padding: 10px;
-  border: solid 1px #000;
-  color: #000;
+  border: solid 1px $black;
+  color: $black;
 }
 
 .post td {
   padding: 10px;
-  border: solid 1px #000;
-  color: #000;
+  border: solid 1px $black;
+  color: $black;
 }
 
 .post .g-map {
@@ -5460,7 +5461,7 @@ body.fixed {
 }
 
 .post .nav-links__link {
-  color: #000;
+  color: $black;
   display: flex;
 }
 
