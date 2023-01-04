@@ -16,8 +16,8 @@
                 <?php endif; ?>
             </h4>
             <ul>
-				<?php for($i = 0; $i < count($nav_item['tag']); $i++) : ?>
-					<li><a href="/tag/<?php echo $nav_item['tag'][$i][0]; ?>/">- <?php echo $nav_item['tag'][$i][1]; ?></a></li>
+				<?php for($i = 0; $i < count($nav_item['child']); $i++) : ?>
+					<li><a href="<?php echo $nav_item['child'][$i][0]; ?>/">- <?php echo $nav_item['child'][$i][1]; ?></a></li>
 				<?php endfor; ?>
             </ul>
         </div>

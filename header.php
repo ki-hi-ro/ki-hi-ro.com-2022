@@ -72,9 +72,9 @@
 								<div class="header__has-child-li"><img class="header__has-child-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/expand-more.svg"><?php echo $nav_item['ttl'][1]; ?></div>
 							<?php endif; ?>
                             <ul class="header__child-ul">
-                                <?php for($i = 0; $i < count($nav_item['tag']); $i++) : ?>
+                                <?php for($i = 0; $i < count($nav_item['child']); $i++) : ?>
                                 <li class="header__child-li">
-                                    <a class="header__child-li-link" href="/tag/<?php echo $nav_item['tag'][$i][0]; ?>"><span class="header__sp-child-line">- </span><?php echo $nav_item['tag'][$i][1]; ?></a>
+                                    <a class="header__child-li-link" href="<?php echo $nav_item['child'][$i][0]; ?>"><span class="header__sp-child-line">- </span><?php echo $nav_item['child'][$i][1]; ?></a>
                                 </li>
                                 <?php endfor; ?>
                             </ul>

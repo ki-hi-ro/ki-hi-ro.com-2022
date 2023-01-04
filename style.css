@@ -2879,6 +2879,7 @@ body.fixed {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 100;
 }
 
 .header__sitename-text {
@@ -2890,7 +2891,7 @@ body.fixed {
   padding-left: 0;
   margin: 0;
   opacity: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   padding-left: 20px;
@@ -2910,7 +2911,7 @@ body.fixed {
 
 .header__ul.active {
   width: 100%;
-  height: 100%;
+  height: 884px;
   display: flex;
   flex-direction: column;
   align-items: baseline;
