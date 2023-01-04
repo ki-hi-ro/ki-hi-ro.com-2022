@@ -5760,3 +5760,40 @@ body.fixed {
   }
 }
 
+.search-form {
+  display: flex;
+  margin-bottom: 30px;
+  position: relative;
+  border: 1px solid #d2d2d2;
+  height: 48px;
+}
+
+.search-form__input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+}
+
+.search-form__input:focus {
+  outline: none;
+}
+
+.search-form__btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  border: none;
+  background-color: #efefef;
+}
+
+.search-form__icon-img {
+  width: 22px;
+  padding-top: 4px;
+  padding-left: 4px;
+}
+
