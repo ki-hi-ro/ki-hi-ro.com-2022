@@ -12,99 +12,6 @@ Author: Shibata Hiroki
 @import "common";
 @import "single";
 
-.single p {
-  color: $black;
-  font-size: 16px;
-  line-height: 30px;
-  margin-top: 40px;
-}
-
-@include mq(md) {
-  .single p {
-    padding: 0 20px;
-  }
-}
-
-.single .author p {
-  padding: 0 20px 0 20px;
-  color: $black;
-  font-size: 16px;
-  line-height: 1.8;
-  margin-top: 40px;
-}
-
-.single iframe {
-  margin: 0;
-}
-
-@include mq(xl) {
-  .breadcrumbs .breadcrumb {
-    width: 900px;
-    margin: 0 auto 3rem;
-    background: none;
-    padding-left: 0;
-    padding-top: 0;
-  }
-}
-
-@media (max-width: 479px) {
-  header {
-    background: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .author p {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .single .single-wrap p {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@include mq(md) {
-  .author {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 1000px) {
-  .author {
-    width: 100%;
-  }
-}
-
-@media (max-width: 1199px) {
-  .header-container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@media (max-width: 575px) {
-
-  .home .author p,
-  .home .author li {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 999px) and (min-width: 768px) {
-  .author.calendar {
-    width: 720px;
-  }
-}
-
-@media (max-width: 767px) {
-  .single .author {
-    margin-top: 0;
-  }
-}
-
 .skill-blog__sec-ttl {
   text-align: center;
 }
@@ -4529,7 +4436,6 @@ body.fixed {
 
 @include mq(md) {
   .post .book-img {
-    width: 150px;
     margin: 0 auto;
   }
 }

@@ -1,0 +1,14 @@
+.single {
+  p {
+    color: $black;
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 40px;
+    @include mq(md) {
+      padding: 0 20px;
+    }
+  }
+  .wp-block-image img {
+    padding: 0 20px;
+  }
+}

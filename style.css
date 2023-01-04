@@ -66,82 +66,8 @@ h3 {
   }
 }
 
-.single .author p {
-  padding: 0 20px 0 20px;
-  color: #000;
-  font-size: 16px;
-  line-height: 1.8;
-  margin-top: 40px;
-}
-
-.single iframe {
-  margin: 0;
-}
-
-@media (min-width: 1200px) {
-  .breadcrumbs .breadcrumb {
-    width: 900px;
-    margin: 0 auto 3rem;
-    background: none;
-    padding-left: 0;
-    padding-top: 0;
-  }
-}
-
-@media (max-width: 479px) {
-  header {
-    background: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .author p {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .single .single-wrap p {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .author {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 1000px) {
-  .author {
-    width: 100%;
-  }
-}
-
-@media (max-width: 1199px) {
-  .header-container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@media (max-width: 575px) {
-  .home .author p,
-  .home .author li {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 999px) and (min-width: 768px) {
-  .author.calendar {
-    width: 720px;
-  }
-}
-
-@media (max-width: 767px) {
-  .single .author {
-    margin-top: 0;
-  }
+.single .wp-block-image img {
+  padding: 0 20px;
 }
 
 .skill-blog__sec-ttl {
@@ -4429,7 +4355,6 @@ body.fixed {
 
 @media (min-width: 768px) {
   .post .book-img {
-    width: 150px;
     margin: 0 auto;
   }
 }
