@@ -11,7 +11,7 @@ Author: Shibata Hiroki
 @import "color";
 
 body {
-  color: #333;
+  color: $font;
   margin: 0;
   font-size: 14px;
   font-weight: 300;
@@ -282,7 +282,7 @@ h3,
 }
 
 .single-works .tag.actual-project {
-  color: #fff;
+  color: $white;
   background-color: #33b5e5;
   width: 69px;
 }
@@ -294,7 +294,7 @@ h3,
 }
 
 .single-works .tag.learning {
-  color: #fff;
+  color: $white;
   background-color: #59698d;
   width: 56px;
 }
@@ -306,7 +306,7 @@ h3,
 }
 
 .single-works .tag.sample {
-  color: #fff;
+  color: $white;
   background-color: #fbc02d;
   width: 82px;
 }
@@ -318,7 +318,7 @@ h3,
 }
 
 .single-works .tag.original {
-  color: #fff;
+  color: $white;
   background-color: #388e3c;
   width: 95px;
 }
@@ -352,7 +352,7 @@ h3,
 
 @include mq(md) {
   .single-works .tag.actual-project {
-    color: #fff;
+    color: $white;
     background-color: #33b5e5;
     width: 69px;
   }
@@ -366,7 +366,7 @@ h3,
 
 @include mq(md) {
   .single-works .tag.learning {
-    color: #fff;
+    color: $white;
     background-color: #59698d;
     width: 56px;
   }
@@ -380,7 +380,7 @@ h3,
 
 @include mq(md) {
   .single-works .tag.sample {
-    color: #fff;
+    color: $white;
     background-color: #fbc02d;
     width: 82px;
   }
@@ -394,7 +394,7 @@ h3,
 
 @include mq(md) {
   .single-works .tag.original {
-    color: #fff;
+    color: $white;
     background-color: #388e3c;
     width: 95px;
   }
@@ -567,7 +567,7 @@ h3,
 }
 
 .author hr {
-  border: 1px solid #ddd;
+  border: 1px solid $line-color;
   width: 20%;
 }
 
@@ -911,7 +911,7 @@ main {
 }
 
 .skill-blog__contents {
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   padding: 5px 10px;
   color: $black;
 }
@@ -923,7 +923,7 @@ main {
 }
 
 .skill-blog__tag {
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   padding: 0px 20px;
   text-align: center;
   display: inline-block;
@@ -935,7 +935,7 @@ main {
 }
 
 .single-wrap {
-  background-color: #fff;
+  background-color: $white;
 }
 
 @media (min-width: 1000px) {
@@ -976,7 +976,7 @@ main {
   display: inline-block;
   height: 100%;
   padding: 3px 0 3px 13px;
-  background-color: #fff;
+  background-color: $white;
   outline: none;
   color: $black;
 }
@@ -993,7 +993,7 @@ main {
 }
 
 .skill-blog-btn__link:hover {
-  color: #333;
+  color: $font;
   text-decoration: none;
 }
 
@@ -1119,7 +1119,7 @@ header .header-nav nav ul li a:hover {
 }
 
 .header-nav nav ul li a:hover {
-  color: #fff;
+  color: $white;
 }
 
 .header-nav nav ul li.has-child::before {
@@ -1151,7 +1151,7 @@ header .header-nav nav ul li a:hover {
 }
 
 .header-nav nav li.has-child ul li a {
-  color: #fff;
+  color: $white;
   border-bottom: solid 1px rgba(255, 255, 255, 0.6);
   font-size: 14px;
   text-align: left;
@@ -1173,7 +1173,7 @@ header .header-nav nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: $white;
   transition: all 0.6s;
 }
 
@@ -1191,7 +1191,7 @@ header .header-nav nav ul li a:hover {
 }
 
 .sp-nav li a {
-  color: #333;
+  color: $font;
   text-decoration: none;
   padding: 10px;
   display: block;
@@ -1275,7 +1275,7 @@ header .header-nav nav ul li a:hover {
 }
 
 .sp-nav li a {
-  color: #333;
+  color: $font;
   text-decoration: none;
   padding: 10px;
   display: block;
@@ -1471,7 +1471,7 @@ header .header-nav nav ul li a:hover {
   right: 0;
   top: 0;
   background-color: #888888;
-  color: #fff;
+  color: $white;
   padding: 12px 35px;
   font-size: 12px;
 }
@@ -1548,7 +1548,7 @@ header .header-nav nav ul li a:hover {
 .skill-blog__contents {
   max-width: 750px;
   margin: 0 auto;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   padding: 5px 10px;
   color: $black;
   display: flex;
@@ -1572,7 +1572,7 @@ header .header-nav nav ul li a:hover {
 
 .skill-blog__tag {
   width: 60%;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   padding: 0px 20px;
   text-align: center;
   display: inline-block;
@@ -1593,7 +1593,7 @@ header .header-nav nav ul li a:hover {
 .random-blog__contents {
   max-width: 750px;
   margin: 0 auto;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   padding: 5px 10px;
   color: $black;
   display: flex;
@@ -1606,7 +1606,7 @@ header .header-nav nav ul li a:hover {
 
 .random-blog__tag {
   width: 60%;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   padding: 0px 20px;
   text-align: center;
   display: inline-block;
@@ -1633,7 +1633,7 @@ header .header-nav nav ul li a:hover {
 .study-blog__contents {
   max-width: 750px;
   margin: 0 auto;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   padding: 5px 10px;
   color: $black;
   display: flex;
@@ -1646,7 +1646,7 @@ header .header-nav nav ul li a:hover {
 
 .study-blog__tag {
   width: 60%;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   padding: 0px 20px;
   text-align: center;
   display: inline-block;
@@ -1690,7 +1690,7 @@ header .header-nav nav ul li a:hover {
 }
 
 a.top-contents__card {
-  color: #333;
+  color: $font;
   margin-right: 10px;
 }
 
@@ -1702,7 +1702,7 @@ a.top-contents__card.--blog {
   width: 100%;
   height: auto;
   overflow: hidden;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
 }
 
 .card:hover {
@@ -1739,7 +1739,7 @@ a.top-contents__card.--blog {
   width: 100%;
   height: 164px;
   padding: 20px 18px 6px;
-  background: #fff;
+  background: $white;
   box-sizing: border-box;
 }
 
@@ -1792,7 +1792,7 @@ a.top-contents__card.--blog {
 
 .top-new-blog .new-blog__post p {
   margin-top: 0;
-  color: #333;
+  color: $font;
 }
 
 .top-new-blog .new-blog__post .excerpt p {
@@ -1831,7 +1831,7 @@ a.top-contents__card.--blog {
 
 .main-column .new-blog__post p {
   margin-top: 0;
-  color: #333;
+  color: $font;
 }
 
 .main-column .new-blog__post img {
@@ -2090,7 +2090,7 @@ a.top-contents__card.--blog {
   .consultation-bnr__wrap img {
     width: 100%;
     margin: 0 auto;
-    border: 1px solid #d2d2d2;
+    border: 1px solid $gray;
   }
 
   .consultation-bnr {
@@ -2266,7 +2266,7 @@ a.top-contents__card.--blog {
 }
 
 .sidebar .sidebar__skill-blog .skill-blog__contents {
-  background-color: #fff;
+  background-color: $white;
   flex-direction: column;
   display: flex;
 }
@@ -2292,7 +2292,7 @@ a.top-contents__card.--blog {
 }
 
 .sidebar .sidebar__study-blog .study-blog__contents {
-  background-color: #fff;
+  background-color: $white;
   flex-direction: column;
   display: flex;
 }
@@ -2324,12 +2324,12 @@ a.top-contents__card.--blog {
 }
 
 .sidebar .sidebar__blog .sidebar-blog__contents {
-  background-color: #fff;
+  background-color: $white;
   flex-direction: column;
   display: flex;
   max-width: 648px;
   margin: 0 auto;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   padding: 5px 10px;
   color: $black;
 }
@@ -2343,7 +2343,7 @@ a.top-contents__card.--blog {
   width: 150px;
   margin-left: 16px;
   font-size: 13px;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   padding: 0px 20px;
   text-align: center;
   display: inline-block;
@@ -2446,7 +2446,7 @@ a.top-contents__card.--blog {
   background: #f7f7f7;
   padding: 15px;
   color: $black;
-  border-left: 6px solid #333;
+  border-left: 6px solid $font;
   line-height: 40px;
   margin: 60px 20px 40px;
 }
@@ -2456,7 +2456,7 @@ a.top-contents__card.--blog {
   margin-left: 20px;
   margin-top: 60px;
   margin-bottom: 40px;
-  color: #333;
+  color: $font;
   font-weight: 600;
   letter-spacing: 1.6px;
   padding: 0px 15px 0px;
@@ -2535,7 +2535,7 @@ code {
 
 .related-post .related-post__contents {
   max-width: 648px;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   padding: 5px 10px;
   color: $black;
   display: flex;
@@ -2544,7 +2544,7 @@ code {
 
 .related-post .related-post__tag {
   width: 24%;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   padding: 0px 20px;
   text-align: center;
   display: inline-block;
@@ -2766,7 +2766,7 @@ code {
 }
 
 .page article {
-  background-color: #fff;
+  background-color: $white;
   margin-bottom: 30px;
 }
 
@@ -2795,7 +2795,7 @@ code {
   background: #f7f7f7;
   padding: 15px;
   color: $black;
-  border-left: 6px solid #333;
+  border-left: 6px solid $font;
   line-height: 40px;
 }
 
@@ -2829,7 +2829,7 @@ code {
   margin-left: 20px;
   margin-top: 60px;
   margin-bottom: 40px;
-  color: #333;
+  color: $font;
   font-weight: 600;
   letter-spacing: 1.6px;
   padding: 0px 15px 0px;
@@ -2916,7 +2916,7 @@ code {
   left: 50%;
   top: 48%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: $white;
   font-size: 30px;
   margin-top: 0;
 }
@@ -3193,7 +3193,7 @@ code {
 }
 
 .page h2.web-update__sec-ttl {
-  border-left: 6px solid #333;
+  border-left: 6px solid $font;
 }
 
 .page h3.web-update__list-ttl {
@@ -3201,7 +3201,7 @@ code {
 }
 
 .page h2.new-site-coding__sec-ttl {
-  border-left: 6px solid #333;
+  border-left: 6px solid $font;
 }
 
 .page h3.new-site-coding__list-ttl {
@@ -3213,7 +3213,7 @@ code {
 }
 
 .service-contact.page h2 {
-  border-left: 6px solid #333;
+  border-left: 6px solid $font;
 }
 
 .service-contact.page .text-danger {
@@ -3245,7 +3245,7 @@ code {
 }
 
 .service-contact.page .wpcf7-submit {
-  background-color: #fff;
+  background-color: $white;
   border: 1px solid $black;
   outline: none;
   padding: 11px 50px;
@@ -3255,8 +3255,8 @@ code {
 .service-contact.page .wpcf7-submit:hover {
   cursor: pointer;
   background-color: $black;
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid $white;
+  color: $white;
   transition: all 0.3s;
   font-weight: bold;
 }
@@ -3337,7 +3337,7 @@ code {
 }
 
 .consultation .wpcf7-submit {
-  background-color: #fff;
+  background-color: $white;
   border: 1px solid $black;
   outline: none;
   padding: 11px 50px;
@@ -3347,8 +3347,8 @@ code {
 .consultation .wpcf7-submit:hover {
   cursor: pointer;
   background-color: $black;
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid $white;
+  color: $white;
   transition: all 0.3s;
   font-weight: bold;
 }
@@ -3429,7 +3429,7 @@ code {
 .contact.top-section .submit-btn input {
   color: $black;
   font-weight: normal;
-  background-color: #fff;
+  background-color: $white;
   border: 1px solid $black;
   outline: none;
   padding: 11px 50px;
@@ -3439,8 +3439,8 @@ code {
 .contact.top-section .submit-btn input:hover {
   cursor: pointer;
   background-color: $black;
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid $white;
+  color: $white;
   transition: all 0.3s;
   font-weight: bold;
 }
@@ -3794,7 +3794,7 @@ body.fixed {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: $white;
   display: flex;
   align-items: center;
 }
@@ -3891,7 +3891,7 @@ body.fixed {
   align-items: baseline;
   justify-content: center;
   opacity: 1;
-  background-color: #fff;
+  background-color: $white;
   z-index: 1;
 }
 
@@ -3913,15 +3913,15 @@ body.fixed {
 }
 
 .header__li-link.--skill-blog {
-  color: #0a2c54;
+  color: $skill;
 }
 
 .header__li-link.--study-blog {
-  color: #59a076;
+  color: $study;
 }
 
 .header__li-link.--random-blog {
-  color: #88466e;
+  color: $random;
 }
 
 .header__li-link:hover {
@@ -3934,19 +3934,19 @@ body.fixed {
 }
 
 .header__has-child-li-link:hover {
-  color: #fff;
+  color: $white;
 }
 
 .header__has-child-li-link.--skill:hover {
-  background: #0a2c54;
+  background: $skill;
 }
 
 .header__has-child-li-link.--study:hover {
-  background: #59a076;
+  background: $study;
 }
 
 .header__has-child-li-link.--random:hover {
-  background: #88466e;
+  background: $random;
 }
 
 .header__open-btn {
@@ -4010,7 +4010,7 @@ body.fixed {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: $white;
   transition: all 0.6s;
 }
 
@@ -4068,7 +4068,7 @@ body.fixed {
     position: absolute;
     visibility: hidden;
     opacity: 0;
-    background-color: #efefef;
+    background-color: $gray-bg;
   }
 }
 
@@ -4288,7 +4288,7 @@ body.fixed {
 .sidebar-archive__ttl {
   margin: 0;
   border-left: 6px solid;
-  color: #333;
+  color: $font;
   font-weight: 600;
   letter-spacing: 1.6px;
   padding: 0px 15px 0px;
@@ -4311,7 +4311,7 @@ body.fixed {
 }
 
 .tag-li {
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   text-align: center;
   display: inline-block;
   padding: 0px 20px;
@@ -4357,8 +4357,8 @@ body.fixed {
   width: 100%;
   padding: 19px;
   margin: 0 auto;
-  border: 1px solid #d2d2d2;
-  background-color: #fff;
+  border: 1px solid $gray;
+  background-color: $white;
   color: $black;
   flex-direction: column;
   display: flex;
@@ -4394,7 +4394,7 @@ body.fixed {
 }
 
 .blog-list-grid__tag {
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   text-align: center;
   display: inline-block;
   padding: 0px 20px;
@@ -4428,8 +4428,8 @@ body.fixed {
   color: $black;
   margin: 20px 0 20px;
   text-align: left;
-  border-color: #59a076;
-  background: rgba(89, 160, 118, 0.1);
+  border-color: $study;
+  background: $study-bg;
   padding: 14px;
   line-height: 35px;
   font-size: 19px;
@@ -4448,33 +4448,33 @@ body.fixed {
 }
 
 .blog-list-grid__what-you-know-ttl.--skill-blog {
-  border-color: #0a2c54;
-  background: rgba(10, 44, 84, 0.1);
+  border-color: $skill;
+  background: $skill-bg;
 }
 
 .blog-list-grid__what-you-know-ttl.--study-blog {
-  border-color: #59a076;
-  background: rgba(89, 160, 118, 0.1);
+  border-color: $study;
+  background: $study-bg;
 }
 
 .blog-list-grid__what-you-know-ttl.--random-blog {
-  border-color: #88466e;
-  background: rgba(136, 70, 110, 0.1);
+  border-color: $random;
+  background: $random-bg;
 }
 
 .blog-list-grid__what-you-know-ttl.--drink-comparison {
-  border-color: #D9AA52;
-  color: #D9AA52;
+  border-color: $record;
+  color: $record;
 }
 
 .blog-list-grid__what-you-know-ttl.--diary {
-  border-color: #5A8EA1;
-  background: rgba(90, 142, 161, 0.1);
+  border-color: $diary;
+  background: $diary-bg;
 }
 
 .blog-list-grid__what-you-know-ttl.--exercise-record {
-  border-color: #490A54;
-  background: rgba(73, 10, 84, 0.1);
+  border-color: $exercise;
+  background: $exercise-bg;
 }
 
 .blog-list-grid__what-you-know-ul {
@@ -4492,7 +4492,7 @@ body.fixed {
 }
 
 .blog-list-grid__link-btn {
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   color: $black;
   text-align: center;
   display: block;
@@ -4555,12 +4555,12 @@ body.fixed {
   padding: 10px;
   height: 251px;
   margin: 0 auto;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   color: $black;
   flex-direction: column;
   display: flex;
   align-items: center;
-  background-color: #fff;
+  background-color: $white;
 }
 
 @include mq(md) {
@@ -4597,7 +4597,7 @@ body.fixed {
 }
 
 .blog-list-scroll__tag {
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   text-align: center;
   display: inline-block;
   padding: 0px 20px;
@@ -4644,7 +4644,7 @@ body.fixed {
   font-weight: 600;
   letter-spacing: 1.6px;
   font-size: 25px;
-  color: #333;
+  color: $font;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -4667,28 +4667,28 @@ body.fixed {
 }
 
 .post-list-ttl.--skill-blog {
-  border-color: #0a2c54;
-  color: #0a2c54;
+  border-color: $skill;
+  color: $skill;
 }
 
 .post-list-ttl.--study-blog {
-  border-color: #59a076;
-  color: #59a076;
+  border-color: $study;
+  color: $study;
 }
 
 .post-list-ttl.--random-blog {
-  border-color: #88466e;
-  color: #88466e;
+  border-color: $random;
+  color: $random;
 }
 
 .post-list-ttl.--record {
-  border-color: #D9AA52;
-  color: #D9AA52;
+  border-color: $record;
+  color: $record;
 }
 
 .post-list-ttl.--diary {
-  border-color: #5A8EA1;
-  color: #5A8EA1;
+  border-color: $diary;
+  color: $diary;
 }
 
 .post-list-ttl__study-list {
@@ -4900,7 +4900,7 @@ body.fixed {
 
 .single h2 {
   color: $black;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: $black-bg;
   padding: 15px;
   border-left: 6px solid;
   line-height: 40px;
@@ -4915,7 +4915,7 @@ body.fixed {
 
 .single h3 {
   border-left: 6px solid;
-  color: #333;
+  color: $font;
   font-weight: 600;
   letter-spacing: 1.6px;
   padding: 0px 15px 0px;
@@ -4947,52 +4947,52 @@ body.fixed {
   max-height: 50vh;
   height: auto;
   overflow-y: scroll;
-  border: 1px solid #ddd;
+  border: 1px solid $line-color;
 }
 
 .single .skill-blog h2,
 .single .skill-blog h3 {
-  border-color: #0a2c54;
+  border-color: $skill;
 }
 
 .single .skill-blog h2 {
-  background: rgba(10, 44, 84, 0.1);
+  background: $skill-bg;
 }
 
 .single .study-blog h2,
 .single .study-blog h3 {
-  border-color: #59a076;
+  border-color: $study;
 }
 
 .single .study-blog h2 {
-  background: rgba(89, 160, 118, 0.1);
+  background: $study-bg;
 }
 
 .single .random-blog h2,
 .single .random-blog h3 {
-  border-color: #88466e;
+  border-color: $random;
 }
 
 .single .random-blog h2 {
-  background: #88466e1a;
+  background: $random1a;
 }
 
 .single .diary h2,
 .single .diary h3 {
-  border-color: #5A8EA1;
+  border-color: $diary;
 }
 
 .single .diary h2 {
-  background: rgba(90, 142, 161, 0.1);
+  background: $diary-bg;
 }
 
 .single .exercise-record h2,
 .single .exercise-record h3 {
-  border-color: #490A54;
+  border-color: $exercise;
 }
 
 .single .exercise-record h2 {
-  background: rgba(73, 10, 84, 0.1);
+  background: $exercise-bg;
 }
 
 @include mq(lg) {
@@ -5092,7 +5092,7 @@ body.fixed {
     width: calc((100% - 40px) / 12 * 8);
   }
   .l-pc-left.--single {
-    border: 1px solid #ddd;
+    border: 1px solid $line-color;
     padding: 25px;
   }
 }
@@ -5121,10 +5121,10 @@ body.fixed {
 }
 
 .author-box {
-  background-color: #fff;
+  background-color: $white;
   padding: 26px 20px 20px;
   margin: 30px auto;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   width: 100%;
 }
 
@@ -5155,7 +5155,7 @@ body.fixed {
 }
 
 .author-box__line {
-  border: 1px solid #ddd;
+  border: 1px solid $line-color;
   width: 20%;
 }
 
@@ -5221,7 +5221,7 @@ body.fixed {
 }
 
 .post h2 {
-  background: rgba(120, 120, 120, 0.1);
+  background: $what-i-did-bg;
   border-left: 6px solid;
   border-color: $black;
   color: $black;
@@ -5232,7 +5232,7 @@ body.fixed {
 
 .post h3 {
   border-left: 6px solid $black;
-  color: #333;
+  color: $font;
   font-weight: 600;
   letter-spacing: 1.6px;
   padding: 0px 15px 0px;
@@ -5392,8 +5392,8 @@ body.fixed {
 }
 
 .post h2.--record {
-  background: rgba(217, 170, 82, 0.1);
-  border-color: #D9AA52;
+  background: $record-bg;
+  border-color: $record;
   margin: 30px 0 30px;
 }
 
@@ -5545,47 +5545,47 @@ body.fixed {
 }
 
 .random-blog th {
-  background-color: rgba(136, 70, 110, 0.1);
-  border-color: rgba(64, 38, 54, 0.6);
+  background-color: $random-bg;
+  border-color: $random-table;
 }
 
 .random-blog td {
-  border-color: rgba(64, 38, 54, 0.6);
+  border-color: $random-table;
 }
 
 .study-blog th {
-  background-color: rgba(89, 160, 118, 0.1);
-  border-color: rgba(64, 38, 54, 0.6);
+  background-color: $study-bg;
+  border-color: $random-table;
 }
 
 .study-blog td {
-  border-color: rgba(64, 38, 54, 0.6);
+  border-color: $random-table;
 }
 
 .skill-blog th {
-  background-color: rgba(10, 44, 84, 0.1);
-  border-color: rgba(10, 44, 84, 0.6);
+  background-color: $skill-bg;
+  border-color: $skill-table;
 }
 
 .skill-blog td {
-  border-color: rgba(10, 44, 84, 0.6);
+  border-color: $skill-table;
 }
 
 .record th {
-  background-color: rgba(217, 170, 82, 0.1);
-  border-color: rgba(10, 44, 84, 0.6);
+  background-color: $record-bg;
+  border-color: $skill-table;
 }
 
 .record td {
-  border-color: rgba(10, 44, 84, 0.6);
+  border-color: $skill-table;
 }
 
 .record h3 {
-  border-color: #D9AA52;
+  border-color: $record;
 }
 
 .study-list-show-post__container {
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   padding: 20px;
   margin: 20px;
 }
@@ -5637,7 +5637,7 @@ body.fixed {
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #fff !important;
+  color: $white !important;
   margin-top: 0 !important;
   font-weight: normal !important;
   font-size: 54px;
@@ -5730,9 +5730,9 @@ body.fixed {
   width: 100%;
   height: 100%;
   z-index: 999;
-  background: #fff;
+  background: $white;
   text-align: center;
-  color: #fff;
+  color: $white;
 }
 
 .loading__logo-wrap {
@@ -5768,7 +5768,7 @@ body.fixed {
   display: flex;
   margin-bottom: 30px;
   position: relative;
-  border: 1px solid #d2d2d2;
+  border: 1px solid $gray;
   height: 48px;
 }
 
@@ -5792,7 +5792,7 @@ body.fixed {
   height: 46px;
   cursor: pointer;
   border: none;
-  background-color: #efefef;
+  background-color: $gray-bg;
 }
 
 .search-form__icon-img {
@@ -5813,7 +5813,7 @@ body.fixed {
   margin-bottom: 14px !important;
   margin-left: 0 !important;
   border-left: 6px solid;
-  color: #333;
+  color: $font;
   font-weight: 600;
   letter-spacing: 1.6px;
   padding: 0px 15px 0px;
@@ -5859,7 +5859,7 @@ footer nav .nav-contents:last-child {
 }
 
 footer nav a {
-  color: #fff;
+  color: $white;
 }
 
 footer nav a:hover {
@@ -5868,7 +5868,7 @@ footer nav a:hover {
 }
 
 footer nav h4 {
-  color: #fff;
+  color: $white;
   font-size: 18px;
   margin-bottom: 10px;
 }
