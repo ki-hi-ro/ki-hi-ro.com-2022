@@ -5116,3 +5116,77 @@ body.fixed {
   text-align: center;
 }
 
+.author-box {
+  background-color: #fff;
+  padding: 26px 20px 20px;
+  margin: 30px auto;
+  border: 1px solid #d2d2d2;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .author-box {
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+.author-box__img-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.author-box__my-name {
+  text-align: center;
+  font-family: "Avenir-Next";
+  font-weight: 600;
+  margin-top: 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.author-box__line {
+  border: 1px solid #ddd;
+  width: 20%;
+}
+
+.author-box__text {
+  font-size: 16px;
+  padding: 0 !important;
+  margin-top: 16px !important;
+  line-height: 2 !important;
+  color: #000;
+}
+
+.author-box__link {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  color: #000;
+}
+
+.author-box__link:hover {
+  opacity: .5;
+  transition: all .3;
+}
+
+.author-box__link-icon {
+  width: 7px;
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+.author-box__sns-link:hover {
+  opacity: 0.5;
+  transition: all 0.3;
+}
+
+.author-box__sns-icon {
+  width: 30px;
+}
+
