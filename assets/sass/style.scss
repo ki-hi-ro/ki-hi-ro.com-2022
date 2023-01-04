@@ -251,7 +251,7 @@ header .header-nav nav ul li a:hover {
   transition: all 0.3s;
 }
 
-.header-nav nav li.has-child:hover>ul {
+.header-nav nav li.has-child:hover > ul {
   visibility: visible;
   opacity: 1;
 }
@@ -849,7 +849,7 @@ a.top-contents__card.--blog {
   box-sizing: border-box;
 }
 
-.card__textbox>*+* {
+.card__textbox > * + * {
   margin-top: 10px;
 }
 
@@ -2598,7 +2598,6 @@ code {
 }
 
 @media (max-width: 767px) {
-
   .skill-blog__contents,
   .study-blog__contents,
   .random-blog__contents {
@@ -2843,7 +2842,7 @@ h3.sidebar-ttl {
   }
 }
 
-.single .ez-toc-widget-container li.active>a {
+.single .ez-toc-widget-container li.active > a {
   font-weight: 500;
 }
 
@@ -3434,8 +3433,8 @@ body.fixed {
 }
 
 .tag-li:hover {
-  opacity: .5;
-  transition: all .3;
+  opacity: 0.5;
+  transition: all 0.3;
 }
 
 .tag-li__link {
@@ -3452,6 +3451,37 @@ body.fixed {
   padding-left: 0;
   grid-template-columns: 1fr;
   margin-top: 15px;
+  &.--プログラミング,
+  &.--サイト制作,
+  &.--music,
+  &.--record {
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .blog-list-grid__img {
+      height: 135px;
+      @include mq(md) {
+        height: auto;
+      }
+    }
+    .blog-list-grid__link-btn {
+      width: 200px;
+      padding: 8px 0;
+      @include mq(lg) {
+        width: 220px;
+        padding: 7px 0;
+      }
+    }
+    .tag-li {
+      display: none;
+      &:first-child {
+        display: block;
+      }
+    }
+  }
 }
 
 @include mq(md) {
@@ -3517,8 +3547,8 @@ body.fixed {
 }
 
 .blog-list-grid__tag:hover {
-  opacity: .5;
-  transition: all .3;
+  opacity: 0.5;
+  transition: all 0.3;
 }
 
 @include mq(md) {
@@ -4282,8 +4312,8 @@ body.fixed {
 }
 
 .author-box__link:hover {
-  opacity: .5;
-  transition: all .3;
+  opacity: 0.5;
+  transition: all 0.3;
 }
 
 .author-box__link-icon {
@@ -4700,7 +4730,10 @@ body.fixed {
   margin-left: 0;
 }
 
-.study-list-show-post .wp-show-posts-columns#wpsp-5266 .wp-show-posts-single:nth-child(2n + 1) .wp-show-posts-inner {
+.study-list-show-post
+  .wp-show-posts-columns#wpsp-5266
+  .wp-show-posts-single:nth-child(2n + 1)
+  .wp-show-posts-inner {
   margin-left: 0;
 }
 

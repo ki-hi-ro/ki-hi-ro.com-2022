@@ -25,12 +25,10 @@
     <?php
       $new_article_array = array(
         ["title" => "最近更新した記事", "tag" => "", "link" => "all-article/", "link-text" => "これまでに書いた記事", "category" => "", "per-page" => "1", "orderby" => 'modified'],
-        ["title" => "これまでの仕事について", "tag" => "", "link" => "category/what-i-did/", "link-text" => "これまでの仕事についての記事一覧", "category" => "what-i-did/", "per-page" => "1", "orderby" => 'rand'],
-        ["title" => "技術ブログ", "tag" => "", "link" => "category/skill-blog/", "link-text" => "技術ブログの一覧", "category" => "skill-blog/", "per-page" => "1", "orderby" => 'date', "orderby" => 'rand'],
-        ["title" => "学習ブログ", "tag" => "", "link" => "category/study-blog/", "link-text" => "学習ブログの一覧", "category" => "study-blog", "per-page" => "1", "orderby" => 'date', "orderby" => 'rand'],
-        ["title" => "日記", "tag" => "", "link" => "category/diary/", "link-text" => "日記の一覧", "category" => "diary", "per-page" => "1", "orderby" => 'date', "orderby" => 'rand'],
-        ["title" => "雑記ブログ", "tag" => "", "link" => "category/random-blog/", "link-text" => "雑記ブログの一覧", "category" => "random-blog", "per-page" => "1", "orderby" => 'date', "orderby" => 'rand'],
-        ["title" => "記録", "tag" => "", "link" => "category/record/", "link-text" => "記録の一覧", "category" => "record", "per-page" => "1", "orderby" => 'date', "orderby" => 'rand'],
+        ["title" => "プログラミング", "tag" => "プログラミング", "link" => "/tag/プログラミング/", "link-text" => "プログラミングの記事一覧", "category" => "", "per-page" => "-1", "orderby" => 'date'],
+        ["title" => "サイト制作", "tag" => "サイト制作", "link" => "/tag/サイト制作/", "link-text" => "サイト制作の一覧", "category" => "", "per-page" => "-1", "orderby" => 'date'],
+        ["title" => "音楽", "tag" => "music", "link" => "/tag/music", "link-text" => "音楽の記事一覧", "category" => "", "per-page" => "-1", "orderby" => 'date'],
+        ["title" => "記録", "tag" => "", "link" => "category/record", "link-text" => "記録の一覧", "category" => "record", "per-page" => "-1", "orderby" => 'date'],
       );
       foreach ($new_article_array as $new_article) :
         $args = array(
@@ -47,7 +45,7 @@
         <h1 class="post-list-ttl --<?php echo $current_cat_slug; ?> --<?php echo $new_article["category"]; ?>">
           <?php echo $new_article['title']; ?>
         </h1>
-        <ul class="blog-list-grid --<?php echo $new_article["tag"]; ?>">
+        <ul class="blog-list-grid --<?php echo $new_article["tag"]; ?> --<?php echo $new_article["category"]; ?>">
           <?php foreach ($myposts as $post): setup_postdata($post);?>
           <?php echo get_template_part('template-parts/blog-list-grid'); ?>
           <?php endforeach; wp_reset_postdata();?>
