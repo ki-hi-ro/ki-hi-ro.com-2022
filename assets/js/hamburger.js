@@ -6,7 +6,6 @@ jQuery(function ($) {
         $("body,html").animate({ scrollTop: 0 }, 500);
         $(this).toggleClass('active');
         header_nav_sp.toggleClass('active');
-        $("body").toggleClass('fixed');
     });
 
     $(".sp-nav a").on('click', function () {
