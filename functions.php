@@ -5,7 +5,6 @@ wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], date(
 
 wp_enqueue_style('vegas', 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css', [], date("YmdHi"));
 
-wp_enqueue_style('tag-list', get_template_directory_uri() . '/assets/css/tag-list.css', [], date("YmdHi"));
 wp_enqueue_style('footer', get_template_directory_uri() . '/assets/css/footer.css', [], date("YmdHi"));
 
 // js
