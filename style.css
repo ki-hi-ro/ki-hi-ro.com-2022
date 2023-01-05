@@ -3533,7 +3533,7 @@ body.fixed {
   color: #D9AA52;
 }
 
-.blog-list-grid__what-you-know-ttl.--diary {
+.blog-list-grid__what-you-know-ttl.--retrospect-and-goals {
   border-color: #5A8EA1;
   background: rgba(90, 142, 161, 0.1);
 }
@@ -3752,7 +3752,7 @@ body.fixed {
   color: #D9AA52;
 }
 
-.post-list-ttl.--diary {
+.post-list-ttl.--retrospect-and-goals {
   border-color: #5A8EA1;
   color: #5A8EA1;
 }
@@ -4043,12 +4043,12 @@ body.fixed {
   background: rgba(136, 70, 110, 0.1);
 }
 
-.single .diary h2,
-.single .diary h3 {
+.single .retrospect-and-goals h2,
+.single .retrospect-and-goals h3 {
   border-color: #5A8EA1;
 }
 
-.single .diary h2 {
+.single .retrospect-and-goals h2 {
   background: rgba(90, 142, 161, 0.1);
 }
 

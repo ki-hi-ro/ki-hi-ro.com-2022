@@ -3604,9 +3604,9 @@ body.fixed {
   color: $record;
 }
 
-.blog-list-grid__what-you-know-ttl.--diary {
-  border-color: $diary;
-  background: $diary-bg;
+.blog-list-grid__what-you-know-ttl.--retrospect-and-goals {
+  border-color: $retrospect-and-goals;
+  background: $retrospect-and-goals-bg;
 }
 
 .blog-list-grid__what-you-know-ttl.--exercise-record {
@@ -3823,9 +3823,9 @@ body.fixed {
   color: $record;
 }
 
-.post-list-ttl.--diary {
-  border-color: $diary;
-  color: $diary;
+.post-list-ttl.--retrospect-and-goals {
+  border-color: $retrospect-and-goals;
+  color: $retrospect-and-goals;
 }
 
 .post-list-ttl__study-list {
@@ -4114,13 +4114,13 @@ body.fixed {
   background: $random-bg;
 }
 
-.single .diary h2,
-.single .diary h3 {
-  border-color: $diary;
+.single .retrospect-and-goals h2,
+.single .retrospect-and-goals h3 {
+  border-color: $retrospect-and-goals;
 }
 
-.single .diary h2 {
-  background: $diary-bg;
+.single .retrospect-and-goals h2 {
+  background: $retrospect-and-goals-bg;
 }
 
 .single .exercise-record h2,

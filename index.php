@@ -17,8 +17,8 @@
       $post_list_ttl = "雑記ブログ";
     } elseif ($current_cat_slug == "record") {
       $post_list_ttl = "記録";
-    } elseif ($current_cat_slug == "diary") {
-      $post_list_ttl = "日記";
+    } elseif ($current_cat_slug == "retrospect-and-goals") {
+      $post_list_ttl = "振り返りと目標";
     } elseif ($current_cat_slug == "exercise-record") {
       $post_list_ttl = "エクササイズ";
     }
