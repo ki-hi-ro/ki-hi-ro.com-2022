@@ -3374,43 +3374,43 @@ body.fixed {
   margin-top: 15px;
 }
 
-.blog-list-grid.--プログラミング, .blog-list-grid.--サイト制作, .blog-list-grid.--music, .blog-list-grid.--record {
+.blog-list-grid.--プログラミング, .blog-list-grid.--サイト制作, .blog-list-grid.--music, .blog-list-grid.--本, .blog-list-grid.--record {
   display: flex;
   overflow-x: scroll;
   scrollbar-width: none;
 }
 
-.blog-list-grid.--プログラミング::-webkit-scrollbar, .blog-list-grid.--サイト制作::-webkit-scrollbar, .blog-list-grid.--music::-webkit-scrollbar, .blog-list-grid.--record::-webkit-scrollbar {
+.blog-list-grid.--プログラミング::-webkit-scrollbar, .blog-list-grid.--サイト制作::-webkit-scrollbar, .blog-list-grid.--music::-webkit-scrollbar, .blog-list-grid.--本::-webkit-scrollbar, .blog-list-grid.--record::-webkit-scrollbar {
   display: none;
 }
 
-.blog-list-grid.--プログラミング .blog-list-grid__img, .blog-list-grid.--サイト制作 .blog-list-grid__img, .blog-list-grid.--music .blog-list-grid__img, .blog-list-grid.--record .blog-list-grid__img {
+.blog-list-grid.--プログラミング .blog-list-grid__img, .blog-list-grid.--サイト制作 .blog-list-grid__img, .blog-list-grid.--music .blog-list-grid__img, .blog-list-grid.--本 .blog-list-grid__img, .blog-list-grid.--record .blog-list-grid__img {
   height: 135px;
 }
 
 @media (min-width: 768px) {
-  .blog-list-grid.--プログラミング .blog-list-grid__img, .blog-list-grid.--サイト制作 .blog-list-grid__img, .blog-list-grid.--music .blog-list-grid__img, .blog-list-grid.--record .blog-list-grid__img {
+  .blog-list-grid.--プログラミング .blog-list-grid__img, .blog-list-grid.--サイト制作 .blog-list-grid__img, .blog-list-grid.--music .blog-list-grid__img, .blog-list-grid.--本 .blog-list-grid__img, .blog-list-grid.--record .blog-list-grid__img {
     height: auto;
   }
 }
 
-.blog-list-grid.--プログラミング .blog-list-grid__link-btn, .blog-list-grid.--サイト制作 .blog-list-grid__link-btn, .blog-list-grid.--music .blog-list-grid__link-btn, .blog-list-grid.--record .blog-list-grid__link-btn {
+.blog-list-grid.--プログラミング .blog-list-grid__link-btn, .blog-list-grid.--サイト制作 .blog-list-grid__link-btn, .blog-list-grid.--music .blog-list-grid__link-btn, .blog-list-grid.--本 .blog-list-grid__link-btn, .blog-list-grid.--record .blog-list-grid__link-btn {
   width: 200px;
   padding: 8px 0;
 }
 
 @media (min-width: 992px) {
-  .blog-list-grid.--プログラミング .blog-list-grid__link-btn, .blog-list-grid.--サイト制作 .blog-list-grid__link-btn, .blog-list-grid.--music .blog-list-grid__link-btn, .blog-list-grid.--record .blog-list-grid__link-btn {
+  .blog-list-grid.--プログラミング .blog-list-grid__link-btn, .blog-list-grid.--サイト制作 .blog-list-grid__link-btn, .blog-list-grid.--music .blog-list-grid__link-btn, .blog-list-grid.--本 .blog-list-grid__link-btn, .blog-list-grid.--record .blog-list-grid__link-btn {
     width: 220px;
     padding: 7px 0;
   }
 }
 
-.blog-list-grid.--プログラミング .tag-li, .blog-list-grid.--サイト制作 .tag-li, .blog-list-grid.--music .tag-li, .blog-list-grid.--record .tag-li {
+.blog-list-grid.--プログラミング .tag-li, .blog-list-grid.--サイト制作 .tag-li, .blog-list-grid.--music .tag-li, .blog-list-grid.--本 .tag-li, .blog-list-grid.--record .tag-li {
   display: none;
 }
 
-.blog-list-grid.--プログラミング .tag-li:first-child, .blog-list-grid.--サイト制作 .tag-li:first-child, .blog-list-grid.--music .tag-li:first-child, .blog-list-grid.--record .tag-li:first-child {
+.blog-list-grid.--プログラミング .tag-li:first-child, .blog-list-grid.--サイト制作 .tag-li:first-child, .blog-list-grid.--music .tag-li:first-child, .blog-list-grid.--本 .tag-li:first-child, .blog-list-grid.--record .tag-li:first-child {
   display: block;
 }
 

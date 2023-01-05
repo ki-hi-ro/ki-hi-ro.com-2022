@@ -28,6 +28,7 @@
         ["title" => "プログラミング", "tag" => "プログラミング", "link" => "/tag/プログラミング/", "link-text" => "プログラミングの記事一覧", "category" => "", "per-page" => "-1", "orderby" => 'date'],
         ["title" => "サイト制作", "tag" => "サイト制作", "link" => "/tag/サイト制作/", "link-text" => "サイト制作の一覧", "category" => "", "per-page" => "-1", "orderby" => 'date'],
         ["title" => "音楽", "tag" => "music", "link" => "/tag/music", "link-text" => "音楽の記事一覧", "category" => "", "per-page" => "-1", "orderby" => 'date'],
+        ["title" => "本", "tag" => "本", "link" => "/tag/本", "link-text" => "本の記事一覧", "category" => "", "per-page" => "-1", "orderby" => 'date'],
         ["title" => "記録", "tag" => "", "link" => "category/record", "link-text" => "記録の一覧", "category" => "record", "per-page" => "-1", "orderby" => 'date'],
       );
       foreach ($new_article_array as $new_article) :
