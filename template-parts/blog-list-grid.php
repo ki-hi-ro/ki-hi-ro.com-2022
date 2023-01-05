@@ -10,23 +10,23 @@
         </a>
     </div>
     <div class="blog-list-grid__meta">
-        <span class="blog-list-grid__category"></span>
         <span class="blog-list-grid__date">
             <span class="meta__date">投稿日: <?php echo get_the_date('Y.m.d'); ?></span>
             <span class="meta__date">更新日: <?php echo get_the_modified_date('Y.m.d'); ?></span>
         </span>
-        <?php
-			$posttags = get_the_tags();
-			if ($posttags) :
-		?>
         <div class="blog-list-grid__tag-wrap">
-            <?php foreach ($posttags as $tag) : ?>
-            <a class="tag-li" href="<?php echo home_url('tag/'.$tag->slug.''); ?>">
-                <?php echo $tag->name; ?>
+            <?php $cat = get_the_category(); $cat = $cat[0]; ?>
+            <a class="tag-li --category --<?php echo $cat->slug; ?>" href="/category/<?php echo $cat->slug; ?>">
+                <?php echo $cat->cat_name; ?>
             </a>
-            <?php endforeach; ?>
+            <?php $posttags = get_the_tags(); if ($posttags) : ?>
+                <?php foreach ($posttags as $tag) : ?>
+                    <a class="tag-li" href="<?php echo home_url('tag/'.$tag->slug.''); ?>">
+                        <?php echo $tag->name; ?>
+                    </a>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
-        <?php endif; ?>
     </div>
     <a class="blog-list-grid__link-btn" href="<?php the_permalink(); ?>">この記事を読みたい</a>
 </div>

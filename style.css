@@ -3341,10 +3341,44 @@ body.fixed {
   border: 1px solid #d2d2d2;
   text-align: center;
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0 20px;
   margin: 3px 0;
   font-size: 13px;
   color: #000;
+}
+
+.tag-li.--category {
+  font-weight: 400;
+}
+
+.tag-li.--skill-blog {
+  border-color: #0a2c54;
+  color: #0a2c54;
+}
+
+.tag-li.--study-blog {
+  border-color: #59a076;
+  color: #59a076;
+}
+
+.tag-li.--random-blog {
+  border-color: #88466e;
+  color: #88466e;
+}
+
+.tag-li.--what-i-did {
+  border-color: #000;
+  color: #000;
+}
+
+.tag-li.--record {
+  border-color: #D9AA52;
+  color: #D9AA52;
+}
+
+.tag-li.--retrospect-and-goals {
+  border-color: #5A8EA1;
+  color: #5A8EA1;
 }
 
 @media (min-width: 768px) {
@@ -3446,6 +3480,7 @@ body.fixed {
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: relative;
 }
 
 .blog-list-grid__date {
