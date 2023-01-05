@@ -4296,6 +4296,12 @@ body.fixed {
   margin: 60px 0 40px;
 }
 
+.record .post h2 {
+  background: rgba(217, 170, 82, 0.1);
+  border-color: #D9AA52;
+  margin: 30px 0 30px;
+}
+
 .post h3 {
   border-left: 6px solid #000;
   color: #333;
@@ -4641,7 +4647,7 @@ body.fixed {
   border-color: rgba(10, 44, 84, 0.6);
 }
 
-.record td {
+.record .wp-block-table td {
   border-color: rgba(10, 44, 84, 0.6);
 }
 

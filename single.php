@@ -29,8 +29,6 @@
         <?php
           if(in_category('record')) :
             get_template_part('template-parts/record');
-          elseif(in_category('exercise-record')) :
-            get_template_part('template-parts/exercise-record');
           else :
             the_content();
           endif;

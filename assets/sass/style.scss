@@ -4367,6 +4367,12 @@ body.fixed {
   margin: 60px 0 40px;
 }
 
+.record .post h2 {
+  background: $record-bg;
+  border-color: $record;
+  margin: 30px 0 30px;
+}
+
 .post h3 {
   border-left: 6px solid $black;
   color: $font;
@@ -4712,7 +4718,7 @@ body.fixed {
   border-color: $skill-table;
 }
 
-.record td {
+.record .wp-block-table td {
   border-color: $skill-table;
 }
 
