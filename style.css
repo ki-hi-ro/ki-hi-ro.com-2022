@@ -2919,6 +2919,7 @@ body.fixed {
   opacity: 1;
   background-color: #fff;
   z-index: 1;
+  padding-top: 30px;
 }
 
 .header__ul.active .header__has-child-img {
