@@ -8,7 +8,7 @@
             <?php get_template_part('template-parts/post/meta'); ?>
             <div class="blog-list-grid__tag-wrap">
                 <?php $cat = get_the_category(); $cat = $cat[0]; ?>
-                <a class="tag-li --category --<?php echo $cat->slug; ?>" href="/category/<?php echo $cat->slug; ?>">
+                <a class="tag-li" href="/category/<?php echo $cat->slug; ?>">
                     <?php echo $cat->cat_name; ?>
                 </a>
                 <?php

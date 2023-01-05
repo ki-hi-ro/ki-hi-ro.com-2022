@@ -3425,33 +3425,6 @@ body.fixed {
   margin: 3px 0;
   font-size: 13px;
   color: $black;
-  &.--category {
-    font-weight: 400;
-  }
-  &.--skill-blog {
-    border-color: $skill;
-    color: $skill;
-  }
-  &.--study-blog {
-    border-color: $study;
-    color: $study;
-  }
-  &.--random-blog {
-    border-color: $random;
-    color: $random;
-  }
-  &.--what-i-did {
-    border-color: $black;
-    color: $black;
-  }
-  &.--record {
-    border-color: $record;
-    color: $record;
-  }
-  &.--retrospect-and-goals {
-    border-color: $retrospect-and-goals;
-    color: $retrospect-and-goals;
-  }
 }
 
 @include mq(md) {
