@@ -2911,7 +2911,7 @@ body.fixed {
 
 .header__ul.active {
   width: 100%;
-  height: 884px;
+  height: 984px;
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -2919,7 +2919,8 @@ body.fixed {
   opacity: 1;
   background-color: #fff;
   z-index: 1;
-  padding-top: 30px;
+  padding-top: 115px;
+  padding-bottom: 100px;
 }
 
 .header__ul.active .header__has-child-img {
