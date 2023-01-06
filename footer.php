@@ -25,18 +25,9 @@
     </nav>
 </footer>
 
-<?php
-$page_top_text = "";
-$is_single_class = "";
-if(is_single() && !in_category('record')) {
-    $page_top_text = "目次へ";
-    $is_single_class = " --single";
-} else {
-    $page_top_text = "ページ<br>最上部へ";
-}
-?>
 
-<p class="page-top<?php echo $is_single_class; ?>"><a class="page-top__link" href="#"><?php echo $page_top_text; ?></a></p>
+<p class="page-top --not-single-sp"><a class="page-top__link --not-single-sp" href="#">ページ<br>最上部へ</a></p>
+<p class="page-top --single-sp"><a class="page-top__link" href="#">目次へ</a></p>
 
 <?php wp_footer(); ?>
 </body>

@@ -1,7 +1,8 @@
 var page_top = jQuery(".page-top");
 var class_down = "--down-move";
 var class_up = "--up-move";
-var page_top_link = jQuery(".page-top__link");
+var page_top_link = jQuery(".page-top__link.--not-single-sp");
+var page_top_link_single = jQuery(".single .page-top__link");
 
 function PageTopAnime() {
   var scroll = jQuery(window).scrollTop();
@@ -20,7 +21,16 @@ jQuery(window).scroll(function () {
   PageTopAnime();
 });
 
-page_top_link.click(function () {
-  jQuery("body,html").animate({ scrollTop: 0 }, 500);
-  return false;
-});
+function click_motion($triggar) {
+  $triggar.click(function () {
+    if($triggar == page_top_link_single) {
+      var $toc = jQuery("#ez-toc-container").offset().top;
+      jQuery("body,html").animate({ scrollTop: $toc - 70 }, 500);
+    } else {
+      jQuery("body,html").animate({ scrollTop: 0 }, 500);
+    }
+    return false;
+  });
+}
+click_motion(page_top_link);
+click_motion(page_top_link_single);

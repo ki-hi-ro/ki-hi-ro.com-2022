@@ -3298,8 +3298,16 @@ body.fixed {
   font-weight: 600;
 }
 
+.page-top.--single-sp {
+  display: none;
+}
+
+.single .page-top.--single-sp {
+  display: block;
+}
+
 @media (min-width: 992px) {
-  .page-top.--single {
+  .single .page-top.--single-sp {
     display: none;
   }
 }
