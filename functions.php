@@ -60,3 +60,50 @@ register_sidebar(array(
   'before_title' => '<h3>',
   'after_title' => '</h3>',
 ));
+
+function my_meta_ogp() {
+  if( is_front_page() || is_home() || is_singular() ){
+    global $post;
+    $ogp_title = '';
+    $ogp_descr = '';
+    $ogp_url = '';
+    $ogp_img = '';
+    $insert = '';
+
+    if( is_front_page() || is_home() ) {
+      $ogp_title = get_bloginfo('name');
+      $ogp_descr = get_bloginfo('description');
+      $ogp_url = home_url();
+    } elseif ( is_singular() ) {
+      setup_postdata($post);
+      $ogp_title = $post->post_title;
+      $ogp_descr = mb_substr(get_the_excerpt(), 0, 90);
+      $ogp_url = get_permalink();
+      wp_reset_postdata();
+    }
+
+    $ogp_type = ( is_front_page() || is_home() ) ? 'website' : 'article';
+
+    if ( is_singular() && has_post_thumbnail() ) {
+       $ps_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+       $ogp_img = $ps_thumb[0];
+    } else {
+     $ogp_img = 'https://ki-hi-ro.com/ki-hi-ro.com-2022/wp-content/themes/ki-hi-ro.com-2022/assets/img/blog/no-image.png';
+    }
+
+    //OGP
+    $insert .= '<meta property="og:url" content="'.esc_url($ogp_url).'" />';
+    $insert .= '<meta property="og:type" content="'.$ogp_type.'" />';
+    $insert .= '<meta property="og:title" content="'.esc_attr($ogp_title).'" />';
+    $insert .= '<meta property="og:description" content="'.esc_attr($ogp_descr).'" />';
+    $insert .= '<meta property="og:image" content="'.esc_url($ogp_img).'" />';
+    $insert .= '<meta property="og:site_name" content="'.esc_attr(get_bloginfo('name')).'" />';
+
+    //Twitter
+    $insert .= '<meta name="twitter:card" content="summary" />';
+    $insert .= '<meta name="twitter:site" content="@2021_shibata" />';
+
+    echo $insert;
+  }
+}
+add_action('wp_head','my_meta_ogp');
