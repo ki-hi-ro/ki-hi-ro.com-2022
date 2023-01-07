@@ -1,4 +1,4 @@
-<?php if(!has_tag(['体重', 'エクササイズ'])) : ?>
+<?php if(!has_tag(['体重', 'エクササイズ', '駅に着いた時刻'])) : ?>
     <h2 class="--record">画像</h2>
     <div class="single-article__record-record-slide-wrap">
         <div id="record-slide" class="single-article__record-record-slide">

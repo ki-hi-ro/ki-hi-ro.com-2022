@@ -31,12 +31,12 @@
             <?php endif; ?>
             <div class="post__content">
                 <?php
-          if(in_category('record')) :
-            get_template_part('template-parts/record');
-          else :
-            the_content();
-          endif;
-        ?>
+                if(in_category('record')) :
+                    get_template_part('template-parts/record');
+                else :
+                    the_content();
+                endif;
+                ?>
             </div>
 
             <?php
