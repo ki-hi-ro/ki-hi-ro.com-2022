@@ -11,4 +11,12 @@
   .wp-block-image img {
     padding: 0 20px;
   }
+  .post__content {
+    ul {
+      padding-left: 15px;
+      @include mq(sm) {
+        padding-left: 40px;
+      }
+    }
+  }
 }

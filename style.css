@@ -70,6 +70,16 @@ h3 {
   padding: 0 20px;
 }
 
+.single .post__content ul {
+  padding-left: 15px;
+}
+
+@media (min-width: 576px) {
+  .single .post__content ul {
+    padding-left: 40px;
+  }
+}
+
 .skill-blog__sec-ttl {
   text-align: center;
 }
