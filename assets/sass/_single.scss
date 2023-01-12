@@ -8,6 +8,13 @@
       padding: 0 20px;
     }
   }
+  ul li,
+  ol li {
+    margin-bottom: 7px;
+  }
+  ul li.header__child-li {
+    margin-bottom: 0;
+  }
   .wp-block-image img {
     padding: 0 20px;
   }
