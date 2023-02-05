@@ -24,6 +24,7 @@
     <div class="front-sec__text">
       <p>TOEICは、3/19に受験予定です。</p>
       <p>大学生の時に810点を獲得したことがありましたが、ブランクがあるため、<br class="d-sp-none">先日購入した参考書を使用して学習を進めていきます。</p>
+      <a href="<?php echo home_url("result-first-mock-exam-toeic"); ?>">TOEIC L&A テスト200%活用模試を購入して、1回目の模試を受けてみた結果</a>
     </div>
   </section>
   <section class="front-sec">
@@ -36,7 +37,7 @@
   <section class="front-sec">
     <h2 class="front-sec__ttl">これまでに書いた記事について</h2>
     <div class="front-sec__text">
-      <p>2月に入ってから更新が途絶えていましたが、これまでにプログラミングのことや旅行のことなど、数多くの記事を書いてきました。<br>整理して、読者にとって有益な内容にリニューアルしていけたらと思います。</p>
+      <p>これまでにプログラミングや旅行についてなど、数多くの記事を書いてきました。</p>
       <a href="<?php echo home_url("all-article"); ?>">これまでに書いた記事の一覧</a>
     </div>
   </section>
@@ -44,14 +45,14 @@
     <h2 class="front-sec__ttl">Twitter</h2>
     <div class="front-sec__text">
       <p>Twitterは基本的に毎朝1ツイート行っています。<br>朝起きてすぐに行うメモ書きから発信したい内容を決めてツイートしています。<br>ツイート直後は他のユーザーのツイートを見ていいねを押したり、フォローしたりしています。</p>
-      <a href="https://twitter.com/2021_shibata">Twitter</a>
+      <a href="https://twitter.com/2021_shibata">Twitterアカウント</a>
     </div>
   </section>
   <section class="front-sec">
     <h2 class="front-sec__ttl">Instagram</h2>
     <div class="front-sec__text">
       <p>インスタは、スマホで撮影した写真を不定期で投稿しています。</p>
-      <a href="https://www.instagram.com/hiroki.hiroki2020/">インスタ</a>
+      <a href="https://www.instagram.com/hiroki.hiroki2020/">インスタのアカウント</a>
     </div>
   </section>
 </main>
