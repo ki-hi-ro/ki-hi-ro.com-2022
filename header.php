@@ -54,38 +54,10 @@
             <div class="header__contents">
                 <div class="header__logo">
                     <a class="header__sitename-link" href="<?php echo home_url(); ?>">
-                        <span class="header__sitename-text">ki-hi-ro.com</span>
+                        <span class="header__sitename-text">ソフトウェア開発エンジニア<br>Shibata Hirokiのブログ</span>
                     </a>
                 </div>
-                <nav>
-                    <ul class="header__ul">
-                        <?php 
-						$current_cat_slug = get_query_var('category_name'); 
-						foreach ($nav as $nav_item) :
-						?>
-                        <li class="header__li --has-child">
-							<?php if ($nav_item['ttl'][0]) : ?>
-								<a class="header__has-child-link" href="<?php echo $nav_item['ttl'][0]; ?>">
-									<div class="header__has-child-li"><img class="header__has-child-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/expand-more.svg"><?php echo $nav_item['ttl'][1]; ?></div>
-								</a>
-							<?php else : ?>
-								<div class="header__has-child-li"><img class="header__has-child-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/expand-more.svg"><?php echo $nav_item['ttl'][1]; ?></div>
-							<?php endif; ?>
-                            <ul class="header__child-ul">
-                                <?php for($i = 0; $i < count($nav_item['child']); $i++) : ?>
-                                <li class="header__child-li">
-                                    <a class="header__child-li-link" href="<?php echo $nav_item['child'][$i][0]; ?>"><span class="header__sp-child-line">- </span><?php echo $nav_item['child'][$i][1]; ?></a>
-                                </li>
-                                <?php endfor; ?>
-                            </ul>
-                        </li>
-                        <?php endforeach; ?>
-                        <li class="header__li"><a class="header__li-link" href="<?php echo home_url('all-article'); ?>">これまでに書いた記事<span class="header__sp-none"></span></a></li>
-                    </ul>
-                    <div class="header__hamburger">
-                        <span></span><span></span>
-                    </div>
-                </nav>
+                <div class="header__modify">このページの最終更新日: 2023年2月4日</div>
             </div>
         </div>
     </header>

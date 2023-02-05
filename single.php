@@ -1,29 +1,17 @@
 <?php get_header(); ?>
 <?php  $category = get_the_category(); $cat = $category[0]; ?>
-<main class="l-container <?php echo $cat->slug; ?>">
+<main class="l-container">
     <div class="l-pc-left --single">
         <article class="post">
-            <?php get_template_part('template-parts/bread'); ?>
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <?php get_template_part('template-parts/post/meta'); ?>
-            <div class="blog-list-grid__tag-wrap">
-                <?php $cat = get_the_category(); $cat = $cat[0]; ?>
-                <a class="tag-li" href="/category/<?php echo $cat->slug; ?>">
-                    <?php echo $cat->cat_name; ?>
+            <div class="bread">
+            <!-- Breadcrumb NavXT 7.1.0 -->
+            <span property="itemListElement" typeof="ListItem">
+                <a property="item" typeof="WebPage" title="Go to ki-hi-ro.com." href="<?php echo home_url(); ?>" class="home">
+                    <span property="name">TOP</span>
                 </a>
-                <?php
-                $posttags = get_the_tags();
-                if ($posttags) :
-                  foreach ($posttags as $tag) :
-                ?>
-                <a class="blog-list-grid__tag" href="<?php echo home_url('tag/'.$tag->slug.''); ?>">
-                    <?php echo $tag->name; ?>
-                </a>
-                <?php
-                  endforeach;
-                endif;
-                ?>
-            </div>
+                <meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="これまでに書いた記事" href="<?php echo home_url("all-article"); ?>" class="taxonomy category"><span property="name">これまでに書いた記事</span></a><meta property="position" content="2"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name" class="post post-post current-item"><?php the_title(); ?></span><meta property="url" content="http://localhost:8888/step-count-january-8-2023/"><meta property="position" content="3"></span></div>
+            
             <h1 class="post__ttl"><?php the_title(); ?></h1>
             <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'post__thumb']  );?>
             <?php if(!in_category('record')): ?>
@@ -48,16 +36,14 @@
                 <?php if( $prevpost ) : ?>
                 <li class="nav-links__nav --pre">
                     <a class="nav-links__link" href="<?php echo get_permalink($prevpost->ID); ?>">
-                        <img class="nav-links__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg">
-                        <?php echo get_the_post_thumbnail($prevpost->ID, '', array( 'class' => 'nav-links__thumb' )); ?>
+                        ← <?php echo get_the_title( $prevpost->ID ); ?>
                     </a>
                 </li>
                 <?php endif; ?>
                 <?php if( $nextpost ) : ?>
                 <li class="nav-links__nav --next">
                     <a class="nav-links__link" href="<?php echo get_permalink($nextpost->ID); ?>">
-                        <?php echo get_the_post_thumbnail($nextpost->ID, '', array( 'class' => 'nav-links__thumb' )); ?>
-                        <img class="nav-links__link-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/arrow-right.svg">
+                        <?php echo get_the_title( $nextpost->ID ); ?> →
                     </a>
                 </li>
                 <?php endif; ?>

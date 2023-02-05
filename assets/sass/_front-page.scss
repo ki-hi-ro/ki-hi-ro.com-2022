@@ -1,0 +1,31 @@
+.front-container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 20px;
+  @include mq(xl) {
+      padding: 0;
+  }
+}
+
+.front-sec {
+  margin-bottom: 52px;
+  &__ttl {
+    font-size: 20px;
+    color: $text;
+    font-family: Helvetica Neue;
+    font-weight: normal;
+  }
+  &__text {
+    p {
+      @extend .front-sec__ttl;
+      font-size: 15px;
+      @include mq(lg) {
+          font-size: 16px;
+      }
+    }
+  }
+}
+
+.all-article .front-sec {
+    margin-bottom: 28px;
+}

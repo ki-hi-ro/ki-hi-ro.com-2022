@@ -1,11 +1,14 @@
 .single {
   p {
-    color: $black;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 30px;
-    margin-top: 40px;
+    margin-top: 16px;
+    color: #313131db;
+    font-family: Helvetica Neue;
+    font-weight: normal;
     @include mq(md) {
-      padding: 0 20px;
+      padding: 0;
+      font-size: 16px;
     }
   }
   ul li,
@@ -16,7 +19,7 @@
     margin-bottom: 0;
   }
   .wp-block-image img {
-    padding: 0 20px;
+    padding: 0;
   }
   .post__content {
     ul {
@@ -25,5 +28,8 @@
         padding-left: 40px;
       }
     }
+  }
+  .span.post.post-post.current-item {
+    font-size: 14px;
   }
 }
