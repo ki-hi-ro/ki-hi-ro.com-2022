@@ -12,6 +12,7 @@
                 </a>
                 <meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="これまでに書いた記事" href="<?php echo home_url("all-article"); ?>" class="taxonomy category"><span property="name">これまでに書いた記事</span></a><meta property="position" content="2"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name" class="post post-post current-item"><?php the_title(); ?></span><meta property="url" content="http://localhost:8888/step-count-january-8-2023/"><meta property="position" content="3"></span></div>
             
+            <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
             <h1 class="post__ttl"><?php the_title(); ?></h1>
             <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'post__thumb']  );?>
             <?php if(!in_category('record')): ?>
@@ -28,8 +29,8 @@
             </div>
 
             <?php
-            $prevpost = get_adjacent_post(true, '', true, 'post_tag');
-            $nextpost = get_adjacent_post(true, '', false, 'post_tag');
+            $prevpost = get_adjacent_post(false, '', true);
+            $nextpost = get_adjacent_post(false, '', false);
             if( $prevpost or $nextpost) :
             ?>
             <ul class="nav-links">

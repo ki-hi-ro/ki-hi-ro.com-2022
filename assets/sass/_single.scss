@@ -32,4 +32,14 @@
   .span.post.post-post.current-item {
     font-size: 14px;
   }
+  .all-article__date {
+    text-align: center;
+    margin-top: 38px;
+    @include mq(lg) {
+      margin-top: 65px;
+    }
+  }
+  .post__ttl {
+    margin-top: 21px;
+  }
 }
