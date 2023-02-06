@@ -135,7 +135,7 @@ h3 {
 }
 
 .single .post__ttl {
-  margin-top: 21px;
+  margin-top: 10px;
 }
 
 .more-link {
@@ -4346,7 +4346,7 @@ footer nav {
 }
 
 .all-article__date {
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 
 .all-article__ttl {
