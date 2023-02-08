@@ -10,16 +10,16 @@
         </div>
     </section>
     <?php
-    $news_query = new WP_Query(
+    $all_query = new WP_Query(
       array(
         'post_type'      => 'post',
         'posts_per_page' => -1,
       )
     );
     ?>
-    <?php if ( $news_query->have_posts() ) : ?>
-    <?php while ( $news_query->have_posts() ) : ?>
-    <?php $news_query->the_post(); ?>
+    <?php if ( $all_query->have_posts() ) : ?>
+    <?php while ( $all_query->have_posts() ) : ?>
+    <?php $all_query->the_post(); ?>
     <a class="all-article__link" href="<?php the_permalink(); ?>">    
       <div class="all-article__post-wrap">
         <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>

@@ -82,7 +82,8 @@
     <div class="front-sec__text">
       <p>TOEICは、3/19に受験予定です。</p>
       <p>大学生の時に810点を獲得したことがありましたが、ブランクがあるため、<br class="d-sp-none">先日購入した参考書を使用して学習を進めていきます。</p>
-      <a href="<?php echo home_url("result-first-mock-exam-toeic"); ?>">TOEIC L&A テスト200%活用模試を購入して、1回目の模試を受けてみた結果</a>
+      <!-- <a href="<?php echo home_url("result-first-mock-exam-toeic"); ?>">TOEIC L&A テスト200%活用模試を購入して、1回目の模試を受けてみた結果</a> -->
+      <a href="<?php echo home_url("tag/toeic/"); ?>">TOEICについての記事の一覧</a>
     </div>
   </section>
   <section class="front-sec">

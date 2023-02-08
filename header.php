@@ -57,7 +57,7 @@
                         <span class="header__sitename-text">ソフトウェア開発エンジニア<br>Shibata Hirokiのブログ</span>
                     </a>
                 </div>
-                <div class="header__modify">このページの最終更新日: 2023年2月6日</div>
+                <div class="header__modify">このページの最終更新日: 2023年2月8日</div>
             </div>
         </div>
     </header>

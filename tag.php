@@ -7,25 +7,31 @@ $term_desc = $term->description;
 ?>
 <main class="l-container">
   <div class="l-pc-left">
-    <h1 class="post-list-ttl"><?php echo $term_name; ?>の記事一覧</h1>
-    <div class="new-article">
-      <?php
-      $args = array(
-        'post_type' => 'post',
-        'posts_per_page' => 6,
-        'paged' => get_query_var('paged'),
+    <!-- <section class="front-sec">
+        <h2 class="front-sec__ttl"><?php echo $term_name; ?>についての記事</h2>
+    </section> -->
+    <?php
+    $tag_query = new WP_Query(
+      array(
+        'post_type'      => 'post',
+        'posts_per_page' => -1,
         'tag' => $term_slug
-      );
-      $myposts = get_posts($args);
-      ?>
-      <ul class="blog-list-grid">
-        <?php foreach ($myposts as $post) : setup_postdata($post); ?>
-          <?php echo get_template_part('template-parts/blog-list-grid'); ?>
-        <?php endforeach;
-        wp_reset_postdata(); ?>
-      </ul>
-      <?php wp_pagenavi(); ?>
-    </div>
+      )
+    );
+    ?>
+      <?php if ( $tag_query->have_posts() ) : ?>
+        <?php while ( $tag_query->have_posts() ) : ?>
+          <?php $tag_query->the_post(); ?>
+          <a class="all-article__link" href="<?php the_permalink(); ?>">    
+            <div class="all-article__post-wrap">
+              <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
+              <div class="all-article__ttl"><?php the_title(); ?></div>
+              <div class="all-article__desc"><?php the_excerpt(); ?></div>
+            </div>
+          </a>
+        <?php endwhile; ?>
+      <?php endif; ?>
+    <?php wp_reset_postdata(); ?>
   </div>
   <?php get_sidebar();?>
 </main>
