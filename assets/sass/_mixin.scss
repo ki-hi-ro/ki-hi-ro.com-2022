@@ -4,3 +4,9 @@
     transition: all 0.3;
   }
 }
+
+@mixin text {
+  color: $text;
+  font-weight: normal;
+  font-family: Helvetica Neue;
+}

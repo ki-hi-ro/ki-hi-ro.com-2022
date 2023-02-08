@@ -3874,6 +3874,12 @@ footer nav {
   }
 }
 
+.front-sec__article-ttl {
+  color: #313131db;
+  font-weight: normal;
+  font-family: Helvetica Neue;
+}
+
 .all-article .front-sec {
   margin-bottom: 28px;
 }

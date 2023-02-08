@@ -1,3 +1,4 @@
+@import "mixin";
 .front-container {
   margin: 0 auto;
   max-width: 1140px;
@@ -23,6 +24,9 @@
           font-size: 16px;
       }
     }
+  }
+  &__article-ttl {
+    @include text;
   }
 }
 

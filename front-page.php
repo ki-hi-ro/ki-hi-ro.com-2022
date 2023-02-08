@@ -51,6 +51,31 @@
       <p>ソフトウェア開発エンジニアとしてこれから活躍していくための基礎となる知識が詰まっている試験です。</p>
       <p>過去問を見てみたところ、知らない用語がたくさんあったので、しっかりと学習してから試験に臨みたいです。</p>
     </div>
+    <h3 class="front-sec__article-ttl">基本情報技術者試験についての新着記事</h3>
+    <div class="front-sec__text">
+      <?php
+      $news_query = new WP_Query(
+        array(
+          'post_type'      => 'post',
+          'posts_per_page' => 1,
+          'tag' => '基本情報技術者'
+        )
+      );
+      ?>
+      <?php if ( $news_query->have_posts() ) : ?>
+      <?php while ( $news_query->have_posts() ) : ?>
+      <?php $news_query->the_post(); ?>
+      <a class="all-article__link" href="<?php the_permalink(); ?>">
+        <div class="all-article__post-wrap">
+          <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
+          <div class="all-article__ttl"><?php the_title(); ?></div>
+          <div class="all-article__desc"><?php the_excerpt(); ?></div>
+        </div>
+      </a>
+      <?php endwhile; ?>
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
+    </div>
   </section>
   <section class="front-sec">
     <h2 class="front-sec__ttl">TOEICについて</h2>
