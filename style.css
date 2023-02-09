@@ -3947,7 +3947,7 @@ footer nav {
 
 .header__container {
   margin: 0 auto;
-  padding: 20px 15px 0;
+  padding: 20px 15px;
   width: 100%;
   max-width: 1140px;
 }
@@ -4370,6 +4370,13 @@ footer nav {
 .all-article__link {
   display: block;
   color: #313131db;
+  margin-top: 10px;
+}
+
+@media (min-width: 992px) {
+  .all-article__link {
+    margin-top: 0;
+  }
 }
 
 .all-article__link:hover {
