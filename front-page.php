@@ -34,6 +34,27 @@
     <div class="front-sec__text">
       <p>これまでにプログラミングや旅行についてなど、数多くの記事を書いてきました。</p>
       <a href="<?php echo home_url("all-article"); ?>">これまでに書いた記事の一覧</a>
+  </section>
+  <section class="front-sec">
+    <h2 class="front-sec__ttl">記事に付けたタグについて</h2>
+    <div class="front-sec__text">
+      <p>書いた記事にはタグを付けて分類しています。</p>
+      <p class="front-sec__link-ttl">▼ 徐々に増えていくタグ一覧ページへのリンク</p>
+      <?php
+      $args = array(
+          'orderby' => 'name',
+          'order' => 'ASC'
+      );
+      $posttags = get_tags( $args );
+
+      if ( $posttags ){
+        echo ' <ul class="front-sec__tag-list"> ';
+        foreach( $posttags as $tag ) {
+          echo '<li class="front-sec__item"><a class="front-sec__link" href="'. get_tag_link( $tag->term_id ) . '">' . $tag->name .','. '</a></li>';
+        }
+        echo ' </ul> ';
+      }
+      ?>
     </div>
   </section>
   <section class="front-sec">
