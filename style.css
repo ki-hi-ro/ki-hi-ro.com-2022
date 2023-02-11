@@ -4360,6 +4360,10 @@ footer nav {
   margin-bottom: 35px;
 }
 
+.all-article__post-wrap.--mb20 {
+  margin-bottom: 20px;
+}
+
 .all-article__link {
   display: block;
   color: #313131db;

@@ -87,7 +87,7 @@
       <?php while ( $news_query->have_posts() ) : ?>
       <?php $news_query->the_post(); ?>
       <a class="all-article__link" href="<?php the_permalink(); ?>">
-        <div class="all-article__post-wrap">
+        <div class="all-article__post-wrap --mb20">
           <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
           <div class="all-article__ttl"><?php the_title(); ?></div>
           <div class="all-article__desc"><?php the_excerpt(); ?></div>
@@ -96,6 +96,7 @@
       <?php endwhile; ?>
       <?php endif; ?>
       <?php wp_reset_postdata(); ?>
+      <a href="<?php echo home_url("tag/基本情報技術者/"); ?>">基本情報技術者試験についての記事の一覧</a>
     </div>
   </section>
   <section class="front-sec">
@@ -104,6 +105,31 @@
       <p>TOEICは、2023年3月19日に受験予定です。</p>
       <p>大学生の時に810点を獲得したことがありましたが、ブランクがあるため、<br class="d-sp-none">先日購入した参考書を使用して学習を進めていきます。</p>
       <!-- <a href="<?php echo home_url("result-first-mock-exam-toeic"); ?>">TOEIC L&A テスト200%活用模試を購入して、1回目の模試を受けてみた結果</a> -->
+    </div>
+    <h3 class="front-sec__article-ttl">TOEICについての新着記事</h3>
+    <div class="front-sec__text">
+      <?php
+      $news_query = new WP_Query(
+        array(
+          'post_type'      => 'post',
+          'posts_per_page' => 1,
+          'tag' => 'toeic'
+        )
+      );
+      ?>
+      <?php if ( $news_query->have_posts() ) : ?>
+      <?php while ( $news_query->have_posts() ) : ?>
+      <?php $news_query->the_post(); ?>
+      <a class="all-article__link" href="<?php the_permalink(); ?>">
+        <div class="all-article__post-wrap --mb20">
+          <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
+          <div class="all-article__ttl"><?php the_title(); ?></div>
+          <div class="all-article__desc"><?php the_excerpt(); ?></div>
+        </div>
+      </a>
+      <?php endwhile; ?>
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
       <a href="<?php echo home_url("tag/toeic/"); ?>">TOEICについての記事の一覧</a>
     </div>
   </section>

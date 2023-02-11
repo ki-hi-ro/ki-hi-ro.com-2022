@@ -5,6 +5,9 @@
     box-shadow: 1px 1px 6px 0px #ddd;
     padding: 16px 20px;
     margin-bottom: 35px;
+    &.--mb20 {
+      margin-bottom: 20px;
+    }
   }
   &__link {
     display: block;
