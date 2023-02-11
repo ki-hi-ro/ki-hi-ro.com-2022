@@ -2,9 +2,14 @@
 <?php  $category = get_the_category(); $cat = $category[0]; ?>
 <?php
 $posttags = get_the_tags();
-foreach($posttags as $tag) {
-    $tag_slug = $tag->slug;
-    $tag_name = $tag->name;
+if($posttags) {
+    $last_position = 4;
+    foreach($posttags as $tag) {
+        $tag_slug = $tag->slug;
+        $tag_name = $tag->name;
+    }
+} else {
+    $last_position = 3;
 }
 ?>
 <main class="l-container">
@@ -24,12 +29,14 @@ foreach($posttags as $tag) {
                 <meta property="position" content="2">
             </span> &gt;
 
-            <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="<?php echo $tag_name; ?>" href="<?php echo home_url("tag/{$tag_slug}"); ?>" class="taxonomy category"><span property="name"><?php echo $tag_name; ?></span></a>
-                <meta property="position" content="3">
-            </span> &gt;
+            <?php if($posttags) : ?>
+                <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="<?php echo $tag_name; ?>" href="<?php echo home_url("tag/{$tag_slug}"); ?>" class="taxonomy category"><span property="name"><?php echo $tag_name; ?></span></a>
+                    <meta property="position" content="3">
+                </span> &gt;
+            <?php endif; ?>
 
             <span property="itemListElement" typeof="ListItem"><span property="name" class="post post-post current-item"><?php the_title(); ?></span><meta property="url" content="http://localhost:8888/step-count-january-8-2023/">
-                <meta property="position" content="3">
+                <meta property="position" content="<?php echo $last_position; ?>">
             </span>
             </div>
 
