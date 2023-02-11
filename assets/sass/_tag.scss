@@ -1,0 +1,45 @@
+.tag-mv {
+  position: relative;
+  &.l-container {
+    padding: 0;
+    margin: 7px 15px 47px 15px;
+    @include mq(lg) {
+      margin: -26px 15px 80px 15px;
+    }
+    @media (min-width: 1140px) {
+      margin: -26px auto 80px auto;
+      max-width: 1107px;
+    }
+    @include mq(xl) {
+      max-width: 1140px;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    z-index: 1;
+    font-size: 25px;
+    margin-top: 0;
+    @include mq(sm) {
+      font-size: 40px;
+    }
+    @include mq(md) {
+      font-size: 50px;
+      top: 49%;
+    }
+  }
+  .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}

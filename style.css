@@ -4389,3 +4389,68 @@ footer nav {
   font-size: 16px;
   margin-top: 10px;
 }
+
+.tag-mv {
+  position: relative;
+}
+
+.tag-mv.l-container {
+  padding: 0;
+  margin: 7px 15px 47px 15px;
+}
+
+@media (min-width: 992px) {
+  .tag-mv.l-container {
+    margin: -26px 15px 80px 15px;
+  }
+}
+
+@media (min-width: 1140px) {
+  .tag-mv.l-container {
+    margin: -26px auto 80px auto;
+    max-width: 1107px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tag-mv.l-container {
+    max-width: 1140px;
+  }
+}
+
+.tag-mv img {
+  width: 100%;
+}
+
+.tag-mv h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 1;
+  font-size: 25px;
+  margin-top: 0;
+}
+
+@media (min-width: 576px) {
+  .tag-mv h1 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .tag-mv h1 {
+    font-size: 50px;
+    top: 49%;
+  }
+}
+
+.tag-mv .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
