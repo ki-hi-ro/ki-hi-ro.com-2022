@@ -866,10 +866,6 @@ a.top-contents__card.--blog {
   font-weight: 600;
 }
 
-.single ul li {
-  color: #313131db;
-}
-
 .single pre {
   font-size: 17px;
   background-color: #fafafa;
@@ -2059,14 +2055,11 @@ div#ez-toc-container ul.ez-toc-list a {
   font-size: 16px;
 }
 
-.single ul li {
+.single ul li,
+.single ol li {
+  color: #313131db;
   font-size: 16px;
   word-break: break-all;
-}
-
-.single ol li {
-  font-size: 16px;
-  color: #000;
 }
 
 .amazon-link {
