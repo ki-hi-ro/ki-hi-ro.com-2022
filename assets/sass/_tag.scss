@@ -2,7 +2,7 @@
   position: relative;
   &.l-container {
     padding: 0;
-    margin: 7px 15px 47px 15px;
+    margin: 7px 0 19px;
     @include mq(lg) {
       margin: -26px 15px 80px 15px;
     }
