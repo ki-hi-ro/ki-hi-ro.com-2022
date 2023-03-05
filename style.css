@@ -3850,6 +3850,11 @@ footer nav {
   margin-bottom: 52px;
 }
 
+.front-sec__my-prof-img {
+  width: 350px;
+  max-width: 100%;
+}
+
 .front-sec__flex {
   display: flex;
   flex-direction: column;
@@ -4410,6 +4415,10 @@ footer nav {
 .all-article__desc p {
   font-size: 16px;
   margin-top: 10px;
+}
+
+.all-article .all-article__link {
+  margin-bottom: 20px;
 }
 
 .tag-mv {

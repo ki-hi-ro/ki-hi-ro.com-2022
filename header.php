@@ -54,7 +54,7 @@
             <div class="header__contents">
                 <div class="header__logo">
                     <a class="header__sitename-link" href="<?php echo home_url(); ?>">
-                        <span class="header__sitename-text">ソフトウェア開発エンジニア<br>Shibata Hirokiのブログ</span>
+                        <span class="header__sitename-text">ソフトウェア開発エンジニア<br>柴田浩貴のブログ</span>
                     </a>
                 </div>
                 <!-- <div class="header__modify">このページの最終更新日: 2023年2月8日</div> -->
