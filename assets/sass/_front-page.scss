@@ -53,11 +53,6 @@
     flex-wrap: wrap;
     padding-left: 0;
     margin-top: 5px;
-    height: 300px;
-    overflow-y: scroll;
-    @include mq(lg) {
-      height: auto;
-    }
   }
   &__item {
     list-style: none;

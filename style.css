@@ -3904,14 +3904,6 @@ footer nav {
   flex-wrap: wrap;
   padding-left: 0;
   margin-top: 5px;
-  height: 300px;
-  overflow-y: scroll;
-}
-
-@media (min-width: 992px) {
-  .front-sec__tag-list {
-    height: auto;
-  }
 }
 
 .front-sec__item {

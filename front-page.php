@@ -43,10 +43,8 @@
   </section>
 
   <section class="front-sec">
-    <h2 class="front-sec__ttl">記事に付けたタグについて</h2>
+    <h2 class="front-sec__ttl">タグ</h2>
     <div class="front-sec__text">
-      <p>書いた記事にはタグを付けて分類しています。</p>
-      <p class="front-sec__link-ttl">▼ 徐々に増えていくタグ一覧ページへのリンク</p>
       <?php
       $args = array(
           'orderby' => 'name',
@@ -56,8 +54,15 @@
 
       if ( $posttags ){
         echo ' <ul class="front-sec__tag-list"> ';
+        $tag_count = count($posttags);
+        $i = 1;
         foreach( $posttags as $tag ) {
-          echo '<li class="front-sec__item"><a class="front-sec__link" href="'. get_tag_link( $tag->term_id ) . '">' . $tag->name .','. '</a></li>';
+          if($i != $tag_count) {
+            echo '<li class="front-sec__item"><a class="front-sec__link" href="'. get_tag_link( $tag->term_id ) . '">' . $tag->name . ',' . '</a></li>';
+          } else {
+            echo '<li class="front-sec__item"><a class="front-sec__link" href="'. get_tag_link( $tag->term_id ) . '">' . $tag->name . '</a></li>';
+          }
+          $i++;
         }
         echo ' </ul> ';
       }
@@ -65,93 +70,15 @@
     </div>
   </section>
   <section class="front-sec">
-    <h2 class="front-sec__ttl">私について</h2>
+    <h2 class="front-sec__ttl">自己紹介</h2>
     <div class="front-sec__text">
-      <p>29歳男性です。愛知県一宮市に住んでいます。ソフトウェア開発エンジニアとして、2023年2月1日から就業開始しました。<br>これまでは、WEB制作のフリーランスエンジニアとして、WEBサイトのコーディングを行ってきました。</p>
-      <p>コーディングとは、デザインされたWEBサイトをHTML / CSSという言語を使って、WEB上に構築していくことです。<br>ブログを投稿出来たりするには、WordPressというCMS(コンテンツマネジメントシステム)を利用します。</p>
-      <p>このブログでは、日々の学習・就業経験を踏まえて情報発信していきます。</p>
-    </div>
-  </section>
-  <section class="front-sec">
-    <h2 class="front-sec__ttl">基本情報技術者試験について</h2>
-    <div class="front-sec__text">
-      <p>2023年4月16日に受験予定です。</p>
-      <p>ソフトウェア開発エンジニアとしてこれから活躍していくための基礎となる知識が詰まっている試験です。</p>
-      <p>過去問を見てみたところ、知らない用語がたくさんあったので、しっかりと学習してから試験に臨みたいです。</p>
-    </div>
-    <h3 class="front-sec__article-ttl">基本情報技術者試験についての新着記事</h3>
-    <div class="front-sec__text">
-      <?php
-      $news_query = new WP_Query(
-        array(
-          'post_type'      => 'post',
-          'posts_per_page' => 1,
-          'tag' => '基本情報技術者'
-        )
-      );
-      ?>
-      <?php if ( $news_query->have_posts() ) : ?>
-      <?php while ( $news_query->have_posts() ) : ?>
-      <?php $news_query->the_post(); ?>
-      <a class="all-article__link" href="<?php the_permalink(); ?>">
-        <div class="all-article__post-wrap --mb20">
-          <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
-          <div class="all-article__ttl"><?php the_title(); ?></div>
-          <div class="all-article__desc"><?php the_excerpt(); ?></div>
-        </div>
-      </a>
-      <?php endwhile; ?>
-      <?php endif; ?>
-      <?php wp_reset_postdata(); ?>
-      <a href="<?php echo home_url("tag/基本情報技術者/"); ?>">基本情報技術者試験についての記事の一覧</a>
-    </div>
-  </section>
-  <section class="front-sec">
-    <h2 class="front-sec__ttl">TOEICについて</h2>
-    <div class="front-sec__text">
-      <p>TOEICは、2023年3月19日に受験予定です。</p>
-      <p>大学生の時に810点を獲得したことがありましたが、ブランクがあるため、<br class="d-sp-none">先日購入した参考書を使用して学習を進めていきます。</p>
-      <!-- <a href="<?php echo home_url("result-first-mock-exam-toeic"); ?>">TOEIC L&A テスト200%活用模試を購入して、1回目の模試を受けてみた結果</a> -->
-    </div>
-    <h3 class="front-sec__article-ttl">TOEICについての新着記事</h3>
-    <div class="front-sec__text">
-      <?php
-      $news_query = new WP_Query(
-        array(
-          'post_type'      => 'post',
-          'posts_per_page' => 1,
-          'tag' => 'toeic'
-        )
-      );
-      ?>
-      <?php if ( $news_query->have_posts() ) : ?>
-      <?php while ( $news_query->have_posts() ) : ?>
-      <?php $news_query->the_post(); ?>
-      <a class="all-article__link" href="<?php the_permalink(); ?>">
-        <div class="all-article__post-wrap --mb20">
-          <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
-          <div class="all-article__ttl"><?php the_title(); ?></div>
-          <div class="all-article__desc"><?php the_excerpt(); ?></div>
-        </div>
-      </a>
-      <?php endwhile; ?>
-      <?php endif; ?>
-      <?php wp_reset_postdata(); ?>
-      <a href="<?php echo home_url("tag/toeic/"); ?>">TOEICについての記事の一覧</a>
-    </div>
-  </section>
-  <section class="front-sec">
-    <h2 class="front-sec__ttl">chocoZAPについて</h2>
-    <div class="front-sec__text">
-      <p>今年からchocoZAPに入会しました。chocoZAPはライザップが運営しているコンビニ感覚で通えるジムです。</p>
-      <p>今後このブログで筋トレのメリットなどを伝えていけたらと思います。</p>
+      <p>29歳男性です。愛知県一宮市に住んでいます。<br>これまでは、WEB制作のフリーランスエンジニアとして、WEBサイトのコーディングを行ってきました。<br>2023年2月1日からは、正社員のソフトウェア開発エンジニアとして、就業開始しました。</p>
     </div>
   </section>
   <section class="front-sec">
     <h2 class="front-sec__ttl">Twitter</h2>
     <div class="front-sec__text">
-      <p>Twitterは基本的に毎朝1ツイート行っています。<br>朝起きてすぐに行うメモ書きから発信したい内容を決めてツイートしています。<br>ツイート直後は他のユーザーのツイートを見ていいねを押したり、フォローしたりしています。</p>
-      <a href="https://twitter.com/2021_shibata">Twitterアカウント</a>
+      <a class="twitter-timeline" data-width="350" data-height="250" href="https://twitter.com/2021_shibata?ref_src=twsrc%5Etfw">Tweets by 2021_shibata</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </section>
   <section class="front-sec">
