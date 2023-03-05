@@ -10,6 +10,26 @@
 
 .front-sec {
   margin-bottom: 52px;
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    @include mq(lg) {
+      flex-direction: row;
+    }
+  }
+  &__flex-item {
+    &.--center {
+      margin: 20px 0;
+      @include mq(lg) {
+        margin: 0 20px;
+      }
+    }
+
+    .all-article__ttl {
+      margin-top: 10px;
+    }
+  }
   &__ttl {
     font-size: 20px;
     color: $text;

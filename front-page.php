@@ -4,8 +4,8 @@
 
 <main class="front-container">
   <section class="front-sec">
-    <h2 class="front-sec__ttl">新着記事</h2>
-    <div class="front-sec__text">
+    <h2 class="front-sec__ttl">最近書いた記事</h2>
+    <div class="front-sec__text front-sec__flex">
       <?php
       $news_query = new WP_Query(
         array(
@@ -13,28 +13,35 @@
           'posts_per_page' => 3,
         )
       );
+      if ( $news_query->have_posts() ) : 
+        $i = 0;
+      while ( $news_query->have_posts() ) : 
+      $news_query->the_post(); 
       ?>
-      <?php if ( $news_query->have_posts() ) : ?>
-      <?php while ( $news_query->have_posts() ) : ?>
-      <?php $news_query->the_post(); ?>
-      <a class="all-article__link" href="<?php the_permalink(); ?>">
+      <a class="all-article__link front-sec__flex-item <?php if($i == 1): ?>--center<?php endif; ?>" href="<?php the_permalink(); ?>">
         <div class="all-article__post-wrap">
           <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
           <div class="all-article__ttl"><?php the_title(); ?></div>
+          <?php 
+            if (has_post_thumbnail()) :  
+              the_post_thumbnail('',array( 'class' => 'front-sec__flex-item-thumb' ));
+          ?>
+          <?php else : ?>
+              <img class="front-sec__flex-item-thumb" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/no-image.png" alt="no-image">
+          <?php endif; ?>
           <div class="all-article__desc"><?php the_excerpt(); ?></div>
         </div>
       </a>
-      <?php endwhile; ?>
-      <?php endif; ?>
-      <?php wp_reset_postdata(); ?>
+      <?php 
+      $i++;
+      endwhile; 
+      endif; 
+      wp_reset_postdata(); 
+      ?>
     </div>
+    <a href="<?php echo home_url("all-article"); ?>">これまでに書いた記事の一覧</a>
   </section>
-  <section class="front-sec">
-    <h2 class="front-sec__ttl">これまでに書いた記事について</h2>
-    <div class="front-sec__text">
-      <p>これまでにプログラミングや旅行についてなど、数多くの記事を書いてきました。</p>
-      <a href="<?php echo home_url("all-article"); ?>">これまでに書いた記事の一覧</a>
-  </section>
+
   <section class="front-sec">
     <h2 class="front-sec__ttl">記事に付けたタグについて</h2>
     <div class="front-sec__text">

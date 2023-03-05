@@ -4,18 +4,21 @@
   &__post-wrap {
     box-shadow: 1px 1px 6px 0px #ddd;
     padding: 16px 20px;
-    margin-bottom: 35px;
+    height: 100%;
     &.--mb20 {
       margin-bottom: 20px;
+    }
+
+    .front-sec__flex-item-thumb {
+      width: 100%;  
+      height: 230px;
+      object-fit: contain;
+      margin-top: 14px;
     }
   }
   &__link {
     display: block;
     color: $text;
-    margin-top: 10px;
-    @include mq(lg) {
-      margin-top: 0;
-    }
     &:hover {
       transform: translateY(-3px);
       transition: all 0.3;
