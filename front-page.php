@@ -78,7 +78,7 @@
   <section class="front-sec">
     <h2 class="front-sec__ttl">Twitter</h2>
     <div class="front-sec__text">
-      <a class="twitter-timeline" data-width="350" data-height="250" href="https://twitter.com/2021_shibata?ref_src=twsrc%5Etfw">Tweets by 2021_shibata</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a class="twitter-timeline" data-width="350" data-height="630" href="https://twitter.com/2021_shibata?ref_src=twsrc%5Etfw">Tweets by 2021_shibata</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </section>
   <section class="front-sec">
