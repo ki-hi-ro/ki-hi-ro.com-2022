@@ -812,7 +812,7 @@ a.top-contents__card.--blog {
   outline: 1px solid #f0f0f0;
   border-color: #f0f0f0;
   text-align: left;
-  margin: 0 0 40px; 
+  margin: 0 0 40px;
 }
 
 .single pre.ml-adjust {
@@ -3320,7 +3320,7 @@ body.fixed {
 .post .nav-links {
   display: flex;
   justify-content: space-between;
-  margin-top: 120px;
+  margin: 120px 0 60px;
   padding-left: 0;
 }
 
@@ -3809,7 +3809,7 @@ footer nav {
   display: none;
 }
 
-.single .wp-block-table td, 
+.single .wp-block-table td,
 .single .wp-block-table th {
   border: 1px solid #d0d0d0;
 }
