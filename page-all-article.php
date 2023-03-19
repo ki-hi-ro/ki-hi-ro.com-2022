@@ -20,7 +20,7 @@
       <?php if ( $all_query->have_posts() ) : $i = 0; ?>
       <?php while ( $all_query->have_posts() ) : ?>
       <?php $all_query->the_post(); ?>
-      <a class="all-article__link front-sec__flex-item <?php if($i % 3 == 1): ?>--center<?php endif; ?>" href="<?php the_permalink(); ?>">
+      <a class="all-article__link front-sec__flex-item --page <?php if($i % 3 == 1): ?>--center<?php endif; ?>" href="<?php the_permalink(); ?>">
         <div class="all-article__post-wrap">
           <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
           <div class="all-article__ttl"><?php the_title(); ?></div>

@@ -29,8 +29,14 @@
     }
     &.--center {
       margin: 20px 0;
+      &.--page {
+        margin: 0 0 20px 0;
+      }
       @include mq(xl) {
         margin: 0 20px;
+        &.--page {
+          margin: 0 20px;
+        }
       }
     }
 

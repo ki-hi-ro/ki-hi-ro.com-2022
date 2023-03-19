@@ -3878,8 +3878,15 @@ footer nav {
   margin: 20px 0;
 }
 
+.front-sec__flex-item.--center.--page {
+  margin: 0 0 20px 0;
+}
+
 @media (min-width: 1200px) {
   .front-sec__flex-item.--center {
+    margin: 0 20px;
+  }
+  .front-sec__flex-item.--center.--page {
     margin: 0 20px;
   }
 }
