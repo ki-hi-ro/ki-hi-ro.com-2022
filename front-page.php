@@ -13,17 +13,17 @@
           'posts_per_page' => 3,
         )
       );
-      if ( $news_query->have_posts() ) : 
+      if ( $news_query->have_posts() ) :
         $i = 0;
-      while ( $news_query->have_posts() ) : 
-      $news_query->the_post(); 
+      while ( $news_query->have_posts() ) :
+      $news_query->the_post();
       ?>
       <a class="all-article__link front-sec__flex-item <?php if($i == 1): ?>--center<?php endif; ?>" href="<?php the_permalink(); ?>">
         <div class="all-article__post-wrap">
           <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
           <div class="all-article__ttl"><?php the_title(); ?></div>
-          <?php 
-            if (has_post_thumbnail()) :  
+          <?php
+            if (has_post_thumbnail()) :
               the_post_thumbnail('',array( 'class' => 'front-sec__flex-item-thumb' ));
           ?>
           <?php else : ?>
@@ -32,11 +32,11 @@
           <div class="all-article__desc"><?php the_excerpt(); ?></div>
         </div>
       </a>
-      <?php 
+      <?php
       $i++;
-      endwhile; 
-      endif; 
-      wp_reset_postdata(); 
+      endwhile;
+      endif;
+      wp_reset_postdata();
       ?>
     </div>
     <a href="<?php echo home_url("all-article"); ?>">これまでに書いた記事の一覧</a>

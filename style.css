@@ -3864,6 +3864,13 @@ footer nav {
 @media (min-width: 992px) {
   .front-sec__flex {
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .front-sec__flex-item {
+    width: 365px;
   }
 }
 
@@ -3871,7 +3878,7 @@ footer nav {
   margin: 20px 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .front-sec__flex-item.--center {
     margin: 0 20px;
   }

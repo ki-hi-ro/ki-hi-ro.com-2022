@@ -20,12 +20,16 @@
     margin-bottom: 10px;
     @include mq(lg) {
       flex-direction: row;
+      flex-wrap: wrap;
     }
   }
   &__flex-item {
+    @include mq(xl) {
+      width: 365px;
+    }
     &.--center {
       margin: 20px 0;
-      @include mq(lg) {
+      @include mq(xl) {
         margin: 0 20px;
       }
     }
