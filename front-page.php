@@ -57,9 +57,15 @@
     <h2 class="front-sec__ttl">Instagram</h2>
     <div class="front-sec__text">
       <p>インスタは、スマホで撮影した写真を不定期で投稿しています。</p>
-      <a href="https://www.instagram.com/hiroki.hiroki2020/">インスタのアカウント</a>
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+      <div class="elfsight-app-cfaaba04-9b5b-4a31-a9b8-82d0cc5d60c1"></div>
     </div>
   </section>
+  <style>
+    #eapps-instagram-feed-1 {
+      max-width: 100%;
+    }
+  </style>
 </main>
 
 <?php get_footer();?>
