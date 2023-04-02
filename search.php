@@ -1,7 +1,5 @@
 <?php get_header();?>
 
-<?php // echo get_template_part('template-parts/loading'); ?>
-
 <main class="l-container test">
   <div class="l-pc-left">
       <div class="new-article">

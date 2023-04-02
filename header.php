@@ -57,7 +57,6 @@
                         <span class="header__sitename-text">ソフトウェア開発エンジニア<br>柴田浩貴のブログ</span>
                     </a>
                 </div>
-                <!-- <div class="header__modify">このページの最終更新日: 2023年2月8日</div> -->
             </div>
         </div>
     </header>

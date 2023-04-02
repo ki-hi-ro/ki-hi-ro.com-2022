@@ -1,7 +1,5 @@
 <?php get_header();?>
 
-<?php // echo get_template_part('template-parts/loading'); ?>
-
 <main class="front-container">
   <section class="front-sec">
     <h2 class="front-sec__ttl">これまでに書いた記事</h2>
