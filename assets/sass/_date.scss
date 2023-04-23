@@ -1,0 +1,30 @@
+.date-article-list {
+  list-style: none;
+  padding-bottom: 100px;
+  @include mq(sm) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li {
+    color: #313131db;
+    @include mq(sm) {
+      margin-right: 20px;
+      margin-bottom: 3px;
+    }
+  }
+}
+
+.front-sec .date-article-list {
+  padding-bottom: 0;
+}
+
+.front-container.--date-article-list {
+  padding-left: 3px;
+}
+
+.date .front-container.--date-article-list {
+  padding-left: 20px;
+  @include mq(sm) {
+    padding-left: 3px;
+  }
+}

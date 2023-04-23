@@ -4503,3 +4503,44 @@ footer nav {
 .tag .all-article__link {
   margin-bottom: 20px;
 }
+
+.date-article-list {
+  list-style: none;
+  padding-bottom: 100px;
+}
+
+@media (min-width: 576px) {
+  .date-article-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.date-article-list li {
+  color: #313131db;
+}
+
+@media (min-width: 576px) {
+  .date-article-list li {
+    margin-right: 20px;
+    margin-bottom: 3px;
+  }
+}
+
+.front-sec .date-article-list {
+  padding-bottom: 0;
+}
+
+.front-container.--date-article-list {
+  padding-left: 3px;
+}
+
+.date .front-container.--date-article-list {
+  padding-left: 20px;
+}
+
+@media (min-width: 576px) {
+  .date .front-container.--date-article-list {
+    padding-left: 3px;
+  }
+}

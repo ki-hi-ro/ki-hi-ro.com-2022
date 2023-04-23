@@ -1,22 +1,17 @@
-<?php get_header(); ?>
-<main class="l-container">
-  <div class="l-pc-left">
-    <h1 class="post-list-ttl"><?php echo get_the_date('Y年n月'); ?>の記事一覧</h1>
-    <div class="new-article">
-    <?php
-      $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-      if(have_posts()): ?>
-        <div class="new-article">
-          <ul class="blog-list-grid">
-            <?php while(have_posts()): the_post(); ?>            
-              <?php echo get_template_part('template-parts/blog-list-grid'); ?>
-            <?php endwhile; ?>      
-          </ul>
-        </div>
-      <?php endif; ?>
-      <?php wp_pagenavi(); ?>
+<?php get_header();?>
+
+<main class="front-container">
+  <section class="front-sec">
+    <h2 class="front-sec__ttl"><?php echo get_query_var('year').'年'.get_query_var('monthnum').'月'; ?></h2>
+    <div class="front-sec__text">
+      <p><?php echo get_query_var('year').'年'.get_query_var('monthnum').'月'; ?>の記事一覧</p>
     </div>
-  </div>
-  <?php get_sidebar();?>
+    <div class="front-sec__text front-sec__flex">
+      <?php echo get_template_part("template-parts/blog-list-thumb-desc-date"); ?>
+    </div>
+  </section>
 </main>
-<?php get_footer(); ?>
+
+<?php echo get_template_part("template-parts/date-article-list"); ?>
+
+<?php get_footer();?>
