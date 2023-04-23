@@ -3874,8 +3874,10 @@ footer nav {
   }
 }
 
-.front-sec__flex-item.--center {
-  margin: 20px 0;
+@media (min-width: 576px) {
+  .front-sec__flex-item.--center {
+    margin: 20px 0;
+  }
 }
 
 .front-sec__flex-item.--center.--page {
