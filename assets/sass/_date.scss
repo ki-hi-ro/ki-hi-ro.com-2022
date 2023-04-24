@@ -6,7 +6,7 @@
     flex-wrap: wrap;
   }
   li {
-    color: #313131db;
+    color: $text;
     @include mq(sm) {
       margin-right: 20px;
       margin-bottom: 3px;

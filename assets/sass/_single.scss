@@ -3,7 +3,7 @@
     font-size: 15px;
     line-height: 30px;
     margin-top: 16px;
-    color: #313131db;
+    color: $text;
     font-family: Helvetica Neue;
     font-weight: normal;
     @include mq(md) {

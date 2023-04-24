@@ -2800,7 +2800,7 @@ body.fixed {
 
 .single h2 {
   font-size: 20px;
-  color: #313131db;
+  color: $text;
   font-family: Helvetica Neue;
   font-weight: normal;
   margin: 60px 0 20px;
@@ -3085,7 +3085,7 @@ body.fixed {
 
 .post__ttl {
   font-size: 23px;
-  color: #313131db;
+  color: $text;
   font-family: Helvetica Neue;
   letter-spacing: 0.1px;
   font-weight: 500;
@@ -3326,7 +3326,7 @@ body.fixed {
 
 .post .nav-links__link {
   display: flex;
-  color: #313131db;
+  color: $text;
   font-family: Helvetica Neue;
   font-weight: normal;
 }
