@@ -81,10 +81,10 @@ h3 {
 }
 
 .single p {
-  font-size: 15px;
-  line-height: 30px;
-  margin-top: 16px;
-  color: #0f1419;
+  font-size: 16px;
+  line-height: 32px;
+  margin-top: 32px;
+  color: #303439;
   font-family: Helvetica Neue;
   font-weight: normal;
 }
@@ -2057,7 +2057,7 @@ div#ez-toc-container ul.ez-toc-list a {
 
 .single ul li,
 .single ol li {
-  color: #0f1419;
+  color: #303439;
   font-size: 16px;
   word-break: break-all;
 }
@@ -2821,7 +2821,7 @@ body.fixed {
 
 .single h2, .single h3 {
   font-size: 20px;
-  color: #0f1419;
+  color: #303439;
   font-family: Helvetica Neue;
   font-weight: normal;
   margin: 60px 0 20px;
@@ -3108,7 +3108,7 @@ body.fixed {
 
 .post__ttl {
   font-size: 23px;
-  color: #0f1419;
+  color: #303439;
   font-family: Helvetica Neue;
   letter-spacing: 0.1px;
   font-weight: 500;
@@ -3320,14 +3320,14 @@ body.fixed {
 
 .post th {
   padding: 10px;
-  border: solid 1px #0f1419;
-  color: #0f1419;
+  border: solid 1px #303439;
+  color: #303439;
 }
 
 .post td {
   padding: 10px;
-  border: solid 1px #0f1419;
-  color: #0f1419;
+  border: solid 1px #303439;
+  color: #303439;
 }
 
 .post .g-map {
@@ -3349,7 +3349,7 @@ body.fixed {
 
 .post .nav-links__link {
   display: flex;
-  color: #0f1419;
+  color: #303439;
   font-family: Helvetica Neue;
   font-weight: normal;
 }
@@ -3899,7 +3899,7 @@ footer nav {
 
 .front-sec__ttl, .front-sec__text p {
   font-size: 20px;
-  color: #0f1419;
+  color: #303439;
   font-family: Helvetica Neue;
   font-weight: normal;
 }
@@ -3915,7 +3915,7 @@ footer nav {
 }
 
 .front-sec__article-ttl {
-  color: #0f1419;
+  color: #303439;
   font-weight: normal;
   font-family: Helvetica Neue;
 }
@@ -4145,7 +4145,7 @@ footer nav {
   left: 14px;
   height: 3px;
   border-radius: 2px;
-  background-color: #0f1419;
+  background-color: #303439;
   width: 45%;
 }
 
@@ -4212,7 +4212,7 @@ footer nav {
 
 .header__sitename-link {
   font-size: 20px;
-  color: #0f1419;
+  color: #303439;
   font-family: Helvetica Neue;
   letter-spacing: 0.1px;
   font-weight: 500;
@@ -4412,7 +4412,7 @@ footer nav {
 
 .all-article__link {
   display: block;
-  color: #0f1419;
+  color: #303439;
 }
 
 .all-article__link:hover {
@@ -4519,7 +4519,7 @@ footer nav {
 }
 
 .date-article-list li {
-  color: #0f1419;
+  color: #303439;
 }
 
 @media (min-width: 576px) {
