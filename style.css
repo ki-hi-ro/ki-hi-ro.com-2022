@@ -2820,11 +2820,13 @@ body.fixed {
 }
 
 .single h2, .single h3 {
-  font-size: 20px;
+  font-size: 25px;
   color: #303439;
   font-family: Helvetica Neue;
   font-weight: normal;
-  margin: 60px 0 20px;
+  margin: 60px 0 30px;
+  border-left: 5px solid #303439;
+  padding: 0px 20px;
 }
 
 @media (min-width: 992px) {
@@ -2834,7 +2836,9 @@ body.fixed {
 }
 
 .single h3 {
-  font-size: 18px;
+  font-size: 20px;
+  border-left: 3px;
+  padding: 0px 14px;
 }
 
 .single h3.sidebar-ttl {
