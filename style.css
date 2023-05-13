@@ -2837,7 +2837,7 @@ body.fixed {
 
 .single h3 {
   font-size: 20px;
-  border-left: 3px;
+  border-left: 3px solid #303439;
   padding: 0px 14px;
 }
 

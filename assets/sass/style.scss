@@ -2814,7 +2814,7 @@ body.fixed {
 .single h3 {
   @extend h2;
   font-size: 20px;
-  border-left: 3px;
+  border-left: 3px solid $text;
   padding: 0px 14px;
 }
 
