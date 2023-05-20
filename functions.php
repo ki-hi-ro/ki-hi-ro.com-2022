@@ -23,7 +23,7 @@ wp_enqueue_script('cdn-matchHeight', 'https://cdnjs.cloudflare.com/ajax/libs/jqu
 wp_enqueue_script('my-match-height', get_template_directory_uri() . '/assets/js/my-match-height.js', null, null, true);
 wp_enqueue_script('loading', get_template_directory_uri() . '/assets/js/loading.js', null, null, true);
 wp_enqueue_script('page-top', get_template_directory_uri() . '/assets/js/page-top.js', null, date("YmdHi"), true);
-  
+
 // body_class()にページスラッグを追加
 add_filter('body_class', 'add_page_slug_class_name');
 function add_page_slug_class_name($classes)
@@ -107,3 +107,26 @@ function my_meta_ogp() {
   }
 }
 add_action('wp_head','my_meta_ogp');
+
+   function custom_excerpt($length = 220) {
+      global $post;
+
+      $suffix = '...';
+
+      $content = mb_substr(strip_tags($post->post_excerpt),0,$length);
+
+      if (!$content) {
+        $content =  $post->post_content;
+        $content =  strip_shortcodes($content);
+        $content =  strip_tags($content);
+        $content =  str_replace(' ', '', $content);
+        $content =  html_entity_decode($content, ENT_QUOTES, 'UTF-8');
+
+        if (mb_strlen($content, 'UTF-8') > $length) {
+          $content =  mb_substr($content, 0, $length, 'UTF-8');
+          $content .= $suffix;
+        }
+      }
+
+      return $content;
+    }

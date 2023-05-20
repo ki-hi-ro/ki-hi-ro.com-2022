@@ -3077,11 +3077,6 @@ body.fixed {
   color: #000;
 }
 
-.author-box__link:hover {
-  opacity: 0.5;
-  transition: all 0.3;
-}
-
 .author-box__link-icon {
   width: 7px;
   margin-left: 8px;
@@ -3356,11 +3351,6 @@ body.fixed {
   color: #303439;
   font-family: Helvetica Neue;
   font-weight: normal;
-}
-
-.post .nav-links__link:hover {
-  opacity: 0.5;
-  transition: all 0.3;
 }
 
 .post .nav-links__nav {
@@ -3869,12 +3859,6 @@ footer nav {
   .front-sec__flex {
     flex-direction: row;
     flex-wrap: wrap;
-  }
-}
-
-@media (min-width: 1200px) {
-  .front-sec__flex-item {
-    width: 365px;
   }
 }
 
@@ -4398,9 +4382,8 @@ footer nav {
 }
 
 .all-article__post-wrap {
-  box-shadow: 1px 1px 6px 0px #ddd;
-  padding: 16px 20px;
   height: 100%;
+  margin-top: 10px;
 }
 
 .all-article__post-wrap.--mb20 {
@@ -4408,10 +4391,8 @@ footer nav {
 }
 
 .all-article__post-wrap .front-sec__flex-item-thumb {
-  width: 100%;
   height: 230px;
   object-fit: contain;
-  margin-top: 14px;
 }
 
 .all-article__link {
@@ -4419,17 +4400,12 @@ footer nav {
   color: #303439;
 }
 
-.all-article__link:hover {
-  transform: translateY(-3px);
-  transition: all 0.3;
-}
-
 .all-article__date {
   margin-bottom: 0;
 }
 
 .all-article__ttl {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .all-article__desc p {
@@ -4549,4 +4525,29 @@ footer nav {
   .date .front-container.--date-article-list {
     padding-left: 3px;
   }
+}
+
+.all-article__tag-date {
+  display: flex;
+  align-items: center;
+}
+
+.all-article__tag {
+  line-height: 1.5;
+}
+
+.all-article__date {
+  line-height: 1.5;
+}
+
+.all-article__main {
+  display: flex;
+}
+
+.all-article__text-wrap {
+  padding-right: 22px;
+}
+
+.all-article__desc {
+  font-size: 16px;
 }

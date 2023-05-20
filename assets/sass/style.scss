@@ -3054,11 +3054,6 @@ body.fixed {
   color: $black;
 }
 
-.author-box__link:hover {
-  opacity: 0.5;
-  transition: all 0.3;
-}
-
 .author-box__link-icon {
   width: 7px;
   margin-left: 8px;
@@ -3333,11 +3328,6 @@ body.fixed {
   color: $text;
   font-family: Helvetica Neue;
   font-weight: normal;
-}
-
-.post .nav-links__link:hover {
-  opacity: 0.5;
-  transition: all 0.3;
 }
 
 .post .nav-links__nav {
@@ -3823,3 +3813,4 @@ footer nav {
 @import "all-article";
 @import "tag";
 @import "date";
+@import "google-blog-list";

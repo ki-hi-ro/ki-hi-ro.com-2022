@@ -6,7 +6,7 @@ if(is_tag()) {
 }
 $per_num = -1;
 if ( is_home() || is_front_page() ) :
-  $per_num = 3;
+  $per_num = 1;
 endif;
       $news_query = new WP_Query(
         array(
@@ -20,7 +20,7 @@ endif;
       while ( $news_query->have_posts() ) :
       $news_query->the_post();
       ?>
-<a class="all-article__link front-sec__flex-item
+<div class="all-article__link front-sec__flex-item
 <?php if ( is_home() || is_front_page() ) : ?>
   <?php if($i == 1) : ?>
     --center
@@ -30,20 +30,32 @@ endif;
     --center --page
   <?php endif; ?>
 <?php endif; ?>
-  " href="<?php the_permalink(); ?>">
+  ">
   <div class="all-article__post-wrap">
-    <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
-    <div class="all-article__ttl"><?php the_title(); ?></div>
-    <?php
-            if (has_post_thumbnail()) :
-              the_post_thumbnail('',array( 'class' => 'front-sec__flex-item-thumb' ));
-          ?>
-    <?php else : ?>
-    <img class="front-sec__flex-item-thumb" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/no-image.png" alt="no-image">
-    <?php endif; ?>
-    <div class="all-article__desc"><?php the_excerpt(); ?></div>
+    <div class="all-article__main">
+      <div class="all-article__text-wrap">
+        <div class="all-article__tag-date">
+          <?php $flag = get_the_tags(); foreach ( (array)$flag as $tag ) {} ?>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $tag -> slug; ?>.svg" alt="">
+          <div class="all-article_tag-date-not-img">
+            <div class="all-article__tag"><?php the_tags(''); ?></div>
+            <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
+          </div>
+        </div>
+        <div class="all-article__text">
+          <a href="<?php the_permalink(); ?>">
+            <div class="all-article__ttl"><?php the_title(); ?></div>
+          </a>
+          <div class="all-article__desc"><?php echo custom_excerpt() ?></div>
+        </div>
+      </div>
+      <?php if (has_post_thumbnail()) : the_post_thumbnail('',array( 'class' => 'front-sec__flex-item-thumb' )); else : ?>
+        <img class="front-sec__flex-item-thumb" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/no-image.png" alt="no-image">
+      <?php endif; ?>
+
+    </div>
   </div>
-</a>
+</div>
 <?php
       $i++;
       endwhile;

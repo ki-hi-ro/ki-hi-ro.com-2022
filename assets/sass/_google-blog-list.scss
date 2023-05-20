@@ -1,0 +1,21 @@
+.all-article {
+  &__tag-date {
+    display: flex;
+    align-items: center;
+  }
+  &__tag {
+    line-height: 1.5;
+  }
+  &__date {
+    line-height: 1.5;
+  }
+  &__main {
+    display: flex;
+  }
+  &__text-wrap {
+    padding-right: 22px;
+  }
+  &__desc {
+    font-size: 16px;
+  }
+}

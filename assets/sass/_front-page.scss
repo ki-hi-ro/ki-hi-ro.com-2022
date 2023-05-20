@@ -24,9 +24,6 @@
     }
   }
   &__flex-item {
-    @include mq(xl) {
-      width: 365px;
-    }
     &.--center {
       @include mq(sm) {
         margin: 20px 0;

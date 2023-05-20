@@ -6,7 +6,7 @@
     <div class="front-sec__text front-sec__flex">
       <?php echo get_template_part("template-parts/blog-list-thumb-desc"); ?>
     </div>
-    <a href="<?php echo home_url("all-article"); ?>">これまでに書いた記事の一覧</a>
+    <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">これまでに書いた記事の一覧はこちら</a>
   </section>
 
   <section class="front-sec">
