@@ -4,11 +4,11 @@
         <div class="all-article__tag-date">
           <?php
           $flag = get_the_tags(); foreach ( (array)$flag as $tag ) {} if($tag) :
-            $tag_image = get_template_directory_uri() . "/assets/img/" . $tag -> slug . ".svg";
+            $tag_image = get_template_directory_uri() . "/assets/img/" . $tag -> slug . ".png";
           ?>
-            <img src="<?php echo $tag_image; ?>" alt="">
+            <img src="<?php echo $tag_image; ?>" alt="" class="all-article__tag-icon">
           <?php endif; ?>
-          <div class="all-article_tag-date-not-img">
+          <div class="all-article__tag-date-not-img">
             <div class="all-article__tag"><?php the_tags(''); ?></div>
             <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
           </div>

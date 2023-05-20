@@ -4586,3 +4586,7 @@ footer nav {
     display: none;
   }
 }
+
+.all-article__tag-icon {
+  height: 35px;
+}
