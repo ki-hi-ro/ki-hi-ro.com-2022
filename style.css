@@ -2075,7 +2075,6 @@ body.fixed {
 }
 
 .page-top {
-  display: none;
   position: fixed;
   bottom: 10px;
   z-index: 2;
@@ -2141,13 +2140,8 @@ body.fixed {
   font-weight: 600;
 }
 
-.page-top.--single-sp {
-  display: none;
-}
-
 .single .page-top.--single-sp {
   display: block;
-  display: none;
 }
 
 @media (min-width: 992px) {

@@ -2073,7 +2073,6 @@ body.fixed {
 }
 
 .page-top {
-  display: none;
   position: fixed;
   bottom: 10px;
   z-index: 2;
@@ -2131,13 +2130,8 @@ body.fixed {
   }
 }
 
-.page-top.--single-sp {
-  display: none;
-}
-
 .single .page-top.--single-sp {
   display: block;
-  display: none;
   @include mq(lg) {
     display: none;
   }
