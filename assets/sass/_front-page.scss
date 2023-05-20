@@ -24,12 +24,6 @@
     }
   }
   &__flex-item {
-    &.--center {
-      @include mq(sm) {
-        margin: 20px 0;
-      }
-    }
-
     .all-article__ttl {
       margin-top: 10px;
     }

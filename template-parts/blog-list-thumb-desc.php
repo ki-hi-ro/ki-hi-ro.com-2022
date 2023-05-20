@@ -35,8 +35,11 @@ endif;
     <div class="all-article__main">
       <div class="all-article__text-wrap">
         <div class="all-article__tag-date">
-          <?php $flag = get_the_tags(); foreach ( (array)$flag as $tag ) {} if($tag) :?>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $tag -> slug; ?>.svg" alt="">
+          <?php
+          $flag = get_the_tags(); foreach ( (array)$flag as $tag ) {} if($tag) :
+            $tag_image = get_template_directory_uri() . "/assets/img/" . $tag -> slug . ".svg";
+          ?>
+            <img src="<?php echo $tag_image; ?>" alt="">
           <?php endif; ?>
           <div class="all-article_tag-date-not-img">
             <div class="all-article__tag"><?php the_tags(''); ?></div>
