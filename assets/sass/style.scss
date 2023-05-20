@@ -2130,6 +2130,10 @@ body.fixed {
   }
 }
 
+.--single-sp {
+  display: none;
+}
+
 .single .page-top.--single-sp {
   display: block;
   @include mq(lg) {

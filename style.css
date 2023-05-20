@@ -2140,6 +2140,10 @@ body.fixed {
   font-weight: 600;
 }
 
+.--single-sp {
+  display: none;
+}
+
 .single .page-top.--single-sp {
   display: block;
 }
