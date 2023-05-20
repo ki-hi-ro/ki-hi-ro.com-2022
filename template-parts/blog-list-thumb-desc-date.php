@@ -1,19 +1,11 @@
 <?php
-$term_slug = "";
-if(is_tag()) {
-  $term = get_queried_object();
-  $term_slug = $term->slug;
-}
-$per_num = -1;
-if ( is_home() || is_front_page() ) :
-  $per_num = 3;
-endif;
   if ( have_posts() ) :
         $i = 0;
       while ( have_posts() ) :
       the_post();
       ?>
-<a class="all-article__link front-sec__flex-item
+
+<div class="all-article__link front-sec__flex-item
 <?php if ( is_home() || is_front_page() ) : ?>
   <?php if($i == 1) : ?>
     --center
@@ -23,20 +15,9 @@ endif;
     --center --page
   <?php endif; ?>
 <?php endif; ?>
-  " href="<?php the_permalink(); ?>">
-  <div class="all-article__post-wrap">
-    <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
-    <div class="all-article__ttl"><?php the_title(); ?></div>
-    <?php
-            if (has_post_thumbnail()) :
-              the_post_thumbnail('',array( 'class' => 'front-sec__flex-item-thumb' ));
-          ?>
-    <?php else : ?>
-    <img class="front-sec__flex-item-thumb" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/no-image.png" alt="no-image">
-    <?php endif; ?>
-    <div class="all-article__desc"><?php the_excerpt(); ?></div>
-  </div>
-</a>
+  ">
+  <?php echo get_template_part("template-parts/blog-list"); ?>
+</div>
 <?php
       $i++;
       endwhile;
