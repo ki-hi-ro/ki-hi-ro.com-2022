@@ -12,10 +12,29 @@
   &__main {
     display: flex;
   }
-  &__text-wrap {
-    padding-right: 22px;
-  }
   &__desc {
-    font-size: 16px;
+    display: flex;
+    p {
+      margin-top: 0;
+      width: 60%;
+      padding-right: 18px;
+      @include mq(md) {
+        width: auto;
+      }
+    }
+  }
+  &__desc-pc {
+    display: none;
+    @include mq(md) {
+      display: block;
+      font-size: 16px;
+    }
+  }
+  &__desc-sp {
+    line-height: 1.5;
+    font-size: 15px;
+    @include mq(md) {
+      display: none;
+    }
   }
 }

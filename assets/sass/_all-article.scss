@@ -9,8 +9,25 @@
     }
 
     .front-sec__flex-item-thumb {
-      height: 230px;
-      object-fit: contain;
+      object-fit: cover;
+      width: 40%;
+      height: 120px;
+      @include mq(md) {
+        height: 230px;
+        width: auto;
+        object-fit: contain;
+      }
+      &.--pc {
+        display: none;
+        @include mq(md) {
+          display: block;
+        }
+      }
+      &.--sp {
+        @include mq(md) {
+          display: none;
+        }
+      }
     }
   }
   &__link {
@@ -22,11 +39,10 @@
   }
   &__ttl {
     font-size: 20px;
-  }
-  &__desc {
-    p {
-      font-size: 16px;
-      margin-top: 10px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    @include mq(md) {
+      line-height: 40px;
     }
   }
 }

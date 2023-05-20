@@ -108,7 +108,30 @@ function my_meta_ogp() {
 }
 add_action('wp_head','my_meta_ogp');
 
-   function custom_excerpt($length = 220) {
+   function custom_excerpt_pc($length = 200) {
+      global $post;
+
+      $suffix = '...';
+
+      $content = mb_substr(strip_tags($post->post_excerpt),0,$length);
+
+      if (!$content) {
+        $content =  $post->post_content;
+        $content =  strip_shortcodes($content);
+        $content =  strip_tags($content);
+        $content =  str_replace(' ', '', $content);
+        $content =  html_entity_decode($content, ENT_QUOTES, 'UTF-8');
+
+        if (mb_strlen($content, 'UTF-8') > $length) {
+          $content =  mb_substr($content, 0, $length, 'UTF-8');
+          $content .= $suffix;
+        }
+      }
+
+      return $content;
+    }
+
+    function custom_excerpt_sp($length = 75) {
       global $post;
 
       $suffix = '...';
