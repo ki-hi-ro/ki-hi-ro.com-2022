@@ -3904,8 +3904,20 @@ footer nav {
   margin-bottom: 0;
 }
 
+@media (min-width: 992px) {
+  .front-sec.--twitter {
+    margin-right: 60px;
+  }
+}
+
 .all-article .front-sec {
   margin-bottom: 28px;
+}
+
+@media (min-width: 992px) {
+  .sns-wrap {
+    display: flex;
+  }
 }
 
 .header {

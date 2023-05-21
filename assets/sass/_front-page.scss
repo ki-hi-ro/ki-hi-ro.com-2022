@@ -61,8 +61,19 @@
   &__link-ttl {
     margin-bottom: 0;
   }
+  &.--twitter {
+    @include mq(lg) {
+      margin-right: 60px;
+    }
+  }
 }
 
 .all-article .front-sec {
     margin-bottom: 28px;
+}
+
+.sns-wrap {
+  @include mq(lg) {
+    display: flex;
+  }
 }
