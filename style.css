@@ -4491,6 +4491,52 @@ footer nav {
   margin-bottom: 20px;
 }
 
+.basic-info {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1140px;
+}
+
+@media (min-width: 576px) {
+  .basic-info {
+    padding: 0;
+  }
+}
+
+.basic-info__ttl {
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+@media (min-width: 576px) {
+  .basic-info__ttl {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 576px) {
+  .basic-info__img {
+    width: 50%;
+  }
+}
+
+.basic-info__img img {
+  width: 100%;
+}
+
+.basic-info__p {
+  font-size: 15px;
+  padding: 0;
+  margin: 20px 0 10px;
+  line-height: 1.8;
+}
+
+@media (min-width: 576px) {
+  .basic-info__p {
+    margin: 40px 0 -10px;
+  }
+}
+
 .date-article-list {
   list-style: none;
   padding-bottom: 100px;

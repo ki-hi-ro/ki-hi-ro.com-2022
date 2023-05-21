@@ -5,6 +5,15 @@ $term_slug = $term->slug;
 $term_name = $term->name;
 $term_desc = $term->description;
 ?>
+<?php if($term_slug == "basic-info") : ?>
+  <div class="basic-info">
+    <h2 class="basic-info__ttl">合格しました！（2023年5月21日 追記）</h2>
+    <div class="basic-info__img">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goukaku.png" alt="基本情報技術者 合格">
+    </div>
+    <p class="basic-info__p l-container">これまでに書いた基本情報技術者についての記事一覧はこちら</p>
+  </div>
+<?php endif; ?>
 <?php
 $tag_mv = get_template_directory_uri() . "/assets/img/tag/tag-mv-" . $term_slug . ".png";
 error_reporting(0);

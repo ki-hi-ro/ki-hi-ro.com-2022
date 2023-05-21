@@ -49,3 +49,36 @@
     margin-bottom: 20px;
   }
 }
+
+.basic-info {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1140px;
+  @include mq(sm) {
+    padding: 0;
+  }
+  &__ttl {
+    margin-bottom: 5px;
+    font-size: 17px;
+    @include mq(sm) {
+      font-size: 20px;
+    }
+  }
+  &__img {
+    @include mq(sm) {
+      width: 50%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &__p {
+    font-size: 15px;
+    padding: 0;
+    margin: 20px 0 10px;
+    line-height: 1.8;
+    @include mq(sm) {
+      margin: 40px 0 -10px;
+    }
+  }
+}
