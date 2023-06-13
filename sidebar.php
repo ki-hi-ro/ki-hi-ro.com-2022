@@ -1,5 +1,5 @@
   <aside class="l-pc-right">
-    <?php if(!is_single()) : ?>
+    <?php if(!is_single() && !is_page()) : ?>
       
     <?php get_search_form() ; ?>
 
@@ -32,10 +32,10 @@
       </div>
     <?php endif; ?>
 
-    <?php if(is_single()) : ?>
+    <?php //if(is_single()) : ?>
     <div class="blog-article__aside-table-of-contents">
       <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()): ?>
       <?php endif;?>
     </div>
-    <?php endif; ?>
+    <?php //endif; ?>
   </aside>
