@@ -4,7 +4,7 @@
         <div class="all-article__tag-date">
           <?php
           $flag = get_the_tags(); foreach ( (array)$flag as $tag ) {} if($tag) :
-            $tag_image = get_template_directory_uri() . "/assets/img/" . $tag -> slug . ".png";
+            $tag_image = get_template_directory_uri() . "/assets/img/tag/" . $tag -> slug . ".png";
           ?>
             <img src="<?php echo $tag_image; ?>" alt="" class="all-article__tag-icon">
           <?php endif; ?>
