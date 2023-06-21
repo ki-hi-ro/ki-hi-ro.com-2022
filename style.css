@@ -4648,3 +4648,22 @@ footer nav {
 .all-article__tag-icon {
   height: 35px;
 }
+
+.sample-acf-image .l-pc-left.--single {
+  padding: 0;
+}
+
+.sample-acf-image .all-article__date,
+.sample-acf-image #first-ttl,
+.sample-acf-image .nav-links,
+.sample-acf-image .bread {
+  display: none;
+}
+
+.sample-acf-image .jimo_img {
+  width: 100%;
+}
+
+.sample-acf-image .post__ttl {
+  margin-top: 0;
+}

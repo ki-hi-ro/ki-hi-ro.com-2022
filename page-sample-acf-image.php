@@ -22,6 +22,10 @@ if($posttags) {
             <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'post__thumb']  );?>
             <?php if(!in_category('record')): ?>
             <h2 id="first-ttl">はじめに</h2>
+            <?php $jimo_img = get_field('画像');
+            if( !empty( $jimo_img ) ): ?>
+            <img src="<?php echo esc_url($jimo_img['url']); ?>" alt="<?php echo esc_url($jimo_img['alt']); ?>" class="jimo_img" />
+            <?php endif; ?>
             <?php endif; ?>
             <div class="post__content">
                 <?php
