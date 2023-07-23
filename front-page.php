@@ -41,13 +41,13 @@
       ?>
     </div>
   </section>
-  <section class="front-sec">
+  <!-- <section class="front-sec">
     <h2 class="front-sec__ttl">自己紹介</h2>
     <div class="front-sec__text">
       <p>29歳男性です。愛知県一宮市に住んでいます。<br>これまでは、WEB制作のフリーランスエンジニアとして、WEBサイトのコーディングを行ってきました。<br>2023年2月1日からは、正社員のソフトウェア評価エンジニアとして、就業開始しました。</p>
     </div>
-  </section>
-  <section class="sns-wrap">
+  </section> -->
+  <!-- <section class="sns-wrap">
     <section class="front-sec --twitter">
       <h2 class="front-sec__ttl">Twitter</h2>
       <div class="front-sec__text">
@@ -62,7 +62,7 @@
         <div class="elfsight-app-cfaaba04-9b5b-4a31-a9b8-82d0cc5d60c1"></div>
       </div>
     </section>
-  </section>
+  </section> -->
   <style>
     #eapps-instagram-feed-1 {
       max-width: 100%;
