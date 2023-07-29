@@ -5,6 +5,14 @@
   padding: 0 20px;
   @include mq(xl) {
       padding: 0;
+      display: flex;
+      .pc-left-container {
+        width: 70%;
+        padding-right: 66px;
+      }
+      .pc-right-container {
+        width: 30%;
+      }
   }
 }
 
@@ -51,6 +59,9 @@
     flex-wrap: wrap;
     padding-left: 0;
     margin-top: 5px;
+    .front-sec__item {
+      width: 100%;
+    }
   }
   &__item {
     list-style: none;

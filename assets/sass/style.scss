@@ -2960,7 +2960,7 @@ body.fixed {
 }
 
 .l-pc-left {
-  margin-right: 40px;
+  margin-right: 20px;
   margin-bottom: 30px;
   width: 100%;
 }
@@ -3709,6 +3709,9 @@ footer {
   color: $white;
   padding: 15px;
   text-align: center;
+  .front-container {
+    display: block;
+  }
 }
 
 footer nav {
@@ -3780,7 +3783,7 @@ footer nav {
 }
 
 .ez-toc-widget-container.ez-toc-v2_0_31_1.ez-toc-widget.counter-hierarchy.counter-decimal {
-  box-shadow: 1px 1px 6px 0px #ddd;
+  // box-shadow: 1px 1px 6px 0px #ddd;
   padding: 13px 17px;
 }
 
@@ -3794,6 +3797,10 @@ footer nav {
 
 .blog-article__aside-table-of-contents div.ez-toc-widget-container ul.ez-toc-list {
   margin: 10px 0;
+}
+
+.blog-article__aside-table-of-contents div.ez-toc-widget-container ul.ez-toc-list li {
+  padding: 5px 0;
 }
 
 .ez-toc-widget-container h3 {

@@ -4,9 +4,10 @@ if(is_tag()) {
   $term = get_queried_object();
   $term_slug = $term->slug;
 }
-$per_num = -1;
+  $per_num = -1;
+
 if ( is_home() || is_front_page() ) :
-  $per_num = 1;
+  $per_num = 10;
 endif;
       $news_query = new WP_Query(
         array(
