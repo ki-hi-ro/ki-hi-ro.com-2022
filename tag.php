@@ -11,7 +11,6 @@ $term_desc = $term->description;
     <div class="basic-info__img">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goukaku.png" alt="基本情報技術者 合格">
     </div>
-    <p class="basic-info__p l-container">これまでに書いた基本情報技術者についての記事一覧はこちら</p>
   </div>
 <?php endif; ?>
 

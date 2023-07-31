@@ -3,7 +3,14 @@
 <main class="front-container">
   <div class="pc-left-container">
     <section class="front-sec">
-      <h2 class="front-sec__ttl">最近書いた記事</h2>
+      <?php
+    if(is_front_page() || is_home()) {
+      $article_list_ttl = "最近書いた";
+    } else if(is_page("all-article")) {
+      $article_list_ttl = "すべての";
+    }
+    ?>
+      <h2 class="front-sec__ttl"><?php echo $article_list_ttl; ?>記事</h2>
       <div class="front-sec__text front-sec__flex">
         <?php echo get_template_part("template-parts/blog-list-thumb-desc"); ?>
       </div>

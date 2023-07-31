@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-  <main class="front-container">
+<main class="front-container">
   <div class="pc-left-container">
     <section class="front-sec">
       <h2 class="front-sec__ttl">すべての記事</h2>
