@@ -14,28 +14,7 @@ $term_desc = $term->description;
     <p class="basic-info__p l-container">これまでに書いた基本情報技術者についての記事一覧はこちら</p>
   </div>
 <?php endif; ?>
-<?php
-// $tag_mv = get_template_directory_uri() . "/assets/img/tag/tag-mv-" . $term_slug . ".png";
-// error_reporting(0);
-// if(exif_imagetype($tag_mv)) :
-?>
-<!-- <div class="tag-mv l-container">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tag/tag-mv-<?php echo $term_slug; ?>.png" alt="<?php echo $term_name; ?>の一覧ページのメイン画像">
-  <h1><?php echo $term_name; ?></h1>
-  <div class="overlay"></div>
-</div> -->
-<?php // endif; ?>
-<!-- <main class="l-container">
-  <div class="l-pc-left">
-    <section class="front-sec">
-        <h2 class="front-sec__ttl"><?php echo $term_name; ?>についての記事</h2>
-    </section>
-    <div class="front-sec__text front-sec__flex">
-      <?php // echo get_template_part("template-parts/blog-list-thumb-desc"); ?>
-    </div>
-  </div>
-  <?php get_sidebar();?>
-</main> -->
+
 <main class="front-container">
   <div class="pc-left-container">
     <section class="front-sec">
@@ -79,33 +58,5 @@ $term_desc = $term->description;
       </div>
     </section>
   </div>
-
-  <!-- <section class="front-sec">
-    <h2 class="front-sec__ttl">自己紹介</h2>
-    <div class="front-sec__text">
-      <p>29歳男性です。愛知県一宮市に住んでいます。<br>これまでは、WEB制作のフリーランスエンジニアとして、WEBサイトのコーディングを行ってきました。<br>2023年2月1日からは、正社員のソフトウェア評価エンジニアとして、就業開始しました。</p>
-    </div>
-  </section> -->
-  <!-- <section class="sns-wrap">
-    <section class="front-sec --twitter">
-      <h2 class="front-sec__ttl">Twitter</h2>
-      <div class="front-sec__text">
-        <a class="twitter-timeline" data-width="350" data-height="555" href="https://twitter.com/2021_shibata?ref_src=twsrc%5Etfw">Tweets by 2021_shibata</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
-    </section>
-    <section class="front-sec">
-      <h2 class="front-sec__ttl">Instagram</h2>
-      <div class="front-sec__text">
-        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div class="elfsight-app-cfaaba04-9b5b-4a31-a9b8-82d0cc5d60c1"></div>
-      </div>
-    </section>
-  </section> -->
-  <style>
-    #eapps-instagram-feed-1 {
-      max-width: 100%;
-    }
-  </style>
 </main>
 <?php get_footer(); ?>
