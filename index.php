@@ -13,14 +13,14 @@ if(is_tag()) {
     <section class="front-sec">
       <?php
     if(is_front_page() || is_home()) {
-      $article_list_ttl = "最近書いた";
+      $article_list_ttl = "最近更新した";
     } else if(is_page("all-article")) {
       $article_list_ttl = "すべての";
     } else if(is_tag()) {
       $article_list_ttl = $term_name."についての";
     } else if(is_date()) {
       $article_list_ttl = get_query_var('year').'年'.get_query_var('monthnum').'月の';
-    } 
+    }
     ?>
       <h2 class="front-sec__ttl"><?php echo $article_list_ttl; ?>記事</h2>
       <div class="front-sec__text front-sec__flex">

@@ -4469,7 +4469,16 @@ footer nav {
 }
 
 .all-article__link {
-  margin-bottom: 20px;
+  margin-bottom: 13px;
+  border-bottom: 1px solid #c5c5c5;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .all-article__link {
+    margin-bottom: 9px;
+    padding-bottom: 11px;
+  }
 }
 
 .tag-mv {

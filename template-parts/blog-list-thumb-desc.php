@@ -4,8 +4,8 @@ if(is_tag()) {
   $term = get_queried_object();
   $term_slug = $term->slug;
 }
-  $per_num = -1;
 
+$per_num = -1;
 if ( is_home() || is_front_page() ) :
   $per_num = 10;
 endif;
@@ -13,7 +13,8 @@ endif;
         array(
           'post_type'      => 'post',
           'posts_per_page' => $per_num,
-          'tag' => $term_slug
+          'tag' => $term_slug,
+          'orderby' => 'modified'
         )
       );
   if ( $news_query->have_posts() ) :
