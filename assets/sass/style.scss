@@ -3633,10 +3633,11 @@ body.fixed {
 
 .search-form {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 63px;
   position: relative;
   border: 1px solid $gray;
   height: 48px;
+  border-radius: 11px;
 }
 
 .search-form__input {
@@ -3644,6 +3645,7 @@ body.fixed {
   padding: 12px;
   font-size: 16px;
   border: none;
+  border-radius: 11px;
 }
 
 .search-form__input:focus {
@@ -3659,7 +3661,8 @@ body.fixed {
   height: 46px;
   cursor: pointer;
   border: none;
-  background-color: $gray-bg;
+  background-color: $white;
+  border-radius: 11px;
 }
 
 .search-form__icon-img {

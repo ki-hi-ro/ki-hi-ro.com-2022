@@ -33,6 +33,8 @@ if(is_tag()) {
     </section>
   </div>
   <div class="pc-right-container">
+    <?php get_search_form() ; ?>
+    
     <section class="front-sec">
       <h2 class="front-sec__ttl">年月アーカイブ</h2>
       <?php echo get_template_part("template-parts/date-article-list"); ?>
