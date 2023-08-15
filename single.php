@@ -38,6 +38,7 @@ if($posttags) {
             $nextpost = get_adjacent_post(false, '', false);
             if( $prevpost or $nextpost) :
             ?>
+            <?php comments_template(); ?>
             <ul class="nav-links">
                 <?php if( $prevpost ) : ?>
                 <li class="nav-links__nav --pre">
@@ -54,7 +55,6 @@ if($posttags) {
                 </li>
                 <?php endif; ?>
             </ul>
-            <?php comments_template(); ?>
             <?php echo get_template_part('template-parts/single-bread'); ?>
             <?php endif; ?>
             <?php endwhile; endif; ?>
