@@ -54,6 +54,7 @@ if($posttags) {
                 </li>
                 <?php endif; ?>
             </ul>
+            <?php comments_template(); ?>
             <?php echo get_template_part('template-parts/single-bread'); ?>
             <?php endif; ?>
             <?php endwhile; endif; ?>
