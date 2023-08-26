@@ -26,6 +26,9 @@
   &__flex-item {
     .all-article__ttl {
       margin-top: 10px;
+      @include mq(md) {
+        padding-right: 18px;
+      }
     }
   }
   &__ttl {
