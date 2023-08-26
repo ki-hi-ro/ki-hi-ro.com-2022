@@ -25,8 +25,11 @@ if(is_tag()) {
       <h2 class="front-sec__ttl"><?php echo $article_list_ttl; ?>記事</h2>
       <div class="front-sec__text front-sec__flex">
         <?php
-        if(is_date()) {echo get_template_part("template-parts/blog-list-thumb-desc-date");}
-        else {echo get_template_part("template-parts/blog-list-thumb-desc");}
+        if(is_date()) {
+          echo get_template_part("template-parts/blog-list-thumb-desc-date");
+        } else {
+          echo get_template_part("template-parts/blog-list-thumb-desc");
+        }
         ?>
       </div>
       <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">これまでに書いた記事の一覧はこちら</a>
@@ -46,7 +49,8 @@ if(is_tag()) {
         <?php
         $args = array(
             'orderby' => 'name',
-            'order' => 'ASC'
+            'order' => 'ASC',
+            'exclude' => 116
         );
         $posttags = get_tags( $args );
 

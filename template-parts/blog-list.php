@@ -26,14 +26,10 @@
             <p class="all-article__desc-pc"><?php echo custom_excerpt_pc(); ?></p>
             <p class="all-article__desc-sp"><?php echo custom_excerpt_sp(); ?></p>
             <?php if (has_post_thumbnail()) : the_post_thumbnail('',array( 'class' => 'front-sec__flex-item-thumb' )); else : ?>
-              <!-- <img class="front-sec__flex-item-thumb --sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/no-image.png" alt="no-image"> -->
               <img class="front-sec__flex-item-thumb" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/no-image.png" alt="no-image">
             <?php endif; ?>
           </div>
         </div>
       </div>
-      <!-- <?php if (has_post_thumbnail()) : the_post_thumbnail('',array( 'class' => 'front-sec__flex-item-thumb --pc' )); else : ?>
-        <img class="front-sec__flex-item-thumb --pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/no-image.png" alt="no-image">
-      <?php endif; ?> -->
     </div>
-  </div>
+</div>
