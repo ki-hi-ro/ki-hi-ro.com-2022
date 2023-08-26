@@ -10,6 +10,7 @@
     @include mq(sm) {
       margin-right: 20px;
       margin-bottom: 3px;
+      width: 100%;
     }
   }
 }
@@ -23,7 +24,6 @@
 }
 
 .date .front-container.--date-article-list {
-  padding-left: 20px;
   @include mq(sm) {
     padding-left: 3px;
   }

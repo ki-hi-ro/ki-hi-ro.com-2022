@@ -58,3 +58,16 @@
     margin: 40px 0;
   }
 }
+.comment-form-comment {
+  display: flex;
+  flex-direction: column;
+}
+#comment {
+  padding: 10px;
+  font-size: 16px;
+}
+#author,
+#email,
+#url {
+  font-size: 16px;
+}

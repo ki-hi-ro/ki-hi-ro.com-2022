@@ -108,7 +108,7 @@ function my_meta_ogp() {
 }
 add_action('wp_head','my_meta_ogp');
 
-   function custom_excerpt_pc($length = 200) {
+   function custom_excerpt_pc($length = 170) {
       global $post;
 
       $suffix = '...';

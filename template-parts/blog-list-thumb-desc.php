@@ -4,15 +4,19 @@ if(is_tag()) {
   $term = get_queried_object();
   $term_slug = $term->slug;
 }
+
 $per_num = -1;
+$order_pram = 'date';
 if ( is_home() || is_front_page() ) :
-  $per_num = 1;
+  $per_num = 10;
+  $order_pram = 'modified';
 endif;
       $news_query = new WP_Query(
         array(
           'post_type'      => 'post',
           'posts_per_page' => $per_num,
-          'tag' => $term_slug
+          'tag' => $term_slug,
+          'orderby' => $order_pram
         )
       );
   if ( $news_query->have_posts() ) :

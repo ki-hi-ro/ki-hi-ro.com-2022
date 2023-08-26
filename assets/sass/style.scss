@@ -2115,15 +2115,15 @@ body.fixed {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f7f7f7;
-    border-radius: 5px;
+    background: #fff;
+    border-radius: 50%;
     width: 60px;
     height: 60px;
     color: $black;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 0.6rem;
+    font-size: 1.6rem;
     transition: all 0.3s;
     line-height: 1.8;
     font-weight: 600;
@@ -2803,7 +2803,10 @@ body.fixed {
   font-weight: normal;
   margin: 60px 0 30px;
   border-left: 5px solid $text;
-  padding: 0px 20px;
+  padding: 10px 20px;
+  background-color: #ededed;
+  font-weight: bold;
+  line-height: 1.8;
   @include mq(lg) {
     margin-left: 0;
   }
@@ -2813,7 +2816,7 @@ body.fixed {
   @extend h2;
   font-size: 20px;
   border-left: 3px solid $text;
-  padding: 0px 14px;
+  padding: 7px 14px;
 }
 
 .single h3.sidebar-ttl {
@@ -2960,7 +2963,7 @@ body.fixed {
 }
 
 .l-pc-left {
-  margin-right: 40px;
+  margin-right: 20px;
   margin-bottom: 30px;
   width: 100%;
 }
@@ -3632,10 +3635,11 @@ body.fixed {
 
 .search-form {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 63px;
   position: relative;
   border: 1px solid $gray;
   height: 48px;
+  border-radius: 11px;
 }
 
 .search-form__input {
@@ -3643,6 +3647,7 @@ body.fixed {
   padding: 12px;
   font-size: 16px;
   border: none;
+  border-radius: 11px;
 }
 
 .search-form__input:focus {
@@ -3658,7 +3663,8 @@ body.fixed {
   height: 46px;
   cursor: pointer;
   border: none;
-  background-color: $gray-bg;
+  background-color: $white;
+  border-radius: 11px;
 }
 
 .search-form__icon-img {
@@ -3709,6 +3715,9 @@ footer {
   color: $white;
   padding: 15px;
   text-align: center;
+  .front-container {
+    display: block;
+  }
 }
 
 footer nav {
@@ -3780,7 +3789,7 @@ footer nav {
 }
 
 .ez-toc-widget-container.ez-toc-v2_0_31_1.ez-toc-widget.counter-hierarchy.counter-decimal {
-  box-shadow: 1px 1px 6px 0px #ddd;
+  // box-shadow: 1px 1px 6px 0px #ddd;
   padding: 13px 17px;
 }
 
@@ -3794,6 +3803,10 @@ footer nav {
 
 .blog-article__aside-table-of-contents div.ez-toc-widget-container ul.ez-toc-list {
   margin: 10px 0;
+}
+
+.blog-article__aside-table-of-contents div.ez-toc-widget-container ul.ez-toc-list li {
+  padding: 5px 0;
 }
 
 .ez-toc-widget-container h3 {

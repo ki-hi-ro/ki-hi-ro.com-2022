@@ -84,7 +84,7 @@ h3 {
   font-size: 16px;
   line-height: 32px;
   margin-top: 32px;
-  color: #303439;
+  color: #000;
   font-family: Helvetica Neue;
   font-weight: normal;
 }
@@ -153,6 +153,22 @@ h3 {
   .post .w-50 {
     margin: 40px 0;
   }
+}
+
+.comment-form-comment {
+  display: flex;
+  flex-direction: column;
+}
+
+#comment {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#author,
+#email,
+#url {
+  font-size: 16px;
 }
 
 .more-link {
@@ -2074,7 +2090,7 @@ div#ez-toc-container ul.ez-toc-list a {
 
 .single ul li,
 .single ol li {
-  color: #303439;
+  color: #000;
   font-size: 16px;
   word-break: break-all;
 }
@@ -2143,15 +2159,15 @@ body.fixed {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f7f7f7;
-  border-radius: 5px;
+  background: #fff;
+  border-radius: 50%;
   width: 60px;
   height: 60px;
   color: #000;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 0.6rem;
+  font-size: 1.6rem;
   transition: all 0.3s;
   line-height: 1.8;
   font-weight: 600;
@@ -2836,12 +2852,15 @@ body.fixed {
 
 .single h2, .single h3 {
   font-size: 25px;
-  color: #303439;
+  color: #000;
   font-family: Helvetica Neue;
   font-weight: normal;
   margin: 60px 0 30px;
-  border-left: 5px solid #303439;
-  padding: 0px 20px;
+  border-left: 5px solid #000;
+  padding: 10px 20px;
+  background-color: #ededed;
+  font-weight: bold;
+  line-height: 1.8;
 }
 
 @media (min-width: 992px) {
@@ -2852,8 +2871,8 @@ body.fixed {
 
 .single h3 {
   font-size: 20px;
-  border-left: 3px solid #303439;
-  padding: 0px 14px;
+  border-left: 3px solid #000;
+  padding: 7px 14px;
 }
 
 .single h3.sidebar-ttl {
@@ -3000,7 +3019,7 @@ body.fixed {
 }
 
 .l-pc-left {
-  margin-right: 40px;
+  margin-right: 20px;
   margin-bottom: 30px;
   width: 100%;
 }
@@ -3121,7 +3140,7 @@ body.fixed {
 
 .post__ttl {
   font-size: 23px;
-  color: #303439;
+  color: #000;
   font-family: Helvetica Neue;
   letter-spacing: 0.1px;
   font-weight: 500;
@@ -3333,14 +3352,14 @@ body.fixed {
 
 .post th {
   padding: 10px;
-  border: solid 1px #303439;
-  color: #303439;
+  border: solid 1px #000;
+  color: #000;
 }
 
 .post td {
   padding: 10px;
-  border: solid 1px #303439;
-  color: #303439;
+  border: solid 1px #000;
+  color: #000;
 }
 
 .post .g-map {
@@ -3362,7 +3381,7 @@ body.fixed {
 
 .post .nav-links__link {
   display: flex;
-  color: #303439;
+  color: #000;
   font-family: Helvetica Neue;
   font-weight: normal;
 }
@@ -3669,10 +3688,11 @@ body.fixed {
 
 .search-form {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 63px;
   position: relative;
   border: 1px solid #d2d2d2;
   height: 48px;
+  border-radius: 11px;
 }
 
 .search-form__input {
@@ -3680,6 +3700,7 @@ body.fixed {
   padding: 12px;
   font-size: 16px;
   border: none;
+  border-radius: 11px;
 }
 
 .search-form__input:focus {
@@ -3695,7 +3716,8 @@ body.fixed {
   height: 46px;
   cursor: pointer;
   border: none;
-  background-color: #efefef;
+  background-color: #fff;
+  border-radius: 11px;
 }
 
 .search-form__icon-img {
@@ -3746,6 +3768,10 @@ footer {
   color: #fff;
   padding: 15px;
   text-align: center;
+}
+
+footer .front-container {
+  display: block;
 }
 
 footer nav {
@@ -3817,7 +3843,6 @@ footer nav {
 }
 
 .ez-toc-widget-container.ez-toc-v2_0_31_1.ez-toc-widget.counter-hierarchy.counter-decimal {
-  box-shadow: 1px 1px 6px 0px #ddd;
   padding: 13px 17px;
 }
 
@@ -3831,6 +3856,10 @@ footer nav {
 
 .blog-article__aside-table-of-contents div.ez-toc-widget-container ul.ez-toc-list {
   margin: 10px 0;
+}
+
+.blog-article__aside-table-of-contents div.ez-toc-widget-container ul.ez-toc-list li {
+  padding: 5px 0;
 }
 
 .ez-toc-widget-container h3 {
@@ -3851,6 +3880,14 @@ footer nav {
 @media (min-width: 1200px) {
   .front-container {
     padding: 0;
+    display: flex;
+  }
+  .front-container .pc-left-container {
+    width: 70%;
+    padding-right: 66px;
+  }
+  .front-container .pc-right-container {
+    width: 30%;
   }
 }
 
@@ -3888,7 +3925,7 @@ footer nav {
 
 .front-sec__ttl, .front-sec__text p {
   font-size: 20px;
-  color: #303439;
+  color: #000;
   font-family: Helvetica Neue;
   font-weight: normal;
 }
@@ -3904,7 +3941,7 @@ footer nav {
 }
 
 .front-sec__article-ttl {
-  color: #303439;
+  color: #000;
   font-weight: normal;
   font-family: Helvetica Neue;
 }
@@ -3914,6 +3951,10 @@ footer nav {
   flex-wrap: wrap;
   padding-left: 0;
   margin-top: 5px;
+}
+
+.front-sec__tag-list .front-sec__item {
+  width: 100%;
 }
 
 .front-sec__item {
@@ -4145,7 +4186,7 @@ footer nav {
   left: 14px;
   height: 3px;
   border-radius: 2px;
-  background-color: #303439;
+  background-color: #000;
   width: 45%;
 }
 
@@ -4212,7 +4253,7 @@ footer nav {
 
 .header__sitename-link {
   font-size: 20px;
-  color: #303439;
+  color: #000;
   font-family: Helvetica Neue;
   letter-spacing: 0.1px;
   font-weight: 500;
@@ -4413,6 +4454,7 @@ footer nav {
     height: 230px;
     width: auto;
     object-fit: contain;
+    padding-top: 5px;
   }
 }
 
@@ -4434,7 +4476,7 @@ footer nav {
 
 .all-article__link {
   display: block;
-  color: #303439;
+  color: #000;
 }
 
 .all-article__date {
@@ -4454,7 +4496,16 @@ footer nav {
 }
 
 .all-article__link {
-  margin-bottom: 20px;
+  margin-bottom: 13px;
+  border-bottom: 1px solid #c5c5c5;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .all-article__link {
+    margin-bottom: 9px;
+    padding-bottom: 11px;
+  }
 }
 
 .tag-mv {
@@ -4585,13 +4636,14 @@ footer nav {
 }
 
 .date-article-list li {
-  color: #303439;
+  color: #000;
 }
 
 @media (min-width: 576px) {
   .date-article-list li {
     margin-right: 20px;
     margin-bottom: 3px;
+    width: 100%;
   }
 }
 
@@ -4601,10 +4653,6 @@ footer nav {
 
 .front-container.--date-article-list {
   padding-left: 3px;
-}
-
-.date .front-container.--date-article-list {
-  padding-left: 20px;
 }
 
 @media (min-width: 576px) {
@@ -4638,6 +4686,7 @@ footer nav {
   margin-top: 0;
   width: 60%;
   padding-right: 18px;
+  min-height: 135px;
 }
 
 @media (min-width: 768px) {

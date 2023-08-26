@@ -38,6 +38,7 @@ if($posttags) {
             $nextpost = get_adjacent_post(false, '', false);
             if( $prevpost or $nextpost) :
             ?>
+            <?php comments_template(); ?>
             <ul class="nav-links">
                 <?php if( $prevpost ) : ?>
                 <li class="nav-links__nav --pre">
