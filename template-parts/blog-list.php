@@ -15,7 +15,7 @@
           ?>
           <div class="all-article__tag-date-not-img">
             <div class="all-article__tag"><?php the_tags(''); ?></div>
-            <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
+            <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?>（更新日: <?php echo get_the_modified_date('Y.m.d'); ?>）</div>
           </div>
         </div>
         <div class="all-article__text">
