@@ -17,7 +17,7 @@ if($posttags) {
         <article class="post">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <?php echo get_template_part('template-parts/single-bread'); ?>
-            <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
+            <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?>（更新日: <?php echo get_the_modified_date('Y.m.d'); ?>）</div>
             <h1 class="post__ttl"><?php the_title(); ?></h1>
             <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'post__thumb']  );?>
             <?php if(!in_category('record')): ?>
