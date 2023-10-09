@@ -35,7 +35,7 @@ if(is_tag()) {
         }
         ?>
       </div>
-      <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">これまでに書いた記事の一覧はこちら</a>
+      <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>
     </section>
   </div>
   <div class="pc-right-container">    

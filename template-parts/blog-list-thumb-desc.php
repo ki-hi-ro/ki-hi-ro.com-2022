@@ -8,7 +8,7 @@ if(is_tag()) {
 $per_num = -1;
 $order_pram = 'date';
 if ( is_home() || is_front_page() ) :
-  $per_num = 10;
+  $per_num = 3;
   $order_pram = 'modified';
 endif;
   $my_query = new WP_Query(
