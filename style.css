@@ -3686,13 +3686,32 @@ body.fixed {
   }
 }
 
-.search-form {
+.search-form-wrap .search-form {
   display: flex;
-  margin-bottom: 63px;
   position: relative;
   border: 1px solid #d2d2d2;
   height: 48px;
   border-radius: 11px;
+}
+
+.search-form-wrap.--pc {
+  display: none;
+}
+
+.search-form-wrap .search-form {
+  margin: 30px auto 50px;
+}
+
+@media (min-width: 576px) {
+  .search-form-wrap.--sp {
+    display: none;
+  }
+  .search-form-wrap.--pc {
+    display: block;
+  }
+  .search-form-wrap.--pc .search-form {
+    margin-bottom: 30px;
+  }
 }
 
 .search-form__input {

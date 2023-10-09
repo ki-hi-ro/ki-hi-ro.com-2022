@@ -3633,13 +3633,31 @@ body.fixed {
   }
 }
 
-.search-form {
-  display: flex;
-  margin-bottom: 63px;
-  position: relative;
-  border: 1px solid $gray;
-  height: 48px;
-  border-radius: 11px;
+.search-form-wrap {
+  .search-form {
+    display: flex;
+    position: relative;
+    border: 1px solid $gray;
+    height: 48px;
+    border-radius: 11px;
+  }
+  &.--pc {
+    display: none;
+  }
+  .search-form {
+    margin: 30px auto 50px;
+  }
+  @include mq(sm) {
+    &.--sp {
+      display: none;
+    }
+    &.--pc {
+      display: block;
+      .search-form {
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 
 .search-form__input {

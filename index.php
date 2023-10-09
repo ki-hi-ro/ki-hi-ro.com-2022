@@ -10,6 +10,9 @@ if(is_tag()) {
 
 <main class="front-container">
   <div class="pc-left-container">
+    <div class="search-form-wrap --sp">
+      <?php get_search_form() ; ?>
+    </div>
     <section class="front-sec">
       <?php
     if(is_front_page() || is_home()) {
@@ -35,9 +38,10 @@ if(is_tag()) {
       <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">これまでに書いた記事の一覧はこちら</a>
     </section>
   </div>
-  <div class="pc-right-container">
-    <?php get_search_form() ; ?>
-    
+  <div class="pc-right-container">    
+    <div class="search-form-wrap --pc">
+      <?php get_search_form() ; ?>
+    </div>
     <section class="front-sec">
       <h2 class="front-sec__ttl">年月アーカイブ</h2>
       <?php echo get_template_part("template-parts/date-article-list"); ?>
