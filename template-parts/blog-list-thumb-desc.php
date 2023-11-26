@@ -28,7 +28,7 @@ if ( $my_query->have_posts() ) :
   <?php echo get_template_part("template-parts/blog-list"); ?>
 </div>
 <?php
-      endwhile;
-      endif;
-      wp_reset_postdata();
-      ?>
+    endwhile;
+  endif;
+wp_reset_postdata();
+?>
