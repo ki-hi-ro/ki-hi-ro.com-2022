@@ -23,16 +23,16 @@ if(is_tag()) {
           <div class="all-article__link front-sec__flex-item">
             <?php echo get_template_part("template-parts/blog-list"); ?>
           </div>
+          <?php
+          endwhile;
+        else:
+          ?>
+          <p>該当する記事はありませんでした。</p>
+          <?php endif ; ?>
           <h2 class="front-sec__ttl">ランダムに表示される記事</h2>
           <div class="front-sec__text front-sec__flex">
             <?php echo get_template_part("template-parts/blog-list-thumb-desc_rand"); ?>
           </div>
-        <?php
-          endwhile;
-        else:
-        ?>
-          <p>該当する記事はありませんでした。</p>
-        <?php endif ; ?>
       </div>
       <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>
     </section>
