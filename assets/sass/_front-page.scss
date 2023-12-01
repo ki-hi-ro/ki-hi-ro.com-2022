@@ -64,6 +64,12 @@
     margin-top: 5px;
     .front-sec__item {
       width: 100%;
+      &.--second {
+        margin-left: 10px;
+      }
+      &.--third {
+        margin-left: 20px;
+      }
     }
   }
   &__item {

@@ -42,7 +42,7 @@ if(is_tag()) {
       <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>
     </section>
   </div>
-  <div class="pc-right-container">    
+  <div class="pc-right-container">
     <div class="search-form-wrap --pc">
       <?php get_search_form() ; ?>
     </div>
@@ -61,21 +61,23 @@ if(is_tag()) {
             'exclude' => 116
         );
         $posttags = get_tags( $args );
-
         if ( $posttags ){
           echo ' <ul class="front-sec__tag-list"> ';
-          $tag_count = count($posttags);
-          $i = 1;
           foreach( $posttags as $tag ) {
-            if($i != $tag_count) {
-              echo '<li class="front-sec__item"><a class="front-sec__link" href="'. get_tag_link( $tag->term_id ) . '">' . $tag->name .  '</a></li>';
-            } else {
-              echo '<li class="front-sec__item"><a class="front-sec__link" href="'. get_tag_link( $tag->term_id ) . '">' . $tag->name . '</a></li>';
+              $term_id = $tag->term_id;
+              // echo $term_id;
+              if($term_id == 88) {
+                echo '<li class="front-sec__item"><a class="front-sec__link" href="'. get_tag_link( $term_id ) . '">' . $tag->name . '</a></li>';
+              } elseif ($term_id == 188) {
+                echo '<li class="front-sec__item --second"><a class="front-sec__link" href="'. get_tag_link( $term_id ) . '">' . $tag->name . '</a></li>';
+              } elseif ($term_id == 233 || $term_id == 234) {
+                echo '<li class="front-sec__item --third"><a class="front-sec__link" href="'. get_tag_link( $term_id ) . '">' . $tag->name . '</a></li>';
+              } else {
+                echo '<li class="front-sec__item"><a class="front-sec__link" href="'. get_tag_link( $term_id ) . '">' . $tag->name . '</a></li>';
+              }
             }
-            $i++;
           }
           echo ' </ul> ';
-        }
         ?>
       </div>
     </section>

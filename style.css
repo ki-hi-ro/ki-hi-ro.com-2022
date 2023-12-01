@@ -3976,6 +3976,14 @@ footer nav {
   width: 100%;
 }
 
+.front-sec__tag-list .front-sec__item.--second {
+  margin-left: 10px;
+}
+
+.front-sec__tag-list .front-sec__item.--third {
+  margin-left: 20px;
+}
+
 .front-sec__item {
   list-style: none;
   font-size: 14px;
