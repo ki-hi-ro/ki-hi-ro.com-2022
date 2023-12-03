@@ -25,6 +25,14 @@ if(is_tag()) {
       $article_list_ttl = get_query_var('year').'年'.get_query_var('monthnum').'月の';
     }
     ?>
+
+      <?php if ( is_home() || is_front_page() ) : ?>
+        <h2 class="front-sec__ttl">新着記事</h2>
+        <div class="front-sec__text front-sec__flex">
+          <?php echo get_template_part("template-parts/blog-list-thumb-desc-new"); ?>
+        </div>
+      <?php endif; ?>
+
       <h2 class="front-sec__ttl"><?php echo $article_list_ttl; ?>記事</h2>
       <div class="front-sec__text front-sec__flex">
         <?php
@@ -35,11 +43,14 @@ if(is_tag()) {
         }
         ?>
       </div>
-      <h2 class="front-sec__ttl">ランダムに表示される記事</h2>
-      <div class="front-sec__text front-sec__flex">
-        <?php echo get_template_part("template-parts/blog-list-thumb-desc_rand"); ?>
-      </div>
-      <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>
+
+      <?php if(!is_page("all-article")) : ?>
+        <h2 class="front-sec__ttl">ランダムに表示される記事</h2>
+        <div class="front-sec__text front-sec__flex">
+          <?php echo get_template_part("template-parts/blog-list-thumb-desc_rand"); ?>
+        </div>
+        <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>
+      <?php endif; ?>
     </section>
   </div>
   <div class="pc-right-container">

@@ -9,7 +9,7 @@ $per_num = -1;
 $order_pram = 'date';
 if ( is_home() || is_front_page() ) :
   $per_num = 1;
-  $order_pram = 'modified';
+  $order_pram = 'date';
 endif;
   $my_query = new WP_Query(
     array(
