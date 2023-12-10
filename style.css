@@ -4731,6 +4731,7 @@ footer nav {
   width: 60%;
   padding-right: 18px;
   min-height: 135px;
+  overflow-wrap: anywhere;
 }
 
 @media (min-width: 768px) {

@@ -119,7 +119,7 @@ add_action('wp_head','my_meta_ogp');
         $content =  $post->post_content;
         $content =  strip_shortcodes($content);
         $content =  strip_tags($content);
-        $content =  str_replace(' ', '', $content);
+        // $content =  str_replace(' ', '', $content);
         $content =  html_entity_decode($content, ENT_QUOTES, 'UTF-8');
 
         if (mb_strlen($content, 'UTF-8') > $length) {
@@ -142,7 +142,7 @@ add_action('wp_head','my_meta_ogp');
         $content =  $post->post_content;
         $content =  strip_shortcodes($content);
         $content =  strip_tags($content);
-        $content =  str_replace(' ', '', $content);
+        // $content =  str_replace(' ', '', $content);
         $content =  html_entity_decode($content, ENT_QUOTES, 'UTF-8');
 
         if (mb_strlen($content, 'UTF-8') > $length) {

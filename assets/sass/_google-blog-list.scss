@@ -19,6 +19,7 @@
       width: 60%;
       padding-right: 18px;
       min-height: 135px;
+      overflow-wrap: anywhere;
       @include mq(md) {
         width: auto;
       }
