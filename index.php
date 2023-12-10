@@ -58,39 +58,14 @@ if(is_tag()) {
       <?php get_search_form() ; ?>
     </div>
     <section class="front-sec">
-      <h2 class="front-sec__ttl">年月アーカイブ</h2>
-      <?php echo get_template_part("template-parts/date-article-list"); ?>
-    </section>
-
-    <section class="front-sec">
       <h2 class="front-sec__ttl">タグ</h2>
       <div class="front-sec__text">
-        <?php
-        $args = array(
-            'orderby' => 'name',
-            'order' => 'ASC',
-            'exclude' => 116
-        );
-        $posttags = get_tags( $args );
-        if ( $posttags ){
-          echo ' <ul class="front-sec__tag-list"> ';
-          foreach( $posttags as $tag ) {
-              $term_id = $tag->term_id;
-              // echo $term_id;
-              if($term_id == 88) {
-                echo '<li class="front-sec__item"><a class="front-sec__link" href="'. get_tag_link( $term_id ) . '">' . $tag->name . '</a></li>';
-              } elseif ($term_id == 188) {
-                echo '<li class="front-sec__item --second"><a class="front-sec__link" href="'. get_tag_link( $term_id ) . '">' . $tag->name . '</a></li>';
-              } elseif ($term_id == 233 || $term_id == 234) {
-                echo '<li class="front-sec__item --third"><a class="front-sec__link" href="'. get_tag_link( $term_id ) . '">' . $tag->name . '</a></li>';
-              } else {
-                echo '<li class="front-sec__item"><a class="front-sec__link" href="'. get_tag_link( $term_id ) . '">' . $tag->name . '</a></li>';
-              }
-            }
-          }
-          echo ' </ul> ';
-        ?>
+      <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=100&exclude=116'); ?>
       </div>
+    </section>
+    <section class="front-sec">
+      <h2 class="front-sec__ttl">年月アーカイブ</h2>
+      <?php echo get_template_part("template-parts/date-article-list"); ?>
     </section>
   </div>
 </main>
