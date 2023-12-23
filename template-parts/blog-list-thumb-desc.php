@@ -4,7 +4,7 @@ if(is_tag()) {
   $term = get_queried_object();
   $term_slug = $term->slug;
 }
-
+$post_id = get_the_ID();
 $per_num = -1;
 $order_pram = 'date';
 if ( is_home() || is_front_page() ) :
@@ -17,8 +17,7 @@ endif;
       'posts_per_page' => $per_num,
       'tag' => $term_slug,
       'orderby' => $order_pram,
-      'post__not_in' => array(3874),
-      'offset' => 1
+      'post__not_in' => array(3874,$post_id),
     )
   );
 if ( $my_query->have_posts() ) :
