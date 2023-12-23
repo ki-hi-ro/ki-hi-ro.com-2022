@@ -49,6 +49,11 @@ if(is_tag()) {
         <div class="front-sec__text front-sec__flex">
           <?php echo get_template_part("template-parts/blog-list-thumb-desc_rand"); ?>
         </div>
+
+        <h2 class="front-sec__ttl">今の自分にとって重要な記事</h2>
+        <div class="front-sec__text front-sec__flex">
+          <?php echo get_template_part("template-parts/blog-list-thumb-desc_important"); ?>
+        </div>
         <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>
       <?php endif; ?>
     </section>
