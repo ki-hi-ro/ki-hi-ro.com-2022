@@ -49,13 +49,26 @@ if(is_tag()) {
         <div class="front-sec__text front-sec__flex">
           <?php echo get_template_part("template-parts/blog-list-thumb-desc_rand"); ?>
         </div>
-
+      <?php endif; ?>
+      <?php if ( is_home() || is_front_page() ) : ?>
         <h2 class="front-sec__ttl">今の自分にとって重要な記事</h2>
         <div class="front-sec__text front-sec__flex">
           <?php echo get_template_part("template-parts/blog-list-thumb-desc_important"); ?>
         </div>
-        <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>
+        <h2 class="front-sec__ttl">モバイルSuicaにエポスカードで上手くチャージが出来ない方に向けた記事</h2>
+        <div class="front-sec__text front-sec__flex">
+          <?php echo get_template_part("template-parts/blog-list-thumb-desc_query-top"); ?>
+        </div>
+        <h2 class="front-sec__ttl">2023年秋の京都の紅葉についての記事</h2>
+        <div class="front-sec__text front-sec__flex">
+          <?php echo get_template_part("template-parts/blog-list-thumb-desc_kyoto-koyo"); ?>
+        </div>
+        <h2 class="front-sec__ttl">鬱々としている方向けの記事</h2>
+        <div class="front-sec__text front-sec__flex">
+          <?php echo get_template_part("template-parts/blog-list-thumb-desc_utu"); ?>
+        </div>
       <?php endif; ?>
+      <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>
     </section>
   </div>
   <div class="pc-right-container">
