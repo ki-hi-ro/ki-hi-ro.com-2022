@@ -79,9 +79,21 @@
   line-height: 1;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   z-index: 100;
+  flex-direction: column;
+  @include mq(md) {
+    flex-direction: row;
+  }
+  img {
+    padding-bottom: 13px;
+    height: 35px;
+    @include mq(md) {
+      padding-right: 15px;
+      padding-bottom: 0;
+      height: 24px;
+    }
+  }
 }
 
 .header__sitename-text {

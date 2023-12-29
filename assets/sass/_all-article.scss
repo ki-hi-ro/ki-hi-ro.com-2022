@@ -13,7 +13,7 @@
       width: 40%;
       height: 120px;
       @include mq(md) {
-        height: 230px;
+        height: 130px;
         width: auto;
         object-fit: contain;
         padding-top: 5px;
@@ -39,7 +39,7 @@
     margin-bottom: 0;
   }
   &__ttl {
-    font-size: 20px;
+    font-size: 21px;
     line-height: 1.5;
     margin-bottom: 10px;
     @include mq(md) {
@@ -49,9 +49,9 @@
 }
 
 .all-article__link {
-  margin-bottom: 13px;
+  margin-bottom: 15px;
   border-bottom: 1px solid #c5c5c5;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 @media (max-width: 767px) {
   .all-article__link {
