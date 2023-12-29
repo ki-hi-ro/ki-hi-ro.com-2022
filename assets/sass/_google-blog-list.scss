@@ -20,6 +20,7 @@
       padding-right: 18px;
       min-height: 135px;
       overflow-wrap: anywhere;
+      font-family: Helvetica Neue;
       @include mq(md) {
         width: auto;
       }
