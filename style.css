@@ -4302,11 +4302,6 @@ footer nav {
   }
 }
 
-.header__sitename-link:hover {
-  opacity: 0.5;
-  transition: all 0.3;
-}
-
 .header__twitter {
   width: 30px;
   display: block;
