@@ -53,9 +53,9 @@
         <div class="header__container">
             <div class="header__contents">
                 <div class="header__logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-name-logo-3.svg" alt="ロゴ">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-name-logo-4.svg" alt="ロゴ">
                     <a class="header__sitename-link" href="<?php echo home_url(); ?>">
-                        <span class="header__sitename-text">ソフトウェア評価エンジニア<br>柴田浩貴のブログ</span>
+                        <span class="header__sitename-text">ki-hi-ro.com</span>
                     </a>
                 </div>
             </div>
