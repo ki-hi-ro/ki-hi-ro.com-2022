@@ -78,7 +78,7 @@ if(is_tag()) {
     <section class="front-sec">
       <h2 class="front-sec__ttl">タグ</h2>
       <div class="front-sec__text">
-      <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=100&exclude=116'); ?>
+        <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=100&exclude=116'); ?>
       </div>
     </section>
     <section class="front-sec">
