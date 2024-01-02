@@ -8,7 +8,7 @@ $per_num = -1;
 $order_pram = 'date';
 $post_id = "";
 if ( is_home() || is_front_page() ) :
-  $per_num = 1;
+  $per_num = 3;
   $order_pram = 'modified';
   $post_id = get_the_ID();
 endif;
