@@ -15,9 +15,7 @@ if(is_tag()) {
     </div>
     <section class="front-sec">
       <?php
-    if(is_front_page() || is_home()) {
-      $article_list_ttl = "最近更新した";
-    } else if(is_page("all-article")) {
+      if(is_page("all-article")) {
       $article_list_ttl = "すべての";
     } else if(is_tag()) {
       $article_list_ttl = $term_name."についての";
@@ -33,16 +31,18 @@ if(is_tag()) {
         </div>
       <?php endif; ?>
 
-      <!-- <h2 class="front-sec__ttl"><?php echo $article_list_ttl; ?>記事</h2>
-      <div class="front-sec__text front-sec__flex">
-        <?php
-        if(is_date()) {
-          echo get_template_part("template-parts/blog-list-thumb-desc-date");
-        } else {
-          echo get_template_part("template-parts/blog-list-thumb-desc");
-        }
-        ?>
-      </div> -->
+      <?php if ( !(is_home() || is_front_page()) ) : ?>
+        <h2 class="front-sec__ttl"><?php echo $article_list_ttl; ?>記事</h2>
+        <div class="front-sec__text front-sec__flex">
+          <?php
+          if(is_date()) {
+            echo get_template_part("template-parts/blog-list-thumb-desc-date");
+          } else {
+            echo get_template_part("template-parts/blog-list-thumb-desc");
+          }
+          ?>
+        </div>
+      <?php endif; ?>
 
       <!-- <?php if ( is_home() || is_front_page() ) : ?>
         <h2 class="front-sec__ttl">今の自分にとって重要な記事</h2>
