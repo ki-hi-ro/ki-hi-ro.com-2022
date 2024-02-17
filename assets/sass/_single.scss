@@ -65,9 +65,31 @@
 #comment {
   padding: 10px;
   font-size: 16px;
+  border-radius: 11px;
+  border: 1px solid #d2d2d2;
+}
+.ez-toc-widget-container ul.ez-toc-list li.active {
+  background-color: none;
+}
+.blog-article__aside-table-of-contents div.ez-toc-widget-container ul.ez-toc-list li {
+  padding: 5px 10px;
+}
+input#submit {
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  border: none;
 }
 #author,
 #email,
 #url {
   font-size: 16px;
+}
+
+article.post {
+  background-color: aliceblue;
+  padding: 21px;
+  border: 1px solid #d2d2d2;
+  border-radius: 11px;
 }

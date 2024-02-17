@@ -25,7 +25,7 @@ if(is_tag()) {
     ?>
 
       <?php if ( is_home() || is_front_page() ) : ?>
-        <h2 class="front-sec__ttl">記事一覧（最新10件）</h2>
+        <h2 class="front-sec__ttl">記事一覧（最新15件）</h2>
         <div class="front-sec__text front-sec__flex">
           <?php echo get_template_part("template-parts/blog-list-thumb-desc-new"); ?>
         </div>
@@ -50,7 +50,7 @@ if(is_tag()) {
           <?php echo get_template_part("template-parts/blog-list-thumb-desc_important"); ?>
         </div>
       <?php endif; ?>
-      
+
       <?php if ( is_home() || is_front_page() ) : ?>
         <?php if(!is_page("all-article")) : ?>
           <h2 class="front-sec__ttl">ランダムに表示される記事</h2>

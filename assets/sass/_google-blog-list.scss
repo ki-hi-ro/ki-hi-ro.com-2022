@@ -14,15 +14,23 @@
   }
   &__desc {
     display: flex;
+    flex-direction: column-reverse;
+    @include mq(md) {
+      flex-direction: row;
+    }
     p {
-      margin-top: 0;
-      width: 60%;
-      padding-right: 18px;
-      min-height: 135px;
+      width: 100%;
+      padding-right: 0;
+      min-height: initial;
+      margin: 0;
       overflow-wrap: anywhere;
       font-family: Helvetica Neue;
+      line-height: 1.8;
       @include mq(md) {
         width: auto;
+        min-height: 135px;
+        padding-right: 18px;
+        line-height: 28.8px;
       }
     }
   }
@@ -42,5 +50,6 @@
   }
   &__tag-icon {
     height: 35px;
+    display: none;
   }
 }
