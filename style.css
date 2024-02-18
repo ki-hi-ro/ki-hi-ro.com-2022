@@ -176,11 +176,13 @@ h3 {
 }
 
 input#submit {
+  color: black;
   background: none;
   font-size: 16px;
   cursor: pointer;
   padding: 0;
   border: none;
+  font-weight: normal;
 }
 
 #author,
