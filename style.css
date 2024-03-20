@@ -163,8 +163,7 @@ h3 {
 #comment {
   padding: 10px;
   font-size: 16px;
-  border-radius: 11px;
-  border: 1px solid #d2d2d2;
+  margin-top: 4px;
 }
 
 .ez-toc-widget-container ul.ez-toc-list li.active {
