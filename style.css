@@ -4045,6 +4045,12 @@ footer nav {
   }
 }
 
+.front-sec__more {
+  font-size: 15px;
+  margin-top: 19px;
+  display: inline-table;
+}
+
 .header {
   z-index: 1;
   top: 0;
