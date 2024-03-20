@@ -3,7 +3,6 @@
 .all-article {
   &__post-wrap {
     height: 100%;
-    margin-top: -18px;
     padding: 21px 0;
     &.--mb20 {
       margin-bottom: 20px;
@@ -52,7 +51,6 @@
 }
 
 .all-article__link {
-  margin-bottom: 15px;
   padding-bottom: 10px;
 }
 @media (max-width: 767px) {
