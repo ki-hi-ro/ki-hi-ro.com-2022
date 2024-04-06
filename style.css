@@ -99,6 +99,7 @@ h3 {
 .single ul li,
 .single ol li {
   margin-bottom: 7px;
+  font-family: Helvetica Neue;
 }
 
 .single ul li.header__child-li {
