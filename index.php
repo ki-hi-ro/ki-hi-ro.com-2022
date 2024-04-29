@@ -14,7 +14,7 @@ if(is_tag()) {
       <?php get_search_form() ; ?>
     </div>
     <section class="front-sec">
-      <?php
+    <?php
       if(is_page("all-article")) {
       $article_list_ttl = "すべての";
     } else if(is_tag()) {
@@ -59,8 +59,12 @@ if(is_tag()) {
           </div>
         <?php endif; ?>
       <?php endif; ?> -->
-
-      <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>
+      
+      <?php if ( (is_home() || is_front_page()) ) : ?>
+        <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>
+      <?php else :  ?>
+        <a class="front-sec__more" href="<?php echo home_url(); ?>">トップページはこちら</a>
+      <?php endif; ?>
     </section>
   </div>
   <div class="pc-right-container">

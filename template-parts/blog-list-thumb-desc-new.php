@@ -17,7 +17,7 @@ endif;
       'posts_per_page' => $per_num,
       'tag' => $term_slug,
       'orderby' => $order_pram,
-      'post__not_in' => array(3874)
+      'post__not_in' => array(3874),
     )
   );
 if ( $my_query->have_posts() ) :
