@@ -64,7 +64,7 @@ if(is_tag()) {
                   echo '</div>';
                 }
              }
-            tagChild(81,array(255,238,236,237,288));
+            tagChild(81,array(255,238,236,237,288,273));
             tagChild(210,array(289));
             ?>
         <?php endif; ?>
