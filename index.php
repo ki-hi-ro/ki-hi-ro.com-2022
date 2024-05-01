@@ -34,18 +34,31 @@ if(is_tag()) {
       <?php if ( !(is_home() || is_front_page()) ) : ?>
         <h2 class="front-sec__ttl"><?php echo $article_list_ttl; ?>記事</h2>
         <?php 
-        if($term_name == "音楽") {
-          $tagIds = array(255,238,236,237,288);
-          foreach ($tagIds as $tagId) {
-            $tag = get_tag( $tagId ); 
-            echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
-            echo $tag->name;
-            if($tagId != 288) {
-              echo ", ";
-            }
-            echo '</a>';
+        function tagChild($parentId, $childTags) {
+          if(is_tag()) {
+            $term = get_queried_object();
+            $termId = $term->term_id;
           }
-        }
+          if($termId == $parentId) {
+            $tagIds = $childTags;
+            foreach ($tagIds as $tagId) {
+              $tag = get_tag( $tagId ); 
+              echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
+              echo $tag->name;
+              if($tagId != end($childTags)) {
+                echo ", ";
+              }
+              echo '</a>';
+            }
+          } else if (in_array($termId, $childTags)) {
+              $tag = get_tag( $parentId ); 
+              echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
+              echo $tag->name;
+              echo '</a>';
+            }
+          }
+        tagChild(81,array(255,238,236,237,288));
+        tagChild(210,array(289));
         ?>
         <div class="front-sec__text front-sec__flex">
           <?php
