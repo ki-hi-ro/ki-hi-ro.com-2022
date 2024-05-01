@@ -44,12 +44,6 @@
   }
 }
 
-.tag {
-  .all-article__link {
-    margin-bottom: -10px;
-  }
-}
-
 .wp-tag-cloud {
   list-style: none;
   padding-left: 0;
@@ -97,5 +91,15 @@
     @include mq(sm) {
       margin: 40px 0 -10px;
     }
+  }
+}
+
+.related_tag_card {
+  margin-bottom: 43px;
+  .front-sec__ttl {
+    margin-bottom: 23px;
+  }
+  a {
+    font-size: 16px;
   }
 }

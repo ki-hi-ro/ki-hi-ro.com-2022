@@ -4639,10 +4639,6 @@ footer nav {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.tag .all-article__link {
-  margin-bottom: -10px;
-}
-
 .wp-tag-cloud {
   list-style: none;
   padding-left: 0;
@@ -4697,6 +4693,18 @@ footer nav {
   .basic-info__p {
     margin: 40px 0 -10px;
   }
+}
+
+.related_tag_card {
+  margin-bottom: 43px;
+}
+
+.related_tag_card .front-sec__ttl, .related_tag_card .front-sec__text p, .front-sec__text .related_tag_card p {
+  margin-bottom: 23px;
+}
+
+.related_tag_card a {
+  font-size: 16px;
 }
 
 .date-article-list {

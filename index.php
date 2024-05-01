@@ -32,34 +32,43 @@ if(is_tag()) {
       <?php endif; ?> -->
 
       <?php if ( !(is_home() || is_front_page()) ) : ?>
-        <h2 class="front-sec__ttl"><?php echo $article_list_ttl; ?>記事</h2>
-        <?php 
-        function tagChild($parentId, $childTags) {
-          if(is_tag()) {
-            $term = get_queried_object();
-            $termId = $term->term_id;
-          }
-          if($termId == $parentId) {
-            $tagIds = $childTags;
-            foreach ($tagIds as $tagId) {
-              $tag = get_tag( $tagId ); 
-              echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
-              echo $tag->name;
-              if($tagId != end($childTags)) {
-                echo ", ";
+        <?php if( !(is_date()) ) : ?>
+            <?php 
+            function tagChild($parentId, $childTags) {
+              if(is_tag()) {
+                $term = get_queried_object();
+                $termId = $term->term_id;
+                $termName = $term->name;
               }
-              echo '</a>';
-            }
-          } else if (in_array($termId, $childTags)) {
-              $tag = get_tag( $parentId ); 
-              echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
-              echo $tag->name;
-              echo '</a>';
-            }
-          }
-        tagChild(81,array(255,238,236,237,288));
-        tagChild(210,array(289));
-        ?>
+              if($termId == $parentId) {
+                echo '<div class="related_tag_card">';
+                echo '<h2 class="front-sec__ttl">' . $termName . 'に関連するタグ</h2>';
+                $tagIds = $childTags;
+                foreach ($tagIds as $tagId) {
+                  $tag = get_tag( $tagId ); 
+                  echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
+                  echo "- ";
+                  echo $tag->name;
+                  echo '<br>';
+                  echo '</a>';
+                }
+                echo '</div>';
+              } else if (in_array($termId, $childTags)) {
+                echo '<div class="related_tag_card">';
+                echo '<h2 class="front-sec__ttl">' . $termName . 'に関連するタグ</h2>';
+                  $tag = get_tag( $parentId ); 
+                  echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
+                  echo "- ";
+                  echo $tag->name;
+                  echo '</a>';
+                  echo '</div>';
+                }
+             }
+            tagChild(81,array(255,238,236,237,288));
+            tagChild(210,array(289));
+            ?>
+        <?php endif; ?>
+        <h2 class="front-sec__ttl <?php if(is_tag()): ?>tag_article_ttl<?php endif; ?>"><?php echo $article_list_ttl; ?>記事</h2>
         <div class="front-sec__text front-sec__flex">
           <?php
           if(is_date()) {
