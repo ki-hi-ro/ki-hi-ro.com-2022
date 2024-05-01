@@ -24,12 +24,12 @@ if(is_tag()) {
     }
     ?>
 
-      <?php if ( is_home() || is_front_page() ) : ?>
-        <h2 class="front-sec__ttl">記事一覧（最新15件）</h2>
+      <!-- <?php if ( is_home() || is_front_page() ) : ?>
+        <h2 class="front-sec__ttl">最新の記事</h2>
         <div class="front-sec__text front-sec__flex">
           <?php echo get_template_part("template-parts/blog-list-thumb-desc-new"); ?>
         </div>
-      <?php endif; ?>
+      <?php endif; ?> -->
 
       <?php if ( !(is_home() || is_front_page()) ) : ?>
         <h2 class="front-sec__ttl"><?php echo $article_list_ttl; ?>記事</h2>
@@ -49,7 +49,7 @@ if(is_tag()) {
         <div class="front-sec__text front-sec__flex">
           <?php echo get_template_part("template-parts/blog-list-thumb-desc_important"); ?>
         </div>
-      <?php endif; ?>
+      <?php endif; ?> -->
 
       <?php if ( is_home() || is_front_page() ) : ?>
         <?php if(!is_page("all-article")) : ?>
@@ -58,7 +58,7 @@ if(is_tag()) {
             <?php echo get_template_part("template-parts/blog-list-thumb-desc_rand"); ?>
           </div>
         <?php endif; ?>
-      <?php endif; ?> -->
+      <?php endif; ?> 
       
       <?php if ( (is_home() || is_front_page()) ) : ?>
         <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>

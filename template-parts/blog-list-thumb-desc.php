@@ -5,9 +5,9 @@ if(is_tag()) {
   $term_slug = $term->slug;
 }
 $offset = 0;
-if(is_page("all-article")) {
-  $offset = 15;
-}
+// if(is_page("all-article")) {
+//   $offset = 15;
+// }
 // $per_num = -1;
 $order_pram = 'date';
 $post_id = "";

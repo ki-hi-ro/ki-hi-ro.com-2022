@@ -30,7 +30,7 @@ if(is_tag()) {
           <p>該当する記事はありませんでした。</p>
           <?php endif ; ?>
       </div>
-      <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>
+      <a class="front-sec__more" href="<?php echo home_url(); ?>">トップページはこちら</a>
     </section>
   </div>
   <div class="pc-right-container">
