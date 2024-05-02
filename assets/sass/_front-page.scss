@@ -43,6 +43,9 @@
     font-size: 20px;
     color: $text;
     font-weight: normal;
+    &.rand {
+      margin-top: 45px;
+    }
   }
   &__text {
     p {

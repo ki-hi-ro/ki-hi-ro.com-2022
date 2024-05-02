@@ -3982,6 +3982,10 @@ footer nav {
   font-weight: normal;
 }
 
+.front-sec__ttl.rand, .front-sec__text p.rand {
+  margin-top: 45px;
+}
+
 .front-sec__text p {
   font-size: 15px;
 }

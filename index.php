@@ -24,12 +24,12 @@ if(is_tag()) {
     }
     ?>
 
-      <!-- <?php if ( is_home() || is_front_page() ) : ?>
-        <h2 class="front-sec__ttl">最新の記事</h2>
+      <?php if ( is_home() || is_front_page() ) : ?>
+        <h2 class="front-sec__ttl">最近書いた記事</h2>
         <div class="front-sec__text front-sec__flex">
           <?php echo get_template_part("template-parts/blog-list-thumb-desc-new"); ?>
         </div>
-      <?php endif; ?> -->
+      <?php endif; ?>
 
       <?php if ( !(is_home() || is_front_page()) ) : ?>
         <?php if( !(is_date() || is_page("all-article")) ) : ?>
@@ -89,7 +89,7 @@ if(is_tag()) {
 
       <?php if ( is_home() || is_front_page() ) : ?>
         <?php if(!is_page("all-article")) : ?>
-          <h2 class="front-sec__ttl">ランダムに表示される記事</h2>
+          <h2 class="front-sec__ttl rand">ランダムに表示される記事</h2>
           <div class="front-sec__text front-sec__flex">
             <?php echo get_template_part("template-parts/blog-list-thumb-desc_rand"); ?>
           </div>
