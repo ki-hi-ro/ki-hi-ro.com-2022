@@ -32,7 +32,7 @@ if(is_tag()) {
       <?php endif; ?> -->
 
       <?php if ( !(is_home() || is_front_page()) ) : ?>
-        <?php if( !(is_date()) ) : ?>
+        <?php if( !(is_date() || is_page("all-article")) ) : ?>
             <?php 
             function tagChild($parentId, $childTags) {
               if(is_tag()) {
