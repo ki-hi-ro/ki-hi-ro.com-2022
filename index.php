@@ -106,6 +106,8 @@ if(is_tag()) {
              }
             tagChild(81,array(255,238,236,237,288,273));
             tagChild(210,array(289));
+            tagChild(188,array(233,234,286));
+            tagChild(88,array(169,251,257,258));
             ?>
             <?php endif; ?>
             <section class="front-sec">
