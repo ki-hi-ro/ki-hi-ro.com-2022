@@ -2,7 +2,7 @@
   $my_query_rand = new WP_Query(
     array(
       'post_type'      => 'post',
-      'posts_per_page' => 11,
+      'posts_per_page' => 1,
       'orderby' => 'rand',
       'post__not_in' => array(3874)
     )

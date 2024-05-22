@@ -4054,6 +4054,10 @@ footer nav {
   display: inline-table;
 }
 
+.pc-left-container h2.front-sec__ttl, .pc-left-container .single h3.front-sec__ttl, .single .pc-left-container h3.front-sec__ttl {
+  margin-bottom: 0;
+}
+
 .header {
   z-index: 1;
   top: 0;

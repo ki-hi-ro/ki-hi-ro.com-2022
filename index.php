@@ -44,12 +44,12 @@ if(is_tag()) {
             </div>
             <?php endif; ?>
 
-            <!-- <?php if ( is_home() || is_front_page() ) : ?>
-        <h2 class="front-sec__ttl">今の自分にとって重要な記事</h2>
+      <?php if ( is_home() || is_front_page() ) : ?>
+        <h2 class="front-sec__ttl">最近更新した記事</h2>
         <div class="front-sec__text front-sec__flex">
           <?php echo get_template_part("template-parts/blog-list-thumb-desc_important"); ?>
         </div>
-      <?php endif; ?> -->
+      <?php endif; ?> 
 
             <?php if ( is_home() || is_front_page() ) : ?>
             <?php if(!is_page("all-article")) : ?>
@@ -114,10 +114,10 @@ if(is_tag()) {
                 <h2 class="front-sec__ttl">年月アーカイブ</h2>
                 <?php echo get_template_part("template-parts/date-article-list"); ?>
             </section>
-            <h2 class="front-sec__ttl">タグ</h2>
+            <!-- <h2 class="front-sec__ttl">タグ</h2>
             <div class="front-sec__text">
                 <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=200&exclude=116'); ?>
-            </div>
+            </div> -->
         </section>
     </div>
 </main>
