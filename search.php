@@ -39,14 +39,14 @@ if(is_tag()) {
   </div>
   
   <section class="front-sec">
-    <h2 class="front-sec__ttl">年月アーカイブ</h2>
-    <?php echo get_template_part("template-parts/date-article-list"); ?>
-  </section>
-  <section class="front-sec">
     <h2 class="front-sec__ttl">タグ</h2>
     <div class="front-sec__text">
       <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=100&exclude=116'); ?>
     </div>
+  </section>
+  <section class="front-sec">
+    <h2 class="front-sec__ttl">年月アーカイブ</h2>
+    <?php echo get_template_part("template-parts/date-article-list"); ?>
   </section>
 
   </div>

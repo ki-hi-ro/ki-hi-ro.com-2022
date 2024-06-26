@@ -171,6 +171,11 @@ h3 {
   background-color: none;
 }
 
+.blog-article__aside-table-of-contents {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
 .blog-article__aside-table-of-contents div.ez-toc-widget-container ul.ez-toc-list li {
   padding: 5px 10px;
 }
