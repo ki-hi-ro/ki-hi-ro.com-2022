@@ -1,4 +1,4 @@
-<?php get_header();?>
+<?php get_header(); ?>
 <?php
 if(is_tag()) {
   $term = get_queried_object();
@@ -14,57 +14,57 @@ if(is_tag()) {
             <?php get_search_form() ; ?>
         </div>
         <section class="front-sec">
-            <?php
-      if(is_page("all-article")) {
-      $article_list_ttl = "すべての";
-    } else if(is_tag()) {
-      $article_list_ttl = $term_name."についての";
-    } else if(is_date()) {
-      $article_list_ttl = get_query_var('year').'年'.get_query_var('monthnum').'月の';
-    }
-    ?>
+          <?php
+          if(is_page("all-article")) {
+            $article_list_ttl = "すべての";
+          } else if(is_tag()) {
+            $article_list_ttl = $term_name."についての";
+          } else if(is_date()) {
+            $article_list_ttl = get_query_var('year').'年'.get_query_var('monthnum').'月の';
+          }
+          ?>
 
-<?php if ( is_home() || is_front_page() ) : ?>
+          <?php if ( is_home() || is_front_page() ) : ?>
             <?php if(!is_page("all-article")) : ?>
-            <h2 class="front-sec__ttl rand">ランダムに表示される記事</h2>
-            <div class="front-sec__text front-sec__flex">
-                <?php echo get_template_part("template-parts/blog-list-thumb-desc_rand"); ?>
-            </div>
+              <h2 class="front-sec__ttl rand">ランダムに表示される記事</h2>
+              <div class="front-sec__text front-sec__flex">
+                  <?php echo get_template_part("template-parts/blog-list-thumb-desc_rand"); ?>
+              </div>
             <?php endif; ?>
-            <?php endif; ?>
+          <?php endif; ?>
 
-            <?php if ( is_home() || is_front_page() ) : ?>
+          <?php if ( is_home() || is_front_page() ) : ?>
             <h2 class="front-sec__ttl">最近書いた記事</h2>
             <div class="front-sec__text front-sec__flex">
                 <?php echo get_template_part("template-parts/blog-list-thumb-desc-new"); ?>
             </div>
-            <?php endif; ?>
+          <?php endif; ?>
 
-            <?php if ( !(is_home() || is_front_page()) ) : ?>
+          <?php if ( !(is_home() || is_front_page()) ) : ?>
             <h2 class="front-sec__ttl <?php if(is_tag()): ?>tag_article_ttl<?php endif; ?>"><?php echo $article_list_ttl; ?>記事</h2>
             <div class="front-sec__text front-sec__flex">
-                <?php
-          if(is_date()) {
-            echo get_template_part("template-parts/blog-list-thumb-desc-date");
-          } else {
-            echo get_template_part("template-parts/blog-list-thumb-desc");
-          }
-          ?>
+              <?php
+              if(is_date()) {
+                echo get_template_part("template-parts/blog-list-thumb-desc-date");
+              } else {
+                echo get_template_part("template-parts/blog-list-thumb-desc");
+              }
+              ?>
             </div>
-            <?php endif; ?>
+          <?php endif; ?>
 
-      <?php if ( is_home() || is_front_page() ) : ?>
-        <h2 class="front-sec__ttl">最近更新した記事</h2>
-        <div class="front-sec__text front-sec__flex">
-          <?php echo get_template_part("template-parts/blog-list-thumb-desc_important"); ?>
-        </div>
-      <?php endif; ?> 
+          <?php if ( is_home() || is_front_page() ) : ?>
+            <h2 class="front-sec__ttl">最近更新した記事</h2>
+            <div class="front-sec__text front-sec__flex">
+              <?php echo get_template_part("template-parts/blog-list-thumb-desc_important"); ?>
+            </div>
+          <?php endif; ?> 
 
-            <?php if ( (is_home() || is_front_page()) ) : ?>
+          <?php if ( (is_home() || is_front_page()) ) : ?>
             <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>
-            <?php else :  ?>
+          <?php else : ?>
             <a class="front-sec__more" href="<?php echo home_url(); ?>">トップページはこちら</a>
-            <?php endif; ?>
+          <?php endif; ?>
         </section>
     </div>
     <div class="pc-right-container">
@@ -117,14 +117,13 @@ if(is_tag()) {
             </section>
         </section>
     </div>
-  
 </main>
 
-<!-- <section class="tag-wrap">
-      <h2 class="front-sec__ttl">タグ</h2>
-      <div class="front-sec__text">
-        <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=200&exclude=116'); ?>
-      </div>
-    </section> -->
+<h2 class="front-sec__ttl front-container tag-wrap-ttl">タグ</h2>
+<section class="tag-wrap front-container">
+    <div class="front-sec__text">
+      <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=200&exclude=116'); ?>
+    </div>
+</section>
 
 <?php get_footer();?>

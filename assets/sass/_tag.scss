@@ -48,9 +48,9 @@
   list-style: none;
   padding-left: 0;
   margin-top: 0;
-  .tag-cloud-link::before {
-    content: "- ";
-  }
+  // .tag-cloud-link::before {
+  //   content: "- ";
+  // }
   // .tag-link- {
   //   &236,&238,&80,&251,&169,&188,&237,&173,&119,&84,&87,&52,&165,&240,&214,&197,&122,&220,&247,&104,&138,&231,&246,&243,&235,&75,&82,&215,&219,&254,&253,&255,&256,&257,&258,&259,&260,&263,&285,&283,&284,&289 {
   //     padding-left: 17px;
@@ -100,5 +100,20 @@
     font-size: 16px;
     margin-bottom: 5px;
     display: block;
+  }
+}
+
+.tag-wrap-ttl {
+  margin: 10px auto;
+}
+.tag-wrap {
+  padding-bottom: 31px;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li {
+    padding-right: 19px;
+    padding-bottom: 4px;
   }
 }

@@ -4,15 +4,15 @@
   max-width: 1140px;
   padding: 0 20px;
   @include mq(xl) {
-      padding: 0;
-      display: flex;
-      .pc-left-container {
-        width: 70%;
-        padding-right: 66px;
-      }
-      .pc-right-container {
-        width: 30%;
-      }
+    padding: 0;
+    display: flex;
+    .pc-left-container {
+      width: 70%;
+      padding-right: 66px;
+    }
+    .pc-right-container {
+      width: 30%;
+    }
   }
 }
 
@@ -52,7 +52,7 @@
       @extend .front-sec__ttl;
       font-size: 15px;
       @include mq(lg) {
-          font-size: 16px;
+        font-size: 16px;
       }
     }
   }
@@ -91,7 +91,7 @@
 }
 
 .all-article .front-sec {
-    margin-bottom: 28px;
+  margin-bottom: 28px;
 }
 
 .sns-wrap {
