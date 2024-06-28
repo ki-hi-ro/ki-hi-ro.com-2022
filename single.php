@@ -55,6 +55,9 @@ if($posttags) {
                 </li>
                 <?php endif; ?>
             </ul>
+            <div class="post-id">
+                投稿ID : <?php the_ID(); ?>
+            </div>
             <?php echo get_template_part('template-parts/single-bread'); ?>
             <?php endif; ?>
             <?php endwhile; endif; ?>
