@@ -39,9 +39,8 @@ if(is_tag()) {
                 <?php echo get_template_part("template-parts/blog-list-thumb-desc-new"); ?>
             </div>
           <?php endif; ?>
-
           <?php if ( !(is_home() || is_front_page()) ) : ?>
-            <h2 class="front-sec__ttl <?php if(is_tag()): ?>tag_article_ttl<?php endif; ?>"><?php echo $article_list_ttl; ?>記事</h2>
+            <h2 class="front-sec__ttl <?php if(is_tag()): ?>tag_article_ttl<?php endif; ?>"><?php echo $article_list_ttl; ?>記事<?php if(is_tag()): ?>（<?php echo $wp_query->post_count; ?>）<?php endif; ?></h2>
             <div class="front-sec__text front-sec__flex">
               <?php
               if(is_date()) {
