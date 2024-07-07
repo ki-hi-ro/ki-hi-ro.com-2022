@@ -81,7 +81,7 @@ if(is_tag()) {
               }
               if($termId == $parentId) {
                 echo '<div class="related_tag_card">';
-                echo '<h2 class="front-sec__ttl">' . $termName . 'に関連するタグ</h2>';
+                echo '<h2 class="front-sec__ttl">' . $termName . 'の子タグ</h2>';
                 $tagIds = $childTags;
                 foreach ($tagIds as $tagId) {
                   $tag = get_tag( $tagId ); 
@@ -94,7 +94,7 @@ if(is_tag()) {
                 echo '</div>';
               } else if (in_array($termId, $childTags)) {
                 echo '<div class="related_tag_card">';
-                echo '<h2 class="front-sec__ttl">' . $termName . 'に関連するタグ</h2>';
+                echo '<h2 class="front-sec__ttl">' . $termName . 'の親タグ</h2>';
                   $tag = get_tag( $parentId ); 
                   echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
                   echo "- ";
@@ -107,6 +107,8 @@ if(is_tag()) {
             tagChild(210,array(289));
             tagChild(188,array(233,234,286));
             tagChild(88,array(169,251,257,258));
+            tagChild(148,array(298,290,292,289,287,173,119,140,117,74,));
+            tagChild(292,array(322));
             ?>
             <?php endif; ?>
 
