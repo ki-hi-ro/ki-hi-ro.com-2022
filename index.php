@@ -65,46 +65,46 @@ if(is_tag()) {
             <?php get_search_form() ; ?>
         </div>
         <section class="front-sec">
-            <?php if( is_tag() ) : ?>
             <?php 
-            function tagChild($parentId, $childTags) {
-              if(is_tag()) {
-                $term = get_queried_object();
-                $termId = $term->term_id;
-                $termName = $term->name;
-              }
-              if($termId == $parentId) {
-                echo '<div class="related_tag_card">';
-                echo '<h2 class="front-sec__ttl">' . $termName . 'の子タグ</h2>';
-                $tagIds = $childTags;
-                foreach ($tagIds as $tagId) {
-                  $tag = get_tag( $tagId ); 
-                  echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
-                  echo "- ";
-                  echo $tag->name;
-                  echo '<br>';
-                  echo '</a>';
-                }
-                echo '</div>';
-              } else if (in_array($termId, $childTags)) {
-                echo '<div class="related_tag_card">';
-                echo '<h2 class="front-sec__ttl">' . $termName . 'の親タグ</h2>';
-                  $tag = get_tag( $parentId ); 
-                  echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
-                  echo "- ";
-                  echo $tag->name;
-                  echo '</a>';
-                  echo '</div>';
-                }
-             }
-            tagChild(81,array(255,238,236,237,288,273));
-            tagChild(210,array(289));
-            tagChild(188,array(233,234,286));
-            tagChild(88,array(169,251,257,258));
-            tagChild(148,array(298,290,292,289,287,173,119,140,117,74,));
-            tagChild(292,array(322));
+            if( is_tag() ) : 
+            // function tagChild($parentId, $childTags) {
+            //   if(is_tag()) {
+            //     $term = get_queried_object();
+            //     $termId = $term->term_id;
+            //     $termName = $term->name;
+            //   }
+            //   if($termId == $parentId) {
+            //     echo '<div class="related_tag_card">';
+            //     echo '<h2 class="front-sec__ttl">' . $termName . 'の子タグ</h2>';
+            //     $tagIds = $childTags;
+            //     foreach ($tagIds as $tagId) {
+            //       $tag = get_tag( $tagId ); 
+            //       echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
+            //       echo "- ";
+            //       echo $tag->name;
+            //       echo '<br>';
+            //       echo '</a>';
+            //     }
+            //     echo '</div>';
+            //   } else if (in_array($termId, $childTags)) {
+            //     echo '<div class="related_tag_card">';
+            //     echo '<h2 class="front-sec__ttl">' . $termName . 'の親タグ</h2>';
+            //       $tag = get_tag( $parentId ); 
+            //       echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
+            //       echo "- ";
+            //       echo $tag->name;
+            //       echo '</a>';
+            //       echo '</div>';
+            //     }
+            //  }
+            // tagChild(81,array(255,238,236,237,288,273));
+            // tagChild(210,array(289));
+            // tagChild(188,array(233,234,286));
+            // tagChild(88,array(169,251,257,258));
+            // tagChild(148,array(298,290,292,289,287,173,119,140,117,74,));
+            // tagChild(292,array(322));
+            endif; 
             ?>
-            <?php endif; ?>
             
             <section class="front-sec">
                 <h2 class="front-sec__ttl">年月アーカイブ</h2>
