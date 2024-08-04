@@ -38,10 +38,10 @@ if(is_tag()) {
     <?php get_search_form() ; ?>
   </div>
 
-  <section class="front-sec">
+  <!-- <section class="front-sec">
     <h2 class="front-sec__ttl">年月アーカイブ</h2>
-    <?php echo get_template_part("template-parts/date-article-list"); ?>
-  </section>
+    <?php // echo get_template_part("template-parts/date-article-list"); ?>
+  </section> -->
   
   <section class="front-sec">
     <h2 class="front-sec__ttl">タグ</h2>

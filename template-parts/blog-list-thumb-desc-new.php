@@ -8,7 +8,7 @@ if(is_tag()) {
 $per_num = -1;
 $order_pram = 'date';
 if ( is_home() || is_front_page() ) :
-  $per_num = 8;
+  $per_num = 6;
   $order_pram = 'date';
 endif;
   $my_query = new WP_Query(
@@ -45,7 +45,7 @@ wp_reset_postdata();
     $my_query_rand = new WP_Query(
       array(
             'post_type' => 'post',
-            'posts_per_page' => 7,
+            'posts_per_page' => 5,
             'orderby' => 'modified',
             'post__not_in' => $post_ids
           )
