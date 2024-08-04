@@ -24,14 +24,14 @@ if(is_tag()) {
           }
           ?>
 
-          <?php if ( is_home() || is_front_page() ) : ?>
+          <!-- <?php if ( is_home() || is_front_page() ) : ?>
             <?php if(!is_page("all-article")) : ?>
               <h2 class="front-sec__ttl rand">ランダムに表示される記事</h2>
               <div class="front-sec__text front-sec__flex">
                   <?php echo get_template_part("template-parts/blog-list-thumb-desc_rand"); ?>
               </div>
             <?php endif; ?>
-          <?php endif; ?>
+          <?php endif; ?> -->
 
           <?php if ( is_home() || is_front_page() ) : ?>
             <h2 class="front-sec__ttl">最近書いた記事</h2>
@@ -39,6 +39,7 @@ if(is_tag()) {
                 <?php echo get_template_part("template-parts/blog-list-thumb-desc-new"); ?>
             </div>
           <?php endif; ?>
+
           <?php if ( !(is_home() || is_front_page()) ) : ?>
             <h2 class="front-sec__ttl <?php if(is_tag()): ?>tag_article_ttl<?php endif; ?>"><?php echo $article_list_ttl; ?>記事<?php if(is_tag()): ?>（<?php echo $wp_query->post_count; ?>）<?php endif; ?></h2>
             <div class="front-sec__text front-sec__flex">
@@ -51,13 +52,6 @@ if(is_tag()) {
               ?>
             </div>
           <?php endif; ?>
-
-          <?php if ( is_home() || is_front_page() ) : ?>
-            <h2 class="front-sec__ttl">最近更新した記事</h2>
-            <div class="front-sec__text front-sec__flex">
-              <?php echo get_template_part("template-parts/blog-list-thumb-desc_important"); ?>
-            </div>
-          <?php endif; ?> 
 
           <?php if ( (is_home() || is_front_page()) ) : ?>
             <a class="front-sec__more" href="<?php echo home_url("all-article"); ?>">すべての記事はこちら</a>
@@ -111,20 +105,27 @@ if(is_tag()) {
             tagChild(292,array(322));
             ?>
             <?php endif; ?>
-
+            
             <section class="front-sec">
                 <h2 class="front-sec__ttl">年月アーカイブ</h2>
                 <?php echo get_template_part("template-parts/date-article-list"); ?>
+            </section>
+
+            <section class="front-sec">
+              <h2 class="front-sec__ttl">タグ</h2>
+              <div class="front-sec__text">
+                <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=100&exclude=116'); ?>
+              </div>
             </section>
         </section>
     </div>
 </main>
 
-<h2 class="front-sec__ttl front-container tag-wrap-ttl">タグ</h2>
+<!-- <h2 class="front-sec__ttl front-container tag-wrap-ttl">タグ</h2>
 <section class="tag-wrap front-container">
     <div class="front-sec__text">
-      <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=200&exclude=116'); ?>
+      <?php // wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=200&exclude=116'); ?>
     </div>
-</section>
+</section> -->
 
 <?php get_footer();?>

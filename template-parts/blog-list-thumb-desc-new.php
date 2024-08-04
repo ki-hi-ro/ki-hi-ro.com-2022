@@ -8,7 +8,7 @@ if(is_tag()) {
 $per_num = -1;
 $order_pram = 'date';
 if ( is_home() || is_front_page() ) :
-  $per_num = 1;
+  $per_num = 8;
   $order_pram = 'date';
 endif;
   $my_query = new WP_Query(
@@ -21,14 +21,49 @@ endif;
     )
   );
 if ( $my_query->have_posts() ) :
+  $post_ids = array(); 
   while ( $my_query->have_posts() ) :
     $my_query->the_post();
 ?>
 <div class="all-article__link front-sec__flex-item">
-  <?php echo get_template_part("template-parts/blog-list"); ?>
+  <?php
+    $post_id = $post->ID;
+    array_push($post_ids, $post_id);
+    echo get_template_part("template-parts/blog-list"); 
+  ?>
 </div>
 <?php
     endwhile;
   endif;
 wp_reset_postdata();
 ?>
+
+<?php if ( is_home() || is_front_page() ) : ?>
+  <h2 class="front-sec__ttl">最近更新した記事</h2>
+    <div class="front-sec__text front-sec__flex">
+    <?php
+    $my_query_rand = new WP_Query(
+      array(
+            'post_type' => 'post',
+            'posts_per_page' => 7,
+            'orderby' => 'modified',
+            'post__not_in' => $post_ids
+          )
+        );
+      ?>
+
+      <?php
+      if ( $my_query_rand->have_posts() ) :
+        while ( $my_query_rand->have_posts() ) :
+          $my_query_rand->the_post();
+      ?>
+      <div class="all-article__link front-sec__flex-item">
+        <?php echo get_template_part("template-parts/blog-list"); ?>
+      </div>
+      <?php
+          endwhile;
+        endif;
+      wp_reset_postdata();
+      ?>
+    </div>
+<?php endif; ?> 
