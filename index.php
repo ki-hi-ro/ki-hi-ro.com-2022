@@ -41,15 +41,6 @@ if(is_tag()) {
           }
           ?>
 
-          <!-- <?php if ( is_home() || is_front_page() ) : ?>
-            <?php if(!is_page("all-article")) : ?>
-              <h2 class="front-sec__ttl rand">ランダムに表示される記事</h2>
-              <div class="front-sec__text front-sec__flex">
-                  <?php echo get_template_part("template-parts/blog-list-thumb-desc_rand"); ?>
-              </div>
-            <?php endif; ?>
-          <?php endif; ?> -->
-
           <?php if ( is_home() || is_front_page() ) : ?>
             <h2 class="front-sec__ttl">最近書いた記事</h2>
             <div class="front-sec__text front-sec__flex">
@@ -82,46 +73,6 @@ if(is_tag()) {
             <?php get_search_form() ; ?>
         </div>
         <section class="front-sec">
-            <?php 
-            if( is_tag() ) : 
-            // function tagChild($parentId, $childTags) {
-            //   if(is_tag()) {
-            //     $term = get_queried_object();
-            //     $termId = $term->term_id;
-            //     $termName = $term->name;
-            //   }
-            //   if($termId == $parentId) {
-            //     echo '<div class="related_tag_card">';
-            //     echo '<h2 class="front-sec__ttl">' . $termName . 'の子タグ</h2>';
-            //     $tagIds = $childTags;
-            //     foreach ($tagIds as $tagId) {
-            //       $tag = get_tag( $tagId ); 
-            //       echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
-            //       echo "- ";
-            //       echo $tag->name;
-            //       echo '<br>';
-            //       echo '</a>';
-            //     }
-            //     echo '</div>';
-            //   } else if (in_array($termId, $childTags)) {
-            //     echo '<div class="related_tag_card">';
-            //     echo '<h2 class="front-sec__ttl">' . $termName . 'の親タグ</h2>';
-            //       $tag = get_tag( $parentId ); 
-            //       echo '<a href="' . esc_url( get_tag_link( $tag ) ) . '">';
-            //       echo "- ";
-            //       echo $tag->name;
-            //       echo '</a>';
-            //       echo '</div>';
-            //     }
-            //  }
-            // tagChild(81,array(255,238,236,237,288,273));
-            // tagChild(210,array(289));
-            // tagChild(188,array(233,234,286));
-            // tagChild(88,array(169,251,257,258));
-            // tagChild(148,array(298,290,292,289,287,173,119,140,117,74,));
-            // tagChild(292,array(322));
-            endif; 
-            ?>
 
             <section class="front-sec">
               <h2 class="front-sec__ttl">タグ</h2>
@@ -137,12 +88,5 @@ if(is_tag()) {
         </section>
     </div>
 </main>
-
-<!-- <h2 class="front-sec__ttl front-container tag-wrap-ttl">タグ</h2>
-<section class="tag-wrap front-container">
-    <div class="front-sec__text">
-      <?php // wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=200&exclude=116'); ?>
-    </div>
-</section> -->
 
 <?php get_footer();?>
