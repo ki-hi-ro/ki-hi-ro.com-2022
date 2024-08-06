@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header();?>
 <?php
 if(is_tag()) {
   $term = get_queried_object();
@@ -9,11 +9,28 @@ if(is_tag()) {
 ?>
 
 <main class="front-container">
-    <div class="pc-left-container">
-        <div class="search-form-wrap --sp">
-            <?php get_search_form() ; ?>
-        </div>
-        <section class="front-sec">
+  <div class="pc-left-container">
+    <div class="search-form-wrap --sp">
+      <?php get_search_form() ; ?>
+    </div>
+    <section class="front-sec">
+      <?php if (is_search()) : ?> 
+      <h2 class="front-sec__ttl">"<?php echo get_search_query(); ?>" が本文中に含まれている記事</h2>
+      <div class="front-sec__text front-sec__flex">
+        <?php
+        if (have_posts()):
+          while(have_posts()) : the_post();
+        ?>
+          <div class="all-article__link front-sec__flex-item">
+            <?php echo get_template_part("template-parts/blog-list"); ?>
+          </div>
+          <?php
+          endwhile;
+        else:
+          ?>
+          <p>該当する記事はありませんでした。</p>
+          <?php endif; ?>
+          <?php endif; ?>
           <?php
           if(is_page("all-article")) {
             $article_list_ttl = "すべての";
@@ -40,7 +57,7 @@ if(is_tag()) {
             </div>
           <?php endif; ?>
 
-          <?php if ( !(is_home() || is_front_page()) ) : ?>
+          <?php if ( !(is_home() || is_front_page() || is_search() ) ) : ?>
             <h2 class="front-sec__ttl <?php if(is_tag()): ?>tag_article_ttl<?php endif; ?>"><?php echo $article_list_ttl; ?>記事<?php if(is_tag()): ?>（<?php echo $wp_query->post_count; ?>）<?php endif; ?></h2>
             <div class="front-sec__text front-sec__flex">
               <?php
