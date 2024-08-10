@@ -78,7 +78,7 @@ if(is_tag()) {
               <h2 class="front-sec__ttl">タグ</h2>
               <div class="front-sec__text">
                 <?php if(is_tag(148)): ?>
-                  <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=0&exclude=116&include=292,334,322,52,74,318,290,289,287,277,173,204,119,140,117,193,84,87,221'); ?>
+                  <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=0&exclude=116&include=292,334,322,52,74,318,290,289,287,277,173,204,119,140,117,193,84,87,221,337'); ?>
                 <?php else: ?>
                   <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=0&exclude=116'); ?>
                 <?php endif; ?>
