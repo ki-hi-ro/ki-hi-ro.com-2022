@@ -118,3 +118,11 @@ p.comment-form-url {
 .post-id {
   padding-bottom: 66px;
 }
+
+#sidebar > ul {
+  position: sticky;
+  top: 0;
+  li {
+    padding: 5px;
+  }
+}
