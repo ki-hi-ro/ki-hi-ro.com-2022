@@ -127,8 +127,10 @@ p.comment-form-url {
   }
 }
 
-@include mq(lg) {
-  #sidebar {
+#sidebar {
+  display: none;
+  @include mq(lg) {
+    display: block;
     width: calc(100% / 12 * 4);
   }
 }
