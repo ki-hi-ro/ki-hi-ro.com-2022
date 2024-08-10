@@ -2965,7 +2965,7 @@ body.fixed {
 
 @include mq(lg) {
   .l-pc-left {
-    width: calc((100% - 40px) / 12 * 8);
+    width: calc(100% / 12 * 8);
   }
   .l-pc-left.--single {
     padding: 26px;

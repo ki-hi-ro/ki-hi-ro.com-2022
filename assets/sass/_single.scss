@@ -126,3 +126,9 @@ p.comment-form-url {
     padding: 5px;
   }
 }
+
+@include mq(lg) {
+  #sidebar {
+    width: calc(100% / 12 * 4);
+  }
+}

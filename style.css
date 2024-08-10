@@ -228,7 +228,13 @@ p.comment-form-url {
 }
 
 #sidebar > ul li {
-  padding: 5px 10px;
+  padding: 5px;
+}
+
+@media (min-width: 992px) {
+  #sidebar {
+    width: calc(100% / 12 * 4);
+  }
 }
 
 .more-link {
@@ -3081,7 +3087,7 @@ body.fixed {
 
 @media (min-width: 992px) {
   .l-pc-left {
-    width: calc((100% - 40px) / 12 * 8);
+    width: calc(100% / 12 * 8);
   }
   .l-pc-left.--single {
     padding: 26px;
