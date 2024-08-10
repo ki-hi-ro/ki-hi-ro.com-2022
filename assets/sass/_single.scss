@@ -132,5 +132,8 @@ p.comment-form-url {
   @include mq(lg) {
     display: block;
     width: calc(100% / 12 * 4);
+    ul {
+      padding-left: 0;
+    }
   }
 }

@@ -240,6 +240,9 @@ p.comment-form-url {
     display: block;
     width: calc(100% / 12 * 4);
   }
+  #sidebar ul {
+    padding-left: 0;
+  }
 }
 
 .more-link {
