@@ -1,5 +1,3 @@
-<?php require('data/navigation.php'); ?>
-
 <!DOCTYPE HTML>
 <html lang="ja">
 

@@ -1,5 +1,3 @@
-<?php require('data/navigation.php'); ?>
-
 <?php wp_reset_query(); ?>
 
 <footer class="footer">
