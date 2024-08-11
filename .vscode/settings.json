@@ -84,5 +84,8 @@
   "liveSassCompile.settings.autoprefix": [],
   "eslint.validate": [],
   "phpfmt.detect_indent": true,
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true
 }

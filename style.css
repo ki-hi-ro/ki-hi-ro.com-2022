@@ -4089,41 +4089,6 @@ footer nav {
   margin-bottom: 0;
 }
 
-.header {
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-}
-
-.header__modify {
-  font-size: 14px;
-  margin: 30px 0 32px;
-}
-
-@media (min-width: 992px) {
-  .header__modify {
-    margin-bottom: 0;
-  }
-}
-
-.single .header__modify {
-  display: none;
-}
-
-.header__sp-none {
-  display: none;
-}
-
-@media (min-width: 576px) {
-  .header__sp-none {
-    display: inline;
-  }
-}
-
 .header__container {
   margin: 0 auto;
   padding: 20px 15px;

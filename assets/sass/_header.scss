@@ -1,46 +1,9 @@
-.header {
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: $white;
-  display: flex;
-  align-items: center;
-
-  &__modify {
-    font-size: 14px;
-    margin: 30px 0 32px;
-    @include mq(lg) {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.single {
-  .header__modify {
-    display: none;
-  }
-}
-
-.header__sp-none {
-  display: none;
-}
-
-@include mq(sm) {
-  .header__sp-none {
-    display: inline;
-  }
-}
-
 .header__container {
   margin: 0 auto;
   padding: 20px 15px;
   width: 100%;
   max-width: 1140px;
-}
-
-@include mq(xl) {
-  .header__container {
+  @include mq(xl) {
     width: 1170px;
     max-width: none;
   }
@@ -83,9 +46,9 @@
   align-items: center;
   z-index: 100;
   img {
-      padding-right: 10px;
-      height: 24px;
-    }
+    padding-right: 10px;
+    height: 24px;
+  }
 }
 
 .header__sitename-text {
