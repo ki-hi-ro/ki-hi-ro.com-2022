@@ -5,6 +5,7 @@ if(is_tag()) {
   $term_slug = $term->slug;
   $term_name = $term->name;
   $term_desc = $term->description;
+  $term_id = $term->term_id;
 }
 ?>
 
@@ -77,13 +78,29 @@ if(is_tag()) {
             <section class="front-sec">
               <h2 class="front-sec__ttl">タグ</h2>
               <div class="front-sec__text">
-                <?php if(is_tag(148)): ?>
-                  <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=0&exclude=116&include=292,334,322,52,74,318,290,289,287,277,173,204,119,140,117,193,84,87,221,337'); ?>
-                <?php elseif(is_tag(188)): ?>
-                  <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=0&exclude=116&include=233,234,286'); ?>
-                <?php else: ?>
-                  <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=0&exclude=116'); ?>
-                <?php endif; ?>
+                <?php 
+                $tag_groups = array(
+                  'プログラミング' => array(148,292,334,322,52,74,318,290,289,287,277,173,204,119,140,117,193,84,87,221,337),
+                  '青春18きっぷ' => array(188,233,234,286),
+                );
+                
+                $include_tag_ids = [];
+                // $exclude_tag_ids = [116];
+                $exclude_tag_id = '';
+                foreach ($tag_groups as $tag_group_key => $tag_group_value) {
+                  if(is_tag($tag_group_value)) {
+                    $include_tag_ids = $tag_group_value;
+                    $exclude_tag_id = $term_id;
+                  }
+                }
+                
+                $tag_cloud_settings = [
+                  'number' => 0, 'smallest' => 16, 'largest' => 16, 'format' => 'list', 'unit' => 'px',
+                  'exclude' => 116,
+                  // 'include' => $include_tag_ids
+                ];
+                wp_tag_cloud($tag_cloud_settings); 
+                ?>
               </div>
             </section>
 
