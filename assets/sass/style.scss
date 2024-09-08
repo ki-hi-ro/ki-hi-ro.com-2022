@@ -3834,3 +3834,13 @@ footer nav {
 @import "date";
 @import "google-blog-list";
 @import "sample-acf-image";
+
+.admin-bar {
+  @media (min-width: 992px) {
+    #sidebar ul.ez-toc-list.ez-toc-list-level-1 {
+        overflow: scroll;
+        height: 94vh;
+        padding-top: 43px;
+    }
+  }
+}
