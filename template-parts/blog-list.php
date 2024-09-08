@@ -14,12 +14,18 @@
           endif;
           ?>
           <div class="all-article__tag-date-not-img">
-            <div class="all-article__tag"><?php the_tags(''); ?></div>
+            <div class="all-article__tag">
+              <?php foreach((get_the_tags()) as $tag) : ?>
+                <a href="<?php echo get_tag_link($tag->term_id); ?>" target="_blank">
+                  <?php echo $tag->name; ?>
+                </a>
+              <?php endforeach; ?>
+            </div>
             <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?>（更新日: <?php echo get_the_modified_date('Y.m.d'); ?>）</div>
           </div>
         </div>
         <div class="all-article__text">
-          <a class="all-article__href" href="<?php the_permalink(); ?>">
+          <a class="all-article__href" href="<?php the_permalink(); ?>" target="_blank">
             <div class="all-article__ttl"><?php the_title(); ?></div>
           </a>
           <div class="all-article__desc">

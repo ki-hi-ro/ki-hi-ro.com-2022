@@ -87,5 +87,6 @@
   "git.ignoreLimitWarning": true,
   "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": false,
+  "php.validate.enable": false
 }
