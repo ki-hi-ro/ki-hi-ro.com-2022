@@ -16,7 +16,7 @@
           <div class="all-article__tag-date-not-img">
             <div class="all-article__tag">
               <?php foreach((get_the_tags()) as $tag) : ?>
-                <a href="<?php echo get_tag_link($tag->term_id); ?>" target="_blank">
+                <a href="<?php echo get_tag_link($tag->term_id); ?>">
                   <?php echo $tag->name; ?>
                 </a>
               <?php endforeach; ?>
@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="all-article__text">
-          <a class="all-article__href" href="<?php the_permalink(); ?>" target="_blank">
+          <a class="all-article__href" href="<?php the_permalink(); ?>">
             <div class="all-article__ttl"><?php the_title(); ?></div>
           </a>
           <div class="all-article__desc">
