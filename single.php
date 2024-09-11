@@ -32,13 +32,12 @@ if($posttags) {
                 endif;
                 ?>
       </div>
-
+      <?php comments_template(); ?>
       <?php
-      $prevpost = get_adjacent_post(true, '', true, 'post_tag');
-      $nextpost = get_adjacent_post(true, '', false, 'post_tag');
+      $prevpost = get_adjacent_post(false, '', true);
+      $nextpost = get_adjacent_post(false, '', false);
       if( $prevpost or $nextpost) :
       ?>
-      <?php comments_template(); ?>
       <ul class="nav-links">
         <?php if( $prevpost ) : ?>
         <li class="nav-links__nav --pre">
