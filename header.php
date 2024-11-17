@@ -49,12 +49,12 @@
   <header>
     <div class="header__container">
       <div class="header__contents">
-        <div class="header__logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-name-logo-4.svg" alt="ロゴ">
-          <a class="header__sitename-link" href="<?php echo home_url(); ?>">
+        <a class="header__sitename-link" href="<?php echo home_url(); ?>">
+          <div class="header__logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-name-logo-4.svg" alt="ロゴ">
             <span class="header__sitename-text">ki-hi-ro.com</span>
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </div>
   </header>
