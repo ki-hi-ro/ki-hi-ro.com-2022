@@ -3959,10 +3959,6 @@ footer nav {
   }
 }
 
-.front-sec__flex-item .all-article__ttl {
-  margin-top: 10px;
-}
-
 @media (min-width: 768px) {
   .front-sec__flex-item .all-article__ttl {
     padding-right: 18px;
@@ -4529,41 +4525,6 @@ footer nav {
   }
 }
 
-.all-article .all-article__post-wrap {
-  padding: 0;
-}
-
-.all-article .all-article__ttl {
-  margin: 0;
-  font-size: 17px;
-}
-
-.all-article .all-article__link {
-  padding: 0;
-  width: 100%;
-  margin-bottom: 2px;
-}
-
-@media (max-width: 767px) {
-  .all-article .all-article__link {
-    margin-bottom: 18px;
-  }
-}
-
-.all-article .front-sec__ttl, .all-article .front-sec__text p, .front-sec__text .all-article p {
-  margin-bottom: 14px;
-}
-
-.all-article .pc-left-container h2.front-sec__ttl, .all-article .pc-left-container .single h3.front-sec__ttl, .single .all-article .pc-left-container h3.front-sec__ttl {
-  margin-bottom: 14px;
-}
-
-@media (max-width: 767px) {
-  .all-article .pc-left-container h2.front-sec__ttl, .all-article .pc-left-container .single h3.front-sec__ttl, .single .all-article .pc-left-container h3.front-sec__ttl {
-    margin-bottom: 21px;
-  }
-}
-
 .all-article__link {
   padding-bottom: 10px;
 }
@@ -4897,4 +4858,43 @@ pre.wp-block-code code .number {
 
 h3#reply-title {
   margin-top: 100px;
+}
+
+.all-article__post-wrap {
+  padding: 0;
+}
+
+.all-article__ttl {
+  margin: 0;
+  font-size: 17px;
+}
+
+.all-article__link {
+  padding: 0;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 767px) {
+  .all-article__link {
+    margin-bottom: 28px;
+  }
+}
+
+.front-sec__ttl, .front-sec__text p {
+  margin-bottom: 14px;
+}
+
+.pc-left-container h2.front-sec__ttl, .pc-left-container .single h3.front-sec__ttl, .single .pc-left-container h3.front-sec__ttl {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 767px) {
+  .pc-left-container h2.front-sec__ttl, .pc-left-container .single h3.front-sec__ttl, .single .pc-left-container h3.front-sec__ttl {
+    margin-bottom: 31px;
+  }
+}
+
+.pc-left-container h2.front-sec__ttl.--has-mt, .pc-left-container .single h3.front-sec__ttl.--has-mt, .single .pc-left-container h3.front-sec__ttl.--has-mt {
+  margin-top: 56px;
 }

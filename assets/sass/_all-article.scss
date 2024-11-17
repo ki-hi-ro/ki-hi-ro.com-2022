@@ -48,35 +48,6 @@
       line-height: 40px;
     }
   }
-
-  .all-article__post-wrap {
-      padding: 0;
-  }
-
-  .all-article__ttl {
-    margin: 0;
-    font-size: 17px;
-  }
-
-  .all-article__link {
-    padding: 0;
-    width: 100%;
-    margin-bottom: 2px;
-    @media (max-width: 767px) {
-      margin-bottom: 18px;
-    }
-  }
-
-  .front-sec__ttl  {
-    margin-bottom: 14px;
-  }
-
-  .pc-left-container h2.front-sec__ttl {
-    margin-bottom: 14px;
-    @media (max-width: 767px) {
-      margin-bottom: 21px;
-    }
-  }
 }
 
 .all-article__link {
