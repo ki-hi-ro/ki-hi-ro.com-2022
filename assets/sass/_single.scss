@@ -1,4 +1,32 @@
 .single {
+  .post__ttl {
+    font-size: 23px;
+    @include mq(md) {
+      font-size: 26px;
+    }
+    margin-top: 23px;
+    color: $text;
+    font-family: Helvetica Neue;
+    letter-spacing: 0.1px;
+    font-weight: normal!important;
+    text-align: center;
+  }  
+  h2 {
+    font-size: 23px;
+    color: $text;
+    font-family: Helvetica Neue;
+    font-weight: normal!important;
+    margin: 54px 0 15px;
+    line-height: 1.8;
+
+    @include mq(md) {
+      font-size: 23px;
+    }
+    
+    @include mq(lg) {
+      margin-left: 0;
+    }
+  }
   p {
     font-size: 16px;
     line-height: 32px;
@@ -39,10 +67,6 @@
     @include mq(lg) {
       margin-top: 65px;
     }
-  }
-  .post__ttl {
-    margin-top: 10px;
-    font-weight: bold;
   }
 }
 
@@ -142,3 +166,4 @@ p.comment-form-url {
     }
   }
 }
+
