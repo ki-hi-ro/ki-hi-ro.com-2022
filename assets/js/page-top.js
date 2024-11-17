@@ -6,7 +6,7 @@ var page_top_link_single = jQuery(".single .page-top__link");
 
 function PageTopAnime() {
   var scroll = jQuery(window).scrollTop();
-  if (scroll >= 200) {
+  if (scroll >= 1500) {
     page_top.removeClass(class_down);
     page_top.addClass(class_up);
   } else {
