@@ -8,7 +8,7 @@ if(is_tag()) {
 $per_num = -1;
 $order_pram = 'date';
 if ( is_home() || is_front_page() ) :
-  $per_num = 62;//最近書いた記事の表示数
+  $per_num = 10;//最近書いた記事、最近更新した記事の表示数
   $order_pram = 'date';
 endif;
   $my_query = new WP_Query(
@@ -45,7 +45,7 @@ wp_reset_postdata();
     $my_query_rand = new WP_Query(
       array(
             'post_type' => 'post',
-            'posts_per_page' => 62,//最近更新した記事の表示数
+            'posts_per_page' => $per_num,
             'orderby' => 'modified',
             'post__not_in' => $post_ids
           )

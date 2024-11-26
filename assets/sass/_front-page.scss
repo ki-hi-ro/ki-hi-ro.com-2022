@@ -18,6 +18,9 @@
 
 .front-sec {
   margin-bottom: 52px;
+  &.--mb-adjust {
+    margin-bottom: 26px;
+  }
   &__my-prof-img {
     width: 350px;
     max-width: 100%;

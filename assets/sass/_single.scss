@@ -38,6 +38,12 @@
       padding: 0;
       font-size: 16px;
     }
+    &.wp-embed-heading {
+      margin-top: 0;
+    }
+  }
+  .wp-embed-footer {
+    display: none;
   }
   ul li,
   ol li {
@@ -166,4 +172,5 @@ p.comment-form-url {
     }
   }
 }
+
 

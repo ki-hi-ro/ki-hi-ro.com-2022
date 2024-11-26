@@ -3826,22 +3826,25 @@ h3#reply-title {
 .all-article__link {
   padding: 0;
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 9px;
   @media (max-width: 767px) {
     margin-bottom: 28px;
   }
 }
 
 .front-sec__ttl {
-  margin-bottom: 14px;
+  margin-bottom: 15px;
+  &.--mt-0 {
+    margin-top: 0;
+  }
 }
 
 .pc-left-container h2.front-sec__ttl {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   @media (max-width: 767px) {
     margin-bottom: 31px;
   }
   &.--has-mt {
-    margin-top: 56px;
+    margin-top: 23px;
   }
 }
