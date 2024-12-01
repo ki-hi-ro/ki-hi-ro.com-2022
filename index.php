@@ -72,26 +72,7 @@ if(is_tag()) { $term = get_queried_object(); }
         <div class="front-container --date-article-list">
           <div class="date-article-list">
           <?php
-          function filter_archives_by_current_year( $where ) {
-              $current_year = date( 'Y' ); // 現在の年を取得
-              // WHERE 条件に現在の年を追加
-              $where .= " AND YEAR(post_date) = {$current_year}";
-              return $where;
-          }
-          add_filter( 'getarchives_where', 'filter_archives_by_current_year' );
-
-          // 今年（現在の年）の `monthly` アーカイブを表示
-          wp_get_archives(
-              array(
-                  'type'            => 'monthly',
-                  'show_post_count' => true,
-              )
-          );
-
-          // フィルタを解除して他のアーカイブ出力に影響を与えないようにする
-          remove_filter( 'getarchives_where', 'filter_archives_by_current_year' );
-
-          // 特定の年だけのアーカイブを取得するカスタムフィルタ
+          // カスタムフィルタ: 指定した年の投稿を絞り込む
           function filter_archives_by_specific_year( $where, $args ) {
               if ( isset( $args['year'] ) ) {
                   $year = intval( $args['year'] ); // 年を安全に整数に変換
@@ -100,37 +81,46 @@ if(is_tag()) { $term = get_queried_object(); }
               return $where;
           }
 
-          // リンクテキストをカスタマイズするためのフィルタ
+          // リンクテキストをカスタマイズするフィルタ
           function customize_archive_link_text( $link_html ) {
-              // 年を正規表現で取得し、"年" を追加
               return preg_replace( '/>(\d{4})</', '>\1年<', $link_html );
           }
 
-          // 2023年の `yearly` アーカイブ
-          add_filter( 'getarchives_where', 'filter_archives_by_specific_year', 10, 2 );
-          add_filter( 'get_archives_link', 'customize_archive_link_text' );
-          wp_get_archives(
-              array(
-                  'type'            => 'yearly',
-                  'show_post_count' => true,
-                  'year'            => 2023, // 2023年を指定
-              )
-          );
-          remove_filter( 'getarchives_where', 'filter_archives_by_specific_year' );
-          remove_filter( 'get_archives_link', 'customize_archive_link_text' );
+          // 特定の年とその月を表示する関数
+          function display_year_and_month_archives( $year ) {
+              // 年単位のアーカイブ
+              add_filter( 'getarchives_where', 'filter_archives_by_specific_year', 10, 2 );
+              add_filter( 'get_archives_link', 'customize_archive_link_text' );
+              wp_get_archives(
+                  array(
+                      'type'            => 'yearly',
+                      'show_post_count' => true,
+                      'year'            => $year,
+                  )
+              );
+              remove_filter( 'getarchives_where', 'filter_archives_by_specific_year' );
+              remove_filter( 'get_archives_link', 'customize_archive_link_text' );
 
-          // 2022年の `yearly` アーカイブ
-          add_filter( 'getarchives_where', 'filter_archives_by_specific_year', 10, 2 );
-          add_filter( 'get_archives_link', 'customize_archive_link_text' );
-          wp_get_archives(
-              array(
-                  'type'            => 'yearly',
-                  'show_post_count' => true,
-                  'year'            => 2022, // 2022年を指定
-              )
-          );
-          remove_filter( 'getarchives_where', 'filter_archives_by_specific_year' );
-          remove_filter( 'get_archives_link', 'customize_archive_link_text' );
+              // 月単位のアーカイブ
+              add_filter( 'getarchives_where', 'filter_archives_by_specific_year', 10, 2 );
+              wp_get_archives(
+                  array(
+                      'type'            => 'monthly',
+                      'show_post_count' => true,
+                      'year'            => $year, // 年を指定
+                  )
+              );
+              remove_filter( 'getarchives_where', 'filter_archives_by_specific_year' );
+          }
+
+          // 2024年のアーカイブを表示
+          display_year_and_month_archives( 2024 );          
+
+          // 2023年のアーカイブを表示
+          display_year_and_month_archives( 2023 );
+
+          // 2022年のアーカイブを表示
+          display_year_and_month_archives( 2022 );
           ?>
           </div>
         </div>
