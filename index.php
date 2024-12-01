@@ -89,17 +89,17 @@ if(is_tag()) { $term = get_queried_object(); }
           // 特定の年とその月を表示する関数
           function display_year_and_month_archives( $year ) {
               // 年単位のアーカイブ
-              add_filter( 'getarchives_where', 'filter_archives_by_specific_year', 10, 2 );
-              add_filter( 'get_archives_link', 'customize_archive_link_text' );
-              wp_get_archives(
-                  array(
-                      'type'            => 'yearly',
-                      'show_post_count' => true,
-                      'year'            => $year,
-                  )
-              );
-              remove_filter( 'getarchives_where', 'filter_archives_by_specific_year' );
-              remove_filter( 'get_archives_link', 'customize_archive_link_text' );
+              // add_filter( 'getarchives_where', 'filter_archives_by_specific_year', 10, 2 );
+              // add_filter( 'get_archives_link', 'customize_archive_link_text' );
+              // wp_get_archives(
+              //     array(
+              //         'type'            => 'yearly',
+              //         'show_post_count' => true,
+              //         'year'            => $year,
+              //     )
+              // );
+              // remove_filter( 'getarchives_where', 'filter_archives_by_specific_year' );
+              // remove_filter( 'get_archives_link', 'customize_archive_link_text' );
 
               // 月単位のアーカイブ
               add_filter( 'getarchives_where', 'filter_archives_by_specific_year', 10, 2 );
@@ -114,16 +114,91 @@ if(is_tag()) { $term = get_queried_object(); }
           }
 
           // 2024年のアーカイブを表示
-          display_year_and_month_archives( 2024 );          
+          display_year_and_month_archives( 2024 );             
 
           // 2023年のアーカイブを表示
-          display_year_and_month_archives( 2023 );
-
-          // 2022年のアーカイブを表示
-          display_year_and_month_archives( 2022 );
+          display_year_and_month_archives( 2023 );          
           ?>
           </div>
         </div>
+        <div class="archive-accordion">
+          <?php
+          // アコーディオンの親と子を表示する関数
+          function display_archive_accordion( $year ) {
+              // 親要素（年単位のアーカイブ）
+              echo "<div class='accordion-item'>";
+              echo "<button class='accordion-header' data-year='{$year}'>{$year}年</button>";
+              echo "<div class='accordion-content' id='accordion-content-{$year}' style='display: none;'>";
+
+              // 子要素（月単位のアーカイブ）
+              add_filter( 'getarchives_where', function ( $where ) use ( $year ) {
+                  return $where . " AND YEAR(post_date) = {$year}";
+              });
+              wp_get_archives(
+                  array(
+                      'type'            => 'monthly',
+                      'show_post_count' => true,
+                      'year'            => $year,
+                  )
+              );
+              remove_filter( 'getarchives_where', function ( $where ) use ( $year ) {
+                  return $where . " AND YEAR(post_date) = {$year}";
+              });
+
+              echo "</div>"; // .accordion-content
+              echo "</div>"; // .accordion-item
+          }
+
+          // 2023年のアーカイブ
+          // display_archive_accordion( 2023 );
+
+          // 2022年のアーカイブ
+          display_archive_accordion( 2022 );
+          ?>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+          jQuery(document).ready(function ($) {
+            $(".accordion-header").click(function () {
+              var content = $(this).next(".accordion-content");
+              // アコーディオンの開閉
+              if (content.is(":visible")) {
+                content.slideUp(); // 閉じる
+              } else {
+                $(".accordion-content").slideUp(); // 他を閉じる
+                content.slideDown(); // 開く
+              }
+            });
+          });
+        </script>
+        <style>
+          .archive-accordion {
+              margin: 20px 0;
+          }
+          .accordion-item {
+              margin-bottom: 10px;
+          }
+          .accordion-header {
+              background-color: #f0f0f0;
+              border: 1px solid #ddd;
+              cursor: pointer;
+              padding: 10px;
+              text-align: left;
+              font-weight: bold;
+              width: 100%;
+              box-sizing: border-box;
+          }
+          .accordion-header:hover {
+              background-color: #e0e0e0;
+          }
+          .accordion-content {
+              padding: 10px;
+              border: 1px solid #ddd;
+              border-top: none;
+          }
+        </style>
+
       </section>
       <section class="front-sec">
         <h2 class="front-sec__ttl --mt-0">タグ</h2>
