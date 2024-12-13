@@ -33,9 +33,10 @@ if($posttags) {
                 ?>
       </div>
       <?php comments_template(); ?>
+      
       <?php
-      $prevpost = get_adjacent_post(false, '', true);
-      $nextpost = get_adjacent_post(false, '', false);
+      $prevpost = get_adjacent_post(true, '', true, 'post_tag');
+      $nextpost = get_adjacent_post(true, '', false, 'post_tag');
       if( $prevpost or $nextpost) :
       ?>
       <ul class="nav-links">
@@ -54,13 +55,13 @@ if($posttags) {
         </li>
         <?php endif; ?>
       </ul>
+
       <div class="post-id">
         投稿ID : <?php the_ID(); ?>
       </div>
       <?php echo get_template_part('template-parts/single-bread'); ?>
       <?php endif; ?>
       <?php endwhile; endif; ?>
-
     </article>
   </div>
   <?php get_sidebar(); ?>
