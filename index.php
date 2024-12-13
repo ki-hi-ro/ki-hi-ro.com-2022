@@ -69,135 +69,113 @@ if(is_tag()) { $term = get_queried_object(); }
     <section class="front-sec">
       <section class="front-sec --mb-adjust">
         <h2 class="front-sec__ttl">過去の記事</h2>
-        <div class="front-container --date-article-list">
-          <div class="date-article-list">
-          <?php
-          // カスタムフィルタ: 指定した年の投稿を絞り込む
-          function filter_archives_by_specific_year( $where, $args ) {
-              if ( isset( $args['year'] ) ) {
-                  $year = intval( $args['year'] ); // 年を安全に整数に変換
-                  $where .= " AND YEAR(post_date) = {$year}";
-              }
-              return $where;
-          }
+<div class="archive-accordion">
+  <?php
+  // アコーディオンの親と子を表示する関数
+  function display_archive_accordion( $year, $open_year = null ) {
+      // 初期状態で開くかどうかを判定
+      $is_open = ($year === $open_year);
 
-          // リンクテキストをカスタマイズするフィルタ
-          function customize_archive_link_text( $link_html ) {
-              return preg_replace( '/>(\d{4})</', '>\1年<', $link_html );
-          }
+      // 親要素（年単位のアーカイブ）
+      echo "<div class='accordion-item'>";
+      echo "<button class='accordion-header' data-year='{$year}'>";
+      echo "{$year}年 <span class='icon'>"  . ($is_open ? "×" : "+") . "</span>";
+      echo "</button>";
+      echo "<div class='accordion-content' id='accordion-content-{$year}' style='display: " . ($is_open ? "block" : "none") . ";'>";
 
-          // 特定の年とその月を表示する関数
-          function display_year_and_month_archives( $year ) {
-              // 年単位のアーカイブ
-              // add_filter( 'getarchives_where', 'filter_archives_by_specific_year', 10, 2 );
-              // add_filter( 'get_archives_link', 'customize_archive_link_text' );
-              // wp_get_archives(
-              //     array(
-              //         'type'            => 'yearly',
-              //         'show_post_count' => true,
-              //         'year'            => $year,
-              //     )
-              // );
-              // remove_filter( 'getarchives_where', 'filter_archives_by_specific_year' );
-              // remove_filter( 'get_archives_link', 'customize_archive_link_text' );
+      // 子要素（月単位のアーカイブ）
+      // フィルター関数を変数化
+      $filter_function = function ( $where ) use ( $year ) {
+          return $where . " AND YEAR(post_date) = {$year}";
+      };
 
-              // 月単位のアーカイブ
-              add_filter( 'getarchives_where', 'filter_archives_by_specific_year', 10, 2 );
-              wp_get_archives(
-                  array(
-                      'type'            => 'monthly',
-                      'show_post_count' => true,
-                      'year'            => $year, // 年を指定
-                  )
-              );
-              remove_filter( 'getarchives_where', 'filter_archives_by_specific_year' );
-          }
+      add_filter( 'getarchives_where', $filter_function );
+      wp_get_archives(
+          array(
+              'type'            => 'monthly',
+              'show_post_count' => true,
+              'year'            => $year,
+          )
+      );
+      remove_filter( 'getarchives_where', $filter_function );
 
-          // 2024年のアーカイブを表示
-          display_year_and_month_archives( 2024 );             
+      echo "</div>"; // .accordion-content
+      echo "</div>"; // .accordion-item
+  }
 
-          // 2023年のアーカイブを表示
-          display_year_and_month_archives( 2023 );          
-          ?>
-          </div>
-        </div>
-        <div class="archive-accordion">
-          <?php
-          // アコーディオンの親と子を表示する関数
-          function display_archive_accordion( $year ) {
-              // 親要素（年単位のアーカイブ）
-              echo "<div class='accordion-item'>";
-              echo "<button class='accordion-header' data-year='{$year}'>{$year}年</button>";
-              echo "<div class='accordion-content' id='accordion-content-{$year}' style='display: none;'>";
+  // 2024年のアーカイブを開いておく設定
+  $open_year = 2024;
 
-              // 子要素（月単位のアーカイブ）
-              add_filter( 'getarchives_where', function ( $where ) use ( $year ) {
-                  return $where . " AND YEAR(post_date) = {$year}";
-              });
-              wp_get_archives(
-                  array(
-                      'type'            => 'monthly',
-                      'show_post_count' => true,
-                      'year'            => $year,
-                  )
-              );
-              remove_filter( 'getarchives_where', function ( $where ) use ( $year ) {
-                  return $where . " AND YEAR(post_date) = {$year}";
-              });
+  // 2024年のアーカイブ
+  display_archive_accordion( 2024, $open_year );
 
-              echo "</div>"; // .accordion-content
-              echo "</div>"; // .accordion-item
-          }
+  // 2023年のアーカイブ
+  display_archive_accordion( 2023, $open_year );
 
-          // 2023年のアーカイブ
-          // display_archive_accordion( 2023 );
+  // 2022年のアーカイブ
+  display_archive_accordion( 2022, $open_year );
+  ?>
+</div>
 
-          // 2022年のアーカイブ
-          display_archive_accordion( 2022 );
-          ?>
-        </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  jQuery(document).ready(function ($) {
+    $(".accordion-header").click(function () {
+      var content = $(this).next(".accordion-content");
+      var icon = $(this).find(".icon");
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-          jQuery(document).ready(function ($) {
-            $(".accordion-header").click(function () {
-              var content = $(this).next(".accordion-content");
-              // アコーディオンの開閉
-              if (content.is(":visible")) {
-                content.slideUp(); // 閉じる
-              } else {
-                $(".accordion-content").slideUp(); // 他を閉じる
-                content.slideDown(); // 開く
-              }
-            });
-          });
-        </script>
-        <style>
-          .archive-accordion {
-              margin: 20px 0;
-          }
-          .accordion-item {
-              margin-bottom: 10px;
-          }
-          .accordion-header {
-              background-color: #f0f0f0;
-              border: 1px solid #ddd;
-              cursor: pointer;
-              padding: 10px;
-              text-align: left;
-              font-weight: bold;
-              width: 100%;
-              box-sizing: border-box;
-          }
-          .accordion-header:hover {
-              background-color: #e0e0e0;
-          }
-          .accordion-content {
-              padding: 10px;
-              border: 1px solid #ddd;
-              border-top: none;
-          }
-        </style>
+      // アコーディオンの開閉とアイコンの切り替え
+      if (content.is(":visible")) {
+        content.slideUp(); // 閉じる
+        icon.text("+"); // プラスに戻す
+      } else {
+        $(".accordion-content").slideUp(); // 他のアコーディオンを閉じる
+        $(".accordion-header .icon").text("+"); // 他のアイコンをリセット
+
+        content.slideDown(); // 開く
+        icon.text("×"); // ばつに切り替え
+      }
+    });
+  });
+</script>
+
+<style>
+  .archive-accordion {
+      margin: 20px 0;
+  }
+  .accordion-item {
+      margin-bottom: 10px;
+  }
+  .accordion-header {
+      background-color: #f0f0f0;
+      color: #000;
+      border: 1px solid #ddd;
+      cursor: pointer;
+      padding: 10px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .accordion-header:hover {
+      background-color: #e0e0e0;
+  }
+  .accordion-header .icon {
+      font-size: 18px;
+      font-weight: bold;
+      margin-left: 10px;
+  }
+  .accordion-content {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-top: none;
+  }
+</style>
+
 
       </section>
       <section class="front-sec">
