@@ -12,6 +12,7 @@ Author: Shibata Hiroki
 @import "common";
 @import "single";
 
+/* More Link Styles */
 .more-link {
   text-align: right;
   padding-right: 20px;
@@ -27,9 +28,9 @@ Author: Shibata Hiroki
 .more-link a img {
   width: 7px;
   margin-left: 8px;
-  margin-right: 0;
 }
 
+/* Top Contents Styles */
 .top-contents {
   display: flex;
   justify-content: space-between;
@@ -44,21 +45,20 @@ a.top-contents__card.--blog {
   margin-right: 0;
 }
 
+/* Card Styles */
 .card {
   width: 100%;
-  height: auto;
   overflow: hidden;
   border: 1px solid $gray;
+  transition: transform 0.3s;
 }
 
 .card:hover {
   transform: translateY(-3px);
-  transition: all 0.3s;
 }
 
 .card__imgframe {
   width: 100%;
-  height: auto;
   padding-top: 56.25%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -3816,13 +3816,16 @@ h3#reply-title {
 
 .all-article__ttl {
   margin: 0;
-  font-size: 17px;
+  font-size: 18px;
+  @media (max-width: 767px) {
+    padding-top: 3px;
+  }
 }
 
 .all-article__link {
   padding: 0;
   width: 100%;
-  margin-bottom: 9px;
+  margin-bottom: 23px;
   @media (max-width: 767px) {
     margin-bottom: 28px;
   }
@@ -3836,11 +3839,19 @@ h3#reply-title {
 }
 
 .pc-left-container h2.front-sec__ttl {
-  margin-bottom: 16px;
+  margin-bottom: 21px;
   @media (max-width: 767px) {
-    margin-bottom: 31px;
+    margin-bottom: 25px;
   }
   &.--has-mt {
     margin-top: 23px;
   }
+}
+
+.all-article__date {
+    font-size: 12px;
+}
+
+.single .all-article__date {
+    font-size: 14px;
 }

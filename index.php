@@ -69,53 +69,57 @@ if(is_tag()) { $term = get_queried_object(); }
     <section class="front-sec">
       <section class="front-sec --mb-adjust">
         <h2 class="front-sec__ttl">過去の記事</h2>
-<div class="archive-accordion">
-  <?php
-  // アコーディオンの親と子を表示する関数
-  function display_archive_accordion( $year, $open_year = null ) {
-      // 初期状態で開くかどうかを判定
-      $is_open = ($year === $open_year);
+        <div class="archive-accordion">
+          <?php
+// アコーディオンの親と子を表示する関数
+function display_archive_accordion( $year, $open_years = array() ) {
+    // 初期状態で開くかどうかを判定
+    $is_open = in_array($year, $open_years);
 
-      // 親要素（年単位のアーカイブ）
-      echo "<div class='accordion-item'>";
-      echo "<button class='accordion-header' data-year='{$year}'>";
-      echo "{$year}年 <span class='icon'>"  . ($is_open ? "×" : "+") . "</span>";
-      echo "</button>";
-      echo "<div class='accordion-content' id='accordion-content-{$year}' style='display: " . ($is_open ? "block" : "none") . ";'>";
+    // 親要素（年単位のアーカイブ）
+    echo "<div class='accordion-item'>";
+    echo "<button class='accordion-header' data-year='{$year}'>";
+    echo "{$year}年 <span class='icon'>" . ($is_open ? "×" : "+") . "</span>";
+    echo "</button>";
+    echo "<div class='accordion-content' id='accordion-content-{$year}' style='display: " . ($is_open ? "block" : "none") . ";'>";
 
-      // 子要素（月単位のアーカイブ）
-      // フィルター関数を変数化
-      $filter_function = function ( $where ) use ( $year ) {
-          return $where . " AND YEAR(post_date) = {$year}";
-      };
+    // 子要素（月単位のアーカイブ）
+    // フィルター関数を変数化
+    $filter_function = function ( $where ) use ( $year ) {
+        return $where . " AND YEAR(post_date) = {$year}";
+    };
 
-      add_filter( 'getarchives_where', $filter_function );
-      wp_get_archives(
-          array(
-              'type'            => 'monthly',
-              'show_post_count' => true,
-              'year'            => $year,
-          )
-      );
-      remove_filter( 'getarchives_where', $filter_function );
+    add_filter( 'getarchives_where', $filter_function );
+    wp_get_archives(
+        array(
+            'type'            => 'monthly',
+            'show_post_count' => true,
+            'year'            => $year,
+        )
+    );
+    remove_filter( 'getarchives_where', $filter_function );
 
-      echo "</div>"; // .accordion-content
-      echo "</div>"; // .accordion-item
-  }
+    echo "</div>"; // .accordion-content
+    echo "</div>"; // .accordion-item
+}
 
-  // 2024年のアーカイブを開いておく設定
-  $open_year = 2024;
+// 取得可能な最も新しい年を動的に取得（例えば最新の投稿から）
+$latest_year = date('Y');
 
-  // 2024年のアーカイブ
-  display_archive_accordion( 2024, $open_year );
+// 初期状態で開きたい年を配列で指定
+$open_years = array();
+if ($latest_year >= 2025) {
+    $open_years[] = 2025;
+}
+$open_years[] = 2024; // 2024年を追加
 
-  // 2023年のアーカイブ
-  display_archive_accordion( 2023, $open_year );
+// 最新のアーカイブを表示
+for ($year = $latest_year; $year >= 2022; $year--) {
+    display_archive_accordion($year, $open_years);
+}
 
-  // 2022年のアーカイブ
-  display_archive_accordion( 2022, $open_year );
-  ?>
-</div>
+          ?>
+        </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
@@ -187,8 +191,7 @@ if(is_tag()) { $term = get_queried_object(); }
               'taxonomy' => 'post_tag',
               'hide_empty' => true, // 空のタグを除外
               'orderby' => 'count',   // 投稿数で並び替え
-              'order' => 'DESC',      // 降順（多い順）
-              'number' => 10,       // 上位10個だけ取得
+              'order' => 'DESC'      // 降順（多い順）
           ) );
 
           // タグごとの名前と投稿数をリスト表示
