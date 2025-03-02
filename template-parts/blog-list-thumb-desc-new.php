@@ -39,37 +39,6 @@ wp_reset_postdata();
 ?>
 
 <?php if ( is_home() || is_front_page() ) : ?>
-  <h2 class="front-sec__ttl --has-mt">最近更新した記事（技術的な知見）</h2>
-    <div class="front-sec__text front-sec__flex">
-    <?php
-    $my_query_rand = new WP_Query(
-      array(
-        'post_type'      => 'post',
-        'posts_per_page' => $per_num,
-        'orderby'        => 'modified',
-        'post__not_in'   => $post_ids,
-        'category_name'  => 'tech-insights' // ここでカテゴリーを指定
-      )
-    );
-    ?>
-
-    <?php
-    if ( $my_query_rand->have_posts() ) :
-      while ( $my_query_rand->have_posts() ) :
-        $my_query_rand->the_post();
-    ?>
-      <div class="all-article__link front-sec__flex-item">
-        <?php echo get_template_part("template-parts/blog-list"); ?>
-      </div>
-    <?php
-      endwhile;
-    endif;
-    wp_reset_postdata();
-    ?>
-    </div>
-<?php endif; ?>
-
-<?php if ( is_home() || is_front_page() ) : ?>
   <h2 class="front-sec__ttl --has-mt">最近更新した記事</h2>
     <div class="front-sec__text front-sec__flex">
     <?php

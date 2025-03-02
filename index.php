@@ -2,6 +2,11 @@
 get_header();
 if(is_tag()) { $term = get_queried_object(); } 
 ?>
+<?php if (is_date() && get_query_var('year') == 2025 && get_query_var('monthnum') == 3) : ?>
+  <div class="callender-img front-container">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/202503.jpeg" alt="2025年3月のカレンダー画像">
+  </div>
+<?php endif; ?>  
 <main class="front-container">
   <div class="pc-left-container">
     <div class="search-form-wrap --sp">
