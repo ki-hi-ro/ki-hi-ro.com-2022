@@ -2,12 +2,13 @@
   <h2 class="front-sec__ttl --mt-0">タグ</h2>
   <div class="front-sec__text">          
     <?php
-    $tags = get_terms( array(
-        'taxonomy' => 'post_tag',
+    $custom_order = array(381,227); // 並び順を指定するタグID
+    $tags = get_terms(array(
+        'taxonomy'   => 'post_tag',
         'hide_empty' => true,
-        'orderby' => 'count',
-        'order' => 'DESC'
-    ) );
+        'orderby'    => 'include',
+        'include'    => $custom_order  // 指定したIDの順番で取得
+    ));
 
     if ( ! empty( $tags ) && ! is_wp_error( $tags ) ) {
         echo '<div class="date-article-list">';
