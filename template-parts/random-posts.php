@@ -5,7 +5,7 @@
   $my_query_random = new WP_Query(
     array(
       'post_type' => 'post',
-      'posts_per_page' => 10,
+      'posts_per_page' => 5,
       'orderby' => 'rand',
       'post__not_in'   => array_merge(array(3874), $post_ids), // main-query.php の投稿を除外
     )
