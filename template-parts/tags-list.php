@@ -2,7 +2,7 @@
   <h2 class="front-sec__ttl">タグ</h2>
   <div class="front-sec__text">          
     <?php
-    $custom_order = array("タスク管理アプリ開発", "自分の考え", "仕事", "ライフハック"); // 並び順を指定するタグ名
+    $custom_order = array("タスク管理アプリ開発", "SQL", "ChatGPT", "ポートフォリオ", "pentaho", "Rails", "自分の考え", "仕事", "ライフハック", "転職", "青春18きっぷ", "プログラミング", "TypeScript", "Java", "projava", "JavaScript", "Python", "git", "WordPress", "まる", "職務経歴", "Excel VBA", "Power BI", "旅行", "ワンオク", "React", "Vue.js", "サイト制作", "HTML / CSS", "jQuery", "フリーランス", "TOEIC", "基本情報技術者"); // 並び順を指定するタグ名
     $tags = get_terms(array(
         'taxonomy'   => 'post_tag',
         'hide_empty' => true,
