@@ -11,7 +11,7 @@
                         $tags = get_the_terms(get_the_ID(), 'post_tag');
                         if ($tags && !is_wp_error($tags)) {
                             $first_tag = reset($tags); // 最初のタグを取得
-                            echo '<a href="' . esc_url(get_tag_link($first_tag->term_id)) . '">' . esc_html($first_tag->name) . '</a><span> : </span>';
+                            echo '<a href="' . esc_url(get_tag_link($first_tag->term_id)) . '">' . esc_html($first_tag->name) . '</a><span> ＞ </span>';
                         }
                         ?><a href="<?php the_permalink(); ?>"><?php echo esc_html(get_the_title()); ?></a>
                     </div>
