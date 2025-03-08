@@ -44,7 +44,7 @@ if(is_tag()) {
       $article_list_ttl = "記事";
 
       if (is_page("all-article")) {
-          $article_list_ttl = "すべての";
+          $article_list_ttl = "これまでに書いた";
       } elseif (is_tag() && $term) {
           $article_list_ttl = esc_html($term->name) . "についての";
       } elseif (is_date()) {
