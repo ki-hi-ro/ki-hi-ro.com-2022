@@ -1,5 +1,5 @@
 <section class="front-sec">
-  <h2 class="front-sec__ttl --mt-0">タグ</h2>
+  <h2 class="front-sec__ttl">タグ</h2>
   <div class="front-sec__text">          
     <?php
     $custom_order = array("タスク管理アプリ開発", "自分の考え", "仕事", "ライフハック"); // 並び順を指定するタグ名
