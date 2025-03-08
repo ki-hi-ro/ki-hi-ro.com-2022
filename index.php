@@ -46,7 +46,7 @@ if(is_tag()) { $term = get_queried_object(); }
         <?php if ( is_home() || is_front_page() ) : ?>
           <h2 class="front-sec__ttl">最近書いた記事</h2>
           <div class="front-sec__text front-sec__flex">
-            <?php echo get_template_part("template-parts/new-post"); ?>
+            <?php echo get_template_part("template-parts/new"); ?>
           </div>
         <?php endif; ?>
 

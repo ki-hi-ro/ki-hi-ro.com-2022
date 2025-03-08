@@ -1,16 +1,18 @@
 <?php
 $term_slug = "";
+$post_ids = array();
+
 if(is_tag()) {
   $term = get_queried_object();
   $term_slug = $term->slug;
 }
-
 $per_num = -1;
 $order_pram = 'date';
-if ( is_home() || is_front_page() ) :
-  $per_num = 10;//最近書いた記事、最近更新した記事の表示数
+
+if ( is_home() || is_front_page() ) {
+  $per_num = 10;
   $order_pram = 'date';
-endif;
+}
   $my_query = new WP_Query(
     array(
       'post_type'      => 'post',
@@ -25,13 +27,13 @@ if ( $my_query->have_posts() ) :
   while ( $my_query->have_posts() ) :
     $my_query->the_post();
 ?>
-<div class="all-article__link front-sec__flex-item">
-  <?php
-    $post_id = $post->ID;
-    array_push($post_ids, $post_id);
-    echo get_template_part("template-parts/blog-list"); 
-  ?>
-</div>
+    <div class="all-article__link front-sec__flex-item">
+      <?php
+        $post_id = $post->ID;
+        array_push($post_ids, $post_id);
+        echo get_template_part("template-parts/blog-list"); 
+      ?>
+    </div>
 <?php
     endwhile;
   endif;
