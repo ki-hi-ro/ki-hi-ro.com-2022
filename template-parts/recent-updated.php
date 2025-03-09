@@ -1,5 +1,5 @@
 <?php global $post_ids; ?>
-<h2 class="front-sec__ttl --has-mt">最近更新した記事</h2>
+<h2 class="front-sec__ttl --has-mt --sp-center">最近更新した記事</h2>
 <div class="front-sec__text front-sec__flex">
 <?php
   $my_query_modified = new WP_Query(

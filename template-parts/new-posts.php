@@ -30,7 +30,7 @@ if (!empty($tag_query)) {
 $my_query = new WP_Query($args);
 ?>
 
-<h2 class="front-sec__ttl">最近書いた記事</h2>
+<h2 class="front-sec__ttl --sp-center">最近書いた記事</h2>
 <div class="front-sec__text front-sec__flex">
 <?php
 if ($my_query->have_posts()) :

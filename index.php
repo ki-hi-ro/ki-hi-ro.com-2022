@@ -15,7 +15,7 @@ if(is_tag()) {
 <main class="front-container">
   <div class="pc-left-container">
     <div class="search-form-wrap --sp">
-      <?php get_search_form(); ?>
+      <?php //get_search_form(); ?>
     </div>
 
     <section class="front-sec">
@@ -57,7 +57,7 @@ if(is_tag()) {
       ?>
 
       <?php if (!$is_front && !is_search()) : ?>
-        <h2 class="front-sec__ttl"><?php echo $article_list_ttl; ?>記事</h2>
+        <h2 class="front-sec__ttl --sp-center"><?php echo $article_list_ttl; ?>記事</h2>
         <div class="front-sec__text front-sec__flex">
           <?php
           if (is_date()) {

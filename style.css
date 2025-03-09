@@ -1293,7 +1293,6 @@ a.top-contents__card.--blog {
 
 .page p a {
   text-decoration: none;
-  font-weight: 600;
 }
 
 .page article ul {
@@ -4905,6 +4904,10 @@ h3#reply-title {
 @media (max-width: 767px) {
   .pc-left-container h2.front-sec__ttl, .pc-left-container .single h3.front-sec__ttl, .single .pc-left-container h3.front-sec__ttl {
     margin-bottom: 25px;
+  }
+  .pc-left-container h2.front-sec__ttl.--sp-center, .pc-left-container .single h3.front-sec__ttl.--sp-center, .single .pc-left-container h3.front-sec__ttl.--sp-center {
+    text-align: center;
+    margin: 30px 0;
   }
 }
 

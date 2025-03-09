@@ -1,5 +1,5 @@
 <?php global $post_ids; ?>
-<h2 class="front-sec__ttl --has-mt">ランダムに表示される記事</h2>
+<h2 class="front-sec__ttl --has-mt --sp-center">ランダムに表示される記事</h2>
 <div class="front-sec__text front-sec__flex">
 <?php
   $my_query_random = new WP_Query(
