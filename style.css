@@ -3818,9 +3818,10 @@ body.fixed {
 }
 
 footer {
+  display: none;
   background-color: #202020;
   color: #fff;
-  padding: 15px;
+  padding: 18px;
   text-align: center;
 }
 

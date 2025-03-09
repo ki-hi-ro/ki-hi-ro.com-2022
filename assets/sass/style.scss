@@ -3645,9 +3645,10 @@ body.fixed {
 }
 
 footer {
+  display: none;
   background-color: #202020;
   color: $white;
-  padding: 15px;
+  padding: 18px;
   text-align: center;
   .front-container {
     display: block;
