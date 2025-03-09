@@ -12,15 +12,11 @@
 <script>
 $(document).ready(function() {
     let categories = {
-        "旅行": ["旅行", "青春18きっぷ"],
         "プロジェクト": ["タスク管理アプリ開発"],
-        "音楽": ["ワンオク"],
-        "プログラミング": ["Python"],
-        "データベース": ["SQL", "データ処理"],
+        "旅行": ["青春18きっぷ"],
     };
 
     let slugMapping = {
-        "旅行": "a-trip",
         "青春18きっぷ": "b-seishun-18-kippu",
     };
 
