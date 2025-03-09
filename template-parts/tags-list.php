@@ -13,11 +13,11 @@
 $(document).ready(function() {
     let categories = {
         "プロジェクト": ["タスク管理アプリ開発"],
-        "旅行": ["青春18きっぷ"],
+        // "旅行": ["青春18きっぷ"],
     };
 
     let slugMapping = {
-        "青春18きっぷ": "b-seishun-18-kippu",
+        // "青春18きっぷ": "b-seishun-18-kippu",
     };
 
     let openCategories = ["旅行", "プロジェクト", "音楽", "プログラミング", "データベース"]; // 最初に開いておきたいカテゴリ
