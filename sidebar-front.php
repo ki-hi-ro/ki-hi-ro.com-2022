@@ -5,6 +5,3 @@
         <?php get_template_part('template-parts/tags-list'); ?>
     </section>
 </div>
-
-<?php //get_template_part('template-parts/accordion-script'); ?>
-<?php //get_template_part('template-parts/accordion-style'); ?>
