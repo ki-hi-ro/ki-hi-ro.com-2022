@@ -12,11 +12,12 @@
 <script>
 $(document).ready(function() {
     let categories = {
-        "思考・アイディア": ["自分の考え", "ライフハック", "本"],
-        "旅": ["青春18きっぷ", "旅行"],
+        "思考・アイディア": ["自分の考え", "本", "ライフハック"],
+        "旅と人生": ["青春18きっぷ", "旅行", "まる"],
         "仕事": ["PythonのETL作成", "今後のキャリアプラン", "成果を出すためのTips", "失敗と学び", "挫折と希望", "自分の弱み"],
         "個人開発": ["タスク管理アプリ開発"],
         "プログラミング": ["Python", "Java", "Rails", "Vue.js", "React", "TypeScript", "SQL"],
+        "サイト制作": ["サイト制作", "WordPress"],
     };
 
     let slugMapping = {
@@ -26,9 +27,10 @@ $(document).ready(function() {
         "ライフハック": "life-hack",
         "旅行": "a-trip",
         "青春18きっぷ": "b-seishun-18-kippu",
+        "サイト制作": "site",
     };
 
-    let openCategories = ["個人開発", "仕事", "プログラミング", "思考・アイディア", "旅"]; // 最初に開いておきたいカテゴリ
+    let openCategories = ["個人開発", "仕事", "思考・アイディア", "旅と人生"]; // 最初に開いておきたいカテゴリ
     let container = $("#accordion-container");
 
     $.each(categories, function(category, tags) {
