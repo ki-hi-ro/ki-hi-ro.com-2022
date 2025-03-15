@@ -12,12 +12,13 @@
 <script>
 $(document).ready(function() {
     let categories = {
+        "個人開発": ["Django×Reactのタスク管理アプリ開発", "FizzBuzz"],
+        "プログラミング": ["JavaScript", "Java", "git", "npm", "React", "TypeScript", "Python", "Rails", "Vue.js", "SQL"],
+        "旅と人生": ["青春18きっぷ", "まる", "ワンオク"],
+        "良質なインプット": ["ゆらぎ", "YouTube", "音楽", "本"],
         "思考・アイディア": ["自分の考え", "ライフハック"],
-        "旅と人生": ["青春18きっぷ", "まる", "有益なYouTube動画"],
         "仕事": ["PythonのETL作成", "今後のキャリアプラン", "成果を出すためのTips"],
-        "個人開発": ["タスク管理アプリ開発"],
-        "プログラミング": ["Python", "Java", "Rails", "Vue.js", "React", "TypeScript", "SQL"],
-        // "サイト制作": ["サイト制作", "WordPress"], 
+        // "サイト制作": ["サイト制作", "WordPress"],
     };
 
     let slugMapping = {
@@ -28,9 +29,13 @@ $(document).ready(function() {
         "旅行": "a-trip",
         "青春18きっぷ": "b-seishun-18-kippu",
         "サイト制作": "site",
+        "Django×Reactのタスク管理アプリ開発": "djangoxreactのタスク管理アプリ開発",
+        "YouTube": "youtube",
+        "FizzBuzz": "fizzbuzz",
+        "JavaScript": "javascript"
     };
 
-    let openCategories = ["個人開発", "仕事", "思考・アイディア", "旅と人生", "プログラミング"]; // 最初に開いておきたいカテゴリ
+    let openCategories = ["個人開発", "仕事", "思考・アイディア", "旅と人生", "プログラミング", "良質なインプット"]; // 最初に開いておきたいカテゴリ
     let container = $("#accordion-container");
 
     $.each(categories, function(category, tags) {
