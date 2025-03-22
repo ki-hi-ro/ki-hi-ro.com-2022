@@ -12,12 +12,12 @@
 <script>
 $(document).ready(function() {
     let categories = {
-        "個人開発": ["Django×Reactのタスク管理アプリ開発", "FizzBuzz"],
-        "プログラミング": ["JavaScript", "Java", "git", "npm", "React", "TypeScript", "Python", "Rails", "Vue.js", "SQL"],
-        "旅と人生": ["青春18きっぷ", "まる", "ワンオク"],
-        "良質なインプット": ["ゆらぎ", "YouTube", "音楽", "本"],
         "思考・アイディア": ["自分の考え", "ライフハック"],
-        "仕事": ["PythonのETL作成", "今後のキャリアプラン", "成果を出すためのTips"],
+        "良質なインプット": ["本", "ゆらぎ", "YouTube", "音楽"],
+        "仕事": ["転職", "今後のキャリアプラン", "成果を出すためのTips", "PythonのETL作成"],
+        "個人開発": ["Django×Reactのタスク管理アプリ開発", "FizzBuzz"],
+        "プログラミング": ["Python", "JavaScript", "Java", "git", "npm", "React", "TypeScript", "Rails", "Vue.js", "SQL"],
+        "旅と人生": ["青春18きっぷ", "まる", "ワンオク"],
         // "サイト制作": ["サイト制作", "WordPress"],
     };
 

@@ -157,6 +157,7 @@ h3 {
 
 .single .post__content ul {
   padding-left: 25px;
+  margin-top: -7px;
 }
 
 @media (min-width: 576px) {

@@ -59,6 +59,7 @@
   .post__content {
     ul {
       padding-left: 25px;
+      margin-top: -7px;
       @include mq(sm) {
         padding-left: 40px;
       }
