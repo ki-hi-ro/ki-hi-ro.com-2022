@@ -3839,12 +3839,12 @@ h3#reply-title {
 }
 
 .pc-left-container h2.front-sec__ttl {
-  margin-bottom: 21px;
+  margin-bottom: 16px;
   @media (max-width: 767px) {
     margin-bottom: 25px;
     &.--sp-center {
       text-align: center;
-      margin: 30px 0;
+      margin: 30px 0 25px;
     }
   }
   &.--has-mt {
