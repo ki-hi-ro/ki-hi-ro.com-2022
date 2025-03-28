@@ -19,7 +19,7 @@ $(document).ready(function() {
         // "プログラミング": ["Python", "JavaScript", "Java", "git", "npm", "React", "TypeScript", "Rails", "Vue.js", "SQL"],
         // "旅と人生": ["青春18きっぷ", "まる", "ワンオク"],
         // "サイト制作": ["サイト制作", "WordPress"],
-        "青春18きっぷ": ["青春18きっぷ"],
+        "青春18きっぷ": ["青春18きっぷ 2025年 春", "青春18きっぷ 2024年 冬", "青春18きっぷ 2024年 夏", "青春18きっぷ 2024年 春", "青春18きっぷ 2023年 冬", "青春18きっぷ 2023年 夏", "青春18きっぷ 2022年 冬"],
     };
 
     let slugMapping = {
@@ -33,7 +33,14 @@ $(document).ready(function() {
         "Django×Reactのタスク管理アプリ開発": "djangoxreactのタスク管理アプリ開発",
         "YouTube": "youtube",
         "FizzBuzz": "fizzbuzz",
-        "JavaScript": "javascript"
+        "JavaScript": "javascript",
+        "青春18きっぷ 2023年 夏": "seishun-18-2023-summer",
+        "青春18きっぷ 2022年 冬": "seishun-18-2022-winter",
+        "青春18きっぷ 2023年 冬": "seishun-18-2023-winter",
+        "青春18きっぷ 2024年 春": "seishun-18-2024-spring",
+        "青春18きっぷ 2024年 夏": "seishun-18-2024-summer",
+        "青春18きっぷ 2024年 冬": "seishun-18-2024-winter",
+        "青春18きっぷ 2025年 春": "seishun-18-2025-spring",
     };
 
     let openCategories = ["青春18きっぷ"]; // 最初に開いておきたいカテゴリ
