@@ -12,13 +12,14 @@
 <script>
 $(document).ready(function() {
     let categories = {
-        "思考・アイディア": ["自分の考え", "ライフハック"],
+        // "思考・アイディア": ["自分の考え", "ライフハック"],
         // "良質なインプット": ["本", "ゆらぎ", "YouTube", "音楽"],
         // "仕事": ["転職", "今後のキャリアプラン", "成果を出すためのTips", "PythonのETL作成"],
-        "個人開発": ["Django×Reactのタスク管理アプリ開発", "FizzBuzz"],
+        // "個人開発": ["Django×Reactのタスク管理アプリ開発", "FizzBuzz"],
         // "プログラミング": ["Python", "JavaScript", "Java", "git", "npm", "React", "TypeScript", "Rails", "Vue.js", "SQL"],
-        "旅と人生": ["青春18きっぷ", "まる", "ワンオク"],
+        // "旅と人生": ["青春18きっぷ", "まる", "ワンオク"],
         // "サイト制作": ["サイト制作", "WordPress"],
+        "青春18きっぷ": ["青春18きっぷ"],
     };
 
     let slugMapping = {
@@ -35,7 +36,7 @@ $(document).ready(function() {
         "JavaScript": "javascript"
     };
 
-    let openCategories = []; // 最初に開いておきたいカテゴリ
+    let openCategories = ["青春18きっぷ"]; // 最初に開いておきたいカテゴリ
     let container = $("#accordion-container");
 
     $.each(categories, function(category, tags) {
@@ -77,7 +78,7 @@ $(document).ready(function() {
       border-bottom: 1px solid #ddd;
       display: flex;
       align-items: center;
-      font-size: 14px;
+      font-size: 15px;
   }
   .accordion-content {
       display: none;

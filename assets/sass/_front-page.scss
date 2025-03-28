@@ -53,9 +53,6 @@
     p {
       @extend .front-sec__ttl;
       font-size: 15px;
-      @include mq(lg) {
-        font-size: 16px;
-      }
     }
   }
   &__article-ttl {
