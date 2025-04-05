@@ -3854,21 +3854,24 @@ h3#reply-title {
 
 .home {
   .pc-left-container h2.front-sec__ttl {
-    margin-bottom: 16px;
+    margin-bottom: 7px;
     @media (max-width: 767px) {
       &.--sp-center {
-        margin-bottom: 25px;
+        margin-bottom: 18px;
       }
+    }
+    &.--has-mt {
+      margin-top: 8px;
     }
   }
 }
 
 .all-article__date {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .single .all-article__date {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .callender-img {
@@ -3879,5 +3882,21 @@ h3#reply-title {
     @include mq(md) {
       display: none;
     }
+  }
+}
+
+body::before {
+  @include mq(sm) {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    pointer-events: none; /* 枠がクリック操作などに干渉しないようにする */
+    z-index: 9999; /* 他の要素より上に表示する */
+    inset: 0; /* top, right, bottom, left すべて0 */
+    height: 100vh;
+    border: 5px solid rgb(197 216 200); /* 色付きの枠の太さと色 */
   }
 }

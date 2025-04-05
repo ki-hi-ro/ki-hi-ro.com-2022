@@ -3851,12 +3851,13 @@ footer nav {
 
 .header__container {
   margin: 0 auto;
-  padding: 20px 15px;
+  padding: 10px 15px;
   width: 100%;
   max-width: 1140px;
 }
 @media (min-width: 1200px) {
   .header__container {
+    padding: 20px 15px;
     width: 1170px;
     max-width: none;
   }
@@ -3898,12 +3899,14 @@ footer nav {
   z-index: 100;
 }
 .header__logo img {
-  padding-right: 10px;
-  height: 24px;
+  padding-right: 11px;
+  height: 28px;
 }
 
 .header__sitename-text {
-  line-height: 1.6;
+  font-size: 29px;
+  padding-bottom: 1px;
+  line-height: 1.8;
 }
 
 .header__ul {
@@ -4639,12 +4642,15 @@ h3#reply-title {
 }
 
 .home .pc-left-container h2.front-sec__ttl, .home .pc-left-container .single h3.front-sec__ttl, .single .home .pc-left-container h3.front-sec__ttl {
-  margin-bottom: 16px;
+  margin-bottom: 7px;
 }
 @media (max-width: 767px) {
   .home .pc-left-container h2.front-sec__ttl.--sp-center, .home .pc-left-container .single h3.front-sec__ttl.--sp-center, .single .home .pc-left-container h3.front-sec__ttl.--sp-center {
-    margin-bottom: 25px;
+    margin-bottom: 18px;
   }
+}
+.home .pc-left-container h2.front-sec__ttl.--has-mt, .home .pc-left-container .single h3.front-sec__ttl.--has-mt, .single .home .pc-left-container h3.front-sec__ttl.--has-mt {
+  margin-top: 8px;
 }
 
 .all-article__date {
@@ -4663,5 +4669,21 @@ h3#reply-title {
 @media (min-width: 768px) {
   .callender-img img {
     display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    pointer-events: none; /* 枠がクリック操作などに干渉しないようにする */
+    z-index: 9999; /* 他の要素より上に表示する */
+    inset: 0; /* top, right, bottom, left すべて0 */
+    height: 100vh;
+    border: 5px solid rgb(197, 216, 200); /* 色付きの枠の太さと色 */
   }
 }
