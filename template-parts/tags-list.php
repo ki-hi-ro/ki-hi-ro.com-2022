@@ -13,13 +13,13 @@
 $(document).ready(function() {
     let categories = {
         // "思考・アイディア": ["自分の考え", "ライフハック"],
-        // "良質なインプット": ["本", "ゆらぎ", "YouTube", "音楽"],
         // "仕事": ["転職", "今後のキャリアプラン", "成果を出すためのTips", "PythonのETL作成"],
         // "個人開発": ["Django×Reactのタスク管理アプリ開発", "FizzBuzz"],
         // "プログラミング": ["Python", "JavaScript", "Java", "git", "npm", "React", "TypeScript", "Rails", "Vue.js", "SQL"],
         // "旅と人生": ["青春18きっぷ", "まる", "ワンオク"],
         // "サイト制作": ["サイト制作", "WordPress"],
         "青春18きっぷ": ["青春18きっぷ 2025年 春", "青春18きっぷ 2024年 冬", "青春18きっぷ 2024年 夏", "青春18きっぷ 2024年 春", "青春18きっぷ 2023年 冬", "青春18きっぷ 2023年 夏", "青春18きっぷ 2022年 冬"],
+        "その他": ["ゆらぎ"],
     };
 
     let slugMapping = {
@@ -43,7 +43,7 @@ $(document).ready(function() {
         "青春18きっぷ 2025年 春": "seishun-18-2025-spring",
     };
 
-    let openCategories = ["青春18きっぷ"]; // 最初に開いておきたいカテゴリ
+    let openCategories = ["青春18きっぷ", "その他"]; // 最初に開いておきたいカテゴリ
     let container = $("#accordion-container");
 
     $.each(categories, function(category, tags) {
