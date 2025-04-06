@@ -1,9 +1,10 @@
 .header__container {
   margin: 0 auto;
-  padding: 20px 15px;
+  padding: 10px 15px;
   width: 100%;
   max-width: 1140px;
   @include mq(xl) {
+    padding: 20px 15px;
     width: 1170px;
     max-width: none;
   }
@@ -46,13 +47,15 @@
   align-items: center;
   z-index: 100;
   img {
-    padding-right: 10px;
-    height: 24px;
+    padding-right: 11px;
+    height: 28px;
   }
 }
 
 .header__sitename-text {
-  line-height: 1.6;
+  font-size: 29px;
+  padding-bottom: 1px;
+  line-height: 1.8;
 }
 
 .header__ul {
