@@ -4066,7 +4066,7 @@ footer nav {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 41px auto 0;
+  margin: 41px auto 12px;
   text-align: center;
   padding: 0 15px;
 }
@@ -4100,14 +4100,8 @@ footer nav {
 }
 
 .header__logo img {
-  padding-right: 11px;
-  height: 28px;
-}
-
-.header__sitename-text {
-  font-size: 29px;
-  padding-bottom: 1px;
-  line-height: 1.8;
+  padding-right: 10px;
+  height: 24px;
 }
 
 .header__ul {
