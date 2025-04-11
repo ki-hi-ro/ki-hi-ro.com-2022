@@ -4885,6 +4885,10 @@ h3#reply-title {
   margin-bottom: 17px;
 }
 
+.home .front-sec .front-sec__ttl {
+  margin-bottom: 10px;
+}
+
 .front-sec__ttl.--mt-0, .front-sec__text p.--mt-0 {
   margin-top: 0;
 }
