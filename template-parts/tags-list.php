@@ -97,7 +97,7 @@ $(document).ready(function() {
       margin: 4px 0; /* タグの余白を少し広げる */
   }
   .tag-item.--mb-0 {
-      margin-bottom: 2px; /* タグリストの最後の余白を調整 */
+      margin-bottom: 4px; /* タグリストの最後の余白を調整 */
   }
   .arrow {
       display: inline-block;
