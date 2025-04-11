@@ -12,10 +12,10 @@
 <script>
 $(document).ready(function() {
     let categories = {
-        // "思考・アイディア": ["自分の考え", "ライフハック"],
-        "良質なインプット": ["本", "ゆらぎ"],
-        "仕事": ["PythonのETL作成", "今後のキャリアプラン"],
-        "個人開発": ["Django×Reactのタスク管理アプリ開発"],
+        "思考・アイディア": ["自分の考え", "ライフハック"],
+        // "良質なインプット": ["本", "ゆらぎ"],
+        // "仕事": ["PythonのETL作成", "今後のキャリアプラン"],
+        // "個人開発": ["Django×Reactのタスク管理アプリ開発"],
         // "プログラミング": ["Python", "JavaScript", "Java", "git", "npm", "React", "TypeScript", "Rails", "Vue.js", "SQL"],
         // "旅と人生": ["青春18きっぷ", "まる", "ワンオク"],
         // "サイト制作": ["サイト制作", "WordPress"],
@@ -43,7 +43,7 @@ $(document).ready(function() {
         "青春18きっぷ 2025年 春": "seishun-18-2025-spring",
     };
 
-    let openCategories = ["青春18きっぷ", "その他"]; // 最初に開いておきたいカテゴリ
+    let openCategories = ["思考・アイディア"]; // 最初に開いておきたいカテゴリ
     let container = $("#accordion-container");
 
     $.each(categories, function(category, tags) {
