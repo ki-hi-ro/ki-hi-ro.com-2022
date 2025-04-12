@@ -65,7 +65,7 @@ if(is_tag()) {
           ?>
         </div>
       <?php endif; ?>
-    </section>
+    </section>    
     
     <!-- 「過去の記事一覧ページ」では非表示 -->
     <?php if (!is_page('all-article')) : ?>
@@ -77,7 +77,13 @@ if(is_tag()) {
       <style>
       .all-articles-link {
           width: 100%;
-          margin: -9px 0 66px;
+          margin: 0 0 66px;
+      }
+
+      @media (max-width: 767px) {
+        .all-articles-link {
+          margin: -9px 0 42px;
+        }
       }
 
       .btn-all-articles {
@@ -107,9 +113,9 @@ if(is_tag()) {
     <?php endif; ?>
   </div>
 
-  <!-- <div class="search-form-wrap --sp">
-    <?php //get_search_form(); ?>    
-  </div>   -->
+  <div class="search-form-wrap --sp">
+    <?php get_search_form(); ?>    
+  </div>  
 
   <?php get_sidebar('front'); ?>
 </main>

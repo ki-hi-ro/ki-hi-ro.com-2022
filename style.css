@@ -3737,6 +3737,12 @@ body.fixed {
   margin: 30px auto 50px;
 }
 
+@media (min-width: 768px) {
+  .search-form-wrap .search-form {
+    margin: 21px auto 50px;
+  } 
+}
+
 @media (min-width: 576px) {
   .search-form-wrap.--sp {
     display: none;
