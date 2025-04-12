@@ -4723,7 +4723,8 @@ footer nav {
 }
 
 .all-article__main {
-  display: flex;
+  display: block;
+  width: 100%;
 }
 
 .all-article__desc {
@@ -4886,7 +4887,7 @@ h3#reply-title {
 }
 
 .home .front-sec .front-sec__ttl {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .front-sec__ttl.--mt-0, .front-sec__text p.--mt-0 {
@@ -4909,12 +4910,18 @@ h3#reply-title {
 
 @media (max-width: 767px) {
   .home .pc-left-container h2.front-sec__ttl.--sp-center, .home .pc-left-container .single h3.front-sec__ttl.--sp-center, .single .home .pc-left-container h3.front-sec__ttl.--sp-center {
-    margin-bottom: 18px;
+    margin-bottom: 27px;
   }
 }
 
 .home .pc-left-container h2.front-sec__ttl.--has-mt, .home .pc-left-container .single h3.front-sec__ttl.--has-mt, .single .home .pc-left-container h3.front-sec__ttl.--has-mt {
   margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+  .home .pc-left-container h2.front-sec__ttl.--has-mt, .home .pc-left-container .single h3.front-sec__ttl.--has-mt, .single .home .pc-left-container h3.front-sec__ttl.--has-mt {
+    margin-top: 19px;
+  } 
 }
 
 .all-article__date {
