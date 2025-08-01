@@ -188,8 +188,16 @@ h3 {
 @media (min-width: 1200px) {
   .wp-block-embed iframe {
     width: 100%;
+    margin-bottom: 6px;
+  }
+  .is-provider-youtube iframe {
     height: 383px;
   }
+}
+
+.wp-embed-featured-image {
+  margin-bottom: 0;
+  margin-top: 9px;
 }
 
 @media (min-width: 768px) {
@@ -2156,6 +2164,7 @@ div#ez-toc-container {
 
 div#ez-toc-container ul.ez-toc-list a {
   font-size: 16px;
+  line-height: 2.2;
 }
 
 .single ul li,
@@ -4813,7 +4822,7 @@ footer nav {
   .admin-bar #sidebar ul.ez-toc-list.ez-toc-list-level-1 {
     overflow: scroll;
     height: 94vh;
-    padding-top: 43px;
+    padding-top: 9px;
   }
 }
 
@@ -4893,7 +4902,7 @@ h3#reply-title {
 }
 
 .home .front-sec .front-sec__ttl {
-  margin-bottom: 14px;
+  margin-bottom: 19px;
 }
 
 .front-sec__ttl.--mt-0, .front-sec__text p.--mt-0 {
@@ -4948,4 +4957,45 @@ h3#reply-title {
   .callender-img img {
     display: none;
   }
+}
+
+@media (min-width: 768px) {
+  .single div#wpadminbar {
+    background: none;
+  }
+}
+
+@media (max-width: 782px) {
+  #wp-toolbar>ul>li#wp-admin-bar-new-post,
+  #wp-toolbar>ul>li#wp-admin-bar-view-site,
+  #wp-toolbar>ul>li#wp-admin-bar-edit-post {
+      display: block;
+      padding-left: 20px;
+  }
+}
+
+#wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item,
+.admin-bar #wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item {
+  background: #1d2327;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .admin-bar #wpadminbar li#wp-admin-bar-updates,
+  .admin-bar #wpadminbar li#wp-admin-bar-wp-logo {
+      display: block;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar #wp-toolbar>ul>li {
+      display: block;
+      padding-left: 20px;
+  }
+}
+
+.page-template-page-tag-hierarchy #wpadminbar,
+.search #wpadminbar,
+.all-article #wpadminbar {
+  display: none;
 }

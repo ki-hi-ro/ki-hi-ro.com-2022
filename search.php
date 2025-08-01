@@ -30,7 +30,7 @@ if(is_tag()) {
           <p>該当する記事はありませんでした。</p>
           <?php endif ; ?>
       </div>
-      <a class="front-sec__more" href="<?php echo home_url(); ?>">トップページはこちら</a>
+      <!-- <a class="front-sec__more" href="<?php echo home_url(); ?>">トップページはこちら</a> -->
     </section>
   </div>
   <div class="pc-right-container">
@@ -43,12 +43,12 @@ if(is_tag()) {
     <?php // echo get_template_part("template-parts/date-article-list"); ?>
   </section> -->
   
-  <section class="front-sec">
+  <!-- <section class="front-sec">
     <h2 class="front-sec__ttl">タグ</h2>
     <div class="front-sec__text">
       <?php wp_tag_cloud('format=list&smallest=16&largest=16&unit=px&number=0&exclude=116'); ?>
     </div>
-  </section>
+  </section> -->
 
   </div>
 </main>

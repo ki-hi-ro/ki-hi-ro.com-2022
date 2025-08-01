@@ -153,3 +153,118 @@ add_action('wp_head','my_meta_ogp');
 
       return $content;
     }
+
+    function customize_admin_bar($wp_admin_bar) {
+      if (!is_user_logged_in()) return;
+  
+      global $post;
+  
+      // -------------------------
+      // タグページ：タグを編集だけ表示
+      // -------------------------
+      if (is_tag()) {
+          $wp_admin_bar->remove_menu('wp-logo');
+          $all_nodes = $wp_admin_bar->get_nodes();
+          if ($all_nodes && (is_array($all_nodes) || is_object($all_nodes))) {
+              foreach ($all_nodes as $node) {
+                  $wp_admin_bar->remove_node($node->id);
+              }
+          }
+  
+          $term = get_queried_object();
+          if ($term && isset($term->term_id)) {
+              $edit_url = admin_url('term.php?taxonomy=post_tag&tag_ID=' . $term->term_id);
+              if (current_user_can('edit_term', $term->term_id)) {
+                  $wp_admin_bar->add_node([
+                      'id'    => 'edit-tag',
+                      'title' => 'タグを編集',
+                      'href'  => $edit_url,
+                  ]);
+              }
+          }
+          return;
+      }
+  
+      // -------------------------
+      // 検索結果ページ：Wロゴのみ表示
+      // -------------------------
+      if (is_search()) {
+          $all_nodes = $wp_admin_bar->get_nodes();
+          if ($all_nodes && (is_array($all_nodes) || is_object($all_nodes))) {
+              foreach ($all_nodes as $node) {
+                  if ($node->id !== 'wp-logo') {
+                      $wp_admin_bar->remove_node($node->id);
+                  }
+              }
+          }
+          return;
+      }
+  
+      // -------------------------
+      // その他のページ：初期化
+      // -------------------------
+      $all_nodes = $wp_admin_bar->get_nodes();
+      if ($all_nodes && (is_array($all_nodes) || is_object($all_nodes))) {
+          foreach ($all_nodes as $node) {
+              $wp_admin_bar->remove_node($node->id);
+          }
+      }
+  
+      // -------------------------
+      // 管理画面：TOPページへのリンクのみ
+      // -------------------------
+      if (is_admin()) {
+          $wp_admin_bar->add_node([
+              'id'    => 'view-site',
+              'title' => 'サイトを見る',
+              'href'  => home_url('/'),
+          ]);
+          return;
+      }
+  
+      // -------------------------
+      // トップページ：新規投稿リンク
+      // -------------------------
+      if (is_front_page() || is_home()) {
+          if (current_user_can('edit_posts')) {
+              $wp_admin_bar->add_node([
+                  'id'    => 'new-post',
+                  'title' => '新規投稿',
+                  'href'  => admin_url('post-new.php'),
+              ]);
+          }
+      }
+  
+      // -------------------------
+      // 個別投稿ページ：投稿を編集
+      // -------------------------
+      elseif (is_single() && isset($post) && isset($post->ID)) {
+          if (current_user_can('edit_post', $post->ID)) {
+              $wp_admin_bar->add_node([
+                  'id'    => 'edit-post',
+                  'title' => '投稿を編集',
+                  'href'  => get_edit_post_link($post->ID),
+              ]);
+          }
+      }
+  }
+  add_action('admin_bar_menu', 'customize_admin_bar', 999);
+  
+  function prevent_admin_bar_focus_styles() {
+    echo '<style>
+      #wpadminbar .ab-item:focus,
+      #wpadminbar .ab-item:active {
+        background: none !important;
+        box-shadow: none !important;
+        color: inherit !important;
+        outline: none !important;
+      }
+    </style>';
+  }
+  add_action('wp_head', 'prevent_admin_bar_focus_styles');
+  add_action('admin_head', 'prevent_admin_bar_focus_styles');  
+  
+  
+    
+  
+  

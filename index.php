@@ -28,6 +28,10 @@ if(is_tag()) {
         </div>
       <?php endif; ?>
 
+      <div class="search-form-wrap --sp">
+        <?php get_search_form(); ?>
+      </div>      
+
       <?php 
       $is_front = is_home() || is_front_page();
       if ($is_front) : 
@@ -69,11 +73,11 @@ if(is_tag()) {
     
     <!-- 「過去の記事一覧ページ」では非表示 -->
     <?php if (!is_page('all-article')) : ?>
-      <div class="all-articles-link">
+      <!-- <div class="all-articles-link">
         <a href="https://ki-hi-ro.com/all-article/" class="btn-all-articles">
           過去の記事一覧
         </a>
-      </div>
+      </div> -->
       <style>
       .all-articles-link {
           width: 100%;
@@ -112,10 +116,6 @@ if(is_tag()) {
       </style>      
     <?php endif; ?>
   </div>
-
-  <div class="search-form-wrap --sp">
-    <?php get_search_form(); ?>    
-  </div>  
 
   <?php get_sidebar('front'); ?>
 </main>
