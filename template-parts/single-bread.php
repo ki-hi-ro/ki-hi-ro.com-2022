@@ -4,7 +4,7 @@
       <span property="name">TOP</span>
     </a>
     <meta property="position" content="1">
-  </span> &gt;
+  </span> ＞
 
   <!-- <span property="itemListElement" typeof="ListItem">
     <a property="item" typeof="WebPage" title="これまでに書いた記事" href="<?php echo home_url("all-article"); ?>" class="taxonomy category">
