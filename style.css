@@ -3980,6 +3980,10 @@ footer nav {
   .front-sec__flex {
     overflow: scroll;
     height: 281px;
+    padding-left: 0;
+  }
+  .front-sec__flex li {
+    font-size: 18px;
   }
 }
 
