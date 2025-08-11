@@ -3979,7 +3979,7 @@ footer nav {
 @media (max-width: 767px) {
   .front-sec__flex {
     overflow: scroll;
-    height: 281px;
+    height: 198px;
     padding-left: 0;
   }
   .front-sec__flex li {
