@@ -3976,6 +3976,13 @@ footer nav {
   margin-bottom: 10px;
 }
 
+@media (max-width: 767px) {
+  .front-sec__flex {
+    overflow: scroll;
+    height: 283px;
+  }
+}
+
 @media (min-width: 992px) {
   .front-sec__flex {
     flex-direction: row;
