@@ -2,8 +2,8 @@
 // template-parts/_tag-names.php
 return [
     'shopping_list_app',
-    '映画と人生',
     '旅ログ',
+    '映画と人生',
     // '',
     // '',
     // '',
