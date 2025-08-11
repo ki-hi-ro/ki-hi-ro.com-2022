@@ -3978,24 +3978,52 @@ footer nav {
 
 @media (max-width: 767px) {
   .front-sec__flex {
+    padding-left: 0;
+  }
+  .home .front-sec__flex {
     overflow: scroll;
     height: 198px;
-    padding-left: 0;
+    padding-right: 10px;
   }
   .front-sec__flex li {
     font-size: 18px;
+    margin-bottom: 6px;
   }
+}
+
+.front-sec__flex li a {
+  display: block;
+  width: 100%;
+}
+
+.tag-list-sidebar .front-sec__flex {
+  padding-left: 0;
+}
+
+.tag-list-sidebar .front-sec__flex li {
+  width: 100%;
+  list-style: none;
+  margin-bottom: 6px;
 }
 
 @media (max-width: 767px) {
   .tag-list .front-sec__flex {
-    height: 189px;
+    height: 176px;
   }
+  .tag-list-sidebar {
+   display: none; 
+  }  
 }
 
 @media (min-width: 768px) {
   .tag-list {
     display: none;
+  }
+  .tag-list-sidebar .front-sec__ttl {
+    margin-bottom: 0px;
+  }
+  .tag-list-sidebar ul.front-sec__text.front-sec__flex {
+    margin-top: 8px;
   }
 }
 

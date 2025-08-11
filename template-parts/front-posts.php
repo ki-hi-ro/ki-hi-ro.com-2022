@@ -2,16 +2,16 @@
 // 最近書いた記事
 get_template_part('template-parts/new-posts');
 
-// ▼タグ一覧追加
-$tags = get_tags();
-if ($tags) :
-    echo '<div class="tag-list">';
-    echo '<h2 class="front-sec__ttl --sp-center">タグ一覧</h2>';
-    echo '<ul class="front-sec__text front-sec__flex">';
-    foreach ($tags as $tag) {
-        echo '<li><a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a></li>';
-    }
-    echo '</ul>';
-    echo '</div>';
-endif;
+$common_names = require locate_template('template-parts/_tag-names.php');
+
+// スマホ用の見た目（クラス）で同じパーツを再利用
+get_template_part('template-parts/tag-list', null, [
+  'container_class' => 'tag-list',                  // SP用
+  'ul_class'        => 'front-sec__text front-sec__flex',
+  'title_tag'       => 'h2',
+  'title_text'      => 'タグ一覧',
+  'order_mode'      => 'custom',                    // 気分で順序を変えたいとき
+  'custom_names'    => $common_names,         // ★名前指定
+  'hide_empty'      => false,
+]);
 ?>
