@@ -2,12 +2,8 @@
 // template-parts/_tag-names.php
 return [
     'shopping_list_app',
-    '2025年夏 青春18きっぷ',
-    'Python',
-    '社会問題',
-    '行動指針',
-    // '',
-    // '',
+    '映画と人生',
+    '旅ログ',
     // '',
     // '',
     // '',
