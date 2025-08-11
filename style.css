@@ -3987,6 +3987,12 @@ footer nav {
   }
 }
 
+@media (max-width: 767px) {
+  .tag-list .front-sec__flex {
+    height: 189px;
+  }
+}
+
 @media (min-width: 992px) {
   .front-sec__flex {
     flex-direction: row;
