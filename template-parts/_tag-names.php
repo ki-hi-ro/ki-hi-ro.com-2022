@@ -1,12 +1,12 @@
 <?php
 // template-parts/_tag-names.php
 return [
+    '旅ログ',
     '2025年夏 青春18きっぷ',
     // 'Docker',
     // 'Vue.js',
     // 'Docker × Django × Vue.jsの買い物リスト作成アプリ',
     // 'Django',
-    // '旅ログ',
     // 'まる',
     // '月収100万円フリーランスエンジニア',
     // '',
