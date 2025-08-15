@@ -2,6 +2,7 @@
 // template-parts/_tag-names.php
 return [
     '自分の哲学',
+    '大阪・関西万博'
     // '旅ログ',
     // '2025年夏 青春18きっぷ',
     // 'Docker',
