@@ -4166,6 +4166,12 @@ footer nav {
   z-index: 100;
 }
 
+@media (max-width: 767px) {
+  .header__logo {
+    justify-content: center;
+  }  
+}
+
 .header__logo img {
   padding-right: 10px;
   height: 24px;
@@ -4354,6 +4360,7 @@ footer nav {
   letter-spacing: 0.1px;
   font-weight: 500;
   text-align: center;
+  width: 100%;
 }
 
 @media (min-width: 992px) {
