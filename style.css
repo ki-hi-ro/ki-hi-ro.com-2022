@@ -4044,31 +4044,11 @@ body.fixed {
 }
 
 .header__contents {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   margin: 41px auto 12px;
-  text-align: center;
-  padding: 0 15px;
-}
-
-@media (min-width: 768px) {
-  .header__contents {
-    padding: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .header__contents {
-    align-items: baseline;
-    justify-content: space-between;
-    flex-direction: row;
-  }
 }
 
 .single .header__contents {
-  margin-top: 41px;
+  display: flex;
   justify-content: center;
 }
 
