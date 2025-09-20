@@ -62,7 +62,7 @@ if ($order_mode === 'custom') {
 
 // 出力
 ?>
-<div class="<?php echo esc_attr($container_class); ?>">
+<!-- <div class="<?php echo esc_attr($container_class); ?>">
   <<?php echo tag_escape($title_tag); ?> class="front-sec__ttl --sp-center">
     <?php echo esc_html($title_text); ?>
   </<?php echo tag_escape($title_tag); ?>>
@@ -75,4 +75,4 @@ if ($order_mode === 'custom') {
       </li>
     <?php endforeach; ?>
   </ul>
-</div>
+</div> -->

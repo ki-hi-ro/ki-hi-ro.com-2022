@@ -37,6 +37,23 @@ if(is_tag()) {
         $article_list_ttl = esc_html($term->name) . "についての記事"; ?>
 
         <h2 class="front-sec__ttl --sp-center"><?php echo $article_list_ttl; ?></h2>
+
+        <?php if (tag_description()) : ?>
+        <?php
+        // タグ説明にクラスを付与し、リンク(aタグ)は残す
+        add_filter('term_description', function($description){
+            if ( ! empty($description) ) {
+                // aタグを許可（他に許可したいタグがあれば <strong><em> など追加可能）
+                $description = '<p class="description-class">' . strip_tags($description, '<a>') . '</p>';
+            }
+            return $description;
+        });
+
+        // 出力
+        echo tag_description();
+        ?>
+        <?php endif; ?>
+        
         <div class="front-sec__text front-sec__flex">
           <?php get_template_part("template-parts/blog-list-thumb-desc"); ?>
         </div>
