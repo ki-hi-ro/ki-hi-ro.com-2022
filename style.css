@@ -4032,17 +4032,14 @@ body.fixed {
 }
 
 .header__container {
-  margin: 0 auto;
   padding: 10px 15px;
-  width: 100%;
-  max-width: 1140px;
 }
 
 @media (min-width: 1200px) {
   .header__container {
+    margin: 0 auto;
     padding: 20px 15px;
     width: 1170px;
-    max-width: none;
   }
 }
 
