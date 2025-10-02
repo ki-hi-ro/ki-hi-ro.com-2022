@@ -17,11 +17,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php if (is_archive() || is_search() || is_tag() || is_paged()) : ?>
-  <meta name="robots" content="noindex,follow">
+    <meta name="robots" content="noindex,follow">
   <?php endif; ?>
 
   <title>
-    <?php
+  <?php
 	global $page, $paged;
 	if (is_single() || is_page() || is_archive() || is_search()) {
       wp_title('|', true, 'right');
@@ -34,14 +34,12 @@
 	}
 	?>
   </title>
-  <meta name=”description” content=”WEBエンジニアを目指して活動中の31歳です。自分の考えについてのブログなども書いています。“>
+  <meta name=”description” content=”自分の考えについて発信“>
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico">
 
   <!-- schema.org -->
   <meta itemprop="name" content="<?php the_title(''); ?>">
   <meta itemprop="description" content="<?php the_permalink() ?>">
-
-  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
   <?php wp_head(); ?>
 </head>
 
