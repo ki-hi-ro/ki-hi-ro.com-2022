@@ -4968,3 +4968,9 @@ h3#reply-title {
 p.description-class {
   margin: -15px 0 21px;
 }
+
+@media (max-width: 767px) {
+  .pc-left-container .tag-list {
+    display: none;
+  }
+}
