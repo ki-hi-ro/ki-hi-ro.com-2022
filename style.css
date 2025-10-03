@@ -3915,9 +3915,6 @@ body.fixed {
     height: 176px;
     margin-top: -15px;
   }
-  .tag-list-sidebar {
-   display: none; 
-  }  
 }
 
 @media (min-width: 768px) {
@@ -4949,6 +4946,16 @@ p.description-class {
   .article-container .tag-list {
     display: none;
   }
+}
+
+.tag-list-sidebar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .tag-list-sidebar {
+    display: block;
+  }  
 }
 
 /*-----------------------------------------------
