@@ -48,7 +48,7 @@
 </head>
 
 <body <?php body_class('kihiro-body front-page'); ?>>
-  <header class="header__container">
+  <header class="outer-container header__container">
     <div class="header__contents">
       <a class="header__sitename-link" href="<?php echo home_url(); ?>">
         <div class="header__logo">

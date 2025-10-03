@@ -6,8 +6,8 @@ if(is_tag()) {
 } 
 ?>
 
-<main class="front-container">
-  <div class="pc-left-container">
+<main class="outer-container front-container">
+  <div class="article-container">
     <section class="front-sec">
       <?php if (is_search()) : ?>
         <h2 class="front-sec__ttl">"<?php echo get_search_query(); ?>" が本文中に含まれている記事</h2>

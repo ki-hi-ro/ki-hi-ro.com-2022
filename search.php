@@ -9,7 +9,7 @@ if(is_tag()) {
 ?>
 
 <main class="front-container">
-  <div class="pc-left-container">
+  <div class="article-container">
     <div class="search-form-wrap --sp">
       <?php get_search_form() ; ?>
     </div>

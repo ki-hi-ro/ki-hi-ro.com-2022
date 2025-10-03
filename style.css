@@ -3857,26 +3857,6 @@ body.fixed {
   border: 1px solid #d0d0d0;
 }
 
-.front-container {
-  margin: 0 auto;
-  max-width: 1140px;
-  padding: 0 20px;
-}
-
-@media (min-width: 1200px) {
-  .front-container {
-    padding: 0;
-    display: flex;
-  }
-  .front-container .pc-left-container {
-    width: 70%;
-    padding-right: 66px;
-  }
-  .front-container .pc-right-container {
-    width: 30%;
-  }
-}
-
 .front-sec {
   margin-bottom: 52px;
 }
@@ -4029,18 +4009,6 @@ body.fixed {
   font-size: 15px;
   margin-top: 19px;
   display: inline-table;
-}
-
-.header__container {
-  padding: 10px 15px;
-}
-
-@media (min-width: 1200px) {
-  .header__container {
-    margin: 0 auto;
-    padding: 20px 15px;
-    width: 1170px;
-  }
 }
 
 .header__contents {
@@ -4679,10 +4647,6 @@ body.fixed {
   padding-bottom: 0;
 }
 
-.front-container.--date-article-list {
-  padding-left: 0;
-}
-
 .all-article__tag-date {
   display: flex;
   align-items: center;
@@ -4869,37 +4833,37 @@ h3#reply-title {
 }
 
 @media (max-width: 767px) {
-  .pc-left-container h2.front-sec__ttl, .pc-left-container .single h3.front-sec__ttl, .single .pc-left-container h3.front-sec__ttl {
+  .article-container h2.front-sec__ttl, .article-container .single h3.front-sec__ttl, .single .article-container h3.front-sec__ttl {
     margin-bottom: 25px;
   }
-  .pc-left-container h2.front-sec__ttl.--sp-center, .pc-left-container .single h3.front-sec__ttl.--sp-center, .single .pc-left-container h3.front-sec__ttl.--sp-center {
+  .article-container h2.front-sec__ttl.--sp-center, .article-container .single h3.front-sec__ttl.--sp-center, .single .article-container h3.front-sec__ttl.--sp-center {
     text-align: center;
     margin: 30px 0 28px;
   }
 }
 
-.pc-left-container h2.front-sec__ttl.--has-mt, .pc-left-container .single h3.front-sec__ttl.--has-mt, .single .pc-left-container h3.front-sec__ttl.--has-mt {
+.article-container h2.front-sec__ttl.--has-mt, .article-container .single h3.front-sec__ttl.--has-mt, .single .article-container h3.front-sec__ttl.--has-mt {
   margin-top: 23px;
 }
 
 @media (max-width: 767px) {
-  .home .pc-left-container h2.front-sec__ttl.--sp-center, .home .pc-left-container .single h3.front-sec__ttl.--sp-center, .single .home .pc-left-container h3.front-sec__ttl.--sp-center {
+  .home .article-container h2.front-sec__ttl.--sp-center, .home .article-container .single h3.front-sec__ttl.--sp-center, .single .home .article-container h3.front-sec__ttl.--sp-center {
     margin-bottom: 27px;
   }
 }
 
 @media (max-width: 767px) {
-  .home .pc-left-container .tag-list h2.front-sec__ttl.--sp-center {
+  .home .article-container .tag-list h2.front-sec__ttl.--sp-center {
     margin-bottom: 29px;
   }
 }
 
-.home .pc-left-container h2.front-sec__ttl.--has-mt, .home .pc-left-container .single h3.front-sec__ttl.--has-mt, .single .home .pc-left-container h3.front-sec__ttl.--has-mt {
+.home .article-container h2.front-sec__ttl.--has-mt, .home .article-container .single h3.front-sec__ttl.--has-mt, .single .home .article-container h3.front-sec__ttl.--has-mt {
   margin-top: 8px;
 }
 
 @media (max-width: 767px) {
-  .home .pc-left-container h2.front-sec__ttl.--has-mt, .home .pc-left-container .single h3.front-sec__ttl.--has-mt, .single .home .pc-left-container h3.front-sec__ttl.--has-mt {
+  .home .article-container h2.front-sec__ttl.--has-mt, .home .article-container .single h3.front-sec__ttl.--has-mt, .single .home .article-container h3.front-sec__ttl.--has-mt {
     margin-top: 19px;
   } 
 }
@@ -4970,7 +4934,42 @@ p.description-class {
 }
 
 @media (max-width: 767px) {
-  .pc-left-container .tag-list {
+  .article-container .tag-list {
     display: none;
+  }
+}
+
+/*-----------------------------------------------
+  Conteiner
+  一番外側のコンテナー
+-----------------------------------------------*/
+
+.outer-container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1140px;
+}
+
+.header__container {
+  padding: 10px 15px;
+}
+
+@media (min-width: 768px) {
+  .header__container {
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .front-container {
+    padding: 0;
+    display: flex;
+  }
+  .front-container .article-container {
+    width: 70%;
+    padding-right: 66px;
+  }
+  .front-container .pc-right-container {
+    width: 30%;
   }
 }
