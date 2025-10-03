@@ -2,24 +2,25 @@
 <html lang="ja">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google Analyticsの導入部分 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MLVT1B3MQP"></script>
   <script>
   window.dataLayer = window.dataLayer || [];
-
   function gtag() {
     dataLayer.push(arguments);
   }
   gtag('js', new Date());
-
   gtag('config', 'G-MLVT1B3MQP');
   </script>
+
+  <!-- <meta> と SEO関連 -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php if (is_archive() || is_search() || is_tag() || is_paged()) : ?>
     <meta name="robots" content="noindex,follow">
   <?php endif; ?>
 
+  <!-- <title>の動的生成 -->
   <title>
   <?php
 	global $page, $paged;
@@ -34,12 +35,15 @@
 	}
 	?>
   </title>
-  <meta name=”description” content=”自分の考えについて発信“>
+  
+  <!-- サイトの概要（メタ情報） -->
+  <meta name="description" content="自分の考えについて発信">
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico">
 
-  <!-- schema.org -->
+  <!-- schema.org用メタ情報 -->
   <meta itemprop="name" content="<?php the_title(''); ?>">
   <meta itemprop="description" content="<?php the_permalink() ?>">
+
   <?php wp_head(); ?>
 </head>
 
