@@ -4994,3 +4994,30 @@ p.description-class {
     margin-top: 8px;
   }
 }
+
+/*-----------------------------------------------
+  サイドバーのアーカイブ
+-----------------------------------------------*/
+
+.archive-sidebar h2 {
+  font-size: 20px;
+  color: #000;
+  font-weight: normal;
+  margin-bottom: -3px;
+  margin-top: 27px;
+}
+
+.archive-sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.archive-sidebar li {
+  margin-bottom: 7px;
+  font-size: 18px;
+}
+
+.archive-sidebar li a {
+  display: block;
+  width: 100%;
+}
