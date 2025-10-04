@@ -7,4 +7,5 @@ return [
     '旅行',
     'Python',
     'HTML / CSS',
+    '社会問題と向き合う',
 ];
