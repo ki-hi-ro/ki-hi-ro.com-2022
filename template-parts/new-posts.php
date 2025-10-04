@@ -47,7 +47,7 @@ $args = array(
 
 // トップページの場合のみ 5件に制限
 if (is_home() || is_front_page()) {
-    $args['posts_per_page'] = 5;
+    $args['posts_per_page'] = 10;
 }
 
 // タグ条件を追加
