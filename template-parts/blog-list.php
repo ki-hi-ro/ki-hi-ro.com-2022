@@ -21,7 +21,7 @@
 /* 全体のカード */
 .all-article__post-wrap {
   display: block;
-  margin-bottom: 15px; 
+  margin-bottom: 13px; 
   text-decoration: none;
   color: inherit;
   transition: background 0.2s ease;
