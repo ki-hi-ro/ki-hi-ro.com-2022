@@ -10,7 +10,7 @@ $post_id = "";
 $my_query = new WP_Query(
   array(
       'post_type'      => 'post',
-      'posts_per_page' => 3,
+      'posts_per_page' => -1,
       'tag' => $term_slug,
       'orderby' => $order_pram,
       'post__not_in' => array(3874,$post_id),
