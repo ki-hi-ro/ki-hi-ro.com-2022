@@ -2,7 +2,7 @@
     <?php get_template_part('template-parts/search-form'); ?>
 
     <?php
-    $common_names = require locate_template('template-parts/_tag-names.php');
+    $common_names = require locate_template('_tag-names.php');
 
     get_template_part('template-parts/tag-list', null, [
         'container_class' => 'tag-list-sidebar',
