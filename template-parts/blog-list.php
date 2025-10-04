@@ -37,7 +37,7 @@
 .all-article__ttl {
   font-size: 1.25rem;
   color: #337ab7;
-  line-height: 1.5;
+  line-height: 1.8;
   margin-bottom: 9px;
 }
 
