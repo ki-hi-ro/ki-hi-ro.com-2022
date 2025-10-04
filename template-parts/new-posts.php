@@ -17,16 +17,16 @@ if (is_tag()) {
 }
 
 // 年月アーカイブページのとき
-$archive_title = "記事一覧"; // デフォルトタイトル
+$archive_title = "最近書いた記事"; // デフォルトタイトル
 if (is_date()) {
     $year  = get_query_var('year');      // 例: 2025
     $month = get_query_var('monthnum');  // 例: 10
 
     // 年月が揃っていればタイトルを変更
     if ($year && $month) {
-        $archive_title = sprintf("%d年%d月の記事一覧", $year, $month);
+        $archive_title = sprintf("%d年%d月の記事", $year, $month);
     } elseif ($year) {
-        $archive_title = sprintf("%d年の記事一覧", $year);
+        $archive_title = sprintf("%d年の記事", $year);
     }
 
     $date_query = array(
