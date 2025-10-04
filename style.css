@@ -4762,7 +4762,7 @@ h3#reply-title {
 @media (max-width: 767px) {
   .home .article-container h2.front-sec__ttl.--sp-center, 
   .single .home .article-container h3.front-sec__ttl.--sp-center {
-    margin-bottom: 42px;
+    margin-bottom: 38px;
   }
 }
 
