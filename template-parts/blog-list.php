@@ -21,7 +21,7 @@
 /* 全体のカード */
 .all-article__post-wrap {
   display: block;
-  margin-bottom: 17px; 
+  margin-bottom: 15px; 
   text-decoration: none;
   color: inherit;
   transition: background 0.2s ease;
@@ -38,7 +38,7 @@
   font-size: 1.25rem;
   color: #337ab7;
   line-height: 1.5;
-  margin-bottom: 12px;
+  margin-bottom: 9px;
 }
 
 /* サムネイル */
