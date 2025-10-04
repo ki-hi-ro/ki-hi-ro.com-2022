@@ -1,19 +1,25 @@
 var page_top = jQuery(".page-top");
-var class_down = "--down-move";
-var class_up = "--up-move";
 var page_top_link = jQuery(".page-top__link.--not-single-sp");
 var page_top_link_single = jQuery(".single .page-top__link");
 
 function PageTopAnime() {
   var scroll = jQuery(window).scrollTop();
-  if (scroll >= 1500) {
-    page_top.removeClass(class_down);
-    page_top.addClass(class_up);
+  var windowHeight = jQuery(window).height();
+  var docHeight = jQuery(document).height();
+  var halfScroll = (docHeight - windowHeight) / 2;
+
+  if (scroll < halfScroll) {
+    // 上半分にいるとき → 矢印を↓に
+    page_top_link.text("↓");
+    page_top_link_single.text("↓");
+    page_top_link.data("mode", "bottom");
+    page_top_link_single.data("mode", "bottom");
   } else {
-    if (page_top.hasClass(class_up)) {
-      page_top.removeClass(class_up);
-      page_top.addClass(class_down);
-    }
+    // 下半分にいるとき → 矢印を↑に
+    page_top_link.text("↑");
+    page_top_link_single.text("↑");
+    page_top_link.data("mode", "top");
+    page_top_link_single.data("mode", "top");
   }
 }
 
@@ -23,10 +29,13 @@ jQuery(window).scroll(function () {
 
 function click_motion($triggar) {
   $triggar.click(function () {
-    if($triggar == page_top_link_single) {
-      var $toc = jQuery("#ez-toc-container").offset().top;
-      jQuery("body,html").animate({ scrollTop: $toc - 70 }, 500);
+    var mode = $triggar.data("mode");
+    if (mode === "bottom") {
+      // 一番下へ移動
+      var docHeight = jQuery(document).height();
+      jQuery("body,html").animate({ scrollTop: docHeight }, 500);
     } else {
+      // 一番上へ移動
       jQuery("body,html").animate({ scrollTop: 0 }, 500);
     }
     return false;
@@ -34,3 +43,6 @@ function click_motion($triggar) {
 }
 click_motion(page_top_link);
 click_motion(page_top_link_single);
+
+// 初期表示時にも矢印を設定
+PageTopAnime();
