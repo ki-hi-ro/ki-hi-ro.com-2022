@@ -45,6 +45,11 @@ $args = array(
     'post__not_in'   => !empty($post_ids) ? array_merge(array(3874), $post_ids) : array(3874),
 );
 
+// トップページの場合のみ 5件に制限
+if (is_home() || is_front_page()) {
+    $args['posts_per_page'] = 5;
+}
+
 // タグ条件を追加
 if (!empty($tag_query)) {
     $args = array_merge($args, $tag_query);
