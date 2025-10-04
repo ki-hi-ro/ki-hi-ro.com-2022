@@ -4999,6 +4999,10 @@ p.description-class {
   サイドバーのアーカイブ
 -----------------------------------------------*/
 
+.archive-sidebar {
+  margin-bottom: 70px;
+}
+
 .archive-sidebar h2 {
   font-size: 20px;
   color: #000;
