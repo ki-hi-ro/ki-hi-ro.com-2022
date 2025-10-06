@@ -3851,7 +3851,7 @@ body.fixed {
 
 .front-sec__ttl, .front-sec__text p {
   font-size: 20px;
-  color: #000;
+  color: #333;
   font-weight: normal;
 }
 
@@ -5005,7 +5005,7 @@ p.description-class {
 
 .archive-sidebar h2 {
   font-size: 20px;
-  color: #000;
+  color: #333;
   font-weight: normal;
   margin-bottom: -3px;
   margin-top: 27px;
@@ -5061,7 +5061,7 @@ p.description-class {
 /* 日付 */
 .all-article__date {
   font-size: 0.9rem;
-  color: #000;
+  color: #333;
   margin-bottom: 4px;
 }
 
@@ -5118,7 +5118,7 @@ p.description-class {
 .all-article__desc {
   font-size: 1rem;
   line-height: 1.85;
-  color: #000;
+  color: #333;
   display: -webkit-box;
   -webkit-line-clamp: 7; /* PCでは3行で省略 */
   -webkit-box-orient: vertical;
