@@ -264,6 +264,12 @@ add_action('wp_head','my_meta_ogp');
   add_action('wp_head', 'prevent_admin_bar_focus_styles');
   add_action('admin_head', 'prevent_admin_bar_focus_styles');  
   
+// 抜粋の文字数を変更
+function custom_excerpt_length($length) {
+    return 200; // デフォルトは55。ここを好きな数に変更
+}
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
   
     
   
