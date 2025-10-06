@@ -10,7 +10,7 @@
         <?php if (has_post_thumbnail()): ?>
           <?php the_post_thumbnail('large'); ?>
         <?php else: ?>
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no-image.png" alt="No image" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no-image.png" alt="No image" class="--border" />
         <?php endif; ?>
       </div>
       <div class="all-article__desc">
