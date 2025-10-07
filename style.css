@@ -5014,7 +5014,7 @@ p.description-class {
 
 .pc-flex {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 3px; /* 画像とテキストの間を少し広げる */
 }
 
@@ -5048,7 +5048,7 @@ p.description-class {
 
 /* サムネイル */
 .all-article__thumb {
-  margin: 6px 20px 0 0;
+  margin: 0 20px 0 0;
   border-radius: 8px;
   width: 100%;
   max-width: 282px;
