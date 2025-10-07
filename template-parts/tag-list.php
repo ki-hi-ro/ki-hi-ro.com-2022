@@ -62,15 +62,16 @@ if ($order_mode === 'custom') {
 
 // 出力
 ?>
-<div class="<?php echo esc_attr($container_class); ?>">
-  <<?php echo tag_escape($title_tag); ?> class="front-sec__ttl --sp-center">
-    <?php echo esc_html($title_text); ?>
-  </<?php echo tag_escape($title_tag); ?>>
-  <ul class="<?php echo esc_attr($ul_class); ?>">
+
+<div class="<?= esc_attr($container_class); ?>">
+  <<?= tag_escape($title_tag); ?>>
+    <?= esc_html($title_text); ?>
+  </<?= tag_escape($title_tag); ?>>
+  <ul class="<?= esc_attr($ul_class); ?>">
     <?php foreach ($tags as $tag): ?>
       <li>
-        <a href="<?php echo esc_url(get_tag_link($tag->term_id)); ?>">
-          <?php echo esc_html($tag->name); ?>
+        <a href="<?= esc_url(get_tag_link($tag->term_id)); ?>">
+          <?= esc_html($tag->name); ?>
         </a>
       </li>
     <?php endforeach; ?>

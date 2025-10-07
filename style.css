@@ -3841,14 +3841,10 @@ body.fixed {
   }
 }
 
-.front-sec__ttl, .front-sec__text p {
+.front-sec__text p {
   font-size: 20px;
   color: #333;
   font-weight: normal;
-}
-
-.front-sec__ttl.rand, .front-sec__text p.rand {
-  margin-top: 45px;
 }
 
 .front-sec__text p {
@@ -4704,11 +4700,11 @@ h3#reply-title {
   }
 }
 
-.front-sec__ttl, .front-sec__text p {
+.front-sec__text p {
   margin-bottom: 10px;
 }
 
-.front-sec__ttl.--mt-0, .front-sec__text p.--mt-0 {
+.front-sec__text p.--mt-0 {
   margin-top: 0;
 }
 
@@ -4894,6 +4890,14 @@ p.description-class {
   }  
 }
 
+.tag-list-sidebar h2 {
+  font-size: 20px;
+  color: #333;
+  font-weight: normal;
+  margin-bottom: -3px;
+  margin-top: 27px;
+}
+
 .tag-list-sidebar .front-sec__flex {
   padding-left: 0;
 }
@@ -4905,16 +4909,13 @@ p.description-class {
 }
 
 @media (min-width: 768px) {
-  .tag-list-sidebar .front-sec__ttl {
-    margin-bottom: 0px;
-  }
   .tag-list-sidebar ul.front-sec__text.front-sec__flex {
     margin-top: 8px;
   }
 }
 
 /*-----------------------------------------------
-  サイドバーのアーカイブ
+  サイドバーの年月
 -----------------------------------------------*/
 
 .archive-sidebar {
@@ -4961,7 +4962,11 @@ p.description-class {
 }
 
 /* front-sec__ttl */
+
 .front-sec__ttl {
+  font-size: 20px;
+  color: #333;
+  font-weight: normal;
   margin-bottom: 26px;
 }
 

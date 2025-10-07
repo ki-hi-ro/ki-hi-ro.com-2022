@@ -41,7 +41,7 @@ if (is_tag()) {
 
     <?php if (is_tag() && $term) : ?>
       <?php $article_list_ttl = esc_html($term->name) . "についての記事"; ?>
-      <h2 class="front-sec__ttl --sp-center"><?= $article_list_ttl; ?></h2>
+      <h2 class="front-sec__ttl"><?= $article_list_ttl; ?></h2>
 
       <?php if (tag_description()) : ?>
         <?php

@@ -1,6 +1,7 @@
 <?php
 // template-parts/_tag-names.php
 return [
+    'C.U.R.I.O.S.I.T.Y',
     '京都',
     'ポートフォリオ',
     'ライフハック',

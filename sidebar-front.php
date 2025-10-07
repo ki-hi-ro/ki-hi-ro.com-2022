@@ -1,6 +1,8 @@
 <div class="pc-right-container">
+    <!-- 検索ボックス -->
     <?php get_template_part('template-parts/search-form'); ?>
 
+    <!-- タグ一覧 -->
     <?php
     $common_names = require locate_template('template-parts/_tag-names.php');
 
@@ -15,6 +17,7 @@
     ]);
     ?>
 
+    <!-- 年月 -->
     <div class="archive-sidebar">
         <h2>年月</h2>
         <ul class="archive-list">
