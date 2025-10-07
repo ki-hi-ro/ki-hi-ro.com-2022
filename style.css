@@ -5041,12 +5041,11 @@ p.description-class {
   font-size: 1.25rem;
   color: #337ab7;
   line-height: 1.7;
-  margin-bottom: 8px;
+  margin-bottom: 11px;
 }
 
 @media (max-width: 767px) {
   .all-article__ttl {
-    margin-bottom: 10px;
     padding-top: 0;
   }  
 }
@@ -5074,7 +5073,7 @@ p.description-class {
   width: 100%;
   height: 100%;
   object-fit: cover;   
-  border-radius: 8px;
+  border-radius: 7px;
   background-color: #fff;
 }
 

@@ -266,7 +266,7 @@ add_action('wp_head','my_meta_ogp');
   
 // 抜粋の文字数を変更
 function custom_excerpt_length($length) {
-    return 200; // デフォルトは55。ここを好きな数に変更
+    return 190; // デフォルトは55。ここを好きな数に変更
 }
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 

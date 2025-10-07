@@ -10,6 +10,10 @@ if (is_tag()) {
 <main class="outer-container front-container">
   <div class="article-container">
 
+    <div class="search-form-wrap --sp">
+      <?php get_search_form(); ?>
+    </div>
+
     <?php if (is_search()) : ?>
       <h2 class="front-sec__ttl">
         "<?= get_search_query(); ?>" が本文中に含まれている記事
@@ -26,11 +30,7 @@ if (is_tag()) {
           <p>該当する記事はありませんでした。</p>
         <?php endif; ?>
       </div>
-    <?php endif; ?>
-
-    <div class="search-form-wrap --sp">
-      <?php get_search_form(); ?>
-    </div>
+    <?php endif; ?>    
 
     <?php 
     $is_front_or_date = is_home() || is_front_page() || is_date();
