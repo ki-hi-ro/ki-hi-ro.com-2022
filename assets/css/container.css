@@ -1,0 +1,34 @@
+/*-----------------------------------------------
+  Conteiner
+  一番外側のコンテナー
+-----------------------------------------------*/
+
+.outer-container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1140px;
+}
+
+.header__container {
+  padding: 10px 15px;
+}
+
+@media (min-width: 768px) {
+  .header__container {
+    padding: 20px 0;
+  }
+}
+
+.front-container {
+  margin-bottom: 70px;
+}
+
+@media (min-width: 768px) {
+  .front-container {
+    padding: 0;
+    display: flex;
+  }
+  .front-container .pc-right-container {
+    width: 30%;
+  }
+}

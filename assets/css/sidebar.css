@@ -1,0 +1,64 @@
+/*-----------------------------------------------
+  サイドバーのタグ
+-----------------------------------------------*/
+
+.tag-list-sidebar {
+    margin: -37px 0 56px;
+}
+
+@media (min-width: 768px) {
+  .tag-list-sidebar {
+      margin: 0;
+  }  
+}
+
+.tag-list-sidebar h2 {
+  font-size: 20px;
+  color: #333;
+  font-weight: normal;
+  margin-bottom: -3px;
+  margin-top: 27px;
+}
+
+.tag-list-sidebar .front-sec__flex {
+  padding-left: 0;
+}
+
+.tag-list-sidebar .front-sec__flex li {
+  width: 100%;
+  list-style: none;
+  margin-bottom: 6px;
+}
+
+@media (min-width: 768px) {
+  .tag-list-sidebar ul.front-sec__text.front-sec__flex {
+    margin-top: 8px;
+  }
+}
+
+/*-----------------------------------------------
+  サイドバーの年月
+-----------------------------------------------*/
+
+.archive-sidebar h2 {
+  font-size: 20px;
+  color: #333;
+  font-weight: normal;
+  margin-bottom: -3px;
+  margin-top: 27px;
+}
+
+.archive-sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.archive-sidebar li {
+  margin-bottom: 7px;
+  font-size: 18px;
+}
+
+.archive-sidebar li a {
+  display: block;
+  width: 100%;
+}

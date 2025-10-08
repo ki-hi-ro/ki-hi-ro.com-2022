@@ -1,0 +1,23 @@
+/*-----------------------------------------------
+  個別ページ
+-----------------------------------------------*/
+
+.single h3 {
+  color: #000;
+  margin: 54px 0 20px;
+  font-weight: normal;
+  line-height: 1.1;
+  color: inherit;
+  font-family: Helvetica Neue;
+  text-rendering: optimizeLegibility;
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+  line-height: 2;  
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .single h3 {
+    margin-left: 0;
+  }
+}
