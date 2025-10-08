@@ -119,7 +119,7 @@ h3 {
   }
 }
 
-.single p {
+.single .post p {
   font-size: 16px;
   line-height: 32px;
   margin-top: 15px;
@@ -1025,7 +1025,7 @@ a.top-contents__card.--blog {
   margin-bottom: 60px;
 }
 
-.single p a {
+.single .post p a {
   text-decoration: none;
   font-weight: 600;
 }
@@ -3344,7 +3344,7 @@ body.fixed {
 .post .nav-links__link {
   display: flex;
   color: #000;
-  font-family: Helvetica Neue;
+  font-family: Noto, Hiragino Sans, Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 

@@ -33,7 +33,8 @@
   font-size: 1.6rem;
   transition: all 0.3s;
   line-height: 1.8;
-  font-weight: 600;
+  font-weight: 300;
+  font-family: Noto, Hiragino Sans, Helvetica, Arial, sans-serif;
 }
 
 .single .page-top.--single-sp {

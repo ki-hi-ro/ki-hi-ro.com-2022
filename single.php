@@ -97,6 +97,5 @@ if($posttags) { $last_position = 4; } else { $last_position = 3; }
       </style>
     </article>
   </div>
-  <?php get_sidebar(); ?>
 </main>
 <?php get_footer(); ?>
