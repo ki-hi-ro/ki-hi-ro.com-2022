@@ -4,7 +4,7 @@ get_header();
 $posttags = get_the_tags();
 if($posttags) { $last_position = 4; } else { $last_position = 3; }
 ?>
-<main class="l-container">
+<main class="outer-container front-container">
   <div class="l-pc-left --single">
     <article class="post">
 
