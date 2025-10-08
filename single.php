@@ -1,22 +1,14 @@
-<?php get_header(); ?>
-<?php  $category = get_the_category(); $cat = $category[0]; ?>
-<?php
+<?php 
+get_header(); 
+
 $posttags = get_the_tags();
-if($posttags) {
-    $last_position = 4;
-    foreach($posttags as $tag) {
-        $tag_slug = $tag->slug;
-        $tag_name = $tag->name;
-    }
-} else {
-    $last_position = 3;
-}
+if($posttags) { $last_position = 4; } else { $last_position = 3; }
 ?>
 <main class="l-container">
   <div class="l-pc-left --single">
     <article class="post">
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-      <?php if($posttags) : ?>
+
+      <?php if (have_posts()) : while (have_posts()) : the_post(); if($posttags) : ?>
         <div class="post-tags">
           <ul>
             <?php foreach($posttags as $tag): ?>
@@ -28,24 +20,25 @@ if($posttags) {
             <?php endforeach; ?>
           </ul>
         </div>
-      <?php else : ?>
-        <?php echo get_template_part('template-parts/single-bread'); ?>
-      <?php endif; ?>
+
+      <?php 
+      else : 
+        echo get_template_part('template-parts/single-bread');
+      endif; 
+      ?>
+      
       <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?>（更新日: <?php echo get_the_modified_date('Y.m.d'); ?>）</div>
+
       <h1 class="post__ttl"><?php the_title(); ?></h1>
-      <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'post__thumb']  );?>
-      <?php if(!in_category('record')): ?>
+
+      <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'post__thumb'] );?>
+
       <h2 id="first-ttl">はじめに</h2>
-      <?php endif; ?>
+
       <div class="post__content">
-        <?php
-                if(in_category('record')) :
-                    get_template_part('template-parts/record');
-                else :
-                    the_content();
-                endif;
-                ?>
+        <?php the_content(); ?>
       </div>
+
       <?php comments_template(); ?>
       
       <?php
@@ -54,25 +47,28 @@ if($posttags) {
       if( $prevpost or $nextpost) :
       ?>
       <ul class="nav-links">
+        
         <?php if( $prevpost ) : ?>
         <li class="nav-links__nav --pre">
           <a class="nav-links__link" href="<?php echo get_permalink($prevpost->ID); ?>">
-            ← <?php echo get_the_title( $prevpost->ID ); ?>
+            ← <?= get_the_title( $prevpost->ID ); ?>
           </a>
         </li>
         <?php endif; ?>
+
         <?php if( $nextpost ) : ?>
         <li class="nav-links__nav --next">
           <a class="nav-links__link" href="<?php echo get_permalink($nextpost->ID); ?>">
-            <?php echo get_the_title( $nextpost->ID ); ?> →
+            <?= get_the_title( $nextpost->ID ); ?> →
           </a>
         </li>
         <?php endif; ?>
       </ul>
 
-      <?php echo get_template_part('template-parts/single-bread'); ?>
-      <?php endif; ?>
-      <?php endwhile; endif; ?>
+      <?php 
+      echo get_template_part('template-parts/single-bread');
+
+      endif; endwhile; endif; ?>
       <style>
         .post-tags h2 {
           font-size: 1.1em;
