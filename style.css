@@ -5021,11 +5021,14 @@ p.description-class {
   display: flex;
   align-items: center;
   gap: 3px; /* 画像とテキストの間を少し広げる */
+  height: 207px;
+  margin-top: 7px;
 }
 
 @media (max-width: 767px) {
   .pc-flex {
     display: block;
+    height: auto;
   }  
 }
 
@@ -5033,7 +5036,7 @@ p.description-class {
 .all-article__date {
   font-size: 0.9rem;
   color: #333;
-  margin-bottom: 4px;
+  margin-bottom: 1px;
 }
 
 /* タイトル */
@@ -5041,7 +5044,6 @@ p.description-class {
   font-size: 1.25rem;
   color: #337ab7;
   line-height: 1.7;
-  margin-bottom: 11px;
 }
 
 @media (max-width: 767px) {
@@ -5052,17 +5054,17 @@ p.description-class {
 
 /* サムネイル */
 .all-article__thumb {
-  margin: 0 20px 0 0;
+  margin: 0 8px 0 0;
   border-radius: 8px;
   width: 100%;
   max-width: 282px;
-  height: 197px;
+  height: 100%;
   flex-shrink: 0;
 }
 
 @media (max-width: 767px) {
   .all-article__thumb {
-    margin: 0 0 12px 0;
+    margin: 0 0 8px 0;
     height: 240px;
     max-width: none;
   }
