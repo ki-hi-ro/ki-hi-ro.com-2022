@@ -70,7 +70,7 @@
   align-items: center;
   gap: 3px; /* 画像とテキストの間を少し広げる */
   height: 207px;
-  margin-top: 12px;
+  margin-top: 0.6em;
 }
 
 @media (max-width: 767px) {
@@ -102,7 +102,7 @@
 
 /* サムネイル */
 .all-article__thumb {
-  margin: 0 18px 0 0;
+  margin: 0 1em 0 0;
   border-radius: 8px;
   width: 100%;
   max-width: 282px;
@@ -112,7 +112,7 @@
 
 @media (max-width: 767px) {
   .all-article__thumb {
-    margin: 0 0 18px 0;
+    margin: 0 0 1em 0;
     height: 240px;
     max-width: none;
   }
