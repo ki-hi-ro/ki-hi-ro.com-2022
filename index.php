@@ -27,7 +27,7 @@ if (is_tag()) {
             </div>
           <?php endwhile; ?>
         <?php else : ?>
-          <p>該当する記事はありませんでした。</p>
+          <p>該当する記事はありませんでし。</p>
         <?php endif; ?>
       </div>
     <?php endif; ?>    
