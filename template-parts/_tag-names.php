@@ -1,11 +1,15 @@
 <?php
 // template-parts/_tag-names.php
 return [
+    '職務経歴',
+    'ポートフォリオ',
+    'HTML / CSS',
+    'Java',
+    'JavaScript',
     'Git',
     'キャリア戦略',
     'C.U.R.I.O.S.I.T.Y',
     '京都',
-    'ポートフォリオ',
     'ライフハック',
     'サウナ',
     '休みの日の過ごし方',
@@ -17,7 +21,6 @@ return [
     'ミセス',
     '公園',
     'Python',
-    'HTML / CSS',
     'コミュニケーションの課題',
     '自分と社会',
     '社会問題と向き合う',
