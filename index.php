@@ -62,7 +62,7 @@ if (is_tag()) {
 
   </div>
 
-  <?php get_sidebar(); ?>
+  <?php get_sidebar('default'); ?>
 </main>
 
 <?php get_footer(); ?>
