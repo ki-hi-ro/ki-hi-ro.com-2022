@@ -3344,7 +3344,7 @@ body.fixed {
 .post .nav-links__link {
   display: flex;
   color: #000;
-  font-family: Noto, Hiragino Sans, Helvetica, Arial, sans-serif;
+  font-family: Helvetica Neue;
   font-weight: normal;
 }
 
