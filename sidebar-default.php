@@ -37,8 +37,8 @@
                     $year  = (int) $r->year;
                     $month = (int) $r->month;
 
-                    // 2025年以降 → 月別
-                    if ($year > 2024) {
+                    // 2022年以降 → 月別
+                    if ($year > 2021) {
                         $url  = get_month_link($year, $month);
                         $text = sprintf('%d年%d月', $year, $month);
                         echo '<li><a href="' . esc_url($url) . '">' . esc_html($text) . '</a></li>';
