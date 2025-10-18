@@ -1,6 +1,8 @@
 <?php
 // template-parts/_tag-names.php
 return [
+    'Git',
+    'Python',
     '自己探究',
     'SQL',
     '理想世界',
@@ -9,7 +11,6 @@ return [
     'HTML / CSS',
     'Java',
     'JavaScript',
-    'Git',
     'キャリア戦略',
     'C.U.R.I.O.S.I.T.Y',
     '京都',
@@ -23,7 +24,6 @@ return [
     'claquepot',
     'ミセス',
     '公園',
-    'Python',
     'コミュニケーションの課題',
     '自分と社会',
     '社会問題と向き合う',
