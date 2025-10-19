@@ -1,6 +1,7 @@
 <?php
 // template-parts/_tag-names.php
 return [
+    '自分を整える',
     '自己探究',
     'SQL',
     '理想世界',
