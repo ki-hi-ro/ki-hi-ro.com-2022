@@ -1,13 +1,14 @@
 <?php
 
 // css
-wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], date("YmdHi"));
-wp_enqueue_style('container', get_template_directory_uri() . '/assets/css/container.css', [], date("YmdHi"));
-wp_enqueue_style('single', get_template_directory_uri() . '/assets/css/single.css', [], date("YmdHi"));
-wp_enqueue_style('page-top', get_template_directory_uri() . '/assets/css/page-top.css', [], date("YmdHi"));
-wp_enqueue_style('sidebar', get_template_directory_uri() . '/assets/css/sidebar.css', [], date("YmdHi"));
-wp_enqueue_style('article-list', get_template_directory_uri() . '/assets/css/article-list.css', [], date("YmdHi"));
-
+if (!is_admin()) {
+  wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], date("YmdHi"));
+  wp_enqueue_style('container', get_template_directory_uri() . '/assets/css/container.css', [], date("YmdHi"));
+  wp_enqueue_style('single', get_template_directory_uri() . '/assets/css/single.css', [], date("YmdHi"));
+  wp_enqueue_style('page-top', get_template_directory_uri() . '/assets/css/page-top.css', [], date("YmdHi"));
+  wp_enqueue_style('sidebar', get_template_directory_uri() . '/assets/css/sidebar.css', [], date("YmdHi"));
+  wp_enqueue_style('article-list', get_template_directory_uri() . '/assets/css/article-list.css', [], date("YmdHi"));
+}
 
 // js
 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/6cff6feef5.js', null, null, true);
@@ -261,7 +262,39 @@ function custom_excerpt_length($length) {
 }
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
-  
+// 管理画面でテキスト選択を強制的に有効化
+function enable_text_selection_in_gutenberg() {
+  echo '<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tryEnable = () => {
+      // Gutenbergのiframeを取得
+      const iframe = document.querySelector(".editor-canvas iframe, .edit-post-visual-editor iframe, .block-editor__iframe");
+      if (!iframe) {
+        // まだiframeが読み込まれていない場合は再試行
+        setTimeout(tryEnable, 500);
+        return;
+      }
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      if (!doc) return;
+
+      const style = doc.createElement("style");
+      style.innerHTML = `
+        * {
+          user-select: text !important;
+          -webkit-user-select: text !important;
+          -moz-user-select: text !important;
+        }
+      `;
+      doc.head.appendChild(style);
+
+      console.log("✅ Gutenberg内のテキスト選択を有効化しました");
+    };
+
+    tryEnable();
+  });
+  </script>';
+}
+add_action('admin_footer', 'enable_text_selection_in_gutenberg');
     
   
   
