@@ -1,6 +1,8 @@
 <?php
 // template-parts/_tag-names.php
 return [
+    '理想世界',
+    '運動のメリット'
     'ライフハック',
     '自分を整える',
     '自分の哲学',
@@ -8,7 +10,6 @@ return [
     'Python',
     '自己探究',
     'SQL',
-    '理想世界',
     '職務経歴',
     'ポートフォリオ',
     'HTML / CSS',
