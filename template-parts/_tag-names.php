@@ -2,6 +2,7 @@
 // template-parts/_tag-names.php
 return [
     '自分を整える',
+    '自分の哲学',
     'Git',
     'Python',
     '自己探究',
