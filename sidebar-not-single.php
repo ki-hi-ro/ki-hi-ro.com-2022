@@ -52,7 +52,7 @@
         'ul_class'        => 'front-sec__text front-sec__flex',
         'title_tag'       => 'h2',
         'title_text'      => 'タグ',
-        'order_mode'      => 'rand',
+        'order_mode'      => 'custom',
         'custom_names'    => $common_names,
         'hide_empty'      => false,
     ]);

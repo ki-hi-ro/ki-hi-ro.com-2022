@@ -32,7 +32,6 @@ foreach ($tags as $t) {
   $map_by_name[$t->name] = $t; // 表示名での完全一致
 }
 
-// 並び替え
 if ($order_mode === 'custom') {
   $sorted = [];
 
@@ -53,7 +52,18 @@ if ($order_mode === 'custom') {
     }
   }
 
-  // 何も指定が無ければ全件（名前順）のまま
+  // ✅ 3) 残りのタグをランダムに追加
+  if (!empty($tags)) {
+    $seen_ids = array_column($sorted, 'term_id');
+    $remaining = array_filter($tags, fn($t) => !in_array($t->term_id, $seen_ids, true));
+
+    // 残りをランダムシャッフル
+    shuffle($remaining);
+
+    // 結合
+    $sorted = array_merge($sorted, $remaining);
+  }
+
   if (!empty($sorted)) $tags = $sorted;
 
 } elseif ($order_mode === 'rand') {
