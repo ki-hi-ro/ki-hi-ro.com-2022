@@ -43,8 +43,8 @@ if (is_tag()) {
       <?php $article_list_ttl = esc_html($term->name) . "についての記事"; ?>
       <h2 class="front-sec__ttl"><?= $article_list_ttl; ?></h2>
 
-      <?php if (tag_description()) : ?>
-        <?php
+      <?php 
+      if (tag_description()) : 
         add_filter('term_description', function ($description) {
           if (!empty($description)) {
             $description = '<p class="description-class">' . strip_tags($description, '<a>') . '</p>';
@@ -52,8 +52,8 @@ if (is_tag()) {
           return $description;
         });
         echo tag_description();
-        ?>
-      <?php endif; ?>
+      endif; 
+      ?>
 
       <div class="front-sec__text front-sec__flex">
         <?php get_template_part("template-parts/blog-list-thumb-desc"); ?>
