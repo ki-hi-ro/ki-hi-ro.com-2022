@@ -1,6 +1,7 @@
 <?php
 // template-parts/_tag-names.php
 return [
+    '短期的な欲求と長期的な欲求',
     '自分をやる気にさせてくれるコンテンツ',
     '自分の哲学',
     'C.U.R.I.O.S.I.T.Y',
