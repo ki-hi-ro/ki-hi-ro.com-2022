@@ -1,11 +1,13 @@
 <?php
 // template-parts/_tag-names.php
 return [
+    '自分の哲学',
+    'C.U.R.I.O.S.I.T.Y',
     '理想世界',
     '運動のメリット',
-    'ライフハック',
     '自分を整える',
-    '自分の哲学',
+    'ライフハック',
+    '生と死',
     'Git',
     'Python',
     '自己探究',
@@ -16,7 +18,6 @@ return [
     'Java',
     'JavaScript',
     'キャリア戦略',
-    'C.U.R.I.O.S.I.T.Y',
     '京都',
     'サウナ',
     '休みの日の過ごし方',
