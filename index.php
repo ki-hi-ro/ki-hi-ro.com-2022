@@ -14,7 +14,10 @@ if (is_tag()) {
       <?php get_search_form(); ?>
     </div>
 
-    <?php if (is_search()) : ?>
+    <?php 
+    // 検索結果ページのとき
+    if (is_search()) : 
+    ?>
       <h2 class="front-sec__ttl">
         "<?= get_search_query(); ?>" が本文中に含まれている記事
       </h2>
@@ -33,18 +36,22 @@ if (is_tag()) {
     <?php endif; ?>    
 
     <?php 
+    // トップページ、日付ページのとき
     $is_front_or_date = is_home() || is_front_page() || is_date();
     if ($is_front_or_date) :
-      get_template_part("template-parts/front-posts");
+      get_template_part('template-parts/last-modified-posts');
     endif;
     ?>
 
-    <?php if (is_tag() && $term) : ?>
+    <?php
+    // タグページのとき
+    if (is_tag() && $term) : 
+    ?>
       <?php $article_list_ttl = esc_html($term->name) . "についての記事"; ?>
       <h2 class="front-sec__ttl"><?= $article_list_ttl; ?></h2>
 
-      <?php if (tag_description()) : ?>
-        <?php
+      <?php 
+      if (tag_description()) : 
         add_filter('term_description', function ($description) {
           if (!empty($description)) {
             $description = '<p class="description-class">' . strip_tags($description, '<a>') . '</p>';
@@ -52,17 +59,17 @@ if (is_tag()) {
           return $description;
         });
         echo tag_description();
-        ?>
-      <?php endif; ?>
+      endif; 
+      ?>
 
       <div class="front-sec__text front-sec__flex">
-        <?php get_template_part("template-parts/blog-list-thumb-desc"); ?>
+        <?php get_template_part("template-parts/tag-posts"); ?>
       </div>
     <?php endif; ?>
 
   </div>
 
-  <?php get_sidebar('default'); ?>
+  <?php get_sidebar('not-single'); ?>
 </main>
 
 <?php get_footer(); ?>
