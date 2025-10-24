@@ -47,7 +47,7 @@ $args = array(
 
 // トップページの場合のみ
 if (is_home() || is_front_page()) {
-    $args['posts_per_page'] = 88;
+    $args['posts_per_page'] = 73;
     $args['orderby'] = 'modified';
 }
 

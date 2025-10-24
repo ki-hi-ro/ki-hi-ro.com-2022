@@ -2158,6 +2158,12 @@ div#ez-toc-container {
   margin: 0;
 }
 
+@media (min-width: 768px) {
+  div#ez-toc-container {
+    display: none;
+  }
+}
+
 @media (max-width: 575px) {
   .s-sp-none {
     display: none;
