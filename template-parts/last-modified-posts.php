@@ -41,13 +41,14 @@ if (is_date()) {
 $args = array(
     'post_type'      => 'post',
     'posts_per_page' => -1,
-    'orderby'        => 'modified',
+    'orderby'        => 'date',
     'post__not_in'   => !empty($post_ids) ? array_merge(array(3874), $post_ids) : array(3874),
 );
 
 // トップページの場合のみ
 if (is_home() || is_front_page()) {
-    $args['posts_per_page'] = 10;
+    $args['posts_per_page'] = 88;
+    $args['orderby'] = 'modified';
 }
 
 // タグ条件を追加

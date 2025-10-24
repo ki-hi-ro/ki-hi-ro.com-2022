@@ -3,7 +3,7 @@
 -----------------------------------------------*/
 
 .tag-list-sidebar {
-    margin: -37px 0 56px;
+    margin: 0 0 56px;
 }
 
 @media (min-width: 768px) {
@@ -32,7 +32,7 @@
 
 @media (min-width: 768px) {
   .tag-list-sidebar ul.front-sec__text.front-sec__flex {
-    margin-top: 8px;
+    margin-top: 10px;
   }
 }
 
@@ -51,6 +51,7 @@
 .archive-sidebar ul {
   list-style: none;
   padding-left: 0;
+  margin-top: 10px;
 }
 
 .archive-sidebar li {

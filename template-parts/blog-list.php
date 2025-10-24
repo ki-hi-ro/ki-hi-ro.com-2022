@@ -6,13 +6,11 @@
       <?php echo esc_html(get_the_title()); ?>
     </div>
     <div class="pc-flex">
-      <div class="all-article__thumb">
-        <?php if (has_post_thumbnail()): ?>
+      <?php if (has_post_thumbnail()): ?>
+        <div class="all-article__thumb">
           <?php the_post_thumbnail('large'); ?>
-        <?php else: ?>
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no-image-20251006.png" alt="No image" />
-        <?php endif; ?>
-      </div>
+        </div>
+      <?php endif; ?>
       <div class="all-article__desc">
           <?php echo esc_html(get_the_excerpt()); ?>
       </div>
