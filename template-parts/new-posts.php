@@ -17,7 +17,7 @@ if (is_tag()) {
 }
 
 // 年月アーカイブページのとき
-$archive_title = "最近書いた記事"; // デフォルトタイトル
+$archive_title = "最近更新した記事"; // デフォルトタイトル
 if (is_date()) {
     $year  = get_query_var('year');      // 例: 2025
     $month = get_query_var('monthnum');  // 例: 10
@@ -41,7 +41,7 @@ if (is_date()) {
 $args = array(
     'post_type'      => 'post',
     'posts_per_page' => -1,
-    'orderby'        => 'date',
+    'orderby'        => 'modified',
     'post__not_in'   => !empty($post_ids) ? array_merge(array(3874), $post_ids) : array(3874),
 );
 
