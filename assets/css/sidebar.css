@@ -54,6 +54,12 @@
   margin-top: 10px;
 }
 
+@media (max-width: 767px) {
+  .archive-sidebar ul {
+    margin-top: 14px;
+  }
+}
+
 .archive-sidebar li {
   margin-bottom: 7px;
   font-size: 18px;
