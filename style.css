@@ -2184,9 +2184,14 @@ div#ez-toc-container ul.ez-toc-list a {
 
 .single ul li,
 .single ol li {
-  color: #000;
+  color: #333;
   font-size: 16px;
   word-break: break-all;
+}
+
+.single ul li::marker,
+.single ol li::marker {
+  color: #333;
 }
 
 .amazon-link {
