@@ -4721,12 +4721,6 @@ h3#reply-title {
   }
 }
 
-@media (min-width: 768px) {
-  .single div#wpadminbar {
-    background: none;
-  }
-}
-
 @media (max-width: 782px) {
   #wp-toolbar>ul>li#wp-admin-bar-new-post,
   #wp-toolbar>ul>li#wp-admin-bar-view-site,
@@ -4736,10 +4730,13 @@ h3#reply-title {
   }
 }
 
-#wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item,
-.admin-bar #wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item {
+#wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item {
   background: #1d2327;
   color: #fff;
+}
+
+.admin-bar #wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item {
+  color: #72aee6;
 }
 
 @media screen and (max-width: 600px) {
