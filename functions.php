@@ -255,20 +255,6 @@ add_action('wp_head','my_meta_ogp');
   }
   add_action('admin_bar_menu', 'customize_admin_bar', 999);
   
-  function prevent_admin_bar_focus_styles() {
-    echo '<style>
-      #wpadminbar .ab-item:focus,
-      #wpadminbar .ab-item:active {
-        background: none !important;
-        box-shadow: none !important;
-        color: inherit !important;
-        outline: none !important;
-      }
-    </style>';
-  }
-  add_action('wp_head', 'prevent_admin_bar_focus_styles');
-  add_action('admin_head', 'prevent_admin_bar_focus_styles');  
-  
 // 抜粋の文字数を変更
 function custom_excerpt_length($length) {
     return 190; // デフォルトは55。ここを好きな数に変更
