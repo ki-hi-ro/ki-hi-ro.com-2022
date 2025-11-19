@@ -215,10 +215,23 @@ add_action('wp_head','my_meta_ogp');
       }
   
       // -------------------------
-      // トップページ：新規投稿リンク
+      // トップページ：管理画面ロゴ＆新規投稿リンク
       // -------------------------
       if (is_front_page() || is_home()) {
           if (current_user_can('edit_posts')) {
+
+              // 管理画面トップへ飛ぶロゴアイコンを追加
+              $wp_admin_bar->add_node([
+                  'id'    => 'admin-logo',
+                  'title' => '<span class="ab-icon"></span><span class="ab-label">管理画面</span>',
+                  'href'  => admin_url(),
+                  'meta'  => [
+                      'title' => '管理画面トップへ移動',
+                      'class' => 'admin-logo-link',
+                  ],
+              ]);
+
+              // 新規投稿リンク
               $wp_admin_bar->add_node([
                   'id'    => 'new-post',
                   'title' => '新規投稿',
@@ -241,20 +254,6 @@ add_action('wp_head','my_meta_ogp');
       }
   }
   add_action('admin_bar_menu', 'customize_admin_bar', 999);
-  
-  function prevent_admin_bar_focus_styles() {
-    echo '<style>
-      #wpadminbar .ab-item:focus,
-      #wpadminbar .ab-item:active {
-        background: none !important;
-        box-shadow: none !important;
-        color: inherit !important;
-        outline: none !important;
-      }
-    </style>';
-  }
-  add_action('wp_head', 'prevent_admin_bar_focus_styles');
-  add_action('admin_head', 'prevent_admin_bar_focus_styles');  
   
 // 抜粋の文字数を変更
 function custom_excerpt_length($length) {

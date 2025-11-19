@@ -12,7 +12,7 @@
   text-rendering: optimizeLegibility;
   background: transparent;
   -webkit-font-smoothing: antialiased;
-  line-height: 2;  
+  line-height: 2;
   font-size: 20px;
 }
 
@@ -20,4 +20,36 @@
   .single h3 {
     margin-left: 0;
   }
+}
+
+/*-----------------------------------------------
+  投稿タグ
+-----------------------------------------------*/
+
+.post-tags h2 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.post-tags ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.post-tags li a {
+  font-family: Noto, Hiragino Sans, Helvetica, Arial, sans-serif;
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #f0f0f0;
+  color: black;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.post-tags li a:hover {
+  background-color: #e0e0e0;
 }

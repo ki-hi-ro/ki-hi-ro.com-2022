@@ -69,32 +69,6 @@ if($posttags) { $last_position = 4; } else { $last_position = 3; }
       echo get_template_part('template-parts/single-bread');
 
       endif; endwhile; endif; ?>
-      <style>
-        .post-tags h2 {
-          font-size: 1.1em;
-          margin-bottom: 10px;
-        }
-        .post-tags ul {
-          list-style: none;
-          padding: 0;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-        }
-        .post-tags li a {
-          font-family: Noto, Hiragino Sans, Helvetica, Arial, sans-serif;
-          display: inline-block;
-          padding: 4px 10px;
-          background-color: #f0f0f0;
-          color: black;
-          border-radius: 4px;
-          text-decoration: none;
-          font-size: 14px;
-        }
-        .post-tags li a:hover {
-          background-color: #e0e0e0;
-        }
-      </style>
     </article>
   </div>
   <?php get_sidebar(); ?>
