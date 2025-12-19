@@ -64,7 +64,19 @@ if (!empty($date_query)) {
 $my_query = new WP_Query($args);
 ?>
 
-<h2 class="front-sec__ttl --sp-center"><?php echo esc_html($archive_title); ?></h2>
+<?php if (is_date()) : ?>
+    <h2 class="front-sec__ttl --sp-center">
+        <?php
+        echo esc_html($archive_title);
+
+        if ( isset($my_query) ) {
+            echo '<span class="archive-count">（' . esc_html($my_query->found_posts) . '）</span>';
+        }
+        ?>
+    </h2>
+<?php else : ?>
+    <h2 class="front-sec__ttl --sp-center"><?php echo esc_html($archive_title); ?></h2>
+<?php endif; ?>
 
 <div class="front-sec__text front-sec__flex">
 <?php
