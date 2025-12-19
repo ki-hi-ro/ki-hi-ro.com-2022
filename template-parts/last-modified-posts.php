@@ -17,7 +17,7 @@ if (is_tag()) {
 }
 
 // 年月アーカイブページのとき
-$archive_title = "最近更新した記事"; // デフォルトタイトル
+$archive_title = "ランダムに表示される記事"; // デフォルトタイトル
 if (is_date()) {
     $year  = get_query_var('year');      // 例: 2025
     $month = get_query_var('monthnum');  // 例: 10
@@ -47,8 +47,8 @@ $args = array(
 
 // トップページの場合のみ
 if (is_home() || is_front_page()) {
-    $args['posts_per_page'] = 1;
-    $args['orderby'] = 'modified';
+    $args['posts_per_page'] = 9;
+    $args['orderby'] = 'rand';
 }
 
 // タグ条件を追加
