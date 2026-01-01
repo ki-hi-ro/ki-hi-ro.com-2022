@@ -1,6 +1,6 @@
 <div class="pc-right-container">
     <!-- 検索ボックス -->
-    <?php get_template_part('template-parts/search-form'); ?>
+    <?php // get_template_part('template-parts/search-form'); ?>
 
     <!-- 年月 -->
     <div class="archive-sidebar">
@@ -22,8 +22,8 @@
                     $year  = (int) $r->year;
                     $month = (int) $r->month;
 
-                    // 2022年以降 → 月別
-                    if ($year > 2021) {
+                    // 2026年 → 月別
+                    if ($year === 2026  ) {
                         $url  = get_month_link($year, $month);
                         $text = sprintf('%d年%d月', $year, $month);
                         echo '<li><a href="' . esc_url($url) . '">' . esc_html($text) . '</a></li>';

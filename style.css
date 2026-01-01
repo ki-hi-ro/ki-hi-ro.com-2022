@@ -4685,12 +4685,12 @@ h3#reply-title {
 .all-article__link {
   padding: 0;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 31px;
 }
 
 @media (max-width: 767px) {
   .all-article__link {
-    margin-bottom: 28px;
+    margin-bottom: 11px;
   }
 }
 

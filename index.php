@@ -11,7 +11,7 @@ if (is_tag()) {
   <div class="article-container">
 
     <div class="search-form-wrap --sp">
-      <?php get_search_form(); ?>
+      <?php // get_search_form(); ?>
     </div>
 
     <?php 

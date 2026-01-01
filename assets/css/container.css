@@ -10,7 +10,7 @@
 }
 
 .header__container {
-  padding: 10px 15px;
+  padding: 28px 15px 10px 15px;
 }
 
 @media (min-width: 768px) {

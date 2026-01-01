@@ -47,7 +47,7 @@ $args = array(
 
 // トップページの場合のみ
 if (is_home() || is_front_page()) {
-    $args['posts_per_page'] = 9;
+    $args['posts_per_page'] = 1;
     $args['orderby'] = 'rand';
 }
 
@@ -64,35 +64,46 @@ if (!empty($date_query)) {
 $my_query = new WP_Query($args);
 ?>
 
+<?php if (!is_date()) : ?>
+    <h2 class="front-sec__ttl --sp-center">最新の記事</h2>
+    <?php
+    $new_args = array(
+        'post_type'      => 'post',
+        'posts_per_page' => 1,
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+        'post__not_in'   => $post_ids,
+    );
+
+    $new_query = new WP_Query($new_args);
+    ?>
+
+    <div class="front-sec__text front-sec__flex">
+    <?php if ($new_query->have_posts()) : while ($new_query->have_posts()) : $new_query->the_post(); ?>
+        <div class="all-article__link front-sec__flex-item">
+            <?php get_template_part("template-parts/blog-list"); ?>
+        </div>
+    <?php endwhile; endif; wp_reset_postdata(); ?>
+    </div>    
+<?php endif; ?>
+
 <?php if (is_date()) : ?>
     <h2 class="front-sec__ttl --sp-center">
-        <?php
-        echo esc_html($archive_title);
-
-        if ( isset($my_query) ) {
-            echo '<span class="archive-count">（' . esc_html($my_query->found_posts) . '）</span>';
-        }
-        ?>
+        <?php echo esc_html($archive_title);
+        if ( isset($my_query) ) { echo '<span class="archive-count">（' . esc_html($my_query->found_posts) . '）</span>'; } ?>
     </h2>
 <?php else : ?>
-    <h2 class="front-sec__ttl --sp-center"><?php echo esc_html($archive_title); ?></h2>
+    <h2 class="front-sec__ttl --sp-center mt-0">過去の記事</h2>
 <?php endif; ?>
 
 <div class="front-sec__text front-sec__flex">
 <?php
-if ($my_query->have_posts()) :
-    while ($my_query->have_posts()) :
-        $my_query->the_post();
-
+if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
         global $post_ids; // ここでもグローバル変数として明示
         $post_ids[] = get_the_ID(); // IDを保存
 ?>
     <div class="all-article__link front-sec__flex-item">
       <?php get_template_part("template-parts/blog-list"); ?>
     </div>
-<?php
-    endwhile;
-endif;
-wp_reset_postdata();
-?>
+<?php endwhile; endif; wp_reset_postdata(); ?>
 </div>

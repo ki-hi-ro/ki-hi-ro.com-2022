@@ -15,20 +15,43 @@
   font-size: 20px;
   color: #333;
   font-weight: normal;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
+}
+
+.archive .front-sec__ttl {
+  margin-bottom: 24px;
+}
+
+.front-sec__ttl.mt-0 {
+  margin-top: 17px;
 }
 
 @media (max-width: 767px) {
   .article-container h2.front-sec__ttl, 
   .single .article-container h3.front-sec__ttl {
     margin-bottom: 25px;
+    margin-top: 30px;
+    text-align: center;
   }
+  .archive .article-container h2.front-sec__ttl {
+    margin-bottom: 34px;
+  }
+  .article-container h2.front-sec__ttl.--sp-center.mt-0 {
+    text-align: center;
+    margin: 0 0 28px;
+  }
+  .single .article-container h3.front-sec__ttl.--sp-center {
+    text-align: center;
+    margin: 30px 0 28px;
+  }  
   .article-container h2.front-sec__ttl.--sp-center, 
   .single .article-container h3.front-sec__ttl.--sp-center {
     text-align: center;
     margin: 30px 0 28px;
+  }  
+  .home .article-container h2.front-sec__ttl.--sp-center {
+    margin-bottom: 17px;
   }
-  .home .article-container h2.front-sec__ttl.--sp-center, 
   .single .home .article-container h3.front-sec__ttl.--sp-center {
     margin-bottom: 38px;
   }  
@@ -52,8 +75,6 @@
 /* 全体のカード */
 .all-article__post-wrap {
   display: block;
-  margin-bottom: 23px; /* 各記事の間隔を広げて呼吸感を */
-  border-bottom: 1px solid #eee; /* 区切り線で視線整理 */
   text-decoration: none;
   color: inherit;
 }
