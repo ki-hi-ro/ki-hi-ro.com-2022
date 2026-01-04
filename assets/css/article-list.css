@@ -23,7 +23,7 @@
 }
 
 .front-sec__ttl.mt-0 {
-  margin-top: 25px;
+  margin-top: 9px;
 }
 
 @media (max-width: 767px) {
@@ -50,7 +50,7 @@
     margin: 30px 0 28px;
   }  
   .home .article-container h2.front-sec__ttl.--sp-center {
-    margin-bottom: 17px;
+    margin-bottom: 28px;
   }
   .single .home .article-container h3.front-sec__ttl.--sp-center {
     margin-bottom: 38px;
