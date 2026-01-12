@@ -1,6 +1,6 @@
 <div class="pc-right-container">
     <!-- 検索ボックス -->
-    <?php // get_template_part('template-parts/search-form'); ?>
+    <?php get_template_part('template-parts/search-form'); ?>
 
     <!-- 年月 -->
     <div class="archive-sidebar">
