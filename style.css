@@ -4835,3 +4835,16 @@ p.description-class {
 .pc-right-container {
     margin-top: 52px;
 }
+.archive-sidebar h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.archive-sidebar a {
+  font-size: 1.1rem;
+  color: #2a6fb5;
+  display: inline-block;
+  margin-bottom: 10px;
+}
