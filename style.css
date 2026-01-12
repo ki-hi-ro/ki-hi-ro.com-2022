@@ -4688,6 +4688,12 @@ h3#reply-title {
   margin-bottom: 17px;
 }
 
+@media(min-width: 768px) {
+  .archive .all-article__link {
+    margin-bottom: 36px;
+  }
+}
+
 @media (max-width: 767px) {
   .all-article__link {
     margin-bottom: 11px;
