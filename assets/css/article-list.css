@@ -77,12 +77,16 @@
   display: block;
   text-decoration: none;
   color: inherit;
+  background: #fff;
+  padding: 28px 0;
+  border-radius: 12px;
+  text-decoration: none;
 }
 
 @media (max-width: 767px) {
   .all-article__post-wrap {
     margin-bottom: 0;
-    padding-bottom: 21px;
+    padding-bottom: 48px;
   }  
 }
 
@@ -110,7 +114,6 @@
 /* タイトル */
 .all-article__ttl {
   font-size: 1.25rem;
-  color: #337ab7;
   line-height: 1.7;
 }
 
