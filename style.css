@@ -4703,13 +4703,7 @@ h3#reply-title {
 .all-article__link {
   padding: 0;
   width: 100%;
-  margin-bottom: 17px;
-}
-
-@media(min-width: 768px) {
-  .archive .all-article__link {
-    margin-bottom: 0;
-  }
+  margin-bottom: 37px;
 }
 
 @media (max-width: 767px) {
@@ -4793,10 +4787,6 @@ p.description-class {
 }
 
 @media (max-width: 768px) {
-  .all-article__post-wrap {
-    padding: 22px 20px;
-  }
-
   .all-article__ttl {
     font-size: 1.1rem;
   }
@@ -4816,20 +4806,6 @@ p.description-class {
 @media (max-width: 768px) {
   .front-sec__ttl.--sp-center {
     text-align: center;
-  }
-}
-.front-sec__ttl::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 2px;
-  background: #ddd;
-  margin-top: 14px;
-}
-@media (max-width: 768px) {
-  .front-sec__ttl::after {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 .pc-right-container {

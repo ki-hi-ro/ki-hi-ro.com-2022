@@ -15,22 +15,18 @@
   font-size: 20px;
   color: #333;
   font-weight: normal;
-  margin-bottom: 10px;
-}
-
-.archive .front-sec__ttl {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .front-sec__ttl.mt-0 {
-  margin-top: 9px;
+  margin-top: 19px;
 }
 
 @media (max-width: 767px) {
   .article-container h2.front-sec__ttl, 
   .single .article-container h3.front-sec__ttl {
-    margin-bottom: 25px;
-    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-top: -5px;
     text-align: center;
   }
   .archive .article-container h2.front-sec__ttl {
@@ -78,15 +74,13 @@
   text-decoration: none;
   color: inherit;
   background: #fff;
-  padding: 28px 0;
   border-radius: 12px;
   text-decoration: none;
 }
 
 @media (max-width: 767px) {
   .all-article__post-wrap {
-    margin-bottom: 0;
-    padding-bottom: 48px;
+    margin-bottom: 35px;
   }  
 }
 
