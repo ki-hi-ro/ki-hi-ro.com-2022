@@ -17,6 +17,9 @@
   .header__container {
     padding: 51px 0 0 0;
   }
+  .single .header__container {
+    padding-bottom: 20px;
+  }
 }
 
 .front-container {
