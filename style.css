@@ -4703,7 +4703,7 @@ h3#reply-title {
 .all-article__link {
   padding: 0;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 @media (max-width: 767px) {

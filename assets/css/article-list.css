@@ -102,7 +102,7 @@
 .all-article__date {
   font-size: 0.9rem;
   color: #333;
-  margin-bottom: 3px;
+  margin-bottom: 0;
 }
 
 /* タイトル */
