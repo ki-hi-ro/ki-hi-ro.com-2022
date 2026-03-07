@@ -65,11 +65,11 @@ $my_query = new WP_Query($args);
 ?>
 
 <?php if (!is_date()) : ?>
-    <h2 class="front-sec__ttl --sp-center">最新の記事</h2>
+    <h2 class="front-sec__ttl --sp-center">人生の記事</h2>
     <?php
     $new_args = array(
         'post_type'      => 'post',
-        'posts_per_page' => 1,
+        'posts_per_page' => -1,
         'orderby'        => 'date',
         'order'          => 'DESC',
         'post__not_in'   => $post_ids,
@@ -88,13 +88,10 @@ $my_query = new WP_Query($args);
 <?php endif; ?>
 
 <?php if (is_date()) : ?>
-    <h2 class="front-sec__ttl --sp-center">
-        <?php echo esc_html($archive_title);
-        if ( isset($my_query) ) { echo '<span class="archive-count">（' . esc_html($my_query->found_posts) . '）</span>'; } ?>
-    </h2>
-<?php else : ?>
-    <h2 class="front-sec__ttl --sp-center mt-0">過去の記事</h2>
-<?php endif; ?>
+<h2 class="front-sec__ttl --sp-center">
+    <?php echo esc_html($archive_title);
+    if ( isset($my_query) ) { echo '<span class="archive-count">（' . esc_html($my_query->found_posts) . '）</span>'; } ?>
+</h2>
 
 <div class="front-sec__text front-sec__flex">
 <?php
@@ -107,3 +104,4 @@ if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_
     </div>
 <?php endwhile; endif; wp_reset_postdata(); ?>
 </div>
+<?php endif; ?>

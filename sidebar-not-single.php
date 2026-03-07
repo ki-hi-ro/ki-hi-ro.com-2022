@@ -23,20 +23,20 @@
                     $month = (int) $r->month;
 
                     // 2026年 → 月別
-                    if ($year === 2026  ) {
+                    // if ($year === 2026  ) {
                         $url  = get_month_link($year, $month);
                         $text = sprintf('%d年%d月', $year, $month);
                         echo '<li><a href="' . esc_url($url) . '">' . esc_html($text) . '</a></li>';
-                    }
+                    // }
                     // 2024年以前 → 年別（同じ年は1回だけ出力）
-                    else {
-                        if (!in_array($year, $shown_years, true)) {
-                            $url  = get_year_link($year);
-                            $text = sprintf('%d年', $year);
-                            echo '<li><a href="' . esc_url($url) . '">' . esc_html($text) . '</a></li>';
-                            $shown_years[] = $year; // 出力済みに追加
-                        }
-                    }
+                    // else {
+                    //     if (!in_array($year, $shown_years, true)) {
+                    //         $url  = get_year_link($year);
+                    //         $text = sprintf('%d年', $year);
+                    //         echo '<li><a href="' . esc_url($url) . '">' . esc_html($text) . '</a></li>';
+                    //         $shown_years[] = $year; // 出力済みに追加
+                    //     }
+                    // }
                 }
             }
             ?>
