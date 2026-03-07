@@ -5,9 +5,9 @@
     <div class="all-article__ttl">
       <?php echo esc_html(get_the_title()); ?>
     </div>
-    <div class="pc-flex">
+    <!-- <div class="pc-flex">
       <div class="all-article__desc">
           <?php echo esc_html(get_the_excerpt()); ?>
       </div>
-    </div>
+    </div> -->
 </a>
