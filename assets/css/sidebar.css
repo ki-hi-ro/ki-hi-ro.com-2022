@@ -20,6 +20,12 @@
   margin-top: 27px;
 }
 
+@media (min-width: 768px) {
+  .tag-list-sidebar h2 {
+    margin-bottom: -4px;
+  }
+}
+
 .tag-list-sidebar .front-sec__flex {
   padding-left: 0;
 }
@@ -44,8 +50,14 @@
   font-size: 20px;
   color: #333;
   font-weight: normal;
-  margin-bottom: 11px;
-  margin-top: 27px;
+  margin-bottom: -3px;
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .archive-sidebar h2 {
+    margin-bottom: -4px;
+  }  
 }
 
 @media (max-width: 767px) {
