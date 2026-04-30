@@ -2,6 +2,21 @@
     <!-- 検索ボックス -->
     <?php get_template_part('template-parts/search-form'); ?>
 
+    <!-- タグ一覧 -->
+    <?php
+    $common_names = require locate_template('template-parts/_tag-names.php');
+
+    get_template_part('template-parts/tag-list', null, [
+        'container_class' => 'tag-list-sidebar',
+        'ul_class'        => 'front-sec__text front-sec__flex',
+        'title_tag'       => 'h2',
+        'title_text'      => 'タグ',
+        'order_mode'      => 'custom',
+        'custom_names'    => $common_names,
+        'hide_empty'      => false,
+    ]);
+    ?>    
+
     <!-- 年月 -->
     <div class="archive-sidebar">
         <h2>年月</h2>
@@ -42,20 +57,5 @@
             ?>
         </ul>
     </div>    
-
-    <!-- タグ一覧 -->
-    <?php
-    // $common_names = require locate_template('template-parts/_tag-names.php');
-
-    // get_template_part('template-parts/tag-list', null, [
-    //     'container_class' => 'tag-list-sidebar',
-    //     'ul_class'        => 'front-sec__text front-sec__flex',
-    //     'title_tag'       => 'h2',
-    //     'title_text'      => 'タグ',
-    //     'order_mode'      => 'custom',
-    //     'custom_names'    => $common_names,
-    //     'hide_empty'      => false,
-    // ]);
-    ?>
 
 </div>
