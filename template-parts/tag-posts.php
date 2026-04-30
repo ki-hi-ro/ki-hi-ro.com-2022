@@ -5,7 +5,7 @@ if(is_tag()) {
   $term_slug = $term->slug;
 }
 $offset = 0;
-$order_pram = 'modified';
+$order_pram = 'date';
 $post_id = "";
 $my_query = new WP_Query(
   array(
