@@ -69,7 +69,7 @@ $my_query = new WP_Query($args);
     <?php
     $new_args = array(
         'post_type'      => 'post',
-        'posts_per_page' => -1,
+        'posts_per_page' => 31,
         'orderby'        => 'date',
         'order'          => 'DESC',
         'post__not_in'   => $post_ids,
