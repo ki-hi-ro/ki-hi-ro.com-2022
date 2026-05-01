@@ -3693,9 +3693,9 @@ body.fixed {
 
 .search-form__input {
   width: 100%;
-  padding: 17px 16px 16px 16px;
+  padding: 16px 16px 16px 16px;
   font-size: 16px;
-  border: 1px solid #000;
+  border: 1px solid #b6b4b4;
   border-radius: 11px;
 }
 
@@ -3709,7 +3709,7 @@ body.fixed {
 
 .search-form__btn {
   position: absolute;
-  right: 4px;
+  right: 7px;
   top: 50%;
   transform: translateY(-50%);
   width: 42px;
