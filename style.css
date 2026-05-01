@@ -4813,6 +4813,11 @@ p.description-class {
 .pc-right-container {
     margin-top: 52px;
 }
+@media (max-width: 768px) {
+  .pc-right-container {
+    margin-top: 14px;
+  }
+}
 .archive-sidebar h2 {
   font-size: 1rem;
   font-weight: 500;

@@ -20,6 +20,12 @@
   margin-top: 27px;
 }
 
+@media (max-width: 768px) {
+  .tag-list-sidebar h2 {
+    margin-top: 14px;
+  }
+}
+
 @media (min-width: 768px) {
   .tag-list-sidebar h2 {
     margin-bottom: -2px;
