@@ -16,7 +16,7 @@ Author: Shibata Hiroki
 }
 
 a {
-  color: #337ab7;
+  color: #333333;
   text-decoration: none;
   background-color: transparent;
   cursor: pointer;
@@ -3661,7 +3661,6 @@ body.fixed {
 .search-form-wrap .search-form {
   display: flex;
   position: relative;
-  border: 1px solid #d2d2d2;
   height: 48px;
   border-radius: 11px;
 }
@@ -3694,10 +3693,14 @@ body.fixed {
 
 .search-form__input {
   width: 100%;
-  padding: 12px;
+  padding: 17px 16px 16px 16px;
   font-size: 16px;
-  border: none;
+  border: 1px solid #000;
   border-radius: 11px;
+}
+
+.search-form__input::placeholder {
+  color: #333333; /* ←プレースホルダーの色 */
 }
 
 .search-form__input:focus {
@@ -3706,15 +3709,14 @@ body.fixed {
 
 .search-form__btn {
   position: absolute;
-  right: 0;
+  right: 4px;
   top: 50%;
   transform: translateY(-50%);
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
   cursor: pointer;
   border: none;
   background-color: #fff;
-  border-radius: 11px;
 }
 
 .search-form__icon-img {
@@ -4690,7 +4692,7 @@ h3#reply-title {
   font-size: 18px;
   font-size: 1.25rem;
   line-height: 1.45;
-  color: #337ab7;
+  color: #333333;
   margin-bottom: 5px;  
 }
 
@@ -4820,7 +4822,7 @@ p.description-class {
 
 .archive-sidebar a {
   font-size: 1.1rem;
-  color: #2a6fb5;
+  color: #333333;
   display: inline-block;
   margin-bottom: 10px;
 }

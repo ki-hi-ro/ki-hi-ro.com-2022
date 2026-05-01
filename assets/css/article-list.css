@@ -12,10 +12,10 @@
 
 /* front-sec__ttl */
 .front-sec__ttl {
-  font-size: 20px;
+  font-size: 23px;
   color: #333;
   font-weight: normal;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .front-sec__ttl.mt-0 {
@@ -80,7 +80,7 @@
 
 @media (max-width: 767px) {
   .all-article__post-wrap {
-    margin-bottom: 8px;
+    margin-bottom: 13px;
   }  
 }
 
