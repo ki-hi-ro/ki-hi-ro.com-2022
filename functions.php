@@ -296,5 +296,38 @@ function enable_text_selection_in_gutenberg() {
 }
 add_action('admin_footer', 'enable_text_selection_in_gutenberg');
     
-  
-  
+// 名言ランダム表示
+function get_random_quote_from_posts() {
+
+    $posts = get_posts([
+        'numberposts' => 30,
+        'post_status' => 'publish'
+    ]);
+
+    $quotes = [];
+
+    foreach ($posts as $post) {
+
+        $content = wp_strip_all_tags($post->post_content);
+
+        $sentences = preg_split('/[。！？]/u', $content);
+
+        foreach ($sentences as $sentence) {
+
+            $sentence = trim($sentence);
+
+            if (
+                mb_strlen($sentence) >= 20 &&
+                mb_strlen($sentence) <= 80
+            ) {
+                $quotes[] = $sentence;
+            }
+        }
+    }
+
+    if (empty($quotes)) {
+        return null;
+    }
+
+    return $quotes[array_rand($quotes)];
+}

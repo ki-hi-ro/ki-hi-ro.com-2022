@@ -1,9 +1,18 @@
 <div class="pc-right-container">
     
     <!-- 名言 -->
+    <?php
+    $quote = get_random_quote_from_posts();
+
+    if ($quote):
+    ?>
+
     <div class="quote-box">
-        <p id="random-quote"></p>
+        <p><?php echo esc_html($quote); ?></p>
     </div>
+
+    <?php endif; ?>
+        
 
     <!-- 検索ボックス -->
     <?php get_template_part('template-parts/search-form'); ?>

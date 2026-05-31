@@ -4835,10 +4835,13 @@ p.description-class {
 /* 名言 */
 .quote-box {
     margin-bottom: 32px;
-    padding: 16px;
-    border-left: 4px solid #5555ff;
+    padding: 20px;
+    border-left: 4px solid #000;
     background: #fafafa;
-    border-radius: 8px;
     font-size: 14px;
     line-height: 1.8;
+}
+
+.quote-box p {
+    margin: 0;
 }
