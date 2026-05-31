@@ -4854,3 +4854,7 @@ p.description-class {
     display: none;
   }
 }
+
+body.search .quote-box {
+    display: none;
+}
