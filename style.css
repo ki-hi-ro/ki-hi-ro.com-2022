@@ -4856,5 +4856,5 @@ p.description-class {
 }
 
 body.search .quote-box {
-    display: none;
+    display: none !important;
 }
