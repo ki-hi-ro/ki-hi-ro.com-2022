@@ -4850,4 +4850,7 @@ p.description-class {
   .quote-box {
     margin-top: 12px;
   }
+  .quote-box.--pc {
+    display: none;
+  }
 }

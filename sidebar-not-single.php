@@ -7,12 +7,12 @@
     if ($quote):
     ?>
 
-    <div class="quote-box">
+    <div class="quote-box --pc">
         <p><?php echo esc_html($quote); ?></p>
     </div>
 
     <?php endif; ?>
-        
+
 
     <!-- 検索ボックス -->
     <?php get_template_part('template-parts/search-form'); ?>
