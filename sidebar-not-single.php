@@ -10,7 +10,9 @@
     ?>
 
     <div class="quote-box --pc">
-        <p><?php echo esc_html($quote); ?></p>
+        <a href="<?php echo esc_url($quote['url']); ?>" class="quote-link">
+            <p><?php echo esc_html($quote['text']); ?></p>
+        </a>
     </div>
 
     <?php endif; ?>

@@ -309,7 +309,6 @@ function get_random_quote_from_posts() {
     foreach ($posts as $post) {
 
         $content = wp_strip_all_tags($post->post_content);
-
         $sentences = preg_split('/[。！？]/u', $content);
 
         foreach ($sentences as $sentence) {
@@ -320,7 +319,11 @@ function get_random_quote_from_posts() {
                 mb_strlen($sentence) >= 20 &&
                 mb_strlen($sentence) <= 80
             ) {
-                $quotes[] = $sentence;
+                $quotes[] = [
+                    'text' => $sentence,
+                    'url' => get_permalink($post->ID),
+                    'title' => get_the_title($post->ID)
+                ];
             }
         }
     }
