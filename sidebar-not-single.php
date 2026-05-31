@@ -9,11 +9,12 @@
     if ($quote):
     ?>
 
-    <div class="quote-box --pc">
-        <a href="<?php echo esc_url($quote['url']); ?>" class="quote-link">
-            <p><?php echo esc_html($quote['text']); ?></p>
-        </a>
-    </div>
+    <a
+    href="<?php echo esc_url($quote['url']); ?>"
+    class="quote-box quote-link --pc"
+    >
+    <p><?php echo esc_html($quote['text']); ?></p>
+    </a>
 
     <?php endif; ?>
 
