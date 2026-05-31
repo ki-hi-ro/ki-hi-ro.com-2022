@@ -4802,7 +4802,7 @@ p.description-class {
   font-weight: 600;
   letter-spacing: 0.08em;
   color: #111;
-  margin: 67px 0 36px;
+  margin: 52px 0 36px;
   text-align: left;
 }
 @media (max-width: 768px) {
@@ -4844,4 +4844,10 @@ p.description-class {
 
 .quote-box p {
     margin: 0;
+}
+
+@media (max-width: 768px) {
+  .quote-box {
+    margin-top: 12px;
+  }
 }
