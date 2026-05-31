@@ -1,6 +1,8 @@
 <div class="pc-right-container">
     
     <!-- 名言 -->
+    <?php if (!is_search()) : ?>
+    
     <?php
     $quote = get_random_quote_from_posts();
 
@@ -10,6 +12,8 @@
     <div class="quote-box --pc">
         <p><?php echo esc_html($quote); ?></p>
     </div>
+
+    <?php endif; ?>
 
     <?php endif; ?>
 

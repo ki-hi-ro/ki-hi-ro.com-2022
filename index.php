@@ -12,6 +12,8 @@ if (is_tag()) {
 
     <div class="search-form-wrap --sp">
       <!-- 名言 -->
+      <?php if (!is_search()) : ?>
+
       <?php
       $quote = get_random_quote_from_posts();
 
@@ -23,8 +25,10 @@ if (is_tag()) {
       </div>
 
       <?php endif; ?>
+
+      <?php endif; ?>      
       
-      
+
       <!-- 検索ボックス -->
       <?php get_search_form(); ?>
     </div>
