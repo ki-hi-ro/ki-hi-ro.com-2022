@@ -300,8 +300,9 @@ add_action('admin_footer', 'enable_text_selection_in_gutenberg');
 function get_random_quote_from_posts() {
 
     $posts = get_posts([
-        'numberposts' => 30,
-        'post_status' => 'publish'
+        'numberposts' => 100,
+        'post_status' => 'publish',
+        'orderby' => 'rand',
     ]);
 
     $quotes = [];
