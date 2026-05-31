@@ -1,4 +1,10 @@
 <div class="pc-right-container">
+    
+    <!-- 名言 -->
+    <div class="quote-box">
+        <p id="random-quote"></p>
+    </div>
+
     <!-- 検索ボックス -->
     <?php get_template_part('template-parts/search-form'); ?>
 

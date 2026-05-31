@@ -4831,3 +4831,14 @@ p.description-class {
   display: inline-block;
   margin-bottom: 10px;
 }
+
+/* 名言 */
+.quote-box {
+    margin-bottom: 32px;
+    padding: 16px;
+    border-left: 4px solid #5555ff;
+    background: #fafafa;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.8;
+}
