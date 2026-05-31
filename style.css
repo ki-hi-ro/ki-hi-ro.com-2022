@@ -4855,8 +4855,6 @@ p.description-class {
   }
 }
 
-.search {
-  .quote-box {
+.search .quote-box {
     display: none;
   }
-}
