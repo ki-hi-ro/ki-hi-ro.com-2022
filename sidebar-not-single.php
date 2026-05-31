@@ -15,7 +15,7 @@
 
     <?php endif; ?>
 
-    <?php endif; ?>
+    <?php endif; ?> 
 
 
     <!-- 検索ボックス -->

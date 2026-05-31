@@ -11,6 +11,7 @@ if (is_tag()) {
   <div class="article-container">
 
     <div class="search-form-wrap --sp">
+      <?php var_dump(is_search()); ?>
       <!-- 名言 -->
       <?php if (!is_search()) : ?>
 
