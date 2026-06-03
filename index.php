@@ -95,24 +95,24 @@ if (is_tag()) {
   <?php get_sidebar('not-single'); ?>
 
   <script>
+
+  const ajaxUrl = "<?php echo admin_url('admin-ajax.php'); ?>";
+
   function updateQuote() {
 
-      fetch('/wp-admin/admin-ajax.php?action=get_random_quote')
-      .then(response => response.json())
-      .then(data => {
+      fetch(ajaxUrl + "?action=get_random_quote")
+          .then(response => response.json())
+          .then(data => {
 
-          if (!data) return;
+              document.getElementById("quote-box").href = data.url;
+              document.getElementById("quote-text").textContent = data.text;
 
-          document.getElementById('quote-box')
-              .href = data.url;
-
-          document.getElementById('quote-text')
-              .textContent = data.text;
-      });
+          });
 
   }
 
   setInterval(updateQuote, 5000);
+
   </script>    
 </main>
 
