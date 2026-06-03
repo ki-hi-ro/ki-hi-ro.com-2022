@@ -335,3 +335,14 @@ function get_random_quote_from_posts() {
 
     return $quotes[array_rand($quotes)];
 }
+
+
+add_action('wp_ajax_get_random_quote', 'ajax_get_random_quote');
+add_action('wp_ajax_nopriv_get_random_quote', 'ajax_get_random_quote');
+
+function ajax_get_random_quote() {
+
+    $quote = get_random_quote_from_posts();
+
+    wp_send_json($quote);
+}

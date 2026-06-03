@@ -21,6 +21,7 @@ if (is_tag()) {
       ?>
 
       <a
+        id="quote-box"
         href="<?php echo esc_url($quote['url']); ?>"
         class="quote-box quote-link"
       >
@@ -98,6 +99,27 @@ if (is_tag()) {
   </div>
 
   <?php get_sidebar('not-single'); ?>
+
+  <script>
+  function updateQuote() {
+
+      fetch('/wp-admin/admin-ajax.php?action=get_random_quote')
+      .then(response => response.json())
+      .then(data => {
+
+          if (!data) return;
+
+          document.getElementById('quote-box')
+              .href = data.url;
+
+          document.getElementById('quote-text')
+              .textContent = data.text;
+      });
+
+  }
+
+  setInterval(updateQuote, 5000);
+  </script>    
 </main>
 
 <?php get_footer(); ?>
