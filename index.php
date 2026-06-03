@@ -24,9 +24,7 @@ if (is_tag()) {
           href="<?php echo esc_url($quote['url']); ?>"
           class="quote-box quote-link"
         >
-          <p id="quote-text">
-            <?php echo esc_html($quote['text']); ?>
-          </p>
+        <p id="quote-text"><?php echo esc_html($quote['text']); ?></p>
         </a>
         <?php endif; ?>
       <?php endif; ?>      
