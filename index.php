@@ -11,27 +11,25 @@ if (is_tag()) {
   <div class="article-container">
 
     <div class="search-form-wrap --sp">
+      
       <!-- 名言 -->
       <?php if (!is_search()) : ?>
+        <?php
+        $quote = get_random_quote_from_posts();
 
-      <?php
-      $quote = get_random_quote_from_posts();
-
-      if ($quote):
-      ?>
-
-      <a
-        id="quote-box"
-        href="<?php echo esc_url($quote['url']); ?>"
-        class="quote-box quote-link"
-      >
-        <p><?php echo esc_html($quote['text']); ?></p>
-      </a>
-
-      <?php endif; ?>
-
+        if ($quote):
+        ?>
+        <a
+          id="quote-box"
+          href="<?php echo esc_url($quote['url']); ?>"
+          class="quote-box quote-link"
+        >
+          <p id="quote-text">
+            <?php echo esc_html($quote['text']); ?>
+          </p>
+        </a>
+        <?php endif; ?>
       <?php endif; ?>      
-      
 
       <!-- 検索ボックス -->
       <?php get_search_form(); ?>
@@ -95,25 +93,22 @@ if (is_tag()) {
   <?php get_sidebar('not-single'); ?>
 
   <script>
-
   const ajaxUrl = "<?php echo admin_url('admin-ajax.php'); ?>";
 
   function updateQuote() {
-
       fetch(ajaxUrl + "?action=get_random_quote")
           .then(response => response.json())
           .then(data => {
+              if (!data) return;
 
               document.getElementById("quote-box").href = data.url;
               document.getElementById("quote-text").textContent = data.text;
-
-          });
-
+          })
+          .catch(error => console.error(error));
   }
 
   setInterval(updateQuote, 5000);
-
-  </script>    
+  </script>  
 </main>
 
 <?php get_footer(); ?>
