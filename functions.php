@@ -14,7 +14,7 @@ if (!is_admin()) {
 wp_enqueue_script('jquery', null, null, null, true);
 wp_enqueue_script('view-port', get_template_directory_uri() . '/assets/js/view-port.js', null, date("YmdHi"), true);
 wp_enqueue_script('page-top', get_template_directory_uri() . '/assets/js/page-top.js', null, date("YmdHi"), true);
-// wp_enqueue_script('quote', get_template_directory_uri() . '/assets/js/quote.js', null, date("YmdHi"), true);
+wp_enqueue_script('quote', get_template_directory_uri() . '/assets/js/quote.js', null, date("YmdHi"), true);
 
 // body_class()にページスラッグを追加
 add_filter('body_class', 'add_page_slug_class_name');
