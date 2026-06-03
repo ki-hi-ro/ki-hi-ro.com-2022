@@ -1,11 +1,13 @@
 function updateQuote() {
-    fetch("<?php echo admin_url('admin-ajax.php'); ?>?action=get_random_quote")
+    fetch(quoteAjax.ajaxUrl + "?action=get_random_quote")
         .then(response => response.json())
         .then(data => {
+
             if (!data) return;
 
             document.getElementById("quote-box").href = data.url;
             document.getElementById("quote-text").textContent = data.text;
+
         })
         .catch(error => console.error(error));
 }

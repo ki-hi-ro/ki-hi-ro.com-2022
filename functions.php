@@ -14,7 +14,69 @@ if (!is_admin()) {
 wp_enqueue_script('jquery', null, null, null, true);
 wp_enqueue_script('view-port', get_template_directory_uri() . '/assets/js/view-port.js', null, date("YmdHi"), true);
 wp_enqueue_script('page-top', get_template_directory_uri() . '/assets/js/page-top.js', null, date("YmdHi"), true);
-wp_enqueue_script('quote', get_template_directory_uri() . '/assets/js/quote.js', null, date("YmdHi"), true);
+
+wp_enqueue_script(
+    'quote',
+    get_template_directory_uri() . '/assets/js/quote.js',
+    [],
+    date('YmdHi'),
+    true
+);
+
+wp_localize_script(
+    'quote',
+    'quoteAjax',
+    [
+        'ajaxUrl' => admin_url('admin-ajax.php')
+    ]
+);
+
+// 名言ランダム表示
+function get_random_quote_from_posts() {
+    $posts = get_posts([
+        'numberposts' => 100,
+        'post_status' => 'publish',
+        'orderby' => 'rand',
+    ]);
+
+    $quotes = [];
+
+    foreach ($posts as $post) {
+
+        $content = wp_strip_all_tags($post->post_content);
+        $sentences = preg_split('/[。！？]/u', $content);
+
+        foreach ($sentences as $sentence) {
+
+            $sentence = trim($sentence);
+
+            if (
+                mb_strlen($sentence) >= 20 &&
+                mb_strlen($sentence) <= 80
+            ) {
+                $quotes[] = [
+                    'text' => $sentence,
+                    'url' => get_permalink($post->ID),
+                    'title' => get_the_title($post->ID)
+                ];
+            }
+        }
+    }
+
+    if (empty($quotes)) {
+        return null;
+    }
+
+    return $quotes[array_rand($quotes)];
+}
+
+add_action('wp_ajax_get_random_quote', 'ajax_get_random_quote');
+add_action('wp_ajax_nopriv_get_random_quote', 'ajax_get_random_quote');
+
+function ajax_get_random_quote() {
+    $quote = get_random_quote_from_posts();
+    wp_send_json($quote);
+}
 
 // body_class()にページスラッグを追加
 add_filter('body_class', 'add_page_slug_class_name');
@@ -294,52 +356,3 @@ function enable_text_selection_in_gutenberg() {
   </script>';
 }
 add_action('admin_footer', 'enable_text_selection_in_gutenberg');
-    
-// 名言ランダム表示
-function get_random_quote_from_posts() {
-
-    $posts = get_posts([
-        'numberposts' => 100,
-        'post_status' => 'publish',
-        'orderby' => 'rand',
-    ]);
-
-    $quotes = [];
-
-    foreach ($posts as $post) {
-
-        $content = wp_strip_all_tags($post->post_content);
-        $sentences = preg_split('/[。！？]/u', $content);
-
-        foreach ($sentences as $sentence) {
-
-            $sentence = trim($sentence);
-
-            if (
-                mb_strlen($sentence) >= 20 &&
-                mb_strlen($sentence) <= 80
-            ) {
-                $quotes[] = [
-                    'text' => $sentence,
-                    'url' => get_permalink($post->ID),
-                    'title' => get_the_title($post->ID)
-                ];
-            }
-        }
-    }
-
-    if (empty($quotes)) {
-        return null;
-    }
-
-    return $quotes[array_rand($quotes)];
-}
-
-
-add_action('wp_ajax_get_random_quote', 'ajax_get_random_quote');
-add_action('wp_ajax_nopriv_get_random_quote', 'ajax_get_random_quote');
-
-function ajax_get_random_quote() {
-    $quote = get_random_quote_from_posts();
-    wp_send_json($quote);
-}
