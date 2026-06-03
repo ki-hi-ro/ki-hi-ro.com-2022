@@ -13,21 +13,7 @@ if (is_tag()) {
     <div class="search-form-wrap --sp">
       
       <!-- 名言 -->
-      <?php if (!is_search()) : ?>
-        <?php
-        $quote = get_random_quote_from_posts();
-
-        if ($quote):
-        ?>
-        <a
-          id="quote-box"
-          href="<?php echo esc_url($quote['url']); ?>"
-          class="quote-box quote-link"
-        >
-        <p id="quote-text"><?php echo esc_html($quote['text']); ?></p>
-        </a>
-        <?php endif; ?>
-      <?php endif; ?>      
+      <?php get_template_part('template-parts/random-quote'); ?>
 
       <!-- 検索ボックス -->
       <?php get_search_form(); ?>
