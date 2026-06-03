@@ -1,24 +1,21 @@
 <div class="pc-right-container">
     
-    <!-- 名言 -->
-    <?php if (!is_search()) : ?>
-    
-    <?php
-    $quote = get_random_quote_from_posts();
+      <!-- 名言 -->
+      <?php if (!is_search()) : ?>
+        <?php
+        $quote = get_random_quote_from_posts();
 
-    if ($quote):
-    ?>
-
-    <a
-    href="<?php echo esc_url($quote['url']); ?>"
-    class="quote-box quote-link --pc"
-    >
-    <p><?php echo esc_html($quote['text']); ?></p>
-    </a>
-
-    <?php endif; ?>
-
-    <?php endif; ?> 
+        if ($quote):
+        ?>
+        <a
+          id="quote-box"
+          href="<?php echo esc_url($quote['url']); ?>"
+          class="quote-box quote-link"
+        >
+        <p id="quote-text"><?php echo esc_html($quote['text']); ?></p>
+        </a>
+        <?php endif; ?>
+      <?php endif; ?>
 
 
     <!-- 検索ボックス -->
