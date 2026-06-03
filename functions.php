@@ -17,7 +17,7 @@ wp_enqueue_script('page-top', get_template_directory_uri() . '/assets/js/page-to
 
 wp_enqueue_script(
     'quote',
-    get_template_directory_uri() . '/assets/js/quote.js',
+    get_template_directory_uri() . '/assets/js/random-quote.js',
     [],
     date('YmdHi'),
     true
