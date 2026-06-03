@@ -30,12 +30,6 @@ if (is_tag()) {
 
       <?php endif; ?>
 
-      <script>
-      setInterval(function () {
-          location.reload();
-      }, 5000);
-      </script>      
-
       <?php endif; ?>      
       
 
