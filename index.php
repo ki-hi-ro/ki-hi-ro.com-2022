@@ -92,9 +92,6 @@ if (is_tag()) {
 
   <?php get_sidebar('not-single'); ?>
 
-  <script>
-  
-  </script>  
 </main>
 
 <?php get_footer(); ?>
