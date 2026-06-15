@@ -140,6 +140,52 @@ function get_random_image() {
 add_action('wp_ajax_get_random_image', 'get_random_image');
 add_action('wp_ajax_nopriv_get_random_image', 'get_random_image');
 
+// タグのランダム表示
+wp_enqueue_script(
+    'random-tags',
+    get_template_directory_uri() . '/assets/js/random-tags.js',
+    [],
+    date('YmdHi'),
+    true
+);
+
+wp_localize_script(
+    'random-tags',
+    'tagAjax',
+    [
+        'ajaxUrl' => admin_url('admin-ajax.php')
+    ]
+);
+
+function get_random_tags_ajax() {
+    $tags = get_tags([
+        'hide_empty' => false,
+    ]);
+
+    if (empty($tags)) {
+        wp_send_json(null);
+    }
+
+    shuffle($tags);
+
+    $tags = array_slice($tags, 0, 10);
+
+    $result = [];
+
+    foreach ($tags as $tag) {
+        $result[] = [
+            'name' => $tag->name,
+            'url'  => get_tag_link($tag->term_id),
+        ];
+    }
+
+    wp_send_json($result);
+}
+
+add_action('wp_ajax_get_random_tags', 'get_random_tags_ajax');
+add_action('wp_ajax_nopriv_get_random_tags', 'get_random_tags_ajax');
+
+
 // body_class()にページスラッグを追加
 add_filter('body_class', 'add_page_slug_class_name');
 function add_page_slug_class_name($classes)

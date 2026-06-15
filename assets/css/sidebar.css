@@ -3,7 +3,7 @@
 -----------------------------------------------*/
 
 .tag-list-sidebar {
-    margin: 0 0 56px;
+    margin-bottom: 24px;
 }
 
 @media (min-width: 768px) {
@@ -26,12 +26,6 @@
   }
 }
 
-@media (min-width: 768px) {
-  .tag-list-sidebar h2 {
-    margin-bottom: -2px;
-  }
-}
-
 .tag-list-sidebar .front-sec__flex {
   padding-left: 0;
 }
@@ -40,12 +34,6 @@
   width: 100%;
   list-style: none;
   margin-bottom: 6px;
-}
-
-@media (min-width: 768px) {
-  .tag-list-sidebar ul.front-sec__text.front-sec__flex {
-    margin-top: 10px;
-  }
 }
 
 /*-----------------------------------------------
