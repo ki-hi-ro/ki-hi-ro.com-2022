@@ -17,4 +17,4 @@ function updateRandomImage() {
 }
 
 updateRandomImage();
-setInterval(updateRandomImage, 10000);
+setInterval(updateRandomImage, ROTATION_INTERVAL);

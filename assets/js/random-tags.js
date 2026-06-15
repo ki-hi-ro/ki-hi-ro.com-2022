@@ -24,4 +24,4 @@ function updateRandomTags() {
         .catch(error => console.error(error));
 }
 
-setInterval(updateRandomTags, 10000);
+setInterval(updateRandomTags, ROTATION_INTERVAL);

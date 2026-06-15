@@ -25,4 +25,4 @@ function updateQuote() {
         .catch(error => console.error(error));
 }
 
-setInterval(updateQuote, 10000);
+setInterval(updateQuote, ROTATION_INTERVAL);

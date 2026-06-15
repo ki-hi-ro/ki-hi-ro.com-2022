@@ -1,0 +1,1 @@
+const ROTATION_INTERVAL = 15000;
