@@ -28,10 +28,15 @@
 
 @media (min-width: 768px) {
   .front-container {
-    padding: 0;
     display: flex;
   }
   .front-container .pc-right-container {
     width: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .front-container {
+    padding: 0;
   }
 }

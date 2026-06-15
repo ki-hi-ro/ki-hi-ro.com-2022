@@ -65,7 +65,6 @@ $my_query = new WP_Query($args);
 ?>
 
 <?php if (!is_date()) : ?>
-    <h2 class="front-sec__ttl --sp-center">人生の記事</h2>
     <?php
     $new_args = array(
         'post_type'      => 'post',

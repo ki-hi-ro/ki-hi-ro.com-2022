@@ -44,9 +44,16 @@ if (is_tag()) {
     // トップページ、日付ページのとき
     $is_front_or_date = is_home() || is_front_page() || is_date();
     if ($is_front_or_date) :
-      get_template_part('template-parts/last-modified-posts');
-    endif;
     ?>
+      <section class="life-article__section">
+        <h2 class="front-sec__ttl --sp-center">人生の記事</h2>
+        <p class="life-article__lead">
+          人生・考え方・働き方について書いた記事をまとめています。
+        </p>
+
+        <?php get_template_part('template-parts/last-modified-posts'); ?>
+      </section>
+    <?php endif; ?>
 
     <?php
     // タグページのとき

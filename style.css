@@ -4870,3 +4870,25 @@ body.search .quote-box {
 .quote-link:hover {
     opacity: 0.75;
 }
+
+.front-container {
+  padding-top: 48px;
+}
+
+.life-article__section {
+  max-width: 760px;
+}
+
+.front-sec__ttl {
+  margin-bottom: 12px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.life-article__lead {
+  margin-bottom: 32px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.8;
+}
