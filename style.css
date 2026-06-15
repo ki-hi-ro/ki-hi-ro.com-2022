@@ -3670,12 +3670,12 @@ body.fixed {
 }
 
 .search-form-wrap .search-form {
-  margin: 30px auto 50px;
+  margin: 30px auto;
 }
 
 @media (min-width: 768px) {
   .search-form-wrap .search-form {
-    margin: 21px auto 50px;
+    margin: 0 auto 50px;
   } 
 }
 
@@ -3687,7 +3687,7 @@ body.fixed {
     display: block;
   }
   .search-form-wrap.--pc .search-form {
-    margin-bottom: 21px;
+    margin-bottom: 24px;
   }
 }
 

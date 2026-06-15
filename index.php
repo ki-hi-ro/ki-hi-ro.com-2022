@@ -11,7 +11,9 @@ if (is_tag()) {
   <div class="article-container">
 
     <div class="search-form-wrap --sp">
-      
+      <!-- 検索ボックス -->
+      <?php get_search_form(); ?>
+
       <!-- 名言 -->
       <?php get_template_part('template-parts/random-quote'); ?>
 
@@ -31,10 +33,7 @@ if (is_tag()) {
           'custom_names'    => $common_names,
           'hide_empty'      => false,
       ]);
-      ?>      
-
-      <!-- 検索ボックス -->
-      <?php get_search_form(); ?>
+      ?>
     </div>
 
     <?php 
