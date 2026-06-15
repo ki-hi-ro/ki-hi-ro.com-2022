@@ -3798,6 +3798,14 @@ body.fixed {
   margin-bottom: 10px;
 }
 
+.front-sec__flex li {
+  margin-bottom: 0;
+}
+
+.front-sec__flex li a {
+  margin-bottom: 0;
+}
+
 @media (max-width: 767px) {
   .front-sec__flex {
     padding-left: 0;
@@ -3807,7 +3815,6 @@ body.fixed {
   }
   .front-sec__flex li {
     font-size: 18px;
-    margin-bottom: 6px;
   }
 }
 
@@ -4839,6 +4846,10 @@ p.description-class {
   margin-bottom: 10px;
 }
 
+.tag-list-sidebar {
+    margin-top: 32px;
+}
+
 /* 名言 */
 .quote-box {
     margin-bottom: 24px;
@@ -4848,6 +4859,12 @@ p.description-class {
     font-size: 14px;
     line-height: 1.8;
     display: block;
+}
+
+@media (max-width: 768px) {
+  .quote-box {
+    margin-bottom: 32px;
+  }
 }
 
 .quote-box p {
