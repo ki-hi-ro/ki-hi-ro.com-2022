@@ -25,4 +25,4 @@ function updateQuote() {
         .catch(error => console.error(error));
 }
 
-setInterval(updateQuote, 5000);
+setInterval(updateQuote, 10000);

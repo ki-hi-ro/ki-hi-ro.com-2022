@@ -15,6 +15,7 @@ wp_enqueue_script('jquery', null, null, null, true);
 wp_enqueue_script('view-port', get_template_directory_uri() . '/assets/js/view-port.js', null, date("YmdHi"), true);
 wp_enqueue_script('page-top', get_template_directory_uri() . '/assets/js/page-top.js', null, date("YmdHi"), true);
 
+// 名言ランダム表示
 wp_enqueue_script(
     'quote',
     get_template_directory_uri() . '/assets/js/random-quote.js',
@@ -31,23 +32,20 @@ wp_localize_script(
     ]
 );
 
-// 名言ランダム表示
 function get_random_quote_from_posts() {
     $posts = get_posts([
-        'numberposts' => 100,
-        'post_status' => 'publish',
-        'orderby' => 'rand',
+        'numberposts'  => 100,
+        'post_status'  => 'publish',
+        'orderby'      => 'rand',
     ]);
 
     $quotes = [];
 
     foreach ($posts as $post) {
-
         $content = wp_strip_all_tags($post->post_content);
         $sentences = preg_split('/[。！？]/u', $content);
 
         foreach ($sentences as $sentence) {
-
             $sentence = trim($sentence);
 
             if (
@@ -55,9 +53,9 @@ function get_random_quote_from_posts() {
                 mb_strlen($sentence) <= 80
             ) {
                 $quotes[] = [
-                    'text' => $sentence,
-                    'url' => get_permalink($post->ID),
-                    'title' => get_the_title($post->ID)
+                    'text'  => $sentence,
+                    'url'   => get_permalink($post->ID),
+                    'title' => get_the_title($post->ID),
                 ];
             }
         }
@@ -70,13 +68,77 @@ function get_random_quote_from_posts() {
     return $quotes[array_rand($quotes)];
 }
 
+function ajax_get_random_quote() {
+    $quote = get_random_quote_from_posts();
+
+    if (!$quote) {
+        wp_send_json(null);
+    }
+
+    wp_send_json($quote);
+}
+
 add_action('wp_ajax_get_random_quote', 'ajax_get_random_quote');
 add_action('wp_ajax_nopriv_get_random_quote', 'ajax_get_random_quote');
 
-function ajax_get_random_quote() {
-    $quote = get_random_quote_from_posts();
-    wp_send_json($quote);
+// 画像ランダム表示
+wp_enqueue_script(
+    'random-image',
+    get_template_directory_uri() . '/assets/js/random-image.js',
+    [],
+    date('YmdHi'),
+    true
+);
+
+wp_localize_script(
+    'random-image',
+    'imageAjax',
+    [
+        'ajaxUrl' => admin_url('admin-ajax.php')
+    ]
+);
+
+function get_random_image() {
+    global $wpdb;
+
+    $image_id = $wpdb->get_var("
+        SELECT ID
+        FROM {$wpdb->posts}
+        WHERE post_type = 'attachment'
+        AND post_mime_type LIKE 'image%'
+        ORDER BY RAND()
+        LIMIT 1
+    ");
+
+    if (!$image_id) {
+        wp_send_json(null);
+    }
+
+    $image_url = wp_get_attachment_image_url($image_id, 'large');
+
+    $image_alt = get_post_meta(
+        $image_id,
+        '_wp_attachment_image_alt',
+        true
+    );
+
+    $image = get_post($image_id);
+
+    $post_url = '';
+
+    if ($image && $image->post_parent) {
+        $post_url = get_permalink($image->post_parent);
+    }
+
+    wp_send_json([
+        'imageUrl' => $image_url,
+        'alt'      => $image_alt,
+        'postUrl'  => $post_url,
+    ]);
 }
+
+add_action('wp_ajax_get_random_image', 'get_random_image');
+add_action('wp_ajax_nopriv_get_random_image', 'get_random_image');
 
 // body_class()にページスラッグを追加
 add_filter('body_class', 'add_page_slug_class_name');

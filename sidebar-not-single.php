@@ -1,7 +1,9 @@
-<div class="pc-right-container">
-    
+<div class="pc-right-container">    
     <!-- 名言 -->
     <?php get_template_part('template-parts/random-quote'); ?>
+
+    <!-- ランダム画像 -->
+    <?php get_template_part('template-parts/random-image'); ?>
 
     <!-- 検索ボックス -->
     <?php get_template_part('template-parts/search-form'); ?>

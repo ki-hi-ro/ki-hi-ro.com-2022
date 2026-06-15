@@ -15,6 +15,9 @@ if (is_tag()) {
       <!-- 名言 -->
       <?php get_template_part('template-parts/random-quote'); ?>
 
+      <!-- ランダム画像 -->
+      <?php get_template_part('template-parts/random-image'); ?>      
+
       <!-- 検索ボックス -->
       <?php get_search_form(); ?>
     </div>
