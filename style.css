@@ -3670,12 +3670,12 @@ body.fixed {
 }
 
 .search-form-wrap .search-form {
-  margin: 30px auto;
+  margin: 24px auto;
 }
 
 @media (min-width: 768px) {
   .search-form-wrap .search-form {
-    margin: 0 auto 50px;
+    margin: 17px auto 50px;
   } 
 }
 
@@ -3812,8 +3812,8 @@ body.fixed {
 }
 
 .front-sec__flex li a {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: auto;
 }
 
 @media (max-width: 767px) {

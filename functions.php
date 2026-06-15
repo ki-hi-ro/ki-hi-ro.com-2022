@@ -168,7 +168,7 @@ function get_random_tags_ajax() {
 
     shuffle($tags);
 
-    $tags = array_slice($tags, 0, 10);
+    $tags = array_slice($tags, 0, 3);
 
     $result = [];
 

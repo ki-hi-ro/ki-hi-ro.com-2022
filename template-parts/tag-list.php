@@ -72,10 +72,12 @@ if ($order_mode === 'custom') {
 
 // 出力
 ?>
-
 <div class="<?= esc_attr($container_class); ?>">
+  <<?= tag_escape($title_tag); ?>>
+  <?= esc_html($title_text); ?>
+  </<?= tag_escape($title_tag); ?>>
   <ul class="<?= esc_attr($ul_class); ?> js-random-tag-list">
-    <?php foreach (array_slice($tags, 0, 10) as $tag): ?>
+    <?php foreach (array_slice($tags, 0, 3  ) as $tag): ?>
       <li>
         <a href="<?= esc_url(get_tag_link($tag->term_id)); ?>">
           <?= esc_html($tag->name); ?>

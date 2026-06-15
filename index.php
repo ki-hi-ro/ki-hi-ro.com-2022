@@ -11,30 +11,32 @@ if (is_tag()) {
   <div class="article-container">
 
     <div class="search-form-wrap --sp">
-      <!-- 検索ボックス -->
-      <?php get_search_form(); ?>
-
       <!-- 名言 -->
       <?php get_template_part('template-parts/random-quote'); ?>
-
+      
       <!-- ランダム画像 -->
       <?php get_template_part('template-parts/random-image'); ?>      
 
+      
       <!-- タグ一覧 -->
       <?php
       $common_names = require locate_template('template-parts/_tag-names.php');
-
+      
       get_template_part('template-parts/tag-list', null, [
-          'container_class' => 'tag-list-sidebar',
-          'ul_class'        => 'front-sec__text front-sec__flex',
-          'title_tag'       => 'h2',
-          'title_text'      => 'タグ',
-          'order_mode'      => 'custom',
-          'custom_names'    => $common_names,
-          'hide_empty'      => false,
-      ]);
-      ?>
+        'container_class' => 'tag-list-sidebar',
+        'ul_class'        => 'front-sec__text front-sec__flex',
+        'title_tag'       => 'h2',
+        'title_text'      => 'タグ',
+        'order_mode'      => 'custom',
+        'custom_names'    => $common_names,
+        'hide_empty'      => false,
+        ]);
+        ?>
+        
+      <!-- 検索ボックス -->
+      <?php get_search_form(); ?>
     </div>
+    
 
     <?php 
     // 検索結果ページのとき
