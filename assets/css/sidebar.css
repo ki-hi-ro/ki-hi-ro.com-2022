@@ -16,13 +16,13 @@
   font-size: 20px;
   color: #333;
   font-weight: normal;
-  margin-bottom: 14px;
+  margin-bottom: 11px;
   margin-top: 27px;
 }
 
 @media (max-width: 768px) {
   .tag-list-sidebar h2 {
-    margin-top: 14px;
+    margin-top: 34px;
   }
 }
 
