@@ -41,7 +41,7 @@ if (is_date()) {
 $args = array(
     'post_type'      => 'post',
     'posts_per_page' => -1,
-    'orderby'        => 'date',
+    'orderby'        => 'rand',
     'post__not_in'   => !empty($post_ids) ? array_merge(array(3874), $post_ids) : array(3874),
 );
 
