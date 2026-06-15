@@ -3907,6 +3907,13 @@ body.fixed {
 
 .header__contents {
   margin: 41px auto 12px;
+  padding: 0 20px;
+}
+
+@media (min-width: 1200px) {
+    .header__contents {
+        padding: 0;
+    }
 }
 
 .header__logo {
