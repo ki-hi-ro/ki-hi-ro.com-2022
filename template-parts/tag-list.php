@@ -53,16 +53,16 @@ if ($order_mode === 'custom') {
   }
 
   // ✅ 3) 残りのタグをランダムに追加
-  // if (!empty($tags)) {
-  //   $seen_ids = array_column($sorted, 'term_id');
-  //   $remaining = array_filter($tags, fn($t) => !in_array($t->term_id, $seen_ids, true));
+  if (!empty($tags)) {
+    $seen_ids = array_column($sorted, 'term_id');
+    $remaining = array_filter($tags, fn($t) => !in_array($t->term_id, $seen_ids, true));
 
-  //   // 残りをランダムシャッフル
-  //   shuffle($remaining);
+    // 残りをランダムシャッフル
+    shuffle($remaining);
 
-  //   // 結合
-  //   $sorted = array_merge($sorted, $remaining);
-  // }
+    // 結合
+    $sorted = array_merge($sorted, $remaining);
+  }
 
   if (!empty($sorted)) $tags = $sorted;
 
@@ -87,3 +87,15 @@ if ($order_mode === 'custom') {
     <?php endforeach; ?>
   </ul>
 </div>
+
+<style>
+.tag-list a {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 0 8px 8px 0;
+  border-radius: 999px;
+  background: #f3f6fa;
+  font-size: 14px;
+  text-decoration: none;
+}
+</style>
