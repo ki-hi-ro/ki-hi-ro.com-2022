@@ -89,7 +89,7 @@ if ($order_mode === 'custom') {
 </div>
 
 <style>
-.tag-list a {
+.tag-list-sidebar a {
   display: inline-block;
   padding: 6px 12px;
   margin: 0 8px 8px 0;
