@@ -69,5 +69,14 @@
   .all-article__content {
     grid-column: 1 / 2;
   }
-}  
+}
+
+.all-article__post-wrap {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.all-article__post-wrap:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
 </style>
