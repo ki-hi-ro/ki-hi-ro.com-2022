@@ -47,19 +47,14 @@
   color: #333;
   font-weight: normal;
   margin-bottom: -3px;
-  margin-top: 15px;
+  margin-top: 35px;
 }
 
 @media (min-width: 768px) {
   .archive-sidebar h2 {
     margin-bottom: -2px;
+    margin-top: 28px;
   }  
-}
-
-@media (max-width: 767px) {
-  .archive-sidebar h2 {
-    margin-top: -34px;
-  }
 }
 
 .archive-sidebar ul {

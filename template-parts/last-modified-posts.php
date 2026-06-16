@@ -78,10 +78,23 @@ $my_query = new WP_Query($args);
     ?>
 
     <div class="front-sec__text front-sec__flex">
+    <?php
+    $count = 0;
+    $insert_index = 0;
+    $next_insert_at = wp_rand(2, 4);
+    ?>
     <?php if ($new_query->have_posts()) : while ($new_query->have_posts()) : $new_query->the_post(); ?>
+        <?php $count++; ?>
         <div class="all-article__link front-sec__flex-item">
             <?php get_template_part("template-parts/blog-list"); ?>
         </div>
+        <?php if ($count === $next_insert_at) : ?>
+            <?php $insert_index++; ?>
+            <div class="random-insert-list-item all-article__link front-sec__flex-item">
+                <?php get_template_part('template-parts/random-insert', null, ['insert_index' => $insert_index]); ?>
+            </div>
+            <?php $next_insert_at += wp_rand(2, 4); ?>
+        <?php endif; ?>
     <?php endwhile; endif; wp_reset_postdata(); ?>
     </div>    
 <?php endif; ?>
@@ -94,13 +107,24 @@ $my_query = new WP_Query($args);
 
 <div class="front-sec__text front-sec__flex">
 <?php
+$count = 0;
+$insert_index = 0;
+$next_insert_at = wp_rand(2, 4);
 if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
         global $post_ids; // ここでもグローバル変数として明示
         $post_ids[] = get_the_ID(); // IDを保存
+        $count++;
 ?>
     <div class="all-article__link front-sec__flex-item">
       <?php get_template_part("template-parts/blog-list"); ?>
     </div>
+    <?php if ($count === $next_insert_at) : ?>
+        <?php $insert_index++; ?>
+        <div class="random-insert-list-item all-article__link front-sec__flex-item">
+            <?php get_template_part('template-parts/random-insert', null, ['insert_index' => $insert_index]); ?>
+        </div>
+        <?php $next_insert_at += wp_rand(2, 4); ?>
+    <?php endif; ?>
 <?php endwhile; endif; wp_reset_postdata(); ?>
 </div>
 <?php endif; ?>

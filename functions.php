@@ -9,6 +9,7 @@ if (!is_admin()) {
   wp_enqueue_style('page-top', get_template_directory_uri() . '/assets/css/page-top.css', [], date("YmdHi"));
   wp_enqueue_style('sidebar', get_template_directory_uri() . '/assets/css/sidebar.css', [], date("YmdHi"));
   wp_enqueue_style('article-list', get_template_directory_uri() . '/assets/css/article-list.css', [], date("YmdHi"));
+  wp_enqueue_style('random-insert', get_template_directory_uri() . '/assets/css/random-insert.css', [], date("YmdHi"));
 }
 
 // js

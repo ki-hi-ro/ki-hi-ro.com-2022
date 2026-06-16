@@ -3610,9 +3610,13 @@ body.fixed {
   margin: 24px auto;
 }
 
+.search-form-wrap.--sp .search-form {
+  margin-top: 25px;
+}
+
 @media (min-width: 768px) {
   .search-form-wrap .search-form {
-    margin: 17px auto 50px;
+    margin: 0 auto 50px;
   } 
 }
 
@@ -3758,6 +3762,7 @@ body.fixed {
 .front-sec__flex li a {
   display: inline-block;
   width: auto;
+  font-weight: 600;
 }
 
 @media (max-width: 767px) {
@@ -4802,11 +4807,13 @@ p.description-class {
 @media (max-width: 768px) {
   .quote-box {
     margin-bottom: 32px;
+    font-weight: 600;  
   }
 }
 
 .quote-box p {
     margin: 0;
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {

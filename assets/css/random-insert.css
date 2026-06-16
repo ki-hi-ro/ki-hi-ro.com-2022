@@ -1,0 +1,92 @@
+/*-----------------------------------------------
+  一覧内ランダム差し込み
+-----------------------------------------------*/
+
+.random-insert-list-item {
+  width: 100%;
+}
+
+.life-article__section .front-sec__flex > .all-article__link {
+  margin-bottom: 24px;
+  padding-bottom: 0;
+}
+
+.life-article__section .front-sec__flex > .all-article__link .all-article__post-wrap {
+  margin-bottom: 0;
+}
+
+.life-article__section .front-sec__flex > .all-article__link:last-child {
+  margin-bottom: 0;
+}
+
+.random-insert-card {
+  padding: 18px 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  background: #fbfbfb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+}
+
+.random-insert-card .random-image {
+  margin-bottom: 0;
+}
+
+.random-insert-card .random-image__img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.random-insert-card .quote-box {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.random-insert-card .quote-box p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  overflow-wrap: anywhere;
+}
+
+.random-insert-tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.random-insert-tags__list a {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f3f6fa;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.random-insert-card__label {
+  margin: 0 0 10px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.random-insert-card--article .all-article__post-wrap {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .random-insert-card {
+    padding: 16px;
+  }
+}
