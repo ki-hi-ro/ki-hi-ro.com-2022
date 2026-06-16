@@ -31,12 +31,14 @@
   background: #fff;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); */
+  /* box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04); */
+  border: 1px solid #f2f2f2;
 }
 
 .all-article__date {
   font-size: 18px;
-  color: #1a73e8;
+  /* color: #1a73e8; */
   font-weight: 600;
 }
 
@@ -53,7 +55,7 @@
 }
 
 .all-article__arrow {
-  color: #1a73e8;
+  /* color: #1a73e8; */
   font-size: 22px;
 }
 

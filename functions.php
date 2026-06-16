@@ -3,6 +3,7 @@
 // css
 if (!is_admin()) {
   wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], date("YmdHi"));
+  wp_enqueue_style('base', get_template_directory_uri() . '/assets/css/base.css', [], date("YmdHi"));
   wp_enqueue_style('container', get_template_directory_uri() . '/assets/css/container.css', [], date("YmdHi"));
   wp_enqueue_style('single', get_template_directory_uri() . '/assets/css/single.css', [], date("YmdHi"));
   wp_enqueue_style('page-top', get_template_directory_uri() . '/assets/css/page-top.css', [], date("YmdHi"));
