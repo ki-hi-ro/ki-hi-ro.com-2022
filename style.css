@@ -4795,7 +4795,8 @@ p.description-class {
     font-size: 14px;
     line-height: 1.8;
     display: block;
-    border-radius: 12px;
+    /* border-radius: 12px; */
+    border-left: 1px solid #000;
 }
 
 @media (max-width: 768px) {
