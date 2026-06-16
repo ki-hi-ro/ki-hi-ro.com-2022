@@ -33,7 +33,9 @@
   color: inherit;
   /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); */
   /* box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04); */
-  border: 1px solid #f2f2f2;
+  box-shadow: 0 2px 8px rgba(0,0,0,.03);
+  /* border: 1px solid #f2f2f2; */
+  border: 1px solid #f3f3f3;
 }
 
 .all-article__date {
