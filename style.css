@@ -3598,7 +3598,7 @@ body.fixed {
 .search-form-wrap .search-form {
   display: flex;
   position: relative;
-  height: 48px;
+  height: 52px;
   border-radius: 11px;
 }
 
@@ -3633,15 +3633,30 @@ body.fixed {
 }
 
 .search-form__input {
+  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   padding: 16px 16px 16px 16px;
+  color: #333;
+  background-color: #fff;
   font-size: 16px;
+  font-family: inherit;
+  line-height: 1.5;
   border: 1px solid #b6b4b4;
   border-radius: 11px;
+  box-shadow: none;
 }
 
 .search-form__input::placeholder {
   color: #333333; /* ←プレースホルダーの色 */
+  opacity: 1;
+}
+
+.search-form__input::-webkit-search-decoration,
+.search-form__input::-webkit-search-cancel-button,
+.search-form__input::-webkit-search-results-button,
+.search-form__input::-webkit-search-results-decoration {
+  display: none;
 }
 
 .search-form__input:focus {
@@ -3649,21 +3664,33 @@ body.fixed {
 }
 
 .search-form__btn {
+  -webkit-appearance: none;
+  appearance: none;
   position: absolute;
   right: 7px;
   top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
+  margin: 0;
+  padding: 0;
   cursor: pointer;
   border: none;
+  border-radius: 0;
   background-color: #fff;
+  box-shadow: none;
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .search-form__icon-img {
+  display: block;
   width: 22px;
-  padding-top: 4px;
-  padding-left: 4px;
+  height: 22px;
+  padding: 0;
 }
 
 .tag-list {

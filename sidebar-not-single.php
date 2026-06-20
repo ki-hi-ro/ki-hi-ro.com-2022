@@ -2,6 +2,27 @@
     <!-- 検索ボックス -->
     <?php get_template_part('template-parts/search-form'); ?>
     
+    <?php
+    global $wp_query;
+    $rendered_article_count = isset($GLOBALS['article_list_rendered_count'])
+        ? (int) $GLOBALS['article_list_rendered_count']
+        : (isset($wp_query) ? min(24, (int) $wp_query->post_count) : 0);
+    $sidebar_random_count = $rendered_article_count > 0
+        ? (int) ceil($rendered_article_count / 5) + 1
+        : 0;
+    ?>
+
+    <?php if ($sidebar_random_count > 0) : ?>
+        <section class="sidebar-random-content" aria-labelledby="sidebar-random-content-title">
+            <h2 id="sidebar-random-content-title">ランダム</h2>
+            <div class="sidebar-random-content__list">
+                <?php for ($random_index = 1; $random_index <= $sidebar_random_count; $random_index++) : ?>
+                    <?php get_template_part('template-parts/random-insert', null, ['insert_index' => $random_index + 99]); ?>
+                <?php endfor; ?>
+            </div>
+        </section>
+    <?php endif; ?>
+
     <!-- 年月 -->
     <div class="archive-sidebar">
         <h2>年月</h2>
@@ -27,26 +48,5 @@
             ?>
         </ul>
     </div>
-
-    <?php
-    global $wp_query;
-    $rendered_article_count = isset($GLOBALS['article_list_rendered_count'])
-        ? (int) $GLOBALS['article_list_rendered_count']
-        : (isset($wp_query) ? min(24, (int) $wp_query->post_count) : 0);
-    $sidebar_random_count = $rendered_article_count > 0
-        ? (int) ceil($rendered_article_count / 5) + 1
-        : 0;
-    ?>
-
-    <?php if ($sidebar_random_count > 0) : ?>
-        <section class="sidebar-random-content" aria-labelledby="sidebar-random-content-title">
-            <h2 id="sidebar-random-content-title">ランダム</h2>
-            <div class="sidebar-random-content__list">
-                <?php for ($random_index = 1; $random_index <= $sidebar_random_count; $random_index++) : ?>
-                    <?php get_template_part('template-parts/random-insert', null, ['insert_index' => $random_index + 99]); ?>
-                <?php endfor; ?>
-            </div>
-        </section>
-    <?php endif; ?>
 
 </div>

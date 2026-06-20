@@ -58,7 +58,7 @@ function kihiro_configure_main_query($query) {
     }
 
     if ($query->is_home()) {
-        $query->set('posts_per_page', 10);
+        $query->set('posts_per_page', 20);
         $query->set('orderby', 'modified');
         $query->set('order', 'DESC');
     } elseif ($query->is_search() || $query->is_tag() || $query->is_date()) {
