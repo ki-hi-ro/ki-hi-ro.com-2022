@@ -1,31 +1,32 @@
 <?php
-$term_slug = "";
-if(is_tag()) {
-  $term = get_queried_object();
-  $term_slug = $term->slug;
-}
-$offset = 0;
-$order_pram = 'date';
-$post_id = "";
-$my_query = new WP_Query(
-  array(
-      'post_type'      => 'post',
-      'posts_per_page' => -1,
-      'tag' => $term_slug,
-      'orderby' => $order_pram,
-      'post__not_in' => array(3874,$post_id),
-      'offset' => $offset
-    )
-  );
-if ( $my_query->have_posts() ) :
-  while ( $my_query->have_posts() ) :
-    $my_query->the_post();
-?>
-<div class="all-article__link front-sec__flex-item">
-    <?php echo get_template_part("template-parts/blog-list"); ?>
-</div>
-<?php
+/**
+ * Render posts from the tag archive's main query.
+ */
+
+global $wp_query;
+$GLOBALS['article_list_rendered_count'] = (int) $wp_query->post_count;
+
+if (have_posts()) :
+    while (have_posts()) :
+        the_post();
+        ?>
+        <div class="all-article__link front-sec__flex-item">
+            <?php get_template_part('template-parts/blog-list'); ?>
+        </div>
+        <?php
     endwhile;
-  endif;
-wp_reset_postdata();
+else :
+    ?>
+    <p>該当する記事はありませんでした。</p>
+    <?php
+endif;
 ?>
+
+<?php
+the_posts_pagination(
+    array(
+        'mid_size'  => 1,
+        'prev_text' => '前へ',
+        'next_text' => '次へ',
+    )
+);

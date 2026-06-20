@@ -1,0 +1,27 @@
+:root {
+  --color-text: #333;
+  --color-text-muted: #777;
+  --color-surface: #fff;
+  --color-surface-subtle: #fbfbfb;
+  --color-border: #f0f0f0;
+  --color-focus: #333;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --content-width: 1200px;
+  --breakpoint-tablet: 768px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

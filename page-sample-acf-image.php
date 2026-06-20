@@ -16,7 +16,7 @@ if($posttags) {
     <div class="l-pc-left --single">
         <article class="post">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <?php echo get_template_part('template-parts/single-bread'); ?>
+            <?php get_template_part('template-parts/single-bread'); ?>
             <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?></div>
             <h1 class="post__ttl"><?php the_title(); ?></h1>
             <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'post__thumb']  );?>
@@ -24,7 +24,7 @@ if($posttags) {
             <h2 id="first-ttl">はじめに</h2>
             <?php $jimo_img = get_field('画像');
             if( !empty( $jimo_img ) ): ?>
-            <img src="<?php echo esc_url($jimo_img['url']); ?>" alt="<?php echo esc_url($jimo_img['alt']); ?>" class="jimo_img" />
+            <img src="<?php echo esc_url($jimo_img['url']); ?>" alt="<?php echo esc_attr($jimo_img['alt']); ?>" class="jimo_img" />
             <?php endif; ?>
             <?php endif; ?>
             <div class="post__content">
@@ -45,20 +45,20 @@ if($posttags) {
             <ul class="nav-links">
                 <?php if( $prevpost ) : ?>
                 <li class="nav-links__nav --pre">
-                    <a class="nav-links__link" href="<?php echo get_permalink($prevpost->ID); ?>">
-                        ← <?php echo get_the_title( $prevpost->ID ); ?>
+                    <a class="nav-links__link" href="<?php echo esc_url(get_permalink($prevpost->ID)); ?>">
+                        ← <?php echo esc_html(get_the_title($prevpost->ID)); ?>
                     </a>
                 </li>
                 <?php endif; ?>
                 <?php if( $nextpost ) : ?>
                 <li class="nav-links__nav --next">
-                    <a class="nav-links__link" href="<?php echo get_permalink($nextpost->ID); ?>">
-                        <?php echo get_the_title( $nextpost->ID ); ?> →
+                    <a class="nav-links__link" href="<?php echo esc_url(get_permalink($nextpost->ID)); ?>">
+                        <?php echo esc_html(get_the_title($nextpost->ID)); ?> →
                     </a>
                 </li>
                 <?php endif; ?>
             </ul>
-            <?php echo get_template_part('template-parts/single-bread'); ?>
+            <?php get_template_part('template-parts/single-bread'); ?>
             <?php endif; ?>
             <?php endwhile; endif; ?>
 

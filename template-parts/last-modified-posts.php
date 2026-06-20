@@ -1,130 +1,70 @@
 <?php
-global $post_ids;
-$post_ids = $post_ids ?? array(); // 未定義なら空配列で初期化
+/**
+ * Render the home or date-archive post list.
+ */
 
-$term_slug  = "";
-$tag_query  = array(); // タグ条件のための配列
-$date_query = array(); // 年月アーカイブ用の配列
+global $wp_query;
 
-// タグページのとき
-if (is_tag()) {
-    $term = get_queried_object();
-    $term_slug = $term->slug;
+$post_query      = $wp_query;
+$is_custom_query = false;
 
-    if (!empty($term_slug)) {
-        $tag_query = array('tag_slug__in' => array($term_slug));
-    }
-}
-
-// 年月アーカイブページのとき
-$archive_title = "ランダムに表示される記事"; // デフォルトタイトル
-if (is_date()) {
-    $year  = get_query_var('year');      // 例: 2025
-    $month = get_query_var('monthnum');  // 例: 10
-
-    // 年月が揃っていればタイトルを変更
-    if ($year && $month) {
-        $archive_title = sprintf("%d年%d月の記事", $year, $month);
-    } elseif ($year) {
-        $archive_title = sprintf("%d年の記事", $year);
-    }
-
-    $date_query = array(
+// A static front page does not receive the posts query used by the blog index.
+if (is_front_page() && !is_home()) {
+    $post_query = new WP_Query(
         array(
-            'year'  => $year,
-            'month' => $month,
-        ),
+            'post_type'           => 'post',
+            'posts_per_page'      => 10,
+            'orderby'             => 'modified',
+            'order'               => 'DESC',
+            'post__not_in'        => kihiro_excluded_post_ids(),
+            'ignore_sticky_posts' => true,
+            'no_found_rows'       => true,
+        )
     );
+    $is_custom_query = true;
 }
 
-// クエリのパラメータを定義
-$args = array(
-    'post_type'      => 'post',
-    'posts_per_page' => -1,
-    'orderby'        => 'rand',
-    'post__not_in'   => !empty($post_ids) ? array_merge(array(3874), $post_ids) : array(3874),
-);
+$GLOBALS['article_list_rendered_count'] = (int) $post_query->post_count;
 
-// トップページの場合のみ
-if (is_home() || is_front_page()) {
-    $args['posts_per_page'] = 1;
-    $args['orderby'] = 'rand';
+if (is_date()) {
+    $year          = (int) get_query_var('year');
+    $month         = (int) get_query_var('monthnum');
+    $archive_title = $month
+        ? sprintf('%d年%d月の記事', $year, $month)
+        : sprintf('%d年の記事', $year);
+    ?>
+    <h1 class="front-sec__ttl front-sec__ttl--list-heading --sp-center">
+        <?php echo esc_html($archive_title); ?>
+        <span class="archive-count">（<?php echo esc_html($post_query->found_posts); ?>）</span>
+    </h1>
+    <?php
 }
-
-// タグ条件を追加
-if (!empty($tag_query)) {
-    $args = array_merge($args, $tag_query);
-}
-
-// 年月条件を追加
-if (!empty($date_query)) {
-    $args['date_query'] = $date_query;
-}
-
-$my_query = new WP_Query($args);
 ?>
 
-<?php if (!is_date()) : ?>
-    <?php
-    $new_args = array(
-        'post_type'      => 'post',
-        'posts_per_page' => 210,
-        'orderby' => 'modified',
-        'order'          => 'DESC',
-        'post__not_in'   => $post_ids,
-    );
-
-    $new_query = new WP_Query($new_args);
-    ?>
-
-    <div class="front-sec__text front-sec__flex">
-    <?php
-    $count = 0;
-    $insert_index = 0;
-    $next_insert_at = wp_rand(2, 4);
-    ?>
-    <?php if ($new_query->have_posts()) : while ($new_query->have_posts()) : $new_query->the_post(); ?>
-        <?php $count++; ?>
-        <div class="all-article__link front-sec__flex-item">
-            <?php get_template_part("template-parts/blog-list"); ?>
-        </div>
-        <?php if ($count === $next_insert_at) : ?>
-            <?php $insert_index++; ?>
-            <div class="random-insert-list-item all-article__link front-sec__flex-item">
-                <?php get_template_part('template-parts/random-insert', null, ['insert_index' => $insert_index]); ?>
+<div class="front-sec__text front-sec__flex article-list">
+    <?php if ($post_query->have_posts()) : ?>
+        <?php while ($post_query->have_posts()) : $post_query->the_post(); ?>
+            <div class="all-article__link front-sec__flex-item">
+                <?php get_template_part('template-parts/blog-list'); ?>
             </div>
-            <?php $next_insert_at += wp_rand(2, 4); ?>
-        <?php endif; ?>
-    <?php endwhile; endif; wp_reset_postdata(); ?>
-    </div>    
+        <?php endwhile; ?>
+    <?php else : ?>
+        <p>該当する記事はありませんでした。</p>
+    <?php endif; ?>
+</div>
+
+<?php if (!$is_custom_query && $post_query->max_num_pages > 1) : ?>
+    <?php
+    the_posts_pagination(
+        array(
+            'mid_size'  => 1,
+            'prev_text' => '前へ',
+            'next_text' => '次へ',
+        )
+    );
+    ?>
 <?php endif; ?>
 
-<?php if (is_date()) : ?>
-<h2 class="front-sec__ttl --sp-center">
-    <?php echo esc_html($archive_title);
-    if ( isset($my_query) ) { echo '<span class="archive-count">（' . esc_html($my_query->found_posts) . '）</span>'; } ?>
-</h2>
-
-<div class="front-sec__text front-sec__flex">
-<?php
-$count = 0;
-$insert_index = 0;
-$next_insert_at = wp_rand(2, 4);
-if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
-        global $post_ids; // ここでもグローバル変数として明示
-        $post_ids[] = get_the_ID(); // IDを保存
-        $count++;
-?>
-    <div class="all-article__link front-sec__flex-item">
-      <?php get_template_part("template-parts/blog-list"); ?>
-    </div>
-    <?php if ($count === $next_insert_at) : ?>
-        <?php $insert_index++; ?>
-        <div class="random-insert-list-item all-article__link front-sec__flex-item">
-            <?php get_template_part('template-parts/random-insert', null, ['insert_index' => $insert_index]); ?>
-        </div>
-        <?php $next_insert_at += wp_rand(2, 4); ?>
-    <?php endif; ?>
-<?php endwhile; endif; wp_reset_postdata(); ?>
-</div>
+<?php if ($is_custom_query) : ?>
+    <?php wp_reset_postdata(); ?>
 <?php endif; ?>

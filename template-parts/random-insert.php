@@ -8,53 +8,22 @@ $type_index = intdiv($insert_index - 1, count($insert_types));
 <aside class="random-insert-card random-insert-card--<?= esc_attr($insert_type); ?>">
   <?php if ($insert_type === 'quote') : ?>
     <?php
-    $quote_posts = get_posts([
-      'numberposts' => 80,
-      'post_status' => 'publish',
-      'orderby'     => 'modified',
-      'order'       => 'DESC',
-    ]);
-
-    $quotes = [];
-
-    foreach ($quote_posts as $quote_post) {
-      $content = wp_strip_all_tags($quote_post->post_content);
-      $sentences = preg_split('/[。！？]/u', $content);
-
-      foreach ($sentences as $sentence) {
-        $sentence = trim($sentence);
-
-        if (mb_strlen($sentence) >= 20 && mb_strlen($sentence) <= 80) {
-          $quotes[] = [
-            'text' => $sentence,
-            'url'  => get_permalink($quote_post->ID),
-          ];
-        }
-      }
-    }
-
-    $quote = !empty($quotes) ? $quotes[array_rand($quotes)] : null;
+    $quotes = kihiro_get_quote_candidates();
+    shuffle($quotes);
+    $quote = !empty($quotes) ? $quotes[$type_index % count($quotes)] : null;
     ?>
 
     <?php if ($quote) : ?>
-      <a href="<?= esc_url($quote['url']); ?>" class="quote-box quote-link">
+      <a href="<?= esc_url($quote['url']); ?>" class="random-insert-card__link quote-box quote-link">
         <p><?= esc_html($quote['text']); ?></p>
       </a>
     <?php endif; ?>
 
   <?php elseif ($insert_type === 'image') : ?>
     <?php
-    $image_ids = get_posts([
-      'post_type'      => 'attachment',
-      'post_status'    => 'inherit',
-      'post_mime_type' => 'image',
-      'posts_per_page' => -1,
-      'orderby'        => 'date',
-      'order'          => 'DESC',
-      'fields'         => 'ids',
-    ]);
-
-    $image_id = !empty($image_ids) ? $image_ids[array_rand($image_ids)] : 0;
+    $image_ids = kihiro_get_random_image_ids();
+    shuffle($image_ids);
+    $image_id = !empty($image_ids) ? $image_ids[$type_index % count($image_ids)] : 0;
     $image = $image_id ? get_post($image_id) : null;
     $image_url = $image_id ? wp_get_attachment_image_url($image_id, 'large') : '';
     $image_alt = $image_id ? get_post_meta($image_id, '_wp_attachment_image_alt', true) : '';
@@ -62,27 +31,26 @@ $type_index = intdiv($insert_index - 1, count($insert_types));
     ?>
 
     <?php if ($image_url) : ?>
-      <div class="random-image-wrap">
-        <a href="<?= esc_url($image_link ?: $image_url); ?>" class="random-image">
-          <img src="<?= esc_url($image_url); ?>" alt="<?= esc_attr($image_alt); ?>" class="random-image__img">
-        </a>
-      </div>
+      <a href="<?= esc_url($image_link ?: $image_url); ?>" class="random-insert-card__link random-image">
+        <div class="random-image-wrap">
+          <img src="<?= esc_url($image_url); ?>" alt="<?= esc_attr($image_alt); ?>" class="random-image__img" loading="lazy" decoding="async">
+        </div>
+      </a>
     <?php endif; ?>
 
   <?php elseif ($insert_type === 'tags') : ?>
     <?php
-    $tags = get_tags([
-      'hide_empty' => false,
-      'orderby'    => 'name',
-      'order'      => 'ASC',
-    ]);
-
+    $tags = kihiro_get_random_tags();
+    shuffle($tags);
     $display_tags = [];
     $tag_count = count($tags);
 
     if ($tag_count > 0) {
-      shuffle($tags);
-      $display_tags = array_slice($tags, 0, min(3, $tag_count));
+      $tag_offset = ($type_index * 3) % $tag_count;
+
+      for ($tag_index = 0; $tag_index < min(3, $tag_count); $tag_index++) {
+        $display_tags[] = $tags[($tag_offset + $tag_index) % $tag_count];
+      }
     }
     ?>
 

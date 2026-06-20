@@ -3,7 +3,7 @@
 -----------------------------------------------*/
 
 .tag-list-sidebar {
-    margin-bottom: 24px 0;
+    margin: 24px 0;
 }
 
 @media (min-width: 768px) {
@@ -14,7 +14,7 @@
 
 .tag-list-sidebar h2 {
   font-size: 20px;
-  color: #333;
+  color: var(--color-text);
   font-weight: normal;
   margin-bottom: 11px;
   margin-top: 27px;
@@ -44,7 +44,7 @@
 
 .archive-sidebar h2 {
   font-size: 20px;
-  color: #333;
+  color: var(--color-text);
   font-weight: normal;
   margin-bottom: -3px;
   margin-top: 35px;
@@ -60,7 +60,7 @@
 .archive-sidebar ul {
   list-style: none;
   padding-left: 0;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 @media (max-width: 767px) {
@@ -77,4 +77,127 @@
 .archive-sidebar li a {
   display: block;
   width: 100%;
+}
+
+.archive-sidebar .archive-year-item {
+  margin: 0;
+}
+
+.archive-year:not([open]) {
+  border-bottom: 1px solid #ececec;
+}
+
+.archive-year summary {
+  position: relative;
+  padding: 9px 24px 9px 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  list-style: none;
+  cursor: pointer;
+}
+
+.archive-year summary::-webkit-details-marker {
+  display: none;
+}
+
+.archive-year summary::after {
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  content: "+";
+  color: #777;
+  font-size: 18px;
+  font-weight: 300;
+  transform: translateY(-50%);
+}
+
+.archive-year[open] summary::after {
+  content: "−";
+}
+
+.archive-sidebar .archive-month-list {
+  margin: 0;
+  padding-left: 0;
+}
+
+.archive-sidebar .archive-month-list li {
+  margin-bottom: 0;
+  border-top: 1px solid #ececec;
+  font-size: 18px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.archive-sidebar .archive-month-list a {
+  padding: 10px 12px;
+  margin-bottom: 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  transition: transform 0.2s ease;
+}
+
+.archive-sidebar .archive-month-list li:hover {
+  border-color: #888;
+  box-shadow: inset 0 -1px #888;
+}
+
+.archive-sidebar .archive-month-list li:last-child {
+  border-bottom: 1px solid #ececec;
+}
+
+.archive-sidebar .archive-month-list li:last-child:hover {
+  border-bottom-color: #888;
+  box-shadow: none;
+}
+
+/*-----------------------------------------------
+  サイドバーのランダムコンテンツ
+-----------------------------------------------*/
+.sidebar-random-content {
+  margin-top: 40px;
+}
+
+.sidebar-random-content h2 {
+  margin: 0 0 16px;
+  color: #333;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.sidebar-random-content__list {
+  display: grid;
+  gap: 16px;
+}
+
+.sidebar-random-content .random-insert-card {
+  width: 100%;
+}
+
+.sidebar-random-content .random-insert-card--tags {
+  padding: 14px;
+}
+
+.sidebar-random-content .random-insert-card .random-insert-card__link {
+  padding: 14px;
+}
+
+.sidebar-random-content .random-insert-card .random-image__img {
+  max-height: 220px;
+}
+
+.sidebar-random-content .random-insert-card .quote-box p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+.tag-list-sidebar a {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 0 var(--space-xs) var(--space-xs) 0;
+  border-radius: 999px;
+  background: #f3f6fa;
+  font-size: 14px;
+  text-decoration: none;
 }

@@ -1,0 +1,111 @@
+<?php
+/**
+ * Excerpts and taxonomy helpers.
+ */
+
+function kihiro_excerpt_more($more) {
+    return ' ... ';
+}
+add_filter('excerpt_more', 'kihiro_excerpt_more');
+
+function kihiro_excerpt_length($length) {
+    return 190;
+}
+add_filter('excerpt_length', 'kihiro_excerpt_length', 999);
+
+function kihiro_custom_excerpt($length = 170) {
+    $post = get_post();
+
+    if (!$post instanceof WP_Post) {
+        return '';
+    }
+
+    $content = wp_strip_all_tags($post->post_excerpt);
+
+    if ('' === $content) {
+        $content = strip_shortcodes($post->post_content);
+        $content = html_entity_decode(wp_strip_all_tags($content), ENT_QUOTES, 'UTF-8');
+    }
+
+    if (mb_strlen($content, 'UTF-8') > $length) {
+        return mb_substr($content, 0, $length, 'UTF-8') . '...';
+    }
+
+    return $content;
+}
+
+function custom_excerpt_pc($length = 170) {
+    return kihiro_custom_excerpt($length);
+}
+
+function custom_excerpt_sp($length = 100) {
+    return kihiro_custom_excerpt($length);
+}
+
+function my_tags_in_cat($cat_id) {
+    $post_ids = get_objects_in_term((int) $cat_id, 'category');
+
+    if (is_wp_error($post_ids) || empty($post_ids)) {
+        return array();
+    }
+
+    return wp_get_object_terms($post_ids, 'post_tag');
+}
+
+function kihiro_configure_main_query($query) {
+    if (is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    if ($query->is_home()) {
+        $query->set('posts_per_page', 10);
+        $query->set('orderby', 'modified');
+        $query->set('order', 'DESC');
+    } elseif ($query->is_search() || $query->is_tag() || $query->is_date()) {
+        $query->set('posts_per_page', 10);
+    } else {
+        return;
+    }
+
+    $excluded_ids = array_unique(
+        array_merge(
+            (array) $query->get('post__not_in'),
+            kihiro_excluded_post_ids()
+        )
+    );
+
+    $query->set('post__not_in', $excluded_ids);
+}
+add_action('pre_get_posts', 'kihiro_configure_main_query');
+
+function kihiro_get_archive_months() {
+    $archives = get_transient('kihiro_archive_months');
+
+    if (false !== $archives && is_array($archives)) {
+        return $archives;
+    }
+
+    global $wpdb;
+
+    $rows = $wpdb->get_results(
+        "SELECT DISTINCT YEAR(post_date) AS archive_year, MONTH(post_date) AS archive_month
+        FROM {$wpdb->posts}
+        WHERE post_type = 'post' AND post_status = 'publish'
+        ORDER BY post_date DESC"
+    );
+    $archives = array();
+
+    foreach ($rows as $row) {
+        $year = (int) $row->archive_year;
+        $archives[$year][] = (int) $row->archive_month;
+    }
+
+    set_transient('kihiro_archive_months', $archives, 12 * HOUR_IN_SECONDS);
+
+    return $archives;
+}
+
+function kihiro_clear_archive_months_cache() {
+    delete_transient('kihiro_archive_months');
+}
+add_action('save_post_post', 'kihiro_clear_archive_months_cache');

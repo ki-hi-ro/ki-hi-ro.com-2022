@@ -2,7 +2,6 @@
 get_header(); 
 
 $posttags = get_the_tags();
-if($posttags) { $last_position = 4; } else { $last_position = 3; }
 ?>
 <main class="outer-container front-container">
   <div class="l-pc-left --single">
@@ -13,7 +12,7 @@ if($posttags) { $last_position = 4; } else { $last_position = 3; }
           <ul>
             <?php foreach($posttags as $tag): ?>
               <li>
-                <a href="<?php echo get_tag_link($tag->term_id); ?>">
+                  <a href="<?php echo esc_url(get_tag_link($tag->term_id)); ?>">
                   <?php echo esc_html($tag->name); ?>
                 </a>
               </li>
@@ -23,7 +22,7 @@ if($posttags) { $last_position = 4; } else { $last_position = 3; }
 
       <?php 
       else : 
-        echo get_template_part('template-parts/single-bread');
+        get_template_part('template-parts/single-bread');
       endif; 
       ?>
       
@@ -50,23 +49,23 @@ if($posttags) { $last_position = 4; } else { $last_position = 3; }
         
         <?php if( $prevpost ) : ?>
         <li class="nav-links__nav --pre">
-          <a class="nav-links__link" href="<?php echo get_permalink($prevpost->ID); ?>">
-            ← <?= get_the_title( $prevpost->ID ); ?>
+          <a class="nav-links__link" href="<?php echo esc_url(get_permalink($prevpost->ID)); ?>">
+            ← <?php echo esc_html(get_the_title($prevpost->ID)); ?>
           </a>
         </li>
         <?php endif; ?>
 
         <?php if( $nextpost ) : ?>
         <li class="nav-links__nav --next">
-          <a class="nav-links__link" href="<?php echo get_permalink($nextpost->ID); ?>">
-            <?= get_the_title( $nextpost->ID ); ?> →
+          <a class="nav-links__link" href="<?php echo esc_url(get_permalink($nextpost->ID)); ?>">
+            <?php echo esc_html(get_the_title($nextpost->ID)); ?> →
           </a>
         </li>
         <?php endif; ?>
       </ul>
 
       <?php 
-      echo get_template_part('template-parts/single-bread');
+      get_template_part('template-parts/single-bread');
 
       endif; endwhile; endif; ?>
     </article>
