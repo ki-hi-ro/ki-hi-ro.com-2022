@@ -55,51 +55,176 @@
 }
 
 /*-----------------------------------------------
-  目次
+  Easy Table of Contents
 -----------------------------------------------*/
 
-/* モバイルの記事内目次とPCサイドバー目次でリンク全体を押せるようにする */
-.single #sidebar ul.ez-toc-list,
-.single #sidebar ul.ez-toc-list li {
+/* 記事内目次をテーマ本文のリスト装飾から分離する */
+.single #ez-toc-container {
+  overflow: hidden;
   width: 100%;
+  margin: 0 0 22px;
+  padding: 8px;
+  border: 1px solid rgba(74, 88, 80, 0.12);
+  border-radius: 8px;
+  background: #fafbfa;
+  box-shadow: none;
   box-sizing: border-box;
 }
 
-.single div#ez-toc-container ul.ez-toc-list li,
-.single .blog-article__aside-table-of-contents ul.ez-toc-list li,
-.single #sidebar ul.ez-toc-list li {
+/* PCサイドバーは従来の軽い見た目を保ち、固定高による下部余白を作らない */
+.single .ez-toc-widget-container {
+  overflow: visible;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.single #sidebar ul.ez-toc-list.ez-toc-list-level-1 {
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none;
+  margin-bottom: 0 !important;
+}
+
+.single #ez-toc-container nav,
+.single .ez-toc-widget-container nav,
+.single #ez-toc-container ul.ez-toc-list,
+.single .ez-toc-widget-container ul.ez-toc-list {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+.single #ez-toc-container ul.ez-toc-list ul,
+.single .ez-toc-widget-container ul.ez-toc-list ul {
+  margin: 0 !important;
   padding: 0 !important;
 }
 
-.single div#ez-toc-container ul.ez-toc-list li > a,
-.single .blog-article__aside-table-of-contents ul.ez-toc-list li > a,
-.single #sidebar ul.ez-toc-list li > a {
+.single #ez-toc-container ul.ez-toc-list > li:last-child,
+.single .ez-toc-widget-container ul.ez-toc-list > li:last-child {
+  margin-bottom: 0 !important;
+}
+
+.single #ez-toc-container ul.ez-toc-list li,
+.single .ez-toc-widget-container ul.ez-toc-list li {
+  position: relative;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0;
+  background: transparent !important;
+  list-style: none !important;
+  font-family: inherit;
+  font-size: inherit !important;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+/* counter-hyphenや本文用疑似要素による「-」を目次内だけ無効化 */
+.single #ez-toc-container ul.ez-toc-list li::before,
+.single #ez-toc-container ul.ez-toc-list li::after,
+.single #ez-toc-container ul.ez-toc-list li::marker,
+.single #ez-toc-container a.ez-toc-link::before,
+.single #ez-toc-container a.ez-toc-link::after,
+.single .ez-toc-widget-container ul.ez-toc-list li::before,
+.single .ez-toc-widget-container ul.ez-toc-list li::after,
+.single .ez-toc-widget-container ul.ez-toc-list li::marker,
+.single .ez-toc-widget-container a.ez-toc-link::before,
+.single .ez-toc-widget-container a.ez-toc-link::after {
+  display: none !important;
+  content: none !important;
+}
+
+.single #ez-toc-container a.ez-toc-link,
+.single .ez-toc-widget-container a.ez-toc-link {
   display: block;
   width: 100%;
-  min-height: 38px;
-  padding: 6px 10px;
+  min-height: 34px;
+  padding: 5px 8px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  box-shadow: none;
+  color: #46524c;
+  font-size: 14px;
+  font-weight: 400;
   box-sizing: border-box;
   line-height: 1.65;
+  text-decoration: none;
   transition: color 0.18s ease, background-color 0.18s ease;
 }
 
-.single div#ez-toc-container ul.ez-toc-list li > a:hover,
-.single .blog-article__aside-table-of-contents ul.ez-toc-list li > a:hover,
-.single #sidebar ul.ez-toc-list li > a:hover {
-  background: #f4f7f5;
-  color: #334139;
+.single #ez-toc-container a.ez-toc-link:visited,
+.single .ez-toc-widget-container a.ez-toc-link:visited {
+  color: #46524c;
 }
 
-.single div#ez-toc-container ul.ez-toc-list li > a:focus-visible,
-.single .blog-article__aside-table-of-contents ul.ez-toc-list li > a:focus-visible,
-.single #sidebar ul.ez-toc-list li > a:focus-visible {
+.single #ez-toc-container a.ez-toc-link:hover,
+.single .ez-toc-widget-container a.ez-toc-link:hover {
+  background: #f1f5f3;
+  color: #334139;
+  text-decoration: none;
+}
+
+.single #ez-toc-container a.ez-toc-link:focus-visible,
+.single .ez-toc-widget-container a.ez-toc-link:focus-visible {
   outline: 2px solid #75877d;
   outline-offset: -2px;
 }
 
+.single #ez-toc-container li.active > a.ez-toc-link,
+.single .ez-toc-widget-container li.active > a.ez-toc-link {
+  background: transparent;
+  color: #334139;
+  font-weight: 500;
+}
+
+/* フラット出力・入れ子出力のどちらでも見出し階層を揃える */
+.single #ez-toc-container li.ez-toc-heading-level-3 > a.ez-toc-link,
+.single .ez-toc-widget-container li.ez-toc-heading-level-3 > a.ez-toc-link {
+  padding-left: 26px;
+  color: #66716b;
+}
+
+.single #ez-toc-container li.ez-toc-heading-level-4 > a.ez-toc-link,
+.single .ez-toc-widget-container li.ez-toc-heading-level-4 > a.ez-toc-link {
+  padding-left: 42px;
+  color: #707a75;
+}
+
 @media (max-width: 767px) {
-  .single div#ez-toc-container ul.ez-toc-list li > a {
-    min-height: 42px;
-    padding: 7px 10px;
+  .single #ez-toc-container a.ez-toc-link {
+    min-height: 40px;
+    padding: 7px 8px;
+    font-size: 15px;
+  }
+
+  .single #ez-toc-container li.ez-toc-heading-level-3 > a.ez-toc-link {
+    padding-left: 24px;
+  }
+
+  .single #ez-toc-container li.ez-toc-heading-level-4 > a.ez-toc-link {
+    padding-left: 38px;
+  }
+}
+
+/* サイドバーが出ない画面幅では、記事内目次を必ず表示する */
+@media (max-width: 991px) {
+  .single #ez-toc-container {
+    display: block !important;
+  }
+}
+
+/* PCでは記事内目次を重複させず、サイドバー目次を使用する */
+@media (min-width: 992px) {
+  .single #ez-toc-container {
+    display: none !important;
   }
 }
