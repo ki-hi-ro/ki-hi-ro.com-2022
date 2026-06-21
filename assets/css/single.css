@@ -53,3 +53,53 @@
 .post-tags li a:hover {
   background-color: #e0e0e0;
 }
+
+/*-----------------------------------------------
+  目次
+-----------------------------------------------*/
+
+/* モバイルの記事内目次とPCサイドバー目次でリンク全体を押せるようにする */
+.single #sidebar ul.ez-toc-list,
+.single #sidebar ul.ez-toc-list li {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.single div#ez-toc-container ul.ez-toc-list li,
+.single .blog-article__aside-table-of-contents ul.ez-toc-list li,
+.single #sidebar ul.ez-toc-list li {
+  padding: 0 !important;
+}
+
+.single div#ez-toc-container ul.ez-toc-list li > a,
+.single .blog-article__aside-table-of-contents ul.ez-toc-list li > a,
+.single #sidebar ul.ez-toc-list li > a {
+  display: block;
+  width: 100%;
+  min-height: 38px;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  line-height: 1.65;
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+.single div#ez-toc-container ul.ez-toc-list li > a:hover,
+.single .blog-article__aside-table-of-contents ul.ez-toc-list li > a:hover,
+.single #sidebar ul.ez-toc-list li > a:hover {
+  background: #f4f7f5;
+  color: #334139;
+}
+
+.single div#ez-toc-container ul.ez-toc-list li > a:focus-visible,
+.single .blog-article__aside-table-of-contents ul.ez-toc-list li > a:focus-visible,
+.single #sidebar ul.ez-toc-list li > a:focus-visible {
+  outline: 2px solid #75877d;
+  outline-offset: -2px;
+}
+
+@media (max-width: 767px) {
+  .single div#ez-toc-container ul.ez-toc-list li > a {
+    min-height: 42px;
+    padding: 7px 10px;
+  }
+}

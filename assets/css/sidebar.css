@@ -46,13 +46,13 @@
   font-size: 20px;
   color: var(--color-text);
   font-weight: normal;
-  margin-bottom: -3px;
+  margin-bottom: 13px;
   margin-top: 35px;
 }
 
 @media (min-width: 768px) {
   .archive-sidebar h2 {
-    margin-bottom: -2px;
+    margin-bottom: 13px;
     margin-top: 28px;
   }  
 }
@@ -60,12 +60,12 @@
 .archive-sidebar ul {
   list-style: none;
   padding-left: 0;
-  margin-top: 8px;
+  margin: 0;
 }
 
 @media (max-width: 767px) {
   .archive-sidebar ul {
-    margin-top: 14px;
+    margin-top: 0;
   }
 }
 
@@ -80,22 +80,35 @@
 }
 
 .archive-sidebar .archive-year-item {
-  margin: 0;
+  margin: 0 0 12px;
 }
 
 .archive-year:not([open]) {
-  border-bottom: 1px solid #ececec;
+  box-shadow: 0 4px 14px rgba(42, 54, 66, 0.04);
+}
+
+.archive-year {
+  overflow: hidden;
+  border: 1px solid rgba(45, 54, 65, 0.06);
+  border-radius: 14px;
+  background: #f8faf9;
+  box-shadow: 0 6px 20px rgba(42, 54, 66, 0.055);
 }
 
 .archive-year summary {
   position: relative;
-  padding: 9px 24px 9px 0;
-  color: #333;
-  font-size: 18px;
-  font-weight: 300;
+  padding: 15px 44px 15px 18px;
+  color: #46524c;
+  font-size: 17px;
+  font-weight: 500;
   line-height: 1.5;
   list-style: none;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.archive-year summary:hover {
+  background: #f1f5f3;
 }
 
 .archive-year summary::-webkit-details-marker {
@@ -105,9 +118,9 @@
 .archive-year summary::after {
   position: absolute;
   top: 50%;
-  right: 2px;
+  right: 17px;
   content: "+";
-  color: #777;
+  color: #7c8982;
   font-size: 18px;
   font-weight: 300;
   transform: translateY(-50%);
@@ -119,38 +132,47 @@
 
 .archive-sidebar .archive-month-list {
   margin: 0;
-  padding-left: 0;
+  padding: 0 10px 10px;
 }
 
 .archive-sidebar .archive-month-list li {
   margin-bottom: 0;
-  border-top: 1px solid #ececec;
-  font-size: 18px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  border-top: 1px solid rgba(74, 88, 80, 0.08);
+  font-size: 16px;
 }
 
 .archive-sidebar .archive-month-list a {
-  padding: 10px 12px;
+  position: relative;
+  padding: 11px 34px 11px 12px;
   margin-bottom: 0;
-  color: #333;
-  font-size: 18px;
-  font-weight: 300;
+  border-radius: 9px;
+  color: #59645e;
+  font-size: 15px;
+  font-weight: 400;
   line-height: 1.5;
-  transition: transform 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease,
+    padding-left 0.2s ease;
 }
 
-.archive-sidebar .archive-month-list li:hover {
-  border-color: #888;
-  box-shadow: inset 0 -1px #888;
+.archive-sidebar .archive-month-list a::after {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  content: "→";
+  color: #94a099;
+  transform: translateY(-50%);
 }
 
-.archive-sidebar .archive-month-list li:last-child {
-  border-bottom: 1px solid #ececec;
+.archive-sidebar .archive-month-list a:hover {
+  padding-left: 16px;
+  background: #fff;
+  color: #334139;
 }
 
-.archive-sidebar .archive-month-list li:last-child:hover {
-  border-bottom-color: #888;
-  box-shadow: none;
+.archive-sidebar summary:focus-visible,
+.archive-sidebar .archive-month-list a:focus-visible {
+  outline: 2px solid #75877d;
+  outline-offset: -2px;
 }
 
 /*-----------------------------------------------
@@ -174,6 +196,19 @@
 
 .sidebar-random-content .random-insert-card {
   width: 100%;
+  transition: transform 0.22s ease, border-color 0.22s ease,
+    box-shadow 0.22s ease, background-color 0.22s ease;
+}
+
+.sidebar-random-content .random-insert-card:hover {
+  border-color: rgba(91, 113, 102, 0.15);
+  box-shadow: 0 10px 24px rgba(42, 54, 66, 0.1);
+  transform: translateY(-2px);
+}
+
+.sidebar-random-content .random-insert-card:hover a {
+  color: inherit;
+  opacity: 1;
 }
 
 .sidebar-random-content .random-insert-card--tags {
@@ -191,6 +226,16 @@
 .sidebar-random-content .random-insert-card .quote-box p {
   font-size: 14px;
   line-height: 1.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-random-content .random-insert-card {
+    transition: none;
+  }
+
+  .sidebar-random-content .random-insert-card:hover {
+    transform: none;
+  }
 }
 .tag-list-sidebar a {
   display: inline-block;
