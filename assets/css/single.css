@@ -220,6 +220,11 @@
   .single #ez-toc-container {
     display: block !important;
   }
+
+  /* 固定ページトップボタン（60px）が長い目次テキストへ重ならない領域 */
+  .single #ez-toc-container a.ez-toc-link {
+    padding-right: 64px;
+  }
 }
 
 /* PCでは記事内目次を重複させず、サイドバー目次を使用する */
@@ -227,4 +232,64 @@
   .single #ez-toc-container {
     display: none !important;
   }
+}
+
+/*-----------------------------------------------
+  記事本文の横幅保護
+-----------------------------------------------*/
+
+/* white-space: pre の長い行をページ全体ではなくコード枠内でスクロールする */
+.single .post__content pre.wp-block-code {
+  width: 100%;
+  max-width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  box-sizing: border-box;
+}
+
+.single .post__content pre.wp-block-code > code {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 長いURLや英数字の連続を本文幅内で折り返す */
+.single .post__content p,
+.single .post__content li {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+/* cols属性の固有幅でコメント欄がスマホ幅を押し広げないようにする */
+.single .comment-form #comment {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* WordPress埋め込みカードの生成前iframe（width属性500px）を本文幅内に保つ */
+.single .post__content .wp-block-embed,
+.single .post__content .wp-block-embed__wrapper {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.single .post__content .wp-block-embed__wrapper {
+  overflow: hidden;
+}
+
+.single .post__content .wp-block-embed__wrapper > .wp-embedded-content {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin-right: 0;
+  margin-left: 0;
+  box-sizing: border-box;
 }
