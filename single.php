@@ -1,36 +1,25 @@
-<?php 
-get_header(); 
-
-$posttags = get_the_tags();
-?>
+<?php get_header(); ?>
 <main class="outer-container front-container">
   <div class="l-pc-left --single">
     <article class="post">
 
-      <?php if (have_posts()) : while (have_posts()) : the_post(); if($posttags) : ?>
-        <div class="post-tags">
-          <ul>
-            <?php foreach($posttags as $tag): ?>
-              <li>
-                  <a href="<?php echo esc_url(get_tag_link($tag->term_id)); ?>">
-                  <?php echo esc_html($tag->name); ?>
-                </a>
-              </li>
-            <?php endforeach; ?>
-          </ul>
-        </div>
-
-      <?php 
-      else : 
-        get_template_part('template-parts/single-bread');
-      endif; 
-      ?>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <?php get_template_part('template-parts/single-bread', null, array('location' => 'top')); ?>
       
       <div class="all-article__date"><?php echo get_the_date('Y.m.d'); ?>（更新日: <?php echo get_the_modified_date('Y.m.d'); ?>）</div>
 
       <h1 class="post__ttl"><?php the_title(); ?></h1>
 
+      <a class="article-toc-page-link" href="#article-toc-inline">
+        目次を見る <span aria-hidden="true">↑</span>
+      </a>
+
       <?php the_post_thumbnail( array( 366, 244 ), ['class' => 'post__thumb'] );?>
+
+      <aside id="article-toc-inline" class="article-toc article-toc--inline" aria-labelledby="article-toc-inline-title">
+        <p id="article-toc-inline-title" class="article-toc__title">目次</p>
+        <ol class="article-toc__list" data-article-toc-list></ol>
+      </aside>
 
       <h2 id="first-ttl">はじめに</h2>
 
@@ -65,7 +54,7 @@ $posttags = get_the_tags();
       </ul>
 
       <?php 
-      get_template_part('template-parts/single-bread');
+      get_template_part('template-parts/single-bread', null, array('location' => 'bottom'));
 
       endif; endwhile; endif; ?>
     </article>

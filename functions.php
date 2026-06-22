@@ -14,6 +14,7 @@ $kihiro_function_files = array(
     'admin-bar.php',
     'editor.php',
     'random-content.php',
+    'design-preview.php',
 );
 
 foreach ($kihiro_function_files as $kihiro_function_file) {
