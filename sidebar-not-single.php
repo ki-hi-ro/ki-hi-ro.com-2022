@@ -1,6 +1,8 @@
 <div class="pc-right-container">    
     <!-- 検索ボックス -->
-    <?php get_template_part('template-parts/search-form'); ?>
+    <?php if ( is_search() ) : ?>
+        <?php get_template_part('template-parts/search-form'); ?>
+    <?php endif; ?>
     
     <?php
     global $wp_query;
@@ -12,7 +14,7 @@
         : 0;
     ?>
 
-    <?php if ($sidebar_random_count > 0) : ?>
+    <?php if (false && $sidebar_random_count > 0) : ?>
         <section class="sidebar-random-content" aria-labelledby="sidebar-random-content-title">
             <h2 id="sidebar-random-content-title">ランダム</h2>
             <div class="sidebar-random-content__list">
@@ -24,7 +26,8 @@
     <?php endif; ?>
 
     <!-- 年月 -->
-    <div class="archive-sidebar">
+    <?php if ( ! is_search() ) : ?>
+    <div class="archive-sidebar" id="archive-map">
         <h2>年月</h2>
         <ul class="archive-list">
             <?php
@@ -48,5 +51,6 @@
             ?>
         </ul>
     </div>
+    <?php endif; ?>
 
 </div>

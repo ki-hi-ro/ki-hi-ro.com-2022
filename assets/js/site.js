@@ -3,6 +3,9 @@
 
   const viewport = document.querySelector('meta[name="viewport"]');
   const pageTopLinks = document.querySelectorAll(".page-top__link");
+  const menuToggle = document.querySelector(".site-menu-toggle");
+  const menuClose = document.querySelector(".site-menu-close");
+  const menuPanel = document.querySelector("#site-menu-panel");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let ticking = false;
 
@@ -36,6 +39,40 @@
       window.requestAnimationFrame(updatePageLinks);
       ticking = true;
     }
+  }
+
+  function setMenu(open) {
+    if (!menuToggle || !menuPanel) return;
+
+    menuPanel.hidden = !open;
+    menuToggle.classList.toggle("is-active", open);
+    menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.classList.toggle("menu-is-open", open);
+  }
+
+  function setupMenu() {
+    if (!menuToggle || !menuPanel) return;
+
+    menuToggle.addEventListener("click", () => {
+      setMenu(menuPanel.hidden);
+    });
+
+    menuClose?.addEventListener("click", () => {
+      setMenu(false);
+      menuToggle.focus();
+    });
+
+    menuPanel.addEventListener("click", (event) => {
+      const link = event.target.closest("a");
+      if (link) setMenu(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !menuPanel.hidden) {
+        setMenu(false);
+        menuToggle.focus();
+      }
+    });
   }
 
   function setupArticleToc() {
@@ -147,6 +184,7 @@
   window.addEventListener("resize", updateViewport, { passive: true });
   window.addEventListener("resize", requestPageLinkUpdate, { passive: true });
   window.addEventListener("scroll", requestPageLinkUpdate, { passive: true });
+  setupMenu();
   setupArticleToc();
   setupMobileArticleLimit();
 })();

@@ -43,27 +43,44 @@
       </a>
 
       <nav class="site-nav" aria-label="メインナビゲーション">
-        <a href="<?php echo esc_url(kihiro_topic_url('technology')); ?>">技術ブログ</a>
-        <a href="<?php echo esc_url(kihiro_topic_url('philosophy')); ?>">人生哲学</a>
-        <a href="<?php echo esc_url(kihiro_topic_url('curation')); ?>">情報のセレクトショップ</a>
+        <!-- <a href="<?php echo esc_url(home_url('/')); ?>">写真と言葉</a> -->
+        <!-- <a href="<?php echo esc_url(kihiro_thought_trail_url()); ?>">思考の軌跡</a> -->
+        <!-- <a href="<?php echo esc_url(kihiro_topic_url('philosophy')); ?>">人生哲学</a>
+        <a href="<?php echo esc_url(kihiro_topic_url('technology')); ?>">技術ブログ</a> -->
       </nav>
+
+      <button class="site-menu-toggle" type="button" aria-controls="site-menu-panel" aria-expanded="false">
+        <span class="site-menu-toggle__line"></span>
+        <span class="site-menu-toggle__line"></span>
+        <span class="site-menu-toggle__text">Menu</span>
+      </button>
+      </div>
+    </div>
+
+    <div class="site-menu-panel" id="site-menu-panel" hidden>
+      <div class="outer-container site-menu-panel__inner">
+        <div class="site-menu-panel__head">
+          <p>Navigate ki-hi-ro.com</p>
+          <button class="site-menu-close" type="button">閉じる</button>
+        </div>
+
+        <div class="site-menu-panel__grid">
+          <?php foreach (kihiro_navigation_sections() as $nav_section) : ?>
+            <section class="site-menu-section">
+              <h2><?php echo esc_html($nav_section['title']); ?></h2>
+              <ul>
+                <?php foreach ($nav_section['items'] as $nav_item) : ?>
+                  <li>
+                    <a href="<?php echo esc_url($nav_item['url']); ?>">
+                      <span><?php echo esc_html($nav_item['label']); ?></span>
+                      <small><?php echo esc_html($nav_item['description']); ?></small>
+                    </a>
+                  </li>
+                <?php endforeach; ?>
+              </ul>
+            </section>
+          <?php endforeach; ?>
+        </div>
       </div>
     </div>
   </header>
-
-  <?php $active_design = kihiro_current_design_concept(); ?>
-  <nav class="design-switcher" aria-label="デザイン案を切り替える">
-    <span class="design-switcher__label">Design</span>
-    <div class="design-switcher__options">
-      <?php foreach (kihiro_design_concepts() as $design_key => $design_data) : ?>
-        <a
-          class="design-switcher__option<?php echo $active_design === $design_key ? ' is-active' : ''; ?>"
-          href="<?php echo esc_url(kihiro_design_concept_url($design_key)); ?>"
-          <?php echo $active_design === $design_key ? 'aria-current="page"' : ''; ?>
-        >
-          <span class="design-switcher__number"><?php echo esc_html(substr($design_data['label'], 0, 2)); ?></span>
-          <span class="design-switcher__name"><?php echo esc_html($design_data['short']); ?></span>
-        </a>
-      <?php endforeach; ?>
-    </div>
-  </nav>

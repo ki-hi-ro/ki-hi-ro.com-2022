@@ -101,6 +101,83 @@ function kihiro_get_random_tags() {
     return $tags;
 }
 
+function kihiro_get_local_serendipity_images() {
+    return array(
+        array(
+            'url' => get_theme_file_uri('/assets/img/fade-in-zoom/nagoya-20.jpg'),
+            'alt' => '旅先で見上げた都市の景色',
+            'link' => home_url('/'),
+        ),
+        array(
+            'url' => get_theme_file_uri('/assets/img/fade-in-zoom/nagoya-08.jpg'),
+            'alt' => '散歩の途中で出会った街の光',
+            'link' => home_url('/'),
+        ),
+        array(
+            'url' => get_theme_file_uri('/assets/img/fade-in-zoom/nagoya-16.jpg'),
+            'alt' => '移動しながら眺めた風景',
+            'link' => home_url('/'),
+        ),
+        array(
+            'url' => get_theme_file_uri('/assets/img/fade-in-zoom/nagoya-01.jpg'),
+            'alt' => '日常の中で見つけた景色',
+            'link' => home_url('/'),
+        ),
+        array(
+            'url' => get_theme_file_uri('/assets/img/introduce/2022-09.jpg'),
+            'alt' => '記録の中に残る一枚の写真',
+            'link' => home_url('/'),
+        ),
+        array(
+            'url' => get_theme_file_uri('/assets/img/202503.jpeg'),
+            'alt' => 'その時の自分を残した写真',
+            'link' => home_url('/'),
+        ),
+    );
+}
+
+function kihiro_get_serendipity_images($limit = 8) {
+    $limit = max(1, (int) $limit);
+    $items = array();
+    $image_ids = kihiro_get_random_image_ids();
+
+    if ($image_ids) {
+        shuffle($image_ids);
+    }
+
+    foreach ($image_ids as $image_id) {
+        $image_url = wp_get_attachment_image_url($image_id, 'large');
+
+        if (!$image_url) {
+            continue;
+        }
+
+        $image = get_post($image_id);
+        $items[] = array(
+            'url'  => $image_url,
+            'alt'  => get_post_meta($image_id, '_wp_attachment_image_alt', true),
+            'link' => ($image && $image->post_parent) ? get_permalink($image->post_parent) : $image_url,
+        );
+
+        if (count($items) >= $limit) {
+            return $items;
+        }
+    }
+
+    $fallbacks = kihiro_get_local_serendipity_images();
+    shuffle($fallbacks);
+
+    foreach ($fallbacks as $fallback) {
+        $items[] = $fallback;
+
+        if (count($items) >= $limit) {
+            break;
+        }
+    }
+
+    return $items;
+}
+
 function kihiro_clear_random_content_cache() {
     delete_transient('kihiro_quote_candidates');
     delete_transient('kihiro_random_image_ids');

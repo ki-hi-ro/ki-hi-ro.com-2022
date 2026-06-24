@@ -133,8 +133,77 @@ function kihiro_topic_url($topic) {
     return add_query_arg('topic', $topic, home_url('/'));
 }
 
+function kihiro_thought_trail_url() {
+    return add_query_arg('trail', 'thoughts', home_url('/'));
+}
+
+function kihiro_is_thought_trail() {
+    return 'thoughts' === sanitize_key((string) get_query_var('trail'));
+}
+
+function kihiro_navigation_sections() {
+    return array(
+        array(
+            'title' => '読む',
+            'items' => array(
+                array(
+                    'label'       => '写真と言葉',
+                    'url'         => home_url('/'),
+                    'description' => 'ランダムに現れる写真、名言、最新記事。',
+                ),
+                array(
+                    'label'       => '最新の記事',
+                    'url'         => home_url('/#latest-notes'),
+                    'description' => 'いま近い場所にある記録から読む。',
+                ),
+                array(
+                    'label'       => '思考の軌跡',
+                    'url'         => kihiro_thought_trail_url(),
+                    'description' => '過去記事を日付とタイトルだけで俯瞰する。',
+                ),
+            ),
+        ),
+        // array(
+        //     'title' => 'テーマ',
+        //     'items' => array(
+        //         array(
+        //             'label'       => '人生哲学',
+        //             'url'         => kihiro_topic_url('philosophy'),
+        //             'description' => '働き方、生き方、自分との向き合い方。',
+        //         ),
+        //         array(
+        //             'label'       => '技術ブログ',
+        //             'url'         => kihiro_topic_url('technology'),
+        //             'description' => '制作、実装、デザインの実践記録。',
+        //         ),
+        //         array(
+        //             'label'       => '情報のセレクトショップ',
+        //             'url'         => kihiro_topic_url('curation'),
+        //             'description' => '旅、文化、道具、日々の発見。',
+        //         ),
+        //     ),
+        // ),
+        array(
+            'title' => '探す',
+            'items' => array(
+                array(
+                    'label'       => '検索',
+                    'url'         => home_url('/?s='),
+                    'description' => '言葉から過去の記録へ入る。',
+                ),
+                // array(
+                //     'label'       => '年月アーカイブ',
+                //     'url'         => home_url('/#archive-map'),
+                //     'description' => '時間の流れから記事をたどる。',
+                // ),
+            ),
+        ),
+    );
+}
+
 function kihiro_register_topic_query_var($query_vars) {
     $query_vars[] = 'topic';
+    $query_vars[] = 'trail';
 
     return $query_vars;
 }

@@ -7,8 +7,8 @@
       <h1 class="front-sec__ttl --sp-center"><?php echo esc_html($topic_data['label']); ?></h1>
       <p class="life-article__lead"><?php echo esc_html($topic_data['description']); ?></p>
     <?php else : ?>
-      <p class="section-kicker">Journal</p>
-      <h2 class="front-sec__ttl --sp-center">Latest notes</h2>
+      <p class="section-kicker">Latest notes</p>
+      <h2 class="front-sec__ttl --sp-center">最新の記事</h2>
       <p class="life-article__lead">技術と思想と日々の発見を、自分の言葉で整理する。</p>
     <?php endif; ?>
 
