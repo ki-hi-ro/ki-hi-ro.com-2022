@@ -1859,8 +1859,7 @@ body.design-refresh * {
 }
 
 .design-refresh .site-menu-toggle {
-  display: inline-grid;
-  grid-template-columns: 20px auto;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   min-height: 42px;
@@ -1870,17 +1869,20 @@ body.design-refresh * {
   font-weight: 700;
 }
 
+.design-refresh .site-menu-toggle__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  width: 20px;
+}
+
 .design-refresh .site-menu-toggle__line {
-  grid-column: 1;
   display: block;
   width: 18px;
   height: 2px;
   background: currentColor;
   transition: transform 0.2s ease;
-}
-
-.design-refresh .site-menu-toggle__line + .site-menu-toggle__line {
-  margin-top: -10px;
 }
 
 .design-refresh .site-menu-toggle__text {

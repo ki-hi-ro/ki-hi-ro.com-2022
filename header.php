@@ -50,8 +50,10 @@
       </nav>
 
       <button class="site-menu-toggle" type="button" aria-controls="site-menu-panel" aria-expanded="false">
-        <span class="site-menu-toggle__line"></span>
-        <span class="site-menu-toggle__line"></span>
+        <span class="site-menu-toggle__icon" aria-hidden="true">
+          <span class="site-menu-toggle__line"></span>
+          <span class="site-menu-toggle__line"></span>
+        </span>
         <span class="site-menu-toggle__text">Menu</span>
       </button>
       </div>
