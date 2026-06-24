@@ -146,11 +146,11 @@ function kihiro_navigation_sections() {
         array(
             'title' => '読む',
             'items' => array(
-                array(
-                    'label'       => '写真と言葉',
-                    'url'         => home_url('/'),
-                    'description' => 'ランダムに現れる写真、名言、最新記事。',
-                ),
+                // array(
+                //     'label'       => '写真と言葉',
+                //     'url'         => home_url('/'),
+                //     'description' => 'ランダムに現れる写真、名言、最新記事。',
+                // ),
                 array(
                     'label'       => '最新の記事',
                     'url'         => home_url('/#latest-notes'),
