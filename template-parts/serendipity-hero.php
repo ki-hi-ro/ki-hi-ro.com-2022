@@ -61,7 +61,7 @@ $hero_quotes = array_slice($serendipity_quotes, 0, 4);
   </div>
 </section>
 
-<section class="outer-container serendipity-quotes" aria-labelledby="serendipity-quotes-title">
+<!-- <section class="outer-container serendipity-quotes" aria-labelledby="serendipity-quotes-title">
   <div class="serendipity-quotes__intro">
     <p class="section-kicker">Philosophy cards</p>
     <h2 id="serendipity-quotes-title">今日の名言集</h2>
@@ -75,4 +75,4 @@ $hero_quotes = array_slice($serendipity_quotes, 0, 4);
       </a>
     <?php endforeach; ?>
   </div>
-</section>
+</section> -->
