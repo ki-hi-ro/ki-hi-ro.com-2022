@@ -26,6 +26,9 @@ function kihiro_enqueue_assets() {
         $styles['kihiro-random-insert'] = '/assets/css/random-insert.css';
     }
 
+    // Keep the concept layer last so it can consistently restyle every template.
+    $styles['kihiro-design-refresh'] = '/assets/css/design-refresh.css';
+
     foreach ($styles as $handle => $relative_path) {
         wp_enqueue_style(
             $handle,

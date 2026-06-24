@@ -33,7 +33,7 @@ if (is_date()) {
         ? sprintf('%d年%d月の記事', $year, $month)
         : sprintf('%d年の記事', $year);
     ?>
-    <h1 class="front-sec__ttl front-sec__ttl--list-heading --sp-center">
+    <h1 class="front-sec__ttl front-sec__ttl--list-heading archive-title --sp-center">
         <?php echo esc_html($archive_title); ?>
         <span class="archive-count">（<?php echo esc_html($post_query->found_posts); ?>）</span>
     </h1>

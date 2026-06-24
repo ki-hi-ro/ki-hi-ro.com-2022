@@ -4,7 +4,7 @@
  */
 
 if (!defined('KIHIRO_SITE_TAGLINE')) {
-    define('KIHIRO_SITE_TAGLINE', 'Code, Thought, Life');
+    define('KIHIRO_SITE_TAGLINE', 'Nature, Serendipity, Philosophy');
 }
 
 function kihiro_filter_document_title_parts($title) {
