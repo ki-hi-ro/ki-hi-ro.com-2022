@@ -8,17 +8,9 @@
 
 function kihiro_design_concepts() {
     return array(
-        'editorial' => array(
-            'label' => '01 Editorial',
-            'short' => 'Editorial',
-        ),
-        'grid' => array(
-            'label' => '02 Grid',
-            'short' => 'Grid',
-        ),
-        'night' => array(
-            'label' => '03 Night',
-            'short' => 'Night',
+        'serendipity' => array(
+            'label' => 'Nature Serendipity',
+            'short' => 'Serendipity',
         ),
     );
 }
@@ -43,7 +35,7 @@ function kihiro_current_design_concept() {
     } elseif (isset($concepts[$saved_concept])) {
         $current_concept = $saved_concept;
     } else {
-        $current_concept = 'editorial';
+        $current_concept = 'serendipity';
     }
 
     return $current_concept;
