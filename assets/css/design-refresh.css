@@ -1506,7 +1506,7 @@ body.design-night {
   .design-refresh.single .article-toc-page-link {
     position: fixed;
     right: 20px;
-    bottom: 88px;
+    bottom: 23px;
     z-index: 94;
     display: flex;
     margin: 0;
