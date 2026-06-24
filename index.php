@@ -28,7 +28,7 @@
       <?php get_sidebar('not-single'); ?>
 
       <?php if (!is_singular('post')) : ?>
-        <p class="page-top --not-single-sp"><a class="page-top__link --not-single-sp" href="#">↑</a></p>
+        <p class="page-top --not-single-sp"><a class="page-top__link --not-single-sp" href="#" data-mode="top" aria-label="ページの一番上へ移動">↑</a></p>
       <?php endif; ?>      
     </div>
   <?php endif; ?>

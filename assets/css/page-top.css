@@ -41,8 +41,16 @@
   display: block;
 }
 
+.single .page-top.--single-pc {
+  display: none;
+}
+
 @media (min-width: 992px) {
   .single .page-top.--single-sp {
     display: none;
+  }
+
+  .single .page-top.--single-pc {
+    display: block;
   }
 }
