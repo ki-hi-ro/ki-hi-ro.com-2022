@@ -183,21 +183,21 @@ function kihiro_navigation_sections() {
         //         ),
         //     ),
         // ),
-        array(
-            'title' => '探す',
-            'items' => array(
-                array(
-                    'label'       => '検索',
-                    'url'         => home_url('/?s='),
-                    'description' => '言葉から過去の記録へ入る。',
-                ),
-                // array(
-                //     'label'       => '年月アーカイブ',
-                //     'url'         => home_url('/#archive-map'),
-                //     'description' => '時間の流れから記事をたどる。',
-                // ),
-            ),
-        ),
+        // array(
+        //     'title' => '探す',
+        //     'items' => array(
+        //         array(
+        //             'label'       => '検索',
+        //             'url'         => home_url('/?s='),
+        //             'description' => '言葉から過去の記録へ入る。',
+        //         ),
+        //         // array(
+        //         //     'label'       => '年月アーカイブ',
+        //         //     'url'         => home_url('/#archive-map'),
+        //         //     'description' => '時間の流れから記事をたどる。',
+        //         // ),
+        //     ),
+        // ),
     );
 }
 

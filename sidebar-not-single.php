@@ -1,8 +1,8 @@
 <div class="pc-right-container">    
     <!-- 検索ボックス -->
-    <?php if ( is_search() ) : ?>
-        <?php get_template_part('template-parts/search-form'); ?>
-    <?php endif; ?>
+    <div class="search-form-wrap">
+        <?php get_search_form(); ?>
+    </div>
     
     <?php
     global $wp_query;
