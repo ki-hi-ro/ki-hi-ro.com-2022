@@ -1,7 +1,3 @@
-<?php if (!is_singular('post')) : ?>
-  <p class="page-top --not-single-sp"><a class="page-top__link --not-single-sp" href="#">↑</a></p>
-<?php endif; ?>
-
 <footer class="site-footer">
   <div class="outer-container site-footer__inner">
     <div class="site-footer__brand">

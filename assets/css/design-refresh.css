@@ -1086,8 +1086,8 @@ body.design-refresh {
 }
 
 .design-refresh .page-top {
-  right: 24px;
-  bottom: 88px;
+  right: 32px;
+  bottom: -106px;
   z-index: 90;
 }
 
@@ -1751,9 +1751,9 @@ body.design-night {
   }
 
   .design-refresh .page-top {
-    right: 16px;
-    bottom: 70px;
-  }
+    right: 25px;
+    bottom: -99px;
+  }  
 
   .design-refresh.single .front-container {
     padding-top: 52px;
@@ -2836,3 +2836,8 @@ body.design-refresh * {
     font-size: 10px;
   }
 }
+
+.outer-container.front-container {
+  position: relative;
+}
+
