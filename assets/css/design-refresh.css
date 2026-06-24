@@ -1087,7 +1087,7 @@ body.design-refresh {
 
 .design-refresh .page-top {
   right: 32px;
-  bottom: -106px;
+  bottom: -143px;
   z-index: 90;
 }
 
@@ -1652,7 +1652,7 @@ body.design-night {
   .design-refresh .front-container {
     display: block;
     padding-top: 68px;
-    padding-bottom: 104px;
+    padding-bottom: 42px;
   }
 
   .design-refresh .article-container,
@@ -1662,7 +1662,7 @@ body.design-night {
 
   .design-refresh .pc-right-container {
     position: static;
-    margin-top: 72px;
+    margin-top: 36px;
   }
 
   .design-refresh .article-container h2.front-sec__ttl,
@@ -1743,11 +1743,11 @@ body.design-night {
   .design-refresh .site-footer__nav {
     flex-wrap: wrap;
     gap: 14px 22px;
-    margin-top: 38px;
+    margin-top: 11px;
   }
 
   .design-refresh .site-footer__copyright {
-    margin-top: 32px;
+    margin-top: 5px;
   }
 
   .design-refresh .page-top {
@@ -2502,7 +2502,7 @@ body.design-refresh * {
   grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
   align-items: start;
   gap: 56px;
-  padding-block: 68px 42px;
+  padding-block: 104px 42px;
 }
 
 .design-refresh .site-footer__brand {
@@ -2662,7 +2662,7 @@ body.design-refresh * {
   }
 
   .design-refresh .site-hero__primary {
-    gap: 9px;
+    gap: 6px;
     padding-inline: 16px;
   }
 
