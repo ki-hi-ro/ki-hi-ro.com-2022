@@ -172,6 +172,11 @@ function kihiro_navigation_sections() {
                     'description' => 'フリーランスWEBエンジニアとしてのサイトです。',
                 ),
                 array(
+                    'label'       => 'GitHub',
+                    'url'         => "https://github.com/ki-hi-ro",
+                    'description' => '私のリポジトリとコミット履歴を確認できます。',
+                ),                
+                array(
                     'label'       => 'Hatena Blog',
                     'url'         => "https://khirok.hatenadiary.jp/",
                     'description' => 'フリーランスWEB制作の駆け出し期に書いていたブログです。',
