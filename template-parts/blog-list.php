@@ -1,3 +1,5 @@
+<?php $post_tags = get_the_tags(); ?>
+
 <a class="all-article__post-wrap" href="<?php the_permalink(); ?>">
   <div class="all-article__media">
     <?php if (has_post_thumbnail()) : ?>
@@ -24,6 +26,14 @@
     <div class="all-article__ttl">
       <?php echo esc_html(get_the_title()); ?>
     </div>
+
+    <?php if ($post_tags) : ?>
+      <div class="all-article__labels" aria-label="記事タグ">
+        <?php foreach ($post_tags as $post_tag) : ?>
+          <span class="all-article__label"># <?php echo esc_html($post_tag->name); ?></span>
+        <?php endforeach; ?>
+      </div>
+    <?php endif; ?>
   </div>
 
   <div class="all-article__arrow" aria-hidden="true">

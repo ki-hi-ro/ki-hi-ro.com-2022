@@ -469,8 +469,11 @@ body.design-refresh {
 }
 
 .design-refresh .all-article__post-wrap {
-  grid-template-columns: 124px 108px minmax(0, 1fr) 30px;
-  gap: 18px;
+  grid-template-columns: minmax(176px, 214px) minmax(0, 1fr) 30px;
+  grid-template-areas:
+    "media date arrow"
+    "media content arrow";
+  gap: 10px 24px;
   padding: 28px 30px;
   border: 1px solid var(--design-line);
   border-radius: var(--design-radius);
@@ -480,13 +483,26 @@ body.design-refresh {
 }
 
 .design-refresh .all-article__media {
+  grid-area: media;
   position: relative;
-  width: 124px;
-  aspect-ratio: 4 / 3;
+  width: 100%;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   border: 1px solid var(--design-line);
   border-radius: calc(var(--design-radius) * 0.65);
   background: color-mix(in srgb, var(--design-accent) 10%, var(--design-surface));
+}
+
+.design-refresh .all-article__date-block {
+  grid-area: date;
+  min-width: 0;
+  align-self: end;
+}
+
+.design-refresh .all-article__content {
+  grid-area: content;
+  min-width: 0;
+  align-self: start;
 }
 
 .design-refresh .all-article__media-img,
@@ -573,7 +589,7 @@ body.design-refresh {
 
 .design-refresh .all-article__labels {
   gap: 6px;
-  margin-top: 12px;
+  margin: 13px 0 0;
 }
 
 .design-refresh .all-article__label {
@@ -586,6 +602,8 @@ body.design-refresh {
 }
 
 .design-refresh .all-article__post-wrap .all-article__arrow {
+  grid-area: arrow;
+  align-self: center;
   color: var(--design-accent);
 }
 
@@ -1422,15 +1440,50 @@ body.design-night {
   }
 
   .design-refresh .front-container {
-    gap: 36px;
+    display: block;
+    gap: 0;
   }
 
   .design-refresh .article-container {
-    width: 68%;
+    width: 100%;
   }
 
   .design-refresh .pc-right-container {
-    width: 32%;
+    position: static;
+    width: 100%;
+    margin-top: 64px;
+  }
+
+  .design-refresh .all-article__post-wrap {
+    grid-template-columns: minmax(200px, 240px) minmax(0, 1fr) 28px;
+    grid-template-areas:
+      "media date arrow"
+      "media content arrow";
+    gap: 10px 22px;
+    padding: 26px;
+  }
+
+  .design-refresh .all-article__post-wrap .all-article__media {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    align-self: center;
+  }
+
+  .design-refresh .all-article__post-wrap .all-article__date-block {
+    align-self: end;
+  }
+
+  .design-refresh .all-article__post-wrap .all-article__content {
+    align-self: start;
+  }
+
+  .design-refresh .all-article__post-wrap .all-article__ttl {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .design-refresh .all-article__labels {
+    margin-top: 12px;
   }
 
   .design-refresh.single .front-container {
@@ -1634,7 +1687,7 @@ body.design-night {
   }
 
   .design-refresh .all-article__post-wrap {
-    grid-template-columns: 96px minmax(0, 1fr) 22px;
+    grid-template-columns: 112px minmax(0, 1fr) 22px;
     grid-template-areas:
       "media date arrow"
       "media content arrow";
@@ -1644,9 +1697,9 @@ body.design-night {
 
   .design-refresh .all-article__post-wrap .all-article__media {
     grid-area: media;
-    width: 96px;
+    width: 112px;
     aspect-ratio: 1;
-    align-self: stretch;
+    align-self: center;
   }
 
   .design-refresh .all-article__post-wrap .all-article__date-block {
@@ -1659,6 +1712,10 @@ body.design-night {
 
   .design-refresh .all-article__post-wrap .all-article__arrow {
     grid-area: arrow;
+  }
+
+  .design-refresh .all-article__labels {
+    margin-top: 10px;
   }
 
   .design-refresh .search-form-wrap.--sp .search-form {
@@ -1710,6 +1767,34 @@ body.design-night {
   .design-refresh.single .article-toc-page-link {
     right: 14px;
     bottom: 74px;
+  }
+}
+
+@media (max-width: 575px) {
+  .design-refresh .all-article__post-wrap {
+    grid-template-columns: minmax(0, 1fr) 22px;
+    grid-template-areas:
+      "date arrow"
+      "media media"
+      "content content";
+    row-gap: 13px;
+    column-gap: 12px;
+    padding: 18px;
+  }
+
+  .design-refresh .all-article__post-wrap .all-article__media {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+
+  .design-refresh .all-article__post-wrap .all-article__date-block,
+  .design-refresh .all-article__post-wrap .all-article__content,
+  .design-refresh .all-article__post-wrap .all-article__arrow {
+    align-self: start;
+  }
+
+  .design-refresh .all-article__post-wrap .all-article__ttl {
+    line-height: 1.62;
   }
 }
 
