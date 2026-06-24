@@ -163,6 +163,21 @@ function kihiro_navigation_sections() {
                 ),
             ),
         ),
+        array(
+            'title' => '関連サイト',
+            'items' => array(
+                array(
+                    'label'       => 'My portfolio',
+                    'url'         => "https://freelance-blog.onrender.com/",
+                    'description' => 'フリーランスWEBエンジニアとしてのサイトです。',
+                ),
+                array(
+                    'label'       => 'Hatena Blog',
+                    'url'         => "https://khirok.hatenadiary.jp/",
+                    'description' => 'フリーランスWEB制作の駆け出し期に書いていたブログです。',
+                ),  
+            ),
+        ),        
         // array(
         //     'title' => 'テーマ',
         //     'items' => array(
