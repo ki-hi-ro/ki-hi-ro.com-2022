@@ -35,7 +35,7 @@
 
             foreach ($archives_by_year as $year => $months) {
                 echo '<li class="archive-year-item">';
-                echo '<details class="archive-year" open>';
+                echo '<details class="archive-year">';
                 echo '<summary>' . esc_html(sprintf('%d年', $year)) . '</summary>';
                 echo '<ul class="archive-month-list">';
 
