@@ -13,7 +13,7 @@ if (is_front_page() && !is_home()) {
     $post_query = new WP_Query(
         array(
             'post_type'           => 'post',
-            'posts_per_page'      => 20,
+            'posts_per_page'      => 3,
             'orderby'             => 'modified',
             'order'               => 'DESC',
             'post__not_in'        => kihiro_excluded_post_ids(),

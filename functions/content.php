@@ -292,7 +292,7 @@ function kihiro_configure_main_query($query) {
     }
 
     if ($query->is_home()) {
-        $query->set('posts_per_page', 20);
+        $query->set('posts_per_page', 3);
         $query->set('orderby', 'modified');
         $query->set('order', 'DESC');
 
