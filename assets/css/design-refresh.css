@@ -2046,7 +2046,7 @@ body.design-refresh * {
 }
 
 .design-refresh .site-hero__primary {
-  gap: 12px;
+  gap: 7px;
   border-radius: 999px;
   background: var(--design-accent);
   color: var(--design-accent-contrast);
