@@ -130,39 +130,127 @@
 
   }
 
-  function setupMobileArticleLimit() {
+  function setupLogbookFilter() {
+    const filter = document.querySelector("[data-logbook-filter]");
     const articleList = document.querySelector(".article-list");
-    if (!articleList) return;
+    if (!filter || !articleList) return;
 
-    const items = Array.from(articleList.children).filter((item) =>
+    const buttons = Array.from(filter.querySelectorAll("[data-filter-tag]"));
+    const rows = Array.from(articleList.children).filter((item) =>
       item.classList.contains("all-article__link")
     );
-    if (items.length <= 5) return;
+    if (!buttons.length || !rows.length) return;
 
-    const media = window.matchMedia("(max-width: 767px)");
-    const button = document.createElement("button");
-    let visibleCount = 5;
-    button.type = "button";
-    button.className = "article-list__more";
-    articleList.insertAdjacentElement("afterend", button);
+    const overview = document.querySelector(".logbook-overview");
+    const countNumber = overview?.querySelector(".logbook-overview__count span");
+    const activityDays = Array.from(
+      document.querySelectorAll(".logbook-activity__day")
+    );
+    const numberFormatter = new Intl.NumberFormat(
+      document.documentElement.lang || navigator.language || "ja-JP"
+    );
+    const activityLevelClasses = Array.from({ length: 5 }, (_, level) =>
+      `logbook-activity__day--level-${level}`
+    );
 
-    function render() {
-      items.forEach((item, index) => {
-        item.classList.toggle("is-mobile-hidden", media.matches && index >= visibleCount);
-      });
-      button.hidden = !media.matches || visibleCount >= items.length;
-      button.textContent = `さらに${Math.min(5, items.length - visibleCount)}件を見る`;
+    const status = document.createElement("p");
+    status.className = "logbook-filter__status";
+    status.setAttribute("aria-live", "polite");
+    filter.appendChild(status);
+
+    function setActivityLevel(day, count) {
+      const level = Math.min(4, Math.max(0, Number(count) || 0));
+      day.classList.remove(...activityLevelClasses);
+      day.classList.add(`logbook-activity__day--level-${level}`);
     }
 
-    button.addEventListener("click", () => {
-      visibleCount += 5;
-      render();
+    function setActivityLabel(day, label) {
+      if (!label) return;
+      day.setAttribute("title", label);
+      const readerText = day.querySelector(".screen-reader-text");
+      if (readerText) readerText.textContent = label;
+    }
+
+    function updateOverview(tag, visibleCount, visibleRows) {
+      if (countNumber) {
+        countNumber.textContent = numberFormatter.format(visibleCount);
+      }
+
+      if (!activityDays.length) return;
+
+      if (tag === "all") {
+        activityDays.forEach((day) => {
+          setActivityLevel(day, day.dataset.logbookLevel);
+          setActivityLabel(day, day.dataset.logbookLabel);
+        });
+        return;
+      }
+
+      const countsByDate = new Map();
+      visibleRows.forEach((row) => {
+        const article = row.querySelector("[data-logbook-item]");
+        const date =
+          article?.dataset.logbookDate ||
+          article?.querySelector("time")?.getAttribute("datetime")?.slice(0, 10);
+        if (!date) return;
+        countsByDate.set(date, (countsByDate.get(date) || 0) + 1);
+      });
+
+      activityDays.forEach((day) => {
+        const count = countsByDate.get(day.dataset.logbookDate) || 0;
+        const labelDate = (day.dataset.logbookDate || "").replaceAll("-", ".");
+        const label = labelDate
+          ? `${labelDate}: ${numberFormatter.format(count)}件`
+          : "";
+        setActivityLevel(day, count);
+        setActivityLabel(day, label);
+      });
+    }
+
+    function applyFilter(tag) {
+      let visibleCount = 0;
+      const visibleRows = [];
+
+      rows.forEach((row) => {
+        const article = row.querySelector("[data-logbook-item]");
+        const tags = article?.dataset.logbookTags?.split(" ").filter(Boolean) || [];
+        const isVisible = tag === "all" || tags.includes(tag);
+        row.hidden = !isVisible;
+        row.style.display = isVisible ? "" : "none";
+        row.classList.toggle("is-filter-hidden", !isVisible);
+        if (isVisible) {
+          visibleCount += 1;
+          visibleRows.push(row);
+        }
+      });
+
+      buttons.forEach((button) => {
+        const isActive = button.dataset.filterTag === tag;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+
+      status.textContent = `${visibleCount}件を表示`;
+      updateOverview(tag, visibleCount, visibleRows);
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const tag = button.dataset.filterTag || "all";
+        applyFilter(tag);
+
+        if (tag !== "all") {
+          window.requestAnimationFrame(() => {
+            articleList.scrollIntoView({
+              block: "start",
+              behavior: reducedMotion.matches ? "auto" : "smooth",
+            });
+          });
+        }
+      });
     });
-    media.addEventListener?.("change", () => {
-      visibleCount = 5;
-      render();
-    });
-    render();
+
+    applyFilter("all");
   }
 
   pageTopLinks.forEach((link) => {
@@ -186,5 +274,5 @@
   window.addEventListener("scroll", requestPageLinkUpdate, { passive: true });
   setupMenu();
   setupArticleToc();
-  setupMobileArticleLimit();
+  setupLogbookFilter();
 })();

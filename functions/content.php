@@ -88,6 +88,284 @@ function my_tags_in_cat($cat_id) {
     return wp_get_object_terms($post_ids, 'post_tag');
 }
 
+function kihiro_tag_index_visibility_meta_key() {
+    return '_kihiro_show_in_tag_index';
+}
+
+function kihiro_normalize_tag_index_name($name) {
+    $normalized_name = html_entity_decode((string) $name, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    $normalized_name = preg_replace('/\x{3000}/u', ' ', $normalized_name);
+    $normalized_name = str_replace('＞', '>', $normalized_name);
+
+    return trim(preg_replace('/\s+/u', ' ', $normalized_name));
+}
+
+function kihiro_tag_index_name_parts($name) {
+    $parts = preg_split('/\s*>\s*/u', kihiro_normalize_tag_index_name($name), -1, PREG_SPLIT_NO_EMPTY);
+
+    return $parts ? $parts : array();
+}
+
+function kihiro_is_tag_selected_for_index($tag) {
+    if (!$tag instanceof WP_Term) {
+        return false;
+    }
+
+    return '1' === get_term_meta($tag->term_id, kihiro_tag_index_visibility_meta_key(), true);
+}
+
+function kihiro_get_selected_tag_index_tags() {
+    $tags = get_tags(
+        array(
+            'hide_empty' => false,
+            'orderby'    => 'name',
+            'order'      => 'ASC',
+        )
+    );
+
+    if (is_wp_error($tags)) {
+        return array();
+    }
+
+    return array_values(array_filter($tags, 'kihiro_is_tag_selected_for_index'));
+}
+
+function kihiro_home_posts_per_page() {
+    return -1;
+}
+
+function kihiro_get_logbook_total_posts() {
+    $counts = wp_count_posts('post');
+    $total = isset($counts->publish) ? (int) $counts->publish : 0;
+    $excluded_ids = kihiro_excluded_post_ids();
+
+    if ($excluded_ids) {
+        $excluded_posts = get_posts(
+            array(
+                'post_type'              => 'post',
+                'post_status'            => 'publish',
+                'post__in'               => $excluded_ids,
+                'posts_per_page'         => count($excluded_ids),
+                'fields'                 => 'ids',
+                'no_found_rows'          => true,
+                'update_post_meta_cache' => false,
+                'update_post_term_cache' => false,
+            )
+        );
+        $total -= count($excluded_posts);
+    }
+
+    return max(0, $total);
+}
+
+function kihiro_get_logbook_first_post_year() {
+    global $wpdb;
+
+    $year = $wpdb->get_var(
+        "SELECT MIN(YEAR(post_date))
+        FROM {$wpdb->posts}
+        WHERE post_type = 'post' AND post_status = 'publish'"
+    );
+
+    if (!$year) {
+        return '';
+    }
+
+    $year = (int) $year;
+
+    return $year >= 1990 ? (string) $year : '';
+}
+
+function kihiro_get_logbook_activity_counts($days = 182) {
+    $days = max(1, min(366, (int) $days));
+    $cache_key = 'kihiro_logbook_activity_' . $days;
+    $activity = get_transient($cache_key);
+
+    if (false !== $activity && is_array($activity)) {
+        return $activity;
+    }
+
+    global $wpdb;
+
+    $since = gmdate('Y-m-d H:i:s', strtotime('-' . ($days - 1) . ' days'));
+    $rows = $wpdb->get_results(
+        $wpdb->prepare(
+            "SELECT DATE(post_date) AS post_day, COUNT(ID) AS post_count
+            FROM {$wpdb->posts}
+            WHERE post_type = 'post'
+                AND post_status = 'publish'
+                AND post_date >= %s
+            GROUP BY DATE(post_date)",
+            $since
+        )
+    );
+
+    $counts_by_day = array();
+    foreach ($rows as $row) {
+        $counts_by_day[$row->post_day] = (int) $row->post_count;
+    }
+
+    $activity = array();
+    for ($offset = $days - 1; $offset >= 0; $offset--) {
+        $day = gmdate('Y-m-d', strtotime('-' . $offset . ' days'));
+        $activity[] = array(
+            'date'  => $day,
+            'count' => isset($counts_by_day[$day]) ? $counts_by_day[$day] : 0,
+        );
+    }
+
+    set_transient($cache_key, $activity, 12 * HOUR_IN_SECONDS);
+
+    return $activity;
+}
+
+function kihiro_add_tag_index_visibility_field($taxonomy = '') {
+    wp_nonce_field('kihiro_save_tag_index_visibility', 'kihiro_tag_index_visibility_nonce');
+    ?>
+    <div class="form-field term-kihiro-show-in-tag-index-wrap">
+        <label for="kihiro_show_in_tag_index">
+            <input type="checkbox" id="kihiro_show_in_tag_index" name="kihiro_show_in_tag_index" value="1">
+            タグ一覧に表示する
+        </label>
+        <p>現実の課題へ戻る入口として、前面に出したいタグだけを選びます。</p>
+    </div>
+    <?php
+}
+add_action('post_tag_add_form_fields', 'kihiro_add_tag_index_visibility_field');
+
+function kihiro_edit_tag_index_visibility_field($term) {
+    $is_selected = kihiro_is_tag_selected_for_index($term);
+    ?>
+    <tr class="form-field term-kihiro-show-in-tag-index-wrap">
+        <th scope="row"><label for="kihiro_show_in_tag_index">タグ一覧</label></th>
+        <td>
+            <?php wp_nonce_field('kihiro_save_tag_index_visibility', 'kihiro_tag_index_visibility_nonce'); ?>
+            <label>
+                <input type="checkbox" id="kihiro_show_in_tag_index" name="kihiro_show_in_tag_index" value="1" <?php checked($is_selected); ?>>
+                タグ一覧に表示する
+            </label>
+            <p class="description">現実の課題へ戻る入口として、前面に出したいタグだけを選びます。</p>
+        </td>
+    </tr>
+    <?php
+}
+add_action('post_tag_edit_form_fields', 'kihiro_edit_tag_index_visibility_field');
+
+function kihiro_save_tag_index_visibility($term_id) {
+    if (!current_user_can('manage_categories')) {
+        return;
+    }
+
+    $nonce = isset($_POST['kihiro_tag_index_visibility_nonce'])
+        ? sanitize_text_field(wp_unslash($_POST['kihiro_tag_index_visibility_nonce']))
+        : '';
+
+    if (!wp_verify_nonce($nonce, 'kihiro_save_tag_index_visibility')) {
+        return;
+    }
+
+    $is_selected = isset($_POST['kihiro_show_in_tag_index']) ? '1' : '0';
+    update_term_meta((int) $term_id, kihiro_tag_index_visibility_meta_key(), $is_selected);
+}
+add_action('created_post_tag', 'kihiro_save_tag_index_visibility');
+add_action('edited_post_tag', 'kihiro_save_tag_index_visibility');
+
+function kihiro_tag_index_paths() {
+    return array('tags', 'tag-list', 'tag-hierarchy');
+}
+
+function kihiro_tag_index_url() {
+    return home_url('/tags/');
+}
+
+function kihiro_current_request_path() {
+    $request_uri = isset($_SERVER['REQUEST_URI'])
+        ? wp_unslash($_SERVER['REQUEST_URI'])
+        : '';
+    $request_path = wp_parse_url($request_uri, PHP_URL_PATH);
+
+    if (!is_string($request_path)) {
+        return '';
+    }
+
+    $home_path = wp_parse_url(home_url('/'), PHP_URL_PATH);
+
+    if (is_string($home_path) && '/' !== $home_path) {
+        $home_path = untrailingslashit($home_path);
+
+        if (0 === strpos($request_path, $home_path . '/')) {
+            $request_path = substr($request_path, strlen($home_path));
+        }
+    }
+
+    return trim($request_path, '/');
+}
+
+function kihiro_is_tag_index_request() {
+    return in_array(kihiro_current_request_path(), kihiro_tag_index_paths(), true);
+}
+
+function kihiro_prepare_tag_index_query($wp_query) {
+    $wp_query->is_404       = false;
+    $wp_query->is_single    = false;
+    $wp_query->is_page      = false;
+    $wp_query->is_attachment = false;
+    $wp_query->is_singular  = false;
+    $wp_query->is_archive   = false;
+    $wp_query->is_home      = false;
+    $wp_query->is_search    = false;
+}
+
+function kihiro_prevent_tag_index_404($preempt, $wp_query) {
+    if (!kihiro_is_tag_index_request() || !empty($wp_query->posts)) {
+        return $preempt;
+    }
+
+    kihiro_prepare_tag_index_query($wp_query);
+
+    return true;
+}
+add_filter('pre_handle_404', 'kihiro_prevent_tag_index_404', 10, 2);
+
+function kihiro_load_tag_index_template($template) {
+    global $wp_query;
+
+    if (!kihiro_is_tag_index_request() || is_page() || !empty($wp_query->posts)) {
+        return $template;
+    }
+
+    $tag_index_template = locate_template('page-tag-hierarchy.php');
+
+    if (!$tag_index_template) {
+        return $template;
+    }
+
+    kihiro_prepare_tag_index_query($wp_query);
+    status_header(200);
+
+    return $tag_index_template;
+}
+add_filter('template_include', 'kihiro_load_tag_index_template');
+
+function kihiro_add_tag_index_body_class($classes) {
+    if (kihiro_is_tag_index_request()) {
+        $classes[] = 'page-template-page-tag-hierarchy';
+        $classes[] = 'tag-index';
+    }
+
+    return $classes;
+}
+add_filter('body_class', 'kihiro_add_tag_index_body_class');
+
+function kihiro_filter_tag_index_document_title($title) {
+    if (kihiro_is_tag_index_request()) {
+        $title['title'] = 'タグ一覧';
+    }
+
+    return $title;
+}
+add_filter('document_title_parts', 'kihiro_filter_tag_index_document_title');
+
 /**
  * Three editorial streams used by the refreshed navigation.
  *
@@ -144,26 +422,6 @@ function kihiro_is_thought_trail() {
 function kihiro_navigation_sections() {
     return array(
         array(
-            'title' => '読む',
-            'items' => array(
-                // array(
-                //     'label'       => '写真と言葉',
-                //     'url'         => home_url('/'),
-                //     'description' => 'ランダムに現れる写真、名言、最新記事。',
-                // ),
-                array(
-                    'label'       => '最新の記事',
-                    'url'         => home_url('/#latest-notes'),
-                    'description' => 'いま近い場所にある記録から読む。',
-                ),
-                array(
-                    'label'       => '思考の軌跡',
-                    'url'         => kihiro_thought_trail_url(),
-                    'description' => '過去記事を日付とタイトルだけで俯瞰する。',
-                ),
-            ),
-        ),
-        array(
             'title' => '関連サイト',
             'items' => array(
                 array(
@@ -183,41 +441,6 @@ function kihiro_navigation_sections() {
                 ),  
             ),
         ),        
-        // array(
-        //     'title' => 'テーマ',
-        //     'items' => array(
-        //         array(
-        //             'label'       => '人生哲学',
-        //             'url'         => kihiro_topic_url('philosophy'),
-        //             'description' => '働き方、生き方、自分との向き合い方。',
-        //         ),
-        //         array(
-        //             'label'       => '技術ブログ',
-        //             'url'         => kihiro_topic_url('technology'),
-        //             'description' => '制作、実装、デザインの実践記録。',
-        //         ),
-        //         array(
-        //             'label'       => '情報のセレクトショップ',
-        //             'url'         => kihiro_topic_url('curation'),
-        //             'description' => '旅、文化、道具、日々の発見。',
-        //         ),
-        //     ),
-        // ),
-        // array(
-        //     'title' => '探す',
-        //     'items' => array(
-        //         array(
-        //             'label'       => '検索',
-        //             'url'         => home_url('/?s='),
-        //             'description' => '言葉から過去の記録へ入る。',
-        //         ),
-        //         // array(
-        //         //     'label'       => '年月アーカイブ',
-        //         //     'url'         => home_url('/#archive-map'),
-        //         //     'description' => '時間の流れから記事をたどる。',
-        //         // ),
-        //     ),
-        // ),
     );
 }
 
@@ -312,7 +535,7 @@ function kihiro_configure_main_query($query) {
     }
 
     if ($query->is_home()) {
-        $query->set('posts_per_page', 3);
+        $query->set('posts_per_page', kihiro_home_posts_per_page());
         $query->set('orderby', 'modified');
         $query->set('order', 'DESC');
 
@@ -366,5 +589,6 @@ function kihiro_get_archive_months() {
 
 function kihiro_clear_archive_months_cache() {
     delete_transient('kihiro_archive_months');
+    delete_transient('kihiro_logbook_activity_182');
 }
 add_action('save_post_post', 'kihiro_clear_archive_months_cache');

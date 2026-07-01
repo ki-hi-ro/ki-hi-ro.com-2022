@@ -10,6 +10,8 @@ function kihiro_asset_version($relative_path) {
 }
 
 function kihiro_enqueue_assets() {
+    $is_tag_index_page = is_page_template('page-tag-hierarchy.php')
+        || (function_exists('kihiro_is_tag_index_request') && kihiro_is_tag_index_request());
     $styles = array(
         'kihiro-foundation'    => '/assets/css/foundation/variables.css',
         'kihiro-style'         => '/style.css',
@@ -18,7 +20,9 @@ function kihiro_enqueue_assets() {
         'kihiro-page-top'      => '/assets/css/page-top.css',
     );
 
-    if (is_singular()) {
+    if ($is_tag_index_page) {
+        $styles['kihiro-article-list'] = '/assets/css/article-list.css';
+    } elseif (is_singular()) {
         $styles['kihiro-single'] = '/assets/css/single.css';
     } else {
         $styles['kihiro-sidebar']       = '/assets/css/sidebar.css';

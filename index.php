@@ -4,9 +4,6 @@
   <?php if (kihiro_is_thought_trail()) : ?>
     <?php get_template_part('template-parts/thought-trail'); ?>
   <?php else : ?>
-    <?php if ((is_home() || is_front_page()) && !kihiro_current_topic()) : ?>
-      <?php get_template_part('template-parts/serendipity-hero'); ?>
-    <?php endif; ?>
 
     <div class="outer-container front-container"<?php echo ((is_home() || is_front_page()) && !kihiro_current_topic()) ? ' id="latest-notes"' : ''; ?>>
       <div class="article-container">
@@ -25,7 +22,9 @@
       <?php endif; ?>
       </div>
 
-      <?php get_sidebar('not-single'); ?>
+      <?php if (!is_singular('post')) : ?>
+        <?php get_sidebar('not-single'); ?>
+      <?php endif; ?>
 
       <?php if (!is_singular('post')) : ?>
         <p class="page-top --not-single-sp"><a class="page-top__link --not-single-sp" href="#" data-mode="top" aria-label="ページの一番上へ移動">↑</a></p>

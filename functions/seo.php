@@ -4,7 +4,7 @@
  */
 
 if (!defined('KIHIRO_SITE_TAGLINE')) {
-    define('KIHIRO_SITE_TAGLINE', 'Nature, Serendipity, Philosophy');
+    define('KIHIRO_SITE_TAGLINE', '自分の人生を生きるためのブログ');
 }
 
 function kihiro_filter_document_title_parts($title) {
