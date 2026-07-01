@@ -3669,7 +3669,7 @@ body.design-refresh::before {
 .design-refresh .life-article__section > .front-sec__ttl.--sp-center,
 .design-refresh .front-sec__ttl,
 .design-refresh .front-sec__ttl--list-heading {
-  margin: 0 0 23px;
+  margin: 0 0 20px;
   color: var(--design-text);
   font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif;
   font-size: 18px;
@@ -3786,7 +3786,7 @@ body.design-refresh::before {
 
 .design-refresh .logbook-filter__status {
   width: 100%;
-  margin: 18px 0 0;
+  margin: 11px 0 0;
   color: var(--design-muted);
   font-size: 11px;
   line-height: 1.5;
