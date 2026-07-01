@@ -1469,10 +1469,6 @@ body.design-night {
     align-self: center;
   }
 
-  .design-refresh .all-article__post-wrap .all-article__date-block {
-    align-self: end;
-  }
-
   .design-refresh .all-article__post-wrap .all-article__content {
     align-self: start;
   }
@@ -3597,6 +3593,7 @@ body.design-refresh::before {
   border-bottom: 1px solid var(--design-line);
   background: #f8f8f7;
   backdrop-filter: blur(12px);
+  padding: 5px 0;
 }
 
 .design-refresh .header__contents {
@@ -3992,10 +3989,6 @@ body.design-refresh::before {
     padding-block: 26px 12px;
   }
 
-  .design-refresh .front-container {
-    padding-top: 18px;
-  }
-
   .design-refresh .article-container h2.front-sec__ttl,
   .design-refresh .life-article__section > .front-sec__ttl.--sp-center,
   .design-refresh .front-sec__ttl {
@@ -4151,7 +4144,7 @@ body.design-refresh::before {
 
   .design-refresh:not(.single) .front-container {
     display: grid;
-    grid-template-columns: minmax(0, 760px) 184px;
+    grid-template-columns: minmax(0, 992px) 0px;
     gap: 64px;
     align-items: start;
     box-sizing: border-box;
@@ -4160,7 +4153,7 @@ body.design-refresh::before {
   }
 
   .design-refresh:not(.single) .article-container {
-    max-width: 760px;
+    max-width: 992px;
   }
 
   .design-refresh:not(.single) .pc-right-container {
@@ -4394,7 +4387,7 @@ body.design-refresh::before {
 }
 
 .design-refresh .site-menu-panel__inner {
-  padding-block: 28px 34px;
+  padding-block: 33px 34px;
 }
 
 .design-refresh .site-menu-panel__head {
@@ -4451,14 +4444,13 @@ body.design-refresh::before {
 
 .design-refresh .site-menu-section li {
   margin: 0;
-  border-bottom: 1px solid var(--design-line);
   list-style: none;
 }
 
 .design-refresh .site-menu-section a {
   display: grid;
-  gap: 2px;
-  padding: 11px 0 12px;
+  gap: 0;
+  padding: 16px 0 0;
   border: 0;
   border-radius: 0;
   background: transparent;
@@ -4522,4 +4514,47 @@ body.design-refresh::before {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
   }
+}
+
+.site-menu-section h2 {
+    margin-bottom: 24px;
+}
+
+.site-menu-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-menu-section li {
+    margin-bottom: 28px;
+}
+
+.site-menu-section li:last-child {
+    margin-bottom: 0;
+}
+
+.site-menu-section a {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.site-menu-section span {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.site-menu-section small {
+    color: #777;
+    line-height: 1.7;
+}
+
+.design-refresh .site-menu-section ul {
+    gap: 4px;
+}
+
+.design-refresh .site-menu-section a {
+    min-height: 58px;
+    padding: 10px 0 3px;
 }

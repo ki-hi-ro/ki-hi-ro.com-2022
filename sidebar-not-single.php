@@ -1,5 +1,5 @@
 <div class="pc-right-container">
-    <nav class="archive-sidebar" id="archive-map" aria-labelledby="archive-map-title">
+    <!-- <nav class="archive-sidebar" id="archive-map" aria-labelledby="archive-map-title">
         <h2 id="archive-map-title">年月</h2>
         <ul class="archive-list">
             <?php
@@ -27,5 +27,5 @@
             }
             ?>
         </ul>
-    </nav>
+    </nav> -->
 </div>

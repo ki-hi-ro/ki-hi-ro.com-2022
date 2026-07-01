@@ -6,8 +6,6 @@
       <h1 class="front-sec__ttl --sp-center"><?php echo esc_html($topic_data['label']); ?></h1>
       <p class="life-article__lead"><?php echo esc_html($topic_data['description']); ?></p>
     <?php else : ?>
-      <h2 class="front-sec__ttl --sp-center">自分の人生を生きるための記事一覧</h2>
-
       <?php $selected_tags = kihiro_get_selected_tag_index_tags(); ?>
       <?php if ($selected_tags) : ?>
         <div class="logbook-filter" data-logbook-filter>
