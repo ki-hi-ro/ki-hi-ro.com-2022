@@ -3761,7 +3761,7 @@ body.design-refresh::before {
 .design-refresh .logbook-filter {
   display: flex;
   flex-wrap: wrap;
-  gap: 27px 10px;
+  gap: 10px 10px;
   align-items: center;
   margin: 0 0 10px;
 }

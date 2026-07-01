@@ -3247,7 +3247,7 @@ body.fixed {
 
 .post__thumb {
   margin: 40px auto 50px !important;
-  width: auto !important;
+  width: 100%;
   display: block;
   max-width: 100%;
   height: auto;
