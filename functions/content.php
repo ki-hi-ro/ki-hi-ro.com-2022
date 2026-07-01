@@ -536,7 +536,7 @@ function kihiro_configure_main_query($query) {
 
     if ($query->is_home()) {
         $query->set('posts_per_page', kihiro_home_posts_per_page());
-        $query->set('orderby', 'modified');
+        $query->set('orderby', 'date');
         $query->set('order', 'DESC');
 
         $topic = kihiro_current_topic();
