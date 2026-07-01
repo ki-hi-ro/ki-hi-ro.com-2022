@@ -3786,7 +3786,7 @@ body.design-refresh::before {
 
 .design-refresh .logbook-filter__status {
   width: 100%;
-  margin: 2px 0 0;
+  margin: 18px 0 0;
   color: var(--design-muted);
   font-size: 11px;
   line-height: 1.5;
