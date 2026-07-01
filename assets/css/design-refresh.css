@@ -3576,6 +3576,16 @@ body.design-refresh {
   color: var(--design-text);
 }
 
+html,
+body.design-refresh {
+  background-color: #f8f8f7;
+}
+
+body.design-refresh::before {
+  display: none;
+  background: none !important;
+}
+
 .design-refresh .outer-container {
   width: min(100%, 1116px);
   max-width: 1116px;
@@ -3592,7 +3602,7 @@ body.design-refresh {
 .design-refresh .site-header {
   position: sticky;
   border-bottom: 1px solid var(--design-line);
-  background: rgba(248, 248, 247, 0.94);
+  background: #f8f8f7;
   backdrop-filter: blur(12px);
 }
 

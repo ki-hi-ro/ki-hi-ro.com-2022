@@ -16,6 +16,8 @@
   <!-- <meta> と SEO関連 -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f8f7">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <?php if (is_archive() || is_search() || is_tag() || is_paged()) : ?>
     <meta name="robots" content="noindex,follow">
   <?php endif; ?>
