@@ -732,7 +732,7 @@ body.design-refresh {
 /* Single */
 .design-refresh.single .front-container {
   max-width: 1100px;
-  padding-top: 72px;
+  padding-top: 36px;
 }
 
 .design-refresh.single .l-pc-left.--single {
@@ -3592,13 +3592,6 @@ body.design-refresh::before {
   padding-inline: 32px;
 }
 
-@media (min-width: 992px) {
-    .design-refresh.home .outer-container {
-        width: min(100%, 1072px);
-        max-width: 1072px;
-    }
-}
-
 .design-refresh .site-header {
   position: sticky;
   border-bottom: 1px solid var(--design-line);
@@ -3669,7 +3662,7 @@ body.design-refresh::before {
 .design-refresh .life-article__section > .front-sec__ttl.--sp-center,
 .design-refresh .front-sec__ttl,
 .design-refresh .front-sec__ttl--list-heading {
-  margin: 0 0 20px;
+  margin: 0 0 34px;
   color: var(--design-text);
   font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif;
   font-size: 18px;
@@ -3761,9 +3754,9 @@ body.design-refresh::before {
 .design-refresh .logbook-filter {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 10px;
+  gap: 19px 10px;
   align-items: center;
-  margin: 0 0 10px;
+  margin: 0 0 15px;
 }
 
 .design-refresh .logbook-filter__button {
@@ -3813,7 +3806,6 @@ body.design-refresh::before {
   align-items: baseline;
   padding: 14px 0 0;
   border: 0;
-  border-bottom: 1px solid var(--design-line);
   border-radius: 0;
   background: transparent;
   box-shadow: none;
@@ -4163,8 +4155,8 @@ body.design-refresh::before {
     gap: 64px;
     align-items: start;
     box-sizing: border-box;
-    width: min(100%, 1072px);
-    max-width: 1072px;
+    width: min(100%, 1116px);
+    max-width: 1116px;
   }
 
   .design-refresh:not(.single) .article-container {
@@ -4208,7 +4200,7 @@ body.design-refresh::before {
     display: block;
     width: 230px;
     max-height: calc(100vh - 108px);
-    overflow-y: auto;
+    overflow-y: clip;
     align-self: start;
     overscroll-behavior: contain;
     scrollbar-gutter: stable;
