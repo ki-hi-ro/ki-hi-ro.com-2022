@@ -8,6 +8,8 @@
 
 $kihiro_function_files = array(
     'setup.php',
+    'tag-index.php',
+    'topics.php',
     'assets.php',
     'content.php',
     'seo.php',
