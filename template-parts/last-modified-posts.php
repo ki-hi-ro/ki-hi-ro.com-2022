@@ -41,15 +41,13 @@ if (is_date()) {
 }
 ?>
 
-<div class="front-sec__text front-sec__flex article-list">
+<div class="journal-list">
     <?php if ($post_query->have_posts()) : ?>
         <?php while ($post_query->have_posts()) : $post_query->the_post(); ?>
-            <div class="all-article__link front-sec__flex-item">
-                <?php get_template_part('template-parts/blog-list'); ?>
-            </div>
+            <?php get_template_part('template-parts/blog-list'); ?>
         <?php endwhile; ?>
     <?php else : ?>
-        <p>該当する記事はありませんでした。</p>
+        <p class="journal-empty">該当する記事はありませんでした。</p>
     <?php endif; ?>
 </div>
 

@@ -10,14 +10,12 @@ if (have_posts()) :
     while (have_posts()) :
         the_post();
         ?>
-        <div class="all-article__link front-sec__flex-item">
-            <?php get_template_part('template-parts/blog-list'); ?>
-        </div>
+        <?php get_template_part('template-parts/blog-list'); ?>
         <?php
     endwhile;
 else :
     ?>
-    <p>該当する記事はありませんでした。</p>
+    <p class="journal-empty">該当する記事はありませんでした。</p>
     <?php
 endif;
 ?>

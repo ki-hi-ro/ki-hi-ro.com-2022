@@ -4,17 +4,18 @@ $tag_description = tag_description();
 ?>
 
 <?php if ($term instanceof WP_Term) : ?>
-  <h1 class="front-sec__ttl<?php echo $tag_description ? '' : ' front-sec__ttl--list-heading'; ?>">
-    <?php echo esc_html($term->name); ?>についての記事
-  </h1>
+  <header class="journal-panel__header">
+    <h1 class="journal-date-title"><?php echo esc_html($term->name); ?></h1>
+    <p class="journal-panel__lead">このタグが付いた記事</p>
+  </header>
 
   <?php if ($tag_description) : ?>
-    <div class="description-class">
+    <div class="journal-description">
       <?php echo wp_kses_post($tag_description); ?>
     </div>
   <?php endif; ?>
 
-  <div class="front-sec__text front-sec__flex article-list">
+  <div class="journal-list">
     <?php get_template_part('template-parts/tag-posts'); ?>
   </div>
 <?php endif; ?>

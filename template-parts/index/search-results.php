@@ -1,16 +1,15 @@
-<h1 class="front-sec__ttl front-sec__ttl--list-heading">
-  「<?php echo esc_html(get_search_query()); ?>」が本文中に含まれている記事
-</h1>
+<header class="journal-panel__header">
+  <h1 class="journal-date-title">検索</h1>
+  <p class="journal-panel__lead">「<?php echo esc_html(get_search_query()); ?>」が本文中に含まれている記事</p>
+</header>
 
-<div class="front-sec__text front-sec__flex article-list">
+<div class="journal-list">
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-      <div class="all-article__link front-sec__flex-item">
-        <?php get_template_part('template-parts/blog-list'); ?>
-      </div>
+      <?php get_template_part('template-parts/blog-list'); ?>
     <?php endwhile; ?>
   <?php else : ?>
-    <p>該当する記事はありませんでした。</p>
+    <p class="journal-empty">該当する記事はありませんでした。</p>
   <?php endif; ?>
 </div>
 
