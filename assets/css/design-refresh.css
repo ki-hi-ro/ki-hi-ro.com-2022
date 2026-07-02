@@ -517,10 +517,6 @@ body.design-refresh {
   transition: transform 0.35s ease;
 }
 
-.design-refresh .all-article__post-wrap:hover .all-article__media-img {
-  transform: scale(1.045);
-}
-
 .design-refresh .all-article__media-fallback {
   position: relative;
   overflow: hidden;
@@ -558,13 +554,6 @@ body.design-refresh {
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.12em;
-}
-
-.design-refresh .all-article__post-wrap:hover {
-  border-color: var(--design-accent);
-  background: var(--design-surface-strong);
-  box-shadow: var(--design-shadow);
-  transform: translateY(-4px);
 }
 
 .design-refresh .all-article__post-wrap .all-article__date {
@@ -2997,10 +2986,6 @@ body.design-refresh {
   border-color: rgba(22, 32, 28, 0.13);
 }
 
-.design-refresh .all-article__post-wrap:hover {
-  border-color: rgba(182, 74, 53, 0.44);
-}
-
 .design-refresh .all-article__post-wrap .all-article__modified {
   color: var(--design-muted);
 }
@@ -3330,13 +3315,6 @@ body.design-refresh {
   border-radius: 8px;
   background: var(--design-surface);
   box-shadow: none;
-}
-
-.design-refresh .all-article__post-wrap:hover {
-  border-color: rgba(31, 31, 31, 0.32);
-  background: var(--design-surface-strong);
-  box-shadow: var(--design-shadow);
-  transform: translateY(-2px);
 }
 
 .design-refresh .all-article__media {
@@ -3813,11 +3791,9 @@ body.design-refresh::before {
 }
 
 .design-refresh .all-article__post-wrap:hover {
-  border-color: var(--design-line);
-  background: rgba(255, 255, 255, 0.48);
-  box-shadow: none;
-  opacity: 1;
-  transform: none;
+  opacity: 0.7;
+  transition: opacity 0.18s ease;
+
 }
 
 .design-refresh .all-article__date-block {
@@ -3856,11 +3832,6 @@ body.design-refresh::before {
   object-fit: cover;
   filter: saturate(0.9) contrast(0.98);
   transition: filter 0.18s ease, transform 0.18s ease;
-}
-
-.design-refresh .all-article__post-wrap:hover .all-article__media-img {
-  filter: saturate(1) contrast(1);
-  transform: scale(1.02);
 }
 
 .design-refresh .all-article__media-img--default {
@@ -4243,8 +4214,8 @@ body.design-refresh::before {
 
   .design-refresh:not(.single) .front-container {
     display: grid;
-    grid-template-columns: minmax(0, 992px) 0px;
-    gap: 64px;
+    grid-template-columns: minmax(0, 1116px) 0px;
+    gap: 0;
     align-items: start;
     box-sizing: border-box;
     width: min(100%, 1116px);
@@ -4252,7 +4223,7 @@ body.design-refresh::before {
   }
 
   .design-refresh:not(.single) .article-container {
-    max-width: 992px;
+    max-width: 1116px;
   }
 
   .design-refresh:not(.single) .pc-right-container {
