@@ -3,17 +3,11 @@ $post_tags        = get_the_tags();
 $visible_tags     = $post_tags ? array_slice($post_tags, 0, 4) : array();
 $hidden_tag_count = $post_tags ? max(0, count($post_tags) - count($visible_tags)) : 0;
 $tag_slugs        = $post_tags ? wp_list_pluck($post_tags, 'slug') : array();
-$default_thumbnail_url = get_theme_file_uri('/assets/img/logbook-default-thumbnail.jpg');
+$default_thumbnail_url = get_theme_file_uri('/assets/img/logbook-default-thumb.jpg');
 $thumbnail_error_fallback = "this.onerror=null;this.removeAttribute('srcset');this.removeAttribute('sizes');this.src=this.dataset.defaultSrc;this.classList.add('all-article__media-img--default');";
 ?>
 
 <a class="all-article__post-wrap" href="<?php the_permalink(); ?>" data-logbook-item data-logbook-tags="<?php echo esc_attr(implode(' ', $tag_slugs)); ?>" data-logbook-date="<?php echo esc_attr(get_the_date('Y-m-d')); ?>">
-  <div class="all-article__date-block">
-    <time class="all-article__date" datetime="<?php echo esc_attr(get_the_date('c')); ?>">
-      <?php echo get_the_date('Y.m.d'); ?>
-    </time>
-  </div>
-
   <figure class="all-article__media" aria-hidden="true">
     <?php if (has_post_thumbnail()) : ?>
       <?php the_post_thumbnail('medium_large', array('class' => 'all-article__media-img', 'alt' => '', 'loading' => 'lazy', 'decoding' => 'async', 'data-default-src' => $default_thumbnail_url, 'onerror' => $thumbnail_error_fallback)); ?>
@@ -23,6 +17,12 @@ $thumbnail_error_fallback = "this.onerror=null;this.removeAttribute('srcset');th
   </figure>
 
   <div class="all-article__content">
+    <div class="all-article__date-block">
+      <time class="all-article__date" datetime="<?php echo esc_attr(get_the_date('c')); ?>">
+        <?php echo get_the_date('Y.m.d'); ?>
+      </time>
+    </div>
+
     <div class="all-article__ttl">
       <?php echo esc_html(get_the_title()); ?>
     </div>
