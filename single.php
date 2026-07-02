@@ -59,8 +59,6 @@
       endif; endwhile; endif; ?>
     </article>
   </div>
-  <?php get_sidebar(); ?>
-
   <p class="page-top --single-pc">
     <a class="page-top__link --single-pc" href="#" data-mode="top" aria-label="ページの一番上へ移動">↑</a>
   </p>

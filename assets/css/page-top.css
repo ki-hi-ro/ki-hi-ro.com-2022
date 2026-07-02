@@ -49,8 +49,4 @@
   .single .page-top.--single-sp {
     display: none;
   }
-
-  .single .page-top.--single-pc {
-    display: block;
-  }
 }
