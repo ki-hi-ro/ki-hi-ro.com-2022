@@ -3856,16 +3856,16 @@ body.design-refresh::before {
 .design-refresh .all-article__labels {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 7px;
   margin-top: 7px;
 }
 
 .design-refresh .all-article__label {
   min-height: 22px;
-  padding: 2px 8px;
-  border: 1px solid rgba(32, 32, 32, 0.11);
+  padding: 0;
+  border: none;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.55);
+  background: none;
   color: var(--design-muted);
   font-size: 11px;
   line-height: 1.6;
