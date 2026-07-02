@@ -3857,7 +3857,7 @@ body.design-refresh::before {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 4px;
+  margin-top: 7px;
 }
 
 .design-refresh .all-article__label {
