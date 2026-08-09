@@ -17,7 +17,7 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  padding: 22px 26px;
+  padding: 50px 56px;
   background: #f4f4f2;
   color: #0d0d0d;
 }
@@ -423,7 +423,7 @@ svg {
   margin: 0;
   font-size: 46px;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.5;
 }
 
 .db-single__fields {
@@ -452,12 +452,12 @@ svg {
 }
 
 .db-single__content {
-  margin-top: 46px;
+  margin-top: 34px;
   font-size: 18px;
 }
 
 .db-single__content h2 {
-  margin-top: 38px;
+  margin-top: 34px;
   font-size: 30px;
 }
 
@@ -648,4 +648,24 @@ svg {
     grid-template-columns: minmax(0, 1fr);
     gap: 0;
   }
+}
+
+#ez-toc-container {
+  margin-top: 30px;
+}
+
+#ez-toc-container ul li {
+  margin: 15px 0;
+}
+
+.wp-block-image {
+  margin: 26px 0;
+}
+
+.wp-block-image img {
+  width: 100%;
+}
+
+.wp-block-paragraph {
+  margin: 26px 0;
 }
