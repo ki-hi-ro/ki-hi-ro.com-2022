@@ -669,3 +669,12 @@ svg {
 .wp-block-paragraph {
   margin: 26px 0;
 }
+
+#ez-toc-container.counter-hyphen li, .ez-toc-widget-container.counter-hyphen li {
+    list-style-type: '';
+    list-style-position: inside;
+}
+
+div#ez-toc-container {
+  display: none;
+}
