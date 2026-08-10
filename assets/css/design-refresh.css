@@ -429,7 +429,7 @@ svg {
 .db-single__fields {
   display: grid;
   gap: 9px;
-  margin: 38px 0 0;
+  margin: 35px 0 0;
   padding: 26px 0;
   border-top: 1px solid #dfdfdf;
   border-bottom: 1px solid #dfdfdf;
@@ -452,12 +452,12 @@ svg {
 }
 
 .db-single__content {
-  margin-top: 34px;
+  margin-top: 39px;
   font-size: 18px;
 }
 
 .db-single__content h2 {
-  margin-top: 34px;
+  margin-top: 38px;
   font-size: 30px;
 }
 
