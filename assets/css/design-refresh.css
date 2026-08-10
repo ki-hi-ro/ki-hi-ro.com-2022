@@ -668,6 +668,7 @@ svg {
 
 .wp-block-paragraph {
   margin: 26px 0;
+  line-height: 1.8;
 }
 
 #ez-toc-container.counter-hyphen li, .ez-toc-widget-container.counter-hyphen li {
