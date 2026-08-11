@@ -679,3 +679,7 @@ svg {
 div#ez-toc-container {
   display: none;
 }
+
+.wp-block-embed {
+  margin: 32px 0 0px;
+}
