@@ -459,6 +459,7 @@ svg {
 .db-single__content h2 {
   margin-top: 38px;
   font-size: 30px;
+  line-height: 1.7;
 }
 
 .db-single__content h3 {
