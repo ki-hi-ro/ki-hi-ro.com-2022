@@ -176,9 +176,10 @@ function kihiro_configure_main_query($query) {
     }
 
     if ($query->is_home()) {
-        $query->set('posts_per_page', kihiro_home_posts_per_page());
+        $query->set('posts_per_page', kihiro_is_all_articles_view() ? -1 : kihiro_home_posts_per_page());
         $query->set('orderby', 'date');
         $query->set('order', 'DESC');
+        $query->set('no_found_rows', kihiro_is_all_articles_view());
     } elseif ($query->is_search() || $query->is_tag() || $query->is_date()) {
         $query->set('posts_per_page', 10);
     } else {

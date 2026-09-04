@@ -7,13 +7,14 @@ global $wp_query;
 
 $post_query      = $wp_query;
 $is_custom_query = false;
+$posts_per_page  = kihiro_is_all_articles_view() ? -1 : kihiro_home_posts_per_page();
 
 // A static front page does not receive the posts query used by the blog index.
 if (is_front_page() && !is_home()) {
     $post_query = new WP_Query(
         array(
             'post_type'           => 'post',
-            'posts_per_page'      => kihiro_home_posts_per_page(),
+            'posts_per_page'      => $posts_per_page,
             'orderby'             => 'modified',
             'order'               => 'DESC',
             'post__not_in'        => kihiro_excluded_post_ids(),
@@ -51,7 +52,7 @@ if (is_date()) {
     <?php endif; ?>
 </div>
 
-<?php if (!$is_custom_query && $post_query->max_num_pages > 1) : ?>
+<?php if (!kihiro_is_all_articles_view() && !$is_custom_query && $post_query->max_num_pages > 1) : ?>
     <?php
     the_posts_pagination(
         array(

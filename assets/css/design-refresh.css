@@ -323,16 +323,17 @@ svg {
 .journal-entry__link {
   display: grid;
   min-height: 206px;
-  grid-template-columns: 92px minmax(0, 1fr) 42px;
+  grid-template-columns: 128px minmax(0, 1fr) 42px;
   align-items: center;
   gap: 26px;
   border-bottom: 1px solid #dfdfdf;
 }
 
-.journal-entry__time {
+.journal-entry__date {
   color: #858585;
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .journal-entry__body {
@@ -472,7 +473,7 @@ svg {
   text-underline-offset: 4px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
   body {
     padding: 0;
   }
@@ -524,12 +525,12 @@ svg {
 
   .journal-entry__link {
     min-height: 118px;
-    grid-template-columns: 64px minmax(0, 1fr) 24px;
+    grid-template-columns: 92px minmax(0, 1fr) 24px;
     gap: 18px;
   }
 
-  .journal-entry__time {
-    font-size: 17px;
+  .journal-entry__date {
+    font-size: 16px;
   }
 
   .journal-entry__title {
@@ -625,12 +626,12 @@ svg {
 
   .journal-entry__link {
     min-height: 96px;
-    grid-template-columns: 52px minmax(0, 1fr) 20px;
+    grid-template-columns: 78px minmax(0, 1fr) 20px;
     gap: 12px;
   }
 
-  .journal-entry__time {
-    font-size: 15px;
+  .journal-entry__date {
+    font-size: 13px;
   }
 
   .journal-entry__title {
