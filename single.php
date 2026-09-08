@@ -47,6 +47,12 @@
         <div class="db-single__content">
           <?php the_content(); ?>
         </div>
+
+        <p class="page-top">
+          <a class="page-top__link" href="#page-top" aria-label="ページ上部へ戻る">
+            <span aria-hidden="true">&uarr;</span>
+          </a>
+        </p>
       </article>
     <?php endwhile; ?>
   <?php endif; ?>

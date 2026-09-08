@@ -14,6 +14,12 @@ html {
   line-height: 1.6;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -473,6 +479,33 @@ svg {
   text-underline-offset: 4px;
 }
 
+.page-top {
+  display: flex;
+  justify-content: flex-end;
+  margin: 54px 0 0;
+}
+
+.page-top__link {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  background: #fff;
+  color: #777;
+  font-size: 24px;
+  line-height: 1;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.page-top__link:hover,
+.page-top__link:focus-visible {
+  border-color: #111;
+  color: #111;
+}
+
 @media (max-width: 1280px) {
   body {
     padding: 0;
@@ -644,6 +677,10 @@ svg {
 
   .db-single h1 {
     font-size: 30px;
+  }
+
+  .page-top {
+    margin-top: 38px;
   }
 
   .db-single__fields div {
