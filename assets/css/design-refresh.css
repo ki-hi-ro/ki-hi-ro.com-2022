@@ -436,7 +436,7 @@ svg {
 .db-single__fields {
   display: grid;
   gap: 9px;
-  margin: 26px 0 0;
+  margin: 26px 0 33px;
   padding: 26px 0;
   border-top: 1px solid #dfdfdf;
   border-bottom: 1px solid #dfdfdf;
@@ -464,10 +464,12 @@ svg {
 }
 
 .db-single__content h2 {
-  margin-top: 32px;
-  margin-bottom: -6px;
+  margin-top: 40px;
+  margin-bottom: 30px;
   font-size: 30px;
-  line-height: 1.7;
+  line-height: 1.5;
+  border-left: 3px solid #dfdfdf;
+  padding-left: 18px;  
 }
 
 .db-single__content h3 {
@@ -707,7 +709,7 @@ svg {
 }
 
 .wp-block-paragraph {
-  margin: 22px 0;
+  margin: 19px 0;
   line-height: 1.8;
 }
 
