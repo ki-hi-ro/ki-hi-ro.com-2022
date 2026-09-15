@@ -329,7 +329,7 @@ svg {
 .journal-entry__link {
   display: grid;
   min-height: 206px;
-  grid-template-columns: 128px minmax(0, 1fr) 42px;
+  grid-template-columns: minmax(0, 1fr) 42px;
   align-items: center;
   gap: 26px;
   border-bottom: 1px solid #dfdfdf;
@@ -561,7 +561,7 @@ svg {
 
   .journal-entry__link {
     min-height: 118px;
-    grid-template-columns: 92px minmax(0, 1fr) 24px;
+    grid-template-columns: minmax(0, 1fr) 42px;
     gap: 18px;
   }
 
@@ -662,7 +662,7 @@ svg {
 
   .journal-entry__link {
     min-height: 96px;
-    grid-template-columns: 78px minmax(0, 1fr) 20px;
+    grid-template-columns: minmax(0, 1fr) 42px;
     gap: 12px;
   }
 
