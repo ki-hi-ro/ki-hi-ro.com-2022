@@ -11,7 +11,7 @@
   <?php wp_body_open(); ?>
   <header id="page-top" class="site-header">
     <div class="site-header__inner">
-      <a class="site-title" href="<?php echo esc_url(home_url('/')); ?>">Euphoria</a>
+      <a class="site-title" href="<?php echo esc_url(home_url('/')); ?>">ki-hi-ro.com</a>
       <?php get_search_form(); ?>
     </div>
   </header>
