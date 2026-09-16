@@ -76,6 +76,7 @@ svg {
 }
 
 .site-title {
+  font-family: "Comic Sans MS", "Bradley Hand", cursive;
   font-size: 31px;
   font-weight: 700;
   line-height: 1;
