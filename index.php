@@ -72,7 +72,7 @@ $day_posts      = kihiro_posts_for_journal_date($selected_ymd);
       </a>
     </nav>
 
-    <p class="journal-copyright">&copy; <?php echo esc_html(wp_date('Y')); ?>ki-hi-ro.com</p>
+    <p class="journal-copyright">&copy; <?php echo esc_html(wp_date('Y')); ?> ki-hi-ro.com</p>
   </aside>
 
   <section class="journal-panel" aria-label="記事一覧">
