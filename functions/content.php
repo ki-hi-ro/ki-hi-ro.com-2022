@@ -204,3 +204,17 @@ function kihiro_pagination_args($args) {
     return $args;
 }
 add_filter('the_posts_pagination_args', 'kihiro_pagination_args');
+
+/** Adjacent links follow the same published-post exclusions as article lists. */
+function kihiro_adjacent_post_where($where) {
+    $where .= " AND p.post_status = 'publish'";
+    $excluded_ids = kihiro_excluded_post_ids();
+
+    if ($excluded_ids) {
+        $where .= ' AND p.ID NOT IN (' . implode(',', $excluded_ids) . ')';
+    }
+
+    return $where;
+}
+add_filter('get_previous_post_where', 'kihiro_adjacent_post_where');
+add_filter('get_next_post_where', 'kihiro_adjacent_post_where');

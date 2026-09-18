@@ -29,6 +29,29 @@
           <?php the_content(); ?>
         </div>
 
+        <?php
+        $previous_post = get_previous_post();
+        $next_post = get_next_post();
+        ?>
+        <?php if ($previous_post instanceof WP_Post || $next_post instanceof WP_Post) : ?>
+          <nav class="article-navigation" aria-label="前後の記事">
+            <?php if ($previous_post instanceof WP_Post) : ?>
+              <a class="article-navigation__link article-navigation__link--previous" href="<?php echo esc_url(get_permalink($previous_post)); ?>" rel="prev">
+                <span class="article-navigation__label"><span aria-hidden="true">&larr;</span> 前の記事</span>
+                <span class="article-navigation__title"><?php echo esc_html(get_the_title($previous_post)); ?></span>
+                <time datetime="<?php echo esc_attr(get_the_date('c', $previous_post)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $previous_post)); ?></time>
+              </a>
+            <?php endif; ?>
+            <?php if ($next_post instanceof WP_Post) : ?>
+              <a class="article-navigation__link article-navigation__link--next" href="<?php echo esc_url(get_permalink($next_post)); ?>" rel="next">
+                <span class="article-navigation__label">次の記事 <span aria-hidden="true">&rarr;</span></span>
+                <span class="article-navigation__title"><?php echo esc_html(get_the_title($next_post)); ?></span>
+                <time datetime="<?php echo esc_attr(get_the_date('c', $next_post)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $next_post)); ?></time>
+              </a>
+            <?php endif; ?>
+          </nav>
+        <?php endif; ?>
+
         <p class="page-top">
           <a class="page-top__link" href="#page-top" aria-label="ページ上部へ戻る">
             <span aria-hidden="true">&uarr;</span>
