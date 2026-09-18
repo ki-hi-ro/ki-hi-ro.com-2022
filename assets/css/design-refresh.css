@@ -2,6 +2,34 @@
  * Journal style database output.
  */
 
+/* Rounded, bold handwriting with the same outlines on every OS. */
+@font-face {
+  font-family: "Kihiro Comic Relief";
+  src: url("../fonts/comic-relief/comic-relief-bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Load Japanese glyphs only when needed. */
+@font-face {
+  font-family: "Kihiro Yomogi";
+  src: url("../fonts/yomogi/yomogi-latin.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0000-024F;
+}
+
+@font-face {
+  font-family: "Kihiro Yomogi";
+  src: url("../fonts/yomogi/yomogi-japanese.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0250-10FFFF;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -72,19 +100,29 @@ svg {
   min-height: 96px;
   align-items: center;
   justify-content: space-between;
-  padding: 0 64px 0 52px;
+  gap: 16px 24px;
+  flex-wrap: wrap;
+  padding: 16px 64px 16px 52px;
 }
 
 .site-title {
-  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  font-family: "Kihiro Comic Relief", "Kihiro Yomogi", sans-serif;
   font-size: 31px;
   font-weight: 700;
-  line-height: 1;
+  font-synthesis: none;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  overflow-wrap: anywhere;
 }
 
 .search-form {
   display: flex;
   width: 190px;
+  flex-shrink: 0;
+  margin-left: auto;
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
@@ -524,7 +562,7 @@ svg {
 
   .site-header__inner {
     min-height: 82px;
-    padding: 0 24px;
+    padding: 16px 24px;
   }
 
   .journal-app {
@@ -581,15 +619,17 @@ svg {
 @media (max-width: 560px) {
   .site-header__inner {
     min-height: 74px;
-    padding: 0 16px;
+    gap: 12px;
+    padding: 14px 16px;
   }
 
   .site-title {
-    font-size: 26px;
+    font-size: clamp(22px, 5.5vw, 26px);
+    letter-spacing: 0;
   }
 
   .search-form {
-    width: 122px;
+    width: 98px;
     gap: 6px;
   }
 
