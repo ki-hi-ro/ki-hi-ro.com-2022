@@ -10,8 +10,16 @@ function kihiro_asset_version($relative_path) {
 }
 
 function kihiro_enqueue_assets() {
+    wp_enqueue_script(
+        'kihiro-pagination',
+        get_theme_file_uri('/assets/js/pagination.js'),
+        array(),
+        kihiro_asset_version('/assets/js/pagination.js'),
+        true
+    );
     $styles = array(
         'kihiro-design-refresh' => '/assets/css/design-refresh.css',
+        'kihiro-magazine' => '/assets/css/magazine.css',
     );
 
     foreach ($styles as $handle => $relative_path) {

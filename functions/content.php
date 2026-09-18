@@ -35,7 +35,7 @@ function kihiro_custom_excerpt($length = 170) {
 }
 
 function kihiro_home_posts_per_page() {
-    return 24;
+    return 12;
 }
 
 function kihiro_get_request_value($key) {
@@ -176,11 +176,12 @@ function kihiro_configure_main_query($query) {
     }
 
     if ($query->is_home()) {
-        $query->set('posts_per_page', kihiro_is_all_articles_view() ? -1 : kihiro_home_posts_per_page());
+        $query->set('posts_per_page', kihiro_home_posts_per_page());
         $query->set('orderby', 'date');
         $query->set('order', 'DESC');
-        $query->set('no_found_rows', kihiro_is_all_articles_view());
-    } elseif ($query->is_search() || $query->is_tag() || $query->is_date()) {
+        $query->set('no_found_rows', false);
+        $query->set('ignore_sticky_posts', true);
+    } elseif ($query->is_search() || $query->is_archive()) {
         $query->set('posts_per_page', 10);
     } else {
         return;
@@ -196,3 +197,10 @@ function kihiro_configure_main_query($query) {
     $query->set('post__not_in', $excluded_ids);
 }
 add_action('pre_get_posts', 'kihiro_configure_main_query');
+
+/** Expose every page number; the theme keeps the list horizontally scrollable. */
+function kihiro_pagination_args($args) {
+    $args['show_all'] = true;
+    return $args;
+}
+add_filter('the_posts_pagination_args', 'kihiro_pagination_args');

@@ -7,7 +7,7 @@ global $wp_query;
 
 $post_query      = $wp_query;
 $is_custom_query = false;
-$posts_per_page  = kihiro_is_all_articles_view() ? -1 : kihiro_home_posts_per_page();
+$posts_per_page  = kihiro_home_posts_per_page();
 
 // A static front page does not receive the posts query used by the blog index.
 if (is_front_page() && !is_home()) {
@@ -19,7 +19,8 @@ if (is_front_page() && !is_home()) {
             'order'               => 'DESC',
             'post__not_in'        => kihiro_excluded_post_ids(),
             'ignore_sticky_posts' => true,
-            'no_found_rows'       => true,
+            'no_found_rows'       => false,
+            'paged'               => max(1, (int) get_query_var('paged'), (int) get_query_var('page')),
         )
     );
     $is_custom_query = true;
@@ -45,14 +46,14 @@ if (is_date()) {
 <div class="journal-list">
     <?php if ($post_query->have_posts()) : ?>
         <?php while ($post_query->have_posts()) : $post_query->the_post(); ?>
-            <?php get_template_part('template-parts/blog-list'); ?>
+            <?php get_template_part('template-parts/blog-list', null, array('index' => $post_query->current_post)); ?>
         <?php endwhile; ?>
     <?php else : ?>
         <p class="journal-empty">該当する記事はありませんでした。</p>
     <?php endif; ?>
 </div>
 
-<?php if (!kihiro_is_all_articles_view() && !$is_custom_query && $post_query->max_num_pages > 1) : ?>
+<?php if (!$is_custom_query && $post_query->max_num_pages > 1) : ?>
     <?php
     the_posts_pagination(
         array(

@@ -1,6 +1,12 @@
 <?php get_header(); ?>
 
 <?php
+if (is_home() && !kihiro_is_all_articles_view() && '' === kihiro_get_request_value('journal_date')) {
+    get_template_part('template-parts/index/magazine');
+    get_footer();
+    return;
+}
+
 $selected_date  = kihiro_selected_journal_date();
 $selected_ymd   = $selected_date->format('Y-m-d');
 $month_start    = $selected_date->modify('first day of this month')->setTime(0, 0);
@@ -11,7 +17,7 @@ $next_month     = $month_start->modify('+1 month');
 $day_posts      = kihiro_posts_for_journal_date($selected_ymd);
 ?>
 
-<main class="journal-app">
+<main id="main-content" class="journal-app">
   <aside class="journal-sidebar" aria-label="カレンダー">
     <div class="journal-month">
       <a class="journal-month__nav" href="<?php echo esc_url(kihiro_journal_date_url($prev_month->format('Y-m-01'))); ?>" aria-label="前の月へ">&lsaquo;</a>
@@ -80,6 +86,16 @@ $day_posts      = kihiro_posts_for_journal_date($selected_ymd);
       <?php get_template_part('template-parts/index/search-results'); ?>
     <?php elseif (is_tag()) : ?>
       <?php get_template_part('template-parts/index/tag-archive'); ?>
+    <?php elseif (is_archive()) : ?>
+      <header class="journal-panel__header">
+        <h1 class="journal-date-title"><?php echo esc_html(wp_strip_all_tags(get_the_archive_title())); ?></h1>
+      </header>
+      <div class="journal-list">
+        <?php get_template_part('template-parts/tag-posts'); ?>
+      </div>
+    <?php elseif (is_404()) : ?>
+      <header class="journal-panel__header"><h1 class="journal-date-title">ページが見つかりません</h1></header>
+      <p class="journal-empty"><a href="<?php echo esc_url(home_url('/')); ?>">トップページへ戻る</a></p>
     <?php elseif (kihiro_is_all_articles_view()) : ?>
       <?php get_template_part('template-parts/index/post-index'); ?>
     <?php else : ?>
@@ -89,9 +105,9 @@ $day_posts      = kihiro_posts_for_journal_date($selected_ymd);
 
       <div class="journal-list">
         <?php if ($day_posts) : ?>
-          <?php foreach ($day_posts as $post) : ?>
+          <?php foreach ($day_posts as $card_index => $post) : ?>
             <?php setup_postdata($post); ?>
-            <?php get_template_part('template-parts/blog-list'); ?>
+            <?php get_template_part('template-parts/blog-list', null, array('index' => $card_index)); ?>
           <?php endforeach; ?>
           <?php wp_reset_postdata(); ?>
         <?php else : ?>
