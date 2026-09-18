@@ -32,3 +32,29 @@ function kihiro_enqueue_assets() {
     }
 }
 add_action('wp_enqueue_scripts', 'kihiro_enqueue_assets');
+
+/** Use the theme's handwritten logo for front-end browser and home-screen icons. */
+function kihiro_setup_site_icons() {
+    remove_action('wp_head', 'wp_site_icon', 99);
+    add_action('wp_head', 'kihiro_site_icons', 99);
+}
+add_action('after_setup_theme', 'kihiro_setup_site_icons');
+
+function kihiro_site_icons() {
+    $icons = array(
+        array('icon', '/assets/icons/favicon.ico', '16x16 32x32 48x48', 'image/x-icon'),
+        array('icon', '/assets/icons/favicon.svg', 'any', 'image/svg+xml'),
+        array('apple-touch-icon', '/assets/icons/apple-touch-icon.png', '180x180', 'image/png'),
+    );
+
+    foreach ($icons as $icon) {
+        $url = add_query_arg('ver', kihiro_asset_version($icon[1]), get_theme_file_uri($icon[1]));
+        printf(
+            '<link rel="%s" href="%s" sizes="%s" type="%s">' . "\n",
+            esc_attr($icon[0]),
+            esc_url($url),
+            esc_attr($icon[2]),
+            esc_attr($icon[3])
+        );
+    }
+}
