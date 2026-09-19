@@ -12,6 +12,13 @@ function kihiro_asset_version($relative_path) {
 function kihiro_enqueue_assets() {
     if (is_single()) {
         wp_enqueue_script(
+            'kihiro-article-toc',
+            get_theme_file_uri('/assets/js/article-toc.js'),
+            array(),
+            kihiro_asset_version('/assets/js/article-toc.js'),
+            true
+        );
+        wp_enqueue_script(
             'kihiro-code-copy',
             get_theme_file_uri('/assets/js/code-copy.js'),
             array(),
