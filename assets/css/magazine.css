@@ -79,6 +79,36 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .site-footer__bottom { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 32px; padding-top: 26px; border-top: 1px solid var(--mag-line); }
 .site-footer__logo { font-family: "Kihiro Comic Relief", "Kihiro Yomogi", sans-serif; font-size: 21px; font-weight: 700; color: var(--mag-ink); }
 .site-footer__top { margin-left: auto; padding-block: 10px; }
+.footer-social { padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid var(--mag-line); }
+.footer-social__heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px; margin-bottom: 24px; }
+.footer-social__heading h2 { margin: 0; font-size: 22px; color: var(--mag-ink); }
+.footer-social__heading p { margin: 0; font-size: 12px; }
+.footer-social__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.footer-social__card { display: flex; flex-direction: column; min-width: 0; padding: 20px; border: 1px solid var(--mag-line); border-radius: 8px; }
+.footer-social__card h3 { margin: 0; font-size: 19px; color: var(--mag-ink); }
+.footer-social__card h3 a { display: flex; justify-content: space-between; align-items: center; min-height: 44px; }
+.footer-social__card h3 span { color: var(--mag-accent); font-size: 14px; }
+.footer-social__label { margin: 0 0 16px; font-size: 11px; }
+.footer-social__posts { margin: 0 0 20px; padding: 0; list-style: none; }
+.footer-social__posts li + li { border-top: 1px solid var(--mag-line); }
+.footer-social__posts a { display: flex; flex-direction: column; gap: 6px; padding-block: 14px; }
+.footer-social__posts time { font-size: 11px; }
+.footer-social__posts span { font-size: 13px; line-height: 1.8; color: var(--mag-ink); overflow-wrap: anywhere; }
+.footer-social__card a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.footer-social__more { display: block; margin-top: auto; padding-top: 14px; min-height: 44px; font-size: 12px; color: var(--mag-accent); }
+.footer-social__empty { font-size: 13px; line-height: 1.8; }
+.footer-social__video { display: block; width: 100%; min-height: 200px; aspect-ratio: 16 / 9; border: 0; border-radius: 4px; margin-bottom: 20px; }
+.footer-social__repository { font-size: 11px; overflow-wrap: anywhere; }
+.footer-social__card--instagram { grid-column: span 2; }
+.footer-social__instagram { display: block; width: 100%; height: 440px; border: 0; margin-bottom: 16px; background: #fff; border-radius: 4px; }
+@media (max-width: 1199px) {
+  .footer-social__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .footer-social__grid { grid-template-columns: minmax(0, 1fr); }
+  .footer-social__card--instagram { grid-column: auto; }
+  .footer-social__heading h2 { font-size: 20px; }
+}
 /* Keep search, archives, calendar and article pages in the same editorial style. */
 .journal-app { grid-template-columns: 280px minmax(0, 1fr); gap: 48px; border: 0; box-shadow: none; min-height: 0; margin-top: 32px; }
 .journal-sidebar { padding: 24px 18px; background: #edf0e9; border: 1px solid #e1e6dd; border-radius: 10px; align-self: start; }
