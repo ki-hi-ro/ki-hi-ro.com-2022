@@ -10,6 +10,15 @@ function kihiro_asset_version($relative_path) {
 }
 
 function kihiro_enqueue_assets() {
+    if (is_single()) {
+        wp_enqueue_script(
+            'kihiro-code-copy',
+            get_theme_file_uri('/assets/js/code-copy.js'),
+            array(),
+            kihiro_asset_version('/assets/js/code-copy.js'),
+            true
+        );
+    }
     wp_enqueue_script(
         'kihiro-pagination',
         get_theme_file_uri('/assets/js/pagination.js'),
