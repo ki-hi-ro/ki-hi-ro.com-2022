@@ -1,19 +1,31 @@
 on:
   push:
     branches:
-      - main 
+      - main
+
 name: Build and Deploy
+
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v6
+
       - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@2.0.0
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          LOCAL_DIR: "./"
-          REMOTE_DIR: "/ki-hi-ro.com/public_html/ki-hi-ro.com-2022/wp-content/themes/ki-hi-ro.com-2022/"
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+
+          local-dir: ./
+          server-dir: /ki-hi-ro.com/public_html/ki-hi-ro.com-2022/wp-content/themes/ki-hi-ro.com-2022/
+
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.github/**
+            README.md
