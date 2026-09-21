@@ -1,0 +1,121 @@
+/* ==============================
+   Instagram
+   ============================== */
+
+.footer-social__card--instagram {
+  overflow: hidden;
+}
+
+
+/* プロフィール */
+
+.footer-social__instagram-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-top: 24px;
+  margin-bottom: 20px;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-social__instagram-profile:hover {
+  opacity: 0.8;
+}
+
+.footer-social__instagram-avatar {
+  width: 64px;
+  height: 64px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.footer-social__instagram-profile-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.footer-social__instagram-profile-text strong {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footer-social__instagram-profile-text span {
+  margin-top: 2px;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-social__instagram-profile-description {
+  color: #777;
+}
+
+
+/* Instagram 最新3枚 */
+
+.footer-social__instagram-feed {
+  position: relative;
+
+  width: 100%;
+
+  /*
+   * 正方形3枚を横並びにするので
+   * 横幅 : 高さ = 3 : 1
+   */
+  aspect-ratio: 3 / 1;
+
+  overflow: hidden;
+}
+
+.footer-social__instagram {
+  display: block;
+
+  width: 100%;
+  height: 700px;
+
+  border: 0;
+
+  /*
+   * Instagram公式プロフィール部分を
+   * 上方向へ隠す
+   */
+  transform: translateY(-155px);
+}
+
+
+/* スマホ */
+
+@media (max-width: 600px) {
+
+  .footer-social__instagram-profile {
+    gap: 12px;
+  }
+
+  .footer-social__instagram-avatar {
+    width: 56px;
+    height: 56px;
+  }
+
+  .footer-social__instagram-profile-text strong {
+    font-size: 14px;
+  }
+
+  .footer-social__instagram-profile-text span {
+    font-size: 13px;
+  }
+
+  .footer-social__instagram {
+    height: 600px;
+    transform: translateY(-150px);
+  }
+
+}

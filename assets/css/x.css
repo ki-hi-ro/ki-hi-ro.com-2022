@@ -1,0 +1,60 @@
+/* ==============================
+   X
+   ============================== */
+
+.footer-social__card--x .twitter-tweet {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin: 0 0 20px !important;
+}
+
+.footer-social__card--x iframe {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+.footer-social__x-feed {
+  margin-top: 24px;
+  margin-bottom: 20px;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+/*
+ * X側で生成されるiframeを
+ * カードいっぱいに広げる
+ */
+.footer-social__x-feed iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.footer-social__x-feed [hidden] {
+  display: none !important;
+}
+
+.footer-social__x-fallback {
+  padding: 20px;
+  border: 1px solid var(--mag-line, #ddd);
+  border-radius: 6px;
+}
+
+.footer-social__x-status {
+  margin: 12px 0 0;
+  color: var(--mag-muted, #666);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+
+/* スマホ */
+@media (max-width: 600px) {
+
+  .footer-social__card--x {
+    grid-column: span 1;
+  }
+
+}

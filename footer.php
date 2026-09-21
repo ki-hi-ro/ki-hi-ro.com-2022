@@ -4,24 +4,36 @@
 
   <nav class="site-footer__directory" aria-label="外部サイト・プロフィール">
 
-    <section class="site-footer__group" aria-labelledby="footer-writing">
 
-      <h2 id="footer-writing">ブログ・執筆</h2>
+    <section class="site-footer__group" aria-labelledby="footer-social">
+
+      <h2 id="footer-social">SNS・ブログ</h2>
 
       <ul>
         <li>
-          <a href="https://note.com/khiro_maru"
-             target="_blank"
-             rel="noopener noreferrer">
-            note
+          <a href="https://x.com/2021_shibata"
+          target="_blank"
+          rel="noopener noreferrer">
+          X
+          <span class="site-footer__link-arrow" aria-hidden="true">↗&#xfe0e;</span>
           </a>
         </li>
 
         <li>
-          <a href="https://zenn.dev/khiro_maru"
-             target="_blank"
-             rel="noopener noreferrer">
-            Zenn
+          <a href="https://www.youtube.com/@khiro9999"
+          target="_blank"
+          rel="noopener noreferrer">
+          YouTube
+          <span class="site-footer__link-arrow" aria-hidden="true">↗&#xfe0e;</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.instagram.com/hiroki.hiroki2026/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Instagram
+          <span class="site-footer__link-arrow" aria-hidden="true">↗&#xfe0e;</span>
           </a>
         </li>
 
@@ -30,64 +42,7 @@
              target="_blank"
              rel="noopener noreferrer">
             はてなブログ
-          </a>
-        </li>
-      </ul>
-
-    </section>
-
-    <section class="site-footer__group" aria-labelledby="footer-development">
-
-      <h2 id="footer-development">開発・学習</h2>
-
-      <ul>
-        <li>
-          <a href="https://freelance-blog.onrender.com/"
-             target="_blank"
-             rel="noopener noreferrer">
-            My Portfolio
-          </a>
-        </li>
-
-        <li>
-          <a href="https://github.com/ki-hi-ro"
-             target="_blank"
-             rel="noopener noreferrer">
-            GitHub
-          </a>
-        </li>
-
-        <!--
-        <li>
-          <a href="https://paiza.jp/skill_checks/retry_results"
-             target="_blank"
-             rel="noopener noreferrer">
-            paiza スキルチェック
-          </a>
-        </li>
-        -->
-      </ul>
-
-    </section>
-
-    <section class="site-footer__group" aria-labelledby="footer-social">
-
-      <h2 id="footer-social">SNS・動画</h2>
-
-      <ul>
-        <li>
-          <a href="https://www.instagram.com/hiroki.hiroki2026/"
-             target="_blank"
-             rel="noopener noreferrer">
-            Instagram
-          </a>
-        </li>
-
-        <li>
-          <a href="https://www.youtube.com/@khiro9999"
-             target="_blank"
-             rel="noopener noreferrer">
-            YouTube
+          <span class="site-footer__link-arrow" aria-hidden="true">↗&#xfe0e;</span>
           </a>
         </li>
       </ul>
@@ -96,14 +51,24 @@
 
     <section class="site-footer__group" aria-labelledby="footer-websites">
 
-      <h2 id="footer-websites">Webサイト</h2>
+      <h2 id="footer-websites">制作したWebサイト</h2>
 
       <ul>
+        <li>
+          <a href="https://freelance-blog.onrender.com/"
+             target="_blank"
+             rel="noopener noreferrer">
+            My Portfolio
+          <span class="site-footer__link-arrow" aria-hidden="true">↗&#xfe0e;</span>
+          </a>
+        </li>
+
         <li>
           <a href="https://tech-gems-digest.lovable.app/"
              target="_blank"
              rel="noopener noreferrer">
             技術ブログ
+          <span class="site-footer__link-arrow" aria-hidden="true">↗&#xfe0e;</span>
           </a>
         </li>
 
@@ -112,6 +77,7 @@
              target="_blank"
              rel="noopener noreferrer">
             家事DX
+          <span class="site-footer__link-arrow" aria-hidden="true">↗&#xfe0e;</span>
           </a>
         </li>
 
@@ -120,6 +86,7 @@
              target="_blank"
              rel="noopener noreferrer">
             ほぼMUJI
+          <span class="site-footer__link-arrow" aria-hidden="true">↗&#xfe0e;</span>
           </a>
         </li>
       </ul>
@@ -146,6 +113,11 @@
   </div>
 
 </footer>
+
+<a class="floating-page-top" href="#page-top" aria-label="ページの先頭へ戻る">
+  <span aria-hidden="true">↑</span>
+  <span>ページトップ</span>
+</a>
 
 <?php wp_footer(); ?>
 

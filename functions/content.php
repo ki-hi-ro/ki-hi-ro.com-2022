@@ -87,7 +87,12 @@ function kihiro_latest_post_date() {
 }
 
 function kihiro_selected_journal_date() {
-    $requested_date = kihiro_parse_ymd(kihiro_get_request_value('journal_date'));
+    $requested_value = kihiro_get_request_value('journal_date');
+    // Month selection opens the first day; existing daily links keep their date.
+    if (preg_match('/^\d{4}-\d{2}$/', $requested_value)) {
+        $requested_value .= '-01';
+    }
+    $requested_date = kihiro_parse_ymd($requested_value);
 
     if ($requested_date instanceof DateTimeImmutable) {
         return $requested_date;
@@ -176,10 +181,11 @@ function kihiro_configure_main_query($query) {
     }
 
     if ($query->is_home()) {
-        $query->set('posts_per_page', kihiro_home_posts_per_page());
+        $is_landing = !kihiro_is_all_articles_view() && '' === kihiro_get_request_value('journal_date');
+        $query->set('posts_per_page', kihiro_is_all_articles_view() ? -1 : ($is_landing ? 3 : kihiro_home_posts_per_page()));
         $query->set('orderby', 'date');
         $query->set('order', 'DESC');
-        $query->set('no_found_rows', false);
+        $query->set('no_found_rows', kihiro_is_all_articles_view());
         $query->set('ignore_sticky_posts', true);
     } elseif ($query->is_search() || $query->is_archive()) {
         $query->set('posts_per_page', 10);

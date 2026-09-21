@@ -5,20 +5,25 @@
   <?php if (!is_paged()) : ?>
     <section class="magazine-hero" aria-labelledby="magazine-heading">
       <figure class="magazine-hero__photo">
-        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/magazine-cover.jpg')); ?>" width="4032" height="3024" alt="メタモンやカビゴンたちが描かれた、紫色のポケモンの装飾" fetchpriority="high" decoding="async">
+        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/hiroki-shibata.jpg')); ?>" width="4032" height="3024" alt="柴田浩貴のプロフィール写真" fetchpriority="high" decoding="async">
       </figure>
       <div class="magazine-hero__copy">
-        <p class="magazine-eyebrow">DEVELOPMENT / THOUGHTS / LIFE</p>
-        <h1 id="magazine-heading">個人の視点で、<br>書き残す。</h1>
-        <p class="magazine-hero__lead">WEB開発、AI、日常で考えたこと。<br>実践したことと、そこから得た自分の考えを記録します。</p>
-        <a class="magazine-text-link" href="#latest-stories">最近の記事を読む <span aria-hidden="true">↗︎</span></a>
+        <p class="magazine-eyebrow">HIROKI SHIBATA / PERSONAL BLOG</p>
+        <h1 id="magazine-heading"><span class="magazine-hero__role">自律型WEBクリエイター</span>柴田浩貴のブログ</h1>
+        <p class="magazine-hero__statement">自分で考え、つくり、道をひらく。</p>
+        <p class="magazine-hero__lead">WEB制作とAIの実践、日々の気づき。<br>試行錯誤しながら、自分の働き方と暮らしをつくる記録です。</p>
+        <div class="magazine-hero__actions">
+          <a class="magazine-text-link" href="#home-story">Storyを読む <span aria-hidden="true">→</span></a>
+          <a class="magazine-text-link" href="#latest-stories">最近の記事 <span aria-hidden="true">↓</span></a>
+        </div>
       </div>
     </section>
+    <?php get_template_part('template-parts/index/home-story'); ?>
   <?php endif; ?>
 
   <section id="latest-stories" class="magazine-stories" aria-labelledby="latest-heading">
     <div class="magazine-section-heading">
-      <div><p class="magazine-eyebrow">LATEST STORIES</p><?php $latest_heading_tag = is_paged() ? 'h1' : 'h2'; ?><<?php echo $latest_heading_tag; ?> id="latest-heading">最近の記事<?php if (is_paged()) : ?> <span class="magazine-page-label">/ <?php echo esc_html((string) get_query_var('paged')); ?>ページ目</span><?php endif; ?></<?php echo $latest_heading_tag; ?>></div>
+      <div><p class="magazine-eyebrow">LATEST POSTS</p><?php $latest_heading_tag = is_paged() ? 'h1' : 'h2'; ?><<?php echo $latest_heading_tag; ?> id="latest-heading">最近の記事<?php if (is_paged()) : ?> <span class="magazine-page-label">/ <?php echo esc_html((string) get_query_var('paged')); ?>ページ目</span><?php endif; ?></<?php echo $latest_heading_tag; ?>></div>
       <a class="magazine-text-link" href="<?php echo esc_url(kihiro_all_articles_url()); ?>">すべての記事 <span aria-hidden="true">↗︎</span></a>
     </div>
     <div class="magazine-grid">
@@ -30,7 +35,9 @@
         <p class="journal-empty">まだ記事がありません。</p>
       <?php endif; ?>
     </div>
-    <?php the_posts_pagination(array('mid_size' => 1, 'prev_text' => '前へ', 'next_text' => '次へ')); ?>
+    <?php if (is_paged()) : ?>
+      <?php the_posts_pagination(array('mid_size' => 1, 'prev_text' => '前へ', 'next_text' => '次へ')); ?>
+    <?php endif; ?>
   </section>
   <a class="magazine-archive-note" href="<?php echo esc_url(kihiro_journal_date_url(kihiro_latest_post_date())); ?>" aria-labelledby="archive-heading">
     <span class="magazine-archive-note__icon" aria-hidden="true">

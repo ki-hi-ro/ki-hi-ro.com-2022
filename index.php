@@ -1,6 +1,12 @@
 <?php get_header(); ?>
 
 <?php
+if (is_home() && kihiro_is_all_articles_view()) {
+    get_template_part('template-parts/index/post-index');
+    get_footer();
+    return;
+}
+
 if (is_home() && !kihiro_is_all_articles_view() && '' === kihiro_get_request_value('journal_date')) {
     get_template_part('template-parts/index/magazine');
     get_footer();
@@ -24,6 +30,14 @@ $day_posts      = kihiro_posts_for_journal_date($selected_ymd);
       <h2 class="journal-month__title"><?php echo esc_html($selected_date->format('Y年n月')); ?></h2>
       <a class="journal-month__nav" href="<?php echo esc_url(kihiro_journal_date_url($next_month->format('Y-m-01'))); ?>" aria-label="次の月へ">&rsaquo;</a>
     </div>
+
+    <form class="journal-month-jump" action="<?php echo esc_url(home_url('/')); ?>" method="get">
+      <label for="journal-month-select">年月を選んで移動</label>
+      <div class="journal-month-jump__controls">
+        <input type="month" id="journal-month-select" name="journal_date" value="<?php echo esc_attr($selected_date->format('Y-m')); ?>" pattern="[0-9]{4}-[0-9]{2}" placeholder="2026-06" required aria-label="移動先の年月（例：2026-06）">
+        <button type="submit">移動</button>
+      </div>
+    </form>
 
     <div class="journal-calendar">
       <div class="journal-calendar__week">月</div>

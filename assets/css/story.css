@@ -1,0 +1,55 @@
+/* Editorial pages: scoped to Story so the journal and home keep their layout. */
+.story-page { width: min(100%, 980px); margin: 0 auto; padding: 64px 0 32px; color: var(--mag-ink); }
+.story-hero { max-width: 780px; padding: 12px 0 48px; }
+.story-back { display: inline-block; margin-bottom: 48px; padding: 10px 0; font-size: 13px; color: var(--mag-accent); }
+.story-eyebrow { margin: 0 0 20px; font-size: 12px; letter-spacing: .16em; color: var(--mag-accent); }
+.story-hero h1 { margin: 0 0 28px; max-width: 20em; font-size: clamp(28px, 3.5vw, 44px); font-weight: 600; line-height: 1.65; letter-spacing: .025em; overflow-wrap: anywhere; }
+.story-hero h1 > span { display: block; }
+.story-period { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; font-size: 13px; color: var(--mag-muted); }
+.story-body, .story-intro { font-size: 17px; line-height: 2.1; overflow-wrap: anywhere; }
+.story-body p, .story-intro p { margin: 0 0 24px; }
+.story-intro { max-width: 640px; }
+.story-body > .story-intro { margin: 0 0 72px; padding: 8px 0 40px; }
+.story-chapters-nav { max-width: 760px; margin: 0 0 96px; padding: 28px 0; border-block: 1px solid var(--mag-line); }
+.story-chapters-nav ol { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 0; padding: 0; list-style: none; }
+.story-chapters-nav a { display: inline-block; padding: 8px 0; font-size: 13px; }
+.story-page a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.story-chapter { position: relative; max-width: 760px; margin: 0; padding: 0 0 88px 48px; border-left: 1px solid #a1aaa4; scroll-margin-top: 48px; }
+.story-chapter::before { position: absolute; top: 9px; left: -4px; width: 7px; height: 7px; border-radius: 50%; background: var(--mag-accent); content: ''; }
+.story-chapter .story-chapter__meta { margin: 0 0 12px; font-size: 12px; color: var(--mag-accent); letter-spacing: .05em; }
+.story-chapter h2 { margin: 0 0 32px; font-size: clamp(24px, 3vw, 34px); line-height: 1.6; font-weight: 600; }
+.story-chapter p { max-width: 620px; }
+.story-related { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--mag-line); }
+.story-related h3 { margin: 0 0 12px; font-size: 12px; font-weight: 500; letter-spacing: .1em; color: var(--mag-accent); }
+.story-related ul { list-style: none; padding: 0; margin: 0; }
+.story-related a { display: block; padding: 12px 0; font-size: 14px; line-height: 1.8; }
+.story-ending { max-width: 680px; padding: 64px 0 40px; border-top: 1px solid var(--mag-line); }
+.story-ending h2 { font-size: clamp(24px, 3vw, 32px); margin: 0 0 40px; line-height: 1.8; }
+.story-end-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; max-width: 760px; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--mag-line); font-size: 14px; }
+.story-end-nav a { padding: 12px 0; }
+.story-index__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+.story-card { padding: 32px 0; border-top: 1px solid #a1aaa4; }
+.story-card h2 { font-size: 27px; line-height: 1.8; margin: 0 0 20px; }
+.story-card > p:not([class]) { max-width: 34em; margin: 24px 0; font-size: 15px; line-height: 2; }
+.story-read { display: inline-flex; gap: 24px; padding: 12px 0; border-bottom: 1px solid var(--mag-line); font-size: 13px; }
+@media (max-width: 640px) {
+  .story-page { padding-top: 28px; }
+  .story-hero { padding-bottom: 28px; }
+  .story-back { margin-bottom: 28px; }
+  .story-body, .story-intro { font-size: 16px; }
+  .story-body > .story-intro { margin-bottom: 32px; }
+  .story-chapters-nav { margin-bottom: 56px; }
+  .story-chapters-nav ol { gap: 8px 20px; }
+  .story-chapter { padding: 0 0 60px 22px; }
+  .story-chapter h2 { margin-bottom: 24px; }
+  .story-ending { padding-top: 40px; }
+  .story-index__list { grid-template-columns: minmax(0, 1fr); }
+}
+
+.story-body .story-editorial-note { font-size: 13px; line-height: 1.9; color: var(--mag-muted); }
+.story-chapter .story-event__heading { margin: 40px 0 18px; font-size: 19px; font-weight: 600; line-height: 1.9; }
+.story-chapter .story-quote { margin: 36px 0; padding: 20px 24px; border-left: 3px solid var(--mag-accent); background: rgba(100, 120, 110, .05); }
+.story-quote p { margin-bottom: 16px; }
+.story-quote cite { display: block; font-size: 13px; line-height: 1.9; font-style: normal; }
+.story-quote a { text-decoration: underline; text-underline-offset: 3px; }
+.story-related time { display: block; color: var(--mag-muted); font-size: 12px; }
