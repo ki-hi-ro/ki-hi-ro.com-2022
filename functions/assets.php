@@ -18,6 +18,7 @@ function kihiro_enqueue_assets() {
         true
     );
     if (is_single()) {
+        wp_enqueue_script('kihiro-article-like', get_theme_file_uri('/assets/js/article-like.js'), array(), kihiro_asset_version('/assets/js/article-like.js'), true);
         wp_enqueue_script(
             'kihiro-article-toc',
             get_theme_file_uri('/assets/js/article-toc.js'),

@@ -348,3 +348,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 @media print {
   .floating-page-top { display: none; }
 }
+
+.article-like { margin: 48px 0; padding: 28px 0; text-align: center; border-block: 1px solid var(--mag-line); }
+.article-like > p { font-size: 14px; line-height: 1.8; }
+.article-like__button { display: inline-flex; gap: 12px; align-items: center; justify-content: center; min-height: 48px; padding: 10px 24px; border: 1px solid var(--mag-accent); border-radius: 999px; background: var(--mag-paper); color: var(--mag-accent); font: inherit; cursor: pointer; }
+.article-like__button > span:first-child { font-size: 24px; line-height: 1; }
+.article-like__button[aria-pressed="true"] { background: #edf0e9; }
+.article-like__button:disabled { cursor: default; }
+.article-like__button:hover:not(:disabled) { background: #edf0e9; }
+.article-like .article-like__status { min-height: 1.8em; margin: 12px 0 0; color: var(--mag-muted); font-size: 12px; }
