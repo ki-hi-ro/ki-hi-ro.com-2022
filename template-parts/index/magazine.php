@@ -5,7 +5,21 @@
   <?php if (!is_paged()) : ?>
     <section class="magazine-hero" aria-labelledby="magazine-heading">
       <figure class="magazine-hero__photo">
-        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/hiroki-shibata.jpg')); ?>" width="4032" height="3024" alt="柴田浩貴のプロフィール写真" fetchpriority="high" decoding="async">
+        <img
+          src="<?php
+            $profile_image = '/assets/images/hiroki-shibata.jpg';
+            echo esc_url(
+              get_theme_file_uri($profile_image)
+              . '?v='
+              . filemtime(get_theme_file_path($profile_image))
+            );
+          ?>"
+          width="4032"
+          height="3024"
+          alt="柴田浩貴のプロフィール写真"
+          fetchpriority="high"
+          decoding="async"
+        >
       </figure>
       <div class="magazine-hero__copy">
         <p class="magazine-eyebrow">HIROKI SHIBATA / PERSONAL BLOG</p>
