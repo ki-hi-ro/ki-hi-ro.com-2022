@@ -7,7 +7,7 @@
       $post_tags       = get_the_tag_list('', ', ');
       ?>
       <article class="journal-panel journal-panel--single db-single">
-        <p class="db-back-link"><a href="<?php echo esc_url(kihiro_journal_date_url(get_the_date('Y-m-d'))); ?>">&lsaquo; 一覧へ戻る</a></p>
+        <p class="db-back-link"><a href="<?php echo esc_url(kihiro_all_articles_url()); ?>">&lsaquo; 一覧へ戻る</a></p>
 
         <p class="journal-single-date"><?php echo esc_html(kihiro_format_journal_date(new DateTimeImmutable(get_the_date('Y-m-d'), wp_timezone()))); ?> / <?php echo esc_html(get_the_date('H:i')); ?></p>
         <h1><?php echo esc_html(get_the_title()); ?></h1>
@@ -30,6 +30,7 @@
         </div>
 
         <?php get_template_part('template-parts/article-like'); ?>
+        <?php get_template_part('template-parts/related-posts'); ?>
 
         <?php
         $previous_post = get_previous_post();

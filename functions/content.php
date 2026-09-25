@@ -39,7 +39,7 @@ function kihiro_home_posts_per_page() {
 }
 
 function kihiro_get_request_value($key) {
-    if (!isset($_GET[$key])) {
+    if (!isset($_GET[$key]) || !is_scalar($_GET[$key])) {
         return '';
     }
 
@@ -187,6 +187,13 @@ function kihiro_configure_main_query($query) {
         $query->set('order', 'DESC');
         $query->set('no_found_rows', kihiro_is_all_articles_view());
         $query->set('ignore_sticky_posts', true);
+        if (kihiro_is_all_articles_view() && kihiro_selected_article_tag()) {
+            $query->set('tax_query', array(array(
+                'taxonomy' => 'post_tag',
+                'field' => 'term_id',
+                'terms' => kihiro_selected_article_tag(),
+            )));
+        }
     } elseif ($query->is_search() || $query->is_archive()) {
         $query->set('posts_per_page', 10);
     } else {
@@ -224,3 +231,27 @@ function kihiro_adjacent_post_where($where) {
 }
 add_filter('get_previous_post_where', 'kihiro_adjacent_post_where');
 add_filter('get_next_post_where', 'kihiro_adjacent_post_where');
+
+/** Keep tag filtering on the complete writing archive. */
+function kihiro_selected_article_tag() {
+    $value = kihiro_get_request_value('article_tag');
+    return ctype_digit($value) ? absint($value) : 0;
+}
+
+/** Use the featured image, the first content image, then a local cover. */
+function kihiro_article_thumbnail($post_id) {
+    if (has_post_thumbnail($post_id)) {
+        return get_the_post_thumbnail($post_id, 'medium', array('alt' => '', 'loading' => 'lazy', 'decoding' => 'async'));
+    }
+    $entry = get_post($post_id);
+    $url = '';
+    if ($entry && !post_password_required($entry)) {
+        $html = new WP_HTML_Tag_Processor($entry->post_content);
+        while ($html->next_tag('IMG')) {
+            $url = esc_url($html->get_attribute('src'));
+            if ($url) break;
+        }
+    }
+    if (!$url) $url = get_theme_file_uri('/assets/images/article-placeholder.svg');
+    return '<img src="' . esc_url($url) . '" alt="" width="320" height="200" loading="lazy" decoding="async">';
+}

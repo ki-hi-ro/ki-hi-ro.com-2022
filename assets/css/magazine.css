@@ -357,3 +357,36 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .article-like__button:disabled { cursor: default; }
 .article-like__button:hover:not(:disabled) { background: #edf0e9; }
 .article-like .article-like__status { min-height: 1.8em; margin: 12px 0 0; color: var(--mag-muted); font-size: 12px; }
+
+/* Align the search field and its action with the header's right edge. */
+.site-header__inner > .search-form { flex: 0 0 200px; width: 200px; margin-left: 0; gap: 0; border-bottom: 1px solid var(--mag-line); }
+.site-header__inner .search-form__input { order: 0; flex: 1; min-width: 0; width: 0; padding: 10px 8px; border: 0; }
+.site-header__inner .search-form__btn { order: 1; flex: 0 0 40px; }
+.site-header__inner .search-form:focus-within { border-color: var(--mag-accent); }
+.article-tag-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 28px; font-size: 14px; }
+.article-tag-filter select { min-width: 180px; max-width: 100%; padding: 10px 32px 10px 12px; border: 1px solid var(--mag-line); border-radius: 4px; background: #fff; color: var(--mag-ink); font: inherit; }
+.article-tag-filter button { padding: 11px 20px; border: 0; border-radius: 4px; background: var(--mag-accent); color: #fff; font: inherit; cursor: pointer; }
+.article-tag-filter > a { text-decoration: underline; text-underline-offset: 4px; }
+.article-timeline__year li a { grid-template-columns: 112px 95px minmax(0, 1fr); align-items: center; }
+.article-timeline__thumbnail { display: block; }
+.article-timeline__thumbnail img { display: block; width: 112px; height: 70px; object-fit: cover; border-radius: 4px; }
+.related-posts { padding-block: 32px; margin-top: 32px; border-top: 1px solid var(--mag-line); }
+.related-posts__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.related-posts__card { min-width: 0; }
+.related-posts__image img { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; border-radius: 4px; margin-bottom: 12px; }
+.related-posts__card time { font-size: 12px; color: var(--mag-muted); }
+.related-posts__card h3 { font-size: 16px; line-height: 1.7; margin-top: 8px; overflow-wrap: anywhere; }
+.related-posts__card:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 640px) {
+  .site-header__inner > .search-form { flex-basis: 132px; width: 132px; margin-left: auto; }
+  .article-timeline__year li a { grid-template-columns: 88px minmax(0, 1fr); gap: 4px 14px; }
+  .article-timeline__thumbnail { grid-row: 1 / 3; }
+  .article-timeline__thumbnail img { width: 88px; height: 64px; }
+  .article-timeline__year li a > time, .article-timeline__year li a > span:last-child { grid-column: 2; }
+  .article-tag-filter label { width: 100%; }
+  .article-tag-filter select { flex: 1; min-width: 0; }
+  .related-posts__grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 380px) {
+  .site-header__inner > .search-form { flex-basis: 100px; width: 100px; }
+}

@@ -4,7 +4,7 @@ $source = $args['source'];
 $items = kihiro_social_cached_items($key);
 ?>
 <section class="footer-social__card" aria-labelledby="footer-feed-<?php echo esc_attr($key); ?>">
-  <h3 id="footer-feed-<?php echo esc_attr($key); ?>"><a href="<?php echo esc_url($source['url']); ?>"><?php echo esc_html($source['name']); ?> <span aria-hidden="true">↗</span></a></h3>
+  <h3 id="footer-feed-<?php echo esc_attr($key); ?>"><a href="<?php echo esc_url($source['url']); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html($source['name']); ?> <span aria-hidden="true">↗</span></a></h3>
   <p class="footer-social__label"><?php echo esc_html($source['label']); ?></p>
   <?php if ($items) : ?>
     <ul class="footer-social__posts">
@@ -25,5 +25,5 @@ $items = kihiro_social_cached_items($key);
   <?php else : ?>
     <p class="footer-social__empty">投稿は<?php echo esc_html($source['name']); ?>のプロフィールからご覧いただけます。</p>
   <?php endif; ?>
-  <a class="footer-social__more" href="<?php echo esc_url($source['url']); ?>"><?php echo esc_html($source['name']); ?>ですべて見る ↗</a>
+  <a class="footer-social__more" href="<?php echo esc_url($source['url']); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html($source['name']); ?>ですべて見る ↗</a>
 </section>

@@ -11,50 +11,11 @@
     $social_sources = kihiro_social_sources();
     ?>
 
-    <!-- Note -->
-    <?php if (isset($social_sources['note'])) : ?>
-      <?php
-      get_template_part(
-        'template-parts/footer-social-feed',
-        null,
-        array(
-          'key'    => 'note',
-          'source' => $social_sources['note'],
-        )
-      );
-      ?>
-    <?php endif; ?>
-
-
-    <!-- Zenn -->
-    <?php if (isset($social_sources['zenn'])) : ?>
-      <?php
-      get_template_part(
-        'template-parts/footer-social-feed',
-        null,
-        array(
-          'key'    => 'zenn',
-          'source' => $social_sources['zenn'],
-        )
-      );
-      ?>
-    <?php endif; ?>
-
-
-    <!-- GitHub -->
-    <?php if (isset($social_sources['github_commits'])) : ?>
-      <?php
-      get_template_part(
-        'template-parts/footer-social-feed',
-        null,
-        array(
-          'key'    => 'github_commits',
-          'source' => $social_sources['github_commits'],
-        )
-      );
-      ?>
-    <?php endif; ?>
-
+    <?php foreach (array('github_commits', 'zenn', 'note') as $source_key) : ?>
+      <?php if (isset($social_sources[$source_key])) {
+          get_template_part('template-parts/footer-social-feed', null, array('key' => $source_key, 'source' => $social_sources[$source_key]));
+      } ?>
+    <?php endforeach; ?>
 
     <!-- 下段（X・YouTube・Instagram）は一時非表示
     X

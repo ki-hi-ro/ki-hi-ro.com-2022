@@ -64,15 +64,6 @@
         </li>
 
         <li>
-          <a href="https://tech-gems-digest.lovable.app/"
-             target="_blank"
-             rel="noopener noreferrer">
-            技術ブログ
-          <span class="site-footer__link-arrow" aria-hidden="true">↗&#xfe0e;</span>
-          </a>
-        </li>
-
-        <li>
           <a href="https://kaji-dx-ki-hi-ro.hiroki-hiroki.chatgpt.site"
              target="_blank"
              rel="noopener noreferrer">
@@ -80,6 +71,21 @@
           <span class="site-footer__link-arrow" aria-hidden="true">↗&#xfe0e;</span>
           </a>
         </li>
+
+        <li>
+          <a href="https://tech-gems-digest.lovable.app/"
+             target="_blank"
+             rel="noopener noreferrer">
+            技術ブログ
+          <span class="site-footer__link-arrow" aria-hidden="true">↗&#xfe0e;</span>
+          </a>
+        </li>
+        
+        <li><a href="https://ki-hi-ro.github.io/yokohama-live-trip/" target="_blank" rel="noopener noreferrer">Yokohama Live Trip <span class="site-footer__link-arrow" aria-hidden="true">↗&#xfe0e;</span></a></li>
+        <li><a href="https://euphoria-random.hiroki-hiroki.chatgpt.site/" target="_blank" rel="noopener noreferrer">Euphoria Random <span class="site-footer__link-arrow" aria-hidden="true">↗&#xfe0e;</span></a></li>
+
+
+
 
         <li>
           <a href="https://ki-hi-ro.com/muji/"

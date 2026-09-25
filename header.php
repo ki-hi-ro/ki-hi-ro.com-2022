@@ -14,10 +14,6 @@
     <div class="site-header__inner">
       <a class="site-title" href="<?php echo esc_url(home_url('/')); ?>">ki-hi-ro.com</a>
       <nav class="site-header__nav" aria-label="メインメニュー">
-        <?php $story_page = get_page_by_path('story', OBJECT, 'page'); ?>
-        <?php if ($story_page && $story_page->post_status === 'publish') : ?>
-          <a href="<?php echo esc_url(get_permalink($story_page)); ?>"<?php echo kihiro_is_story() ? ' aria-current="' . (is_page($story_page->ID) ? 'page' : 'true') . '"' : ''; ?>>Story</a>
-        <?php endif; ?>
         <a href="<?php echo esc_url(kihiro_all_articles_url()); ?>">記事一覧</a>
         <a href="<?php echo esc_url(kihiro_journal_date_url(kihiro_latest_post_date())); ?>">日付で探す</a>
       </nav>

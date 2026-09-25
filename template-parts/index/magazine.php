@@ -25,14 +25,12 @@
         <p class="magazine-eyebrow">HIROKI SHIBATA / PERSONAL BLOG</p>
         <h1 id="magazine-heading"><span class="magazine-hero__role">自律型WEBクリエイター</span>柴田浩貴のブログ</h1>
         <p class="magazine-hero__statement">自分で考え、つくり、道をひらく。</p>
-        <p class="magazine-hero__lead">WEB制作とAIの実践、日々の気づき。<br>試行錯誤しながら、自分の働き方と暮らしをつくる記録です。</p>
+        <p class="magazine-hero__lead">WEB開発とAIの実践、日々の気づき。<br>試行錯誤しながら、自分の働き方と暮らしをつくる記録です。</p>
         <div class="magazine-hero__actions">
-          <a class="magazine-text-link" href="#home-story">Storyを読む <span aria-hidden="true">→</span></a>
           <a class="magazine-text-link" href="#latest-stories">最近の記事 <span aria-hidden="true">↓</span></a>
         </div>
       </div>
     </section>
-    <?php get_template_part('template-parts/index/home-story'); ?>
   <?php endif; ?>
 
   <section id="latest-stories" class="magazine-stories" aria-labelledby="latest-heading">
