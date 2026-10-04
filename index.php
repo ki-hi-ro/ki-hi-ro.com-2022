@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
 <?php
-if (is_home() && kihiro_is_all_articles_view()) {
-    get_template_part('template-parts/index/post-index');
+if (is_search()) {
+    get_template_part('template-parts/index/search-results');
     get_footer();
     return;
 }
 
-if (is_home() && !kihiro_is_all_articles_view() && '' === kihiro_get_request_value('journal_date')) {
-    get_template_part('template-parts/index/magazine');
+if (is_home() && kihiro_is_all_articles_view()) {
+    get_template_part('template-parts/index/post-index');
     get_footer();
     return;
 }

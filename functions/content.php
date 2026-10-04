@@ -102,7 +102,8 @@ function kihiro_selected_journal_date() {
 }
 
 function kihiro_is_all_articles_view() {
-    return 'all' === kihiro_get_request_value('view');
+    return 'all' === kihiro_get_request_value('view')
+        || ('' === kihiro_get_request_value('view') && '' === kihiro_get_request_value('journal_date'));
 }
 
 function kihiro_journal_date_url($date) {
@@ -181,8 +182,7 @@ function kihiro_configure_main_query($query) {
     }
 
     if ($query->is_home()) {
-        $is_landing = !kihiro_is_all_articles_view() && '' === kihiro_get_request_value('journal_date');
-        $query->set('posts_per_page', kihiro_is_all_articles_view() ? -1 : ($is_landing ? 3 : kihiro_home_posts_per_page()));
+        $query->set('posts_per_page', kihiro_is_all_articles_view() ? -1 : kihiro_home_posts_per_page());
         $query->set('orderby', 'date');
         $query->set('order', 'DESC');
         $query->set('no_found_rows', kihiro_is_all_articles_view());
@@ -196,6 +196,9 @@ function kihiro_configure_main_query($query) {
         }
     } elseif ($query->is_search() || $query->is_archive()) {
         $query->set('posts_per_page', 10);
+        if ($query->is_search()) {
+            $query->set('post_type', 'post');
+        }
     } else {
         return;
     }

@@ -10,6 +10,7 @@ $kihiro_function_files = array(
     'setup.php',
     'assets.php',
     'content.php',
+    'contact.php',
     'likes.php',
     'story.php',
     'social-feeds.php',
