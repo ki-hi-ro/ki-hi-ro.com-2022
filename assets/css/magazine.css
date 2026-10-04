@@ -317,6 +317,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .article-timeline__year > header { align-self: start; position: sticky; top: 24px; }
 .article-timeline__year h2 { font-size: 32px; margin: 0; font-weight: 500; }
 .article-timeline__year h2 span { font-size: 14px; margin-left: 5px; }
+.article-timeline__year h2#year-heading-0 { white-space: nowrap; }
 .article-timeline__year header p { font-size: 12px; color: var(--mag-muted); }
 .article-timeline__year ol { list-style: none; padding: 0 0 0 28px; margin: 0; border-left: 1px solid #b4c0b8; }
 .article-timeline__year li { position: relative; border-bottom: 1px solid var(--mag-line); }
