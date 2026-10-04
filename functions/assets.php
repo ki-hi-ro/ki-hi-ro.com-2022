@@ -10,6 +10,7 @@ function kihiro_asset_version($relative_path) {
 }
 
 function kihiro_enqueue_assets() {
+    wp_enqueue_script('kihiro-page-scroll', get_theme_file_uri('/assets/js/page-scroll.js'), array(), kihiro_asset_version('/assets/js/page-scroll.js'), true);
     wp_enqueue_script(
         'kihiro-x-feed',
         get_theme_file_uri('/assets/js/x-feed.js'),

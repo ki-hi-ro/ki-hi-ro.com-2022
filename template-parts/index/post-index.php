@@ -16,7 +16,7 @@ $peak = $years ? max(array_map('count', $years)) : 1;
 <main id="main-content" class="article-timeline">
   <?php if ($is_article_search) : ?>
     <figure class="article-timeline__main-view">
-      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/search-main-view.jpg')); ?>" width="4032" height="3024" alt="川と緑の岸辺、遠くの山並みの風景" fetchpriority="high" decoding="async">
+      <img src="<?php echo esc_url(add_query_arg('ver', kihiro_asset_version('/assets/images/search-main-view.jpg'), get_theme_file_uri('/assets/images/search-main-view.jpg'))); ?>" width="4032" height="3024" alt="鳥取市庁の石碑と緑の芝生、建物の風景" fetchpriority="high" decoding="async">
     </figure>
     <header class="article-timeline__header">
       <div>

@@ -1,4 +1,4 @@
-<footer class="site-footer">
+<footer id="page-bottom" class="site-footer">
 
   <div class="site-footer__bottom">
 
@@ -17,9 +17,8 @@
 
 </footer>
 
-<a class="floating-page-top" href="#page-top" aria-label="ページの先頭へ戻る">
-  <span aria-hidden="true">↑</span>
-  <span>ページトップ</span>
+<a class="floating-page-top" href="#page-bottom" aria-label="ページの最後へ移動">
+  <span aria-hidden="true">↓</span>
 </a>
 
 <?php wp_footer(); ?>
