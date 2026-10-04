@@ -62,7 +62,7 @@ $peak = $years ? max(array_map('count', $years)) : 1;
   <?php endif; ?>
   <?php foreach ($years as $year => $entries) : ?>
     <section class="article-timeline__year" id="year-<?php echo esc_attr($year); ?>" aria-labelledby="year-heading-<?php echo esc_attr($year); ?>">
-      <header><h2 id="year-heading-<?php echo esc_attr($year); ?>"><?php echo $year ? esc_html($year) . '<span>年</span>' : '2021<span>年以前</span>'; ?></h2><p><?php echo esc_html(number_format_i18n(count($entries))); ?><?php echo $is_article_search ? '記事を表示' : '記事'; ?></p></header>
+      <header><h2 id="year-heading-<?php echo esc_attr($year); ?>"><?php echo $year ? esc_html($year) . '<span>年</span>' : '2021<span>年より前</span>'; ?></h2><p><?php echo esc_html(number_format_i18n(count($entries))); ?><?php echo $is_article_search ? '記事を表示' : '記事'; ?></p></header>
       <ol>
         <?php foreach ($entries as $entry) : ?>
           <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID); ?></span><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?></time><span><?php echo esc_html(get_the_title($entry)); ?></span></a></li>
