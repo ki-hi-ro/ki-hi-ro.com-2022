@@ -46,3 +46,9 @@
 .technical-articles .case-card .case-eyebrow { font-size: 14px; color: var(--mag-muted); }
 .technical-pagination { display: flex; flex-wrap: wrap; gap: 16px; padding: 20px 0; }
 .technical-pagination .current { font-weight: 700; text-decoration: underline; }
+
+/* Let case titles use the available width and show the implementation preview. */
+.case-index:not(.technical-articles):not(.contact-index) .case-list { max-width: none; }
+.case-index:not(.technical-articles):not(.contact-index) .case-card h2 { max-width: none; line-height: 1.7; text-wrap: pretty; }
+.case-card__image { display: block; width: min(100%, 760px); margin: 0 0 24px; }
+.case-card__image img { display: block; width: 100%; height: auto; max-height: 420px; object-fit: contain; object-position: left center; }

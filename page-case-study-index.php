@@ -10,7 +10,15 @@ get_header(); ?>
   <div class="case-list">
   <?php $cases = get_pages(array('parent' => get_the_ID(), 'post_status' => 'publish', 'sort_column' => 'menu_order,ID')); $number = 0; ?>
   <?php foreach ($cases as $case) : if (post_password_required($case)) continue; ?>
-    <article class="case-card"><p class="case-eyebrow"><?php echo esc_html(sprintf('%02d', ++$number)); ?></p><h2><a href="<?php echo esc_url(get_permalink($case)); ?>"><?php echo esc_html($case->post_title); ?></a></h2><?php $case_catalog = require get_template_directory() . '/content/case-studies.php'; if (isset($case_catalog[$case->post_name])) : ?><p class="case-tech"><?php echo esc_html($case_catalog[$case->post_name]['tech']); ?></p><?php endif; ?><a class="case-link" href="<?php echo esc_url(get_permalink($case)); ?>" aria-label="<?php echo esc_attr($case->post_title . 'のケーススタディを見る'); ?>">[ ケーススタディを見る ]</a></article>
+    <article class="case-card">
+      <p class="case-eyebrow"><?php echo esc_html(sprintf('%02d', ++$number)); ?></p>
+      <?php $image = kihiro_case_study_image($case); if ($image) : ?>
+        <a class="case-card__image" href="<?php echo esc_url(get_permalink($case)); ?>"><?php echo wp_kses_post($image); ?></a>
+      <?php endif; ?>
+      <h2><a href="<?php echo esc_url(get_permalink($case)); ?>"><?php echo esc_html($case->post_title); ?></a></h2>
+      <?php $technology = kihiro_case_study_technology($case); if ($technology !== '') : ?><p class="case-tech"><?php echo esc_html($technology); ?></p><?php endif; ?>
+      <a class="case-link" href="<?php echo esc_url(get_permalink($case)); ?>" aria-label="<?php echo esc_attr($case->post_title . 'のケーススタディを見る'); ?>">[ ケーススタディを見る ]</a>
+    </article>
   <?php endforeach; ?>
   <?php if (!$number) : ?><p>ケーススタディは準備中です。</p><?php endif; ?>
   </div>

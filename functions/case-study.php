@@ -99,3 +99,25 @@ function kihiro_publish_portfolio_pages() {
     }
     return $ids;
 }
+
+/** Prefer editor-managed fields, with existing article content as a fallback. */
+function kihiro_case_study_technology($case) {
+    $technology = trim((string) get_post_meta($case->ID, 'case_study_technologies', true));
+    if ($technology !== '') return $technology;
+    if (preg_match('/<h[2-6]\b[^>]*>\s*使用技術\s*<\/h[2-6]>.*?<p\b[^>]*>(.*?)<\/p>/su', $case->post_content, $match)) {
+        return trim(html_entity_decode(wp_strip_all_tags($match[1]), ENT_QUOTES, 'UTF-8'));
+    }
+    $catalog = require get_template_directory() . '/content/case-studies.php';
+    return $catalog[$case->post_name]['tech'] ?? '';
+}
+
+function kihiro_case_study_image($case) {
+    if (has_post_thumbnail($case->ID)) return get_the_post_thumbnail($case->ID, 'large', array('loading' => 'lazy'));
+    $content = $case->post_content;
+    // An implementation image represents the result better than a job listing.
+    if (preg_match('/<h[2-6]\b[^>]*>\s*解決\s*<\/h[2-6]>(.*)/su', $content, $section)) $content = $section[1];
+    if (!preg_match('/<img\b[^>]*\bsrc=["\']([^"\']+)["\'][^>]*>/iu', $content, $match)) return '';
+    $url = esc_url(html_entity_decode($match[1], ENT_QUOTES, 'UTF-8'));
+    if (!$url) return '';
+    return '<img src="' . $url . '" alt="' . esc_attr($case->post_title . 'の実装画面') . '" loading="lazy" decoding="async">';
+}
