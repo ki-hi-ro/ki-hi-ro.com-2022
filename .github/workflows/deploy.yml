@@ -29,3 +29,7 @@ jobs:
             **/node_modules/**
             **/.github/**
             README.md
+            CASE-STUDY.md
+            samples/**
+            review/**
+            **/.local-backups/**

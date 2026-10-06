@@ -13,6 +13,7 @@ $kihiro_function_files = array(
     'contact.php',
     'likes.php',
     'story.php',
+    'case-study.php',
     'social-feeds.php',
     'design-preview.php',
 );
