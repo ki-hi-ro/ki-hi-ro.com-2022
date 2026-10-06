@@ -20,7 +20,7 @@ function kihiro_create_case_study_pages() {
         if ($page) { $ids[] = $page->ID; continue; }
         $slug = basename($path);
         $is_index = $path === 'case-study';
-        $body = '<!-- wp:paragraph --><p>顧客の課題に対して、実際にどのように考え、作ったか。業務を想定したPythonサンプルを紹介します。</p><!-- /wp:paragraph -->';
+        $body = '<!-- wp:paragraph --><p>顧客の課題に対して、どのように考え、実装したか。Web制作・機能開発・業務自動化の実案件と、業務を想定したサンプルを紹介します。</p><!-- /wp:paragraph -->';
         if (!$is_index) {
             $item = $items[$slug];
             $body = '<!-- wp:paragraph --><p>' . esc_html($item['tech']) . '</p><!-- /wp:paragraph -->';
