@@ -4,7 +4,7 @@ get_header(); ?>
 <main id="main-content" class="case-page case-index">
 <?php while (have_posts()) : the_post(); ?>
   <figure class="article-timeline__main-view case-index__main-view">
-    <img src="<?php echo esc_url(add_query_arg('ver', kihiro_asset_version('/assets/images/case-study-main-view.jpg'), get_theme_file_uri('/assets/images/case-study-main-view.jpg'))); ?>" width="4032" height="3024" alt="緑の木々と芝生に囲まれた、緩やかに曲がる小道" fetchpriority="high" decoding="async">
+    <img src="<?php echo esc_url(add_query_arg('ver', kihiro_asset_version('/assets/images/case-study-main-view.jpg'), get_theme_file_uri('/assets/images/case-study-main-view.jpg'))); ?>" width="4032" height="3024" alt="道路沿いの切り株と、その周りに茂る緑の草" fetchpriority="high" decoding="async">
   </figure>
   <header class="case-hero"><h1><?php the_title(); ?></h1><div><?php the_content(); ?></div></header>
   <div class="case-list">
