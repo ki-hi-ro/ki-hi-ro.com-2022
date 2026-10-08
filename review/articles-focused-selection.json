@@ -1,0 +1,1308 @@
+[
+  {
+    "id": 41632,
+    "title": "【Python】少数第〇〇位までを四捨五入する",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "#少数第2位まで四捨五入 number = 3.14159 print(round(number, 2)) # Output: 3.14",
+    "body_end": "#少数第2位まで四捨五入 number = 3.14159 print(round(number, 2)) # Output: 3.14"
+  },
+  {
+    "id": 41590,
+    "title": "Pythonで作るビンゴゲーム",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "import random class BingoCard: def __init__(self): self.card = self.generate_card() # 各マスがマークされているかを管理する self.marked = [[False] * 5 for _ in range(5)] # 中央のFREE枠は最初からマーク済みにする self.marked[2][2] = True def generate_card(self): # 各列（B, I, N, G, O）ごとに範囲内のランダムな数字を選ぶ card = [] ranges = [ (1, 15), (16, 30), (31, 45), (46, 60), (61, 75), ] for start, end i",
+    "body_end": "横・対角線のすべてのマスが True になっているかを確認します。 all() は、渡された値がすべて True の場合に True を返します。 縦・横・2本の対角線のいずれかがすべてマーク済みになれば、ビンゴ成立です。 まとめ 今回のビンゴゲームでは、カードに書かれている数字とマーク状態を別々の二次元配列で管理しました。 random による乱数生成、 set による抽選済み数字の管理、 all() によるビンゴ判定など、Pythonの基本的な機能を組み合わせてゲームを作ることができました。"
+  },
+  {
+    "id": 40326,
+    "title": "【Python】len関数の使い方｜文字数・要素数・setの重複を数える方法",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "Pythonの len() は、文字列の文字数や、リストなどに入っている要素の数を調べるための関数です。 この記事では、 len() の基本的な使い方と、 set に使用した場合の動作について解説します。 len関数とは len() は、指定したオブジェクトに含まれる要素の数を返します。 基本的な書き方は、次のとおりです。 len(対象) 文字列、リスト、辞書、タプル、setなどに使用できます。 文字列の文字数を調べる 文字列に len() を使用すると、文字数を取得できます。 text = \"Python\" print(len(text)) 実行結果は、次のとおりです。 6 Python は6文字なので、 6 が返されます。 日本語の文字列にも使用できます。 print(len(\"こんにち",
+    "body_end": "辞書のキーと値の組み合わせの数を取得します。 len({1, 2, 3}) setの要素数を取得します。 また、 set() と組み合わせることで、重複を除いた値の種類数も調べられます。 numbers = [1, 1, 2, 2, 3] print(len(set(numbers))) 実行結果は、次のとおりです。 3 len() はPythonで頻繁に使用する基本的な関数です。 文字列やリスト、辞書、setなど、それぞれのデータ型に対して何を数えているのかを意識すると、理解しやすくなります。"
+  },
+  {
+    "id": 40157,
+    "title": "Pythonのログ出力でFileNotFoundErrorが発生した原因と解決方法",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "Pythonで作成したビンゴゲームを実行したところ、次のエラーが発生した。 FileNotFoundError: [Errno 2] No such file or directory: '/Users/hiroki/Documents/programing_output/bingo/python/python/bingo.log' 原因 原因は、フォルダ構成を変更したあとも、ログファイルの保存先が以前のままになっていたことだった。 bingo.pyをpythonフォルダへ移動したが、 https://github.com/ki-hi-ro/bingo/commit/d0569c7f36fbaa28bc63e7286ab1e717cd134ae4 ログの保存先を次のように指定していた。 lo",
+    "body_end": "gging.INFO, format=\"%(asctime)s %(levelname)s:%(message)s\", datefmt=\"%Y-%m-%d %H:%M:%S\", ) 修正後、ビンゴゲームを正常に実行できた。 まとめ 今回のエラーは、フォルダ構成を変更した際に、プログラム内のファイルパスを修正していなかったことが原因だった。 FileNotFoundErrorが発生した場合は、エラーメッセージに表示されているパスを確認し、存在しないフォルダやフォルダ名の重複がないか確認するとよい。"
+  },
+  {
+    "id": 34523,
+    "title": "【Python】点数のリストから順位を出す",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "点数のリストから順位を出すプログラムを作成した。 ソースコード rank_sum · ki-hi-ro/python@6e0850a score_list = [100, 20, 30, 70, 70] for score in score_list: rank_count = sum(1 for s in score_list if s > score) print(f\"点数: {score}, 順位: {rank_count + 1}\") 出力結果 点数: 100, 順位: 1 点数: 20, 順位: 5 点数: 30, 順位: 4 点数: 70, 順位: 2 点数: 70, 順位: 2 解説 5つの要素を持つscore_listがある。 score_list = [100, 20, 3",
+    "body_end": "ントしている。 rank_count = sum(1 for s in score_list if s > score) そして、点数と順位を出力している。 print(f\"点数: {score}, 順位: {rank_count + 1}\") 70の場合、70よりも大きい点数は100の一つだから、rank_countは1で、70の順位は1 + 1になる。 点数: 100, 順位: 1 点数: 20, 順位: 5 点数: 30, 順位: 4 点数: 70, 順位: 2 点数: 70, 順位: 2"
+  },
+  {
+    "id": 34501,
+    "title": "【Python】//と%で秒数を時間と分に変換する",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "//は、余りを切り捨てることのできる演算子。 %は、余りを出すことができる。 これらを使用して、秒数の合計から時間と分を出していこう。 ソースコード python/total_seconds.py at 0fd1f5c9a939bd4347eb375f06679d7c9274df9a · ki-hi-ro/python from datetime import datetime now = datetime.now() epoch = datetime(1970, 1, 1) total_seconds = (now - epoch).total_seconds() # print(\"現在の日時:\", now) # print(\"エポックからの秒数:\", total_seconds) hou",
+    "body_end": "(\"現在の日時:\", now) # print(\"エポックからの秒数:\", total_seconds) hours = total_seconds // 3600 minutes = (total_seconds % 3600) // 60 seconds = total_seconds % 60 print(f\"エポックからの時間: {int(hours)}時間 {int(minutes)}分 {int(seconds)}秒\") 出力結果 エポックからの時間: 489208時間 50分 5秒"
+  },
+  {
+    "id": 34497,
+    "title": "【Python】total_seconds()で現在の日時を秒数に変換する",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "total_seconds()で現在の日時を秒数に変換していく。 ソースコード total_seconds · ki-hi-ro/python@b3f5e1f from datetime import datetime now = datetime.now() epoch = datetime(1970, 1, 1) total_seconds = (now - epoch).total_seconds() print(\"現在の日時:\", now) print(\"エポックからの秒数:\", total_seconds) 出力結果 現在の日時: 2025-10-22 16:36:34.972072 エポックからの秒数: 1761150994.972072",
+    "body_end": " from datetime import datetime now = datetime.now() epoch = datetime(1970, 1, 1) total_seconds = (now - epoch).total_seconds() print(\"現在の日時:\", now) print(\"エポックからの秒数:\", total_seconds) 出力結果 現在の日時: 2025-10-22 16:36:34.972072 エポックからの秒数: 1761150994.972072"
+  },
+  {
+    "id": 34484,
+    "title": "【Python】sum関数で秒の合計を出す",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "sum関数で秒の合計を出す方法について見ていこう。 sum関数の基本 sum(iterable, start) iterable・・・合計したいリストやタプルなど start・・・初期値（デフォルトは整数の0） サンプルコード python/sum.py at 707dff44bd1bd680200cee77e4fcc6720da2c8fe · ki-hi-ro/python sample_list = [1, 2, 3, 4, 5] total_sum = sum(sample_list) print(f\"The sum of the list is: {total_sum}\") print(\"-----\") from datetime import timedelta sample_li",
+    "body_end": "aceback (most recent call last): File \"/Users/hiroki/Documents/python/sum.py\", line 14, in <module> total_sum = sum(sample_list) TypeError: unsupported operand type(s) for +: 'int' and 'datetime.timedelta' int (初期値の整数値0）+ datetime.timedeltaになってしまうから。"
+  },
+  {
+    "id": 34482,
+    "title": "【Python】strptime",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "Pythonのstrptimeについて見ていこう。 文字列をdatetime型に変換する datetime.strptime()は、文字列を日時オブジェクトに変換する。 string perse time 文字列を時刻として解析するという意味がある。 サンプルコード strptime · ki-hi-ro/python@1cbd8ce from datetime import datetime date_string = \"2024-06-15 14:30:00\" date_format = \"%Y-%m-%d %H:%M:%S\" parsed_date = datetime.strptime(date_string, date_format) print(\"original date an",
+    "body_end": "nd time:\", date_string) print(type(date_string)) print(\"Parsed date and time:\", parsed_date) print(type(parsed_date)) 出力結果 original date and time: 2024-06-15 14:30:00 <class 'str'> Parsed date and time: 2024-06-15 14:30:00 <class 'datetime.datetime'>"
+  },
+  {
+    "id": 34480,
+    "title": "【Python】timedelta",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "経過時間を表す型である「timedelta」について見ていこう。 timeとdelta timedeltaは、時間を表すtimeと差を表すdeltaが合わさった単語。 サンプルコード timedelta · ki-hi-ro/python@b7cfb36 from datetime import datetime, timedelta now = datetime.now() after_30_days = now + timedelta(days=30) after_10_hours = now + timedelta(hours=10) after_5_minutes = now + timedelta(minutes=5) after_1_second = now + timedelt",
+    "body_end": "-10-21 18:13:08.014703 Date and time after 30 days: 2025-11-20 18:13:08.014703 Date and time after 10 hours: 2025-10-22 04:13:08.014703 Date and time after 5 minutes: 2025-10-21 18:18:08.014703 Date and time after 1 second: 2025-10-21 18:13:09.014703"
+  },
+  {
+    "id": 34456,
+    "title": "【Python】join",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "joinについて見ていこう。 サンプルソースコード join · ki-hi-ro/python@93f32ed test_list = [10, 20, 30, 40, 50] print(''.join([str(x) for x in test_list])) print('-'.join([str(x) for x in test_list])) 10から50まで10刻みの数値を要素に持つリストtest_list。 test_list = [10, 20, 30, 40, 50] joinメソッドを使用して、文字列に変換したものを繋げた。 print(''.join([str(x) for x in test_list])) 1020304050 -で繋げることもできる。 print",
+    "body_end": "x) for x in test_list])) 10から50まで10刻みの数値を要素に持つリストtest_list。 test_list = [10, 20, 30, 40, 50] joinメソッドを使用して、文字列に変換したものを繋げた。 print(''.join([str(x) for x in test_list])) 1020304050 -で繋げることもできる。 print('-'.join([str(x) for x in test_list])) 10-20-30-40-50"
+  },
+  {
+    "id": 34442,
+    "title": "【Python】zipとアンパック",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "数字と数字のローマ字のタプルのリストがある。 それをアンパックしたものをzipに渡したものをfor文のイテラブルとして使用する。 zipの処理が行われた要素を出力する。 ソースコード zip · ki-hi-ro/python@21d72c2 num_list = [(1, 'one'), (2, 'two'), (3, 'three')] for number in zip(*num_list): print(number) 出力結果 元のタプルの最初の要素のタプルと、元のタプルの二つ目の要素のタプルが生成された。 (1, 2, 3) ('one', 'two', 'three') アンパック *num_listは、[(1, 'one'), (2, 'two'), (3, 'three')",
+    "body_end": "t(number) ↓出力結果 (1, 2, 3) ('one', 'two', 'three') アンパックをしなかったら、以下のようになる。もう片方のペアがいない状態。 for number in zip(num_list): print(number) ↓出力結果 ((1, 'one'),) ((2, 'two'),) ((3, 'three'),) それもそのはず。リスト単体を渡しているから。 num_list [(1, 'one'), (2, 'two'), (3, 'three')]"
+  },
+  {
+    "id": 34439,
+    "title": "【Python】all",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "allで全てが条件に当てはまった時にTrueにすることができる。 ソースコード all · ki-hi-ro/python@2f22a34 for_all_list = [10, 20, 30, 40, 50] if all(x > 5 for x in for_all_list): print(f\"全ての要素が5より大きいです: {for_all_list}\") for_all_listは、数字のリスト。 allに、for_all_listの中身が5より大きいという条件を指定している。 出力結果 全ての要素が5より大きいので、以下のように出力される。 全ての要素が5より大きいです: [10, 20, 30, 40, 50]",
+    "body_end": "a34 for_all_list = [10, 20, 30, 40, 50] if all(x > 5 for x in for_all_list): print(f\"全ての要素が5より大きいです: {for_all_list}\") for_all_listは、数字のリスト。 allに、for_all_listの中身が5より大きいという条件を指定している。 出力結果 全ての要素が5より大きいので、以下のように出力される。 全ての要素が5より大きいです: [10, 20, 30, 40, 50]"
+  },
+  {
+    "id": 34437,
+    "title": "【Python】rangeとenumerate",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "rangeをfor文のイテラブルとして使用した時 enumerateをfor文のイテラブルとして使用した時 それぞれの違いについて見ていこう。 ソースコード range_enumerate · ki-hi-ro/python@8b3c8c0 for i in range(10): print(i) for index, value in enumerate(['a', 'b', 'c', 'd']): print(f\"Index: {index}, Value: {value}\") range(10)を使用した場合と、文字列のリストに対してenumerateを使用した場合のソースコード。 出力結果 0 1 2 3 4 5 6 7 8 9 Index: 0, Value: a Index: 1",
+    "body_end": "8 9 Index: 0, Value: a Index: 1, Value: b Index: 2, Value: c Index: 3, Value: d rangeの場合、0始まりのインデックスのみが出力されている。 0 1 2 3 4 5 6 7 8 9 enumerateの場合、0始まりのインデックスとイテラブルの中身が出力されている。 Index: 0, Value: a Index: 1, Value: b Index: 2, Value: c Index: 3, Value: d"
+  },
+  {
+    "id": 34435,
+    "title": "【Python】mapはfor文で使用すると消費される",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "リストの中身を一括で型変換できるmap。 そのmapオブジェクトをfor文のイテラブルとして使用すると消費されてしまう。 どういうことか？見ていこう。 ソースコード map.py · ki-hi-ro/python@92037c1 def print_ints(int_iterable): for x in int_iterable: print(x) print(\"消費された後のリスト:\", list(int_iterable)) str_list = ['1', '2', '3', '4', '5'] int_map = map(int, str_list) print_ints(int_map) int_list = [int(x) for x in str_list] print_i",
+    "body_end": "各要素をint型に変換している。 int_listも同じことをリスト内包表記で行っている。 出力結果 1 2 3 4 5 消費された後のリスト: [] 1 2 3 4 5 消費された後のリスト: [1, 2, 3, 4, 5] mapオブジェクトの場合は、for文で各要素が消費されてしまっている。 1 2 3 4 5 消費された後のリスト: [] リスト内包表記の場合は、for文を使用しても各要素が消費されることはない。 1 2 3 4 5 消費された後のリスト: [1, 2, 3, 4, 5]"
+  },
+  {
+    "id": 34432,
+    "title": "【Python】pop",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "リストの要素を削除することのできるpopメソッドについて見ていこう。 サンプルコード pop · ki-hi-ro/python@63f6f86 sample_list = [1, 2, 3, 4, 5] # 何も指定しない場合、最後の要素が削除される popped_element = sample_list.pop() print(\"Popped element:\", popped_element) print(\"List after popping the last element:\", sample_list) # インデックスを指定して要素を削除 popped_element_at_index = sample_list.pop(1) print(\"Popped element at",
+    "body_end": "1, 3, 4] popメソッドの引数に何も指定しない場合、一番最後の5がポップアウトする。 Popped element: 5 List after popping the last element: [1, 2, 3, 4] 現状のsample_list : [1, 2, 3, 4]に対して、pop(1)を使用するので、以下のようになる。 Popped element at index 1: 2 List after popping element at index 1: [1, 3, 4]"
+  },
+  {
+    "id": 34428,
+    "title": "【Python】集合の対称差演算子",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "集合A ^ 集合Bで、集合Aと集合Bの差の集合ができる。 ソースコード symmetric_difference.py · ki-hi-ro/python@2f5ca39 set_a = {1, 2, 3, 4, 5} set_b = {2, 3} symmetric_diff = set_a ^ set_b print(\"Symmetric difference between set_a and set_b:\", symmetric_diff) symmetric_diffに集合の対称差が入る。 実行結果 Symmetric difference between set_a and set_b: {1, 4, 5} set_aとset_bの対称差は、{1, 4, 5} set_a = {",
+    "body_end": "c_diff = set_a ^ set_b print(\"Symmetric difference between set_a and set_b:\", symmetric_diff) symmetric_diffに集合の対称差が入る。 実行結果 Symmetric difference between set_a and set_b: {1, 4, 5} set_aとset_bの対称差は、{1, 4, 5} set_a = { 1 , 2, 3, 4 , 5 } set_b = {2, 3}"
+  },
+  {
+    "id": 34426,
+    "title": "【Python】リスト2つを比較して、もう一方のリストに存在しない要素のリストを作成する",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "a_listとb_listがある。 a_listにあって、b_listにない要素のリストを作成する。 ソースコード not_in_others_list.py · ki-hi-ro/python@f07e63c a_list = ['apple', 'banana', 'cherry', 'date'] b_list = ['banana', 'date', 'fig', 'grape'] not_in_b_list = [item for item in a_list if item not in b_list] print(\"Items in a_list not in b_list:\", not_in_b_list) not_in_b_listはリスト内包表記で、a_listの中でb_",
+    "body_end": "t_in_b_list) not_in_b_listはリスト内包表記で、a_listの中でb_listにないitemをリストにしている。 実行結果 Items in a_list not in b_list: ['apple', 'cherry'] a_listにあって、b_listにないitemが抽出された。 a_list = [ 'apple' , 'banana', 'cherry' , 'date'] b_list = ['banana', 'date', 'fig', 'grape']"
+  },
+  {
+    "id": 34351,
+    "title": "【Python】indexメソッド",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "indexメソッドは、リストやタプルの中で、指定した要素が最初に現れる位置（インデックス）を返すメソッド。 サンプルコード python/index.py at main · ki-hi-ro/python some_list = [1, 2, 3, 4, 5] index = some_list.index(3) print(f\"The index of 3 in the list is: {index}\") some_tuple = (10, 20, 30, 40, 50) index = some_tuple.index(40) print(f\"The index of 40 in the tuple is: {index}\") 以下のコードについて解説しよう。some_listに対し",
+    "body_end": "ook-Air python % /usr/bin/python3 /Users/hiroki/Documents/python/index.py The index of 3 in the list is: 2 The index of 40 in the tuple is: 3 3のリスト内におけるインデックス番号は2。 some_list = [1, 2, 3 , 4, 5] 40のタプル内におけるインデックス番号は3。 some_tuple = (10, 20, 30, 40 , 50)"
+  },
+  {
+    "id": 34332,
+    "title": "【Python】現在の座標をzipで更新する",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "二次元配列の座標空間で、現在地からある量だけ移動するというプログラムを作成した。 from pprint import pprint two_d_list = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ] pprint(two_d_list, width=20) my_position = (2, 2) # (row, column) print(two_d_list[my_position[0]][my_position[1]]) move_direction = (0, -1) # (row_change, column_change) my_moved_position = tuple(x + y for x, y in zip(my_position, mo",
+    "body_end": "int(two_d_list[my_position[0]][my_position[1]]) move_direction = (0, -1) # (row_change, column_change) my_moved_position = tuple(x + y for x, y in zip(my_position, move_direction)) print(two_d_list[my_moved_position[0]][my_moved_position[1]]) 出力結果。 8"
+  },
+  {
+    "id": 33926,
+    "title": "Python製の三目並べ",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "Pythonで作成した「三目並べ」です。 ソースコード python/tic-tac-toe.py at master · ki-hi-ro/python プレイヤーXが勝つようにプレイ 実行すると空の盤面が表示され、プレイヤーXのターンが始まります。行と列の数字を入力して、(0, 0)の位置にXが入力されました。プレイヤーOにターンが変わります。X→O→X→O→Xとゲームが進んでいき、0行目がすべて揃ったので、Xの勝ちです。 引き分けになるようにプレイ ユーザー入力数字のバリデーション 数字以外が入力されたら、「数字を入力してください。」と表示されます。0 ~ 2の範囲外の数字が入力されたら、「範囲外です。0 ~ 2の数字を入力してください」と表示されます。 メイン処理 main関数を起動",
+    "body_end": ",1), (2,2)], [(0,2), (1,1), (2,0)] ] for condition in win_conditions: if all(board[r][c] == symbol for r, c in condition): return True return False 引き分けを判定する関数 # 引き分け（満杯）を判定 def is_full(board): return all(cell != \" \" for row in board for cell in row)"
+  },
+  {
+    "id": 33801,
+    "title": "【Python】ログの書き方基本",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "最近の業務で自分の作ったAPI模擬プログラムにログを追加している。 そこで、この記事では、ビンゴゲームを例に、loggingモジュールを使用したPythonのログの書き方の基本に触れよう。 使用するビンゴゲーム Gitのリポジトリ。 https://github.com/ki-hi-ro/bingo/commits/master/ 解説記事。 http://localhost:8888/chatgpt%e3%81%ab%e4%bd%9c%e6%88%90%e3%81%97%e3%81%a6%e3%82%82%e3%82%89%e3%81%a3%e3%81%9f%e4%bb%95%e6%a7%98%e3%81%a70%e3%81%8b%e3%82%89%e3%83%93%e3%83%b3%e3",
+    "body_end": "アスキータイム）の略で、ログが記録された時刻をASCII文字列として表現するフィールド。 ASCIIは、American Stadard Code for Information Interchangeの略。 コンピュータ初期に使われた英数字・記号を中心とした文字コード。 %(asctime)sのsは、string（文字列）の意味。 「ここに、ASCII timeの文字列を埋め込みますよ」ということになる。 出力結果。 2025-09-27 14:14:33 INFO:ビンゴゲームを開始します。"
+  },
+  {
+    "id": 33176,
+    "title": "SyntaxError: Non-ASCII character '\\xe6' , but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "これを解決していこう。 発生しているソースコード ーbingo.pyの6行目ー SyntaxError: Non-ASCII character '\\xe6' これどういう意味？ おそらく、_が該当すると思う。 ChatGPTに相談すると、以下が分かった。 PythonはデフォルトでASCll（英数字と一部記号のみ）を想定している。 \\xe6は、UTF-8で日本語の一部を表すバイト。 _が原因？ これが日本語扱いされているのか？ と思い、numに変えてみたが、変化がない。 Mac:python shibatahiroshitaka$ python bingo.py File \"bingo.py\", line 6 SyntaxError: Non-ASCII character '\\xe6' ",
+    "body_end": "vate Mac:python shibatahiroshitaka$ Pythonのバージョンを確認すると、案の定2.7だった。 Mac:python shibatahiroshitaka$ python --version Python 2.7.16 文字コードをUTF-8で保存する方法 Python2では必須らしい。 # -*- coding: utf-8 -*- 職場のソースコードにも上記のような記述があったことを思い出す。 絵文字は非ASCll 23行目にある✖️は非ASCllらしい。"
+  },
+  {
+    "id": 32503,
+    "title": "API送信されたデータの保持にはリストではなく辞書を使う",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "現在のPythonの仕事で、API送信されたデータをベースモデルを介して受信し、リストとして保持して、目的の形に変換した上で、レスポンスを作成して返すというのをやっている。 レスポンスに必要なデータをそれぞれリストとして保持して、レスポンスを作成しているが、辞書として保持した方が、柔軟性が高いのではないかと思う。 現実問題として、リストとして保持しているせいで、複数の送信APIに対応できていない。 以下のようなAPIが送られてきた時に、 { {id : 1 name: a }, {id : 2 name: b } } idとnameをそれぞれリストとして保持しているのが今の設計。 id_list = [1, 2] name_list = [a, b] これをfor文で取り出して処理を行ってい",
+    "body_end": "換する関数」**もサンプルコード付きで作れます。 これを使えば、既存の id_list と name_list から一瞬で移行できます。 自分の結論 リストとしてとりあえず、API受信→データ変換→APIレスポンス送信を行っていたが、辞書に変えよう。 お盆休み明けの8/18(月)から対応していく。 現職で成功体験を得ることが今後のキャリアにつながるミチシルベになる。 そのために困難を分割してスモールステップで進んでいき成功体験を得て自信を雪だるま式に積み上げていこう。 pile upしていこう。"
+  },
+  {
+    "id": 32486,
+    "title": "Pythonでリストの最小値を求める関数を自作した（組み込み関数を使えば一行で済む）",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "def smallest(num_list): smallest_num = num_list[0] for num in num_list: if num < smallest_num: smallest_num = num return smallest_num num_list = [10, 5, 3, 20, 2, 100000000000, 1] smallest_num = smallest(num_list) print(smallest_num) print(min(num_list)) hiroki@shibatahiroshitakanoiMac bfs_short % python smallest.py 1 1 詳細解説 1. smallest関数の定義 def sm",
+    "body_end": " print(min(num_list)) 2-1. 数値のリストを定義 num_list = [10, 5, 3, 20, 2, 100000000000, 1] 2-2. smallest関数にリストを渡して戻り値を変数に代入 smallest_num = smallest(num_list) 2-3. smallest関数の戻り値をコンソール出力 print(smallest_num) 3. Python組み込み関数minを使用すると、一行で書ける print(min(num_list))"
+  },
+  {
+    "id": 31767,
+    "title": "再び、Pythonで作るビンゴゲーム",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "以前、以下のような記事を書いた。 http://localhost:8888/creating-a-bingo-game-with-python/ 今読み返してみると、わかりにくかったので、Pythonの実務経験を経た今の私が解説していこう。 今日も指と腕の痛みを理由にして会社を休んでいる。 もちろん実際に痛みが残っている。 しかし、家だと休憩の時間をたっぷりとれる。 そのため、腕と指を労わりながらブログを書いていこう。 全ソースコード import random class BingoCard: def __init__(self): self.card = self.generate_card() self.marked = [[False] * 5 for _ in range(5)]",
+    "body_end": " [True, False, False, False, False] ビンゴではない card.check_bingo() False While文の最初に戻る ビンゴの場合は、「ビンゴ！おめでとうございます！」を出力 B I N G O 2 18 38 48 69 5 29 37 59 62 7 19 FREE 52 73 8 24 34 51 64 14 22 42 53 72 ビンゴ！おめでとうございます！ hiroki@shibatahiroshitakanoiMac python %"
+  },
+  {
+    "id": 31754,
+    "title": "Python製の三目並べ",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "ChatGPTにPythonで三目並べを作成してもらった。 仕様 ソースコード全文 python/tic-tac-toe.py at master · ki-hi-ro/python # プレイヤーを表すクラス class Player: def __init__(self, symbol): self.symbol = symbol # 'X' または 'O' # 盤面を表示する関数 def display_board(board): for row in board: print(\" | \".join(row)) print(\"-\" * 10) # マスにマークを置く関数 def make_move(board, row, col, symbol): if board[row][col]",
+    "body_end": " | O | X ---------- X | O | O ---------- O | | X ---------- X's turn Row (0-2): 2 Col (0-2): 1 board [['X', 'O', 'X'], ['X', 'O', 'O'], ['O', 'X', 'X']] X | O | X ---------- X | O | O ---------- O | X | X ---------- It's a draw! ⇨ is_full関数の戻り値は、True"
+  },
+  {
+    "id": 40167,
+    "title": "Pythonで学ぶ幅優先探索（BFS）｜基礎・最短経路・グラフ作成",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "これらのソースは、Pythonを用いた幅優先探索（BFS）の基本概念から、最短経路探索、実務データをグラフ構造へ変換する方法までを段階的に解説した技術ブログ記事です。 筆者が業務で幅優先探索に渡すデータを即座に作成できなかった経験を起点として、アルゴリズムの内部処理を一つずつ確認し、最終的に実際のデータから最短経路を導き出すまでの学習過程が記録されています。 2025.07.26（土）12:24｜幅優先探索をマスターする http://localhost:8888/%E5%B9%85%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2%E3%82%92%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%E3%81%99%E3%82%8B/ 最初の記事",
+    "body_end": "本的な動作を理解するところから、最短経路を求める関数の実装、さらに実務を想定した元データからのグラフ構築へと段階的に発展しています。 単に完成したコードを掲載するのではなく、分からなかった箇所、発生したエラー、期待した結果が得られなかった原因を一つずつ確認しながら、理解を深めていく過程が記録されているのが特徴です。 全体を通して、アルゴリズムの内部処理を必要な範囲で理解しつつ、最終的には関数をブラックボックスとして活用し、実際のデータから最短経路を導き出すまでの思考プロセスがまとめられています。"
+  },
+  {
+    "id": 31589,
+    "title": "Pythonで幅優先探索（BFS）の仕組みを理解する",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "上長から、幅優先探索の第一引数に渡すデータを作成してほしいと依頼された。 しかし、その場ですぐに対応することができなかった。 エンジニアとしての実力が可視化された瞬間だった。 実力不足を痛感できる環境にいることを前向きに捉え、ここからスキルアップしていきたい。 手始めに、Pythonで幅優先探索を実装し、その処理の流れを一つずつ確認する。 幅優先探索（BFS）とは 幅優先探索（Breadth-First Search、BFS）は、グラフやツリー構造を探索するアルゴリズムの一つ。 スタート地点に近いノードから、横方向へ広がるように順番に探索していく。 主な特徴は次のとおり。 重みのないグラフでは、最短経路を求めるために利用できる スタート地点に近いノードから探索する キューを使って、次に探索す",
+    "body_end": ") でキューの先頭からノードを取り出す visited で訪問済みのノードを管理する graph[node] から隣接ノードを取得する キューが空になるまで探索を繰り返す 最初はコードを読んでも、何が起きているのか分からなかった。 しかし、キュー、現在のノード、訪問済みノードの中身を一つずつ追いかけることで、処理の流れが見えるようになった。 一つの仕組みを深く理解すると、似たようなコードも理解しやすくなる。 次は、今回理解した幅優先探索を使って、スタート地点からゴール地点までの最短経路を求める。"
+  },
+  {
+    "id": 31258,
+    "title": "FastAPIの「Hello World」を動かす",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "ChatGPTに相談しながら、今週足りなかったFastAPIについての知識を補強していく。 やらざるを得ない環境に身を置いていることに感謝して。 環境 Python 3.8以上 fastapi, uvicorn Pythonは3.12.2だった。pythonコマンドでバージョンを確認して、exitと打った後に案内にしたがって、Ctrl-Dを押してプロンプト状態に戻した。 python -m venv venvで仮想環境を作成した。 ディレクトリ構造は以下。 source venv/bin/activateで仮想環境を起動した。 仮想環境起動前に、ライブラリをインストールしてしまった。 そのため、仮想環境起動後にpip listを行っても、fastapiとuvicornが表示されなかった。 仮",
+    "body_end": "す 実行 uvicorn main:app --reload ブラウザでhttp://127.0.0.1:8000/にアクセス。 Swagger UI http://127.0.0.1:8000/docs#/ GET / Read Root展開後 http://127.0.0.1:8000/docs#/default/read_root__get Try it out → Execute {\"message\" : \"Hello, FastAPI!\"}がResponse bodyとして返ってきた。"
+  },
+  {
+    "id": 28752,
+    "title": "Pythonで作る「FizzBuzz」",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "みなさんは「FizzBuzz」をご存知だろうか？ 3の倍数の時は「Fizz」、5の倍数の時は「Buzz」、15の倍数の時は「FizzBuzz」と出力するやつだ。 前提として、1~100まで出力する。 今回はそんな「FizzBuzz」をPythonで作成してみたので、ソースコードの解説をしていきたい。 まずは単純出力 for文とrangeの知識を試すコードを書いた。 for i in range(0, 100): print(i) こちらを実行すると、0~99まで単純出力される。 1~100にする range関数は、終了値 - 1の数値までの連続した数値を持つ「イテラブル」なので、range(1, 101)とすることで、1~100までの数値を持つ「イテラブル」にすることができる。 for i ",
+    "body_end": "eused 0 (delta 0), pack-reused 0 To https://github.com/ki-hi-ro/fizzbuzz.git * [new branch] master -> master ソースコード for i in range(1, 101): if i % 15 == 0: print('fizzbuzz') elif i % 3 == 0: print('fizz') elif i % 5 == 0: print('buzz') else: print(i)"
+  },
+  {
+    "id": 28717,
+    "title": "pythonで作った「買い物リスト作成アプリ」について解説",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "ChatGPTの力もお借りして、コンソール上で動く「買い物リスト作成アプリ」を作成したので、見ていただきたい。 アプリの動作について ざっくりとこのアプリの動作についてお話しすると、起動して指定した場所にある買い物リストのテキストを読み込む。そして、買い物リストの内容を表示する。その後に、追加、削除、終了の3択をユーザーに選んでもらう。 追加の場合、買い物リストに商品を追加することができる。 削除の場合、買い物リストから商品を削除することができる。 終了の場合、このアプリが終了する。 全体のソースコード import os import json def load_shopping_list(filepath): if os.path.exists(filepath): with open(",
+    "body_end": "後にインデックス0の'a'が削除される。 インデックスが大きい順に削除することで、最初に意図していたインデックス番号の要素を削除することができる。 itemsがない場合は、「すべて購入済みになりました。」が表示されて、whileループを抜ける。 if not items: print(\"すべて購入済みになりました。\") break 【コード解説】3でアプリ終了 3を押すとアプリが終了する。 この理由。それはこちら。 elif choice == \"3\": print(\"終了します\") break"
+  },
+  {
+    "id": 28649,
+    "title": "pythonの機械学習の仕組みが少し分かった",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "progateの月3,000円のproffesionalコースにお世話になっている。 その中に、pythonで機械学習が学べるコースがあった。 まだ最初のレッスンしか見ていないものの、自分でも色々と調べて「機械学習ってこういうことなのか！」という状態になっている。 なので、機械学習のざっくりとした仕組みについて書いていきたいと思う。 機械学習の処理の流れ 処理の流れを大まかに分けると、以下のようになる。 元のデータを用意する（入力出力のデータを含んでいる必要がある）。 ライブラリ内の関数で、入力用の学習用データと評価用データ、出力用の学習用データと評価用データの4つに分ける。 機械学習用のアルゴリズムに学習用データ（入力と出力）を学習させる。 学習されたアルゴリズムに評価用の入力データを入力",
+    "body_end": "t, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) # モデル作成 model = LogisticRegression(max_iter=200) # 学習（訓練データを使ってモデルに覚えさせる） model.fit(X_train, y_train) # 予測（テストデータで分類を予測） y_pred = model.predict(X_test) print(\"予測結果:\", y_pred)"
+  },
+  {
+    "id": 28408,
+    "title": "【pandas, SQL】ファイル読み込み履歴テーブルを参照して処理対象ファイルを決定するというロジック",
+    "topics": [
+      "python",
+      "sql"
+    ],
+    "body_excerpt": "仕事でPentaho ETLをPython ETLに置き換えるということを行なっている。 File to DBの処理で、処理対象ファイルを決定するというロジックがあった。 chatGPTに相談してサンプルコードを提示してもらったので、その処理内容について解説していく。 開発環境 筆者の開発環境は以下の通り。 OS macOS Sonoma 14.4.1 エディタ Visual Studio Code 1.95.3 (Universal) 仮想環境 venv 言語 Python 3.12.2 DB SQLite 3.43.2 ライブラリ pandas 2.2.3 ディレクトリ構造 ディレクトリ構造はこちら。 Python/ ├── .venv/ ├── input/ │ ├── AAA.csv",
+    "body_end": "difiedtime_input\"] > df_merged_files[\"lastmodifiedtime_db\"]] # 📌 9. 結果の表示 print(\"🔹 更新が必要なファイル (新規ファイルも含む):\") df_updated_files = df_updated_files.sort_values('file_name').reset_index(drop=True) print(df_updated_files) # 📌 10. データベース接続を閉じる conn.close()"
+  },
+  {
+    "id": 28349,
+    "title": "Pythonとポケモンとオブジェクト指向",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "誰でもエンジニアさんの動画でオブジェクト指向について分かりやすく解説していたものがあった。 https://youtu.be/7_hNvwSYEmo?si=nAKqn39Q_pBkSIhF 使用している言語はPythonで、プログラム内容はポケモンの対戦シーン。 オブジェクト指向のポイント 呼び出し元の処理を楽にするというのがポイント。 今回の例で言うと、ポケモンの内容はポケモンクラスにまとめて書くことで、呼び出し元ではポケモンクラスのインスタンスを生成して、使いたいメソッドを呼び出したりするだけで済む。 コンストラクタでインスタンス生成時に初期情報をセットする ポケモンクラスのコンストラクタでポケモンの名前や攻撃力などの情報をセットできる。 上記の5行目で初期情報が渡されたポケモンインスタ",
+    "body_end": "すれば、条件に合わせてプライベート変数に値を入れることもできる。以下の23行目以降のセッターに注目してほしい。これでhpのセット方法をポケモンクラスで定義できるようになった。 hpはコンストラクタで以下のように定義されている。 セッターは呼び出し元で以下のように使用する。 10000をセットしたら、40が返っていることが分かるだろう。 この理由は、セッターの定義部分で、elif value > self._max_hpという条件の時、self._hp = self._max_hpとしているから。"
+  },
+  {
+    "id": 26860,
+    "title": "Pythonのオーバーライドについて",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "最近仕事で社内共通テンプレートの振る舞いを変えて、仕事の目的を達成する必要があった。 そのときに必要になったのが、オーバーライド。 親クラスで定義したプロパティに、オーバーライドした子クラスからアクセスできなかったりしたので、この記事では、Pythonにおけるオーバーライドについて整理していきたい。 ソースコードは、ChatGPTの力もお借りした。 superで親クラスのコンストラクタを呼び出す 以下の例では、Childクラスのインスタンス生成時に、親クラスのコンストラクタも呼び出すことができている。 class Parent: def __init__(self, name): self.name = name print(f\"Parent initialized with name: {",
+    "body_end": "d' object has no attribute '__hidden_property' プロパティの値: Overridden value 直接アクセス失敗: 'Child' object has no attribute '__hidden_property' 名前が変更したとの親クラスのプライベート変数をフルネームで指定することも可能（ただし、推奨されない）。 プライベート変数の目的は以下の通り。外部からの不要なアクセスを防ぐために存在する。コード量が多くなると効果を実感できるだろう。"
+  },
+  {
+    "id": 25642,
+    "title": "Pythonで作る「ビンゴゲーム」",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "chat GPTの力も借りつつ、Pythonで「ビンゴゲーム」を作ってみた。 このプログラムでは、次のようなPythonの基本要素を使用しています。 クラスとインスタンス 関数とメソッド リストと集合 for 文と while 文 条件分岐 random モジュール all() 関数 リスト内包表記 ビンゴゲームの仕様 スクリプトを実行すると、以下の画面が表示される。 Enterを押すと、引かれた番号が表示される。カード内に同じ番号があった場合は、その場所がマークされます。 縦・横・斜めのいずれか1列がすべてマークされると、ビンゴとなってゲームが終了します。 中央のマスは、ゲーム開始時から有効になっているFREE枠です。 ゲーム全体の処理の流れ ゲームは、次の順番で進みます。 play_bi",
+    "body_end": "== \"__main__\": play_bingo() まとめ 今回のビンゴゲームでは、 BingoCard クラスにカードの生成・表示・マーク・判定をまとめました。 ゲーム全体の進行は、 play_bingo() 関数が担当しています。 役割ごとに処理を分けることで、プログラムの流れを確認しやすくなり、機能の追加や修正もしやすくなります。 今回のプログラムを通して、クラスやインスタンスだけでなく、リスト、ループ、条件分岐、ランダム処理など、Pythonの基本的な仕組みをまとめて確認できました。"
+  },
+  {
+    "id": 23141,
+    "title": "Pythonのリストから要素を順番に一つずつ取り出したい",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "例えば、artistというリストから、最初の「ONE OK ROCK」を抜き出すことなら、以下のようにすればいい。 一つ一つ順番に取り出すにはどうすればいいのか？ for文を使うことは分かる。 その場合、JavaScriptのように、iというナンバリング変数を用意する必要があるのだろうか？ 簡単だった もとのリストは、artistsに名称変更した。 for文を使えば、forの後に指定した変数に、inの後に指定したリストの要素が一つずつ入って、繰り返し処理を行ってくれる。",
+    "body_end": "例えば、artistというリストから、最初の「ONE OK ROCK」を抜き出すことなら、以下のようにすればいい。 一つ一つ順番に取り出すにはどうすればいいのか？ for文を使うことは分かる。 その場合、JavaScriptのように、iというナンバリング変数を用意する必要があるのだろうか？ 簡単だった もとのリストは、artistsに名称変更した。 for文を使えば、forの後に指定した変数に、inの後に指定したリストの要素が一つずつ入って、繰り返し処理を行ってくれる。"
+  },
+  {
+    "id": 22961,
+    "title": "PythonのOSモジュールのlistdir()関数でファイル名をリストに格納してみた",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "Progateの「Pythonで業務を自動化しよう！」に取り組んでいる。 Pythonで業務を自動化しよう | プログラミングの入門なら基礎から学べるProgate[プロゲート] 実際に自分の開発環境でPythonを試してみたいと思い、このような記事を書いていこうと思った。 前提条件 前提条件として、「python > os」配下に以下のようにファイルがずらりと並んでいる。 そして、ターミナルではosディレクトリにいる。 my_pythonというファイルを新規作成した。 記述内容 osモジュールを読み込み（import os）、osモジュールのlistdir()関数を使用した結果をfileという変数に代入して（ file = os.listdir() ）、fileを出力した（ print(f",
+    "body_end": "力した（ print(file) )。 出力結果 出力結果はこちら。 順不同で、osディレクトリにあるファイルがリストに格納されている。 何の役に立つのか？ ファイル名がリストに格納できたからといって、何の役に立つのか？ 現時点では見えてこない。 仕事の作業内容を効率化するために他の関数と組み合わせることで、役に立つ日が来るはずだ。 例えば、ひらがなの「あ」を学んだ小学一年生の子が、「こんなこと学んで、何の意味があるの？」と思うのと同じだ。 学んだことは、組み合わせることで役立てることができる。"
+  },
+  {
+    "id": 22192,
+    "title": "pythonとExcelでWebスクレイピング Part4",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "前回 までの記事で、スクレイピングしたい要素を取得することができた。 今回は、「4 取得した内容をExcelのA2〜A4に出力する」を行う。 1 必要なライブラリをインポートする 2 WEBサイトにアクセスする 3 スクレイピングしたい要素を取得する 4 取得した内容をExcelのA2〜A4に出力する ← イマココ 取得した内容 当サイトのトップページの記事タイトルを取得することができている。 ExcelのA2〜A4セル 戦略 openpyxlを使用する。 取得した記事タイトルのデータをExcelシートに展開する。 openpyxlを使う ブックを読み込み、アクティブなシートを取得する。 参考 : ［解決！Python］OpenPyXLを使ってExcelファイルを読み書きするには：解決！Py",
+    "body_end": "った配列をそのまま出力させてみる。 記事タイトルではなく、HTMLが入っていた。 次に中身を順番に取り出してみる。 HTMLを順番に取り出すことができた。 textメソッドを使用すると、どうなるか？ 期待通りの結果となった。 printの中身を先ほどの右辺に持ってこれば、ゲームセットだ。 オバーフローしてしまったが、無事目的が達成できた。 次回以降の課題 以下の2つの課題が残っている。 エクセルを開いたままで、変化点が反映されるようにしたい openpyelでテキストを折り返す処理が出来ないか？"
+  },
+  {
+    "id": 22007,
+    "title": "pythonとExcelでWebスクレイピング Part3",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "前回 は「スクレイピングしたい要素を取得する」という部分で戸惑っていた。 全体像は以下となる。 1 必要なライブラリをインポートする 2 WEBサイトにアクセスする 3 スクレイピングしたい要素を取得する ← イマココ 4 取得した内容をExcelのA2〜A4に出力する 3回目を進めていこう。 トップページの記事数を変更したので、前回とは記事数に関わる部分で変更がある。 まずやりたいこと 以下のような配列をPythonで作成したい。 [一番上の記事タイトル、二番目の記事タイトル、三番目の記事タイトル] 【試行錯誤1】空の配列を作ってみる pythonでは配列ではなくリストと呼ぶみたいだ。 Pythonのリスト（配列）を任意の値・要素数で初期化 | note.nkmk.me 以下のようなリスト",
+    "body_end": "つ取り出して、textメソッドで出力した。 bodyは不要だったので、コメントアウトしておいた。 実行結果はこちら。 トップページにある全ての記事タイトルが出力できた。 次回 今回、「3 スクレイピングしたい要素を取得する」を完了させることができた。 1 必要なライブラリをインポートする 2 WEBサイトにアクセスする 3 スクレイピングしたい要素を取得する ← 今回 4 取得した内容をExcelのA2〜A4に出力する 次回は、「4 取得した内容をExcelのA2〜A4に出力する」を行っていく。"
+  },
+  {
+    "id": 21919,
+    "title": "pythonとExcelでWebスクレイピング Part2",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "前回 、当サイトのトップページにある「最近書いた記事」のタイトルをPythonで引っ張ってくるシリーズのPart1の記事を書いた。 今回は、Part2。 Excelファイルの下準備 以下のようなタイトルを記入した。 A2以降に記事タイトルをリストアップしていく。 メンタルモデルを作る 以下の参考書の第7章でPythonとExcelでWEBスクレイピングをする内容が書かれているので、その章を理解して、メンタルモデルを作っていく。 https://www.amazon.co.jp/Python%C3%97Excel%E3%81%A7%E4%BD%9C%E3%82%8B-%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%E8%87%AA%E5%8B%95%E5%8C%96%",
+    "body_end": "して、最初から5件を出力するというアルゴリズムが必要になってくるだろう。 次回（part3） 今回は、以下の全体像の3を試行錯誤しながら進めていった。 1 必要なライブラリをインポートする 2 WEBサイトにアクセスする 3 スクレイピングしたい要素を取得する 4 取得した内容をExcelのA2〜A6に入力する 次回は、以下のような配列を試行錯誤して作成するところから始めていきたい。 [一番上の記事タイトル、二番目の記事タイトル、三番目の記事タイトル、四番目の記事タイトル、五番目の記事タイトル]"
+  },
+  {
+    "id": 21900,
+    "title": "pythonとExcelでWebスクレイピング Part1",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "pythonでWEBスクレイピングを行ってみる。 スクレイピングとは、WEBページにある情報を取ってくること。 スクレイピング対象 当ブログの「最近書いた記事」のタイトルをスクレイピングしてみたい。 フォルダ構成 my_sampleフォルダの配下にエクセルとpythonファイルがある。 必要なライブラリ PythonからHTTP通信を行うのに必要な「Requests」、取得したHTMLから必要なテキストなどを抽出するのに必要な「BeautifulSoup」。 この二つをインストールする。 ターミナルで以下のように打ち込んで欲しい。 Python requests ライブラリについてわかりやすく解説！Web のデータを自由自在に扱おう！ | キカガクブログ 10分で理解する Beautiful",
+    "body_end": "E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%E8%87%AA%E5%8B%95%E5%8C%96%E3%83%84%E3%83%BC%E3%83%AB-%E3%83%AA%E3%83%96%E3%83%AD%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9/dp/4296112503 次回（Part2） Excelファイルの下準備から始める。 下準備といってもシンプルな表を作るだけだ。 取得した最近書いた記事のタイトルをリストアップできればいい。"
+  },
+  {
+    "id": 21845,
+    "title": "ExcelをPythonで操作する方法",
+    "topics": [
+      "python"
+    ],
+    "body_excerpt": "リブロワークスさんが出版された「 Python × Excelで作る自動化ツール 」でWEBスクレイピングの勉強をしている。 今日の業務でPower BIのクラウドにあるファイル名をExcelに転記する作業があったが、ExcelにPythonを使用して、ファイル名があるHTMLタグのセレクタを指定すれば、一括で作業を行うことができたのではないかと思った。 そのプログラミングを知らないために、作業時間が3時間くらいかかってしまった。 プログラミングスキルがあれば、業務の生産性が劇的に高まるだろう。 日進月歩で身につけていきたい。 手始めに、ExcelをPythonで操作するための方法について記事に落とし込んでいく。 OpenPyXlがインストールされているかどうか確認 OpenPyXlは、Py",
+    "body_end": "の準備 pythonファイルと同じ階層にExcelファイルを配置する。 sample.xlsxという名前で、新規ファイルを作成した。 新規シートを作成してみる openpyxlでExcelを操作する【Python入門】 - RAKUS Developers Blog | ラクス エンジニアブログ を参考に、以下の記述をすればシートの新規作成ができると思ったが、ダメだった。 原因は、Excelファイルを開いた状態にしていたため。 一度閉じてから再度開くと、newシートができていることが確認できた。"
+  },
+  {
+    "id": 36342,
+    "title": "RDS × CS × データ環境の実務から学ぶ、SQL Server接続とネットワークの本質",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "RDS（リモートデスクトップサーバー）環境と、CS（クライアントサーバー）環境 先週の実務で、上記が混在する環境におけるアプリの再インストールを行った そこで得られた実務の知識をまとめていこう 自分のPCからお客さんのPCに接続 → データ環境、RDS環境、元の環境に接続 社内のリモート接続サービスを利用して、お客さんのPCにリモート接続をした そのPCでは、3つの環境に接続していた 一つ目は、元々アプリが入っていた環境 二つ目は、RDS環境 三つ目は、データ環境 元の環境で行ったこと その日の朝のデータを受信して、バックアップを取得した アプリは万が一のため、削除せずに残しておいた データサーバーでバックアップを復元した後は、ハードとの通信の停止を行なった データ環境で行ったこと お客さん",
+    "body_end": "サポート-インストール | 図研アルファテック|CADソリューション開発・販売・サポート SQL Server アクセスを許可するように Windows ファイアウォールを構成する - SQL Server | Microsoft Learn 上記のマイクロソフトのページの要点 TCP / IP、UDPとは 通信プロトコル（データの送り方のルール） TCPは、丁寧で確実な配送 UDPは、速さ重視の配送 TCP / IPのIPについて なぜ、UDP / IPではないのか TCP / IPの通信許可"
+  },
+  {
+    "id": 33569,
+    "title": "SQLiteでテーブルを作成して、データを挿入する",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "以下のブログ記事を読んでいて、SQLiteでfile_historyテーブルを作成する方法を忘れてしまっていたことに気づいた。 http://localhost:8888/%e3%80%90pandas-sql%e3%80%91%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e8%aa%ad%e3%81%bf%e8%be%bc%e3%81%bf%e5%b1%a5%e6%ad%b4%e3%83%86%e3%83%bc%e3%83%96%e3%83%ab%e3%82%92%e5%8f%82%e7%85%a7%e3%81%97%e3%81%a6/ 記録する情報の設計 CREATE TABLE file_history ( id INTEGER PRIMARY KEY AU",
+    "body_end": "ythonディレクトリの一つ上の階層にあるmydb.sqliteに作成されていた。 ソースを実行したpythonディレクトリが基準となって以下の相対パスが解釈されたため。 Downloads > pythonという階層構造になっている。 pythonディレクトリ内にあるmydb.sqliteにデータを挿入する 一つ上の階層にあるmydb.sqliteは削除。 DB_PATHを修正。 修正前 修正後 pythonディレクトリに降りる。 ソース実行。 挿入されたデータの確認。 SQLiteを抜ける。"
+  },
+  {
+    "id": 30750,
+    "title": "SQL Serverのデータ型について",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "オンプレサーバーで使用していたPostgreSQLからクラウド環境で使用しているSQL Serverに変更になる。 データ仕様書に書いていたPostgreSQLのデータ型が変更になるので、この記事で基本を抑えておきたい。 データ型の対応関係について、軽く触れておこう。 今日のリモートワークを快適に進めるための第一歩となる。 データ型の種類 以下のデータ型が考えられる。 テキスト型（名前や住所などの文字列を扱う。可変長か固定長か、Unicode対応かがポイント。） 数値型（金額、ID、カウント数などに使用。精度と範囲の違いに注意。） 日付型（日付や時刻、タイムゾーンの有無などが異なるため、要チェック。） PostgreSQLとSQL Serverの比較 たくさんあるので、代表的なものに絞って、",
+    "body_end": "verとPostgreSQLでは、データ型の精度や扱える範囲が微妙に異なる。 たとえば、DATETIME型は小数点以下3桁までしか記録されないなどの違いがある。 そのため、次のような境界値テストを意識する必要があるかもしれない： 最大文字数を超える文字列は切り捨てられないか 浮動小数点の丸め誤差が発生していないか 1900年以前や9999年以降の日付が扱えるか また、オンプレ環境でPython ETLを構築したときと同様に、「挿入 → 取得 → 差分確認」の工程を通して実データでの検証を行おう。"
+  },
+  {
+    "id": 30585,
+    "title": "postgreSQLで、ディスクの空き容量が不足している問題",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "Pythonで作成したETLで、PostgreSQLに接続を試みたら、ディスクの空き容量が不足していて、接続できなかった。 この問題について見ていこう。 pgAdmin4でもアクセスできなかった pgAdmin4で、テーブルの中身を確認しようとしてもアクセスできなかった。 具体的には、pgAdmin4を開いてもタイムアウトしたり、「ディスク容量不足」に関するエラーメッセージが表示された。 考えられる原因 ディスクがいっぱいになっている キャッシュや一時ファイルの蓄積 ディスクがいっぱいになっている ディスクとは、コンピュータの「本棚」のようなもの。テーブルやインデックス、ログファイルなど、すべてのデータが保存される場所である。 PostgreSQLは、たとえば新しいデータを挿入したり、クエリ",
+    "body_end": "モニタリング PostgreSQLのログ出力先や保管期間の見直し ディスク容量の増設またはストレージプランの見直し（クラウド環境など） おわりに ディスク容量の問題は、データベースの可用性に直結する重要な課題です。 一時的な削除対応ではなく、 容量監視の仕組み化 や PostgreSQLの内部処理に対する理解 が重要だと実感しました。 今後は、ETL実行前にディスク残量を確認したり、運用チームと連携して、ログ管理やVACUUM運用を含めた「ディスク健全性」を維持していく必要があると感じています。"
+  },
+  {
+    "id": 29492,
+    "title": "postgresqlをHomebrewでインストールしようとしたらエラーが発生した",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "(venv) Mac:python shibatahiroshitaka$ brew install postgresql Error: homebrew-core is a shallow clone. To `brew update`, first run: git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow This command may take a few minutes to run due to the large size of the repository. This restriction has been made on GitHub's request be",
+    "body_end": "usr/local/var/postgresql@14 To start postgresql@14 now and restart at login: brew services start postgresql@14 Or, if you don't want/need a background service you can just run: /usr/local/opt/postgresql@14/bin/postgres -D /usr/local/var/postgresql@14"
+  },
+  {
+    "id": 29346,
+    "title": "progate proffetionalのSQL > 機能追加の結果を測ろう > 道場 > 2.平均お気に入り登録数を取得しよう",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "機能追加の結果を測ろう | プログラミングの入門なら基礎から学べるProgate[プロゲート] の道場編をやっていく。 道場編 全部で4つ タスク分割 今後の仕事でも困難を分割していきたい。 以下のように 「平均お気に入り数を登録しよう」をさらに分割する必要があれば、行なっていく。 平均 平均について確認しておこう。 1, 3, 5の平均は、(1+3+5) / 3 = 3。 合計の値を総数で割ると、平均を算出できる。 SQLのAVG関数 SELECT AVG(カラム名) FROM テーブル名; 例えば、以下のようなemployeeテーブルがあるとしよう。 employee_id age 1 20 2 30 3 40 SELECT AVG(age) FROM employee; を行うと、以下",
+    "body_end": "くトレーニングを継続する。 クリアーした GPTに相談して、解決策を導き出すことができた。 学習はこれで終わらない。 知識として自分の中に身についていることを増やさなければならない。 そうしなければ、実務で応用不可能だ。 今回足りなかった知識 サブクエリの知識が足りなかった。 今回活用できた知識 SELECT文、GROUP BY、COUNTの計算、AVGを活かすことができた。 GPTを使用したプロンプトエンジニアリングができたとも言える。 進捗記録 完了日を記入することで、やる気を保っていこう。"
+  },
+  {
+    "id": 28931,
+    "title": "SQLiteで2025-03-04 09:00:00のようなタイムスタンプを2025-03のような形式にする方法",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "2025-03-04 09:00:00を2025-03にする方法は使用するデータベースによって異なる。 Progateで使用しているデータベースのSQLiteの場合、以下の構文となる。 strftime('%Y-%m', '2025-03-04 09:00:00') これで「2025-03」になる。 SQLiteをmacbookで使用する macOSにはデフォルトでSQLiteがインストールされているらしい。 sqlite3 --versionでインストールされているかどうか確認すると、バージョン情報が出てきたので、インストールされていた。 Mac:~ shibatahiroshitaka$ sqlite3 --version 3.32.3 2020-06-18 14:16:19 02c34",
+    "body_end": "データベースファイルを作成し、SQLiteのインターフェースに入った。 Mac:~ shibatahiroshitaka$ sqlite3 test.db SQLite version 3.32.3 2020-06-18 14:16:19 Enter \".help\" for usage hints. sqlite> 実際に試してみる 先ほどの年月形式変換を試してみた。 sqlite> SELECT strftime('%Y-%m', '2025-03-04 09:00:00'); 2025-03"
+  },
+  {
+    "id": 25122,
+    "title": "ローカルにSQLをインストールして実行してみた",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "自宅にあるiMacでは、SQLを実行できる環境が整っている。 しかし、現在私は快活Clubにいる。 気分転換と運動を兼ねて、外をぶらぶらしており、疲れて休憩中だ。 そこで、ブログを書こうとなり、どうせならSQLに関する記事を書こうとなった。 最近、仕事でSQLのサブクエリや、テーブル結合に触れる機会があったからだ。 参考にする記事 こちらの記事を参考にする。 ローカルにSQL環境を構築してSQLの練習をする方法（XAMPP使用版） (ynmarketing.jp) XAMPPをインストールする 以下のサイトからインストールしていこう。 Download XAMPP (apachefriends.org) バージョンは最新のPHP8.2.12でいいだろう。 Download XAMPP (ap",
+    "body_end": "を付けずに以下のDELETE文で、正常に実行できた。 カッコつけないほうが上手くいくようだ。 素直に生きていこう。 エラーもなく正常に挿入できたようだ。 ただ、先ほどと同じく、itemが????のままだった。 itemカラムの照合順序が元の状態だったので、ここを変更してみる。 utf8-general_ciに変更して、先ほどのデータをDELETE文で削除して、同じデータをINSERT文で挿入した。 上手く行ったことが確認できた。 また一つ、成功体験を得た。 こうやって、着実に前に進んでいきたい。"
+  },
+  {
+    "id": 24961,
+    "title": "曖昧検索と否定を組み合わせたSQL文",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "以前、誰でもエンジニアさんの動画でSQLのWHERE句のあいまい検索について学んだ。 だれでもエンジニアさんの動画で、SQLのSELECTを学ぶ | ki-hi-ro.com 否定については触れていなかった。 今回、progateを進めていて、否定であいまい検索をする問題があったので、記事を書いていこうと思う。 具体例 : postsテーブル 具体例として、開発中のRailsアプリケーションにある「postsテーブル」を使用する。 postsテーブルに入ってるデータの全ては、こちら。 否定の曖昧検索 否定の曖昧検索を行うには、「WHERE カラム名 NOT LIKE '〇〇';」とする。 「カラ」で終わるデータ以外を選択した結果はこちら。 「WHERE NOT カラム名 LIKE '〇〇';",
+    "body_end": "eを進めていて、否定であいまい検索をする問題があったので、記事を書いていこうと思う。 具体例 : postsテーブル 具体例として、開発中のRailsアプリケーションにある「postsテーブル」を使用する。 postsテーブルに入ってるデータの全ては、こちら。 否定の曖昧検索 否定の曖昧検索を行うには、「WHERE カラム名 NOT LIKE '〇〇';」とする。 「カラ」で終わるデータ以外を選択した結果はこちら。 「WHERE NOT カラム名 LIKE '〇〇';」でも、同じ結果が得られた。"
+  },
+  {
+    "id": 24911,
+    "title": "SQLで否定条件を書く方法",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "開発中のRailsアプリケーションでは、postgresqlを使っている。 仕事で最近、pentahoというETLの作成ツールを使う機会があった。 SQL文を直接書くことはない。 しかし、データベースを扱っているので、SQLの学習をしてみようと思った。 ProgateのSQLを学習をしていて、NOT演算子の書き方を覚えていないことに気がついた。 なので、その書き方についての記事を書いていく。 せっかくなので、現在作成中のRailsアプリケーションで使用しているPostgreSQLで試してみたいと思う。 結論 where NOT(条件)と書く。 以下の例の場合は、select * from posts where NOT(content = 'ジャンカラ'); というSQL文。 postsテー",
+    "body_end": "る参考記事を探していこう。 ポテパンスタイルの記事が参考になった。 SQLで「～以外」を指定するには、NOT（否定）とサブクエリの組み合わせ | ポテパンスタイル select * from テーブル名 where NOT (条件); でいけそうだ。 もう一度チャレンジ 先程の方法で上手くいかなかった。どうやら、ダブルクオテーションが使えないらしい。 シングルクオテーションにしたら、上手く行った。 別のやり方で、selectの後に全てを表す「*」を付けない場合は、1つの行という表示だけがされた。"
+  },
+  {
+    "id": 24817,
+    "title": "PostgreSQLデータベースに接続して、テーブルの中身を確認する方法",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "ローカル環境で、Railsアプリケーションを作成している。 deviseを導入する際に、usersテーブルを作成した。 それを確認したいと思った。 開発環境で使用しているデータベース名を確認 database.ymlに書いてある。 config/database.yml データベースに接続 psql -d データベース名で、データベースに接続することができた。 ターミナル テーブル一覧を表示 \\dt;で、テーブルの一覧を表示できた。\\は、Macの場合、option + ¥で出力できる。この中に、usersテーブルがあった。 ターミナル テーブルの構造を確認 \\d users;で、usersテーブルの構造を確認できた。 ターミナル テーブルのデータを確認 select * from users",
+    "body_end": "usersテーブルのデータを確認できた。 ターミナル 画像が横に長いので、分割しよう。 id: 1のレコードとして、emailと、暗号化されたパスワードのencryted_passwordが登録されている。 パスワードを忘れた場合のデータはこちら。 created_atとupdated_atは、それぞれ作成日時と更新日時で、自動生成される。 抜け方 control Cではなく、exitで抜けることができる。 参考記事 PostgreSQLの基本的なコマンド #PostgreSQL - Qiita"
+  },
+  {
+    "id": 24210,
+    "title": "sqliteからPostgreSQLにデータベースを変更したら、一覧ページで起こっていたエラーが解消された",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "前回の記事 では、ローカルにPostgreSQLをインストールした。 この記事では、Railsで使用していた「sqlite」から「PostgreSQL」にデータベースを変更していく。 GemfileでPosgreSQLを使用するように記述を変更する 公式ドキュメントで言うと以下の部分。 SQLite on Heroku | Heroku Dev Center Gemfileの以下の箇所を変更した。 変更後はこちら。 そして、bundle installを行った。成功のメッセージが心地よい。 database.ymlを編集する 以下の箇所を参考に進めていく。 SQLite on Heroku | Heroku Dev Center config/database.ymlは以下のようになっていた",
+    "body_end": "eで本番環境でpostgresqlを使用するように指定してあげる必要があるみたいだ。 その対応は、すでに行っていた。開発とテスト環境でもpostgreを使用することになっている。 この状態で、プッシュする。 そして、手動デプロイ（自動にしてみてもいいと思う）。 そして、仕上げのマイグレーションを行う。 Heroku PostgresをRailsアプリで利用する手順 #Rails - Qiita 上手くpostsテーブルが作成できたようだ。 そして、エラーが解消していた。 ミッションコンプリート。"
+  },
+  {
+    "id": 24261,
+    "title": "ローカルにPostgreSQLをインストールした",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "自作Railsアプリケーションで、デフォルトのSQliteを使用している。 前回の記事 で、Herokuでは容量の問題でSQliteを使用できないということが分かった。 SQliteからPostgreSQLに変更する必要がある。 不要な記述は削除しておく config/environments/production.rb に記入した以下の記述は不要なので削除しておこう。 公式ドキュメントのステップを参考にする SQLite on Heroku | Heroku Dev Center まずはローカルにPostgreSQLをインストールしていく 以下のように、ローカルでPostgreSQLをインストールする必要があると書かれていた。 SQLite on Heroku | Heroku Dev C",
+    "body_end": "in: brew services start postgresql@14 Or, if you don't want/need a background service you can just run: /usr/local/opt/postgresql@14/bin/postgres -D /usr/local/var/postgresql@14 ==> Summary psql --versionでバージョンを確認すると、14.13だった。 postgreSQLのインストールに成功した。"
+  },
+  {
+    "id": 22683,
+    "title": "サブクエリの基本構文",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "progateでSQLのサブクエリを学習していて、あまり理解できていない気がしたので、記事を書いていく。 サブクエリの基本構文 SELECT 列名 FROM テーブル名 WHERE 列名 演算子 ( SELECT 列名 FROM テーブル名 ) ; 【SQL】サブクエリ(where句) #SQL - Qiita サブクエリは、SELECTなどの句でも使えるみたいだ。 しかし、まずはWHERE句で使う方法をマスターしたい。 ネットで調べた情報は網羅的にまとまっている一方、情報量が多すぎて、処理しきれない。 一つ一つ理解していきたい。 「こぼれ落ちていくようなたくさん」ではなく、「ひとつ」でいい。 売上金額が平均売上金額より高い顧客を抽出したいとき SELECT customer_name, s",
+    "body_end": "ピュータ君に指示してあげよう。 サブクエリ内は末尾に;が不要 サブリクエリ内の末尾には、;を書かない。 サブクエリの基本構文を、もう一度確認してもらうと分かる。 SELECT 列名 FROM テーブル名 WHERE 列名 演算子 ( SELECT 列名 FROM テーブル名 ) ; ORDER BYがある場合 WHERE句の後にORDER BYを書く。 SELECT 列名 FROM テーブル名 WHERE 列名 演算子 ( SELECT 列名 FROM テーブル名 ) ORDER BY 列名 ;"
+  },
+  {
+    "id": 20108,
+    "title": "だれでもエンジニアさんの動画で、SQLのSELECTを学ぶ",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "SQLは、企業のデータを扱うのに使われるから、身につけておいて損はない。 以下の動画の5:28に飛んでいただきたい。 https://youtu.be/v-Mb2voyTbc?si=XcjnyefIzjDv2i1K&t=400 SQLは大事 複雑になると分からないが、コツを理解すると一気にわかるようになるそうだ。 アジェンダ 全部、基礎中の基礎である。 基礎ができていないと応用が効かないということで、早速見ていこう。 SELECT FROM kimetsuテーブルからnameとfeatureを取得したい場合を考える。 以下のSQLで実現可能だ。 SELECT name, feature FROM kimetsu; データベースでは、表形式でデータを保存していて、表のことをテーブルと呼ぶ。列を",
+    "body_end": " * FROM eva ORDER BY kawaii ; 実行イメージはこちら。 最後にDESCをつけると降順になる。 SQLを書く上での秘訣 SELECTやWHEREなどを予約語と呼ぶ。それを大文字にしましょう。 予約語の文の後は改行する。 データが10,000件とかになってくるとサーバーに負担がかかる。それを防ぐために、SELECTで列名指定とLIMITを行う。 ＊で、すべてのデータを持ってくると負荷がかかってしまうが、列名を指定すれば負荷が減らせる。 LIMITで行数を制限するのもいい。"
+  },
+  {
+    "id": 19980,
+    "title": "SQLの学習をProgateで",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": "早速、ProgateでSQLを学習していく。 データベースって何を勉強すればいいの？ という記事で、 ProgateでSQL を学んでいくのが手軽でいいという話をした。 早速、レッスンを初めていく。 以前にもひと通りやったことがあるが、忘れている可能性もあるため、もう一度行う。 著作権に触れないように、教材の内容については書かないことにする。 ブログベースで学習をすることで、モチベーションを保っていきたい。 本日の学習内容 SQL１を学習していく。 https://prog-8.com/courses/sql 「データを取得しよう」から進めていく。 https://prog-8.com/lessons/sql/study/1 データを取得しよう データベースに送る命令のことを「クエリ」と呼ぶ",
+    "body_end": "ataのレコードを指定したいときは、以下のようにする（shibataはデータ型が文字列型なので、\" \"で囲む） SELECT * FROM peaple WHERE name = \"shibata\"; 数値の場合は、\" \"で囲まない。 日付は、\" \"で囲む必要がある（' 'でもOK） 今日学習した内容 WHEREまで学習した。 PLUSがついてない項目は無料で学習できるので、これを読んでいるあなたも、会員登録してやってみて欲しい（ https://prog-8.com/courses/sql ）"
+  },
+  {
+    "id": 2220,
+    "title": "MySQLについて",
+    "topics": [
+      "sql"
+    ],
+    "body_excerpt": ".single pre.ml-adjust {margin-left: 22px;} @media(max-width: 767px) {.single pre.ml-adjust {margin-left: 3px;margin-right: 3px;}} 先日、EC-CUBE3で新しいページを作成しようとしたときに上手くいかなかったので、色々とググっていたところ、下記のようなページにたどり着きました。 https://umebius.com/eccube/新規ページでヘッダーフッターが表示されない場 そこでは 「データが足りないので新しく追加すればページを追加することができます。」と書いてありました。しかし、どうやって追加すればいいのか分からなかったので、SQLについて学習してみようと思",
+    "body_end": "列のことです。 固定長文字列型とは、「決まった長さの文字しか入れませんよ〜」ということです。 非NULL制約とは、「空はダメですよ〜」ということです。 まだまだ学び足りない 今回購入した本で学んだ事は、MySQLの基本的な構文でした。しかし、EC-CUBEなどのCMS(Contents Management Sysytem)において、どのようにデータベースを操作していくのかといった事はまだ分かりません。 今後は、CMSでどのようにデータベースを操作していくのかについて、調べて行けたらと思います。"
+  },
+  {
+    "id": 41581,
+    "title": "AIと共同制作したJavaScriptをConsoleに打ち込んで192件のコンテンツ削除を自動化した",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "Gemini Notebookの上限が来てしまったので、コンテンツを削除したい。 ノートブック数が上限に達しました。 アップグレードしてください。 しかし、問題がある。 手作業が非効率 194個のノートブックがある。 ブラウザ操作をJSで自動化できるか？ できた。 ソースコード 以下をConsoleに打ち込んだ。（うまくいかない時があった。修正版は こちら ） (async () => { const doc = $0?.ownerDocument ?? document; const sleep = ms => new Promise(resolve => setTimeout(resolve, ms)); const isVisible = element => element && e",
+    "body_end": "}/${initialCount}件を削除しました` ); })(); AI駆動開発 AIとやりとりをしながら目的のツールを作成した。 一つ一つの３点リーダークリック→削除をConsoleに入力するJSで自動化できますか？ 要素のDOMを渡します。先ほどのコードで修正点があれば修正してください エラーが出ました 最終確認が出ますので、これもソースに反映させてください まだ最終確認ボタンが表示されます 何も起こりません 削除ボタンが見つかりません ここから先をどうすればいいですか？ 削除できました"
+  },
+  {
+    "id": 40609,
+    "title": "FastAPI・Jinja2でCSSのキャッシュ対策を整理した",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "ブラウザのキャッシュが原因で、CSSを修正したのに、本番環境で反映されませんでした。 これまでは、HTML側で読み込む style.css と、その中で @import している個別CSSの両方にバージョンを付けていました。 <link rel=\"stylesheet\" href=\"/static/style.css?v=2.1.3\"> @import url(\"css/pages/top.css?v=2.0.4\"); この方法だと、 top.css を修正した際に、 top.css のバージョンを変更 style.css のバージョンも変更 という二重管理が必要になります。 そこで、CSSのバージョンを1か所で管理する形に変更しました。 FastAPIでJinja2を使っているため、 ba",
+    "body_end": "修正 ↓ css_versionを変更 だけです。 小さな変更ですが、CSSファイルが増えてくるほど管理はかなり楽になります。 将来的にはViteなどを使って、ファイル内容から自動的にハッシュを付ける方法もありますが、現状の規模では今回のようにJinja2でバージョンを一元管理する方法がシンプルで扱いやすいと感じました。 https://github.com/ki-hi-ro/my-portfolio/commit/93f546fd6b690538132341ef60adf22b448103c3"
+  },
+  {
+    "id": 39736,
+    "title": "Django × React ToDoアプリの開発記録",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "フェーズ1：基盤構築とAPI連携 投稿日 記事タイトル 開発過程における位置・役割 2025.03.01 WEBエンジニアとして今の自分に足りないスキルとギャップを埋めるための行動計画 開発の起点 ：自身のスキル不足を補い、実力を証明するためのポートフォリオ作成を計画する。 2025.03.02 タスク管理アプリを作っていく バックエンド構築（初期） ：DjangoとDRFを使用し、モデルやシリアライザー、APIエンドポイントの基本実装を行う。 2025.03.02 現状のデータのレコードを確認する 動作検証 ：Djangoのシェル機能を活用し、データベース（Taskクラス）へのレコード保存・取得を検証する。 2025.03.02 Django製のタスク管理アプリをGitHubでホスティング",
+    "body_end": "マイルストーン①達成 ― Django REST FrameworkのデータをReactへ表示する マイルストーン①の完遂 ：モデルにカテゴリと期限を追加し、React側の型定義を修正。タスク名・カテゴリ・完了状態・期限の4項目をReact画面に表示し、データの見える化を達成する。 GitHubリポジトリ バックエンドAPI https://github.com/ki-hi-ro/django_todo フロントエンド https://github.com/ki-hi-ro/react_todo"
+  },
+  {
+    "id": 37938,
+    "title": "WordPress投稿一覧に「複製」を追加するプラグインを作ってみた ー とにかく何か作っていこう（開発者として）ー",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "WordPressをバージョンアップしてから、記事を複製するプラグインが有効化されていないことに気付いた。 自然動画の記事の一部を切り出して別記事として公開したくなった時に気付いた。 今回は、そのためのWordPressプラグインを作成してみることにした。 やりたいこと 自然動画の記事の中に、夜に流したい動画が含まれていた。 その動画だけを独立した記事として公開したい。 しかし、元記事の内容を一からコピーして作り直すのは手間がかかる。 そこで、投稿一覧からワンクリックで記事を複製できる機能を追加することにした。 WordPressプラグイン開発は初挑戦 これまで、WordPressのプラグインを自作したことはなかった。 そのため、今回はAIに相談しながら進めていくことにした。 AIと対話しな",
+    "body_end": "ながら進めると未経験の領域にも挑戦しやすい 自分専用の小さなツールでも積み上げれば技術資産になる 「不便だな」と感じたことは開発の良いテーマになる おわりに 今回作成したのは、とても小さなプラグインである。 しかし、自分が実際に困っていたことを解決するために作ったという点に価値がある。 開発者として成長するためには、大きなサービスを作る前に、 「まずは目の前の不便を解決する」 という積み重ねが大切だと思う。 とにかく何か作っていこう。 その積み重ねが、いつか大きな技術資産になっていくはずである。"
+  },
+  {
+    "id": 37751,
+    "title": "マイルストーン①達成 ― Django REST FrameworkのデータをReactへ表示する",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "https://github.com/ki-hi-ro/react_todo#%E9%96%8B%E7%99%BA%E7%8A%B6%E6%B3%81 人生を経営するための行動管理システムの開発を進めている。 今回のマイルストーン①の目標は、 Django REST FrameworkのAPIからタスクを取得し、React画面へ表示する ことである。 表示項目は以下。 タスク名 カテゴリ 完了状態 期限 最終的にReact画面へ表示することを目標に進めた。 マイルストーン① まずは現在地を確認した。 React画面にはタスク一覧が表示されている。 しかし表示されているのはタスク名のみ。 READMEで定義したマイルストーン①では、 カテゴリ 完了状態 期限 も表示する必要がある。 そこで、D",
+    "body_end": "常に重要な考え方だと思う。 次にやること 次はマイルストーン②。 https://github.com/ki-hi-ro/react_todo#%E3%83%9E%E3%82%A4%E3%83%AB%E3%82%B9%E3%83%88%E3%83%BC%E3%83%B3%E7%99%BB%E9%8C%B2 目標は、 React画面からタスクを登録できるようにする ことである。 タスク登録フォーム POST API連携 登録後の自動再描画 を実装し、 Create（登録）機能を完成させていきたい。"
+  },
+  {
+    "id": 37623,
+    "title": "Django × React ToDoアプリを再始動したら、仮想環境・Vite・Djangoサーバーで詰まった話",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "ブログベースで進める これが自分の真実 Django × ReactのTODOリストを進めよう Django側の現状確認 ↓ GitHubのリポジトリ ローカルサーバーを起動する ローカルで、以下のコマンドを叩く（ローカルサーバーを起動するため） python manage.py runserver Djangoが読み込めないエラーが発生 djangoがないというエラー ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual enviro",
+    "body_end": "更新処理を行えるようにしたい。 さらに、不要になったタスクを削除できるようにする。 一覧表示 ↓ 追加 ↓ 更新 ↓ 削除 まで実装できれば、一通りのCRUD機能が揃う。 その後は見た目の改善も行いたい。 現状は最低限の表示のみなので、 レイアウト調整 ボタンデザイン フォームデザイン レスポンシブ対応 などを行い、実際のアプリらしいUIへ近付けていく。 今回でDjangoとReactの接続部分は確認できた。 次のフェーズは、 「データを取得する」 から 「データを操作する」 へ進んでいきたい。"
+  },
+  {
+    "id": 37260,
+    "title": "WordPressの記事をREST APIで取得してポートフォリオへ反映する仕組みについて解説します",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "現在開発中の「My Portfolio」の技術ブログ一覧ページで、「WordPress同期」ボタンを押せば、 以前、WordPressで書いた技術ブログのデータが同期されるようにしました。 ↓ 同期後にサクセスメッセージを表示させています。 WordPress REST APIとは WordPress REST APIとは、WordPressの記事データをJSON形式で取得するための仕組みです。 プログラムから記事情報を取得できるため、今回のようにWordPressの記事を別のシステムへ取り込む際に利用できます。 WordPress記事同期の処理フローの全体像 全体の処理の流れは以下のとおりです。 同期処理を開始する ローカル環境で「WordPress同期」ボタンを押すと、 /blogs/i",
+    "body_end": "まとめ 今回は、WordPress REST APIで取得した記事データを、自作ポートフォリオサイトのDBに同期する仕組みを実装しました。 Googleスプレッドシートで対象記事を管理し、WordPress REST APIから記事情報を取得し、DBに存在する記事は更新、存在しない記事は新規登録、WordPress側に存在しない記事は削除するようにしました。 単に記事を取得するだけではなく、外部サービスのデータを自作アプリケーションに取り込み、同期状態を管理する処理を作れたのが大きな学びでした。"
+  },
+  {
+    "id": 37152,
+    "title": "FastAPIのトップページが表示されるまでのルーティングの仕組み",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "My Portfolio は、PythonのWebフレームワークであるFastAPIを使用して開発しています。 本記事では、トップページのURL（http://127.0.0.1:8000/）にアクセスしてから、 HTMLが画面に表示されるまでの処理の流れを整理します。 全体の処理の流れ トップページが表示されるまでの流れは、次の5段階です。 ブラウザからトップページのURLにアクセスする FastAPIが top_page 関数を実行する セッションとデータベースから必要な情報を取得する 取得した情報を top.html へ渡す Jinja2がHTMLを生成し、ブラウザに表示する 1.トップページのURLにアクセスする ブラウザから以下のURLへアクセスします。 http://127.0.",
+    "body_end": "stAPIでトップページを表示する処理は、次の役割に分かれています。 @router.get(\"/\") URLとPythonの関数を関連付ける top_page 関数 セッションやデータベースから必要な情報を取得する TemplateResponse 取得した情報をテンプレートへ渡す top.html 受け取った情報をJinja2でHTMLに埋め込む このように、FastAPI側ではデータの取得や画面表示に必要な情報の準備を行い、Jinja2側では受け取った情報を使ってHTMLを生成しています。"
+  },
+  {
+    "id": 33232,
+    "title": "CDNでVue 3を使用する",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "Vue.jsで作成したプログラムの「ビンゴゲーム」と「宣言的レンダリング & リアクティビティ」で、CDMのvueの読み込み方が異なっている。 ビンゴゲームの文脈 <head>タグの中に以下を記入している。 <script src =\"https://unpkg.com/vue@3/dist/vue.global.prod.js\"></script> https://github.com/ki-hi-ro/bingo/blob/master/bingo.html 宣言的レンダリング & リアクティビティの文脈 </main>の後に以下を記入している。 <script src=\"https://unpkg.com/vue@3/dist/vue.global.js\"></script> http",
+    "body_end": "b.com/ki-hi-ro/my-vue-js/blob/main/vue-js-1/index.html どこにCDNを書けばいい？ vueスクリプトが実行される前であれば、どこでもいい。 <head>内、</body>直前に書かれるのが典型的なパターン。 </body>の直前に書くと、DOMが確実にレンダリングされた後なので、安心できる。 globalとprodの違い globalは開発用でサイズが大きい。エラーメッセージがある。 prodは本番用でサイズが小さい。エラーメッセージがない。"
+  },
+  {
+    "id": 32879,
+    "title": "vuedraggableの仕組みを理解する",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "要素をドラッグアンドドロップできるVue.jsライブラリ「vuedraggable」の仕組みを理解するために記事を書いていく。 現状の動作 サバ味噌煮を高カカオチョコレートの下に持っていったりすることができる。 before after サバ味噌煮をクリックした状態で、高カカオチョコレートの下まで移動して、クリックを手放した。 現状のソース frontend/src/components/ShoppingList.vue から、vuedraggableに関連する部分を抜粋する。 <template> <div> <form @submit.prevent=\"createSection\" class=\"row\"> <input v-model=\"newSectionTitle\" placeho",
+    "body_end": ", { id: 2, name: '🍌 バナナ' }, { id: 3, name: '🍇 ぶどう' }, ]) スタイル /* 見やすさ用の最低限 */ .list { margin: 8px 0; } .list-item { padding: 8px 12px; margin: 6px 0; background: #f6f6f6; border: 1px solid #ddd; border-radius: 8px; cursor: grab; } 画面（並べ替え前） 画面（並べ替え後）"
+  },
+  {
+    "id": 28986,
+    "title": "ReactでDjango REST frameworkのバックエンドAPIと連携してタスク一覧を表示させる",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "【フロントエンドとの連携】CORS設定でフロントエンドからAPIを呼び出せるようにする でフロントエンドとの連携に必要なCORS設定を行った。 今回はReactを使用して、DRFとの連携を行い、最終的にはタスク一覧をReactの開発環境で表示させる。 viteを使ってReactプロジェクトを作成 vite（ヴィート）は、ReactやVueのフロントエンド開発で使われる高速なビルドツール。 ビルドツールとは、プログラムの開発において、ソースコードを変換・最適化して実行可能な形式にするためのツール。 新規Reactプロジェクトを使用するので、gitでリポジトリを作成した。 ローカルにもフォルダを作成する。 リポジトリの初期化を行なった。 Mac:react_todo shibatahiroshi",
+    "body_end": "残っていたことによるエラーを解決 して、npm run devで開発サーバーを起動すると上記の画面になった。 当初の想定としては、DjangoのバックエンドAPIで構築したタスクデータをReactのフロントエンドに表示させることだったので、それを目指していこう。 データを表示させる CORS設定を見直すことで、発生していた3つのエラーが芋づる式に解決した で奮闘した結果、以下のようにDjangoのバックエンドで作成したデータをAPIで取得して、フロントエンドのReactで表示させることができた。"
+  },
+  {
+    "id": 28976,
+    "title": "【フロントエンドとの連携】CORS設定でフロントエンドからAPIを呼び出せるようにする",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "現状、Django REST frameworkで、タスクアプリのバックエンドが構築されている。 現状のタスク管理アプリで出来ること タスクの一覧表示、新規登録、詳細表示、更新、削除。 詳しくは Django REST Framework（DRF）のルーティングがどのように機能しているかを深掘りし、urls.pyの仕組みを完全理解する | ki-hi-ro.com > 一覧取得 を参照していただきたい。 これからやりたいこと ReactまたはVue.jsを使用して、フロントエンドと連携していきたい。 最初のステップ まずは、CORS設定というものを行い、フロントエンドからAPIを呼び出せるようにする必要がある。 CORS設定とは Cross-Origin Resource Shareing、",
+    "body_end": "s: 100% (4/4), 478 bytes | 478.00 KiB/s, done. Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 remote: Resolving deltas: 100% (3/3), completed with 3 local objects. To https://github.com/ki-hi-ro/django_todo.git 1785315..c17a829 master -> master"
+  },
+  {
+    "id": 28881,
+    "title": "Django REST Framework（DRF）のルーティングがどのように機能しているかを深掘りし、urls.pyの仕組みを完全理解する",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "APIの設計においてルーティングはバックエンドとフロントエンドの接続点となる。 正しく理解することで、拡張や修正がしやすくなる。 urlpatternsとは urlpatternsは、URLルーティングを定義するためのリスト。 path()やre_path()で定義されたURLパターンが含まれる。 これにより、特定のURLにアクセスしたときに、どのビューが処理するのかを指定できる。 現状のタスク管理アプリを見ていく 例えば、以下の「django_todo > myapp > urls.py」を見ていこう。（ django_todo/myapp/urls.py at master · ki-hi-ro/django_todo ） from django.urls import path, in",
+    "body_end": "\" data-toggle=\"modal\" data-target=\"#deleteModal\" data-original-title=\"Make a DELETE request on the Task Instance resource\">DELETE</button> 削除ボタンをクリックすると、モーダルが表示された。ここに削除フォームがあった。 <form class=\"button-form\" action=\"/api/tasks/1/\" data-method=\"DELETE\" >"
+  },
+  {
+    "id": 28844,
+    "title": "Django製のタスク管理アプリをgithubでホスティング→別デバイスでクローン",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "先日作成し始めたタスク管理アプリをguthubで管理できるようにした。 リモートリポジトリの作成 これは最初のコミットをした後だが、こちらはみなさんも画像をクリックすればアクセスできる。 ローカル→リモート (venv) Mac:django_todo shibatahiroshitaka$ git init hint: Using 'master' as the name for the initial branch. This default branch name hint: is subject to change. To configure the initial branch name to use in all hint: of your new repositories, w",
+    "body_end": "2.07 MiB/s, done. Total 20 (delta 1), reused 0 (delta 0), pack-reused 0 remote: Resolving deltas: 100% (1/1), done. To https://github.com/ki-hi-ro/django_todo.git * [new branch] master -> master クローン macbookで作成していたので、iMacでも開発できるようにクローンしていきたい。 クローン完了！"
+  },
+  {
+    "id": 14146,
+    "title": "WordPressで存在しない画像ファイルを判定する方法。file_exists()を使用。",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "本サイトでタグのアイコンを表示させるPHPを書いているのですが、まだ画像を用意していないタグのアイコンで、Safariで？マークが表示されていました。 file_exists()とget_template_directory()という関数を使用して、画像ファイルがある時だけタグのアイコンが表示されるようにしたら、問題が解消しました。 問題を解決するまでのステップを書いていきます。 発生していた問題について詳しく 問題が発生していた時のソースコードはこちらです。 <?php $flag = get_the_tags(); foreach ( (array)$flag as $tag ) {} if($tag) : $tag_image = get_template_directory_uri(",
+    "body_end": "et_template_directory() . \"/assets/img/tag/\" . $tag -> slug . \".png\"; if(file_exists( $tag_image_system )) : ?> <img src=\"<?php echo $tag_image ; ?>\" alt=\"\" class=\"all-article__tag-icon\"> <?php endif; ?> これでタグアイコンの画像ファイルが存在しない時に、safariで？マークが出なくなりました。"
+  },
+  {
+    "id": 7651,
+    "title": "カレンダー入力のUI作成、vuejs-datepicker",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "クラウドワークスで、お問い合わせフォームの日付入力をプルダウン形式からカレンダー入力形式に変更して欲しいというご相談を受けました。 学習ブログを書いていきます。 今回の要件 引越し予定日の年・月・日をカレンダーから選択できるようにする。 ライブラリを使うための準備 まずは、vue.jsとvuejs-datepickerを読み込みました。 https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js https://unpkg.com/vuejs-datepicker 最も基本的な形 See the Pen vue datepicker by Shibata Hiroki ( @khiro-enginner ) on CodePen ",
+    "body_end": "disabled-dates=\"disabledDates\" > </vuejs-datepicker> 手順2: Vue.jsに、データを追加する data: { DatePickerFormat: \"yyyy年MM月dd日\", ja: vdp_translation_ja.js, disabledDates: { to: new Date( new Date().getFullYear(), new Date().getMonth(), new Date().getDate() ) } },"
+  },
+  {
+    "id": 7432,
+    "title": "Vue.jsとjQueryの違い",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "Vue.jsとjQueryの違いについて見ていきます。 手続的か宣言的か jQueryは手続的 であるのに対して、 Vue.jsは宣言的 です。 シンプルな例 例えば、 入力した文字がすぐ下に追加される というシンプルな例を見ていきましょう。 以下のデモでは、 aと入力して追加ボタンを押すと、すぐ下にaと表示される のが確認できます。 See the Pen jQuery by Shibata Hiroki ( @khiro-enginner ) on CodePen . jQueryの場合 jQueryの場合を見ていきましょう。 HTML HTMLでは、以下の3点を書いています。 入力欄 追加ボタン テキストが追加される場所 See the Pen jQueryでテキスト追加を行う場合 b",
+    "body_end": "言しています 。 text-wrap をエレメントとして newText と text_array をデータとして addText をメソッドとして See the Pen jQuery by Shibata Hiroki ( @khiro-enginner ) on CodePen . Vue.jsのメリット 今回記事を書いてみて、以下のメリットが考えられると思いました。 HTML構造とデータが分かれているため、 HTML構造に変更をかけやすい HTMLを見ただけで、何がどうなるのか予想できる"
+  },
+  {
+    "id": 7313,
+    "title": "vercelを使用してNext.jsをデプロイしました",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "前回の記事 でNext.jsをセットアップして、ローカル環境で起動しました。 今回は、Vercelを使用してデプロイを行なっていきます。 https://www.youtube.com/watch?v=15WLMqnkPsE しまぶーさんが出してくれていた動画を参考にします。 デプロイするサイト ローカル環境で作成した、Next.jsのセットアップ画面をデプロイしていきます。 localhost:3000 Vercelのアカウントを作成する 公式サイト の「Sign Up 画面」から、GitHubと連携してアカウント作成ができました。 GitHubのリポジトリを作成する ローカルで作成していた「my-react」というフォルダを、GitHubのリポジトリとして作成しました。 ローカルのフォル",
+    "body_end": "リック Importをクリック 設定を確認しデプロイする 設定を確認して、Deployボタンを押します。 今回は設定を変更する必要はありませんでした。 ボタンを押すと、Vercel上でデプロイの様子が確認できます。 完了すると紙吹雪が舞いました。 画像をクリックするとデプロイされたURLにアクセスできました。 今回は、 https://my-react-lemon.vercel.app/ というURLでデプロイされていました。 https://my-react-lemon.vercel.app/"
+  },
+  {
+    "id": 6804,
+    "title": "Djangoの開発用サーバーを立ち上げてみた",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "Pythonのフレームワーク「 Django（ジャンゴ） 」について書いていきます。 今後、WEBエンジニアとして活躍していくのに、 WEBアプリケーションを一人で作成できる知識 が必要だと思ったので、こちらの本を購入しました。 こちら から購入できます。 この記事では、 Djangoをインストールして、Djangoの雛形をローカル開発環境で確認するまで の過程を記録していきます。 Djangoをインストールする まずは、 python と pip（pythonのパッケージ管理システム） がインストールされていることを確認しました。 Mac:Downloads shibatahiroshitaka$ python --version Python 3.6.5 Mac:Downloads sh",
+    "body_end": "ersion 3.2.16, using settings 'mydjango.settings' Starting development server at http://127.0.0.1:8000/ Quit the server with CONTROL-C. commandを押しながら、http://127.0.0.1:8000/ をクリック すると、一番最初の画面がブラウザで確認できました。 http://127.0.0.1:8000/ http://127.0.0.1:8000/"
+  },
+  {
+    "id": 6776,
+    "title": "Next.jsのセットアップを行いました",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "テスト環境を起動して、http://localhost:3000をcommandを押しながらクリックすると、Welcome to Next.js！という最初の画面に到達することができました。 Welcome画面が表示されるまで node.jsのバージョン確認を行い、yarn create next-appをコマンドで打ち込むとmy-reactという名前でプロジェクトが作成されました。 yarn devを入力すると、url: http://localhost:3000が表示されました。 node.jsのバージョン確認 しまぶーさんの動画と自分がこれからNext.jsを学んでいく理由 https://www.youtube.com/watch?v=15WLMqnkPsE しまぶーさんが、Next",
+    "body_end": "m@11.16.0 npm notice hiroki@shibatahiroshitakanoMacBook-Air my-react % yarn -v 1.22.22 これでもyarn devができない場合、yarn installを行います。 http://localhost:3000 をcommandを押しながらクリック しました。 そうすると、以下の画面が開きました。 localhost:3000 次回 次回は、同じ動画の内容で、 Vercelを使用したデプロイ を行なっていきます。"
+  },
+  {
+    "id": 6724,
+    "title": "WordPressでキーワード検索を作成する方法",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "本日、当サイトのサイドバーに 検索ボックス を作成したので、その方法をまとめていきます。 本日作成した検索機能 キーワードを入力して、Enterキーまたは検索ボタンをクリックすると、 そのキーワードが本文中やタイトルに含まれる記事 が表示されます。 例えば、「vue」というキーワードで検索すると、「vue」が含まれる記事が検索結果に表示されます。 検索中 検索結果 作成手順 以下のような手順で検索機能を作成しました。 検索窓の作成・設置 検索結果ページの作成 見た目の調整 検索窓の作成・設置 searchform.php というテンプレートファイルを新規作成しました。 以下のコードを記入しました。 <form action=\"<?php echo home_url(); ?>\" class=",
+    "body_end": "-img { width: 22px; padding-top: 4px; padding-left: 4px; } } VScodeのプラグイン「live sass compiler」でCSSに変換したものを、functions.phpで以下のようにして読み込みました。 wp_enqueue_style('search-form', get_template_directory_uri() . '/assets/css/search-form.css', [], date(\"YmdHi\"));"
+  },
+  {
+    "id": 6695,
+    "title": "Next.jsで学ぶReact講座 #1 Next.jsで重要な部分",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "しまぶーさんが、以下のような動画を出してくれていました。 今後WEBエンジニアとして活躍していくのに、Next.jsを学んでおいておいた方がいいと思うので、まずは、この動画に沿って学んでいきます。 Next.jsで重要な部分 太字の部分は、最初のうちから特に重要な部分です。 Zero Config Hybrid: SSG and SSR, Incremental Static Regeneration TypeScript Support File-system Routing API Routes Built-in CSS Support Zero Config https://nextjs.org/ 素のReactだと自分で設定ファイルをいじらなければいけないところを、Next.jsがい",
+    "body_end": "t.jsが楽にしてくれています。 とても重要な機能です。 API Routes https://nextjs.org/ 非常に有用ですが、初心者のうちはそうでもないので、一旦飛ばしてOKです。 Built-in CSS Support https://nextjs.org/ 素のReactだと大変なCSS ModulesをNext.jsが準備してくれています。 次回 次回は同じ動画の内容で、以下の2つについて書いていきます。 ローカルでNext,jsをセットアップする vercelでデプロイする"
+  },
+  {
+    "id": 6529,
+    "title": "Nuxt.jsをインストールしてみた",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "vue.jsのフレームワーク「Nuxt.js」 をインストールしてみました。 最終的には、スタートページが表示されましたが、 なかなかスムーズにインストールが進まなかったので、その過程も書いていきます。 公式サイトのドキュメント 公式サイトのインストールページ にインストールに必要な情報がまとまっていました。 https://nuxtjs.org/ja/docs/get-started/installation/ https://nuxtjs.org/ja/docs/get-started/installation/ インストールに必要なもの node.js（バージョン6.1以上） VScodeなどのテキストエディタ ターミナル npmでインストールしようとしたら上手くいかなかった npm ",
+    "body_end": " 4.70s ✔ Server Compiled successfully in 4.27s ℹ Waiting for file changes 16:13:32 ℹ Memory usage: 225 MB (RSS: 311 MB) 16:13:32 ℹ Listening on: http://localhost:3000/ 16:13:32 完了 http://localhost:3000/ をcommandを押しながらクリック して、ブラウザで開くと、スタートページが表示されました。"
+  },
+  {
+    "id": 6404,
+    "title": "vuetify",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "vuetifyについて調べてみました。 vuetifyとは？ Vue.jsのUIフレームワークです。 始め方 https://next.vuetifyjs.com/en/getting-started/installation/#installation 公式ドキュメントの流れに沿って、進めていきました。 vuetifyのインストール yarn create vuetify を入力すると、以下のようになりました。 Mac:vuetify shibatahiroshitaka$ yarn create vuetify yarn create v1.22.4 [1/4] 🔍 Resolving packages... [2/4] 🚚 Fetching packages... [3/4] 🔗 Li",
+    "body_end": "Local: http://localhost:3000/ ➜ Network: use --host to expose 先ほど生成されたlocalhost:3000をcommandを押しながらクリックすると、以下のような画面にたどり着きました。 vuetifyで何ができるの？ 例えば下記のように入力すると、 <v-card elevation=\"4\" ></v-card> こちらのようなUIが作成できます。 https://vuetifyjs.com/en/components/cards/"
+  },
+  {
+    "id": 5727,
+    "title": "WordPressテーマを移行する際の手順と注意点",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "先ほど、クラウドワークスでこのような案件がありました。 https://crowdworks.jp/public/jobs/8422575 https://crowdworks.jp/public/jobs/8422575 WordPressのテーマを移行する際の手順と注意点 について、 調べたことも踏まえて書いていきます。 手順 いつでも戻せるように既存テーマのバックアップを取っておく 新規テーマをアップロードする ライブプレビューで表示確認する 崩れなどがある場合は修正する 新規テーマを有効化する いつでも戻せるように既存テーマのバックアップを取っておく 現在、有効化されている「移行前のテーマ」の バックアップを取っておきます 。 「All-in-One WP Migration」という",
+    "body_end": "する ライブプレビューで、 崩れや元のサイトとの違いが見られた場合は、修正します 。 新規テーマを有効化する 崩れなどが修正できたら、移行したい「新規テーマ」を有効化します。 注意点 テーマでGoogle Analiticsなどの設定をしている場合は、 移行先のテーマでも設定する必要があります 。 設定する箇所がない場合は、プラグインなどを使用して、 元のサイトにあった設定を追加しましょう 。 Google Analiticsの場合は、「Site kit」というプラグインを使用するのが便利です。"
+  },
+  {
+    "id": 5415,
+    "title": "【WordPress】日付一覧ページで年を指定する方法",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "日付一覧ページのテンプレートファイル「date.php」で、 投稿した年を指定する方法 について書いていきます。 記事の取得は、 get_posts で行っています（WP_Queryを使うやり方もあります）。 URLに含まれる投稿年の数字を取得する まずは、 get_query_var でURLに含まれる投稿年の数字を取得します。 <?php $year = get_query_var('year'); ?> 例えば、2020年3月の場合 2020 が取得されます。 引数に年を設定する 次に、 get_posts(); に渡す $args に、先ほど取得した $year を指定します。 <?php $year = get_query_var('year'); $args = array( '",
+    "body_end": "した 。 WordPressのおすすめ本 本記事の内容に関連してWordPressのおすすめ本を紹介します。 WordPress 仕事の現場でサッと使える! デザイン教科書 私が、 WordPressで自作テーマ作成が出来るようになったきっかけとなった本 です（当サイトも自作テーマを使用しています）。 本記事では、 get_posts を使用して投稿の情報を取得していますが、この本では WP_Query を使用していました。 WordPressの基本的なことも 網羅的に学べる のでおすすめです。"
+  },
+  {
+    "id": 4032,
+    "title": "CDNから直接Vueを使用する方法、宣言的レンダリング、リアクティビティー（カウンター）",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "CDNから直接Vueを使用する方法 宣言的レンダリング リアクティビティー（カウンター） について書いていきます。 サンプルコード index.htmlをブラウザで開くと、サンプルが表示されます。 https://github.com/ki-hi-ro/my-vue-js/tree/main/vue-js-1 このようなサンプルです。 CDNから直接Vueを使用する方法 以下の記述を行います。 <script src=\"https://unpkg.com/vue@3/dist/vue.global.js\"></script> 公式サイトの該当箇所はこちらです。 https://ja.vuejs.org/guide/quick-start#using-vue-from-cdn 宣言的レンダリン",
+    "body_end": "essage }}に、JSでdataとして書いたmessage: 'Hello Vue'がレンダリングされていることが確認できました。 リアクティビティー（カウンター） HTMLの{{ count }}にJSでdataとして定義したcount: 0がレンダリングされ、@click=\"count++\"\"があるので、ボタンを押すとリアクティブに1プラスされます。 公式サイトの該当箇所はこちらです。 https://ja.vuejs.org/guide/introduction#what-is-vue"
+  },
+  {
+    "id": 4275,
+    "title": "WordPressの関数get_posts() で指定したカテゴリーの記事情報を出力する方法",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "@media (min-width: 768px) { ol { padding-left: 65px; } } WPの出力記事を絞り込む方法は、WP_Queryとget_posts()があります。 この記事ではget_posts()で絞り込む方法を紹介します。 全体の流れ 指定したいカテゴリーのIDを調べる カテゴリースラッグを取得する 引数にカテゴリースラッグを指定する 関数get_posts()を使用する タイトルやサムネ画像などの出力したい記事情報を表示させる 指定したいカテゴリーのIDを調べる WP管理画面の「カテゴリーを編集」に「tag_ID=98」とあります。ここに書かれている数字がカテゴリーIDです。 カテゴリースラッグを取得する 関数get_categoriesでカテゴリー",
+    "body_end": "\"blog-list-scroll__img\" src=\"<?php echo get_template_directory_uri(); ?>/assets/img/blog/no-image.png\" alt=\"no-image\" /> <?php } ?> 投稿日 関数get_the_dateの引数に('Y.m.d')を指定することで、日付の表示のされ方を決めています。 // 投稿日 <?php echo get_the_date('Y.m.d'); ?> 以下のように画面に表示されます。"
+  },
+  {
+    "id": 4056,
+    "title": "タブ切り替えなどを実現するJavaScript",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "当サイトのトップブログセクションのタグをクリックするとそのタグの記事のみが表示されます（本記事執筆時点） 例えば技術ブログの「#HTML/CSS」をクリックすると、HTML/CSSというタグを持つ記事のみが表示されます。 こんな感じで何かの要素をクリックしたときに、対象の要素の表示・非表示が切り替わる仕組みをJavaScriptで実現するにはどうすればいいのかについて書いていきます。 まずは要素を取得して変数に入れる トリガー（きっかけ）となる要素と表示・非表示を切り替えたい要素の2つを取得して変数に入れます。 今回の例では前者がタグ、後者が記事となります。 トリガー（きっかけ）となる要素 今回の例では、top-skill-blog__tag-liというクラス名を持ったli要素です。 タグを",
+    "body_end": "ります。 記事には以下のようにしてタグのスラッグがクラスに表示されるように仕込んでおきました。 <a class=\" <?php echo $tag->slug; ?> blog-list-scroll__link blog-list-scroll__link--<?php echo $cat_slug; ?>\" href=\"<?php the_permalink(); ?>\"> クラスにクリックしたタグのスラッグがある場合は、非表示になりません。そのため、クリックしたタグの記事のみが残ります。"
+  },
+  {
+    "id": 3190,
+    "title": "TypeScript 学習 part10",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "こちらの本でTypeScriptの学習を進めています。 前回 は、本書のchapter3が完成しましたので、今回は、chapter4の「ブラウザで動くアプリケーションを作ってみよう」に入っていきました。 コミット履歴は こちら chapter4で作るアプリ chapter4で作るアプリは、ブラウザで動くTO DOアプリです。 ブラウザで動くアプリの留意点 アプリの規模が大きい場合は、ソースコードの見通しが悪くなるため、ファイルを分割する(モジュール)必要があります。 今回行ったこと 最終的に、コンソールに3と表示されるようにするために、サンプルファイルを用意して、webpackによって、typescriptをHTMLから呼び出せるようにしました。 最終的なブラウザのコンソール画面 サンプルフ",
+    "body_end": "package.jsonの編集 \"scripts\": { // 省略 \"build\": \"webpack\", \"serve\": \"serve ./ -p 3000\" // 省略 }, 動作確認 npm run buildで、tsのコードをjsに変換しました。 そして、npm run serveでローカルサーバーを起動し、ブラウザのアドレスバーにhttp://localhost:3000を打ち込み、動作確認を行いました。 次回 次回は、今回作成するTO DOアプリの見た目を準備できたらと思います。"
+  },
+  {
+    "id": 3035,
+    "title": "TypeScript 学習 part9",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "こちらの本でTypeScriptの学習を進めています。 前回 は、ユーザーがゲームを選択できるようにしました。今回は、その続きです。 コミット履歴は こちら 行ったこと ゲーム終了後にゲームを変更できるようにした ゲーム終了後に、最初に選んだゲームを変更することが出来なかったので、ゲーム変更ができるようにしました。 before 【ゲーム開始時】 hit and blowか、jankenのどちらかを選ぶ 【ゲーム中】 選択したゲームで遊ぶ 【ゲーム終了後】 最初に選択したゲームで遊ぶか、ゲームを中止するかの2択 after ゲーム終了後に、次に遊ぶゲームを変更できるようにしました。 change gameという定数を追加して、 const nextActions = ['play again",
+    "body_end": " abstract class Game { abstract setting(): Promise<void> abstract play(): Promise<void> abstract end(): void } クラスの利用 class HitAndBlow implements Game { //省略 } class Janken implements Game { //省略 } 次回 次回は、ついにchapter4の「ブラウザで動くアプリケーションを作ってみよう」に入っていきます！"
+  },
+  {
+    "id": 2929,
+    "title": "デザインカンプ固有のフォントをCSSで再現する方法",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "先日LPコーディングを行った際に、XDのデザインデータで指定されていたフォントを完全に再現することが出来なかったので、CSSでデザインのフォントを再現するにはどうすればいいのかについて書いていきます。 今回再現できなかったフォントと代替フォント 今回再現できなかったフォント 今回、デザインデータで指定されていたフォントは、 FOT-筑紫B丸ゴシック Std です。 XDでの表示 代替フォント 代替フォントとして、「Yu gothic」を設定しました。 ブラウザ上の表示 ソースコード 以下のコードを使用して、フォントの設定を行いました。 body { font-family: \"Yu Gothic\", \"Hiragino Kaku Gothic ProN\", \"Helvetica Neue\",",
+    "body_end": "プラス） のページに辿り着きました。 利用料金 FONT PLUSさんの場合、利用料金は、月額1,100円でした。 プランと料金 https://fontplus.jp/service/pricing 導入時には、クライアントさんと相談したほうが良さそうです。 結論 デザインのフォントを完全に再現するのが難しい場合、以下のような方法があることが分かりました。 代替フォントを指定する(CSSで複数指定・無料のWebフォントを利用) 有料のWebフォントサービスをクライアントさんと相談して、利用する"
+  },
+  {
+    "id": 2798,
+    "title": "HTML / CSSで実現可能なこと",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "おはようございます。フリーランスWeb制作エンジニアの柴田浩貴です。今回は、「HTML / CSSで実現可能なこと」というテーマで記事を書いていきます。 画面を構築することができる【HTML / CSS】 HTMLは、マークアップ言語と呼ばれ、画面の骨格を規定する言語です。一方、CSSはスタイルシート言語と呼ばれ、画面の見た目を規定する言語です。 例えば、下記サイトでは、AdobeXDというツールを使用して作成されたデザインをHTML / CSSを使用して再現して、出来上がったファイル一式をサーバーにアップして、WEBサイトとして公開しました。 例えば、コンテンツが豚の鼻にかかっている部分は、以下のようなHTMLとCSSで構成されています。 HTML <div class=\"main__co",
+    "body_end": ": -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; } まとめ 本日は、「HTML / CSSで実現可能なこと」というテーマで、以下の3点について書いていきました。 画面を構築することができる【HTML / CSS】 PHPと組み合わせて使用することができる【HTML】 画面幅に合わせて見た目を調整できる【CSS】 また、書きたいことが出てきたら書いていこうと思います！"
+  },
+  {
+    "id": 2754,
+    "title": "TypeScript 学習 part8",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "こちらの本でTypeScriptの学習を進めています。 前回 は、ユーザーが想定外の難易度を入力した時の対処を行いました。今回は、その続きです。 コミット履歴は こちら 行ったこと ユーザーがゲームを選択できるようにしました 新たにジャンケンゲームを追加して、ゲーム開始時にユーザーが、「ヒット・アンド・ブロー」か「ジャンケン」のどちらで遊ぶかを選択できるようにしました。 実行の様子 jankenを選んだので、ジャンケンが開始されました。 GameProcedureクラス 新たにGameProcedureというクラスを作成して、今回の機能を実装しました。 class GameProcedure { private currentGameTitle: GameTitle | '' = '' pr",
+    "body_end": "lected === 'rock') return 'win' if (randomSelected === 'paper') return 'draw' return 'lose' } else { if (randomSelected === 'rock') return 'lose' if (randomSelected === 'paper') return 'win' return 'draw' } } } 次回 次回は、ゲームが終わった時に、次のゲームを選択できるようにしていきます。"
+  },
+  {
+    "id": 2624,
+    "title": "TypeScript 学習 part7",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "こちらの本でTypeScriptの学習を進めています。 前回 は、ユーザーがゲームの難易度を選択できるようにしました。今回は、その続きです。 コミット履歴は こちら 行ったこと ユーザーが想定外の難易度を入力した時の対処 ゲームの設定では、normalとhardモードしか選ぶことが出来ません。仮にユーザーがvery hardと入力してしまった場合は、エラーが発生してしまう状態でした。 完成後の画面 まずnormalかhardを選ぶことが明示され、ユーザーがvery hardを選んでしまったら、再入力を促すようになりました。 promptSelect関数の作成 ユーザーにモードの選択肢を表示するpromptSelect関数を作成しました。赤字の関数(printLine, readLineについ",
+    "body_end": "randNum = Math.floor(Math.random() * this.answerSource.length) const selectedItem = this.answerSource[randNum] if (!this.answer.includes(selectedItem)) { this.answer.push(selectedItem) } } } // 以下省略 次回 次回は、新しいブランチを切って、hit and blow以外も遊べるようなゲームにしていきます。"
+  },
+  {
+    "id": 2602,
+    "title": "TypeScript 学習 part6",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "こちらの本でTypeScriptの学習を進めています。 前回 は、Hit&Blowにバリデーションを追加しました。今回は、その続きです。 コミット履歴は こちら 行ったこと never型 getAnswerLengthというプライベートメソッドに、never型を追加しました。 private getAnswerLength() { switch (this.mode) { case 'normal': return 3 case 'hard': return 4 default: const neverValue: never = this.mode throw new Error(`${neverValue} は無効なモードです。`) } } 型エイリアスの使用 モードをModeに代入する",
+    "body_end": " answerLength = this.getAnswerLength() // 以下省略 } settingメソッドの実行 ;(async () => { const hitAndBlow = new HitAndBlow() await hitAndBlow.setting() await hitAndBlow.play() hitAndBlow.end() })() 次回 次回は、ユーザーがnormalとhard以外の文字列を入力した場合の対応や、コードのリファクタリングをしていきます。"
+  },
+  {
+    "id": 2568,
+    "title": "TypeScript 学習 part5",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "こちらの本でTypeScriptの学習を進めています。 前回 は、Hit&Blowが一通り完成しました。今回は、その続きです。 コミット履歴は こちら 行ったこと 前回の不具合修正 前回、ゲーム実行時にendメソッド内の「試行回数」が表示されなかったのですが、もう一度コードを実行したら直っていました。 バリデーションの追加 ユーザーが、イレギュラーな値を入力した場合の処理を追加しました。 バリデーション実行結果 ソースコード validateメソッド(HitAndBlowクラス内に追記) private validate(inputArr: string[]) { const isLengthValid = inputArr.length === this.answer.length con",
+    "body_end": "すぐ上で定数を定義したら解決しました。 async play() { const answerLength = this.getAnswerLength() const inputArr = (await promptInput(`「,」区切りで${answerLength}つの数字を入力してください`)).split(',') // 以下省略 } 次回 次回もchapter3を進めていきます。 chapter4では、TO DOアプリをブラウザで表示できるようにしていくみたいなので、楽しみです。"
+  },
+  {
+    "id": 2494,
+    "title": "TypeScript 学習 part4",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "こちらの本でTypeScriptの学習を進めています。 前回 は、「Chapter3 Node.jsで動くアプリケーションを作ってみよう」に入りました。今回は、その続きです。 コミット履歴は こちら 完成したゲーム 今回作成しているゲームはこちらです。 一通りゲームが完成したので、ターミナルで実行して遊んでみました。 npm run buildで、tsをjsにビルド Mac:node-app shibatahiroshitaka$ npm run build > node-app@1.0.0 build /Users/shibatahiroshitaka/Desktop/study-typescript/node-app > tsc npm run startで、jsを実行 Mac:node",
+    "body_end": "('年齢を入力してください') console.log(age) process.exit() const hitAndBlow = new HitAndBlow() })() 解決方法 不要な部分を削除したら解決されました。 ;(async () => { const hitAndBlow = new HitAndBlow() })() 次回 ゲーム終了後の「試行回数: 〇〇回」が表示されなかったので、その修正を行い、残りのページを進めていきます。 chapter3は、残り60ページほどです。"
+  },
+  {
+    "id": 2462,
+    "title": "TypeScript 学習 part3",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "こちらの本でTypeScriptの学習を進めています。 前回 は、「Chapter2 基本的な文法」を学習しました。今回は、Hit & Blowというゲームを作成するという内容のChapter3に入っていきます。 こちら のブランチにコミットしていきます。 行ったこと 行ったことを書いていきます。 TypeScriptの環境構築 ゲームを作成するフォルダで、TypeScriptをJavaScriptにビルドするための記述と、JavaScriptを実行するための記述を行いました。 TypeScriptをJavaScriptにビルドするための記述 node-app/package.json { \"scripts\": { \"build\": \"tsc\" } } node-app/tsconfig.j",
+    "body_end": "input.trim() } ;(async () => { const name = await promptInput('名前を入力してください') console.log(name) const age = await promptInput('年齢を入力してください') console.log(age) process.exit() })() 次回 chapter3は、残り80ページほどなので、次回は時間を多めに割いて進めていきます。 最終的には、下記のようなゲームを作ることが目的です。"
+  },
+  {
+    "id": 2451,
+    "title": "TypeScriptとJavaScriprの挙動の違いなど",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "@media (min-width: 768px) { .youtube-wrapper--sp { display: none; text-align: center; } .youtube-wrapper--pc { text-align: center; margin-bottom: 27px; } } @media (max-width: 767px) { .youtube-wrapper--pc { display: none; text-align: center; } .single .wp-block-image { margin: 0; } .single pre { margin: 0 0 40px; } } 前回の記事 でTypeScriptを学び始めました。今回はその",
+    "body_end": "ンすることもできますが、 let my_name: string = 'Shibata Hiroki' 以下のようにアノテーションを省略することができます。 let my_name = 'Shibata Hiroki' 本日のコミット TypeScriptの基本的な文法を学習して、一部コードを書いていきました。 コミット履歴は こちら 次回 次回は、ヒットアンドブローというゲームを作成しながら学んでいきます。 YouTubeで調べたら、はじめしゃちょーがこのゲームに関連する動画を上げていました。"
+  },
+  {
+    "id": 2360,
+    "title": "TypeScriptを学んでいきます",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "最近、 Workship からの求人メールでTypeScriptの文字をよく見かけるので、学んでみたいと思います。 こちらの書籍を購入しました。 早速、本日学んだことをアウトプットしていきます。 学んだこと 学んだことを書いていきます。 TypeScriptとは TypeScriptは、JavaScriptのスーパーセット(機能を拡張したもの)です。 ECMAscriptとは JavaScriptの仕様を定めているのがECMAscript(エクマスクリプト)です。 tscコマンド tscコマンドはTypeScript Compilerの略で、TypeScriptをJavaScriptに変換するためのコマンドです。例えば、以下のように入力するとhello.tsがhello.jsに変換されます。",
+    "body_end": "ストールして、実際にtsファイルをjsファイルに変換しました。 学習用リポジトリ こちらのGitHub にstudy-typescriptという名前で学習用リポジトリを作成しました。 英語の公式サイト TypeScriptの英語の公式サイト からも、情報をインプットしていきたいと思いました。 今後の流れ 今後は、chapter2の基本的な文法をさらっと読んで、少しだけコードを書いて試していきます。その後、chapter3のnode.jsを使用したアプリケーション作成に入っていきます。楽しみです。"
+  },
+  {
+    "id": 2006,
+    "title": "WordPressで出力する記事を指定する方法",
+    "topics": [
+      "web"
+    ],
+    "body_excerpt": "ブログシステムのWordPressでは、出力する記事を指定することができます。 今回は、customというカスタム投稿タイプの記事を、記事数の指定無しで、投稿日の降順に出力させる場合のPHPの記述方法について書いていきます。 コード <?php $custom_posts = get_posts(array( 'post_type' => 'custom', 'posts_per_page' => -1, 'orderby' => 'date', 'order' => 'DESC' )); global $post; if($custom_posts): foreach($custom_posts as $post): setup_postdata($post); ?> <?php the_",
+    "body_end": "rby' => 'date', 'order' => 'DESC' )); global $post; if($custom_posts): foreach($custom_posts as $post): setup_postdata($post); ?> <?php the_title(); ?> <?php endforeach; wp_reset_postdata(); endif; ?> <?php the_title(); ?> の部分で、条件にあった記事のタイトルを出力しています。"
+  },
+  {
+    "id": 40278,
+    "title": "VS Codeの同期ボタンでgit pullが実行されていたことをreflogで確認した",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "FastAPIで作成しているMy Portfolioを更新していたところ、 git fetch を実行しただけなのに、リモートの変更がローカルにも反映されたように感じた。 通常、 git fetch だけでは、現在作業しているローカルブランチやファイルは更新されない。 何が起きたのか確認したところ、VS Codeの左下にある同期ボタンを押したことで、実際には git pull が実行されていたことが分かった。 git fetchとgit pullの違い まず、 fetch と pull の違いを整理する。 git fetch git fetch origin git fetch は、リモートリポジトリの最新情報を取得するコマンドである。 ただし、通常は現在作業しているローカルブランチやファイ",
+    "body_end": "る。 今回のように、意図せずリモートの変更が反映されたと感じた場合は、次のコマンドで実際の操作履歴を確認できる。 git reflog -10 --date=local 現在のローカルブランチとリモート追跡ブランチの位置関係は、次のコマンドで確認できる。 git log --oneline --decorate --graph --all -10 Gitで想定外の変更が起きたときは、感覚だけで判断せず、 git log と git reflog を確認することで、何が実行されたのかを追跡できる。"
+  },
+  {
+    "id": 40276,
+    "title": "Python 3.9でrequirements.txtをインストールできない問題を、Python 3.12で解決した",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "FastAPIで作成しているポートフォリオの開発環境を構築し直したところ、 requirements.txt のインストール中にエラーが発生した。 原因を調べ、Python 3.12で仮想環境を作り直すことで、無事にFastAPIを起動できた。 発生したエラー 最初に、既存の仮想環境で以下のコマンドを実行した。 python -m pip install --upgrade pip python -m pip install -r requirements.txt しかし、 click==8.2.1 のインストール時にエラーが発生した。 ERROR: Could not find a version that satisfies the requirement click==8.2.1 ER",
+    "body_end": "tivate rm -rf .venv python3.12 -m venv .venv source .venv/bin/activate python -m pip install --upgrade pip python -m pip install -r requirements.txt python -m uvicorn app.main:app --reload Python 3.9と依存パッケージの互換性が原因だったが、Python 3.12で仮想環境を再構築することで解決できた。"
+  },
+  {
+    "id": 40138,
+    "title": "FastAPI起動時に仮想環境のPythonが使われていなかった原因と解決策",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "My Portfolioをローカル環境で起動するため、READMEに記載していた以下のコマンドを実行しました。 uvicorn app.main:app --reload しかし、仮想環境を有効にしているつもりでも、開発サーバーを正常に起動できませんでした。 使用中のPythonを確認する ターミナルの先頭には (venv) と表示されていたため、仮想環境は有効になっていると思っていました。 しかし、以下のコマンドで使用中のPythonを確認すると、プロジェクト内の仮想環境ではなく、pyenvのshimが表示されました。 which python 実行結果は以下のとおりです。 /Users/hiroki/.pyenv/shims/python 仮想環境が正しく有効になっている場合は、通常、プ",
+    "body_end": "作成した仮想環境が正常に機能しなくなったことでした。 ターミナルに (venv) と表示されているだけでは、仮想環境が正しく使われているとは限りません。 実際に使用されているPythonは、以下のコマンドで確認できます。 python -c \"import sys; print(sys.executable)\" プロジェクトのフォルダを移動した場合は、既存の仮想環境を引き継がず、移動先で作り直すのが安全です。 今回の対応を、My Portfolioの保守と開発環境改善の記録として残しておきます。"
+  },
+  {
+    "id": 37926,
+    "title": "【WordPress】ローカル開発環境のMAMPが起動しない問題を解決した ー 原因はDB接続情報が本番環境のものになっていたこと ー",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "4:34:06 MAMPのアプリを起動しようとしたら、 MAMPがクラッシュする MAMPの問題レポート ------------------------------------- Translated Report (Full Report Below) ------------------------------------- Process: MAMP [47611] Path: /Applications/MAMP/MAMP.app/Contents/MacOS/MAMP Identifier: de.appsolute.MAMP Version: 6.6 (1211) Code Type: X86-64 (Native) Role: Foreground Parent Proces",
+    "body_end": "cs/wp-config.php wp-config.phpが本番サーバー用のDB接続情報になっていたのが原因 以下の出力結果をチャッピーに伝えた grep DB_ /Applications/MAMP/htdocs/wp-config.php バックアップして、wp-config.phpの情報をローカル用に変更 http://localhost:8888/に接続したら、無事に開けた 今まで、本番環境もテスト環境のように使っていたが、これからはプロとして、MAMPのローカル環境でテストしていこう"
+  },
+  {
+    "id": 37915,
+    "title": "Gitで改善前の状態を確認する ― git stashとcheckoutでBefore / Afterを比較する方法 ―",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": ".git-flow-box { margin: 40px 0; padding: 24px; background: #f7f9fb; border-radius: 16px; } .git-flow-title { margin-bottom: 20px; font-size: 1.4rem; font-weight: bold; } .git-flow-box .git-flow-step { display: flex; gap: 16px; align-items: flex-start; margin: 16px 0; padding: 16px; background: #fff; border-radius: 12px; border: 1px solid #e5e7eb; a",
+    "body_end": "バックアップツールではないということだ。 コミット履歴を活用することで、 改善前 改善後 を簡単に比較できる。 また、 git checkout だけでは未コミットの変更は残るということも理解できた。 Beforeを正しく確認したい場合は、 git stash ↓ git checkout の流れが必要になる。 次にやること My Portfolioの改善を続ける。 発注者が見たときに、 何を作れるのか 何を依頼できるのか なぜその人に依頼すべきなのか が伝わるポートフォリオを目指していきたい。"
+  },
+  {
+    "id": 37977,
+    "title": "VSCodeで1万件以上の変更履歴が表示された原因を調査した",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "VSCodeがusers/hirokiをGitリポジトリとして検出して1万件以上の変更履歴を検知してしまっていた Codexに相談してみた codexに相談して修正してもらった 修正の前に状況だけ教えてもらった その結果、 /Users/hiroki がGitリポジトリとして認識されていることが判明した。 本来であれば個別のプロジェクトフォルダがGit管理されるべきだが、ホームフォルダ全体がGit管理対象になってしまっていたのである。 そのため、 Desktop Documents Downloads Pictures など、あらゆるファイルがGitの監視対象になってしまっていた。 修正内容を確認する Gitリポジトリの認識を解除してもらおう Codexは修正方法として、 mv /Users",
+    "body_end": "フォルダである .git の名前を変更するとGit管理対象から外れる 削除ではなくリネームであれば安全に元へ戻せる AIに相談すると原因調査から修正まで効率的に進められる おわりに VSCodeで1万件以上の変更履歴が表示された原因は、ホームフォルダがGitリポジトリとして認識されていることだった。 また、単に問題を解決するだけではなく、 なぜ発生したのか なぜその修正で直るのか まで理解できたことが大きな収穫だった。 開発では問題解決だけでなく、その仕組みを理解することも大切だと改めて感じた。"
+  },
+  {
+    "id": 37708,
+    "title": "Gitでコミットを取り消す方法【まだpushしていない場合】",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "Gitで作業していると、 「コミットしたけど、やっぱりやり直したい」 という場面がある。 今回は、まだGitHubへpushしていないコミットを取り消す方法をまとめる。 私自身、コミットメッセージと選択したファイルが合っていなかったので、この方法を使用した。 コミットだけ取り消したい場合 直前のコミットを取り消し、変更内容はそのまま残したい場合は以下を実行する。 git reset --soft HEAD~1 実行前 変更 → add → commit 実行後 変更 → add コミットだけが取り消される。 変更内容やステージング状態は残るため、コミットメッセージを修正したい場合や、一部修正して再コミットしたい場合に便利である。 変更内容も含めて完全に消したい場合 変更内容ごと削除したい場合",
+    "body_end": "トだけが取り消される。 push済みの場合は注意 今回の方法は、 「まだpushしていないコミット」 を取り消す場合に使用する。 すでにGitHubへpushしている場合は、 git revert を利用することが多い。 まとめ まだpushしていないコミットを取り消したい場合は、 git reset --soft HEAD~1 を使用する。 コミットだけ取り消す 変更内容は残る 再度コミットし直せる コミットメッセージの修正や、コミット内容を見直したい時によく使うコマンドなので覚えておきたい。"
+  },
+  {
+    "id": 37565,
+    "title": "古い順でGitのコミット履歴を出す方法",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "開発履歴の書き方で困っていた。 コミットメッセージで何がいつ完了したのかわかりにくい。 【解決】古い順でGitのコミット履歴を出した (venv) hiroki@shibatahiroshitakanoiMac my-portfolio % git --no-pager log --reverse --pretty=format:\"- %ad：%s\" --date=short - 2026-05-28：first commit - 2026-05-28：FastAPIの最小起動 - 2026-05-28：記事一覧API /posts - 2026-05-28：記事を1件取得するAPI - 2026-05-28：記事を投稿できるAPIの作成 - 2026-05-28：Router分割 - 20",
+    "body_end": "の表示内容の追加 - 2026-06-12：DB更新 - 2026-06-12：ローカル環境の起動方法のみをREADMEに記載 - 2026-06-12：制作物を追加 - 2026-06-12：制作物詳細ページのUI改善 - 2026-06-12：詳細ページのタイトル上下の余白調整 - 2026-06-12：プロフィール画像を圧縮 - 2026-06-14：Feat : 制作物のソーティング - 2026-06-14：Feat : 技術ブログのタグ分類機能 - 2026-06-15：データ追加%"
+  },
+  {
+    "id": 37440,
+    "title": "既存のGitHubリポジトリのデフォルトブランチをmasterからmainへ変更した手順",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "ローカルでGitリポジトリを作成して、GitHubの既存リポジトリとの紐付けを行った。 そして、git pull origin mainを行うと、fatal: couldn't find remote ref main エラーが発生した。 エラーの原因は、リモートで masterブランチだったこと。 このエラーを解決して、ローカルとリモート共に mainブランチにするまでの過程を記述した。 1. GitHubリポジトリとの紐付けを行った ローカルにbingoを作成して、リモート（ https://github.com/ki-hi-ro/bingo ）と紐づけた。 hiroki@shibatahiroshitakanoiMac bingo % git init Initialized empt",
+    "body_end": " - [deleted] master 11. リモートとローカル共にmainブランチになった git branch -aで、ローカルとリモートのブランチ名が main であることが確認できた。 hiroki@shibatahiroshitakanoiMac bingo % git branch -a * main remotes/origin/main git branch -a の -a は all の略である。ローカルブランチだけでなく、GitHub上のリモートブランチも含めて確認できる。"
+  },
+  {
+    "id": 34430,
+    "title": "【Git】git push時のno upstream branchを解決する",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "git pushをしたら、以下のエラーが発生した。 hiroki@shibatahiroshitakanoMacBook-Air ki-hi-ro.com % git push fatal: The current branch main has no upstream branch. To push the current branch and set the remote as upstream, use git push --set-upstream origin main To have this happen automatically for branches without a tracking upstream, see 'push.autoSetupRemote' in '",
+    "body_end": " 100% (4/4), 409 bytes | 409.00 KiB/s, done. Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 remote: Resolving deltas: 100% (3/3), completed with 3 local objects. To https://github.com/ki-hi-ro/ki-hi-ro.com-2022.git 5293200..be04d2b main -> main"
+  },
+  {
+    "id": 34405,
+    "title": "【git】プルリクエスト",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "リモートリポジトリにmasterとmainブランチがある。 master branch is 1 commit ahead of, 2 commits behind main masterブランチがmainよりも1コミット進んでいて、2コミット遅れている。 Contribute > Open pull request これをクリックする。 プルリクエストを記入 mainよりも進んでいる1コミットがmainに統合される。 Create pull requestを押す コンフリクトは起こらなかった。 Mearge pull requestをクリック Confirm mergeをクリック。 マージ完了 Delete branchをクリック mainブランチだけになっていて、先ほどのコミットも反映さ",
+    "body_end": "でいて、2コミット遅れている。 Contribute > Open pull request これをクリックする。 プルリクエストを記入 mainよりも進んでいる1コミットがmainに統合される。 Create pull requestを押す コンフリクトは起こらなかった。 Mearge pull requestをクリック Confirm mergeをクリック。 マージ完了 Delete branchをクリック mainブランチだけになっていて、先ほどのコミットも反映されていることが確認できた。"
+  },
+  {
+    "id": 34402,
+    "title": "【git】git remote show originをした時のRemote branchesにnew（next fetch will store in remotes/origin）があった",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "git remote show originは、リモートリポジトリ（この場合は、origin）の詳細情報を確認するコマンド。 今回のgit remote show originの結果 hiroki@shibatahiroshitakanoMacBook-Air python % git remote show origin * remote origin Fetch URL: https://github.com/ki-hi-ro/python.git Push URL: https://github.com/ki-hi-ro/python.git HEAD branch: main Remote branches: main tracked master new (next fetch w",
+    "body_end": "hes リモートのブランチの名前と追跡状況。 mainはtrackedなので、追跡している。 masterはnew（next fetch will store in remotes/origin）。 これは、リモートにはmasterが存在しているが、ローカルには記録されていないという意味。 master new (next fetch will store in remotes/origin) これは、次のフェッチで、masterをローカルのremotes/originに保存しますよという意味。"
+  },
+  {
+    "id": 34370,
+    "title": "【Git】リモートとローカルの履歴が分岐している場合の対処法3つ",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "git pullできない場合に提示される以下の選択肢3つについて、ここに掲載していこう。 hiroki@shibatahiroshitakanoMacBook-Air ki-hi-ro.com % git pull origin main remote: Enumerating objects: 11, done. remote: Counting objects: 100% (11/11), done. remote: Compressing objects: 100% (3/3), done. remote: Total 7 (delta 5), reused 6 (delta 4), pack-reused 0 (from 0) Unpacking objects: 100% (7/7",
+    "body_end": "m-2022 % git pull Auto-merging template-parts/_tag-names.php CONFLICT (content): Merge conflict in template-parts/_tag-names.php Automatic merge failed; fix conflicts and then commit the result. コンフリクトを解消して、git add . → git commit → git pushを行うことができた。"
+  },
+  {
+    "id": 34376,
+    "title": "【Git】git stash",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "git stashは、作業途中の変更を一時的に保存して、ワークツリーを綺麗な状態に戻すためのコマンド。 git stashの使用例 hiroki@shibatahiroshitakanoMacBook-Air ki-hi-ro.com % git stash Saved working directory and index state WIP on main: d9f2e53 タグ名 git stashの使用前後 使用前は、git pullができなかった。 hiroki@shibatahiroshitakanoMacBook-Air ki-hi-ro.com % git pull origin main error: cannot pull with rebase: You have un",
+    "body_end": "After doing this, you may fix the identity used for this commit with: git commit --amend --reset-author 1 file changed, 1 insertion(+), 1 deletion(-) template-parts/_tag-names.phpのコンフリクトを解消する。入力側の変更を取り込んだ。 そして、git addとgit commit。 無事にgit pushすることができた。"
+  },
+  {
+    "id": 34355,
+    "title": "【Git】git pushができない原因",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "この記事では、ローカルからリモートにgit pushができない原因を掲載していく。 non-fast-forward ローカルとリモートの状態。vue-js-1というコミットで分岐している。 ローカル リモート この状態でローカルからリモートにpushしようとすると、以下のメッセージが表示される。 hiroki@shibatahiroshitakanoiMac my-vue-js % git push origin main To https://github.com/ki-hi-ro/my-vue-js.git ! [rejected] main -> main (non-fast-forward) error: failed to push some refs to 'https://g",
+    "body_end": "。 remote contains work that you do not have locallyは、リモートにはローカルにない変更がありますという意味。 This is caused by another repository pushingは、他のリポジトリのプッシュによるものである。 You may want to first integrate the remote changes before pushing againは、リモートの変更を統合してからもう一度pushしてください。"
+  },
+  {
+    "id": 34334,
+    "title": "【Git】リモートのブランチをローカルから削除する方法",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "現状、リモートに不要なmasterブランチがある。 git branch -aで、ローカルとリモートのブランチが確認できる。 hiroki@shibatahiroshitakanoMacBook-Air python % git branch -a * main remotes/origin/main remotes/origin/master リモートのブランチをローカルから削除する方法 git push origin --delete masterで、リモートにある不要なmasterブランチを削除することができる。 リモート側でdefaultブランチとして設定されている場合 以下のエラーが起こる。 hiroki@shibatahiroshitakanoMacBook-Air python",
+    "body_end": "terが削除されていたことが確認できた。 hiroki@shibatahiroshitakanoMacBook-Air python % git push origin --delete master To https://github.com/ki-hi-ro/python.git - [deleted] master hiroki@shibatahiroshitakanoMacBook-Air python % git branch -a * main remotes/origin/main"
+  },
+  {
+    "id": 34315,
+    "title": "【Git】ローカルブランチとリモートブランチの対応関係を正しく整えるためのコマンド",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "git branch --set-upstream-to=origin/main main について解説していこう。 git branch --set-upstream-to=origin/main mainとは ローカルのmainブランチが、リモートのorigin/mainブランチを追跡するように設定するという意味。 git branch --set-upstream-to=<リモート名>/<リモートブランチ> <ローカルブランチ> 現状 現状、以下のようになっている。 hiroki@shibatahiroshitakanoiMac ki-hi-ro.com-2022 % git remote show origin * remote origin Fetch URL: https://g",
+    "body_end": "cked master tracked Local branch configured for 'git pull': main merges with remote main Local ref configured for 'git push': main pushes to main (fast-forwardable) 削除完了。「ローカルとリモートのブランチを表示→リモートのmasterブランチを削除→リモートの追跡状況の確認→ローカルとリモートのブランチを再表示」という流れで進めた。"
+  },
+  {
+    "id": 34308,
+    "title": "【Git】ローカルの不要ブランチを削除する方法",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "現状、iMacのこのブログのWordPressテーマのディレクトリのフォルダには、mainとshowのブランチがある。 showブランチは不要なので、削除したい。 git branch -d <ブランチ名> git branch -d <ブランチ名>で、ブランチを削除することができる。 git branch -d showで、showブランチを削除することができた。",
+    "body_end": "現状、iMacのこのブログのWordPressテーマのディレクトリのフォルダには、mainとshowのブランチがある。 showブランチは不要なので、削除したい。 git branch -d <ブランチ名> git branch -d <ブランチ名>で、ブランチを削除することができる。 git branch -d showで、showブランチを削除することができた。"
+  },
+  {
+    "id": 34247,
+    "title": "ローカルのブランチ名を変更して、リモートの追跡ブランチを確認する",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "現状、master。 リモートは、main。 ローカルのmasterをmainに変更 git branch -m master main リモートの追跡ブランチを確認 git remote show origin * remote origin Fetch URL: https://github.com/ki-hi-ro/ki-hi-ro.com-2022.git Push URL: https://github.com/ki-hi-ro/ki-hi-ro.com-2022.git HEAD branch: main Remote branches: main tracked refs/remotes/origin/master stale (use 'git remote prune' t",
+    "body_end": "s to main (local out of date) Local ref configured for 'git push'は、git push用に設定されたローカル参照のこと。 main pushes to mainとあるので、ローカルのmainブランチからリモートのmainブランチにプッシュされるようになっている。 (local out of date)は、ローカルがリモートよりも古いということ。 git pull origin mainをすれば、ローカルと同じ状態にすることができる。"
+  },
+  {
+    "id": 34191,
+    "title": "git pushをした時のremote: Invalid username or tokenを解消した",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "macbook airでgit pushをして、ユーザ名とパスワードを入力すると、以下のエラーが出た。 hiroki@shibatahiroshitakanoMacBook-Air ki-hi-ro.com % git push origin main Username for 'https://github.com': ki-hi-ro Password for 'https://ki-hi-ro@github.com': remote: Invalid username or token. Password authentication is not supported for Git operations. fatal: Authentication failed for 'https",
+    "body_end": "for 'main' on GitHub by visiting: remote: https://github.com/ki-hi-ro/ki-hi-ro.com-2022/pull/new/main remote: To https://github.com/ki-hi-ro/ki-hi-ro.com-2022.git * [new branch] main -> main これで上手く行った。 同じリポジトリであれば、次回以降にpushする時に、ユーザー名とパスワードを入力しなくて済んだ。"
+  },
+  {
+    "id": 33825,
+    "title": "VScodeのgitの特定のチャンクだけステージングする方法",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "昨日の業務でその方法を発見した。 +ボタンを押すと、そのチャンク（まとまりのみ）をステージングさせることができた。 矢印を押すと、変更を元に戻すこともできた。 これを行うことで、いくつかの関心が混ざっていた時、自分の意図したコミットメッセージに合わせたチャンクのみをステージングさせることができる。 プログラミングにおいて、関心の分離という考え方は、とても大事で、この特定のチャンクのみをステージングさせるという方法は、関心の分離の考え方をサポートしてくれる。",
+    "body_end": "昨日の業務でその方法を発見した。 +ボタンを押すと、そのチャンク（まとまりのみ）をステージングさせることができた。 矢印を押すと、変更を元に戻すこともできた。 これを行うことで、いくつかの関心が混ざっていた時、自分の意図したコミットメッセージに合わせたチャンクのみをステージングさせることができる。 プログラミングにおいて、関心の分離という考え方は、とても大事で、この特定のチャンクのみをステージングさせるという方法は、関心の分離の考え方をサポートしてくれる。"
+  },
+  {
+    "id": 33515,
+    "title": "git cherry-pick",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "最近、仕事でgit cherry-pickを使用する機会があった。 簡単なサンプルでgit cherry-pickについて見ていこう。 簡単なサンプル gitフォルダのcherry-pick.py C.U.R.I.O.S.I.T.Yを出力 Git管理 git init → git remote → git add → git commit → git push リモート（masterブランチが作成された。デフォルトのmainブランチは使用していない） https://github.com/ki-hi-ro/git/tree/master 新しいブランチを作成 newブランチで作業を行う。 コミットをプッシュ c.h.a.o.s.m.y.t.hに変更 https://github.com/ki",
+    "body_end": "。 ここで、cherry-pick newブランチから取り込みたいコミットのIDをコピーしておく。 https://github.com/ki-hi-ro/git/commit/51a52a70f5aad3f0595645ba421b78ca94621d57 masterブランチにて、git cherry-pick <コミットID> これで別ブランチの特定コミットを取り込めた。 リモートにプッシュする。 https://github.com/ki-hi-ro/git/commits/master"
+  },
+  {
+    "id": 33239,
+    "title": "過去のコミットに戻る方法",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "git check out <コミットID>で、過去時点のコミットに戻ることができる。 テストリポジトリ 以下のテストリポジトリを作成した。 ki-hi-ro/git 2回変更を加える コミット履歴を作るために、2回変更を加えていこう。 まずは、通常のFizzBuzz。 fizz-buzz.py for i in range(1, 31): if i % 3 == 0 and i % 5 == 0: print('FizzBuzz') elif i % 3 == 0: print('Fizz') elif i % 5 == 0: print('Buzz') else: print(i) 続いて、効率的な書き方を行なったFizzBuzz。 fizz-buzz.py for i in range",
+    "body_end": "oki@shibatahiroshitakanoiMac git % git checkout main 実務での学び チームメンバーに昨日共有したコミット内容でテストをしてもらった。 バグが見つかって、それを修正しようとしたが、ブランチの変更は進んでいた。 そのため、昨日共有したコミットに戻って、エラーの再現と修正を行なった。 しかし、その修正をどうやって共有するのか悩んだ。 最終的に、fix-〇〇というブランチを切って、そこで修正作業を行って共有した。 その部分を次回の記事では行っていこう。"
+  },
+  {
+    "id": 33132,
+    "title": "git pushもgit pullもできない状況を解決した",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "これは、リモートとローカルの変更履歴が並行して進んでいたことが原因で起こっている。 ローカルの状態 vue-js-02というコミットは、リモートには反映されていない。 リモートの状態 READMEの変更をリモートで手動で行った。これがローカルに反映されていない。 git push origin mainができない ローカルの変更をリモートに反映しようとしたが、現在のブランチがビハインドとのこと。 hiroki@shibatahiroshitakanoiMac my-vue-js % git push origin main To https://github.com/ki-hi-ro/my-vue-js.git ! [rejected] main -> main (non-fast-forw",
+    "body_end": "ull origin main を実行すると、マージコミットの作成画面に移りました。 続行ボタンをクリックしてマージコミットを確定し、その後 git push origin main が無事に成功しました。 今回の一連の流れを通して、「リモートとローカルが分岐して push/pull できないときに、どう対応すればよいか」が実感できました。 merge / rebase / fast-forward という3つの統合方法の中から、状況に応じて適切なものを選べば、Git はちゃんと応えてくれます。"
+  },
+  {
+    "id": 32861,
+    "title": "Vue開発用のVS Code拡張機能を入れてみる",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "Vueで検索すると色々出てきた。 VeturとVue (Official)を入れるのが直感的に良さそう。 Vue 3の場合はVue (Official) Vue 3かどうかはどうやって確認するか？ npm list vueで、Vueのバージョンが確認できた。 最初は、Vueの一階層上で実行してしまったが、Vueのあるfrontendに降り立って、実行した。 hiroki@shibatahiroshitakanoiMac shopping_list_app % npm list vue /Users/hiroki/Downloads/python/shopping_list_app └── (empty) hiroki@shibatahiroshitakanoiMac shopping_lis",
+    "body_end": "opping_list_app/frontend └── vue@3.5.18 3系なので、Vue (Official)を入れよう。 before HTMLのシンタックスハイライトがされていない。 変数の定義に移動できない。 これらが解決されるのか？？ after 変数にマウスを当てると、他の箇所にある変数も識別できるようになっていた。 HTMLのシンタックスハイライトもされている。 F12キーで、関数の定義と実装を行き来することができていた。 スクリプトで定義されている変数も行き来できていた。"
+  },
+  {
+    "id": 32847,
+    "title": "macOSでDocker Desktopを開くには一工夫必要",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "Macintosh HD > アプリケーション > Docker.appをダブルクリックで開こうとしても開けなかった。 開けるようになった方法 右クリック → パッケージの内容を表示をクリック Contents > MacOS > Docker Desktop.appをダブルクリック 開けた。 これをアプリフォルダに配置してみる command + TでFinderの新しいタブを開く Macintosh HD > アプリケーションに配置しよう。 現在開いているDocker Desktopは閉じておく。 配置したDocker Desktop.appをダブルクリックする。 何も起きない。 原因は、依存ファイルが同じディレクトリにないからだろう。 もとのディレクトリ構成から逸脱している。 元に戻し",
+    "body_end": " > MacOS > Docker Desktop.appをダブルクリック 開けた。 これをアプリフォルダに配置してみる command + TでFinderの新しいタブを開く Macintosh HD > アプリケーションに配置しよう。 現在開いているDocker Desktopは閉じておく。 配置したDocker Desktop.appをダブルクリックする。 何も起きない。 原因は、依存ファイルが同じディレクトリにないからだろう。 もとのディレクトリ構成から逸脱している。 元に戻しておいた。"
+  },
+  {
+    "id": 32645,
+    "title": "docker compose up --buildは何をしているのか？",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "現職で以下の技術を使用する可能性があるため、買い物リスト作成アプリをオリジナルでChatGPT 5の力も借りながら作成している。 Docker Django Vue.js 基礎知識は多岐に渡るが、この記事では、アプリを起動する時のコマンド「docker compose up --build」について書いていく。 仮説 AIに聞く前に、自分なりの仮説を立ててみる。 これは、大AI時代にとても大事なこと。 自分の頭で考えることができなければ、AIに適切なプロンプトを入力して、適切な回答を得ることができない。 仮説としては、アプリに必要なファイル一式の依存関係を調整して、アプリを起動させるといったところか？ 実際にコマンドを打った様子 現在作成中の以下のアプリで、docker compose up",
+    "body_end": "iews.py // │ ├─ urls.py // │ └─ admin.py // └─ frontend/ // ├─ Dockerfile // ├─ package.json // ├─ vite.config.js // ├─ index.html // └─ src/ // ├─ main.js // ├─ App.vue // └─ components/ // └─ ShoppingList.vue ルートにあるdocker-compose.ymlの中で、dbが定義されていた。"
+  },
+  {
+    "id": 31712,
+    "title": "git remoteで設定したリモートURLを変更する",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "githubでリポジトリを作成して、 https://github.com/ki-hi-ro/python ローカルで、git initを行った。 (venv) Mac:python shibatahiroshitaka$ git init Reinitialized existing Git repository in /Users/shibatahiroshitaka/Downloads/python/.git/ 補足情報として書いておくと、以下のコマンドで、venvを起動している。 Mac:python shibatahiroshitaka$ source venv/bin/activate git remote add originをしようとしたら、すでにリモートオリジンが存在してい",
+    "body_end": "sion using up to 8 threads Compressing objects: 100% (4/4), done. Writing objects: 100% (4/4), 1.30 KiB | 1.30 MiB/s, done. Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 To https://github.com/ki-hi-ro/python.git * [new branch] master -> master"
+  },
+  {
+    "id": 31322,
+    "title": "GitBucketをインストールして使えるようにした",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "https://gitbucket.github.io/ GitBucketをダウンロード GitBucketの公式ページのDownloadを押すと、GitHubのリリースページに飛んだ。 4.43.0のAssetsからダウンロードするフォルダを選ぶ。 gitbucket.warを選んでダウンロードした。 マルウェアの問題を解決 マルウェアの関係で開けなかった。（開く必要はなかった） Macのセキュリティ機能によるブロックだそうだ。 下記のこのまま開くをクリックした。 以下も開くを押した。 この状態になった。 GitBucketサーバを起動 ダウンロードフォルダで以下のコマンドを実行した。 java -jar gitbucket.war Mac:~ shibatahiroshitaka$ l",
+    "body_end": "n initiated... 18:14:21.071 [JettyShutdownThread] INFO com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed. 18:14:21.073 [Thread-9] INFO g.core.plugin.PluginWatchThread - Shutdown PluginWatchThread Mac:Downloads shibatahiroshitaka$"
+  },
+  {
+    "id": 31291,
+    "title": "Pythonの仮想環境「venv」の作成・起動・無効化",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "Pythonの仮想環境「venv」を作成→起動→無効化する方法をまとめる。 インタープリターを設定する（どのPythonにコードを読ませるか選択する）方法についても触れる。 venvとは venv は、プロジェクトごとにPythonの実行環境やライブラリを分離するための仕組みです。 仮想環境を利用することで、プロジェクトごとに異なるバージョンのライブラリを管理でき、依存関係の衝突を防げます。 仮想環境を作成する 仮想環境を作成したいディレクトリで、以下のコマンドを入力する。 python -m venv venv 最後の venv は、作成する仮想環境のディレクトリ名です。 .venv という名前にする場合は、次のように入力します。 python3 -m venv .venv コマンドを実行",
+    "body_end": "nプロジェクトでは、使用するライブラリやバージョンをプロジェクトごとに分離するため、仮想環境の利用が推奨されます。 基本的な流れは、次のとおりです。 python3 -m venv venv で仮想環境を作成する source venv/bin/activate で仮想環境を起動する VS Codeで仮想環境のインタープリターを選択する 作業終了後に deactivate で無効化する Pythonプロジェクトを新しく作成するときは、最初に仮想環境を用意しておくと、依存関係を安全に管理できます。"
+  },
+  {
+    "id": 29224,
+    "title": "git pullをした時の「error: Your local changes to the following files would be overwritten by merge」について",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "hiroki@shibatahiroshitakanoiMac ki-hi-ro.com-2022 % git pull hint: Pulling without specifying how to reconcile divergent branches is hint: discouraged. You can squelch this message by running one of the following hint: commands sometime before your next pull: hint: hint: git config pull.rebase false # merge (the default strategy) hint: git config p",
+    "body_end": "」というエラーが発生していた。 「タグの調整（iMacの作業）」をステージングして、コミットして、プッシュした時にrejectされたのは、リモートリポジトリの方が進んでいたから。ローカルでは、「記事ページの投稿IDを削除」、リモートでは、「タグの調整」が最新のコミットになっていた。 コミットの進捗状況を同期させるためにgit pullを行った。「Merge branch 'master' of https:・・・」でローカルとリモートの進み具合が同期された。再帰的にマージされたということになる。"
+  },
+  {
+    "id": 29155,
+    "title": "nvmを使ってNode.jsを16.18.1から22.14.0へ更新した【Mac】",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "React開発を進める中で、Node.jsのバージョンを確認したところ、16.18.1を使用していた。 $ node -v v16.18.1 少し古いバージョンだったため、Node.jsの最新LTS版である22.14.0へアップデートした。 nvmをインストールする Node.jsのバージョン管理には、Node Version Manager（nvm）を使用する。 以下のコマンドを実行してインストールした。 curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash インストール完了後、以下のメッセージが表示された。 Close and reopen your terminal to st",
+    "body_end": "セージを確認することをおすすめする。 まとめ 今回の作業では、nvmを導入してNode.jsを最新LTS版へアップデートした。 作業中に発生した問題は次の2点だった。 .bashrc や .zshrc が存在しなかった .npmrc の prefix 設定が nvm と競合していた 特に後者は、 nvm use --delete-prefix v22.14.0 を実行することで解決できた。 今後Node.jsのバージョン管理を行う場合は、nvmを利用すると簡単に切り替えられるためおすすめである。"
+  },
+  {
+    "id": 29135,
+    "title": "ローカルブランチとリモート追跡ブランチの差分を確認する",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "以前、iMacで行った作業がMacBookに反映されていなかった 現在、MacBookで作業をしている。 以前、iMacで作業した時に、 react_todo というプロジェクトをリモートに作成した。 そして、TaskList.jsをTaskList.tsxに変更した。 MacBookでは反映されていなかった。そのことによるエラーが発生していた。 リモートの状態 リモートでは、TaskList.tsxが存在している。TaskList.jsが残っているのが謎だが、履歴が残っているということだろう。と思ったが、tsxがjsに変換されたからかもしれない。 リモートとローカルの差分が分かるコマンド git status を使うとローカルとリモートの状態の差が分かる。 今回、リモートのmasterブラ",
+    "body_end": "al branch) nothing to commit, working tree clean On branch masterは、masterブランチにいるということ。 can be fast-forwardedは、競合なく単純に最新の状態に更新できるということ。 「originのmasterブランチよりも2コミット遅れているから、最新の状態に出来ますよ」という意味。 git pullで最新にすることができる。 具体的な差分を知りたい場合は、git diffやgit logを活用するといい。"
+  },
+  {
+    "id": 28684,
+    "title": "GitLabに上げたコミットメッセージを変更する方法",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "本日の業務でGitLabにあげたコミットメッセージを変更したかった。 しかし、簡単に変更することができなかった。 結局、Sourcetreeのターミナルを開いて、vimから変更した。 リバートという操作を行なって、強制コミットを行なった。 その辺の操作について書いていこう。 リバートとは 「リバート」は、特定のコミットを打ち消す新しいコミットを作る操作。 git revert <コミットID> vimを編集する方法 iで、編集モードになる。 Escで、コマンドモードに戻る。 :wq + Enterで、vimを保存して終了する。 :q! + Enterで、vimを保存せずに終了する。 変更を反映するには強制コミットが必要 以下のような強制プッシュをすることで、ローカルの変更をリモートに反映する",
+    "body_end": "の状態が違うため、以下のエラーが発生する。 hintの通り、git pullを行う。 すると再び、vimエディタが開く。最初の行にコミットメッセージが書かれている。このままで良ければ、:wq + Enterでエディタを保存して閉じる。 以下の画面になった。 git pushを行うと、以下のようになった。 コミットメッセージを変更したものと、マージしたものがある。 以下のように、git pullにrebaseのオプションをつけるとマージコミットが残らないらしい。 git pull --rebase"
+  },
+  {
+    "id": 24972,
+    "title": "VScodeで正規表現を試してみた①",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "仕事で正規表現に触れる機会があったので、記事を書いていく。 任意の一文字 .で任意の一文字を正規表現することができる。 正規表現サンプル集 .県の場合、 愛 知 県、長 野 県が該当する。 直前のパターンの0回以上繰り返し *は、直前のパターンの0回以上繰り返しを正規表現できる。 正規表現サンプル集 ABC*の場合、 AB や ABC 、 ABCCCCCC が該当する。 b.*kの場合、 b ac kやb aaaaaaaaaaaaaaaaaaac kが該当する。 0回以上というのが、よく分からない。 直前のパターンの1回以上繰り返し +で、直前のパターンの1回以上繰り返しを正規表現できる。 正規表現サンプル集 ABC+と書いた場合、 ABC や、 ABCCCC が該当する。 b.+kと書いた",
+    "body_end": "パターンの1回以上繰り返しを正規表現できる。 正規表現サンプル集 ABC+と書いた場合、 ABC や、 ABCCCC が該当する。 b.+kと書いた場合、 b ac kや、b aaaaaaaaaaaaaaaaaaac kが該当する。 *と+（0回以上と1回以上）の違い bkという文字列があるとする。 任意の一文字を表す.と直前の文字の1回以上の繰り返しを表す+を続けて書いた場合、検索でヒットしない。 しかし、0回以上の*だと、ヒットする。 このことから、0回以上の意味がお分かりいただけると思う。"
+  },
+  {
+    "id": 23389,
+    "title": "git cloneで去年作成していた「money app」をインストールした",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "去年、お金を管理するアプリをRuby On Railsで作ろうとしていた。 最近、Progateでgitの復習をしているので、今回、github上にある「money app」のソースコードで、gitの機能をあれこれと試してみたいと思った。 github上にある「money app」 GitHub - ki-hi-ro/money-app まずはフォルダを作ってターミナルを開く money appというフォルダを作成した。 ここで疑問に思ったのが、もしクローンしたらこのフォルダ上に作られてしまうのではないということ。 まずは、やって確かめよう。 クローン元のURLをコピー Code > HTTPSの部分をコピーする。 git cloneする git clone URLで、簡単にインストールする",
+    "body_end": "思ったのが、もしクローンしたらこのフォルダ上に作られてしまうのではないということ。 まずは、やって確かめよう。 クローン元のURLをコピー Code > HTTPSの部分をコピーする。 git cloneする git clone URLで、簡単にインストールすることができた。 しかし、先ほど書いたように、money appの中に入れ子になってしまった。 Finderで外に出してあげた。 git cloneするときは、一つ上の階層で行うのがいいのかもしれない。 新しいフォルダを作成する必要はない。"
+  },
+  {
+    "id": 22765,
+    "title": "PCにインストールされているPythonをバージョンアップする方法",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "最近、Pythonの学習を本格的にやってやろうという熱意に溢れている。 私の現在のPythonバージョン 自宅にあるiMacのターミナルで、「python --vertion」と打ち込むと、3.10.4がインストールされていることが分かった。 公式サイトによると3.12.4が最新だった 3.12.4 Documentation この最新のPythonをインストールしていこう。 brew upgrade pythonでは、pythonをアップグレードできなかった 最新の Python を Mac にインストールする方法 #homebrew - Qiita 上記のサイトを参考に、brew upgrade pythonを実行した。 python not installedというエラーになった。 お",
+    "body_end": "nvでインストールできる最新のpythonのバージョンは、3.12.2だったので、こちらをインストールしていく。 以下の画面でしばらく止まった後、 無事、3.12.2がインストールできたことが確認できた。 3.12.2を使うように指示する 現在は、3.10.4を使用している。 以下のコマンドを打って（バージョンのところは変える）、3.12.2を使うように、iMacに指示していこう。 pyenv 利用のまとめ #Python - Qiita 無事、3.12.2を使用する設定に変更することができた。"
+  },
+  {
+    "id": 21302,
+    "title": "github上にあるソースコードをローカルにクローンする方法",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "最近、アルゴリズムの本でプログラムの勉強をしている。 https://www.amazon.co.jp/%E5%95%8F%E9%A1%8C%E8%A7%A3%E6%B1%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%80%8C%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%C3%97%E6%95%B0%E5%AD%A6%E3%80%8D%E3%81%8C%E5%9F%BA%E7%A4%8E%E3%81%8B%E3%82%89%E3%81%97%E3%81%A3%E3%81%8B%E3%82%8A%E8%BA%AB%E3%81%AB%E3%81%A4%E3%81%8F%E6%9C%AC-%E7",
+    "body_end": "g objects: 100% (26/26), done. remote: Compressing objects: 100% (19/19), done. remote: Total 26 (delta 4), reused 26 (delta 4), pack-reused 0 (from 0) Receiving objects: 100% (26/26), 50.89 KiB | 2.21 MiB/s, done. Resolving deltas: 100% (4/4), done."
+  },
+  {
+    "id": 7573,
+    "title": "GitHub Actionsで、自作WordPressテーマをmasterブランチにプッシュしたらデプロイされるようにした",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "GitHub Actionsを使用して、本サイトのWordPressテーマを編集した後に、GitHubのmasterブランチにプッシュをすると、エックスサーバーに自動でデプロイされるようにしました。 手順1: サーバー情報4点を確認 FTPサーバー(ホスト)名 ユーザー名 パスワード リモートパス FTPサーバー(ホスト)名、ユーザー名 サーバーパネル > サブFTPアカウント設定 > FTPソフト設定 パスワード サーバーパネルにログインするときに使用しているパスワード。 リモートパス ファイルをアップロードする先のパス。 FTPソフトのCyberduckでは、アップしたいディレクトリにあった「style.css」上で右クリックで「URLをコピー」が表示され、「FTPS URL」をクリック",
+    "body_end": "パスを指定。 // 省略 env: FTP_SERVER: ${{ secrets.FTP_SERVER }} FTP_USERNAME: ${{ secrets.FTP_USERNAME }} FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }} LOCAL_DIR: \"./\" REMOTE_DIR: \"/ki-hi-ro.com/public_html/ki-hi-ro.com-2022/wp-content/themes/ki-hi-ro.com-2022/\""
+  },
+  {
+    "id": 6334,
+    "title": "Vueアプリケーション、Vite、node.js、npm run dev",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "以前の記事 で、拡張子が「.vue」のファイルをブラウザに表示させることが出来ませんでした。 本日、公式サイトのクイックスタートにある 「Vueアプリケーションの作成」 を参考に 進めました。 そして、 ブラウザでVueアプリケーションを実行することができました 。 ブラウザで実行されたVueアプリケーション ブラウザで実行されたVueアプリケーション 本記事では、どのように上の画面に到達したのかについて書いていきます。 公式サイトを開く https://ja.vuejs.org/guide/quick-start.html#creating-a-vue-application まずは、公式サイトの「クイックスタート」というページを開きました。 ここに、 Vue.jsの始め方が書かれています",
+    "body_end": " shibatahiroshitaka$ npm run dev > vue-project@0.0.0 dev > vite VITE v3.2.3 ready in 455 ms ➜ Local: http://localhost:5173/ ➜ Network: use --host to expose localのURLが生成されたので、commandを押しながらEnterを押して、アクセスしました。 ブラウザで実行されたVueアプリケーション ブラウザで実行されたVueアプリケーション"
+  },
+  {
+    "id": 6295,
+    "title": "npmとは？",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "JavaScriptのフロントエンド開発でよく聞く npm とは何でしょうか？ 調べたことをまとめてみました。 何の略称？ Node Package Manager です。 ただし、googleの検索結果には、「実際にはバクロニムです」とありました。 バクロニムとは、既存の言葉に対して後付けで作られた略語のことです。 つまり、「node package manager」を略して「npm」になった訳ではなく、「npm」という言葉から「node package manager」という意味が割り当てられたということですね。 nodeとは？ DOMツリーを形成する一つ一つのオブジェクト のことです。 DOMとは？ Document Object Model のことです。 Webページを操作するための",
+    "body_end": "\"0.0.0\", \"description\": \"\", \"main\": \"index.js\", \"scripts\": { \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\" }, \"author\": \"shibata hiroki\", \"license\": \"ISC\" } Is this OK? (yes) Enterを押すと、 package.jsonが生成されました 。 他にもnpmについて調べると色々と出てきましたが、今回は以上です。"
+  },
+  {
+    "id": 2141,
+    "title": "Gitでリポジトリを管理するためのファーストステップ",
+    "topics": [
+      "tools"
+    ],
+    "body_excerpt": "Gitを使用すると開発中のリポジトリの履歴を追うことができます。 チーム内で共同作業をすることもできるため、みんなに愛されています。 本記事では、ローカル環境で作成したプロジェクトフォルダをGitHub上で管理できるようにするための流れについて書きます。 ローカルリポジトリを作成する 今回、git-testという名前のリポジトリを作成しました。 上流リポジトリを作成する GitHub > Repositories > Newから新規リポジトリを作成します。 ローカルと合わせて、git-testという名前にしました。 案内に従って、ローカルにコマンドを打ち込む Quick setupを行います。 新しいリポジトリを作成したので、以下をそのままコピーして、ローカルリポジトリのターミナルに打ち込み",
+    "body_end": "する（昔のGitHubではmasterがデフォルトだったため） git remote add origin https://github.com/ki-hi-ro/git-test.git 上流リポジトリにhttps://github.com/ki-hi-ro/git-test.gitを追加する git push -u origin main originのmainブランチに紐付けてpushする 作成完了した上流リポジトリ https://github.com/ki-hi-ro/git-test"
+  }
+]
