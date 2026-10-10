@@ -28,7 +28,7 @@
       if (!response.ok || !result.success) throw new Error('request');
       nonce = result.data.nonce;
       root.querySelector('.article-like__count').textContent = result.data.count.toLocaleString();
-      root.querySelector('.article-like__label').textContent = result.data.liked ? 'いいね済み' : 'いいね';
+      root.querySelector('.article-like__label').textContent = 'いいね';
       button.querySelector('[aria-hidden]').textContent = result.data.liked ? '♥' : '♡';
       button.setAttribute('aria-pressed', String(result.data.liked));
       button.disabled = result.data.liked;

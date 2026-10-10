@@ -30,7 +30,6 @@
         </div>
 
         <?php get_template_part('template-parts/article-like'); ?>
-        <?php get_template_part('template-parts/related-posts'); ?>
 
         <?php
         $previous_post = get_previous_post();
