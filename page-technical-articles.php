@@ -22,7 +22,7 @@ $articles = new WP_Query(array('post_type' => 'post', 'post_status' => 'publish'
   <figure class="article-timeline__main-view">
     <img src="<?php echo esc_url(add_query_arg('ver', kihiro_asset_version('/assets/images/articles-main-view.jpg'), get_theme_file_uri('/assets/images/articles-main-view.jpg'))); ?>" width="4032" height="3024" alt="豊かな草木と木々に囲まれた石段の風景" fetchpriority="high" decoding="async">
   </figure>
-  <header class="case-hero"><h1><?php the_title(); ?></h1><div><?php the_content(); ?></div></header>
+  <header class="case-hero"><p class="case-eyebrow">Webエンジニアの実践と学び</p><h1>技術記事</h1><div><?php the_content(); ?></div></header>
   <nav class="technical-topics" aria-label="技術記事の分野">
     <a href="<?php echo esc_url(get_permalink()); ?>" <?php if (!$selected) echo 'aria-current="page"'; ?>>すべて</a>
     <?php foreach ($topics as $key => $topic) : ?><a href="<?php echo esc_url(add_query_arg('topic', $key, get_permalink())); ?>" <?php if ($selected === $key) echo 'aria-current="page"'; ?>><?php echo esc_html($topic['label']); ?></a><?php endforeach; ?>

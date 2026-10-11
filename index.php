@@ -114,6 +114,8 @@ $day_posts      = kihiro_posts_for_journal_date($selected_ymd);
       <?php get_template_part('template-parts/index/post-index'); ?>
     <?php else : ?>
       <header class="journal-panel__header">
+        <p class="journal-purpose">日々のジャーナル</p>
+        <p class="journal-purpose__description">日々の気づきと選択を記録し、振り返りながら、次の意思決定と行動につなげます。</p>
         <h1 class="journal-date-title"><?php echo esc_html(kihiro_format_journal_date($selected_date)); ?></h1>
       </header>
 

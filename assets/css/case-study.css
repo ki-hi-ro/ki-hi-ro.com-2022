@@ -30,9 +30,12 @@
 
 /* Keep the category and navigation on one row, as in the supplied sketch. */
 .site-header__inner { border-bottom: 0; }
-.site-header__menu-row { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 16px 0 26px; border-bottom: 1px solid #a1aaa4; }
-.site-header__category { font-size: 13px; letter-spacing: .08em; white-space: nowrap; }
+.site-header__menu-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 24px; padding: 16px 0 26px; border-bottom: 1px solid #a1aaa4; }
+.site-header__category { min-width: 0; font-size: 13px; letter-spacing: .08em; line-height: 1.8; overflow-wrap: anywhere; }
 .site-header__menu-row .site-main-nav { padding: 0; border: 0; gap: 12px 28px; }
+.site-header__menu-row .site-main-nav a { white-space: nowrap; }
+.journal-purpose { margin: 0 0 8px; font-size: 14px; font-weight: 500; }
+.journal-purpose__description { max-width: 42em; margin: 0 0 24px; color: var(--mag-muted); font-size: 13px; line-height: 1.9; }
 .site-main-nav__pending { color: var(--mag-muted); cursor: default; }
 @media (max-width: 700px) {
   .site-header__menu-row { flex-wrap: wrap; gap: 16px; padding: 12px 0 22px; }
