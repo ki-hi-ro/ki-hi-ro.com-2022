@@ -24,7 +24,7 @@
       <?php get_search_form(); ?>
     </div>
     <div class="site-header__menu-row">
-      <span class="site-header__category">WEB / AI / LIFE</span>
+      <span class="site-header__category">WEBエンジニアの柴田浩貴です。ブログで人生を進めています。</span>
     <?php $case_index = kihiro_case_study_index(); ?>
     <?php if ($case_index) : ?>
       <nav class="site-main-nav" aria-label="メインナビゲーション">
