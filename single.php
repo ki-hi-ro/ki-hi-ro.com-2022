@@ -11,6 +11,7 @@
 
         <p class="journal-single-date"><?php echo esc_html(kihiro_format_journal_date(new DateTimeImmutable(get_the_date('Y-m-d'), wp_timezone()))); ?> / <?php echo esc_html(get_the_date('H:i')); ?></p>
         <h1><?php echo esc_html(get_the_title()); ?></h1>
+        <?php get_template_part('template-parts/article-like', null, array('placement' => 'title')); ?>
 
         <dl class="db-single__fields">
           <div>

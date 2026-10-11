@@ -1,9 +1,16 @@
 (function () {
   'use strict';
-  var root = document.querySelector('.article-like');
-  if (!root) return;
-  var button = root.querySelector('button');
-  var status = root.querySelector('.article-like__status');
+  var roots = Array.from(document.querySelectorAll('.article-like'));
+  if (!roots.length) return;
+  var root = roots[0];
+  var buttons = roots.map(function (item) { return item.querySelector('button'); });
+  var pending = false;
+  function setStatus(message) {
+    roots.forEach(function (item) { item.querySelector('.article-like__status').textContent = message; });
+  }
+  function setDisabled(disabled) {
+    buttons.forEach(function (button) { button.disabled = disabled; });
+  }
   var token;
   var nonce;
   try {
@@ -15,11 +22,13 @@
       localStorage.setItem('kihiro-like-visitor', token);
     }
   } catch (error) {
-    status.textContent = 'いいねを利用するにはブラウザーの保存機能を有効にしてください。';
+    setStatus('いいねを利用するにはブラウザーの保存機能を有効にしてください。');
     return;
   }
   async function request(vote) {
-    button.disabled = true;
+    if (pending) return;
+    pending = true;
+    setDisabled(true);
     var params = new URLSearchParams({ action: 'kihiro_like', post_id: root.dataset.postId, visitor: token });
     if (vote) { params.set('vote', '1'); params.set('nonce', nonce); }
     try {
@@ -27,19 +36,23 @@
       var result = await response.json();
       if (!response.ok || !result.success) throw new Error('request');
       nonce = result.data.nonce;
-      root.querySelector('.article-like__count').textContent = result.data.count.toLocaleString();
-      root.querySelector('.article-like__label').textContent = 'いいね';
-      button.querySelector('[aria-hidden]').textContent = result.data.liked ? '♥' : '♡';
-      button.setAttribute('aria-pressed', String(result.data.liked));
-      button.disabled = result.data.liked;
-      status.textContent = vote ? 'ありがとうございます！' : '';
+      roots.forEach(function (item) {
+        item.querySelector('.article-like__count').textContent = result.data.count.toLocaleString();
+        item.querySelector('button').setAttribute('aria-pressed', String(result.data.liked));
+      });
+      setDisabled(result.data.liked);
+      setStatus(vote ? 'ありがとうございます！' : '');
     } catch (error) {
       // Re-fetch state before retrying a vote: a timed-out save may have succeeded.
       nonce = null;
-      status.textContent = '通信できませんでした。ボタンを押すと再接続します。';
-      button.disabled = false;
+      setStatus('通信できませんでした。ボタンを押すと再接続します。');
+      setDisabled(false);
+    } finally {
+      pending = false;
     }
   }
-  button.addEventListener('click', function () { request(Boolean(nonce)); });
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () { request(Boolean(nonce)); });
+  });
   request(false);
 }());
