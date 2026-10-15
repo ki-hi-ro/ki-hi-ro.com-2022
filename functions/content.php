@@ -191,10 +191,10 @@ function kihiro_configure_main_query($query) {
     }
 
     if ($query->is_home()) {
-        $query->set('posts_per_page', kihiro_is_all_articles_view() ? -1 : kihiro_home_posts_per_page());
-        $query->set('orderby', 'date');
+        $query->set('posts_per_page', kihiro_is_all_articles_view() ? 12 : kihiro_home_posts_per_page());
+        $query->set('orderby', array('modified' => 'DESC', 'ID' => 'DESC'));
         $query->set('order', 'DESC');
-        $query->set('no_found_rows', kihiro_is_all_articles_view());
+        $query->set('no_found_rows', false);
         $query->set('ignore_sticky_posts', true);
         $tax_filters = array('relation' => 'AND');
         if (kihiro_is_all_articles_view() && kihiro_selected_article_tag()) {
@@ -233,7 +233,7 @@ add_action('pre_get_posts', 'kihiro_configure_main_query');
 
 /** Expose every page number; the theme keeps the list horizontally scrollable. */
 function kihiro_pagination_args($args) {
-    $args['show_all'] = true;
+    $args['show_all'] = !is_home();
     return $args;
 }
 add_filter('the_posts_pagination_args', 'kihiro_pagination_args');
@@ -259,9 +259,9 @@ function kihiro_selected_article_tag() {
 }
 
 /** Use the featured image, the first content image, then a local cover. */
-function kihiro_article_thumbnail($post_id) {
+function kihiro_article_thumbnail($post_id, $size = 'medium') {
     if (has_post_thumbnail($post_id)) {
-        return get_the_post_thumbnail($post_id, 'medium', array('alt' => '', 'loading' => 'lazy', 'decoding' => 'async'));
+        return get_the_post_thumbnail($post_id, $size, array('alt' => '', 'loading' => 'lazy', 'decoding' => 'async'));
     }
     $entry = get_post($post_id);
     $url = '';

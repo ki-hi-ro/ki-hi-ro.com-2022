@@ -1,12 +1,12 @@
 .about-page { max-width: 1180px; margin: 56px auto 0; }
-.about-hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(28px, 5vw, 72px); padding-bottom: 64px; border-bottom: 1px solid var(--mag-line); }
+.about-hero { display: grid; max-width: 860px; margin-inline: auto; grid-template-columns: minmax(0, 1fr) 240px; align-items: center; gap: 36px; padding-bottom: 40px; border-bottom: 1px solid var(--mag-line); }
 .about-eyebrow { font-size: 12px; letter-spacing: .16em; color: var(--mag-muted); }
 .about-hero h1 { font-size: 16px; font-weight: 500; margin: 12px 0 24px; }
 .about-name { font-size: 30px; margin: 0 0 28px; }
 .about-name span { display: block; font-size: 12px; letter-spacing: .08em; color: var(--mag-muted); margin-top: 8px; }
-.about-lead { font-size: clamp(25px, 2.7vw, 36px); line-height: 1.65; font-weight: 700; margin: 0 0 24px; }
+.about-lead { font-size: clamp(24px, 2.4vw, 30px); line-height: 1.65; font-weight: 700; margin: 0 0 24px; }
 .about-hero__text > p:last-child { font-size: 14px; line-height: 2; }
-.about-portrait { margin: 0; }
+.about-portrait { width: 100%; max-width: 240px; margin: 0; }
 .about-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 42% center; border-radius: 6px; }
 .about-body { max-width: 860px; margin: 0 auto; font-size: 16px; line-height: 2.1; }
 .about-body section { padding: 48px 0; border-bottom: 1px solid var(--mag-line); }
@@ -14,7 +14,7 @@
 .about-body h3 { font-size: 18px; margin: 28px 0 8px; }
 .about-body p { margin: 0 0 20px; }
 .about-body p:last-child { margin-bottom: 0; }
-.about-body a { text-decoration: underline; text-underline-offset: 10px; }
+.about-body a { text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); }
 .about-maru { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 36px; align-items: start; }
 .about-maru figure { margin: 0; }
 .about-maru img { display: block; width: 100%; height: auto; border-radius: 6px; }
@@ -24,7 +24,7 @@
 @media (max-width: 700px) {
  .about-page { margin-top: 28px; }
  .about-hero { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-bottom: 36px; }
- .about-portrait { max-width: 420px; }
+ .about-portrait { max-width: 200px; }
  .about-portrait img { aspect-ratio: 4 / 3; }
  .about-body { font-size: 15px; }
  .about-body section { padding: 32px 0; }

@@ -23,9 +23,17 @@ function kihiro_create_contact_page() {
 }
 add_action('init', 'kihiro_create_contact_page');
 
-/** Keep the existing page shortcode working as a mail contact notice. */
+/** Render the dedicated work inquiry form. */
 function kihiro_contact_form() {
-    return '<p>お問い合わせはメールでお願いいたします。</p>'
-        . '<p><a href="mailto:hiroki.hiroki@icloud.com">hiroki.hiroki@icloud.com</a></p>';
+    $form_id = absint(get_option('kihiro_work_contact_form_id'));
+    if (!$form_id || !shortcode_exists('contact-form-7')) {
+        return '<p>現在、お問い合わせフォームを準備しています。</p>';
+    }
+    return '<div class="work-contact">'
+        . '<p class="work-contact__lead">Web制作・機能改善・Pythonによる業務自動化のご相談を承ります。</p>'
+        . '<p class="work-contact__intro">「手作業を減らしたい」「既存サイトを改善したい」など、現在のお困りごとをお聞かせください。要件やご予算が決まっていない段階でもご相談いただけます。</p>'
+        . '<p class="work-contact__note">必須の項目をご入力ください。送信内容を確認後、ご入力のメールアドレスへ返信します。</p>'
+        . do_shortcode('[contact-form-7 id="' . $form_id . '"]')
+        . '</div>';
 }
 add_shortcode('kihiro_contact_form', 'kihiro_contact_form');

@@ -39,5 +39,4 @@ $filter_url = function ($category, $tag) {
     <button type="submit">絞り込む</button>
     <?php if ($category_id || $tag_id) : ?><a href="<?php echo esc_url($filter_url(0, 0)); ?>">絞り込みを解除</a><?php endif; ?>
   </form>
-  <p class="article-filters__count" role="status"><?php echo esc_html(number_format_i18n(count($GLOBALS['wp_query']->posts))); ?>件の記事<?php if ($category_id || $tag_id) echo 'が見つかりました'; ?></p>
 </section>

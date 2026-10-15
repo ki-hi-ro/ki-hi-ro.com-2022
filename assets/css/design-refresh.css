@@ -405,7 +405,7 @@ svg {
 .journal-entry__link:focus-visible .journal-entry__title {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 8px;
+  text-underline-offset: var(--link-underline-offset, 10px);
 }
 
 .journal-empty {
@@ -517,7 +517,7 @@ svg {
 
 .db-single__content a {
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: var(--link-underline-offset, 10px);
 }
 
 .page-top {

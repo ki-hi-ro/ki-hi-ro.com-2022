@@ -7,7 +7,6 @@
       $post_tags       = get_the_tag_list('', ', ');
       ?>
       <article class="journal-panel journal-panel--single db-single">
-        <p class="db-back-link"><a href="<?php echo esc_url(kihiro_all_articles_url()); ?>"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="m10 3-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>一覧へ戻る</span></a></p>
 
         <p class="journal-single-date"><?php echo esc_html(kihiro_format_journal_date(new DateTimeImmutable(get_the_date('Y-m-d'), wp_timezone()))); ?> / <?php echo esc_html(get_the_date('H:i')); ?></p>
         <h1><?php echo esc_html(get_the_title()); ?></h1>
