@@ -27,11 +27,10 @@
       <span class="site-header__category">WEBエンジニアの柴田浩貴です。ブログで人生を進めています。</span>
     <?php $case_index = kihiro_case_study_index(); ?>
       <nav class="site-main-nav" aria-label="メインナビゲーション">
-        <a href="<?php echo esc_url(home_url('/')); ?>" <?php if (is_front_page() || is_home()) echo 'aria-current="page"'; ?>>日々のジャーナル</a>
+        <a href="<?php echo esc_url(home_url('/')); ?>" <?php if (is_front_page() || is_home()) : ?>aria-current="page"<?php elseif (is_singular('post')) : ?>aria-current="true"<?php endif; ?>>日々のジャーナル</a>
         <?php if ($case_index) : ?>
           <a href="<?php echo esc_url(get_permalink($case_index)); ?>" <?php if (is_page_template(array('page-case-study.php', 'page-case-study-index.php'))) echo 'aria-current="page"'; ?>>開発事例</a>
         <?php endif; ?>
-        <a href="<?php echo esc_url(home_url('/articles/')); ?>" <?php if (is_page_template('page-technical-articles.php')) echo 'aria-current="page"'; ?>>技術記事</a>
         <?php foreach (array('about' => '自己紹介', 'contact-us' => 'お問い合わせ') as $slug => $label) : $nav_page = get_page_by_path($slug); if ($nav_page && $nav_page->post_status === 'publish') : ?>
           <a href="<?php echo esc_url(get_permalink($nav_page)); ?>" <?php if (is_page($nav_page->ID)) echo 'aria-current="page"'; ?>><?php echo esc_html($label); ?></a>
         <?php endif; endforeach; ?>

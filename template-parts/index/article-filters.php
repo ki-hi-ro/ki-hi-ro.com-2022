@@ -1,7 +1,7 @@
 <?php
 $category_id = absint(kihiro_get_request_value('article_category'));
 $tag_id = kihiro_selected_article_tag();
-$categories = get_categories(array('hide_empty' => true));
+$categories = get_categories(array('hide_empty' => true, 'orderby' => 'count', 'order' => 'DESC'));
 $tags = get_tags(array('hide_empty' => true));
 $popular_tags = get_tags(array('hide_empty' => true, 'orderby' => 'count', 'order' => 'DESC', 'number' => 8));
 $filter_url = function ($category, $tag) {
