@@ -1,0 +1,22 @@
+{
+  "ssh_host": "production-wordpress",
+  "remote_wp_path": "/home/ACCOUNT/ki-hi-ro.com/public_html/ki-hi-ro.com-2022",
+  "remote_wp_command": [
+    "wp"
+  ],
+  "remote_uploads_path": "/home/ACCOUNT/ki-hi-ro.com/public_html/ki-hi-ro.com-2022/wp-content/uploads",
+  "local_wp_path": "/Applications/MAMP/htdocs",
+  "local_wp_command": [
+    "/Applications/MAMP/bin/php/php8.3.30/bin/php",
+    "/Applications/MAMP/htdocs/wp-content/themes/ki-hi-ro.com-2022/.local-sync/wp-cli.phar"
+  ],
+  "local_uploads_path": "/Applications/MAMP/htdocs/wp-content/uploads",
+  "local_home": "http://localhost:8888",
+  "local_siteurl": "http://localhost:8888",
+  "production_home": "https://ki-hi-ro.com",
+  "production_siteurl": "https://ki-hi-ro.com/ki-hi-ro.com-2022",
+  "interval_hours": 24,
+  "media_mode": "remote",
+  "production_uploads_url": "https://ki-hi-ro.com/ki-hi-ro.com-2022/wp-content/uploads",
+  "keep_backups": 3
+}

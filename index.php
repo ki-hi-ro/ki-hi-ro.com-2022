@@ -7,7 +7,7 @@ if (is_search()) {
     return;
 }
 
-if (is_home() && kihiro_is_all_articles_view()) {
+if (is_tag() || (is_home() && kihiro_is_all_articles_view())) {
     get_template_part('template-parts/index/post-index');
     get_footer();
     return;

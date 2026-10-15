@@ -10,6 +10,8 @@ function kihiro_asset_version($relative_path) {
 }
 
 function kihiro_enqueue_assets() {
+    // Run in the head so the visitor's local time is applied before first paint.
+    wp_enqueue_script('kihiro-time-background', get_theme_file_uri('/assets/js/time-background.js'), array(), kihiro_asset_version('/assets/js/time-background.js'), false);
     wp_enqueue_script('kihiro-article-return', get_theme_file_uri('/assets/js/article-return.js'), array(), kihiro_asset_version('/assets/js/article-return.js'), true);
     wp_enqueue_script('kihiro-page-scroll', get_theme_file_uri('/assets/js/page-scroll.js'), array(), kihiro_asset_version('/assets/js/page-scroll.js'), true);
     wp_enqueue_script(

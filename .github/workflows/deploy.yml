@@ -33,3 +33,7 @@ jobs:
             samples/**
             review/**
             **/.local-backups/**
+            **/.local-sync/**
+            scripts/**
+            tests/**
+            SYNC.md

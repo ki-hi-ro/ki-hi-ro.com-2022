@@ -3,6 +3,15 @@
  * Database output query helpers.
  */
 
+function kihiro_logo_home_url() {
+    $url = home_url('/');
+    // Avoid a browser-cached production redirect after importing the local DB.
+    if (wp_get_environment_type() === 'local') {
+        $url = add_query_arg('local_home', '1', $url);
+    }
+    return $url;
+}
+
 function kihiro_excerpt_more($more) {
     return ' ... ';
 }
@@ -187,12 +196,20 @@ function kihiro_configure_main_query($query) {
         $query->set('order', 'DESC');
         $query->set('no_found_rows', kihiro_is_all_articles_view());
         $query->set('ignore_sticky_posts', true);
+        $tax_filters = array('relation' => 'AND');
         if (kihiro_is_all_articles_view() && kihiro_selected_article_tag()) {
-            $query->set('tax_query', array(array(
+            $tax_filters[] = array(
                 'taxonomy' => 'post_tag',
                 'field' => 'term_id',
                 'terms' => kihiro_selected_article_tag(),
-            )));
+            );
+        }
+        $category_id = absint(kihiro_get_request_value('article_category'));
+        if (kihiro_is_all_articles_view() && $category_id) {
+            $tax_filters[] = array('taxonomy' => 'category', 'field' => 'term_id', 'terms' => $category_id);
+        }
+        if (count($tax_filters) > 1) {
+            $query->set('tax_query', $tax_filters);
         }
     } elseif ($query->is_search() || $query->is_archive()) {
         $query->set('posts_per_page', 10);

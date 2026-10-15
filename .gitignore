@@ -1,2 +1,4 @@
 .DS_Store
 .local-backups/
+.local-sync/
+__pycache__/

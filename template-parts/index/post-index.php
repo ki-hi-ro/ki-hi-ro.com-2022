@@ -2,7 +2,8 @@
 /** Complete published writing history, grouped by year. */
 global $wp_query;
 $is_article_search = is_search();
-$is_article_home = !$is_article_search && '' === kihiro_get_request_value('view');
+$is_article_tag = is_tag();
+$is_article_home = is_home() && !$is_article_search && '' === kihiro_get_request_value('view');
 $selected_tag = kihiro_selected_article_tag();
 $article_tags = get_tags(array('hide_empty' => true));
 $years = array();
@@ -25,6 +26,17 @@ $peak = $years ? max(array_map('count', $years)) : 1;
       </div>
       <p class="article-timeline__total"><strong><?php echo esc_html(number_format_i18n($wp_query->found_posts)); ?></strong><span>件の記事</span></p>
     </header>
+  <?php elseif ($is_article_tag) : ?>
+    <header class="article-timeline__header">
+      <div>
+        <h1><?php single_tag_title(); ?></h1>
+        <p>このタグが付いた記事</p>
+        <?php if (tag_description()) : ?>
+          <div class="journal-description"><?php echo wp_kses_post(tag_description()); ?></div>
+        <?php endif; ?>
+      </div>
+      <p class="article-timeline__total"><strong><?php echo esc_html(number_format_i18n($wp_query->found_posts)); ?></strong><span>件の記事</span></p>
+    </header>
   <?php elseif ($is_article_home) : ?>
     <h1 class="screen-reader-text">記事一覧</h1>
     <figure class="article-timeline__main-view">
@@ -39,18 +51,9 @@ $peak = $years ? max(array_map('count', $years)) : 1;
     </div>
     <p class="article-timeline__total"><strong><?php echo esc_html(number_format_i18n(count($wp_query->posts))); ?></strong><span>記事の積み重ね</span></p>
   </header>
-  <form class="article-tag-filter" action="<?php echo esc_url(home_url('/')); ?>" method="get">
-    <input type="hidden" name="view" value="all">
-    <label for="article-tag">タグで絞り込む</label>
-    <select id="article-tag" name="article_tag">
-      <option value="">すべてのタグ</option>
-      <?php if (!is_wp_error($article_tags)) : foreach ($article_tags as $article_tag) : ?>
-        <option value="<?php echo esc_attr($article_tag->term_id); ?>" <?php selected($selected_tag, $article_tag->term_id); ?>><?php echo esc_html($article_tag->name); ?></option>
-      <?php endforeach; endif; ?>
-    </select>
-    <button type="submit">絞り込む</button>
-    <?php if ($selected_tag) : ?><a href="<?php echo esc_url(kihiro_all_articles_url()); ?>">解除</a><?php endif; ?>
-  </form>
+  <?php endif; ?>
+  <?php if (is_home()) : ?>
+    <?php get_template_part('template-parts/index/article-filters'); ?>
   <?php endif; ?>
   <?php if (!$is_article_search) : ?>
   <nav class="article-timeline__years" aria-label="年別の記事へ移動">
@@ -71,7 +74,7 @@ $peak = $years ? max(array_map('count', $years)) : 1;
     </section>
   <?php endforeach; ?>
   <?php if (!$years) : ?><p>該当する記事はありません。</p><?php endif; ?>
-  <?php if ($is_article_search) : ?>
+  <?php if ($is_article_search || $is_article_tag) : ?>
     <?php the_posts_pagination(array('mid_size' => 1, 'prev_text' => '前へ', 'next_text' => '次へ')); ?>
   <?php endif; ?>
 </main>

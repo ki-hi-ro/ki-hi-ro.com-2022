@@ -20,7 +20,7 @@
   <a class="skip-link" href="#main-content">本文へスキップ</a>
   <header id="page-top" class="site-header">
     <div class="site-header__inner">
-      <a class="site-title" href="<?php echo esc_url(home_url('/')); ?>">ki-hi-ro.com</a>
+      <a class="site-title" href="<?php echo esc_url(kihiro_logo_home_url()); ?>">ki-hi-ro.com</a>
       <?php get_search_form(); ?>
     </div>
     <div class="site-header__menu-row">

@@ -1,0 +1,8 @@
+Host production-wordpress
+    HostName SERVER_ID.xsrv.jp
+    User SERVER_ID
+    Port 10022
+    IdentityFile ~/.ssh/xserver-sync
+    IdentitiesOnly yes
+    ServerAliveInterval 30
+    ServerAliveCountMax 3

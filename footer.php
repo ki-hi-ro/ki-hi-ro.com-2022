@@ -3,7 +3,7 @@
   <div class="site-footer__bottom">
 
     <a class="site-footer__logo"
-       href="<?php echo esc_url(home_url('/')); ?>">
+       href="<?php echo esc_url(kihiro_logo_home_url()); ?>">
       ki-hi-ro.com
     </a>
 
