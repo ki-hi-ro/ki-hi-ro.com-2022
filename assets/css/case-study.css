@@ -38,7 +38,7 @@
 .journal-purpose__description { max-width: 42em; margin: 0 0 24px; color: var(--mag-muted); font-size: 13px; line-height: 1.9; }
 .site-main-nav__pending { color: var(--mag-muted); cursor: default; }
 @media (max-width: 700px) {
-  .site-header__menu-row { flex-wrap: wrap; gap: 16px; padding: 12px 0 22px; }
+  .site-header__menu-row { flex-wrap: wrap; gap: 16px; padding: 12px 0 29px; }
   .site-header__menu-row .site-main-nav { gap: 12px 18px; font-size: 12px; letter-spacing: .03em; }
   .site-header__category { font-size: 11px; }
 }
