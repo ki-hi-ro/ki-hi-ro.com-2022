@@ -506,7 +506,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .article-timeline--cards .article-timeline__year li a { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 0; }
 .article-timeline--cards .article-timeline__thumbnail { order: 0; }
 .article-timeline--cards .article-timeline__thumbnail img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 0; }
-.article-timeline--cards .article-timeline__year li a > span:last-child { order: 1; padding: 14px 12px 14px; font-size: 16px; font-weight: 700; line-height: 2; overflow-wrap: anywhere; }
+.article-timeline--cards .article-timeline__year li a > span:last-child { order: 1; padding: 14px 12px 14px; font-size: 16px; font-weight: 700; line-height: 2.5; overflow-wrap: anywhere; }
 .article-timeline--cards .article-timeline__year li a > time { order: 2; padding: 0 12px 16px; font-size: 12px; line-height: 1.7; }
 .article-timeline--cards .article-timeline__year li:has(a:hover) { border-color: var(--mag-ink); }
 @media (max-width: 640px) {
