@@ -6,6 +6,19 @@ get_header(); ?>
   <?php
   $cases = get_pages(array('parent' => get_the_ID(), 'post_status' => 'publish', 'sort_column' => 'post_modified,ID', 'sort_order' => 'DESC'));
   $cases = array_values(array_filter($cases, function ($case) { return !post_password_required($case); }));
+  $case_categories = array('web' => 'Web制作', 'automation' => 'データ処理・業務自動化');
+  $selected_category = kihiro_get_request_value('case_category');
+  if (!isset($case_categories[$selected_category])) $selected_category = '';
+  $available_categories = array();
+  foreach ($cases as $case) {
+      $category = kihiro_case_study_category($case);
+      $available_categories[$category] = $case_categories[$category];
+  }
+  if ($selected_category) {
+      $cases = array_values(array_filter($cases, function ($case) use ($selected_category) {
+          return kihiro_case_study_category($case) === $selected_category;
+      }));
+  }
   $total = count($cases);
   $per_page = kihiro_home_posts_per_page();
   $total_pages = (int) ceil($total / $per_page);
@@ -13,6 +26,14 @@ get_header(); ?>
   $cases = array_slice($cases, ($current_page - 1) * $per_page, $per_page);
   ?>
   <h1 class="screen-reader-text">開発事例</h1>
+  <section class="article-filters" aria-label="開発事例の絞り込み">
+    <nav class="article-filters__categories" aria-label="カテゴリー">
+      <a href="<?php echo esc_url(get_permalink()); ?>" <?php if (!$selected_category) echo 'aria-current="true"'; ?>>すべて</a>
+      <?php foreach ($case_categories as $slug => $label) : if (!isset($available_categories[$slug])) continue; ?>
+        <a href="<?php echo esc_url(add_query_arg('case_category', $slug, get_permalink())); ?>" <?php if ($selected_category === $slug) echo 'aria-current="true"'; ?>><?php echo esc_html($label); ?></a>
+      <?php endforeach; ?>
+    </nav>
+  </section>
   <?php if ($cases) : ?>
       <section class="article-timeline__year" aria-label="開発事例一覧">
         <ol>
@@ -23,7 +44,7 @@ get_header(); ?>
         </ol>
       </section>
   <?php else : ?>
-    <p>ケーススタディは準備中です。</p>
+    <p>該当する開発事例はありません。</p>
   <?php endif; ?>
   <?php if ($total_pages > 1) : ?>
     <nav class="navigation pagination" aria-label="開発事例のページ送り">
@@ -34,6 +55,7 @@ get_header(); ?>
           'total' => $total_pages,
           'show_all' => true,
           'prev_next' => false,
+          'add_args' => $selected_category ? array('case_category' => $selected_category) : array(),
       ))); ?></div>
     </nav>
   <?php endif; ?>

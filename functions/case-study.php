@@ -121,3 +121,9 @@ function kihiro_case_study_image($case) {
     if (!$url) return '';
     return '<img src="' . $url . '" alt="' . esc_attr($case->post_title . 'の実装画面') . '" loading="lazy" decoding="async">';
 }
+
+/** Group implementation examples by their technology and subject. */
+function kihiro_case_study_category($case) {
+    $subject = kihiro_case_study_technology($case) . ' ' . $case->post_title;
+    return preg_match('/Python|ETL|Excel|自動化/iu', $subject) ? 'automation' : 'web';
+}
