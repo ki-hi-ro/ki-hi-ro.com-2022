@@ -254,9 +254,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .article-toc nav { max-height: min(55vh, 480px); overflow-y: auto; overscroll-behavior: contain; padding: 8px 12px 12px; border-top: 1px solid var(--mag-line); }
 .article-toc ul { list-style: none; padding: 0; margin: 0; }
 .article-toc li { margin: 0; }
-.article-toc a { display: block; padding: 10px 8px; border-left: 2px solid transparent; overflow-wrap: anywhere; }
-.article-toc .article-toc__subheading a { padding-left: 12px; font-size: 12px; }
-.article-toc a:hover { text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); }
+.article-toc a { display: block; padding: 10px 8px; border-left: 2px solid transparent; overflow-wrap: anywhere; text-decoration: none; }
+.article-toc .article-toc__subheading { margin-left: 16px; }
+.article-toc .article-toc__subheading a { font-size: 12px; }
+.article-toc a:hover, .article-toc a:focus-visible { text-decoration: none; }
 .article-toc a[aria-current] { background: #efefef; border-left-color: var(--mag-accent); color: var(--mag-accent); font-weight: 600; }
 .article-toc-target { scroll-margin-top: 80px; }
 @media (max-width: 1099px) {
