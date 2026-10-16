@@ -7,14 +7,12 @@ get_header(); ?>
   $cases = get_pages(array('parent' => get_the_ID(), 'post_status' => 'publish', 'sort_column' => 'post_modified,ID', 'sort_order' => 'DESC'));
   $cases = array_values(array_filter($cases, function ($case) { return !post_password_required($case); }));
   $total = count($cases);
+  $per_page = kihiro_home_posts_per_page();
+  $total_pages = (int) ceil($total / $per_page);
+  $current_page = max(1, (int) get_query_var('paged'), (int) get_query_var('page'));
+  $cases = array_slice($cases, ($current_page - 1) * $per_page, $per_page);
   ?>
-  <figure class="article-timeline__main-view">
-    <img src="<?php echo esc_url(add_query_arg('ver', kihiro_asset_version('/assets/images/case-study-main-view.jpg'), get_theme_file_uri('/assets/images/case-study-main-view.jpg'))); ?>" width="4032" height="3024" alt="道路沿いの切り株と、その周りに茂る緑の草" fetchpriority="high" decoding="async">
-  </figure>
-  <header class="article-timeline__header">
-    <div><h1>CASE STUDY</h1><div><?php the_content(); ?></div></div>
-    <p class="article-list-heading__total">全<?php echo esc_html(number_format_i18n($total)); ?>件</p>
-  </header>
+  <h1 class="screen-reader-text">開発事例</h1>
   <?php if ($cases) : ?>
       <section class="article-timeline__year" aria-label="開発事例一覧">
         <ol>
@@ -26,6 +24,18 @@ get_header(); ?>
       </section>
   <?php else : ?>
     <p>ケーススタディは準備中です。</p>
+  <?php endif; ?>
+  <?php if ($total_pages > 1) : ?>
+    <nav class="navigation pagination" aria-label="開発事例のページ送り">
+      <div class="nav-links"><?php echo wp_kses_post(paginate_links(array(
+          'base' => add_query_arg('paged', '%#%', get_permalink()),
+          'format' => '',
+          'current' => $current_page,
+          'total' => $total_pages,
+          'show_all' => true,
+          'prev_next' => false,
+      ))); ?></div>
+    </nav>
   <?php endif; ?>
 <?php endwhile; ?>
 </main>
