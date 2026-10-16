@@ -15,7 +15,7 @@ get_header(); ?>
             <p class="about-name">柴田 浩貴<span>Hiroki Shibata</span></p>
           </div>
           <p class="about-lead">自分の言葉で考え、<br>自分の足で、人生を進める。</p>
-          <p>つくること、書くこと、知らない場所を歩くこと。<br>その積み重ねの中に、自分らしい働き方と生き方を探しています。</p>
+          <p>自分の心から湧き出た言葉によって、自分の働き方と生き方を創り上げていきます。</p>
         </div>
       </header>
       <div class="about-body"><?php the_content(); ?></div>
