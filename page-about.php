@@ -10,7 +10,10 @@ get_header(); ?>
       <header class="about-hero">
         <div class="about-hero__text">
           <h1 class="screen-reader-text"><?php the_title(); ?></h1>
-          <p class="about-name">柴田 浩貴<span>Hiroki Shibata</span></p>
+          <div class="about-identity">
+            <img class="about-avatar" src="<?php echo esc_url(get_theme_file_uri('/assets/images/about-avatar.jpg')); ?>" alt="柴田浩貴" width="88" height="88" decoding="async">
+            <p class="about-name">柴田 浩貴<span>Hiroki Shibata</span></p>
+          </div>
           <p class="about-lead">自分の言葉で考え、<br>自分の足で、人生を進める。</p>
           <p>つくること、書くこと、知らない場所を歩くこと。<br>その積み重ねの中に、自分らしい働き方と生き方を探しています。</p>
         </div>
