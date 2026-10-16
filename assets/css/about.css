@@ -1,4 +1,4 @@
-.about-page { max-width: 1180px; margin: 40px auto 0; }
+.about-page { max-width: 1180px; margin: 56px auto 0; }
 .about-hero { max-width: 860px; margin-inline: 0; padding-bottom: 40px; border-bottom: 1px solid var(--mag-line); }
 .about-name { font-size: 30px; margin: 0 0 28px; }
 .about-name span { display: block; font-size: 12px; letter-spacing: .08em; color: var(--mag-muted); margin-top: 8px; }
@@ -18,7 +18,7 @@
 .about-reading { padding-left: 1.2em; }
 .about-reading li { margin: 12px 0; }
 @media (max-width: 700px) {
- .about-page { margin-top: 28px; }
+ .about-page { margin-top: 56px; }
  .about-hero { padding-bottom: 36px; }
  .about-body { font-size: 15px; }
  .about-body section { padding: 32px 0; }

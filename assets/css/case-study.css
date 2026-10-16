@@ -55,3 +55,7 @@
 .case-index:not(.technical-articles):not(.contact-index) .case-card h2 { max-width: none; line-height: 1.7; text-wrap: pretty; }
 .case-card__image { display: block; width: min(100%, 760px); margin: 0 0 24px; }
 .case-card__image img { display: block; width: 100%; height: auto; max-height: 420px; object-fit: contain; object-position: left center; }
+
+/* Match the opening content position to the category tabs. */
+.contact-index.case-page { margin-top: 56px; padding-top: 0; }
+.contact-index .case-hero h1 { margin-top: 0; }
