@@ -47,7 +47,7 @@ a, button, input { -webkit-tap-highlight-color: transparent; }
 a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--mag-accent); outline-offset: 5px; }
 .site-header, .journal-app, .magazine-home, .site-footer { width: min(100%, 1180px); margin-inline: auto; background: transparent; }
 .site-header { border: 0; box-shadow: none; }
-.site-header__inner { min-height: 116px; padding: 86px 0px 60px; flex-wrap: wrap; border-bottom: 1px solid #a1aaa4; gap: 16px 36px; }
+.site-header__inner { min-height: 116px; padding: 86px 0px 42px; flex-wrap: wrap; border-bottom: 1px solid #a1aaa4; gap: 16px 36px; }
 .site-title { font-size: 36px; letter-spacing: -.025em; }
 .site-header__nav { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-left: auto; font-size: 13px; }
 .site-header__nav a { padding-block: 10px; }
@@ -218,7 +218,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 }
 @media (max-width: 640px) {
   body { padding-inline: 20px; }
-  .site-header__inner { min-height: 0; padding: 20px 0 24px; gap: 10px 16px; }
+  .site-header__inner { min-height: 0; padding: 38px 0 24px; gap: 10px 16px; }
   .site-title { font-size: clamp(24px,6.8vw,30px); }
   .search-form { width: 100px; margin-left: auto; }
   .search-form__input { width: 58px; }

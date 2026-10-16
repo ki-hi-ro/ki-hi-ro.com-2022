@@ -30,7 +30,7 @@
 
 /* Keep the category and navigation on one row, as in the supplied sketch. */
 .site-header__inner { border-bottom: 0; }
-.site-header__menu-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 24px; padding: 16px 0 26px; border-bottom: 1px solid #a1aaa4; }
+.site-header__menu-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 24px; }
 .site-header__category { min-width: 0; font-size: 13px; letter-spacing: .08em; line-height: 1.8; overflow-wrap: anywhere; }
 .site-header__menu-row .site-main-nav { padding: 0; border: 0; gap: 12px 28px; }
 .site-header__menu-row .site-main-nav a { white-space: nowrap; }
