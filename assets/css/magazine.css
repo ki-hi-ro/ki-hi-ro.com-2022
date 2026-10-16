@@ -543,3 +543,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 /* Keep article endings close to the footer after removing the top link. */
 .journal-panel--single > .article-like { margin-bottom: 0; }
 .journal-app--single + .site-footer { margin-top: 32px; padding-top: 24px; }
+
+.article-timeline--cards .article-timeline__year li a > .article-card-dates { order: 2; padding: 0 16px 18px; font-size: 12px; line-height: 1.7; color: var(--mag-muted); font-variant-numeric: tabular-nums; }
+.article-card-dates time { white-space: nowrap; }
