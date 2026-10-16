@@ -546,3 +546,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 
 .article-timeline--cards .article-timeline__year li a > .article-card-dates { order: 2; padding: 0 16px 18px; font-size: 12px; line-height: 1.7; color: var(--mag-muted); font-variant-numeric: tabular-nums; }
 .article-card-dates time { white-space: nowrap; }
+
+/* Match article openings to the about and contact pages. */
+body.single-post .journal-app--single { margin-top: 56px; }
+body.single-post .journal-panel--single { padding-top: 0; }
