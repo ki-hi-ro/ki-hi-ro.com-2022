@@ -97,7 +97,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .site-footer__link-arrow { flex-shrink: 0; color: var(--mag-accent); }
 .site-footer__group a:focus-visible { outline: 2px solid var(--mag-accent); outline-offset: 3px; border-radius: 2px; }
 .site-footer__group a:hover { color: var(--mag-accent); text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); }
-.site-footer__bottom { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 32px; padding-top: 26px; border-top: 1px solid var(--mag-line); }
+.site-footer__bottom { padding-right: 72px; display: flex; flex-wrap: wrap; align-items: center; gap: 18px 32px; padding-top: 26px; border-top: 1px solid var(--mag-line); }
 .site-footer__logo { font-family: "Kihiro Comic Relief", "Kihiro Yomogi", sans-serif; font-size: 21px; font-weight: 700; color: var(--mag-ink); }
 .site-footer__top { margin-left: auto; padding-block: 10px; }
 .footer-social { padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid var(--mag-line); }
