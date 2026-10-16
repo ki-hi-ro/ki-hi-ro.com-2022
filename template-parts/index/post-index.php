@@ -61,7 +61,7 @@ if (is_home()) {
       <?php endif; ?>
       <ol>
         <?php foreach ($entries as $entry) : ?>
-          <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?></span><time datetime="<?php echo esc_attr((is_home() ? get_the_modified_date('Y-m-d', $entry) : get_the_date('Y-m-d', $entry))); ?>"><?php echo esc_html((is_home() ? get_the_modified_date('Y-m-d', $entry) : get_the_date('Y-m-d', $entry))); ?></time><span><?php echo esc_html(get_the_title($entry)); ?></span></a></li>
+          <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?></span><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_date('Y-m-d', $entry)); ?></time><span><?php echo esc_html(get_the_title($entry)); ?></span></a></li>
         <?php endforeach; ?>
       </ol>
     </section>
