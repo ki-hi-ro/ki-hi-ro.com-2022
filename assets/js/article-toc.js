@@ -13,7 +13,10 @@
     aside.className = 'article-toc';
     var details = document.createElement('details');
     var summary = document.createElement('summary');
-    summary.textContent = '目次';
+    var summaryLabel = document.createElement('span');
+    summaryLabel.className = 'article-toc__label';
+    summaryLabel.textContent = '目次';
+    summary.append(summaryLabel);
     var nav = document.createElement('nav');
     nav.setAttribute('aria-label', 'この記事の目次');
     var list = document.createElement('ul');
