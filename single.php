@@ -65,11 +65,6 @@
           </nav>
         <?php endif; ?>
 
-        <p class="page-top">
-          <a class="page-top__link" href="#page-top" aria-label="ページ上部へ戻る">
-            <span aria-hidden="true">&uarr;</span>
-          </a>
-        </p>
       </article>
     <?php endwhile; ?>
   <?php endif; ?>

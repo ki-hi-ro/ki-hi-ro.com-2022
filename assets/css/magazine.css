@@ -554,3 +554,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .work-contact input[type="submit"]:hover { opacity: .8; }
 .work-contact .wpcf7-not-valid-tip { margin-top: 6px; font-size: 13px; }
 @media (max-width: 640px) { .work-contact__grid { grid-template-columns: minmax(0, 1fr); gap: 0; } }
+
+/* Keep article endings close to the footer after removing the top link. */
+.journal-panel--single > .article-like { margin-bottom: 0; }
+.journal-app--single + .site-footer { margin-top: 32px; padding-top: 24px; }
