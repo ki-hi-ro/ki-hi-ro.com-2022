@@ -176,7 +176,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .journal-empty { font-size: 16px; }
 .pagination { margin-top: 42px; min-width: 0; }
 .pagination .nav-links { display: flex; flex-wrap: nowrap; gap: 8px; overflow-x: auto; padding: 8px 6px 16px; scrollbar-width: thin; scrollbar-color: #a1aaa4 #edf0e9; }
-.pagination .page-numbers { flex-shrink: 0; }
+.pagination .page-numbers { flex: 0 0 44px; width: 44px; height: 44px; padding: 0; border-radius: 0; }
 .pagination .nav-links::-webkit-scrollbar { height: 7px; }
 .pagination .nav-links::-webkit-scrollbar-track { background: #edf0e9; border-radius: 4px; }
 .pagination .nav-links::-webkit-scrollbar-thumb { background: #a1aaa4; border-radius: 4px; }

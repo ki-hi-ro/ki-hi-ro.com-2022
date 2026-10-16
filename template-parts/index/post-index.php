@@ -72,6 +72,6 @@ if (is_home()) {
     <p class="article-list-range"><?php echo esc_html(number_format_i18n($range_start)); ?>〜<?php echo esc_html(number_format_i18n($range_start + $wp_query->post_count - 1)); ?>件を表示 / 全<?php echo esc_html(number_format_i18n($wp_query->found_posts)); ?>記事</p>
   <?php endif; ?>
   <?php if (is_home() || $is_article_search || $is_article_tag) : ?>
-    <?php the_posts_pagination(array('mid_size' => 1, 'prev_text' => '前へ', 'next_text' => '次へ', 'add_fragment' => is_home() ? '#year-latest' : '')); ?>
+    <?php the_posts_pagination(array('show_all' => true, 'prev_next' => false, 'add_fragment' => is_home() ? '#year-latest' : '')); ?>
   <?php endif; ?>
 </main>
