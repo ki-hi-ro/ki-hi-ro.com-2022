@@ -433,7 +433,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 }
 
 /* Home main view above the writing archive. */
-.article-timeline__main-view { margin: 0 0 32px; }
+.article-timeline__main-view { margin: 0 0 32px; display: none;}
 .article-timeline__main-view img { display: block; width: 100%; height: clamp(240px, 36vw, 440px); object-fit: cover; object-position: center 58%; }
 @media (max-width: 640px) {
   .article-timeline__main-view { margin-bottom: 24px; }
