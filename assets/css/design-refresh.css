@@ -35,7 +35,7 @@
 }
 
 html {
-  background: #f4f4f2;
+  background: #f4f4f4;
   color: #0d0d0d;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans",
     "Yu Gothic", sans-serif;
@@ -52,7 +52,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 50px 56px;
-  background: #f4f4f2;
+  background: #f4f4f4;
   color: #0d0d0d;
 }
 

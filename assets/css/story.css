@@ -14,7 +14,7 @@
 .story-chapters-nav ol { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 0; padding: 0; list-style: none; }
 .story-chapters-nav a { display: inline-block; padding: 8px 0; font-size: 13px; }
 .story-page a:hover { text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); }
-.story-chapter { position: relative; max-width: 760px; margin: 0; padding: 0 0 88px 48px; border-left: 1px solid #a1aaa4; scroll-margin-top: 48px; }
+.story-chapter { position: relative; max-width: 760px; margin: 0; padding: 0 0 88px 48px; border-left: 1px solid #a8a8a8; scroll-margin-top: 48px; }
 .story-chapter::before { position: absolute; top: 9px; left: -4px; width: 7px; height: 7px; border-radius: 50%; background: var(--mag-accent); content: ''; }
 .story-chapter .story-chapter__meta { margin: 0 0 12px; font-size: 12px; color: var(--mag-accent); letter-spacing: .05em; }
 .story-chapter h2 { margin: 0 0 32px; font-size: clamp(24px, 3vw, 34px); line-height: 1.6; font-weight: 600; }
@@ -28,7 +28,7 @@
 .story-end-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; max-width: 760px; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--mag-line); font-size: 14px; }
 .story-end-nav a { padding: 12px 0; }
 .story-index__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
-.story-card { padding: 32px 0; border-top: 1px solid #a1aaa4; }
+.story-card { padding: 32px 0; border-top: 1px solid #a8a8a8; }
 .story-card h2 { font-size: 27px; line-height: 1.8; margin: 0 0 20px; }
 .story-card > p:not([class]) { max-width: 34em; margin: 24px 0; font-size: 15px; line-height: 2; }
 .story-read { display: inline-flex; gap: 24px; padding: 12px 0; border-bottom: 1px solid var(--mag-line); font-size: 13px; }
