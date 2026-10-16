@@ -11,7 +11,6 @@
       &copy; <?php echo esc_html(wp_date('Y')); ?> ki-hi-ro.com
     </span>
 
-    <a class="site-footer__contact" href="<?php echo esc_url(home_url('/contact-us/')); ?>">お問い合わせ</a>
 
   </div>
 
