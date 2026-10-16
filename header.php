@@ -24,7 +24,7 @@
       <?php get_search_form(); ?>
     </div>
     <div class="site-header__menu-row">
-      <span class="site-header__category">WEBエンジニアの柴田浩貴です。ブログで人生を進めています。</span>
+      <span class="site-header__category">過去の自分を残し、今の自分を表現し、未来の自分へつなぐ。</span>
     <?php $case_index = kihiro_case_study_index(); ?>
       <nav class="site-main-nav" aria-label="メインナビゲーション">
         <a href="<?php echo esc_url(home_url('/')); ?>" <?php if (is_front_page() || is_home()) : ?>aria-current="page"<?php elseif (is_singular('post')) : ?>aria-current="true"<?php endif; ?>>日々のジャーナル</a>
