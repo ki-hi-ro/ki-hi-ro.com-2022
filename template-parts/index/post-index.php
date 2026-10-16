@@ -4,8 +4,6 @@ global $wp_query;
 $is_article_search = is_search();
 $is_article_tag = is_tag();
 $is_article_home = is_home() && !$is_article_search && '' === kihiro_get_request_value('view');
-$selected_tag = kihiro_selected_article_tag();
-$article_tags = get_tags(array('hide_empty' => true));
 $years = array();
 foreach ($wp_query->posts as $entry) {
     $entry_year = (int) get_the_date('Y', $entry);
@@ -57,7 +55,7 @@ if (is_home()) {
   <?php foreach ($years as $year => $entries) : ?>
     <section class="article-timeline__year" id="year-<?php echo esc_attr($year); ?>" aria-labelledby="year-heading-<?php echo esc_attr($year); ?>">
       <?php if (is_home()) : ?>
-        <header class="article-list-heading"><h2 id="year-heading-latest" class="screen-reader-text">記事一覧</h2><p class="article-list-heading__total">全<?php echo esc_html(number_format_i18n($wp_query->found_posts)); ?>記事</p></header>
+        <h2 id="year-heading-latest" class="screen-reader-text">記事一覧</h2>
       <?php else : ?>
         <header><h2 id="year-heading-<?php echo esc_attr($year); ?>"><?php echo $year ? esc_html($year) . '<span>年</span>' : '2021<span>年より前</span>'; ?></h2><p><?php echo esc_html(number_format_i18n(count($entries))); ?>記事を表示</p></header>
       <?php endif; ?>

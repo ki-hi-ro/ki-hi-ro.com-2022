@@ -2,8 +2,6 @@
 $category_id = absint(kihiro_get_request_value('article_category'));
 $tag_id = kihiro_selected_article_tag();
 $categories = get_categories(array('hide_empty' => true, 'orderby' => 'count', 'order' => 'DESC'));
-$tags = get_tags(array('hide_empty' => true));
-$popular_tags = get_tags(array('hide_empty' => true, 'orderby' => 'count', 'order' => 'DESC', 'number' => 8));
 $filter_url = function ($category, $tag) {
     $params = array();
     if ($category) $params['article_category'] = $category;
@@ -20,23 +18,4 @@ $filter_url = function ($category, $tag) {
       <a href="<?php echo esc_url($filter_url($category->term_id, $tag_id)); ?>" <?php if ($category_id === $category->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($category->name); ?></a>
     <?php endforeach; ?>
   </nav>
-  <div class="article-filters__tags">
-    <span class="article-filters__label">タグ</span>
-    <a class="article-filters__pill" href="<?php echo esc_url($filter_url($category_id, 0)); ?>" <?php if (!$tag_id) echo 'aria-current="true"'; ?>>すべて</a>
-    <?php if (!is_wp_error($popular_tags)) : foreach ($popular_tags as $tag) : ?>
-      <a class="article-filters__pill" href="<?php echo esc_url($filter_url($category_id, $tag->term_id)); ?>" <?php if ($tag_id === $tag->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($tag->name); ?></a>
-    <?php endforeach; endif; ?>
-  </div>
-  <form class="article-filters__form" action="<?php echo esc_url(home_url('/')); ?>" method="get">
-    <?php if ($category_id) : ?><input type="hidden" name="article_category" value="<?php echo esc_attr($category_id); ?>"><?php endif; ?>
-    <label for="article-tag">すべてのタグから選ぶ</label>
-    <select id="article-tag" name="article_tag">
-      <option value="">すべてのタグ</option>
-      <?php if (!is_wp_error($tags)) : foreach ($tags as $tag) : ?>
-        <option value="<?php echo esc_attr($tag->term_id); ?>" <?php selected($tag_id, $tag->term_id); ?>><?php echo esc_html($tag->name); ?></option>
-      <?php endforeach; endif; ?>
-    </select>
-    <button type="submit">絞り込む</button>
-    <?php if ($category_id || $tag_id) : ?><a href="<?php echo esc_url($filter_url(0, 0)); ?>">絞り込みを解除</a><?php endif; ?>
-  </form>
 </section>

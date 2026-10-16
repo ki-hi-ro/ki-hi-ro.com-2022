@@ -44,7 +44,7 @@ function kihiro_custom_excerpt($length = 170) {
 }
 
 function kihiro_home_posts_per_page() {
-    return 12;
+    return 3;
 }
 
 function kihiro_get_request_value($key) {
@@ -191,7 +191,7 @@ function kihiro_configure_main_query($query) {
     }
 
     if ($query->is_home()) {
-        $query->set('posts_per_page', kihiro_is_all_articles_view() ? 12 : kihiro_home_posts_per_page());
+        $query->set('posts_per_page', kihiro_home_posts_per_page());
         $query->set('orderby', array('modified' => 'DESC', 'ID' => 'DESC'));
         $query->set('order', 'DESC');
         $query->set('no_found_rows', false);
