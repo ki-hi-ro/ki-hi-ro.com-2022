@@ -480,21 +480,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .article-featured-image { margin: 28px 0 36px; }
 .article-featured-image img { display: block; width: 100%; height: auto; border-radius: 6px; }
 
-/* Compact cards aligned with the journal filters and year headings. */
+/* Open editorial cards with generous image and text spacing. */
 .article-timeline--cards .article-timeline__year { display: block; max-width: none; margin-inline: 0; padding-bottom: 24px; }
 .article-timeline--cards .article-timeline__year > header { position: static; display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px; }
-.article-timeline--cards .article-timeline__year ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 0; border: 0; }
-.article-timeline--cards .article-timeline__year li { min-width: 0; margin-bottom: 0; border: 1px solid var(--mag-line); border-radius: 4px; overflow: hidden; background: var(--mag-paper); }
+.article-timeline--cards .article-timeline__year ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 28px; padding: 0; border: 0; }
+.article-timeline--cards .article-timeline__year li { min-width: 0; margin-bottom: 0; border: 0; border-bottom: 1px solid var(--mag-line); border-radius: 0; background: transparent; }
 .article-timeline--cards .article-timeline__year li::before { content: none; }
-.article-timeline--cards .article-timeline__year li a { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 0; }
-.article-timeline--cards .article-timeline__thumbnail { order: 0; }
-.article-timeline--cards .article-timeline__thumbnail img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 0; }
-.article-timeline--cards .article-timeline__year li a > span:last-child { order: 1; padding: 16px 16px 12px; font-size: 16px; font-weight: 700; line-height: 2; overflow-wrap: anywhere; }
-.article-timeline--cards .article-timeline__year li a > time { order: 2; padding: 0 16px 18px; font-size: 12px; line-height: 1.7; }
+.article-timeline--cards .article-timeline__year li a { display: flex; flex-direction: column; align-items: stretch; gap: 0; height: 100%; padding: 0; }
+.article-timeline--cards .article-timeline__thumbnail { order: 0; overflow: hidden; border-radius: 8px; }
+.article-timeline--cards .article-timeline__thumbnail img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; }
+.article-timeline--cards .article-timeline__year li a > span:last-child { order: 1; flex: 1; padding: 20px 0 14px; font-size: 17px; font-weight: 700; line-height: 1.75; overflow-wrap: anywhere; }
+.article-timeline--cards .article-timeline__year li a > time { order: 2; padding: 0 0 22px; font-size: 12px; line-height: 1.7; }
 @media (max-width: 640px) {
- .article-timeline--cards .article-timeline__year ol { grid-template-columns: minmax(0, 1fr); gap: 20px; }
- .article-timeline--cards .article-timeline__year li a > span:last-child { padding: 16px 16px 12px; }
- .article-timeline--cards .article-timeline__year li a > time { padding: 0 16px 18px; font-size: 13px; }
+ .article-timeline--cards .article-timeline__year ol { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+ .article-timeline--cards .article-timeline__year li a > span:last-child { padding: 18px 0 12px; }
+ .article-timeline--cards .article-timeline__year li a > time { padding: 0 0 22px; font-size: 13px; }
  .article-timeline--cards .article-timeline__thumbnail img { aspect-ratio: 1.8 / 1; }
 }
 
@@ -542,9 +542,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .journal-panel--single > .article-like { margin-bottom: 0; }
 .journal-app--single + .site-footer { margin-top: 32px; padding-top: 24px; }
 
-.article-timeline--cards .article-timeline__year li a > .article-card-dates { order: 2; padding: 0 16px 18px; font-size: 12px; line-height: 1.7; color: var(--mag-muted); font-variant-numeric: tabular-nums; }
+.article-timeline--cards .article-timeline__year li a > .article-card-dates { order: 2; padding: 0 0 22px; font-size: 12px; line-height: 1.7; color: var(--mag-muted); font-variant-numeric: tabular-nums; }
 .article-card-dates time { white-space: nowrap; }
 
 /* Match article openings to the about and contact pages. */
 body.single-post .journal-app--single { margin-top: 56px; }
 body.single-post .journal-panel--single { padding-top: 0; }
+
+.article-timeline--cards .article-timeline__year a:hover span { text-decoration: none; }
+.article-timeline--cards .article-timeline__year a:hover > span:last-child { color: var(--mag-muted); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .article-timeline--cards .article-timeline__thumbnail img { transition: transform .3s ease; }
+  .article-timeline--cards .article-timeline__year a:hover .article-timeline__thumbnail img { transform: scale(1.035); }
+}
