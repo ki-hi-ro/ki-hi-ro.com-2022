@@ -1,5 +1,9 @@
 <?php
-/** Compact article preview inside the WordPress embed document. */
+/**
+ * リンクカードは親記事と別のiframe文書として描画される。
+ * スタイルはembed_headから読み込むembed.cssで調整する。
+ * 抜粋はタグを除去してエスケープし、本文HTMLやスクリプトをカードに持ち込まない。
+ */
 ?>
 <div <?php post_class('wp-embed'); ?>>
   <?php if (!post_password_required()) : ?>

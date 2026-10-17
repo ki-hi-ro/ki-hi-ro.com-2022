@@ -4,6 +4,8 @@ global $wp_query;
 $is_article_search = is_search();
 $is_article_tag = is_tag();
 $is_article_home = is_home() && !$is_article_search && '' === kihiro_get_request_value('view');
+// 取得はメインクエリ側で完了している。ここでは取得済みの投稿を年ごとに整理する。
+// 2021年以前はまとめるが、ホームは年で分断せず更新順を維持する。
 $years = array();
 foreach ($wp_query->posts as $entry) {
     $entry_year = (int) get_the_date('Y', $entry);

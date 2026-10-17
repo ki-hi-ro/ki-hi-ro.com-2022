@@ -8,6 +8,7 @@ get_header(); ?>
   <?php while (have_posts()) : the_post(); ?>
     <article>
       <h1 class="screen-reader-text"><?php the_title(); ?></h1>
+      <?php // 本文はWordPressのDBが正本。content/about.htmlは原稿の控えで自動同期しない。 ?>
       <div class="about-body"><?php the_content(); ?></div>
     </article>
   <?php endwhile; ?>

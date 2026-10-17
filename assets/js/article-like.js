@@ -25,6 +25,8 @@
     setStatus('いいねを利用するにはブラウザーの保存機能を有効にしてください。');
     return;
   }
+  // 初回は状態取得のみ。そこで得たnonceを次の投票で送る二段階の通信。
+  // pending中は追加リクエストを抑え、通信エラー後は保存済みの可能性も考えて再取得する。
   async function request(vote) {
     if (pending) return;
     pending = true;

@@ -4,6 +4,7 @@ get_header(); ?>
 <main id="main-content" class="article-timeline article-timeline--cards case-study-timeline">
 <?php while (have_posts()) : the_post(); ?>
   <?php
+  // 開発事例は独自投稿タイプではなく、この一覧ページを親に持つ固定ページ。
   $cases = get_pages(array('parent' => get_the_ID(), 'post_status' => 'publish', 'sort_column' => 'post_modified,ID', 'sort_order' => 'DESC'));
   $cases = array_values(array_filter($cases, function ($case) { return !post_password_required($case); }));
   $case_categories = array('web' => 'Web制作', 'data' => 'データ処理', 'automation' => '業務自動化');
@@ -19,6 +20,7 @@ get_header(); ?>
           return kihiro_case_study_category($case) === $selected_category;
       }));
   }
+  // 絞り込みを終えてから件数とページ数を確定する。順序を逆にすると空ページが生じる。
   $total = count($cases);
   $per_page = kihiro_home_posts_per_page();
   $total_pages = (int) ceil($total / $per_page);

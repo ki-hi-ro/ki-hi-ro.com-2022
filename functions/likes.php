@@ -16,10 +16,13 @@ function kihiro_like_request() {
     if (!preg_match('/^[a-f0-9]{32}$/', $token)) {
         wp_send_json_error(array('message' => 'ブラウザー情報を確認できません。'), 400);
     }
+    // 生の訪問者トークンをDBへ保存せず、サイト固有のsaltでHMAC化する。
+    // 同じブラウザーの重複抑制であり、ユーザー本人の一意性を保証するものではない。
     $key = 'kihiro_like_' . $post_id . '_' . hash_hmac('sha256', $token, wp_salt('auth'));
     $nonce_action = 'kihiro_like_' . $post_id . '_' . $token;
     if (isset($_POST['vote']) && $_POST['vote'] === '1') {
         check_ajax_referer($nonce_action, 'nonce');
+        // option_nameの一意制約で同一投票を重複保存しない。集計用なのでautoloadしない。
         if (!add_option($key, '1', '', false) && get_option($key, false) === false) {
             wp_send_json_error(array('message' => '保存できませんでした。もう一度お試しください。'), 500);
         }

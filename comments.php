@@ -1,5 +1,7 @@
 <?php
 /** Article discussion using WordPress comment moderation and form handling. */
+// パスワード保護された記事では本文だけでなくコメントも公開しない。
+// コメント承認・投稿先・返信はWordPress標準APIに任せる。
 if (post_password_required()) return;
 ?>
 <section id="comments" class="article-comments" aria-label="コメント">

@@ -3,6 +3,7 @@
  * Front-end assets.
  */
 
+/** 更新時刻をURLのverへ付け、変更後のCSS/JSが古いキャッシュと区別されるようにする。 */
 function kihiro_asset_version($relative_path) {
     $path = get_template_directory() . $relative_path;
 
@@ -15,6 +16,7 @@ function kihiro_enqueue_assets() {
     }
     wp_enqueue_script('kihiro-article-return', get_theme_file_uri('/assets/js/article-return.js'), array(), kihiro_asset_version('/assets/js/article-return.js'), true);
     wp_enqueue_script('kihiro-page-scroll', get_theme_file_uri('/assets/js/page-scroll.js'), array(), kihiro_asset_version('/assets/js/page-scroll.js'), true);
+    // 記事本文がある画面だけで目次・コードコピーを読み込み、他画面の処理を抑える。
     if (is_single() || is_page_template('page-case-study.php')) {
         if (is_single()) {
             wp_enqueue_script('kihiro-article-like', get_theme_file_uri('/assets/js/article-like.js'), array(), kihiro_asset_version('/assets/js/article-like.js'), true);

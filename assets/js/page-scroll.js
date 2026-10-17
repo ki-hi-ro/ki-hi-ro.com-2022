@@ -2,6 +2,7 @@
   const button = document.querySelector('.floating-page-top');
   if (!button) return;
   const arrow = button.querySelector('span');
+  // 上半分では最下部へ、下半分では最上部へ。同じボタンの役割とラベルを同期する。
   const update = () => {
     const maximum = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
     const goDown = maximum > 0 && window.scrollY < maximum / 2;

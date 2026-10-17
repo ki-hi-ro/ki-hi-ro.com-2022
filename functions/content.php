@@ -185,6 +185,11 @@ function kihiro_month_post_days($year, $month) {
     return $days;
 }
 
+/**
+ * 公開画面のメインクエリだけを調整する。
+ * 独自WP_Queryや管理画面まで書き換えると、管理一覧や補助取得が壊れるため対象外。
+ * ホームは更新順、カードの日付は公開日と更新日の両方で、役割が異なる。
+ */
 function kihiro_configure_main_query($query) {
     if (is_admin() || !$query->is_main_query()) {
         return;
@@ -196,6 +201,8 @@ function kihiro_configure_main_query($query) {
         $query->set('order', 'DESC');
         $query->set('no_found_rows', false);
         $query->set('ignore_sticky_posts', true);
+        // 入力値はヘルパーで検証し、条件はWordPressのtax_queryへ渡す。
+        // 複数条件を指定した場合は、両方に該当する記事だけを表示する。
         $tax_filters = array('relation' => 'AND');
         if (kihiro_is_all_articles_view() && kihiro_selected_article_tag()) {
             $tax_filters[] = array(
@@ -259,6 +266,7 @@ function kihiro_selected_article_tag() {
 }
 
 /** Use the featured image, the first content image, then a local cover. */
+/** アイキャッチ → 本文の最初の画像 → 代替画像の順で選ぶ。保護本文は探索しない。 */
 function kihiro_article_thumbnail($post_id, $size = 'medium') {
     if (has_post_thumbnail($post_id)) {
         return get_the_post_thumbnail($post_id, $size, array('alt' => '', 'loading' => 'lazy', 'decoding' => 'async'));

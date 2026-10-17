@@ -4,6 +4,8 @@
     var main = document.querySelector('.journal-app--single');
     var content = main && main.querySelector('.db-single__content');
     if (!content) return;
+    // 表示中の本文だけを対象にし、既存の目次プラグインが作った見出しは除外する。
+    // DB本文を更新せず、現在のブラウザーDOMへIDとナビゲーションを追加する。
     var headings = Array.from(content.querySelectorAll('h2, h3')).filter(function (heading) {
         return heading.textContent.trim() && !heading.closest('#ez-toc-container, .ez-toc-widget-container');
     });

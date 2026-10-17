@@ -123,6 +123,11 @@ function kihiro_case_study_image($case) {
 }
 
 /** Group implementation examples by their technology and subject. */
+/**
+ * 現在のカテゴリーはタイトル・技術情報からの推定で、WPのカテゴリーではない。
+ * データ処理を先に判定し、Pythonという共通語だけで業務自動化に入るのを避ける。
+ * 新しい事例やタイトル変更時は、一覧の分類結果も確認すること。
+ */
 function kihiro_case_study_category($case) {
     if (preg_match('/ETL|データ.*(?:整形|チェック|処理)|ファイル.*取り込/iu', $case->post_title)) return 'data';
     $subject = kihiro_case_study_technology($case) . ' ' . $case->post_title;

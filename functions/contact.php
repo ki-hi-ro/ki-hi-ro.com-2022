@@ -25,6 +25,8 @@ add_action('init', 'kihiro_create_contact_page');
 
 /** Render the dedicated work inquiry form. */
 function kihiro_contact_form() {
+    // ここは表示だけを担当。入力検証・メール宛先・送信はContact Form 7の設定に委譲。
+    // 本文内の[kihiro_contact_form]から呼ばれるため、DB本文とテーマの両方が関係する。
     $form_id = absint(get_option('kihiro_work_contact_form_id'));
     if (!$form_id || !shortcode_exists('contact-form-7')) {
         return '<p>現在、お問い合わせフォームを準備しています。</p>';
