@@ -5,6 +5,11 @@ on:
 
 name: Build and Deploy
 
+# Serialize transfers so two deployments cannot overwrite each other mid-upload.
+concurrency:
+  group: production-theme-deploy
+  cancel-in-progress: false
+
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
@@ -12,6 +17,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+        with:
+          # Future reruns always deploy the current production branch.
+          ref: main
 
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
