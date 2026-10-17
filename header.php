@@ -24,7 +24,7 @@
       <?php get_search_form(); ?>
     </div>
     <div class="site-header__menu-row">
-      <span class="site-header__category">心の声を可視化しています。</span>
+      <span class="site-header__category">WEBエンジニアの柴田浩貴です。心の声を可視化しています。</span>
     <?php $case_index = kihiro_case_study_index(); ?>
       <nav class="site-main-nav" aria-label="メインナビゲーション">
         <a href="<?php echo esc_url(home_url('/')); ?>" <?php if (is_front_page() || is_home()) : ?>aria-current="page"<?php elseif (is_singular('post') || is_search()) : ?>aria-current="true"<?php endif; ?>>日々のジャーナル</a>
