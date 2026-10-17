@@ -42,10 +42,6 @@ get_header(); ?>
           <?php the_content(); ?>
         </div>
 
-        <?php $parent_id = wp_get_post_parent_id(get_the_ID()); ?>
-        <?php if ($parent_id && get_post_status($parent_id) === 'publish') : ?>
-          <p class="db-back-link"><a href="<?php echo esc_url(get_permalink($parent_id)); ?>">← 開発事例の一覧へ</a></p>
-        <?php endif; ?>
       </article>
     <?php endwhile; ?>
   <?php endif; ?>
