@@ -39,6 +39,8 @@ if (is_home()) {
     <figure class="article-timeline__main-view">
       <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/home-main-view.jpg')); ?>" width="4032" height="3024" alt="木々に囲まれたログハウスの風景" fetchpriority="high" decoding="async">
     </figure>
+  <?php elseif (is_date()) : ?>
+    <header class="article-timeline__header"><div><h1><?php echo esc_html(get_the_archive_title()); ?></h1><p>公開日で探す記事一覧</p></div></header>
   <?php else : ?>
   <header class="article-timeline__header">
     <div>
@@ -67,7 +69,8 @@ if (is_home()) {
     </section>
   <?php endforeach; ?>
   <?php if (!$years) : ?><p>該当する記事はありません。</p><?php endif; ?>
-  <?php if (is_home() || $is_article_search || $is_article_tag) : ?>
+  <?php if (is_home() || $is_article_search || $is_article_tag || is_date()) : ?>
     <?php the_posts_pagination(array('show_all' => true, 'prev_next' => false, 'add_fragment' => is_home() ? '#year-latest' : '')); ?>
   <?php endif; ?>
+  <?php get_template_part('template-parts/monthly-archives'); ?>
 </main>
