@@ -546,8 +546,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .article-card-dates time { white-space: nowrap; }
 
 /* Match article openings to the about and contact pages. */
-body.single-post .journal-app--single { margin-top: 56px; }
-body.single-post .journal-panel--single { padding-top: 0; }
+body.single-post .journal-app--single, .journal-app--single.case-detail { margin-top: 56px; }
+body.single-post .journal-panel--single, .case-detail .journal-panel--single { padding-top: 0; }
 
 .article-timeline--cards .article-timeline__year a:hover span { text-decoration: none; }
 .article-timeline--cards .article-timeline__year a:hover > span:last-child { color: var(--mag-muted); }
