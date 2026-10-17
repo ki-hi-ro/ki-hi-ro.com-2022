@@ -8,7 +8,6 @@
       </figure>
       <article class="contact-page">
         <header class="case-hero">
-          <h1><?php the_title(); ?></h1>
           <div class="case-content"><?php the_content(); ?></div>
         </header>
       </article>
