@@ -596,3 +596,15 @@ body.single-post .journal-panel--single, .case-detail .journal-panel--single { p
   #main-content .journal-panel--single { padding-top: 0; }
   #main-content .contact-page .case-hero h1 { margin-top: 0; }
 }
+
+/* Use one opening rhythm across lists, profiles, and detail pages. */
+body #main-content { margin-top: 40px; padding-top: 0; }
+#main-content > .article-filters { margin-top: 0; }
+#main-content .article-filters__categories a { padding-top: 0; }
+#main-content > .article-timeline__header { padding-top: 0; }
+#main-content > .article-timeline__header h1 { margin-top: 0; }
+#main-content .journal-panel--single { padding-top: 0; }
+#main-content .contact-page .case-hero h1 { margin-top: 0; }
+@media (max-width: 700px) {
+  body #main-content { margin-top: 24px; }
+}
