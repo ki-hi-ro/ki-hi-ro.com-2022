@@ -1,0 +1,18 @@
+/* WordPress article previews match the main site's monochrome design. */
+html, body { background: #fff; color: #292929; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; }
+.wp-embed { padding: 24px; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: none; background: #fff; color: #666; font-family: inherit; }
+.wp-embed-heading { margin: 0 0 16px; font-size: 22px; font-weight: 700; line-height: 1.6; }
+.wp-embed-heading a { color: #292929; }
+.wp-embed-excerpt { font-size: 14px; line-height: 1.9; }
+.wp-embed-excerpt p { margin: 0 0 16px; }
+.wp-embed a { color: #292929; text-decoration: none; }
+.wp-embed a:hover { color: #666; text-decoration: underline; text-underline-offset: 4px; }
+.wp-embed a:focus-visible, .wp-embed button:focus-visible { outline: 2px solid #333; outline-offset: 3px; }
+.wp-embed-footer { margin-top: 24px; font-size: 12px; }
+.wp-embed-site-title { font-weight: 600; }
+.wp-embed-site-title .wp-embed-site-icon { display: none; }
+.wp-embed-site-title a { padding-left: 0; }
+.wp-embed-meta a, .wp-embed-meta button { color: #666; }
+.wp-embed-featured-image { border-radius: 6px; overflow: hidden; }
+@media (max-width: 480px) { .wp-embed { padding: 20px; } .wp-embed-heading { font-size: 18px; } }

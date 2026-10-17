@@ -95,3 +95,8 @@ function kihiro_site_icons() {
         );
     }
 }
+
+/** Embedded previews render in a separate WordPress document. */
+add_action('embed_head', function () {
+    printf('<link rel="stylesheet" href="%s">', esc_url(add_query_arg('ver', kihiro_asset_version('/assets/css/embed.css'), get_theme_file_uri('/assets/css/embed.css'))));
+});
