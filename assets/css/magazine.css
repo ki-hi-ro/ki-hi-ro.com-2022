@@ -581,7 +581,7 @@ body #main-content { margin-top: 40px; padding-top: 0; }
 
 .work-contact select:not([multiple]), .work-contact select option { font-weight: 400; }
 
-/* Give index and informational pages more breathing room below the header. */
+/* Use the same desktop header spacing on every page, including articles. */
 @media (min-width: 701px) {
-  body:not(.single-post) #main-content:not(.case-detail) { margin-top: 56px; }
+  body #main-content { margin-top: 56px; }
 }
