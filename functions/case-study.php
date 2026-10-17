@@ -124,6 +124,7 @@ function kihiro_case_study_image($case) {
 
 /** Group implementation examples by their technology and subject. */
 function kihiro_case_study_category($case) {
+    if (preg_match('/ETL|データ.*(?:整形|チェック|処理)|ファイル.*取り込/iu', $case->post_title)) return 'data';
     $subject = kihiro_case_study_technology($case) . ' ' . $case->post_title;
     return preg_match('/Python|ETL|Excel|自動化/iu', $subject) ? 'automation' : 'web';
 }

@@ -6,7 +6,7 @@ get_header(); ?>
   <?php
   $cases = get_pages(array('parent' => get_the_ID(), 'post_status' => 'publish', 'sort_column' => 'post_modified,ID', 'sort_order' => 'DESC'));
   $cases = array_values(array_filter($cases, function ($case) { return !post_password_required($case); }));
-  $case_categories = array('web' => 'Web制作', 'automation' => 'データ処理・業務自動化');
+  $case_categories = array('web' => 'Web制作', 'data' => 'データ処理', 'automation' => '業務自動化');
   $selected_category = kihiro_get_request_value('case_category');
   if (!isset($case_categories[$selected_category])) $selected_category = '';
   $available_categories = array();
