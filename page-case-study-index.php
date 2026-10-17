@@ -46,6 +46,10 @@ get_header(); ?>
   <?php else : ?>
     <p>該当する開発事例はありません。</p>
   <?php endif; ?>
+  <?php if ($cases) : ?>
+    <?php $range_start = ($current_page - 1) * $per_page + 1; ?>
+    <p class="article-list-range"><?php echo esc_html(number_format_i18n($range_start)); ?>〜<?php echo esc_html(number_format_i18n($range_start + count($cases) - 1)); ?>件を表示 / 全<?php echo esc_html(number_format_i18n($total)); ?>件</p>
+  <?php endif; ?>
   <?php if ($total_pages > 1) : ?>
     <nav class="navigation pagination" aria-label="開発事例のページ送り">
       <div class="nav-links"><?php echo wp_kses_post(paginate_links(array(
