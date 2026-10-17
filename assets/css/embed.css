@@ -7,9 +7,15 @@ body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans
 .wp-embed-excerpt { font-size: 14px; line-height: 1.9; }
 .wp-embed-excerpt p { margin: 0 0 16px; }
 .wp-embed a { color: #292929; text-decoration: none; }
-.wp-embed a:hover { color: #666; text-decoration: underline; text-underline-offset: .22em; text-decoration-thickness: 1px; }
+.wp-embed a:hover { color: #666; text-decoration: none; }
+.wp-embed:hover .wp-embed-heading a { color: #666; }
 .wp-embed a:focus-visible, .wp-embed button:focus-visible { outline: 2px solid #333; outline-offset: 3px; }
 .wp-embed-featured-image { float: none; width: 100%; margin: 0 0 20px; border-radius: 6px; overflow: hidden; }
 .wp-embed-featured-image img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
 .wp-embed-excerpt p:last-child { margin-bottom: 0; }
 @media (max-width: 480px) { .wp-embed { padding: 20px; } .wp-embed-heading { font-size: 18px; } }
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .wp-embed-featured-image img { transition: transform .3s ease; }
+  .wp-embed:hover .wp-embed-featured-image img { transform: scale(1.035); }
+}
