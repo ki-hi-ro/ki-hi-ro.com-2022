@@ -15,13 +15,6 @@ function kihiro_enqueue_assets() {
     }
     wp_enqueue_script('kihiro-article-return', get_theme_file_uri('/assets/js/article-return.js'), array(), kihiro_asset_version('/assets/js/article-return.js'), true);
     wp_enqueue_script('kihiro-page-scroll', get_theme_file_uri('/assets/js/page-scroll.js'), array(), kihiro_asset_version('/assets/js/page-scroll.js'), true);
-    wp_enqueue_script(
-        'kihiro-x-feed',
-        get_theme_file_uri('/assets/js/x-feed.js'),
-        array(),
-        kihiro_asset_version('/assets/js/x-feed.js'),
-        true
-    );
     if (is_single() || is_page_template('page-case-study.php')) {
         if (is_single()) {
             wp_enqueue_script('kihiro-article-like', get_theme_file_uri('/assets/js/article-like.js'), array(), kihiro_asset_version('/assets/js/article-like.js'), true);
@@ -52,8 +45,6 @@ function kihiro_enqueue_assets() {
         'kihiro-design-refresh' => '/assets/css/design-refresh.css',
         'kihiro-magazine' => '/assets/css/magazine.css',
         'kihiro-case-study' => '/assets/css/case-study.css',
-        'khiro-instagram' => '/assets/css/instagram.css',
-        'kihiro-x' => '/assets/css/x.css',
     );
     if (kihiro_is_story()) {
         $styles['kihiro-story'] = '/assets/css/story.css';
