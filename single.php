@@ -42,6 +42,10 @@
 
         <?php get_template_part('template-parts/article-like'); ?>
 
+        <?php if (comments_open() || get_comments_number()) : ?>
+          <?php comments_template(); ?>
+        <?php endif; ?>
+
         <?php
         $previous_post = get_previous_post();
         $next_post = get_next_post();
