@@ -1,11 +1,4 @@
 .about-page { max-width: 1180px; margin: 56px auto 0; }
-.about-hero { max-width: 860px; margin-inline: 0; padding-bottom: 40px; border-bottom: 1px solid var(--mag-line); }
-.about-identity { display: flex; align-items: center; gap: 20px; margin-bottom: 28px; }
-.about-avatar { flex: 0 0 88px; width: 88px; height: 88px; border-radius: 50%; object-fit: cover; object-position: 36% 38%; }
-.about-name { font-size: 30px; margin: 0; }
-.about-name span { display: block; font-size: 12px; letter-spacing: .08em; color: var(--mag-muted); margin-top: 8px; }
-.about-lead { font-size: clamp(24px, 2.4vw, 30px); line-height: 1.65; font-weight: 700; margin: 0 0 24px; }
-.about-hero__text > p:last-child { font-size: 14px; line-height: 2; }
 .about-body { max-width: 860px; margin: 0; font-size: 16px; line-height: 2.1; }
 .about-body section { padding: 48px 0; border-bottom: 1px solid var(--mag-line); }
 .about-body h2 { font-size: clamp(22px, 2.3vw, 28px); line-height: 1.65; margin: 0 0 24px; border-left: 3px solid #7e7e7e; padding-left: 18px; }
@@ -21,11 +14,11 @@
 .about-reading li { margin: 12px 0; }
 @media (max-width: 700px) {
  .about-page { margin-top: 56px; }
- .about-hero { padding-bottom: 36px; }
  .about-body { font-size: 15px; }
  .about-body section { padding: 32px 0; }
  .about-maru { grid-template-columns: minmax(0, 1fr); gap: 24px; }
  .about-maru figure { max-width: 360px; }
 }
 
-@media (max-width: 640px) { .about-identity { gap: 16px; } .about-avatar { flex-basis: 72px; width: 72px; height: 72px; } .about-name { font-size: 26px; } }
+
+.about-body > section:first-child { padding-top: 0; }
