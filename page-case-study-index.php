@@ -39,7 +39,7 @@ get_header(); ?>
         <ol>
           <?php foreach ($cases as $case) : ?>
             <?php $image = kihiro_case_study_image($case); ?>
-            <li><a href="<?php echo esc_url(get_permalink($case)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo $image ? wp_kses_post($image) : '<img src="' . esc_url(get_theme_file_uri('/assets/images/case-study-placeholder.svg')) . '" alt="" width="320" height="200" loading="lazy">'; ?></span><time datetime="<?php echo esc_attr(get_the_modified_date('Y-m-d', $case)); ?>"><?php echo esc_html(get_the_modified_date('Y-m-d', $case)); ?></time><span><?php echo esc_html($case->post_title); ?></span></a></li>
+            <li><a href="<?php echo esc_url(get_permalink($case)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo $image ? wp_kses_post($image) : '<img src="' . esc_url(get_theme_file_uri('/assets/images/case-study-placeholder.svg')) . '" alt="" width="320" height="200" loading="lazy">'; ?></span><span class="article-card-dates"><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $case)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $case)); ?> 公開</time> ／ <time datetime="<?php echo esc_attr(get_the_modified_date('Y-m-d', $case)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $case)); ?> 更新</time></span><span><?php echo esc_html($case->post_title); ?></span></a></li>
           <?php endforeach; ?>
         </ol>
       </section>
@@ -48,7 +48,7 @@ get_header(); ?>
   <?php endif; ?>
   <?php if ($cases) : ?>
     <?php $range_start = ($current_page - 1) * $per_page + 1; ?>
-    <p class="article-list-range"><?php echo esc_html(number_format_i18n($range_start)); ?>〜<?php echo esc_html(number_format_i18n($range_start + count($cases) - 1)); ?>件を表示 / 全<?php echo esc_html(number_format_i18n($total)); ?>件</p>
+    <p class="article-list-range"><?php echo esc_html(number_format_i18n($range_start)); ?> <span class="article-list-range__separator">〜</span> <?php echo esc_html(number_format_i18n($range_start + count($cases) - 1)); ?>件を表示 / 全<?php echo esc_html(number_format_i18n($total)); ?>件</p>
   <?php endif; ?>
   <?php if ($total_pages > 1) : ?>
     <nav class="navigation pagination" aria-label="開発事例のページ送り">

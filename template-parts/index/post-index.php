@@ -69,7 +69,7 @@ if (is_home()) {
   <?php if (!$years) : ?><p>該当する記事はありません。</p><?php endif; ?>
   <?php if (is_home() && $wp_query->post_count) : ?>
     <?php $range_start = (max(1, (int) get_query_var('paged')) - 1) * (int) $wp_query->get('posts_per_page') + 1; ?>
-    <p class="article-list-range"><?php echo esc_html(number_format_i18n($range_start)); ?>〜<?php echo esc_html(number_format_i18n($range_start + $wp_query->post_count - 1)); ?>件を表示 / 全<?php echo esc_html(number_format_i18n($wp_query->found_posts)); ?>記事</p>
+    <p class="article-list-range"><?php echo esc_html(number_format_i18n($range_start)); ?> <span class="article-list-range__separator">〜</span> <?php echo esc_html(number_format_i18n($range_start + $wp_query->post_count - 1)); ?>件を表示 / 全<?php echo esc_html(number_format_i18n($wp_query->found_posts)); ?>記事</p>
   <?php endif; ?>
   <?php if (is_home() || $is_article_search || $is_article_tag) : ?>
     <?php the_posts_pagination(array('show_all' => true, 'prev_next' => false, 'add_fragment' => is_home() ? '#year-latest' : '')); ?>
