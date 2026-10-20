@@ -3,7 +3,7 @@ $category_id = absint(kihiro_get_request_value('article_category'));
 $tag_id = kihiro_selected_article_tag();
 $categories = get_categories(array('hide_empty' => true, 'orderby' => 'count', 'order' => 'DESC'));
 // 記事件数が変わっても、カテゴリータブは指定した順番を維持する。
-$category_order = array_flip(array('健康・セルフケア', '仕事・キャリア', '思考・生き方', '旅・場所', 'お金・制度', '技術・開発'));
+$category_order = array_flip(array('思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度', '技術・開発'));
 usort($categories, function ($a, $b) use ($category_order) {
     return ($category_order[$a->name] ?? PHP_INT_MAX) <=> ($category_order[$b->name] ?? PHP_INT_MAX);
 });
