@@ -22,3 +22,5 @@
 
 
 .about-body > section:first-child { padding-top: 0; }
+
+.about-body > section:last-child { border-bottom: 0; }
