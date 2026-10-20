@@ -14,6 +14,7 @@ function kihiro_enqueue_assets() {
     if (is_singular('post') && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
+    wp_enqueue_script('kihiro-category-scroll', get_theme_file_uri('/assets/js/category-scroll.js'), array(), kihiro_asset_version('/assets/js/category-scroll.js'), true);
     wp_enqueue_script('kihiro-article-return', get_theme_file_uri('/assets/js/article-return.js'), array(), kihiro_asset_version('/assets/js/article-return.js'), true);
     wp_enqueue_script('kihiro-page-scroll', get_theme_file_uri('/assets/js/page-scroll.js'), array(), kihiro_asset_version('/assets/js/page-scroll.js'), true);
     // 記事本文がある画面だけで目次・コードコピーを読み込み、他画面の処理を抑える。
