@@ -1,5 +1,5 @@
 <?php
-$category_id = absint(kihiro_get_request_value('article_category'));
+$category_id = kihiro_selected_article_category();
 $tag_id = kihiro_selected_article_tag();
 $categories = get_categories(array('hide_empty' => true, 'orderby' => 'count', 'order' => 'DESC'));
 // 記事件数が変わっても、カテゴリータブは指定した順番を維持する。

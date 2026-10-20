@@ -211,7 +211,7 @@ function kihiro_configure_main_query($query) {
                 'terms' => kihiro_selected_article_tag(),
             );
         }
-        $category_id = absint(kihiro_get_request_value('article_category'));
+        $category_id = kihiro_selected_article_category();
         if (kihiro_is_all_articles_view() && $category_id) {
             $tax_filters[] = array('taxonomy' => 'category', 'field' => 'term_id', 'terms' => $category_id);
         }
@@ -260,6 +260,14 @@ add_filter('get_previous_post_where', 'kihiro_adjacent_post_where');
 add_filter('get_next_post_where', 'kihiro_adjacent_post_where');
 
 /** Keep tag filtering on the complete writing archive. */
+/** 初期表示のカテゴリーを取得し、記事取得とタブの選択表示で共有する。 */
+function kihiro_selected_article_category() {
+    $requested = kihiro_get_request_value('article_category');
+    if ($requested !== '') return absint($requested);
+    $default = get_term_by('name', '思考・生き方', 'category');
+    return $default instanceof WP_Term ? (int) $default->term_id : 0;
+}
+
 function kihiro_selected_article_tag() {
     $value = kihiro_get_request_value('article_tag');
     return ctype_digit($value) ? absint($value) : 0;
