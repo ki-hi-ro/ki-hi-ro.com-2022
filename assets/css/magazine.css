@@ -440,6 +440,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 }
 
 .article-edit { margin: 16px 0 24px; }
+.article-create { display: flex; justify-content: flex-end; margin: 0 0 20px; }
 .article-edit__link { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 20px; border: 1px solid var(--mag-ink); border-radius: 999px; background: var(--mag-ink); color: var(--mag-paper); font-size: 13px; line-height: 1.6; }
 .article-edit__link:hover { opacity: .75; }
 .article-edit__link:focus-visible { outline: 2px solid var(--mag-accent); outline-offset: 4px; }

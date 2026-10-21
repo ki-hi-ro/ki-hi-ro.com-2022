@@ -54,6 +54,10 @@ if (is_home()) {
   </header>
   <?php endif; ?>
   <?php if (is_home()) : ?>
+    <?php // 投稿できるログインユーザーだけに、管理画面の新規投稿への入口を表示する。 ?>
+    <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
+      <div class="article-create"><a class="article-edit__link" href="<?php echo esc_url(admin_url('post-new.php')); ?>">新規投稿</a></div>
+    <?php endif; ?>
     <?php get_template_part('template-parts/index/article-filters'); ?>
   <?php endif; ?>
   <?php foreach ($years as $year => $entries) : ?>
