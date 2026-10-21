@@ -5,7 +5,7 @@
   --mag-ink: #292929;
   --mag-muted: #666;
   --mag-line: #e0e0e0;
-  --mag-heading-line: #7e7e7e;
+  --mag-heading-line: var(--mag-ink);
   --mag-accent-width: 2px;
   --mag-accent: #333;
   --main-image-filter: none;
