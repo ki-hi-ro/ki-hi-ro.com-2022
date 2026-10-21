@@ -31,7 +31,8 @@
 }
 
 /* 太さではなく文字サイズと余白で情報の階層を表す。 */
-h1, h2, h3, h4, h5, h6, strong, b, th { font-weight: 400; }
+h1, h2, h3, h4, h5, h6 { font-weight: 400; }
+strong, b, th { font-weight: 600; }
 
 * {
   box-sizing: border-box;
@@ -509,7 +510,7 @@ svg {
   margin-bottom: 30px;
   font-size: 30px;
   line-height: 1.5;
-  border-left: 2px solid #dfdfdf;
+  border-left: var(--mag-accent-width, 2px) solid var(--mag-heading-line, #7e7e7e);
   padding-left: 18px;  
 }
 

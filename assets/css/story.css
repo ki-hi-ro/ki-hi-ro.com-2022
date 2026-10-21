@@ -48,7 +48,7 @@
 
 .story-body .story-editorial-note { font-size: 13px; line-height: 1.9; color: var(--mag-muted); }
 .story-chapter .story-event__heading { margin: 40px 0 18px; font-size: 19px; font-weight: 400; line-height: 1.9; }
-.story-chapter .story-quote { margin: 36px 0; padding: 20px 24px; border-left: 3px solid var(--mag-accent); background: rgba(100, 120, 110, .05); }
+.story-chapter .story-quote { margin: 36px 0; padding: 20px 24px; border-left: var(--mag-accent-width) solid var(--mag-heading-line); background: rgba(100, 120, 110, .05); }
 .story-quote p { margin-bottom: 16px; }
 .story-quote cite { display: block; font-size: 13px; line-height: 1.9; font-style: normal; }
 .story-quote a { text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); }
