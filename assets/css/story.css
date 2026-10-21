@@ -3,7 +3,7 @@
 .story-hero { max-width: 780px; padding: 12px 0 48px; }
 .story-back { display: inline-block; margin-bottom: 48px; padding: 10px 0; font-size: 13px; color: var(--mag-accent); }
 .story-eyebrow { margin: 0 0 20px; font-size: 12px; letter-spacing: .16em; color: var(--mag-accent); }
-.story-hero h1 { margin: 0 0 28px; max-width: 20em; font-size: clamp(28px, 3.5vw, 44px); font-weight: 600; line-height: 1.65; letter-spacing: .025em; overflow-wrap: anywhere; }
+.story-hero h1 { margin: 0 0 28px; max-width: 20em; font-size: clamp(28px, 3.5vw, 44px); font-weight: 400; line-height: 1.65; letter-spacing: .025em; overflow-wrap: anywhere; }
 .story-hero h1 > span { display: block; }
 .story-period { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; font-size: 13px; color: var(--mag-muted); }
 .story-body, .story-intro { font-size: 17px; line-height: 2.1; overflow-wrap: anywhere; }
@@ -17,10 +17,10 @@
 .story-chapter { position: relative; max-width: 760px; margin: 0; padding: 0 0 88px 48px; border-left: 1px solid #a8a8a8; scroll-margin-top: 48px; }
 .story-chapter::before { position: absolute; top: 9px; left: -4px; width: 7px; height: 7px; border-radius: 50%; background: var(--mag-accent); content: ''; }
 .story-chapter .story-chapter__meta { margin: 0 0 12px; font-size: 12px; color: var(--mag-accent); letter-spacing: .05em; }
-.story-chapter h2 { margin: 0 0 32px; font-size: clamp(24px, 3vw, 34px); line-height: 1.6; font-weight: 600; }
+.story-chapter h2 { margin: 0 0 32px; font-size: clamp(24px, 3vw, 34px); line-height: 1.6; font-weight: 400; }
 .story-chapter p { max-width: 620px; }
 .story-related { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--mag-line); }
-.story-related h3 { margin: 0 0 12px; font-size: 12px; font-weight: 500; letter-spacing: .1em; color: var(--mag-accent); }
+.story-related h3 { margin: 0 0 12px; font-size: 12px; font-weight: 400; letter-spacing: .1em; color: var(--mag-accent); }
 .story-related ul { list-style: none; padding: 0; margin: 0; }
 .story-related a { display: block; padding: 12px 0; font-size: 14px; line-height: 1.8; }
 .story-ending { max-width: 680px; padding: 64px 0 40px; border-top: 1px solid var(--mag-line); }
@@ -47,7 +47,7 @@
 }
 
 .story-body .story-editorial-note { font-size: 13px; line-height: 1.9; color: var(--mag-muted); }
-.story-chapter .story-event__heading { margin: 40px 0 18px; font-size: 19px; font-weight: 600; line-height: 1.9; }
+.story-chapter .story-event__heading { margin: 40px 0 18px; font-size: 19px; font-weight: 400; line-height: 1.9; }
 .story-chapter .story-quote { margin: 36px 0; padding: 20px 24px; border-left: 3px solid var(--mag-accent); background: rgba(100, 120, 110, .05); }
 .story-quote p { margin-bottom: 16px; }
 .story-quote cite { display: block; font-size: 13px; line-height: 1.9; font-style: normal; }
