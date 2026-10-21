@@ -151,7 +151,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .case-content :is(h2, h3, h4, h5, h6) { font-weight: 400; }
 .db-single__content h2 { font-size: 26px; border-color: var(--mag-heading-line); }
 /* 本文の主要見出しは、目次の現在地と同じ面と左線で表す。 */
-.db-single__content h2, .about-body h2, .case-content h2 {
+body .db-single__content h2, body .about-body h2, body .case-content h2 {
   background: #efefef;
   border-left: var(--mag-accent-width) solid var(--mag-heading-line);
   padding: 10px 12px;
