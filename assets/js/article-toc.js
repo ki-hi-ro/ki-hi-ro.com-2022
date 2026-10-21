@@ -34,8 +34,13 @@
         var link = document.createElement('a');
         link.href = '#' + encodeURIComponent(heading.id);
         link.textContent = heading.textContent.trim();
-        link.addEventListener('click', function () {
+        link.addEventListener('click', function (event) {
+            // 通常の目次操作ではURLと履歴を変えず、見出しへの移動だけ行う。
+            // 別タブで開く操作は通常のリンクとして扱う。
+            if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+            event.preventDefault();
             if (!desktop.matches) details.open = false;
+            heading.scrollIntoView({ block: 'start' });
             // Keep keyboard navigation at the destination after closing the menu.
             if (!heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1');
             heading.focus({ preventScroll: true });
