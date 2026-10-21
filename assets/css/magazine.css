@@ -228,7 +228,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .article-toc .article-toc__subheading { margin-left: 16px; }
 .article-toc .article-toc__subheading a { font-size: 12px; }
 .article-toc a:hover, .article-toc a:focus-visible { text-decoration: none; }
-.article-toc a[aria-current] { background: #efefef; border-left-color: var(--mag-accent); color: var(--mag-accent); font-weight: 400; }
+.article-toc a[aria-current] { background: #efefef; border-left-color: #7e7e7e; color: var(--mag-accent); font-weight: 400; }
 .article-toc-target { scroll-margin-top: 80px; }
 @media (max-width: 1099px) {
   .journal-app--single.has-article-toc { padding-bottom: 76px; }
