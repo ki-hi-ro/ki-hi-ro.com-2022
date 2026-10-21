@@ -506,10 +506,10 @@ svg {
 }
 
 .db-single__content h2 {
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: 32px;
+  margin-bottom: 20px;
   font-size: 30px;
-  line-height: 1.5;
+  line-height: 1.4;
   border-left: var(--mag-accent-width, 2px) solid var(--mag-heading-line, #7e7e7e);
   padding-left: 18px;  
 }
