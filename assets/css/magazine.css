@@ -420,7 +420,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 /* Category tabs and tag pills above the writing history. */
 .article-filters { margin: 0 0 20px; }
 .article-filters__categories { display: flex; gap: 28px; overflow-x: auto; border-bottom: 1px solid var(--mag-line); }
-.article-filters__categories a { flex-shrink: 0; padding: 16px 6px; border-bottom: 3px solid transparent; font-size: 15px; font-weight: 400; color: var(--mag-muted); }
+.article-filters__categories a { flex-shrink: 0; padding: 16px 0; border-bottom: 3px solid transparent; font-size: 15px; font-weight: 400; color: var(--mag-muted); }
 .article-filters__categories a[aria-current] { border-color: var(--mag-ink); color: var(--mag-ink); }
 .article-filters__tags { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 24px 0 20px; }
 .article-filters__label { margin-right: 8px; font-size: 13px; color: var(--mag-muted); }
