@@ -63,7 +63,7 @@ function kihiro_enqueue_assets() {
 }
 add_action('wp_enqueue_scripts', 'kihiro_enqueue_assets');
 
-/** Use the theme's handwritten logo for front-end browser and home-screen icons. */
+/** 以前のサイトアイコンをブラウザーとホーム画面で共通して使用する。 */
 function kihiro_setup_site_icons() {
     remove_action('wp_head', 'wp_site_icon', 99);
     add_action('wp_head', 'kihiro_site_icons', 99);
@@ -72,8 +72,7 @@ add_action('after_setup_theme', 'kihiro_setup_site_icons');
 
 function kihiro_site_icons() {
     $icons = array(
-        array('icon', '/assets/icons/favicon.ico', '16x16 32x32 48x48', 'image/x-icon'),
-        array('icon', '/assets/icons/favicon.svg', 'any', 'image/svg+xml'),
+        array('icon', '/assets/icons/favicon.ico', '16x16', 'image/x-icon'),
         array('apple-touch-icon', '/assets/icons/apple-touch-icon.png', '180x180', 'image/png'),
     );
 
