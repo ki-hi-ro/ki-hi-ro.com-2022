@@ -154,7 +154,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 body .db-single__content h2, body .about-body h2, body .case-content h2 {
   background: #efefef;
   border-left: var(--mag-accent-width) solid var(--mag-heading-line);
-  padding: 10px 20px;
+  padding: 20px;
   font-weight: 500;
   line-height: 1.6;
 }
