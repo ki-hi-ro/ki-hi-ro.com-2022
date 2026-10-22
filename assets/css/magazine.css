@@ -610,3 +610,6 @@ body #main-content { margin-top: 40px; padding-top: 0; }
 .work-contact label, .monthly-archives label { font-weight: 500; }
 .article-filters__categories a[aria-current], .article-toc a[aria-current] { font-weight: 500; }
 .article-edit__link, .monthly-archives button, .work-contact input[type="submit"] { font-weight: 500; }
+
+/* 本日公開の記事だけに表示する、控えめな新着ラベル。 */
+.article-card-new { display: inline-block; margin: 0 8px 4px 0; padding: 2px 8px; border: 1px solid var(--mag-line); border-radius: 4px; background: #f3f3f3; color: var(--mag-ink); font-size: 11px; font-weight: 500; line-height: 1.6; vertical-align: middle; white-space: nowrap; }
