@@ -126,7 +126,7 @@ function kihiro_all_articles_url() {
 function kihiro_format_journal_date(DateTimeImmutable $date) {
     $weekdays = array('日', '月', '火', '水', '木', '金', '土');
 
-    return $date->format('Y.m.d') . '(' . $weekdays[(int) $date->format('w')] . ')';
+    return $date->format('Y年n月j日') . '(' . $weekdays[(int) $date->format('w')] . ')';
 }
 
 function kihiro_posts_for_journal_date($date) {
