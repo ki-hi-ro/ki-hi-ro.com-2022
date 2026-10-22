@@ -602,7 +602,10 @@ body #main-content { margin-top: 40px; padding-top: 0; }
 }
 
 /* タイトルは600、見出しと操作項目は500に抑えて本文との差を穏やかにする。 */
-.db-single h1, .case-detail h1, .article-timeline__header h1 { font-weight: 600; }
+.article-timeline__header h1 { font-weight: 600; }
+/* 大きな詳細タイトルと本文の強調は、一覧より軽くして読み疲れを抑える。 */
+.db-single h1, .case-detail h1 { font-weight: 500; }
+.db-single__content :is(strong, b), .case-content :is(strong, b), .about-body :is(strong, b) { font-weight: 500; }
 .site-header__menu-row .site-main-nav, .article-toc summary,
 .work-contact label, .monthly-archives label { font-weight: 500; }
 .article-filters__categories a[aria-current], .article-toc a[aria-current] { font-weight: 500; }
