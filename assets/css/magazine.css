@@ -148,14 +148,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 /* 本文は通常、見出しはセミボールドで親しみのある強弱を付ける。 */
 .db-single__content :is(h2, h3, h4, h5, h6),
 .about-body :is(h2, h3, h4, h5, h6),
-.case-content :is(h2, h3, h4, h5, h6) { font-weight: 600; }
+.case-content :is(h2, h3, h4, h5, h6) { font-weight: 500; }
 .db-single__content h2 { font-size: 26px; border-color: var(--mag-heading-line); }
 /* 本文の主要見出しは、目次の現在地と同じ面と左線で表す。 */
 body .db-single__content h2, body .about-body h2, body .case-content h2 {
   background: #efefef;
   border-left: var(--mag-accent-width) solid var(--mag-heading-line);
   padding: 10px 20px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.6;
 }
 .db-single__content h3 { font-size: 21px; }
@@ -474,7 +474,7 @@ body .db-single__content h2, body .about-body h2, body .case-content h2 {
 .article-timeline--cards .article-timeline__year li a { display: flex; flex-direction: column; align-items: stretch; gap: 0; height: 100%; padding: 0; }
 .article-timeline--cards .article-timeline__thumbnail { order: 0; overflow: hidden; border-radius: 8px; }
 .article-timeline--cards .article-timeline__thumbnail img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; }
-.article-timeline--cards .article-timeline__year li a > span:last-child { order: 1; flex: 1; padding: 20px 0 14px; font-size: 17px; font-weight: 700; line-height: 1.75; overflow-wrap: anywhere; }
+.article-timeline--cards .article-timeline__year li a > span:last-child { order: 1; flex: 1; padding: 20px 0 14px; font-size: 17px; font-weight: 600; line-height: 1.75; overflow-wrap: anywhere; }
 .article-timeline--cards .article-timeline__year li a > time { order: 2; padding: 0 0 22px; font-size: 12px; line-height: 1.7; }
 @media (max-width: 640px) {
  .article-timeline--cards .article-timeline__year ol { grid-template-columns: minmax(0, 1fr); gap: 32px; }
@@ -601,9 +601,9 @@ body #main-content { margin-top: 40px; padding-top: 0; }
   body #main-content { margin-top: 56px; }
 }
 
-/* ロゴの厚みに呼応するタイトルと、控えめに強調する操作項目。 */
-.db-single h1, .case-detail h1, .article-timeline__header h1 { font-weight: 700; }
+/* タイトルは600、見出しと操作項目は500に抑えて本文との差を穏やかにする。 */
+.db-single h1, .case-detail h1, .article-timeline__header h1 { font-weight: 600; }
 .site-header__menu-row .site-main-nav, .article-toc summary,
-.work-contact label, .monthly-archives label { font-weight: 600; }
-.article-filters__categories a[aria-current], .article-toc a[aria-current] { font-weight: 600; }
+.work-contact label, .monthly-archives label { font-weight: 500; }
+.article-filters__categories a[aria-current], .article-toc a[aria-current] { font-weight: 500; }
 .article-edit__link, .monthly-archives button, .work-contact input[type="submit"] { font-weight: 500; }
