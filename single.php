@@ -20,7 +20,7 @@
         <dl class="db-single__fields">
           <div>
             <dt>最終更新</dt>
-            <dd><?php echo esc_html(get_the_modified_date('Y.m.d')); ?></dd>
+            <dd><?php echo esc_html(kihiro_format_journal_date(new DateTimeImmutable(get_the_modified_date('Y-m-d'), wp_timezone())) . ' / ' . get_the_modified_date('H:i')); ?></dd>
           </div>
           <?php if ($post_tags) : ?>
             <div>
