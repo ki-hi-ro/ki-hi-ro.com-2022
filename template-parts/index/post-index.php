@@ -6,7 +6,7 @@ $is_article_tag = is_tag();
 $is_article_home = is_home() && !$is_article_search && '' === kihiro_get_request_value('view');
 // 取得はメインクエリ側で完了している。ここでは取得済みの投稿を年ごとに整理する。
 // 2021年以前はまとめるが、ホームは年で分断せず更新順を維持する。
-// サイトのタイムゾーンで本日公開の記事を判定する（更新日は使わない）。
+// サイトのタイムゾーンで本日更新の記事を判定する。
 $today = current_datetime()->format('Y-m-d');
 $years = array();
 foreach ($wp_query->posts as $entry) {
@@ -71,7 +71,7 @@ if (is_home()) {
       <?php endif; ?>
       <ol>
         <?php foreach ($entries as $entry) : ?>
-          <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?></span><span class="article-card-dates"><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</time> ／ <time datetime="<?php echo esc_attr(get_the_modified_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</time></span><span><?php if (get_the_date('Y-m-d', $entry) === $today) : ?><span class="article-card-new">今日の新着</span><?php endif; ?><?php echo esc_html(get_the_title($entry)); ?></span></a></li>
+          <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?></span><span class="article-card-dates"><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</time> ／ <time datetime="<?php echo esc_attr(get_the_modified_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</time></span><span><?php if (get_the_modified_date('Y-m-d', $entry) === $today) : ?><span class="article-card-new">本日更新</span><?php endif; ?><?php echo esc_html(get_the_title($entry)); ?></span></a></li>
         <?php endforeach; ?>
       </ol>
     </section>
