@@ -218,6 +218,11 @@ function kihiro_configure_main_query($query) {
         if (count($tax_filters) > 1) {
             $query->set('tax_query', $tax_filters);
         }
+    } elseif ($query->is_date()) {
+        // 年月アーカイブは対象期間の全記事を一度に表示する。
+        $query->set('posts_per_page', -1);
+        $query->set('no_found_rows', true);
+        $query->set('orderby', array('date' => 'DESC', 'ID' => 'DESC'));
     } elseif ($query->is_search() || $query->is_archive()) {
         $query->set('posts_per_page', 10);
         if ($query->is_search()) {

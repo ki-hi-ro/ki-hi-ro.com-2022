@@ -77,7 +77,7 @@ if (is_home()) {
     </section>
   <?php endforeach; ?>
   <?php if (!$years) : ?><p>該当する記事はありません。</p><?php endif; ?>
-  <?php if (is_home() || $is_article_search || $is_article_tag || is_date()) : ?>
+  <?php if (is_home() || $is_article_search || $is_article_tag) : ?>
     <?php the_posts_pagination(array('show_all' => true, 'prev_next' => false, 'add_fragment' => is_home() ? '#year-latest' : '')); ?>
   <?php endif; ?>
   <?php get_template_part('template-parts/monthly-archives'); ?>
