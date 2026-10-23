@@ -1,6 +1,7 @@
 <?php
 /** Complete published writing history, grouped by year. */
 global $wp_query;
+$is_full_archive = 'archive-all' === kihiro_get_request_value('view');
 $is_article_search = is_search();
 $is_article_tag = is_tag();
 $is_article_home = is_home() && !$is_article_search && '' === kihiro_get_request_value('view');
@@ -14,7 +15,7 @@ foreach ($wp_query->posts as $entry) {
     $years[$entry_year < 2022 ? 0 : $entry_year][] = $entry;
 }
 krsort($years);
-if (is_home()) {
+if (is_home() && !$is_full_archive) {
     $years = $wp_query->posts ? array('latest' => $wp_query->posts) : array();
 }
 ?>
@@ -52,10 +53,10 @@ if (is_home()) {
       <h1>すべての記事</h1>
       <p>つくり、考え、書き続けてきた記録。</p>
     </div>
-    <p class="article-timeline__total"><strong><?php echo esc_html(number_format_i18n($wp_query->found_posts)); ?></strong><span>記事の積み重ね</span></p>
+    <p class="article-timeline__total"><strong><?php echo esc_html(number_format_i18n(count($wp_query->posts))); ?></strong><span>記事の積み重ね</span></p>
   </header>
   <?php endif; ?>
-  <?php if (is_home()) : ?>
+  <?php if (is_home() && !$is_full_archive) : ?>
     <?php // 投稿できるログインユーザーだけに、管理画面の新規投稿への入口を表示する。 ?>
     <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
       <div class="article-create"><a class="article-edit__link" href="<?php echo esc_url(admin_url('post-new.php')); ?>">新規投稿</a></div>
@@ -64,7 +65,7 @@ if (is_home()) {
   <?php endif; ?>
   <?php foreach ($years as $year => $entries) : ?>
     <section class="article-timeline__year" id="year-<?php echo esc_attr($year); ?>" aria-labelledby="year-heading-<?php echo esc_attr($year); ?>">
-      <?php if (is_home()) : ?>
+      <?php if (is_home() && !$is_full_archive) : ?>
         <h2 id="year-heading-latest" class="screen-reader-text">記事一覧</h2>
       <?php else : ?>
         <header><h2 id="year-heading-<?php echo esc_attr($year); ?>"><?php echo $year ? esc_html($year) . '<span>年</span>' : '2021<span>年より前</span>'; ?></h2><p><?php echo esc_html(number_format_i18n(count($entries))); ?>記事を表示</p></header>
@@ -77,7 +78,7 @@ if (is_home()) {
     </section>
   <?php endforeach; ?>
   <?php if (!$years) : ?><p>該当する記事はありません。</p><?php endif; ?>
-  <?php if (is_home() || $is_article_search || $is_article_tag) : ?>
+  <?php if (!$is_full_archive && (is_home() || $is_article_search || $is_article_tag)) : ?>
     <?php the_posts_pagination(array('show_all' => true, 'prev_next' => false, 'add_fragment' => is_home() ? '#year-latest' : '')); ?>
   <?php endif; ?>
   <?php get_template_part('template-parts/monthly-archives'); ?>

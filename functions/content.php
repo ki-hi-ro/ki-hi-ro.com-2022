@@ -111,7 +111,8 @@ function kihiro_selected_journal_date() {
 }
 
 function kihiro_is_all_articles_view() {
-    return 'all' === kihiro_get_request_value('view')
+    return 'archive-all' === kihiro_get_request_value('view')
+        || 'all' === kihiro_get_request_value('view')
         || ('' === kihiro_get_request_value('view') && '' === kihiro_get_request_value('journal_date'));
 }
 
@@ -195,7 +196,13 @@ function kihiro_configure_main_query($query) {
         return;
     }
 
-    if ($query->is_home()) {
+    if ($query->is_home() && 'archive-all' === kihiro_get_request_value('view')) {
+        // 年月未指定のアーカイブはカテゴリーに絞らず全期間を表示する。
+        $query->set('posts_per_page', -1);
+        $query->set('no_found_rows', true);
+        $query->set('ignore_sticky_posts', true);
+        $query->set('orderby', array('date' => 'DESC', 'ID' => 'DESC'));
+    } elseif ($query->is_home()) {
         $query->set('posts_per_page', kihiro_home_posts_per_page());
         $query->set('orderby', array('modified' => 'DESC', 'ID' => 'DESC'));
         $query->set('order', 'DESC');
