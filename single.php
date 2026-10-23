@@ -8,7 +8,7 @@
       ?>
       <article class="journal-panel journal-panel--single db-single">
 
-        <p class="journal-single-date"><?php echo esc_html(get_the_date('Y/m/d H:i')); ?></p>
+        <p class="journal-single-date"><?php echo esc_html(get_the_date('Y年n月j日 G時i分')); ?></p>
         <h1><?php echo esc_html(get_the_title()); ?></h1>
         <?php if (is_user_logged_in() && current_user_can('edit_post', get_the_ID())) : ?>
           <?php $edit_url = get_edit_post_link(get_the_ID(), 'raw'); ?>
@@ -20,7 +20,7 @@
         <dl class="db-single__fields">
           <div>
             <dt>最終更新</dt>
-            <dd><?php echo esc_html(get_the_modified_date('Y/m/d H:i')); ?></dd>
+            <dd><?php echo esc_html(get_the_modified_date('Y年n月j日 G時i分')); ?></dd>
           </div>
           <?php if ($post_tags) : ?>
             <div>
