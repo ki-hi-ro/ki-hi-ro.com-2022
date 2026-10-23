@@ -373,6 +373,9 @@ body .db-single__content h2, body .about-body h2, body .case-content h2 {
 .site-header__inner .search-form__input { order: 0; flex: 1; min-width: 0; width: 0; padding: 10px 8px; border: 0; }
 .site-header__inner .search-form__btn { order: 1; flex: 0 0 40px; }
 .site-header__inner .search-form:focus-within { border-color: var(--mag-accent); }
+/* 入力欄の輪郭は丸い検索窓へまとめ、内側のフォーカス線を重ねない。 */
+.site-header__inner .search-form__input:focus { outline: none; box-shadow: none; }
+.site-header__inner .search-form__btn:focus-visible { outline: none; background: #e5e5e5; }
 .article-tag-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 28px; font-size: 14px; }
 .article-tag-filter select { min-width: 180px; max-width: 100%; padding: 10px 32px 10px 12px; border: 1px solid var(--mag-line); border-radius: 4px; background: #fff; color: var(--mag-ink); font: inherit; }
 .article-tag-filter button { padding: 11px 20px; border: 0; border-radius: 4px; background: var(--mag-accent); color: #fff; font: inherit; cursor: pointer; }
