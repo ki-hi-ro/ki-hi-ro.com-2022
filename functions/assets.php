@@ -63,6 +63,11 @@ function kihiro_enqueue_assets() {
 }
 add_action('wp_enqueue_scripts', 'kihiro_enqueue_assets');
 
+/** 公開後の表示リンクだけを同じタブで開く。プレビューの動作は変えない。 */
+add_action('enqueue_block_editor_assets', function () {
+    wp_enqueue_script('kihiro-editor-view-post', get_theme_file_uri('/assets/js/editor-view-post.js'), array(), kihiro_asset_version('/assets/js/editor-view-post.js'), true);
+});
+
 /** 以前のサイトアイコンをブラウザーとホーム画面で共通して使用する。 */
 function kihiro_setup_site_icons() {
     remove_action('wp_head', 'wp_site_icon', 99);
