@@ -477,7 +477,7 @@ body .db-single__content h2, body .about-body h2, body .case-content h2 {
 .article-timeline--cards .article-timeline__year li a { display: flex; flex-direction: column; align-items: stretch; gap: 0; height: 100%; padding: 0; }
 .article-timeline--cards .article-timeline__thumbnail { order: 0; overflow: hidden; border-radius: 12px; }
 .article-timeline--cards .article-timeline__thumbnail img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; }
-.article-timeline--cards .article-timeline__year li a > span:last-child { order: 1; flex: 1; padding: 12px 0 6px; font-size: 16px; font-weight: 500; line-height: 1.55; overflow-wrap: anywhere; }
+.article-timeline--cards .article-timeline__year li a > span:last-child { order: 1; flex: 1; padding: 12px 0 6px; font-size: 16px; font-weight: 500; line-height: 1.7; overflow-wrap: anywhere; }
 .article-timeline--cards .article-timeline__year li a > time { order: 2; padding: 0 0 22px; font-size: 12px; line-height: 1.7; }
 @media (max-width: 640px) {
  .article-timeline--cards .article-timeline__year ol { grid-template-columns: minmax(0, 1fr); gap: 32px; }
@@ -615,7 +615,7 @@ body #main-content { margin-top: 40px; padding-top: 0; }
 .article-edit__link, .monthly-archives button, .work-contact input[type="submit"] { font-weight: 500; }
 
 /* 本日更新の記事だけに表示する、控えめなラベル。 */
-.article-card-new { display: inline-block; margin: 0 8px 4px 0; padding: 2px 8px; border: 1px solid var(--mag-line); border-radius: 4px; background: #f3f3f3; color: var(--mag-ink); font-size: 11px; font-weight: 500; line-height: 1.6; vertical-align: middle; white-space: nowrap; }
+.article-card-new { display: inline-block; margin: 0 8px 0 0; padding: 1px 7px; border: 1px solid var(--mag-line); border-radius: 4px; background: #f3f3f3; color: var(--mag-ink); font-size: 11px; font-weight: 500; line-height: 1.4; vertical-align: baseline; white-space: nowrap; }
 
 /* 丸いロゴに合う操作面。記事本文の読みやすさと既存の導線は保つ。 */
 .site-header__inner > .search-form { border: 1px solid #d5d5d5; border-radius: 999px; overflow: hidden; }
