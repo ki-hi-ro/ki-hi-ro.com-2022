@@ -72,7 +72,7 @@ if (is_home() && !$is_full_archive) {
       <?php endif; ?>
       <ol>
         <?php foreach ($entries as $entry) : ?>
-          <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?></span><span class="article-card-dates"><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</time> ／ <time datetime="<?php echo esc_attr(get_the_modified_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</time></span><span><?php if (get_the_modified_date('Y-m-d', $entry) === $today) : ?><span class="article-card-new">本日更新</span><?php endif; ?><?php echo esc_html(get_the_title($entry)); ?></span></a></li>
+          <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?><?php if (get_the_modified_date('Y-m-d', $entry) === $today) : ?><span class="article-card-new">本日更新</span><?php endif; ?></span><span class="article-card-dates"><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</time> ／ <time datetime="<?php echo esc_attr(get_the_modified_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</time></span><span><?php if (get_the_modified_date('Y-m-d', $entry) === $today) : ?><span class="screen-reader-text">本日更新： </span><?php endif; ?><?php echo esc_html(get_the_title($entry)); ?></span></a></li>
         <?php endforeach; ?>
       </ol>
     </section>
