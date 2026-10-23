@@ -477,11 +477,11 @@ body .db-single__content h2, body .about-body h2, body .case-content h2 {
 .article-timeline--cards .article-timeline__year li a { display: flex; flex-direction: column; align-items: stretch; gap: 0; height: 100%; padding: 0; }
 .article-timeline--cards .article-timeline__thumbnail { position: relative; order: 0; overflow: hidden; border-radius: 12px; }
 .article-timeline--cards .article-timeline__thumbnail img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; }
-.article-timeline--cards .article-timeline__year li a > span:last-child { order: 1; flex: 1; padding: 12px 0 6px; font-size: 16px; font-weight: 500; line-height: 1.7; overflow-wrap: anywhere; }
+.article-timeline--cards .article-timeline__year li a > span:last-child { order: 1; flex: 1; padding: 12px 0 10px; font-size: 16px; font-weight: 500; line-height: 1.85; overflow-wrap: anywhere; }
 .article-timeline--cards .article-timeline__year li a > time { order: 2; padding: 0 0 22px; font-size: 12px; line-height: 1.7; }
 @media (max-width: 640px) {
  .article-timeline--cards .article-timeline__year ol { grid-template-columns: minmax(0, 1fr); gap: 32px; }
- .article-timeline--cards .article-timeline__year li a > span:last-child { padding: 12px 0 6px; }
+ .article-timeline--cards .article-timeline__year li a > span:last-child { padding: 12px 0 10px; }
  .article-timeline--cards .article-timeline__year li a > time { padding: 0 0 22px; font-size: 13px; }
  .article-timeline--cards .article-timeline__thumbnail img { aspect-ratio: 1.8 / 1; }
 }
