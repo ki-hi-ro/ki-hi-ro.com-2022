@@ -23,7 +23,7 @@ if (is_home() && !$is_full_archive) {
     $years = $wp_query->posts ? array('latest' => $wp_query->posts) : array();
 }
 ?>
-<main id="main-content" class="article-timeline article-timeline--cards">
+<main id="main-content" class="article-timeline <?php echo $is_full_archive ? 'archive-track-view' : 'article-timeline--cards'; ?>">
   <?php if ($is_article_search) : ?>
     <header class="article-timeline__header">
       <div>
@@ -68,15 +68,19 @@ if (is_home() && !$is_full_archive) {
     <?php get_template_part('template-parts/index/article-filters'); ?>
   <?php endif; ?>
   <?php foreach ($years as $year => $entries) : ?>
-    <section class="article-timeline__year" id="year-<?php echo esc_attr($year); ?>" aria-labelledby="year-heading-<?php echo esc_attr($year); ?>">
+    <section class="<?php echo $is_full_archive ? 'discovery-archive-year' : 'article-timeline__year'; ?>" id="year-<?php echo esc_attr($year); ?>" aria-labelledby="year-heading-<?php echo esc_attr($year); ?>">
       <?php if (is_home() && !$is_full_archive) : ?>
         <h2 id="year-heading-latest" class="screen-reader-text">記事一覧</h2>
       <?php else : ?>
         <header><h2 id="year-heading-<?php echo esc_attr($year); ?>"><?php echo $year ? esc_html($year) . '<span>年</span>' : '2021<span>年より前</span>'; ?></h2><p><?php echo esc_html(number_format_i18n(count($entries))); ?>記事を表示</p></header>
       <?php endif; ?>
-      <ol>
+      <ol<?php if ($is_full_archive) echo ' class="discovery-tracks"'; ?>>
         <?php foreach ($entries as $entry) : ?>
+          <?php if ($is_full_archive) : ?>
+            <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="discovery-track-art" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'thumbnail'); ?></span><span class="discovery-track-copy"><span class="discovery-track-title"><?php echo esc_html(get_the_title($entry)); ?></span><span class="discovery-meta"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開 ／ <?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</span></span><span class="discovery-track-arrow" aria-hidden="true">›</span></a></li>
+          <?php else : ?>
           <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?><?php if (get_the_modified_date('Y-m-d', $entry) === $today) : ?><span class="article-card-new">本日更新</span><?php endif; ?></span><span class="article-card-dates"><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</time> ／ <time datetime="<?php echo esc_attr(get_the_modified_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</time></span><span><?php if (get_the_modified_date('Y-m-d', $entry) === $today) : ?><span class="screen-reader-text">本日更新： </span><?php endif; ?><?php echo esc_html(get_the_title($entry)); ?></span></a></li>
+          <?php endif; ?>
         <?php endforeach; ?>
       </ol>
     </section>

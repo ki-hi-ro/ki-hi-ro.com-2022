@@ -178,3 +178,11 @@ body .about-body > section:first-child { padding-top: 0; }
   .discovery-featured > li { flex-basis: 84%; }
   .discovery-featured::after { flex-basis: calc(16% - 16px); }
 }
+
+/* 全記事アーカイブも「新しく書いたこと」と同じ小さな写真付きリスト。 */
+.discovery-archive-year { margin-bottom: 40px; }
+.discovery-archive-year > header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 12px; padding-top: 20px; border-top: 1px solid var(--mag-line); }
+.discovery-archive-year > header h2 { margin: 0; font-size: 23px; font-weight: 600; }
+.discovery-archive-year > header h2 span { margin-left: 4px; font-size: 13px; font-weight: 400; }
+.discovery-archive-year > header p { color: var(--mag-muted); font-size: 12px; }
+.archive-track-view .discovery-meta { font-size: 11px; }
