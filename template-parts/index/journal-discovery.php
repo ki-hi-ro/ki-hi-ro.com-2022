@@ -35,6 +35,7 @@ $recent_posts = get_posts($recent_args);
             <span class="discovery-published"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</span>
           </a></li>
         <?php endforeach; ?>
+        <li class="discovery-shelf-spacer" aria-hidden="true" role="presentation"></li>
       </ol>
     <?php else : ?><p>該当する記事はありません。</p><?php endif; ?>
     <?php the_posts_pagination(array('mid_size' => 1, 'prev_text' => '前へ', 'next_text' => '次へ', 'add_fragment' => '#year-latest')); ?>

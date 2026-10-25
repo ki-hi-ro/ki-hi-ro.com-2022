@@ -168,15 +168,16 @@ body .about-body > section:first-child { padding-top: 0; }
 .article-filters__categories::-webkit-scrollbar,
 .pagination .nav-links::-webkit-scrollbar { display: none; width: 0; height: 0; }
 
-/* 最後のカードにも左揃えで止まる余地を確保する。 */
+/* Safariでも終端幅を認識できるよう、実要素で最後のカードの余地を確保する。 */
+.discovery-featured > .discovery-shelf-spacer { display: none; scroll-snap-align: none; }
 @media (max-width: 960px) {
   .discovery-featured { display: flex; scroll-padding-inline: 0; }
   .discovery-featured > li { flex: 0 0 46%; }
-  .discovery-featured::after { content: ""; flex: 0 0 calc(54% - 20px); }
+  .discovery-featured > .discovery-shelf-spacer { display: block; flex: 0 0 calc(54% - 20px); }
 }
 @media (max-width: 700px) {
   .discovery-featured > li { flex-basis: 84%; }
-  .discovery-featured::after { flex-basis: calc(16% - 16px); }
+  .discovery-featured > .discovery-shelf-spacer { flex-basis: calc(16% - 16px); }
 }
 
 /* 全記事アーカイブも「新しく書いたこと」と同じ小さな写真付きリスト。 */
