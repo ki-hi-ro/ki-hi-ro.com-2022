@@ -5,7 +5,7 @@ $today = current_datetime()->format('Y-m-d');
 $category_id = kihiro_selected_article_category();
 $category = get_term($category_id, 'category');
 $category_name = $category instanceof WP_Term ? $category->name : '最新の更新';
-// カテゴリーの並びはナビゲーションと揃え、各棚は公開順の6件に絞る。
+// 各カテゴリーは更新日の新しい6件に絞る。
 $category_shelves = array();
 foreach (array('思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度', '技術・開発') as $shelf_name) {
     $shelf_term = get_term_by('name', $shelf_name, 'category');
@@ -13,7 +13,7 @@ foreach (array('思考・生き方', '健康・セルフケア', '仕事・キ�
     $shelf_posts = get_posts(array(
         'post_type' => 'post', 'post_status' => 'publish', 'has_password' => false,
         'posts_per_page' => 6, 'cat' => $shelf_term->term_id,
-        'orderby' => array('date' => 'DESC', 'ID' => 'DESC'),
+        'orderby' => array('modified' => 'DESC', 'ID' => 'DESC'),
         'ignore_sticky_posts' => true, 'no_found_rows' => true,
         'post__not_in' => kihiro_excluded_post_ids(),
     ));
@@ -27,7 +27,6 @@ foreach (array('思考・生き方', '健康・セルフケア', '仕事・キ�
       <a class="discovery-create" href="<?php echo esc_url(admin_url('post-new.php')); ?>"><span aria-hidden="true">＋</span> 新規投稿</a>
     <?php endif; ?>
   </header>
-  <?php get_template_part('template-parts/index/article-filters'); ?>
   <section class="discovery-section" aria-labelledby="year-heading-latest" id="year-latest">
     <header class="discovery-section-heading"><h2 id="year-heading-latest">更新した記事</h2><span>書き足しながら、考える。</span></header>
     <?php if ($wp_query->posts) : ?>
@@ -50,7 +49,7 @@ foreach (array('思考・生き方', '健康・セルフケア', '仕事・キ�
       <header class="discovery-section-heading"><h2 id="discovery-category-<?php echo esc_attr($shelf['term']->term_id); ?>"><a href="<?php echo esc_url(add_query_arg('article_category', $shelf['term']->term_id, home_url('/'))); ?>"><?php echo esc_html($shelf['term']->name); ?> <span class="discovery-category-chevron" aria-hidden="true">›</span></a></h2></header>
       <ol class="discovery-tracks">
         <?php foreach ($shelf['posts'] as $entry) : ?>
-          <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="discovery-track-art" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'thumbnail'); ?></span><span class="discovery-track-copy"><span class="discovery-track-title"><?php echo esc_html(get_the_title($entry)); ?></span><span class="discovery-meta"><?php echo esc_html(get_the_date('Y年n月j日', $entry)); ?> 公開</span></span><span class="discovery-track-arrow" aria-hidden="true">›</span></a></li>
+          <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="discovery-track-art" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'thumbnail'); ?></span><span class="discovery-track-copy"><span class="discovery-track-title"><?php echo esc_html(get_the_title($entry)); ?></span><span class="discovery-meta"><?php echo esc_html(get_the_modified_date('Y年n月j日', $entry)); ?> 更新</span></span><span class="discovery-track-arrow" aria-hidden="true">›</span></a></li>
         <?php endforeach; ?>
       </ol>
     </section>
