@@ -186,3 +186,6 @@ body .about-body > section:first-child { padding-top: 0; }
 .discovery-archive-year > header h2 span { margin-left: 4px; font-size: 13px; font-weight: 400; }
 .discovery-archive-year > header p { color: var(--mag-muted); font-size: 12px; }
 .archive-track-view .discovery-meta { font-size: 11px; }
+
+/* リストの見出しと最初の記事をひとまとまりにする。 */
+.discovery-section:has(.discovery-tracks) .discovery-section-heading { margin-bottom: 4px; }
