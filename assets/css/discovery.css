@@ -217,3 +217,6 @@ body .about-body > section:first-child { padding-top: 0; }
   .article-toc { right: 80px; width: min(340px, calc(100vw - 100px)); bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
   .article-toc nav { max-height: min(55vh, calc(100dvh - 160px)); }
 }
+
+.discovery-category-chevron { margin-left: 4px; color: #999; font-weight: 400; }
+.discovery-section-heading h2 a:hover { color: var(--mag-muted); }

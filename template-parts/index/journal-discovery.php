@@ -5,15 +5,20 @@ $today = current_datetime()->format('Y-m-d');
 $category_id = kihiro_selected_article_category();
 $category = get_term($category_id, 'category');
 $category_name = $category instanceof WP_Term ? $category->name : '日々のジャーナル';
-$recent_args = array(
-    'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 6,
-    'orderby' => array('date' => 'DESC', 'ID' => 'DESC'),
-    'ignore_sticky_posts' => true, 'no_found_rows' => true,
-    'post__not_in' => array_merge(kihiro_excluded_post_ids(), wp_list_pluck($wp_query->posts, 'ID')),
-);
-if ($category_id) $recent_args['cat'] = $category_id;
-if (kihiro_selected_article_tag()) $recent_args['tag_id'] = kihiro_selected_article_tag();
-$recent_posts = get_posts($recent_args);
+// カテゴリーの並びはナビゲーションと揃え、各棚は公開順の6件に絞る。
+$category_shelves = array();
+foreach (array('思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度', '技術・開発') as $shelf_name) {
+    $shelf_term = get_term_by('name', $shelf_name, 'category');
+    if (!$shelf_term instanceof WP_Term) continue;
+    $shelf_posts = get_posts(array(
+        'post_type' => 'post', 'post_status' => 'publish', 'has_password' => false,
+        'posts_per_page' => 6, 'cat' => $shelf_term->term_id,
+        'orderby' => array('date' => 'DESC', 'ID' => 'DESC'),
+        'ignore_sticky_posts' => true, 'no_found_rows' => true,
+        'post__not_in' => kihiro_excluded_post_ids(),
+    ));
+    if ($shelf_posts) $category_shelves[] = array('term' => $shelf_term, 'posts' => $shelf_posts);
+}
 ?>
 <main id="main-content" class="journal-discovery">
   <header class="discovery-heading">
@@ -40,15 +45,15 @@ $recent_posts = get_posts($recent_args);
     <?php else : ?><p>該当する記事はありません。</p><?php endif; ?>
     <?php the_posts_pagination(array('show_all' => true, 'prev_next' => false, 'add_fragment' => '#year-latest')); ?>
   </section>
-  <?php if ($recent_posts) : ?>
-    <section class="discovery-section" aria-labelledby="discovery-recent-heading">
-      <header class="discovery-section-heading"><h2 id="discovery-recent-heading">新しく書いたこと</h2><span>日々の記録から。</span></header>
+  <?php foreach ($category_shelves as $shelf) : ?>
+    <section class="discovery-section" aria-labelledby="discovery-category-<?php echo esc_attr($shelf['term']->term_id); ?>">
+      <header class="discovery-section-heading"><h2 id="discovery-category-<?php echo esc_attr($shelf['term']->term_id); ?>"><a href="<?php echo esc_url(add_query_arg('article_category', $shelf['term']->term_id, home_url('/'))); ?>"><?php echo esc_html($shelf['term']->name); ?> <span class="discovery-category-chevron" aria-hidden="true">›</span></a></h2></header>
       <ol class="discovery-tracks">
-        <?php foreach ($recent_posts as $entry) : ?>
+        <?php foreach ($shelf['posts'] as $entry) : ?>
           <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="discovery-track-art" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'thumbnail'); ?></span><span class="discovery-track-copy"><span class="discovery-track-title"><?php echo esc_html(get_the_title($entry)); ?></span><span class="discovery-meta"><?php echo esc_html(get_the_date('Y年n月j日', $entry)); ?> 公開</span></span><span class="discovery-track-arrow" aria-hidden="true">›</span></a></li>
         <?php endforeach; ?>
       </ol>
     </section>
-  <?php endif; ?>
+  <?php endforeach; ?>
   <section class="discovery-library" aria-labelledby="discovery-library-heading"><div><h2 id="discovery-library-heading">これまでの記録</h2><p>読みたい月へ、ふと戻る。</p></div><?php get_template_part('template-parts/monthly-archives'); ?></section>
 </main>
