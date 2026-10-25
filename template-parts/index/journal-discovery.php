@@ -23,7 +23,7 @@ foreach (array('思考・生き方', '健康・セルフケア', '仕事・キ�
     <div class="article-create"><a class="discovery-create" href="<?php echo esc_url(admin_url('post-new.php')); ?>"><span aria-hidden="true">＋</span> 新規投稿</a></div>
   <?php endif; ?>
   <section class="discovery-section" aria-labelledby="year-heading-latest" id="year-latest">
-    <header class="discovery-section-heading"><h2 id="year-heading-latest">更新した記事</h2><span>書き足しながら、考える。</span></header>
+    <header class="discovery-section-heading"><h2 id="year-heading-latest">更新した記事</h2></header>
     <?php if ($wp_query->posts) : ?>
       <ol class="discovery-featured">
         <?php foreach ($wp_query->posts as $entry) : ?>

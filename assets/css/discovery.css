@@ -220,3 +220,6 @@ body .about-body > section:first-child { padding-top: 0; }
 
 .discovery-category-chevron { margin-left: 4px; color: #999; font-weight: 400; }
 .discovery-section-heading h2 a:hover { color: var(--mag-muted); }
+
+/* 更新記事の見出しからカードまでに、少しゆとりを持たせる。 */
+#year-latest > .discovery-section-heading { margin-bottom: 20px; }
