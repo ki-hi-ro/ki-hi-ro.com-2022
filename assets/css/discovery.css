@@ -22,7 +22,7 @@
 .journal-discovery .article-filters__categories a[aria-current] { background: var(--mag-ink); color: #fff; }
 .journal-discovery .article-filters__categories a:hover { background: #ededf0; color: var(--mag-ink); }
 .journal-discovery .article-filters__categories a[aria-current]:hover { background: #3f3f3f; color: #fff; }
-.discovery-section { margin: 0 0 48px; }
+.discovery-section { margin: 0 0 40px; }
 .discovery-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 12px; padding-top: 0; border-top: 0; }
 .discovery-section-heading h2, .discovery-library h2 { margin: 0; font-size: 23px; font-weight: 600; letter-spacing: -.02em; }
 .discovery-section-heading > span { color: var(--mag-muted); font-size: 12px; }
@@ -70,7 +70,7 @@
   .discovery-section-heading h2, .discovery-library h2 { font-size: 21px; }
   .discovery-section-heading > span { display: none; }
   .discovery-tracks { grid-template-columns: minmax(0, 1fr); }
-  .discovery-section { margin-bottom: 36px; }
+  .discovery-section { margin-bottom: 32px; }
   .discovery-library { padding: 20px; margin-top: 36px; }
 }
 
@@ -219,11 +219,11 @@ body .about-body > section:first-child { padding-top: 0; }
 }
 
 
-/* 更新記事の見出しからカードまでに、少しゆとりを持たせる。 */
-#year-latest > .discovery-section-heading { margin-bottom: 20px; }
+/* 見出しとカードを近づけ、セクション間の余白と差を付ける。 */
+#year-latest > .discovery-section-heading { margin-bottom: 12px; }
 
 /* カテゴリーの棚も同じ見出し間隔と、最後まで左揃えできる横スクロール。 */
-.journal-discovery .discovery-section-heading { margin-bottom: 20px; }
+.journal-discovery .discovery-section-heading { margin-bottom: 12px; }
 @media (min-width: 961px) {
   .discovery-featured { display: flex; }
   .discovery-featured > li { flex: 0 0 calc((100% - 40px) / 3); }
