@@ -211,3 +211,9 @@ body .about-body > section:first-child { padding-top: 0; }
 @media (max-width: 700px) {
   .discovery-archive-year .discovery-tracks li:nth-last-child(2) { border-bottom: 1px solid var(--mag-line); }
 }
+
+/* 固定目次の右側に、48pxのページ移動ボタンと余白を確保する。 */
+@media (max-width: 1099px) {
+  .article-toc { right: 80px; width: min(340px, calc(100vw - 100px)); bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
+  .article-toc nav { max-height: min(55vh, calc(100dvh - 160px)); }
+}
