@@ -252,7 +252,7 @@ add_action('pre_get_posts', 'kihiro_configure_main_query');
 
 /** Expose every page number; the theme keeps the list horizontally scrollable. */
 function kihiro_pagination_args($args) {
-    $args['show_all'] = true;
+    $args['show_all'] = !(is_home() && 'archive-all' !== kihiro_get_request_value('view'));
     return $args;
 }
 add_filter('the_posts_pagination_args', 'kihiro_pagination_args');
