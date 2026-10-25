@@ -220,10 +220,10 @@ body .about-body > section:first-child { padding-top: 0; }
 
 
 /* 見出しとカードを近づけ、セクション間の余白と差を付ける。 */
-#year-latest > .discovery-section-heading { margin-bottom: 28px; }
+#year-latest > .discovery-section-heading { margin-bottom: 24px; }
 
 /* カテゴリーの棚も同じ見出し間隔と、最後まで左揃えできる横スクロール。 */
-.journal-discovery .discovery-section-heading { margin-bottom: 28px; }
+.journal-discovery .discovery-section-heading { margin-bottom: 24px; }
 @media (min-width: 961px) {
   .discovery-featured { display: flex; }
   .discovery-featured > li { flex: 0 0 calc((100% - 40px) / 3); }
@@ -244,5 +244,5 @@ body .about-body > section:first-child { padding-top: 0; }
 .discovery-card-dates > span { white-space: nowrap; }
 
 @media (max-width: 700px) {
-  .journal-discovery .discovery-section-heading, #year-latest > .discovery-section-heading { margin-bottom: 24px; }
+  .journal-discovery .discovery-section-heading, #year-latest > .discovery-section-heading { margin-bottom: 20px; }
 }
