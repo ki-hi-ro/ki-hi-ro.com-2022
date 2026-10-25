@@ -32,8 +32,7 @@ foreach (array('思考・生き方', '健康・セルフケア', '仕事・キ�
           <li><a class="discovery-feature" href="<?php echo esc_url(get_permalink($entry)); ?>">
             <span class="discovery-artwork"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?><?php if (get_the_modified_date('Y-m-d', $entry) === $today) : ?><span class="discovery-badge">本日更新</span><?php endif; ?><span class="discovery-open" aria-hidden="true">↗</span></span>
             <h3><?php echo esc_html(get_the_title($entry)); ?></h3>
-            <span class="discovery-meta"><?php echo esc_html(get_the_modified_date('Y年n月j日', $entry)); ?> 更新</span>
-            <span class="discovery-published"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</span>
+            <span class="discovery-card-dates"><span><?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</span><span aria-hidden="true"> / </span><span><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</span></span>
           </a></li>
         <?php endforeach; ?>
       </ol>
@@ -48,8 +47,7 @@ foreach (array('思考・生き方', '健康・セルフケア', '仕事・キ�
           <li><a class="discovery-feature" href="<?php echo esc_url(get_permalink($entry)); ?>">
             <span class="discovery-artwork"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?><?php if (get_the_modified_date('Y-m-d', $entry) === $today) : ?><span class="discovery-badge">本日更新</span><?php endif; ?><span class="discovery-open" aria-hidden="true">↗</span></span>
             <h3><?php echo esc_html(get_the_title($entry)); ?></h3>
-            <span class="discovery-meta"><?php echo esc_html(get_the_modified_date('Y年n月j日', $entry)); ?> 更新</span>
-            <span class="discovery-published"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</span>
+            <span class="discovery-card-dates"><span><?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</span><span aria-hidden="true"> / </span><span><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</span></span>
           </a></li>
         <?php endforeach; ?>
       </ol>

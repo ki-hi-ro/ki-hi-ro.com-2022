@@ -239,3 +239,6 @@ body .about-body > section:first-child { padding-top: 0; }
 @media (max-width: 700px) {
   .journal-discovery .discovery-featured { grid-template-columns: minmax(0, 1fr); gap: 28px; }
 }
+
+.discovery-card-dates { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 4px; color: var(--mag-muted); font-size: 12px; line-height: 1.7; }
+.discovery-card-dates > span { white-space: nowrap; }
