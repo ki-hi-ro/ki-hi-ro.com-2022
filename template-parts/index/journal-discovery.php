@@ -4,7 +4,7 @@ global $wp_query;
 $today = current_datetime()->format('Y-m-d');
 $category_id = kihiro_selected_article_category();
 $category = get_term($category_id, 'category');
-$category_name = $category instanceof WP_Term ? $category->name : '日々のジャーナル';
+$category_name = $category instanceof WP_Term ? $category->name : '最新の更新';
 // カテゴリーの並びはナビゲーションと揃え、各棚は公開順の6件に絞る。
 $category_shelves = array();
 foreach (array('思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度', '技術・開発') as $shelf_name) {
@@ -29,7 +29,7 @@ foreach (array('思考・生き方', '健康・セルフケア', '仕事・キ�
   </header>
   <?php get_template_part('template-parts/index/article-filters'); ?>
   <section class="discovery-section" aria-labelledby="year-heading-latest" id="year-latest">
-    <header class="discovery-section-heading"><h2 id="year-heading-latest">最近の更新</h2><span>書き足しながら、考える。</span></header>
+    <header class="discovery-section-heading"><h2 id="year-heading-latest">更新した記事</h2><span>書き足しながら、考える。</span></header>
     <?php if ($wp_query->posts) : ?>
       <ol class="discovery-featured">
         <?php foreach ($wp_query->posts as $entry) : ?>

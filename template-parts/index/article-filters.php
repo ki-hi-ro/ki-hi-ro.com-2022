@@ -18,6 +18,7 @@ $filter_url = function ($category, $tag) {
 ?>
 <section class="article-filters" aria-label="記事の絞り込み">
   <nav class="article-filters__categories" aria-label="カテゴリー">
+    <a href="<?php echo esc_url(home_url('/')); ?>" <?php if (!$category_id) echo 'aria-current="true"'; ?>>最新の更新</a>
     <?php foreach ($categories as $category) : ?>
       <a href="<?php echo esc_url($filter_url($category->term_id, $tag_id)); ?>" <?php if ($category_id === $category->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($category->name); ?></a>
     <?php endforeach; ?>

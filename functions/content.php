@@ -278,8 +278,8 @@ add_filter('get_next_post_where', 'kihiro_adjacent_post_where');
 function kihiro_selected_article_category() {
     $requested = kihiro_get_request_value('article_category');
     if ($requested !== '') return absint($requested);
-    $default = get_term_by('name', '思考・生き方', 'category');
-    return $default instanceof WP_Term ? (int) $default->term_id : 0;
+    // 指定がなければカテゴリーを絞らず最新の更新を表示する。
+    return 0;
 }
 
 function kihiro_selected_article_tag() {
