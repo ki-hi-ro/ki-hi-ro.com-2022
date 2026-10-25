@@ -189,3 +189,15 @@ body .about-body > section:first-child { padding-top: 0; }
 
 /* リストの見出しと最初の記事をひとまとまりにする。 */
 .discovery-section:has(.discovery-tracks) .discovery-section-heading { margin-bottom: 4px; }
+
+/* 現在地の配色はヘッダーナビと共通にする。 */
+.article-filters__categories a[aria-current],
+.journal-discovery .article-filters__categories a[aria-current],
+.pagination .page-numbers.current,
+.journal-discovery .pagination .page-numbers.current { background: var(--discovery-soft); color: var(--mag-ink); }
+.article-filters__categories a[aria-current]:hover,
+.journal-discovery .article-filters__categories a[aria-current]:hover { background: #ededf0; color: var(--mag-ink); }
+.pagination a.page-numbers,
+.journal-discovery .pagination a.page-numbers { background: transparent; color: var(--mag-muted); }
+.pagination a.page-numbers:hover,
+.journal-discovery .pagination a.page-numbers:hover { background: #ededf0; color: var(--mag-ink); }
