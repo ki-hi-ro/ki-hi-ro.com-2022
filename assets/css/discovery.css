@@ -73,3 +73,87 @@
   .discovery-section { margin-bottom: 36px; }
   .discovery-library { padding: 20px; margin-top: 36px; }
 }
+
+/* 一覧・プロフィール・本文でも、棚と同じ文字階層と面の質感を使う。 */
+.discovery-page-heading { margin-bottom: 32px; }
+.discovery-page-heading h1, .article-timeline__header h1 { margin: 0; font-size: clamp(30px, 4vw, 44px); line-height: 1.3; font-weight: 600; letter-spacing: -.025em; }
+.article-timeline__header { align-items: end; margin-bottom: 36px; padding-bottom: 24px; border-bottom: 1px solid var(--mag-line); }
+.article-timeline__header p { color: var(--mag-muted); font-size: 14px; line-height: 1.7; }
+.article-timeline__header .article-timeline__total { display: flex; align-items: baseline; gap: 8px; margin: 0; }
+.article-timeline__total strong { font-size: 28px; font-weight: 500; }
+.article-timeline__total span { margin: 0; font-size: 12px; }
+.article-timeline--cards .article-timeline__year > header { padding-top: 20px; border-top: 1px solid var(--mag-line); }
+.article-timeline--cards .article-timeline__year h2 { font-size: 23px; font-weight: 600; }
+.article-timeline--cards .article-timeline__thumbnail,
+.article-timeline--cards .article-timeline__thumbnail img { border-radius: 14px; }
+.article-timeline--cards .article-timeline__year li a > span:last-child { font-size: 16px; line-height: 1.75; }
+.case-study-timeline .article-filters { margin-bottom: 28px; }
+.article-filters__categories { gap: 6px; }
+.article-filters__categories a { padding: 7px 12px; border-radius: 999px; background: transparent; font-size: 13px; }
+#main-content .article-filters__categories a { padding-top: 7px; }
+.article-filters__categories a:hover { background: #ededf0; }
+.article-filters__categories a[aria-current]:hover { background: #3f3f3f; }
+.pagination .page-numbers { border: 0; border-radius: 50%; background: var(--discovery-soft); }
+.pagination .page-numbers.current { background: var(--mag-ink); color: #fff; }
+.pagination :is(.prev, .next) { width: auto; flex-basis: auto; padding-inline: 14px; border-radius: 999px; }
+
+/* 詳細ページは読みやすさを優先。太字指定は保ち、装飾を薄い面に揃える。 */
+.db-single h1, .case-detail h1 { font-size: clamp(28px, 3.2vw, 40px); line-height: 1.55; letter-spacing: -.02em; font-weight: 500; }
+.journal-single-date { margin: 0 0 16px; font-size: 12px; font-variant-numeric: tabular-nums; }
+.article-edit__link { min-height: 40px; padding: 8px 16px; border: 0; background: var(--discovery-soft); color: var(--mag-ink); font-size: 12px; }
+.article-edit__link:hover { background: #e8e8eb; opacity: 1; }
+.db-single__fields { margin-top: 28px; padding: 20px; border: 0; border-radius: 14px; background: var(--discovery-soft); }
+.db-single__fields dt { color: var(--mag-muted); font-weight: 500; }
+.article-featured-image img, .db-single__content :is(img, video), .about-body .about-maru img { border-radius: 14px; }
+body .db-single__content h2, body .about-body h2, body .case-content h2 {
+  margin-block: 40px 20px; padding: 0 0 14px; border: 0; border-bottom: 1px solid var(--mag-line);
+  border-radius: 0; background: transparent; font-size: clamp(21px, 2.3vw, 26px); font-weight: 600; line-height: 1.6; letter-spacing: -.015em;
+}
+body .about-body section > h2:first-child { margin-top: 0; }
+.db-single__content h3, .about-body h3 { font-size: 19px; font-weight: 500; line-height: 1.7; }
+.article-toc details { border: 0; border-radius: 16px; background: var(--discovery-soft); box-shadow: none; }
+.article-toc summary { padding: 16px 20px; font-size: 14px; }
+.article-toc nav { padding: 8px 12px 12px; border-color: #e6e6e9; }
+.article-toc a { border: 0; border-radius: 8px; padding: 10px 12px; }
+.article-toc a[aria-current] { background: #fff; color: var(--mag-ink); font-weight: 500; }
+.article-toc a:hover { background: #e9e9ed; }
+.article-toc a:focus-visible { outline-offset: -2px; }
+.article-navigation__link, .article-navigation__link--next { border-radius: 14px; background: var(--discovery-soft); }
+.article-navigation__link:hover { background: #e8e8eb; }
+.article-navigation__title { font-weight: 500; }
+.article-comments h2, .article-comments .comment-reply-title { font-size: 23px; font-weight: 600; }
+.code-copy, .db-single__content pre { border-radius: 12px; background: var(--discovery-soft); }
+.code-copy { overflow: hidden; }
+.code-copy__button { background: #fff; border-color: var(--mag-line); border-radius: 999px; }
+.about-body { font-size: 16px; line-height: 2; }
+body .about-body section { border: 0; padding-block: 32px; }
+body .about-body > section:first-child { padding-top: 0; }
+
+/* 入力部品にも同じ丸みを持たせ、キーボード操作時の輪郭は残す。 */
+.work-contact :is(input[type="text"], input[type="email"], input[type="url"], select, textarea),
+.article-comments :is(input[type="text"], input[type="email"], input[type="url"], textarea) {
+  border: 1px solid transparent; border-radius: 10px; background-color: var(--discovery-soft);
+}
+.work-contact :is(input, select, textarea):focus-visible,
+.article-comments :is(input, textarea):focus-visible { outline: 2px solid var(--mag-ink); outline-offset: 3px; background-color: #fff; }
+.case-hero .work-contact .work-contact__lead { font-size: clamp(22px, 2.5vw, 28px); line-height: 1.6; font-weight: 600; letter-spacing: -.02em; }
+.work-contact__grid { gap: 20px; }
+.work-contact .work-contact__scope { padding: 16px 20px; border-radius: 12px; background: var(--discovery-soft); font-size: 13px; line-height: 1.8; }
+.monthly-archives { padding: 20px; border: 0; border-radius: 14px; background: var(--discovery-soft); }
+.monthly-archives select { background-color: #fff; }
+.discovery-library .monthly-archives { padding: 0; }
+.site-footer { border-top-color: var(--mag-line); }
+@media (max-width: 700px) {
+  .discovery-page-heading { margin-bottom: 24px; }
+  .article-timeline__header { gap: 16px; margin-bottom: 28px; }
+  .db-single h1, .case-detail h1 { font-size: 28px; line-height: 1.55; }
+  .db-single__fields { padding: 16px; }
+  .article-toc details { border: 1px solid var(--mag-line); box-shadow: 0 4px 20px #36363612; }
+  .work-contact__grid { gap: 0; }
+  .monthly-archives { padding: 16px; }
+  body .about-body section { padding-block: 28px; }
+}
+@media (forced-colors: active) {
+  .article-toc a[aria-current], .site-main-nav a[aria-current], .article-filters__categories a[aria-current],
+  .work-contact :is(input, select, textarea), .article-comments :is(input, textarea) { border: 1px solid ButtonText; }
+}
