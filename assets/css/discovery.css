@@ -157,3 +157,9 @@ body .about-body > section:first-child { padding-top: 0; }
   .article-toc a[aria-current], .site-main-nav a[aria-current], .article-filters__categories a[aria-current],
   .work-contact :is(input, select, textarea), .article-comments :is(input, textarea) { border: 1px solid ButtonText; }
 }
+
+/* 横方向の棚・カテゴリー・ページ送りは、操作を保ったままバーだけ隠す。 */
+.discovery-featured, .article-filters__categories, .pagination .nav-links { scrollbar-width: none; }
+.discovery-featured::-webkit-scrollbar,
+.article-filters__categories::-webkit-scrollbar,
+.pagination .nav-links::-webkit-scrollbar { display: none; width: 0; height: 0; }
