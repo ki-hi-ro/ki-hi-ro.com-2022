@@ -229,3 +229,13 @@ body .about-body > section:first-child { padding-top: 0; }
   .discovery-featured > li { flex: 0 0 calc((100% - 40px) / 3); }
   .discovery-featured > .discovery-shelf-spacer { display: block; flex: 0 0 calc((200% - 20px) / 3); }
 }
+
+/* 記事は横スクロールせず、ページ番号で次の3件へ切り替える。 */
+.journal-discovery .discovery-featured { display: grid; grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 20px; overflow: visible; scroll-snap-type: none; }
+.journal-discovery .discovery-featured > li { min-width: 0; }
+@media (max-width: 960px) {
+  .journal-discovery .discovery-featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .journal-discovery .discovery-featured { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+}

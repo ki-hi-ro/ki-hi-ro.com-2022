@@ -2,7 +2,7 @@
 /** 更新記事の大きな棚と、公開順の小さなリストで読みたい記事を探す。 */
 global $wp_query;
 $today = current_datetime()->format('Y-m-d');
-// 各カテゴリーは更新日の新しい6件に絞る。
+// 各カテゴリーは更新日の新しい3件に絞る。
 $category_shelves = array();
 foreach (array('思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度', '技術・開発') as $shelf_name) {
     $shelf_term = get_term_by('name', $shelf_name, 'category');
@@ -11,7 +11,7 @@ foreach (array('思考・生き方', '健康・セルフケア', '仕事・キ�
     $shelf_page = max(1, absint(kihiro_get_request_value($page_key)));
     $shelf_query = new WP_Query(array(
         'post_type' => 'post', 'post_status' => 'publish', 'has_password' => false,
-        'posts_per_page' => 6, 'paged' => $shelf_page, 'cat' => $shelf_term->term_id,
+        'posts_per_page' => 3, 'paged' => $shelf_page, 'cat' => $shelf_term->term_id,
         'orderby' => array('modified' => 'DESC', 'ID' => 'DESC'),
         'ignore_sticky_posts' => true, 'no_found_rows' => false,
         'post__not_in' => kihiro_excluded_post_ids(),
@@ -36,7 +36,6 @@ foreach (array('思考・生き方', '健康・セルフケア', '仕事・キ�
             <span class="discovery-published"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</span>
           </a></li>
         <?php endforeach; ?>
-        <li class="discovery-shelf-spacer" aria-hidden="true" role="presentation"></li>
       </ol>
     <?php else : ?><p>該当する記事はありません。</p><?php endif; ?>
     <?php the_posts_pagination(array('show_all' => true, 'prev_next' => false, 'add_fragment' => '#year-latest')); ?>
@@ -53,7 +52,6 @@ foreach (array('思考・生き方', '健康・セルフケア', '仕事・キ�
             <span class="discovery-published"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</span>
           </a></li>
         <?php endforeach; ?>
-        <li class="discovery-shelf-spacer" aria-hidden="true" role="presentation"></li>
       </ol>
       <?php if ($shelf['pages'] > 1) : ?>
         <nav class="navigation pagination" aria-label="<?php echo esc_attr($shelf['term']->name . 'のページ送り'); ?>"><div class="nav-links"><?php echo wp_kses_post(paginate_links(array(
