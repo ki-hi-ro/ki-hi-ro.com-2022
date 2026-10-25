@@ -223,3 +223,11 @@ body .about-body > section:first-child { padding-top: 0; }
 
 /* 更新記事の見出しからカードまでに、少しゆとりを持たせる。 */
 #year-latest > .discovery-section-heading { margin-bottom: 20px; }
+
+/* カテゴリーの棚も同じ見出し間隔と、最後まで左揃えできる横スクロール。 */
+.journal-discovery .discovery-section-heading { margin-bottom: 20px; }
+@media (min-width: 961px) {
+  .discovery-featured { display: flex; }
+  .discovery-featured > li { flex: 0 0 calc((100% - 40px) / 3); }
+  .discovery-featured > .discovery-shelf-spacer { display: block; flex: 0 0 calc((200% - 20px) / 3); }
+}

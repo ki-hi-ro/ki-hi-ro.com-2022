@@ -42,10 +42,16 @@ foreach (array('思考・生き方', '健康・セルフケア', '仕事・キ�
   <?php foreach ($category_shelves as $shelf) : ?>
     <section class="discovery-section" aria-labelledby="discovery-category-<?php echo esc_attr($shelf['term']->term_id); ?>">
       <header class="discovery-section-heading"><h2 id="discovery-category-<?php echo esc_attr($shelf['term']->term_id); ?>"><a href="<?php echo esc_url(add_query_arg('article_category', $shelf['term']->term_id, home_url('/'))); ?>"><?php echo esc_html($shelf['term']->name); ?> <span class="discovery-category-chevron" aria-hidden="true">›</span></a></h2></header>
-      <ol class="discovery-tracks">
+      <ol class="discovery-featured">
         <?php foreach ($shelf['posts'] as $entry) : ?>
-          <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="discovery-track-art" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'thumbnail'); ?></span><span class="discovery-track-copy"><span class="discovery-track-title"><?php echo esc_html(get_the_title($entry)); ?></span><span class="discovery-meta"><?php echo esc_html(get_the_modified_date('Y年n月j日', $entry)); ?> 更新</span></span><span class="discovery-track-arrow" aria-hidden="true">›</span></a></li>
+          <li><a class="discovery-feature" href="<?php echo esc_url(get_permalink($entry)); ?>">
+            <span class="discovery-meta"><?php echo esc_html(get_the_modified_date('Y年n月j日', $entry)); ?> 更新</span>
+            <h3><?php echo esc_html(get_the_title($entry)); ?></h3>
+            <span class="discovery-artwork"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?><?php if (get_the_modified_date('Y-m-d', $entry) === $today) : ?><span class="discovery-badge">本日更新</span><?php endif; ?><span class="discovery-open" aria-hidden="true">↗</span></span>
+            <span class="discovery-published"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</span>
+          </a></li>
         <?php endforeach; ?>
+        <li class="discovery-shelf-spacer" aria-hidden="true" role="presentation"></li>
       </ol>
     </section>
   <?php endforeach; ?>
