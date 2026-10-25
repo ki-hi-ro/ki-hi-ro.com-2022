@@ -1,6 +1,10 @@
 <?php
 /** Complete published writing history, grouped by year. */
 global $wp_query;
+if (is_home() && 'archive-all' !== kihiro_get_request_value('view')) {
+    get_template_part('template-parts/index/journal-discovery');
+    return;
+}
 $is_full_archive = 'archive-all' === kihiro_get_request_value('view');
 $is_article_search = is_search();
 $is_article_tag = is_tag();

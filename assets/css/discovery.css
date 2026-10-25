@@ -1,0 +1,75 @@
+/* 写真と余白を中心にした棚。黒と丸みは手書きロゴから引き継ぐ。 */
+:root { --discovery-soft: #f5f5f7; }
+.article-filters__categories a[aria-current] { background: var(--mag-ink); }
+.article-filters__categories a[aria-current]:hover { background: #3f3f3f; }
+.site-header__inner > .search-form { background: var(--discovery-soft); border-color: transparent; }
+.site-header__inner .search-form__btn { background: transparent; border-left: 0; }
+.site-header__menu-row .site-main-nav { gap: 6px; }
+.site-header__menu-row .site-main-nav a { padding: 8px 12px; border: 0; border-radius: 8px; font-weight: 500; }
+.site-header__menu-row .site-main-nav a[aria-current] { background: var(--discovery-soft); }
+.site-header__menu-row .site-main-nav a:hover { background: #ededf0; }
+.journal-discovery { width: min(100%, 1180px); margin-inline: auto; }
+.discovery-heading { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 28px; }
+.discovery-eyebrow { margin: 0 0 8px; color: var(--mag-muted); font-size: 13px; font-weight: 500; }
+.discovery-heading h1 { margin: 0; font-size: clamp(30px, 4vw, 44px); font-weight: 600; line-height: 1.3; letter-spacing: -.025em; }
+.discovery-description { margin: 10px 0 0; color: var(--mag-muted); font-size: 14px; }
+.discovery-create { display: inline-flex; flex-shrink: 0; align-items: center; gap: 4px; min-height: 40px; padding: 8px 16px; border-radius: 999px; background: var(--discovery-soft); font-size: 13px; font-weight: 500; }
+.discovery-create span { font-size: 20px; line-height: 1; }
+.discovery-create:hover { background: #e8e8eb; }
+.journal-discovery .article-filters { margin-bottom: 36px; }
+.journal-discovery .article-filters__categories { gap: 6px; }
+.journal-discovery .article-filters__categories a { background: transparent; padding: 7px 12px; border-radius: 999px; font-size: 13px; }
+.journal-discovery .article-filters__categories a[aria-current] { background: var(--mag-ink); color: #fff; }
+.journal-discovery .article-filters__categories a:hover { background: #ededf0; color: var(--mag-ink); }
+.journal-discovery .article-filters__categories a[aria-current]:hover { background: #3f3f3f; color: #fff; }
+.discovery-section { margin: 0 0 48px; }
+.discovery-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; padding-top: 20px; border-top: 1px solid var(--mag-line); }
+.discovery-section-heading h2, .discovery-library h2 { margin: 0; font-size: 23px; font-weight: 600; letter-spacing: -.02em; }
+.discovery-section-heading > span { color: var(--mag-muted); font-size: 12px; }
+.discovery-featured { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 40px) / 3); gap: 20px; list-style: none; margin: 0; padding: 0 0 12px; overflow-x: auto; scroll-snap-type: x mandatory; }
+.discovery-featured > li { min-width: 0; scroll-snap-align: start; }
+.discovery-feature { display: flex; flex-direction: column; height: 100%; }
+.discovery-meta { display: block; font-size: 12px; line-height: 1.5; color: var(--mag-muted); }
+.discovery-feature h3 { min-height: 5.1em; margin: 6px 0 14px; font-size: 17px; line-height: 1.7; font-weight: 500; overflow-wrap: anywhere; }
+.discovery-artwork { position: relative; display: block; margin-top: auto; overflow: hidden; border-radius: 14px; background: var(--discovery-soft); }
+.discovery-artwork > img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.discovery-badge { position: absolute; top: 10px; left: 10px; padding: 4px 8px; border-radius: 6px; background: rgba(255,255,255,.94); color: #444; font-size: 11px; line-height: 1.5; }
+.discovery-open { position: absolute; bottom: 10px; right: 10px; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,.92); font-size: 19px; }
+.discovery-published { margin-top: 10px; color: var(--mag-muted); font-size: 11px; }
+.journal-discovery .pagination { margin-top: 16px; }
+.journal-discovery .pagination .page-numbers { border: 0; background: var(--discovery-soft); border-radius: 50%; }
+.journal-discovery .pagination .current { background: var(--mag-ink); color: #fff; }
+.journal-discovery .pagination :is(.prev, .next) { flex-basis: auto; width: auto; padding-inline: 14px; border-radius: 999px; }
+.discovery-tracks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: row; gap: 0 32px; margin: 0; padding: 0; list-style: none; }
+.discovery-tracks li { min-width: 0; border-bottom: 1px solid var(--mag-line); }
+.discovery-tracks a { display: flex; align-items: center; gap: 14px; min-height: 96px; padding: 12px 4px; border-radius: 8px; }
+.discovery-tracks a:hover { background: var(--discovery-soft); }
+.discovery-track-art { flex: 0 0 64px; overflow: hidden; border-radius: 8px; background: var(--discovery-soft); }
+.discovery-track-art img { display: block; width: 64px; height: 64px; object-fit: cover; }
+.discovery-track-copy { min-width: 0; flex: 1; }
+.discovery-track-title { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 4px; font-size: 14px; font-weight: 500; line-height: 1.65; }
+.discovery-track-arrow { color: #999; font-size: 24px; }
+.discovery-library { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; margin-top: 48px; padding: 24px; border-radius: 16px; background: var(--discovery-soft); }
+.discovery-library p { margin: 6px 0 0; color: var(--mag-muted); font-size: 13px; }
+.discovery-library .monthly-archives { margin: 0; padding: 0; border: 0; }
+.discovery-library .monthly-archives label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.discovery-library .monthly-archives select { background-color: #fff; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .discovery-artwork > img { transition: transform .3s ease; }
+  .discovery-feature:hover .discovery-artwork > img { transform: scale(1.025); }
+}
+@media (max-width: 960px) { .discovery-featured { grid-auto-columns: 46%; } }
+@media (max-width: 700px) {
+  .site-header__menu-row .site-main-nav { gap: 2px; }
+  .site-header__menu-row .site-main-nav a { padding: 8px; font-size: 12px; }
+  .discovery-heading { gap: 12px; margin-bottom: 20px; }
+  .discovery-create { padding: 8px 10px; font-size: 12px; }
+  .discovery-description { font-size: 12px; }
+  .discovery-featured { grid-auto-columns: 84%; gap: 16px; }
+  .discovery-feature h3 { min-height: 5.1em; font-size: 16px; }
+  .discovery-section-heading h2, .discovery-library h2 { font-size: 21px; }
+  .discovery-section-heading > span { display: none; }
+  .discovery-tracks { grid-template-columns: minmax(0, 1fr); }
+  .discovery-section { margin-bottom: 36px; }
+  .discovery-library { padding: 20px; margin-top: 36px; }
+}

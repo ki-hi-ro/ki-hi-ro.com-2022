@@ -47,6 +47,7 @@ function kihiro_enqueue_assets() {
         'kihiro-design-refresh' => '/assets/css/design-refresh.css',
         'kihiro-magazine' => '/assets/css/magazine.css',
         'kihiro-case-study' => '/assets/css/case-study.css',
+        'kihiro-discovery' => '/assets/css/discovery.css',
     );
     if (kihiro_is_story()) {
         $styles['kihiro-story'] = '/assets/css/story.css';
