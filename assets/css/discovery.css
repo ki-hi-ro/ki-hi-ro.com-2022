@@ -189,7 +189,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .archive-track-view .discovery-meta { font-size: 11px; }
 
 /* リストの見出しと最初の記事をひとまとまりにする。 */
-.discovery-section:has(.discovery-tracks) .discovery-section-heading { margin-bottom: 4px; }
+.discovery-section:has(.discovery-tracks) .discovery-section-heading { margin-bottom: 4px; padding-top: 0; border-top: 0; }
 
 /* 現在地の配色はヘッダーナビと共通にする。 */
 .article-filters__categories a[aria-current],
