@@ -38,7 +38,7 @@ $recent_posts = get_posts($recent_args);
         <li class="discovery-shelf-spacer" aria-hidden="true" role="presentation"></li>
       </ol>
     <?php else : ?><p>該当する記事はありません。</p><?php endif; ?>
-    <?php the_posts_pagination(array('mid_size' => 1, 'prev_text' => '前へ', 'next_text' => '次へ', 'add_fragment' => '#year-latest')); ?>
+    <?php the_posts_pagination(array('show_all' => true, 'prev_next' => false, 'add_fragment' => '#year-latest')); ?>
   </section>
   <?php if ($recent_posts) : ?>
     <section class="discovery-section" aria-labelledby="discovery-recent-heading">
