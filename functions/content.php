@@ -203,8 +203,8 @@ function kihiro_configure_main_query($query) {
         $query->set('ignore_sticky_posts', true);
         $query->set('orderby', array('date' => 'DESC', 'ID' => 'DESC'));
     } elseif ($query->is_home()) {
-        // 最近の更新は横スクロールの棚に20件ずつ表示する。
-        $query->set('posts_per_page', 20);
+        // 更新した記事は1ページ最大3件で、続きはページ番号から表示する。
+        $query->set('posts_per_page', 3);
         $query->set('orderby', array('modified' => 'DESC', 'ID' => 'DESC'));
         $query->set('order', 'DESC');
         $query->set('no_found_rows', false);
