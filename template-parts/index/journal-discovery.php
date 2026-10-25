@@ -2,9 +2,6 @@
 /** 更新記事の大きな棚と、公開順の小さなリストで読みたい記事を探す。 */
 global $wp_query;
 $today = current_datetime()->format('Y-m-d');
-$category_id = kihiro_selected_article_category();
-$category = get_term($category_id, 'category');
-$category_name = $category instanceof WP_Term ? $category->name : '最新の更新';
 // 各カテゴリーは更新日の新しい6件に絞る。
 $category_shelves = array();
 foreach (array('思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度', '技術・開発') as $shelf_name) {
@@ -21,12 +18,10 @@ foreach (array('思考・生き方', '健康・セルフケア', '仕事・キ�
 }
 ?>
 <main id="main-content" class="journal-discovery">
-  <header class="discovery-heading">
-    <div><p class="discovery-eyebrow">日々のジャーナル</p><h1><?php echo esc_html($category_name); ?></h1><p class="discovery-description">自分の人生にとって、大事なこと。</p></div>
-    <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
-      <a class="discovery-create" href="<?php echo esc_url(admin_url('post-new.php')); ?>"><span aria-hidden="true">＋</span> 新規投稿</a>
-    <?php endif; ?>
-  </header>
+  <h1 class="screen-reader-text">日々のジャーナル</h1>
+  <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
+    <div class="article-create"><a class="discovery-create" href="<?php echo esc_url(admin_url('post-new.php')); ?>"><span aria-hidden="true">＋</span> 新規投稿</a></div>
+  <?php endif; ?>
   <section class="discovery-section" aria-labelledby="year-heading-latest" id="year-latest">
     <header class="discovery-section-heading"><h2 id="year-heading-latest">更新した記事</h2><span>書き足しながら、考える。</span></header>
     <?php if ($wp_query->posts) : ?>
