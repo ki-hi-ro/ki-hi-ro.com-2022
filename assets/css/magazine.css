@@ -438,7 +438,7 @@ body .db-single__content h2, body .about-body h2, body .case-content h2 {
 .article-filters { margin: 0 0 20px; }
 .article-filters__categories { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px; border-bottom: 0; }
 .article-filters__categories a { flex-shrink: 0; padding: 8px 12px; border: 0; border-radius: 8px; background: #f2f2f2; font-size: 14px; font-weight: 400; color: var(--mag-muted); }
-.article-filters__categories a[aria-current] { background: var(--mag-ink); color: #fff; font-weight: 500; }
+.article-filters__categories a[aria-current] { background: #555; color: #fff; font-weight: 500; }
 .article-filters__tags { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 24px 0 20px; }
 .article-filters__label { margin-right: 8px; font-size: 13px; color: var(--mag-muted); }
 .article-filters__pill { padding: 9px 18px; border: 1px solid var(--mag-line); border-radius: 999px; font-size: 13px; }
@@ -622,7 +622,7 @@ body #main-content { margin-top: 40px; padding-top: 0; }
 .site-header__inner .search-form__input { padding-left: 16px; }
 .site-header__inner .search-form__btn { background: #f7f7f7; border-left: 1px solid var(--mag-line); }
 .article-filters__categories a:hover { opacity: 1; background: #e5e5e5; }
-.article-filters__categories a[aria-current]:hover { background: #3f3f3f; }
+.article-filters__categories a[aria-current]:hover { background: #494949; }
 @media (hover: hover) { .pagination a.page-numbers:hover { background: #f2f2f2; } }
 
 .monthly-archives select:hover { background-color: #e8e8e8; }
