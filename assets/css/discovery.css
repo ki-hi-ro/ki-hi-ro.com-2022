@@ -23,7 +23,7 @@
 .journal-discovery .article-filters__categories a:hover { background: #ededf0; color: var(--mag-ink); }
 .journal-discovery .article-filters__categories a[aria-current]:hover { background: #3f3f3f; color: #fff; }
 .discovery-section { margin: 0 0 48px; }
-.discovery-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 12px; padding-top: 32px; border-top: 1px solid var(--mag-line); }
+.discovery-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 12px; padding-top: 0; border-top: 0; }
 .discovery-section-heading h2, .discovery-library h2 { margin: 0; font-size: 23px; font-weight: 600; letter-spacing: -.02em; }
 .discovery-section-heading > span { color: var(--mag-muted); font-size: 12px; }
 .discovery-featured { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 40px) / 3); gap: 20px; list-style: none; margin: 0; padding: 0 0 12px; overflow-x: auto; scroll-snap-type: x mandatory; }
