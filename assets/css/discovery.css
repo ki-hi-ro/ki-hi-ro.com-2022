@@ -30,12 +30,12 @@
 .discovery-featured > li { min-width: 0; scroll-snap-align: start; scroll-snap-stop: always; }
 .discovery-feature { display: flex; flex-direction: column; height: 100%; }
 .discovery-meta { display: block; font-size: 12px; line-height: 1.5; color: var(--mag-muted); }
-.discovery-feature h3 { min-width: 0; margin: 6px 0 14px; font-size: 17px; line-height: 1.7; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.discovery-artwork { position: relative; display: block; margin-top: auto; overflow: hidden; border-radius: 14px; background: var(--discovery-soft); }
+.discovery-feature h3 { min-width: 0; margin: 12px 0 6px; font-size: 17px; line-height: 1.7; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.discovery-artwork { position: relative; display: block; margin-top: 0; overflow: hidden; border-radius: 14px; background: var(--discovery-soft); }
 .discovery-artwork > img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
 .discovery-badge { position: absolute; top: 10px; left: 10px; padding: 4px 8px; border-radius: 6px; background: rgba(255,255,255,.94); color: #444; font-size: 11px; line-height: 1.5; }
 .discovery-open { position: absolute; bottom: 10px; right: 10px; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,.92); font-size: 19px; }
-.discovery-published { margin-top: 10px; color: var(--mag-muted); font-size: 11px; }
+.discovery-published { margin-top: 4px; color: var(--mag-muted); font-size: 11px; }
 .journal-discovery .pagination { margin-top: 16px; }
 .journal-discovery .pagination .page-numbers { border: 0; background: var(--discovery-soft); border-radius: 50%; }
 .journal-discovery .pagination .current { background: var(--mag-ink); color: #fff; }
