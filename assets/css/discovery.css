@@ -27,7 +27,7 @@
 .discovery-section-heading h2, .discovery-library h2 { margin: 0; font-size: 23px; font-weight: 600; letter-spacing: -.02em; }
 .discovery-section-heading > span { color: var(--mag-muted); font-size: 12px; }
 .discovery-featured { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 40px) / 3); gap: 20px; list-style: none; margin: 0; padding: 0 0 12px; overflow-x: auto; scroll-snap-type: x mandatory; }
-.discovery-featured > li { min-width: 0; scroll-snap-align: start; }
+.discovery-featured > li { min-width: 0; scroll-snap-align: start; scroll-snap-stop: always; }
 .discovery-feature { display: flex; flex-direction: column; height: 100%; }
 .discovery-meta { display: block; font-size: 12px; line-height: 1.5; color: var(--mag-muted); }
 .discovery-feature h3 { min-height: 5.1em; margin: 6px 0 14px; font-size: 17px; line-height: 1.7; font-weight: 500; overflow-wrap: anywhere; }
@@ -163,3 +163,14 @@ body .about-body > section:first-child { padding-top: 0; }
 .discovery-featured::-webkit-scrollbar,
 .article-filters__categories::-webkit-scrollbar,
 .pagination .nav-links::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+/* 最後のカードにも左揃えで止まる余地を確保する。 */
+@media (max-width: 960px) {
+  .discovery-featured { display: flex; scroll-padding-inline: 0; }
+  .discovery-featured > li { flex: 0 0 46%; }
+  .discovery-featured::after { content: ""; flex: 0 0 calc(54% - 20px); }
+}
+@media (max-width: 700px) {
+  .discovery-featured > li { flex-basis: 84%; }
+  .discovery-featured::after { flex-basis: calc(16% - 16px); }
+}
