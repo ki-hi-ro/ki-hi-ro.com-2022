@@ -27,7 +27,7 @@ get_header(); ?>
   $current_page = max(1, (int) get_query_var('paged'), (int) get_query_var('page'));
   $cases = array_slice($cases, ($current_page - 1) * $per_page, $per_page);
   ?>
-  <header class="discovery-page-heading"><p class="discovery-eyebrow">つくったもの、取り組んだこと。</p><h1>開発事例</h1></header>
+  <h1 class="screen-reader-text">開発事例</h1>
   <section class="article-filters" aria-label="開発事例の絞り込み">
     <nav class="article-filters__categories" aria-label="カテゴリー">
       <a href="<?php echo esc_url(get_permalink()); ?>" <?php if (!$selected_category) echo 'aria-current="true"'; ?>>すべて</a>

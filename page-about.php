@@ -7,7 +7,7 @@ get_header(); ?>
 <main id="main-content" class="about-page">
   <?php while (have_posts()) : the_post(); ?>
     <article>
-      <header class="discovery-page-heading"><p class="discovery-eyebrow">ki-hi-ro.com</p><h1><?php the_title(); ?></h1></header>
+      <h1 class="screen-reader-text"><?php the_title(); ?></h1>
       <?php // 本文はWordPressのDBが正本。content/about.htmlは原稿の控えで自動同期しない。 ?>
       <div class="about-body"><?php the_content(); ?></div>
     </article>
