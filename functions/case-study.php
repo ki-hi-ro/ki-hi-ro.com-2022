@@ -1,5 +1,23 @@
 <?php
 /** Editable standard pages; initialization is an explicit admin action. */
+function kihiro_register_case_study_categories() {
+    register_taxonomy('case_study_category', array('page'), array(
+        'labels' => array('name' => '開発事例カテゴリー', 'singular_name' => '開発事例カテゴリー'),
+        'hierarchical' => true,
+        'public' => false,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'show_in_rest' => true,
+        'rewrite' => false,
+    ));
+}
+add_action('init', 'kihiro_register_case_study_categories');
+
+function kihiro_case_study_categories($case) {
+    $terms = wp_get_object_terms($case->ID, 'case_study_category', array('fields' => 'slugs'));
+    return !is_wp_error($terms) && $terms ? $terms : array(kihiro_case_study_category($case));
+}
+
 function kihiro_case_study_index() {
     $page = get_page_by_path('case-study', OBJECT, 'page');
     return $page && $page->post_status === 'publish' && !post_password_required($page) ? $page : null;

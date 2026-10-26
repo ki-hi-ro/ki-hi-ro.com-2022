@@ -12,12 +12,13 @@ get_header(); ?>
   if (!isset($case_categories[$selected_category])) $selected_category = '';
   $available_categories = array();
   foreach ($cases as $case) {
-      $category = kihiro_case_study_category($case);
-      $available_categories[$category] = $case_categories[$category];
+      foreach (kihiro_case_study_categories($case) as $category) {
+          if (isset($case_categories[$category])) $available_categories[$category] = $case_categories[$category];
+      }
   }
   if ($selected_category) {
       $cases = array_values(array_filter($cases, function ($case) use ($selected_category) {
-          return kihiro_case_study_category($case) === $selected_category;
+          return in_array($selected_category, kihiro_case_study_categories($case), true);
       }));
   }
   // 絞り込みを終えてから件数とページ数を確定する。順序を逆にすると空ページが生じる。
