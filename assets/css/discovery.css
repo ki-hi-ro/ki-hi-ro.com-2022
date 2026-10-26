@@ -255,3 +255,9 @@ body .about-body > section:first-child { padding-top: 0; }
   .archive-track-view > .article-timeline__header { margin-bottom: 20px; }
   .archive-track-view > .article-filters { margin-bottom: 24px; }
 }
+
+/* ページ送りのアンカー移動でも、画面上端に見出しを貼り付けない。 */
+#year-latest, .journal-discovery [id^="discovery-category-"] { scroll-margin-top: 40px; }
+@media (max-width: 700px) {
+  #year-latest, .journal-discovery [id^="discovery-category-"] { scroll-margin-top: 28px; }
+}
