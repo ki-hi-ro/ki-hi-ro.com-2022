@@ -27,7 +27,22 @@
       <span class="site-header__category">WEBエンジニアの柴田浩貴です。自分の人生にとって大事なことを残していきます。</span>
     <?php $case_index = kihiro_case_study_index(); ?>
       <nav class="site-main-nav" aria-label="メインナビゲーション">
-        <a href="<?php echo esc_url(home_url('/')); ?>" <?php if (is_front_page() || is_home()) : ?>aria-current="page"<?php elseif (is_singular('post') || is_search()) : ?>aria-current="true"<?php endif; ?>>日々のジャーナル</a>
+        <?php $journal_active = is_front_page() || is_home() || is_singular('post') || is_search() || is_date() || is_tag(); ?>
+        <details class="journal-menu<?php if ($journal_active) echo ' journal-menu--active'; ?>">
+          <summary>日々のジャーナル<span class="journal-menu__chevron" aria-hidden="true">⌄</span></summary>
+          <div class="journal-menu__panel">
+            <a href="<?php echo esc_url(home_url('/')); ?>">更新した記事</a>
+            <a href="<?php echo esc_url(add_query_arg('view', 'archive-all', home_url('/'))); ?>">すべての記事</a>
+            <div class="journal-menu__categories">
+              <?php foreach (array('技術・開発', '思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度') as $menu_category_name) :
+                $menu_category = get_term_by('name', $menu_category_name, 'category');
+                if (!$menu_category instanceof WP_Term) continue;
+              ?>
+                <a href="<?php echo esc_url(add_query_arg(array('view' => 'archive-all', 'article_category' => $menu_category->term_id), home_url('/'))); ?>"><?php echo esc_html($menu_category->name); ?></a>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        </details>
         <?php $about_page = get_page_by_path('about'); if ($about_page && $about_page->post_status === 'publish') : ?>
           <a href="<?php echo esc_url(get_permalink($about_page)); ?>" <?php if (is_page($about_page->ID)) echo 'aria-current="page"'; ?>>自己紹介</a>
         <?php endif; ?>
