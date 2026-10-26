@@ -24,7 +24,7 @@
       <?php get_search_form(); ?>
     </div>
     <div class="site-header__menu-row">
-      <span class="site-header__category">WEBエンジニアの柴田浩貴です。自分の人生にとって大事なことを残していきます。</span>
+      <span class="site-header__category">WEBエンジニアの柴田浩貴です。</span>
     <?php $case_index = kihiro_case_study_index(); ?>
       <nav class="site-main-nav" aria-label="メインナビゲーション">
         <?php $journal_active = is_front_page() || is_home() || is_singular('post') || is_search() || is_date() || is_tag(); ?>
