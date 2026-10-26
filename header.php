@@ -27,9 +27,9 @@
       <span class="site-header__category">WEBエンジニアの柴田浩貴です。</span>
     <?php $case_index = kihiro_case_study_index(); ?>
       <nav class="site-main-nav" aria-label="メインナビゲーション">
-        <?php $journal_active = is_front_page() || is_home() || is_singular('post') || is_search() || is_date() || is_tag(); ?>
+        <?php $journal_active = (is_home() && ('' !== kihiro_get_request_value('view') || is_paged())) || is_singular('post') || is_search() || is_date() || is_tag(); ?>
         <details class="journal-menu<?php if ($journal_active) echo ' journal-menu--active'; ?>">
-          <summary>日々のジャーナル<span class="journal-menu__chevron" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
+          <summary><a href="<?php echo esc_url(kihiro_journal_url()); ?>" <?php if (is_home() && 'journal' === kihiro_get_request_value('view')) echo 'aria-current="page"'; ?>>日々のジャーナル</a><span class="journal-menu__chevron" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
           <div class="journal-menu__panel">
             <div class="journal-menu__categories">
               <?php foreach (array('技術・開発', '思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度') as $menu_category_name) :

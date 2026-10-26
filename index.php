@@ -3,6 +3,12 @@
 <?php
 // URL種別で表示経路を分ける。通常一覧・検索・タグ・年月は共通カードへ集約。
 // journal_dateを指定した日付ジャーナルだけ、下のカレンダー表示へ進む。
+if (is_home() && !is_paged() && '' === kihiro_get_request_value('view') && '' === kihiro_get_request_value('journal_date')) {
+    get_template_part('template-parts/index/work-home');
+    get_footer();
+    return;
+}
+
 if (is_search()) {
     get_template_part('template-parts/index/search-results');
     get_footer();

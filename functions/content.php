@@ -124,8 +124,13 @@ function kihiro_selected_journal_date() {
     return kihiro_parse_ymd(kihiro_latest_post_date());
 }
 
+function kihiro_journal_url() {
+    return add_query_arg('view', 'journal', kihiro_logo_home_url());
+}
+
 function kihiro_is_all_articles_view() {
-    return 'archive-all' === kihiro_get_request_value('view')
+    return 'journal' === kihiro_get_request_value('view')
+        || 'archive-all' === kihiro_get_request_value('view')
         || 'all' === kihiro_get_request_value('view')
         || ('' === kihiro_get_request_value('view') && '' === kihiro_get_request_value('journal_date'));
 }

@@ -384,3 +384,6 @@ body .about-body > section:first-child { padding-top: 0; }
 
 .work-home__heading h2 { text-wrap: balance; }
 @media (max-width: 700px) { .work-hero h2 > span > span { display: block; } }
+.journal-menu summary > a { padding: 0; background: transparent; color: inherit; }
+.site-header__menu-row .journal-menu summary > a[aria-current] { background: transparent; }
+.work-landing .work-home { margin-bottom: 0; }

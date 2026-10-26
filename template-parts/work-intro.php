@@ -18,7 +18,7 @@ foreach (array('excel-data-cleaner' => '業務自動化のサンプル', 'csv-up
       <a class="work-home__button" href="#work-projects">開発事例を見る <span aria-hidden="true">↓</span></a>
     </div>
     <p class="work-hero__note">要件が固まっていなくても構いません。対応可否とお見積もりをメールでご案内します。</p>
-    <nav class="work-home__nav" aria-label="トップページの案内"><a href="#work-services">対応できる仕事</a><a href="#work-projects">開発事例</a><a href="#work-profile">自己紹介</a><a href="#year-latest">日々のジャーナル</a></nav>
+    <nav class="work-home__nav" aria-label="トップページの案内"><a href="#work-services">対応できる仕事</a><a href="#work-projects">開発事例</a><a href="#work-profile">自己紹介</a><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナル</a></nav>
   </section>
 
   <section class="work-home__section" id="work-services" aria-labelledby="work-services-heading">
@@ -51,7 +51,7 @@ foreach (array('excel-data-cleaner' => '業務自動化のサンプル', 'csv-up
 
   <section class="work-profile" id="work-profile" aria-labelledby="work-profile-heading">
     <div><p class="magazine-eyebrow">ABOUT</p><h2 id="work-profile-heading">柴田 浩貴</h2><p class="work-profile__role">WEBエンジニア</p></div>
-    <div><p>Webの実装と、Pythonによるデータ処理・業務自動化に取り組んでいます。つくったものだけでなく、試行錯誤や日々の気づきもこのブログに残しています。</p><div class="work-home__profile-links"><?php $about_page = get_page_by_path('about'); if ($about_page && 'publish' === $about_page->post_status) : ?><a href="<?php echo esc_url(get_permalink($about_page)); ?>">自己紹介を読む →</a><?php endif; ?><a href="#year-latest">日々のジャーナルを読む ↓</a></div></div>
+    <div><p>Webの実装と、Pythonによるデータ処理・業務自動化に取り組んでいます。つくったものだけでなく、試行錯誤や日々の気づきもこのブログに残しています。</p><div class="work-home__profile-links"><?php $about_page = get_page_by_path('about'); if ($about_page && 'publish' === $about_page->post_status) : ?><a href="<?php echo esc_url(get_permalink($about_page)); ?>">自己紹介を読む →</a><?php endif; ?><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナルを読む →</a></div></div>
   </section>
 
   <section class="work-home-contact" aria-labelledby="work-contact-heading"><h2 id="work-contact-heading">まずは、今のお困りごとから。</h2><p>「この作業を減らしたい」「この機能をつくりたい」。<br>要件を確認して、対応可否と個別のお見積もりをご案内します。</p><a class="work-home__button work-home__button--primary" href="<?php echo esc_url(home_url('/contact-us/')); ?>">メールでの相談へ進む <span aria-hidden="true">→</span></a><p class="work-home-contact__note">フォームからお送りいただき、メールでやりとりします。</p></section>
