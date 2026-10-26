@@ -32,7 +32,7 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
 
   <?php if ($experience_url) : ?>
   <section class="work-home__section" id="work-projects" aria-labelledby="work-projects-heading">
-    <header class="work-home__heading"><p class="magazine-eyebrow">MY EXPERIENCE</p><h2 id="work-projects-heading">私が現場で、向き合ってきた課題。</h2><p>サービスの例ではなく、私自身が実際の業務で担当してきたことです。</p></header>
+    <header class="work-home__heading"><p class="magazine-eyebrow">MY EXPERIENCE</p><h2 id="work-projects-heading">私が現場で、向き合ってきた課題。</h2><p>実際の業務で経験した課題と、私が担当した対応内容をご紹介します。</p></header>
     <div class="work-projects-grid">
       <?php foreach (array('etl', 'api', 'bi') as $key) : $experience = $experiences[$key]; ?>
       <article class="work-project work-project--experience">
