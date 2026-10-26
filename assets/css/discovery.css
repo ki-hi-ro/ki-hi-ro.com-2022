@@ -140,7 +140,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .work-contact__grid { gap: 20px; }
 .work-contact .work-contact__scope { padding: 16px 20px; border-radius: 12px; background: var(--discovery-soft); font-size: 13px; line-height: 1.8; }
 .monthly-archives { padding: 20px; border: 0; border-radius: 14px; background: var(--discovery-soft); }
-.monthly-archives select { background-color: #fff; }
+.monthly-archives select { padding-left: 14px; padding-right: 44px; background-color: #fff; background-position: right 14px center; }
 .discovery-library .monthly-archives { padding: 0; }
 .site-footer { border-top-color: var(--mag-line); }
 @media (max-width: 700px) {
