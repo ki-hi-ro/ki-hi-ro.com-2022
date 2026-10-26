@@ -491,3 +491,26 @@ body .about-body > section:first-child { padding-top: 0; }
 .article-related-experience__more { font-size: 13px; text-decoration: underline; text-underline-offset: 4px; line-height: 1.8; }
 .article-related-experience__link:focus-visible { outline: 2px solid var(--mag-ink); outline-offset: 5px; border-radius: 4px; }
 @media (max-width: 700px) { .article-related-experience { padding: 20px; margin: 24px 0; } .article-related-experience__title { font-size: 16px; } }
+/* サービスページも自己紹介と同じ余白・2列カードで読む。 */
+.services-page { width: 100%; max-width: 1180px; padding: 40px 0 64px; }
+.services-page__header { text-align: center; margin-bottom: 28px; }
+.services-page__header h1 { font-size: clamp(24px, 2.6vw, 32px); line-height: 1.6; margin: 8px 0 12px; }
+.services-page__header > p:not(.magazine-eyebrow) { color: var(--mag-muted); font-size: 15px; line-height: 1.8; }
+.services-page > .work-entry__links, .services-page__header .work-entry__links { justify-content: center; }
+.services-page__content { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: none; }
+.services-page__intro { grid-column: 1 / -1; max-width: 840px; margin: 0 auto; text-align: center; font-size: 15px; line-height: 1.9; color: var(--mag-muted); }
+.services-page__content .services-page__section-heading { grid-column: 1 / -1; text-align: center; font-size: 24px; margin: 12px 0 0; scroll-margin-top: 40px; }
+.service-card { min-width: 0; box-sizing: border-box; padding: 28px; border-radius: 16px; background: var(--discovery-soft); }
+.service-card--wide { grid-column: 1 / -1; }
+.services-page__content .service-card :is(h2, h3) { margin: 0 0 18px; font-size: 21px; font-weight: 600; line-height: 1.7; }
+.services-page__content .service-card :is(p, ul, ol) { font-size: 14px; line-height: 1.9; margin: 12px 0 20px; }
+.services-page__content .service-card > :last-child { margin-bottom: 0; }
+.service-card li { margin-bottom: 12px; }
+.service-card a { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 700px) {
+ .services-page { padding: 28px 0 48px; }
+ .services-page__content { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+ .service-card { padding: 24px; }
+ .services-page__content .services-page__section-heading { scroll-margin-top: 28px; }
+ .services-page__intro { text-align: left; }
+}
