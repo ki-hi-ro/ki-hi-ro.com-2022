@@ -30,6 +30,8 @@
           <?php endif; ?>
         </dl>
 
+        <?php get_template_part('template-parts/related-work-experience'); ?>
+
         <?php if (has_post_thumbnail() && !post_password_required()) : ?>
           <figure class="article-featured-image">
             <?php the_post_thumbnail('full', array('loading' => 'eager', 'fetchpriority' => 'high', 'decoding' => 'async', 'sizes' => '(max-width: 900px) 100vw, 900px')); ?>
