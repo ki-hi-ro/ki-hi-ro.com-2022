@@ -55,6 +55,20 @@ function kihiro_get_request_value($key) {
     return sanitize_text_field(wp_unslash($_GET[$key]));
 }
 
+function kihiro_redirect_empty_search() {
+    if (is_admin() || !isset($_GET['s']) || !is_scalar($_GET['s'])) {
+        return;
+    }
+
+    if ('' !== trim(kihiro_get_request_value('s'))) {
+        return;
+    }
+
+    wp_safe_redirect(add_query_arg('view', 'archive-all', kihiro_logo_home_url()));
+    exit;
+}
+add_action('template_redirect', 'kihiro_redirect_empty_search', 0);
+
 function kihiro_parse_ymd($date) {
     if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $date)) {
         return null;
