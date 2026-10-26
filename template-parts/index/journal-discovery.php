@@ -6,7 +6,7 @@ $today = current_datetime()->format('Y-m-d');
 $shelf_excluded_ids = array_unique(array_merge(kihiro_excluded_post_ids(), wp_list_pluck($wp_query->posts, 'ID')));
 // 各カテゴリーは更新日の新しい3件に絞る。
 $category_shelves = array();
-foreach (array('思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度', '技術・開発') as $shelf_name) {
+foreach (array('技術・開発', '思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度') as $shelf_name) {
     $shelf_term = get_term_by('name', $shelf_name, 'category');
     if (!$shelf_term instanceof WP_Term) continue;
     $page_key = 'category_page_' . $shelf_term->term_id;
