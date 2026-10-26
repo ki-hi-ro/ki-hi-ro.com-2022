@@ -29,6 +29,9 @@ get_header(); ?>
   $cases = array_slice($cases, ($current_page - 1) * $per_page, $per_page);
   ?>
   <h1 class="screen-reader-text">開発事例</h1>
+  <?php $experience_page = get_page_by_path('about'); if ($experience_page && 'publish' === $experience_page->post_status) : ?>
+  <aside class="case-experience-entry"><h2>私が現場で取り組んできたこと</h2><p>Web制作、Power BI・ETLの移行、API開発、システム保守などの実務経験と、私の担当範囲を自己紹介にまとめています。</p><a href="<?php echo esc_url(get_permalink($experience_page) . '#work-experience'); ?>">6つの実務経験を見る →</a></aside>
+  <?php endif; ?>
   <section class="article-filters" aria-label="開発事例の絞り込み">
     <nav class="article-filters__categories" aria-label="カテゴリー">
       <a href="<?php echo esc_url(get_permalink()); ?>" <?php if (!$selected_category) echo 'aria-current="true"'; ?>>すべて</a>

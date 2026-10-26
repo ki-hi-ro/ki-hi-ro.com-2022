@@ -5,6 +5,10 @@ function kihiro_services_page() {
     return $page && 'publish' === $page->post_status && !post_password_required($page) ? $page : null;
 }
 
+function kihiro_work_experiences() {
+    return require get_template_directory() . '/content/work-experiences.php';
+}
+
 function kihiro_case_brief_fields() {
     return array('problem' => '課題', 'solution' => '解決方法', 'outcome' => '成果', 'similar' => '依頼できる類似作業', 'role' => '担当範囲', 'deliverables' => '成果物', 'testing' => 'テスト・確認内容', 'feedback' => '顧客評価（掲載許可のある内容）');
 }

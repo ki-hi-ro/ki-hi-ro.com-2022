@@ -386,3 +386,29 @@ body .about-body > section:first-child { padding-top: 0; }
 
 /* ジャーナルの一覧は64pxのサムネイルを保ち、横幅に応じて列を増やす。 */
 .archive-track-view .discovery-tracks { grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 0 24px; }
+.work-project--experience { padding: 26px; background: var(--discovery-soft); border-radius: 16px; }
+.work-project--experience .work-project__label { margin-top: 0; }
+.work-project__technology { font-size: 12px; color: var(--mag-muted); line-height: 1.8; margin: 0 0 24px; }
+.work-home__experience-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 28px; margin-top: 28px; font-size: 14px; line-height: 1.8; }
+.work-home__experience-links a { text-decoration: underline; }
+.work-experiences { margin-bottom: 64px; scroll-margin-top: 40px; }
+.work-experiences__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.work-experience { padding: 28px; background: #f5f5f7; border-radius: 16px; scroll-margin-top: 40px; overflow-wrap: anywhere; }
+.work-experience__period, .work-experience__role, .work-experience__tech { color: #6e6e73; font-size: 13px; line-height: 1.8; }
+.work-experience h3 { font-size: 21px; font-weight: 600; line-height: 1.7; margin: 12px 0; }
+.work-experience h4 { font-size: 15px; font-weight: 600; margin: 24px 0 8px; }
+.work-experience > p:not([class]), .work-experience ul { font-size: 14px; line-height: 1.9; }
+.work-experience ul { padding-left: 1.4em; }
+.work-experience li { margin-bottom: 8px; }
+.work-experience__tech { margin-top: 24px; }
+.work-experiences__note { font-size: 12px; color: #6e6e73; line-height: 1.8; margin-top: 20px; }
+@media (max-width: 700px) {
+ .work-experiences__list { grid-template-columns: 1fr; gap: 20px; }
+ .work-experience { padding: 24px; scroll-margin-top: 28px; }
+ .work-experiences { scroll-margin-top: 28px; margin-bottom: 48px; }
+ .work-home__experience-links { justify-content: flex-start; }
+}
+.case-experience-entry { margin: 0 0 36px; padding: 24px; border-radius: 14px; background: var(--discovery-soft); line-height: 1.9; }
+.case-experience-entry h2 { font-size: 22px; font-weight: 600; margin: 0 0 12px; }
+.case-experience-entry p { font-size: 14px; margin-bottom: 16px; }
+.case-experience-entry a { font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
