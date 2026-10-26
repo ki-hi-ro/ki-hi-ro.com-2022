@@ -125,8 +125,19 @@ function kihiro_selected_journal_date() {
 }
 
 function kihiro_journal_url() {
-    return add_query_arg('view', 'journal', kihiro_logo_home_url());
+    return add_query_arg('view', 'archive-all', kihiro_logo_home_url());
 }
+
+// 以前のジャーナル入口も、現在の標準である全記事一覧へ統一する。
+function kihiro_redirect_legacy_journal_view() {
+    if (!is_home() || 'journal' !== kihiro_get_request_value('view')) return;
+    $url = kihiro_journal_url();
+    if (kihiro_selected_article_category()) $url = add_query_arg('article_category', kihiro_selected_article_category(), $url);
+    if (kihiro_selected_article_tag()) $url = add_query_arg('article_tag', kihiro_selected_article_tag(), $url);
+    wp_safe_redirect($url);
+    exit;
+}
+add_action('template_redirect', 'kihiro_redirect_legacy_journal_view', 1);
 
 function kihiro_is_all_articles_view() {
     return 'journal' === kihiro_get_request_value('view')
