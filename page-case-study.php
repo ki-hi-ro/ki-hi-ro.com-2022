@@ -38,10 +38,20 @@ get_header(); ?>
           </figure>
         <?php endif; ?>
 
+        <?php $brief = array(); foreach (kihiro_case_brief_fields() as $key => $label) {
+            $value = get_post_meta(get_the_ID(), '_kihiro_case_' . $key, true);
+            if (is_string($value) && trim($value) !== '') $brief[$label] = $value;
+        } ?>
+        <?php if ($brief && !post_password_required()) : ?>
+          <section class="case-brief" aria-label="開発事例の概要"><h2>開発事例の概要</h2><dl>
+            <?php foreach ($brief as $label => $value) : ?><div><dt><?php echo esc_html($label); ?></dt><dd><?php echo nl2br(esc_html($value)); ?></dd></div><?php endforeach; ?>
+          </dl></section>
+        <?php endif; ?>
         <div class="db-single__content">
           <?php the_content(); ?>
         </div>
 
+        <?php get_template_part('template-parts/work-inquiry'); ?>
       </article>
     <?php endwhile; ?>
   <?php endif; ?>

@@ -62,6 +62,9 @@ get_header(); ?>
       ))); ?></div>
     </nav>
   <?php endif; ?>
+  <?php $services_page = kihiro_services_page(); if ($services_page) : ?>
+    <aside class="work-entry"><h2>制作・開発のご相談</h2><p>対応できる仕事や進め方は、サービス・ご依頼ページでご案内しています。</p><div class="work-entry__links"><a href="<?php echo esc_url(get_permalink($services_page)); ?>">サービス・ご依頼を見る</a></div></aside>
+  <?php endif; ?>
 <?php endwhile; ?>
 </main>
 <?php get_footer(); ?>

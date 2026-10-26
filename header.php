@@ -47,6 +47,9 @@
         <?php if ($case_index) : ?>
           <a href="<?php echo esc_url(get_permalink($case_index)); ?>" <?php if (is_page_template(array('page-case-study.php', 'page-case-study-index.php'))) echo 'aria-current="page"'; ?>>開発事例</a>
         <?php endif; ?>
+        <?php $services_page = kihiro_services_page(); if ($services_page) : ?>
+          <a href="<?php echo esc_url(get_permalink($services_page)); ?>" <?php if (is_page($services_page->ID)) echo 'aria-current="page"'; ?>>サービス・ご依頼</a>
+        <?php endif; ?>
         <?php $contact_page = get_page_by_path('contact-us'); if ($contact_page && $contact_page->post_status === 'publish') : ?>
           <a href="<?php echo esc_url(get_permalink($contact_page)); ?>" <?php if (is_page($contact_page->ID)) echo 'aria-current="page"'; ?>>お問い合わせ</a>
         <?php endif; ?>

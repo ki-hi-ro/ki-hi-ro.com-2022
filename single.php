@@ -40,6 +40,8 @@
           <?php the_content(); ?>
         </div>
 
+        <?php get_template_part('template-parts/work-inquiry'); ?>
+
         <?php get_template_part('template-parts/article-like'); ?>
 
         <?php if (comments_open() || get_comments_number()) : ?>
