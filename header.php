@@ -31,8 +31,6 @@
         <details class="journal-menu<?php if ($journal_active) echo ' journal-menu--active'; ?>">
           <summary>日々のジャーナル<span class="journal-menu__chevron" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
           <div class="journal-menu__panel">
-            <a href="<?php echo esc_url(home_url('/')); ?>">更新した記事</a>
-            <a href="<?php echo esc_url(add_query_arg('view', 'archive-all', home_url('/'))); ?>">すべての記事</a>
             <div class="journal-menu__categories">
               <?php foreach (array('技術・開発', '思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度') as $menu_category_name) :
                 $menu_category = get_term_by('name', $menu_category_name, 'category');
