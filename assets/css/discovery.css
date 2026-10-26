@@ -261,3 +261,10 @@ body .about-body > section:first-child { padding-top: 0; }
 @media (max-width: 700px) {
   #year-latest, .journal-discovery [id^="discovery-category-"] { scroll-margin-top: 28px; }
 }
+
+.archive-tag-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; font-size: 13px; }
+.archive-tag-filter label { font-weight: 500; }
+.archive-tag-filter select { min-width: 160px; max-width: min(100%, 300px); min-height: 44px; padding: 8px 12px; border: 1px solid transparent; border-radius: 10px; background-color: var(--discovery-soft); color: var(--mag-ink); font: inherit; }
+.archive-tag-filter button { min-height: 44px; padding: 8px 18px; border: 0; border-radius: 999px; background: var(--mag-ink); color: #fff; font: inherit; cursor: pointer; }
+.archive-tag-filter a { padding: 8px 0; color: var(--mag-muted); text-decoration: underline; text-underline-offset: 4px; }
+.archive-tag-filter select:focus-visible { outline: 2px solid var(--mag-ink); outline-offset: 3px; }
