@@ -30,6 +30,12 @@
       <span class="site-header__category">WEBエンジニアの柴田浩貴です。就職ではなく業務委託を目指しています。</span>
     <?php $case_index = kihiro_case_study_index(); ?>
       <nav class="site-main-nav" aria-label="メインナビゲーション">
+        <?php if ($case_index) : ?>
+          <a href="<?php echo esc_url(get_permalink($case_index)); ?>" <?php if (is_page_template(array('page-case-study.php', 'page-case-study-index.php'))) echo 'aria-current="page"'; ?>>開発事例</a>
+        <?php endif; ?>
+        <?php $services_page = kihiro_services_page(); if ($services_page) : ?>
+          <a href="<?php echo esc_url(get_permalink($services_page)); ?>" <?php if (is_page($services_page->ID)) echo 'aria-current="page"'; ?>>サービス・ご依頼</a>
+        <?php endif; ?>
         <details class="journal-menu<?php if ($journal_active) echo ' journal-menu--active'; ?>">
           <summary><a href="<?php echo esc_url(kihiro_journal_url()); ?>" <?php if (is_home() && 'journal' === kihiro_get_request_value('view')) echo 'aria-current="page"'; ?>>日々のジャーナル</a><span class="journal-menu__chevron" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
           <div class="journal-menu__panel">
@@ -45,15 +51,6 @@
         </details>
         <?php $about_page = get_page_by_path('about'); if ($about_page && $about_page->post_status === 'publish') : ?>
           <a href="<?php echo esc_url(get_permalink($about_page)); ?>" <?php if (is_page($about_page->ID)) echo 'aria-current="page"'; ?>>自己紹介</a>
-        <?php endif; ?>
-        <?php if ($case_index) : ?>
-          <a href="<?php echo esc_url(get_permalink($case_index)); ?>" <?php if (is_page_template(array('page-case-study.php', 'page-case-study-index.php'))) echo 'aria-current="page"'; ?>>開発事例</a>
-        <?php endif; ?>
-        <?php $services_page = kihiro_services_page(); if ($services_page) : ?>
-          <a href="<?php echo esc_url(get_permalink($services_page)); ?>" <?php if (is_page($services_page->ID)) echo 'aria-current="page"'; ?>>サービス・ご依頼</a>
-        <?php endif; ?>
-        <?php $contact_page = get_page_by_path('contact-us'); if ($contact_page && $contact_page->post_status === 'publish') : ?>
-          <a href="<?php echo esc_url(get_permalink($contact_page)); ?>" <?php if (is_page($contact_page->ID)) echo 'aria-current="page"'; ?>>お問い合わせ</a>
         <?php endif; ?>
       </nav>
     </div>
