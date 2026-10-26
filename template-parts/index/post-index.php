@@ -83,7 +83,20 @@ if (is_home() && !$is_full_archive) {
       <ol<?php if ($is_full_archive) echo ' class="discovery-tracks"'; ?>>
         <?php foreach ($entries as $entry) : ?>
           <?php if ($is_full_archive) : ?>
-            <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="discovery-track-art" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'thumbnail'); ?></span><span class="discovery-track-copy"><span class="discovery-track-title"><?php echo esc_html(get_the_title($entry)); ?></span><span class="discovery-meta"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開 ／ <?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</span></span><span class="discovery-track-arrow" aria-hidden="true">›</span></a></li>
+            <?php $entry_tags = get_the_tags($entry->ID); ?>
+            <li class="journal-event<?php if (!$year) echo ' journal-event--full-date'; ?>">
+              <time class="journal-event__date" datetime="<?php echo esc_attr(get_the_date('c', $entry)); ?>" title="<?php echo esc_attr(get_the_date('Y.m.d H:i', $entry) . ' 公開'); ?>"><span class="journal-event__date-year"><?php echo esc_html(get_the_date('Y.', $entry)); ?></span><?php echo esc_html(get_the_date('m.d H:i', $entry)); ?></time>
+              <a class="journal-event__article" href="<?php echo esc_url(get_permalink($entry)); ?>" title="<?php echo esc_attr(get_the_title($entry)); ?>"><span class="journal-event__art" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'thumbnail'); ?></span><span class="journal-event__title"><?php echo esc_html(get_the_title($entry)); ?></span></a>
+              <div class="journal-event__tags" aria-label="タグ">
+                <?php if (is_array($entry_tags) && $entry_tags) : foreach ($entry_tags as $entry_tag) :
+                    $tag_params = array('view' => 'archive-all', 'article_tag' => $entry_tag->term_id);
+                    if ($archive_category_id) $tag_params['article_category'] = $archive_category_id;
+                    if (is_date()) $tag_params['m'] = get_query_var('m') ?: sprintf('%04d%02d', get_query_var('year'), get_query_var('monthnum'));
+                ?>
+                  <a href="<?php echo esc_url(add_query_arg($tag_params, kihiro_logo_home_url())); ?>" title="<?php echo esc_attr($entry_tag->name); ?>"><?php echo esc_html($entry_tag->name); ?></a>
+                <?php endforeach; else : ?><span class="journal-event__no-tag">タグなし</span><?php endif; ?>
+              </div>
+            </li>
           <?php else : ?>
           <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?><?php if (get_the_modified_date('Y-m-d', $entry) === $today) : ?><span class="article-card-new">本日更新</span><?php endif; ?></span><span class="article-card-dates"><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</time> ／ <time datetime="<?php echo esc_attr(get_the_modified_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</time></span><span><?php if (get_the_modified_date('Y-m-d', $entry) === $today) : ?><span class="screen-reader-text">本日更新： </span><?php endif; ?><?php echo esc_html(get_the_title($entry)); ?></span></a></li>
           <?php endif; ?>

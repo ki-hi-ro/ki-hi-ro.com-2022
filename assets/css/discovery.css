@@ -450,3 +450,31 @@ body .about-body > section:first-child { padding-top: 0; }
 .tag-tree-picker__chevron svg { display: block; }
 
 .tag-tree-picker[data-side="above"] > .tag-tree-picker__panel { top: auto; bottom: calc(100% + 8px); }
+
+/* 公開日時を軸に、1記事1行で積み重ねるタイムライン。 */
+.archive-track-view .discovery-tracks { display: block; margin-left: 4px; padding-left: 14px; border-left: 1px solid var(--mag-line); }
+.archive-track-view .journal-event { position: relative; display: grid; grid-template-columns: 132px minmax(0, 1fr) minmax(0, 260px); align-items: center; gap: 12px; min-height: 44px; box-sizing: border-box; padding: 6px 0; }
+.journal-event::before { content: ''; position: absolute; top: 50%; left: -18px; width: 7px; height: 7px; border-radius: 50%; background: #aaaab0; transform: translateY(-50%); }
+.journal-event__date { font-size: 11px; line-height: 1.6; color: var(--mag-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.archive-track-view .journal-event a { min-height: 0; border-radius: 5px; }
+.archive-track-view .journal-event__article { display: flex; align-items: center; gap: 10px; padding: 0; min-width: 0; }
+.journal-event__art { flex: 0 0 32px; width: 32px; height: 32px; border-radius: 5px; overflow: hidden; background: var(--discovery-soft); }
+.journal-event__art img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.journal-event__title { display: block; min-width: 0; font-size: 13px; font-weight: 500; line-height: 1.6; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.journal-event__tags { display: flex; align-items: center; gap: 5px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.journal-event__tags::-webkit-scrollbar { display: none; }
+.archive-track-view .journal-event__tags a { display: block; flex: 0 0 auto; max-width: 140px; padding: 2px 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; background: var(--discovery-soft); font-size: 11px; line-height: 1.6; color: var(--mag-muted); }
+.journal-event__no-tag { color: var(--mag-muted); font-size: 11px; white-space: nowrap; }
+@media (max-width: 700px) {
+ .archive-track-view .discovery-tracks { padding-left: 10px; }
+ .archive-track-view .journal-event { grid-template-columns: 70px minmax(0, 1fr) 70px; gap: 7px; min-height: 38px; padding: 6px 0; }
+ .journal-event::before { left: -14px; }
+ .journal-event__date { font-size: 10px; }
+ .journal-event__date-year { display: none; }
+ .journal-event--full-date .journal-event__date-year { display: inline; }
+ .archive-track-view .journal-event--full-date { grid-template-columns: 96px minmax(0, 1fr) 62px; }
+ .journal-event__art { flex-basis: 24px; width: 24px; height: 24px; }
+ .archive-track-view .journal-event__article { gap: 7px; }
+ .journal-event__title { font-size: 12px; }
+ .archive-track-view .journal-event__tags a { max-width: 70px; font-size: 10px; }
+}
