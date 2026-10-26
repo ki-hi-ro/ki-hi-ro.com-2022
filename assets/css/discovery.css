@@ -313,3 +313,9 @@ body .about-body > section:first-child { padding-top: 0; }
   .work-entry { padding: 22px; margin-top: 40px; }
   .case-brief dl > div { grid-template-columns: 1fr; gap: 4px; }
 }
+.work-intro { margin: 0 0 56px; padding: 28px 32px; border-radius: 16px; background: var(--discovery-soft); max-width: 100%; }
+.work-intro h2 { font-size: clamp(22px, 2.5vw, 30px); font-weight: 600; line-height: 1.6; margin: 8px 0 14px; }
+.work-intro > p { max-width: 820px; line-height: 1.9; margin-bottom: 12px; }
+.work-intro .work-intro__note { color: var(--mag-muted); font-size: 14px; }
+.work-intro .work-entry__links { margin-top: 20px; }
+@media (max-width: 700px) { .work-intro { padding: 22px; margin-bottom: 40px; } }

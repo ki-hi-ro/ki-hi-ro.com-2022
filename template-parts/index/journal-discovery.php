@@ -23,6 +23,7 @@ foreach (array('技術・開発', '思考・生き方', '健康・セルフケ�
 ?>
 <main id="main-content" class="journal-discovery">
   <h1 class="screen-reader-text">日々のジャーナル</h1>
+  <?php get_template_part('template-parts/work-intro'); ?>
   <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
     <div class="article-create"><a class="discovery-create" href="<?php echo esc_url(admin_url('post-new.php')); ?>"><span aria-hidden="true">＋</span> 新規投稿</a></div>
   <?php endif; ?>

@@ -6,7 +6,7 @@ function kihiro_services_page() {
 }
 
 function kihiro_case_brief_fields() {
-    return array('problem' => '課題', 'role' => '担当範囲', 'deliverables' => '成果物', 'testing' => 'テスト・確認内容', 'feedback' => '顧客評価（掲載許可のある内容）');
+    return array('problem' => '課題', 'solution' => '解決方法', 'outcome' => '成果', 'similar' => '依頼できる類似作業', 'role' => '担当範囲', 'deliverables' => '成果物', 'testing' => 'テスト・確認内容', 'feedback' => '顧客評価（掲載許可のある内容）');
 }
 add_action('add_meta_boxes_page', function ($post) {
     if ('page-case-study.php' !== get_page_template_slug($post)) return;

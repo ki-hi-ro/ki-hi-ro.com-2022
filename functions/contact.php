@@ -35,7 +35,7 @@ function kihiro_contact_form() {
         . '<p class="work-contact__lead">Web制作・機能改善・Pythonによる業務自動化のご相談を承ります。</p>'
         . '<p class="work-contact__scope">Web制作は、ご用意いただいたデザインをもとにした実装（コーディング）を承ります。Webデザインの制作は行っていません。</p>'
         . '<p class="work-contact__intro">「手作業を減らしたい」「既存サイトを改善したい」など、現在のお困りごとをお聞かせください。要件やご予算が決まっていない段階でもご相談いただけます。</p>'
-        . '<p class="work-contact__note">必須の項目をご入力ください。送信内容を確認後、ご入力のメールアドレスへ返信します。</p>'
+        . '<p class="work-contact__note">まずは下のフォームから、現在のお困りごとだけでもお聞かせください。要件を確認して、対応可否とお見積もりをご案内します。ご連絡はメールで行います。</p>'
         . do_shortcode('[contact-form-7 id="' . $form_id . '"]')
         . '</div>';
 }
