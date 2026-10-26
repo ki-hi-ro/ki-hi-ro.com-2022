@@ -246,3 +246,12 @@ body .about-body > section:first-child { padding-top: 0; }
 @media (max-width: 700px) {
   .journal-discovery .discovery-section-heading, #year-latest > .discovery-section-heading { margin-bottom: 20px; }
 }
+
+/* 絞り込みを挟む場合も、ページ見出し下の区切り線だけを残す。 */
+.archive-track-view > .article-timeline__header { margin-bottom: 24px; }
+.archive-track-view > .article-filters { margin-bottom: 28px; }
+.archive-track-view > .article-filters + .discovery-archive-year > header { border-top: 0; padding-top: 0; }
+@media (max-width: 700px) {
+  .archive-track-view > .article-timeline__header { margin-bottom: 20px; }
+  .archive-track-view > .article-filters { margin-bottom: 24px; }
+}
