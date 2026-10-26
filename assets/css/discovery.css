@@ -30,8 +30,8 @@
 .discovery-featured > li { min-width: 0; scroll-snap-align: start; scroll-snap-stop: always; }
 .discovery-feature { display: flex; flex-direction: column; height: 100%; }
 .discovery-meta { display: block; font-size: 12px; line-height: 1.5; color: var(--mag-muted); }
-.discovery-feature h3 { min-width: 0; margin: 12px 0 6px; font-size: 17px; line-height: 1.7; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.discovery-artwork { position: relative; display: block; margin-top: 0; overflow: hidden; border-radius: 14px; background: var(--discovery-soft); }
+.discovery-feature h3 { flex: 1; min-width: 0; margin: 12px 0 6px; font-size: 17px; line-height: 1.7; font-weight: 500; white-space: normal; overflow-wrap: anywhere; }
+.discovery-artwork { flex-shrink: 0; position: relative; display: block; margin-top: 0; overflow: hidden; border-radius: 14px; background: var(--discovery-soft); }
 .discovery-artwork > img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
 .discovery-badge { position: absolute; top: 10px; left: 10px; padding: 4px 8px; border-radius: 6px; background: rgba(255,255,255,.94); color: #444; font-size: 11px; line-height: 1.5; }
 .discovery-open { position: absolute; bottom: 10px; right: 10px; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,.92); font-size: 19px; }
@@ -240,7 +240,7 @@ body .about-body > section:first-child { padding-top: 0; }
   .journal-discovery .discovery-featured { grid-template-columns: minmax(0, 1fr); gap: 28px; }
 }
 
-.discovery-card-dates { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 4px; color: var(--mag-muted); font-size: 12px; line-height: 1.7; }
+.discovery-card-dates { flex-shrink: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 4px; color: var(--mag-muted); font-size: 12px; line-height: 1.7; }
 .discovery-card-dates > span { white-space: nowrap; }
 
 @media (max-width: 700px) {
