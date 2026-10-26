@@ -27,7 +27,7 @@
       <?php if ($journal_active) get_search_form(); ?>
     </div>
     <div class="site-header__menu-row">
-      <span class="site-header__category">WEBエンジニアの柴田浩貴です。就職ではなく業務委託を目指しています。</span>
+      <span class="site-header__category">柴田浩貴です。Excel・CSVの手作業を減らす仕組みを、Pythonで開発しています。</span>
     <?php $case_index = kihiro_case_study_index(); ?>
       <nav class="site-main-nav" aria-label="メインナビゲーション">
         <?php if ($case_index) : ?>
