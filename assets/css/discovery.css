@@ -423,3 +423,8 @@ body .about-body > section:first-child { padding-top: 0; }
  .site-header__menu-row .site-main-nav > a,
  .site-header__menu-row .site-main-nav .journal-menu summary { min-height: 36px; }
 }
+.work-experience__articles { margin-top: 24px; }
+.work-experience__articles ul { padding-left: 1.3em; }
+.work-experience__articles li { margin-bottom: 14px; }
+.work-experience__articles a { text-decoration: underline; text-underline-offset: 4px; }
+.work-experience__articles time { display: block; margin-top: 4px; font-size: 12px; color: var(--mag-muted); }
