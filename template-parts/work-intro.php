@@ -8,9 +8,10 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
 ?>
 <div class="work-home">
   <section class="work-hero" aria-labelledby="work-intro-heading">
-    <p class="magazine-eyebrow">BUSINESS / SYSTEM / DEVELOPMENT</p>
-    <h2 id="work-intro-heading"><span><span>業務の課題を整理し、</span></span><span><span>使える仕組みを、</span><span>一緒につくる。</span></span></h2>
-    <p class="work-hero__lead">「手間がかかる」「うまく動かない」「何から変えればいいか分からない」。<br class="work-hero__desktop-break">まずは、いまの状況と目指したい状態をお聞かせください。<br class="work-hero__desktop-break">現状を読み解き、必要な改善を整理して、実装と確認まで伴走します。</p>
+    <p class="magazine-eyebrow">PYTHON / BUSINESS AUTOMATION</p>
+    <h2 id="work-intro-heading"><span><span>Excel・CSVの</span><span>手作業を減らす</span></span><span>仕組みをつくります。</span></h2>
+    <p class="work-hero__lead">毎月繰り返すデータの整形・集計・突合を、Pythonで効率化。</p>
+    <p class="work-hero__lead">手作業にかかる時間を減らし、本来の業務に集中できる環境づくりをお手伝いします。</p>
     <div class="work-home__actions">
       <a class="work-home__button work-home__button--primary" href="<?php echo esc_url(home_url('/contact-us/')); ?>">仕事について相談する</a>
       <a class="work-home__button" href="#work-projects">私が取り組んできたこと <span aria-hidden="true">↓</span></a>
