@@ -20,3 +20,9 @@ function kihiro_theme_setup() {
     );
 }
 add_action('after_setup_theme', 'kihiro_theme_setup');
+
+// 投稿と同じカテゴリーを固定ページの編集画面でも設定できるようにする。
+function kihiro_register_page_categories() {
+    register_taxonomy_for_object_type('category', 'page');
+}
+add_action('init', 'kihiro_register_page_categories', 20);
