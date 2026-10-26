@@ -35,7 +35,7 @@ $filter_url = function ($category, $tag) use ($archive_mode) {
       <details class="tag-tree-picker">
         <summary aria-labelledby="archive-tag-label archive-tag-selection"><span id="archive-tag-selection" data-selected-tag><?php echo $selected_tag instanceof WP_Term ? esc_html($selected_tag->name) : 'すべてのタグ'; ?></span><span class="tag-tree-picker__chevron" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="m3 6 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
         <div class="tag-tree-picker__panel">
-          <p class="tag-tree-picker__hint">テーマを開いて、具体的なタグを選んでください。</p>
+          <p class="tag-tree-picker__hint">テーマを開いてタグを選ぶと、自動で絞り込みます。</p>
           <fieldset class="tag-tree"><legend class="screen-reader-text">タグを1つ選択</legend>
             <label class="tag-tree__tag tag-tree__all"><input type="radio" name="article_tag" value="" data-tag-label="すべてのタグ" <?php checked($tag_id, 0); ?>><span>すべてのタグ</span></label>
             <?php kihiro_render_tag_tree(kihiro_tag_display_tree($filter_tags), $tag_id); ?>

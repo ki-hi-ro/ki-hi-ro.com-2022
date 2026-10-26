@@ -19,6 +19,8 @@
       selectedLabel.textContent = event.target.dataset.tagLabel;
       picker.open = false;
       summary.focus();
+      var form = event.target.form;
+      if (form) form.requestSubmit();
     });
     picker.addEventListener('keydown', function (event) {
       if (event.key !== 'Escape') return;
