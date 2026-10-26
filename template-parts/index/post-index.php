@@ -6,6 +6,9 @@ if (is_home() && 'archive-all' !== kihiro_get_request_value('view')) {
     return;
 }
 $is_full_archive = 'archive-all' === kihiro_get_request_value('view');
+$archive_category_id = $is_full_archive ? kihiro_selected_article_category() : 0;
+$archive_category = $archive_category_id ? get_term($archive_category_id, 'category') : null;
+$archive_title = $archive_category instanceof WP_Term ? $archive_category->name : 'すべての記事';
 $is_article_search = is_search();
 $is_article_tag = is_tag();
 $is_article_home = is_home() && !$is_article_search && '' === kihiro_get_request_value('view');
@@ -54,7 +57,7 @@ if (is_home() && !$is_full_archive) {
   <header class="article-timeline__header">
     <div>
       <p class="magazine-eyebrow">WRITING ARCHIVE</p>
-      <h1>すべての記事</h1>
+      <h1><?php echo esc_html($archive_title); ?></h1>
       <p>つくり、考え、書き続けてきた記録。</p>
     </div>
     <p class="article-timeline__total"><strong><?php echo esc_html(number_format_i18n(count($wp_query->posts))); ?></strong><span>記事の積み重ね</span></p>
