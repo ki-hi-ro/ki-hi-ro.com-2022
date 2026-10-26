@@ -2,6 +2,8 @@
 /** 更新記事の大きな棚と、公開順の小さなリストで読みたい記事を探す。 */
 global $wp_query;
 $today = current_datetime()->format('Y-m-d');
+// 現在の更新記事ページに載るIDを、カテゴリーの件数計算より前に除外する。
+$shelf_excluded_ids = array_unique(array_merge(kihiro_excluded_post_ids(), wp_list_pluck($wp_query->posts, 'ID')));
 // 各カテゴリーは更新日の新しい3件に絞る。
 $category_shelves = array();
 foreach (array('思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度', '技術・開発') as $shelf_name) {
@@ -14,7 +16,7 @@ foreach (array('思考・生き方', '健康・セルフケア', '仕事・キ�
         'posts_per_page' => 3, 'paged' => $shelf_page, 'cat' => $shelf_term->term_id,
         'orderby' => array('modified' => 'DESC', 'ID' => 'DESC'),
         'ignore_sticky_posts' => true, 'no_found_rows' => false,
-        'post__not_in' => kihiro_excluded_post_ids(),
+        'post__not_in' => $shelf_excluded_ids,
     ));
     if ($shelf_query->posts) $category_shelves[] = array('term' => $shelf_term, 'posts' => $shelf_query->posts, 'page' => $shelf_page, 'pages' => $shelf_query->max_num_pages, 'page_key' => $page_key);
 }
