@@ -417,7 +417,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .site-header__menu-row .site-main-nav { align-items: center; }
 .site-header__menu-row .site-main-nav > a,
 .site-header__menu-row .site-main-nav .journal-menu summary { display: flex; align-items: center; box-sizing: border-box; min-height: 40px; line-height: 1.6; }
-.site-header__menu-row .site-main-nav .journal-menu summary > a { padding: 0; border: 0; line-height: inherit; }
+.site-header__menu-row .site-main-nav .journal-menu summary > a { padding: 0; border: 0; background: transparent; line-height: inherit; }
 .work-hero__lead + .work-hero__lead { margin-top: 12px; }
 @media (max-width: 700px) {
  .site-header__menu-row .site-main-nav > a,
