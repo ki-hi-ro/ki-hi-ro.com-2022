@@ -93,7 +93,7 @@ if (is_home() && !$is_full_archive) {
                     if ($archive_category_id) $tag_params['article_category'] = $archive_category_id;
                     if (is_date()) $tag_params['m'] = get_query_var('m') ?: sprintf('%04d%02d', get_query_var('year'), get_query_var('monthnum'));
                 ?>
-                  <a href="<?php echo esc_url(add_query_arg($tag_params, kihiro_logo_home_url())); ?>" title="<?php echo esc_attr($entry_tag->name); ?>"><?php echo esc_html($entry_tag->name); ?></a>
+                  <a href="<?php echo esc_url(add_query_arg($tag_params, kihiro_logo_home_url())); ?>" title="<?php echo esc_attr($entry_tag->name); ?>" <?php if (kihiro_selected_article_tag() === $entry_tag->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($entry_tag->name); ?></a>
                 <?php endforeach; else : ?><span class="journal-event__no-tag">タグなし</span><?php endif; ?>
               </div>
             </li>
