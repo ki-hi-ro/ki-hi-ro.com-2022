@@ -18,16 +18,18 @@
 <body <?php body_class('db-output-page'); ?>>
   <?php wp_body_open(); ?>
   <a class="skip-link" href="#main-content">本文へスキップ</a>
+  <?php $journal_active = is_singular('post') || is_search() || is_category() || is_tag() || is_date()
+      || (is_home() && (in_array(kihiro_get_request_value('view'), array('journal', 'all', 'archive-all'), true)
+          || is_paged() || '' !== kihiro_get_request_value('journal_date'))); ?>
   <header id="page-top" class="site-header">
     <div class="site-header__inner">
       <a class="site-title" href="<?php echo esc_url(kihiro_logo_home_url()); ?>">ki-hi-ro.com</a>
-      <?php get_search_form(); ?>
+      <?php if ($journal_active) get_search_form(); ?>
     </div>
     <div class="site-header__menu-row">
       <span class="site-header__category">WEBエンジニアの柴田浩貴です。就職ではなく業務委託を目指しています。</span>
     <?php $case_index = kihiro_case_study_index(); ?>
       <nav class="site-main-nav" aria-label="メインナビゲーション">
-        <?php $journal_active = (is_home() && ('' !== kihiro_get_request_value('view') || is_paged())) || is_singular('post') || is_search() || is_date() || is_tag(); ?>
         <details class="journal-menu<?php if ($journal_active) echo ' journal-menu--active'; ?>">
           <summary><a href="<?php echo esc_url(kihiro_journal_url()); ?>" <?php if (is_home() && 'journal' === kihiro_get_request_value('view')) echo 'aria-current="page"'; ?>>日々のジャーナル</a><span class="journal-menu__chevron" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
           <div class="journal-menu__panel">
