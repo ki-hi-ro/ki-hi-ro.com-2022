@@ -60,6 +60,9 @@ if (is_home() && !$is_full_archive) {
     <p class="article-timeline__total"><strong><?php echo esc_html(number_format_i18n(count($wp_query->posts))); ?></strong><span>記事の積み重ね</span></p>
   </header>
   <?php endif; ?>
+  <?php if ($is_full_archive) : ?>
+    <?php get_template_part('template-parts/index/article-filters'); ?>
+  <?php endif; ?>
   <?php if (is_home() && !$is_full_archive) : ?>
     <?php // 投稿できるログインユーザーだけに、管理画面の新規投稿への入口を表示する。 ?>
     <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>

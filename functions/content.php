@@ -197,8 +197,9 @@ function kihiro_configure_main_query($query) {
     }
 
     if ($query->is_home() && 'archive-all' === kihiro_get_request_value('view')) {
-        // 年月未指定のアーカイブはカテゴリーに絞らず全期間を表示する。
+        // 全期間アーカイブは、選択カテゴリーの全件をページ分割せず表示する。
         $query->set('posts_per_page', -1);
+        if (kihiro_selected_article_category()) $query->set('cat', kihiro_selected_article_category());
         $query->set('no_found_rows', true);
         $query->set('ignore_sticky_posts', true);
         $query->set('orderby', array('date' => 'DESC', 'ID' => 'DESC'));
@@ -227,6 +228,7 @@ function kihiro_configure_main_query($query) {
             $query->set('tax_query', $tax_filters);
         }
     } elseif ($query->is_date()) {
+        if (kihiro_selected_article_category()) $query->set('cat', kihiro_selected_article_category());
         // 年月アーカイブは対象期間の全記事を一度に表示する。
         $query->set('posts_per_page', -1);
         $query->set('no_found_rows', true);
