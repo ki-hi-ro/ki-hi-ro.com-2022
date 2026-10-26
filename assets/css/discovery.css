@@ -206,11 +206,7 @@ body .about-body > section:first-child { padding-top: 0; }
 /* ページ見出し直後と年の切り替わりで区切り線を重ねない。 */
 .archive-track-view > .article-timeline__header + .discovery-archive-year > header,
 .article-timeline--cards > .article-timeline__header + .article-timeline__year > header { border-top: 0; padding-top: 0; }
-.discovery-archive-year .discovery-tracks li:nth-last-child(-n+2) { border-bottom: 0; }
 .discovery-track-title { display: block; -webkit-line-clamp: unset; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
-@media (max-width: 700px) {
-  .discovery-archive-year .discovery-tracks li:nth-last-child(2) { border-bottom: 1px solid var(--mag-line); }
-}
 
 /* 固定目次の右側に、48pxのページ移動ボタンと余白を確保する。 */
 @media (max-width: 1099px) {
@@ -387,3 +383,6 @@ body .about-body > section:first-child { padding-top: 0; }
 .journal-menu summary > a { padding: 0; background: transparent; color: inherit; }
 .site-header__menu-row .journal-menu summary > a[aria-current] { background: transparent; }
 .work-landing .work-home { margin-bottom: 0; }
+
+/* ジャーナルの一覧は64pxのサムネイルを保ち、横幅に応じて列を増やす。 */
+.archive-track-view .discovery-tracks { grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 0 24px; }
