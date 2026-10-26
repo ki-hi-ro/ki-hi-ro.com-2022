@@ -29,7 +29,7 @@
       <nav class="site-main-nav" aria-label="メインナビゲーション">
         <?php $journal_active = is_front_page() || is_home() || is_singular('post') || is_search() || is_date() || is_tag(); ?>
         <details class="journal-menu<?php if ($journal_active) echo ' journal-menu--active'; ?>">
-          <summary>日々のジャーナル<span class="journal-menu__chevron" aria-hidden="true">⌄</span></summary>
+          <summary>日々のジャーナル<span class="journal-menu__chevron" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
           <div class="journal-menu__panel">
             <a href="<?php echo esc_url(home_url('/')); ?>">更新した記事</a>
             <a href="<?php echo esc_url(add_query_arg('view', 'archive-all', home_url('/'))); ?>">すべての記事</a>
