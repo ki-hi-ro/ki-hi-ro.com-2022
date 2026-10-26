@@ -264,7 +264,7 @@ body .about-body > section:first-child { padding-top: 0; }
 @media (forced-colors: active) { .archive-tag-filter select { appearance: auto; background-image: none; } }
 .archive-tag-filter button { min-height: 44px; padding: 8px 18px; border: 0; border-radius: 999px; background: var(--mag-ink); color: #fff; font: inherit; cursor: pointer; }
 .archive-tag-filter a { padding: 8px 0; color: var(--mag-muted); text-decoration: underline; text-underline-offset: 4px; }
-.archive-tag-filter select:focus-visible { outline: 2px solid var(--mag-ink); outline-offset: 3px; }
+.archive-tag-filter select:focus-visible { outline: 2px solid var(--mag-ink); outline-offset: 0; }
 
 /* ヘッダーからカテゴリー別の全記事へ移動するプルダウン。 */
 .journal-menu { position: relative; }
