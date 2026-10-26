@@ -319,3 +319,63 @@ body .about-body > section:first-child { padding-top: 0; }
 .work-intro .work-intro__note { color: var(--mag-muted); font-size: 14px; }
 .work-intro .work-entry__links { margin-top: 20px; }
 @media (max-width: 700px) { .work-intro { padding: 22px; margin-bottom: 40px; } }
+
+/* 提供価値から対応内容・事例・相談へ進むトップページ。 */
+.work-home { color: var(--mag-ink); margin-bottom: 88px; }
+.work-home a { text-underline-offset: 5px; }
+.work-hero { text-align: center; padding: clamp(36px, 6vw, 88px) 24px 36px; border-radius: 20px; background: linear-gradient(140deg, #f5f5f7 0%, #fff 72%); }
+.work-hero h2 { margin: 18px 0 28px; font-size: clamp(28px, 4vw, 52px); line-height: 1.55; font-weight: 600; letter-spacing: -.025em; overflow-wrap: anywhere; }
+.work-hero__lead { color: var(--mag-muted); font-size: clamp(15px, 1.5vw, 18px); line-height: 1.9; max-width: 800px; margin: 0 auto; }
+.work-home__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin: 32px 0 20px; }
+.work-home .work-home__button { display: inline-flex; align-items: center; justify-content: center; gap: 14px; min-height: 48px; padding: 12px 24px; border: 1px solid #dedee1; border-radius: 10px; background: #fff; color: var(--mag-ink); font-size: 15px; line-height: 1.6; text-decoration: none; }
+.work-home .work-home__button--primary { border-color: #292929; background: #292929; color: #fff; }
+.work-home__button:hover { opacity: .8; }
+.work-hero__note { max-width: 700px; margin: 0 auto; font-size: 12px; line-height: 1.9; color: var(--mag-muted); }
+.work-home__nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 28px; margin-top: 40px; font-size: 13px; color: var(--mag-muted); }
+.work-home__nav a:hover, .work-home__more a:hover, .work-home__profile-links a:hover { text-decoration: underline; }
+.work-home__section { margin-top: 80px; scroll-margin-top: 40px; }
+.work-home__heading { text-align: center; margin-bottom: 32px; }
+.work-home__heading h2 { font-size: clamp(24px, 2.6vw, 32px); line-height: 1.6; font-weight: 600; margin: 8px 0 12px; }
+.work-home__heading > p:last-child { font-size: 15px; line-height: 1.8; color: var(--mag-muted); }
+.work-services-grid, .work-projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.work-service { padding: 28px; border-radius: 16px; background: var(--discovery-soft); }
+.work-service__number { color: #838388; font-size: 13px; letter-spacing: .1em; }
+.work-service h3 { font-size: 20px; font-weight: 600; line-height: 1.6; margin: 16px 0; }
+.work-service > p, .work-service details p { font-size: 14px; line-height: 1.9; color: var(--mag-muted); }
+.work-service details { margin-top: 24px; font-size: 13px; }
+.work-service summary { cursor: pointer; line-height: 1.8; }
+.work-service details p { margin-top: 12px; }
+.work-home__more { margin-top: 28px; text-align: center; font-size: 14px; }
+.work-project { display: flex; flex-direction: column; min-width: 0; }
+.work-project__image { display: block; aspect-ratio: 16/10; overflow: hidden; border-radius: 14px; background: var(--discovery-soft); }
+.work-project__image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.work-project__label { font-size: 12px; color: var(--mag-muted); margin: 20px 0 10px; }
+.work-project h3 { font-size: 18px; font-weight: 500; line-height: 1.8; margin: 0 0 12px; }
+.work-project__summary { font-size: 14px; color: var(--mag-muted); line-height: 1.9; margin: 0 0 20px; }
+.work-project__link { font-size: 13px; margin-top: auto; text-decoration: underline; }
+.work-profile { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; margin: 88px 0 0; padding: 32px 0; scroll-margin-top: 40px; }
+.work-profile h2 { font-size: 28px; font-weight: 600; margin: 10px 0; }
+.work-profile__role { font-size: 13px; color: var(--mag-muted); }
+.work-profile > div:last-child > p { font-size: 15px; line-height: 2; }
+.work-home__profile-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 20px; font-size: 14px; }
+.work-home-contact { margin-top: 48px; padding: 44px 24px; text-align: center; border-radius: 20px; background: var(--discovery-soft); }
+.work-home-contact h2 { font-size: clamp(23px, 2.5vw, 30px); line-height: 1.6; font-weight: 600; margin: 0 0 20px; }
+.work-home-contact > p { color: var(--mag-muted); font-size: 15px; line-height: 1.9; margin-bottom: 24px; }
+.work-home-contact .work-home-contact__note { font-size: 12px; margin: 16px 0 0; }
+.work-home a:focus-visible, .work-home summary:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+@media (max-width: 900px) { .work-services-grid, .work-projects-grid { gap: 18px; } .work-service { padding: 22px; } }
+@media (max-width: 700px) {
+ .work-home { margin-bottom: 56px; }
+ .work-hero { padding: 28px 16px 24px; }
+ .work-hero h2 { font-size: clamp(24px, 6.3vw, 32px); margin: 16px 0 22px; }
+ .work-hero__desktop-break { display: none; }
+ .work-home__actions { gap: 10px; margin: 24px 0 16px; }
+ .work-home .work-home__button { padding: 12px 16px; font-size: 14px; }
+ .work-home__nav { gap: 12px 20px; margin-top: 28px; }
+ .work-home__section { margin-top: 56px; scroll-margin-top: 28px; }
+ .work-home__heading { text-align: left; margin-bottom: 24px; }
+ .work-services-grid, .work-projects-grid { grid-template-columns: 1fr; gap: 28px; }
+ .work-service { padding: 24px; }
+ .work-profile { grid-template-columns: 1fr; gap: 20px; margin-top: 56px; padding: 0; scroll-margin-top: 28px; }
+ .work-home-contact { margin-top: 40px; padding: 32px 20px; }
+}
