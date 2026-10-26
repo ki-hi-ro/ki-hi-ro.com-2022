@@ -11,7 +11,7 @@ foreach (array('excel-data-cleaner' => '業務自動化のサンプル', 'csv-up
 <div class="work-home">
   <section class="work-hero" aria-labelledby="work-intro-heading">
     <p class="magazine-eyebrow">PYTHON / WEB DEVELOPMENT</p>
-    <h2 id="work-intro-heading"><span>Excel・CSVの手作業を減らす。</span><span>必要なWeb機能を、形にする。</span></h2>
+    <h2 id="work-intro-heading"><span><span>Excel・CSVの</span><span>手作業を減らす。</span></span><span><span>必要なWeb機能を、</span><span>形にする。</span></span></h2>
     <p class="work-hero__lead">データの整形・集計・転記を繰り返す方へ。<br class="work-hero__desktop-break">Pythonによる業務自動化と、デザインをもとにしたWeb実装で、<br class="work-hero__desktop-break">日々の作業やサイトの課題を解決する仕組みをつくります。</p>
     <div class="work-home__actions">
       <a class="work-home__button work-home__button--primary" href="<?php echo esc_url(home_url('/contact-us/')); ?>">仕事について相談する</a>
