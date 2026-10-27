@@ -31,18 +31,15 @@
       <span class="site-header__category">柴田浩貴です。Excel・CSVの手作業を減らす仕組みを、Pythonで開発しています。</span>
     <?php
       $case_index = kihiro_case_study_index();
-      $technical_category = get_term_by('name', '技術・開発', 'category');
-      $technical_blog_active = $technical_category instanceof WP_Term
-          && (is_category($technical_category->term_id)
-              || (is_home() && 'archive-all' === kihiro_get_request_value('view')
-                  && (string) $technical_category->term_id === kihiro_get_request_value('article_category')));
+      $technical_blog_page = get_page_by_path('articles');
+      $technical_blog_active = is_page_template('page-technical-articles.php');
     ?>
       <nav id="site-main-navigation" class="site-main-nav" aria-label="メインナビゲーション">
         <?php if ($case_index) : ?>
           <a href="<?php echo esc_url(get_permalink($case_index)); ?>" <?php if (is_page_template(array('page-case-study.php', 'page-case-study-index.php'))) echo 'aria-current="page"'; ?>>開発事例</a>
         <?php endif; ?>
-        <?php if ($technical_category instanceof WP_Term) : ?>
-          <a href="<?php echo esc_url(add_query_arg(array('view' => 'archive-all', 'article_category' => $technical_category->term_id), home_url('/'))); ?>" <?php if ($technical_blog_active) echo 'aria-current="page"'; ?>>技術ブログ</a>
+        <?php if ($technical_blog_page && 'publish' === $technical_blog_page->post_status) : ?>
+          <a href="<?php echo esc_url(get_permalink($technical_blog_page)); ?>" <?php if ($technical_blog_active) echo 'aria-current="page"'; ?>>技術ブログ</a>
         <?php endif; ?>
         <?php $services_page = kihiro_services_page(); if ($services_page) : ?>
           <a href="<?php echo esc_url(get_permalink($services_page)); ?>" <?php if (is_page($services_page->ID)) echo 'aria-current="page"'; ?>>サービス・ご依頼</a>

@@ -1,50 +1,30 @@
 <?php
 /** Template Name: ARTICLES — 技術記事 */
 get_header();
-$topics = array(
-    'python' => array('label' => 'Python / データ処理', 'tags' => array('Python', 'FastAPI', 'Django', 'データ分析ライブラリ', 'スクレイピング')),
-    'sql' => array('label' => 'SQL / データベース', 'tags' => array('SQL', 'データベース', 'プログラミング > SQL', 'プログラミング > データベース')),
-    'web' => array('label' => 'Web開発', 'tags' => array('WordPress', 'WordPress REST API', 'HTML / CSS', 'JavaScript', 'TypeScript', 'React', 'Vue.js', 'Next.js', 'NuxtJS', 'WEB API', 'API')),
-    'tools' => array('label' => 'Git / 開発環境', 'tags' => array('Git', 'GitHub', 'Docker', 'CI / CD', 'VSCode', 'venv', 'Node.js', 'npm', 'プログラミング > 開発環境')),
-);
-$selected = sanitize_key(kihiro_get_request_value('topic'));
+$selection = require get_template_directory() . '/content/featured-technical-articles.php';
+$topics = array('implementation' => '実装の取り組み', 'investigation' => '原因の調査', 'verification' => '検証・改善');
+$selected = kihiro_get_request_value('topic');
 if (!isset($topics[$selected])) $selected = '';
-// Editorial classification is separate from general blog tags: incidental mentions
-// must not make diary or career posts appear in ARTICLES.
-$topic_filter = $selected
-    ? array('key' => '_kihiro_article_topic', 'value' => $selected, 'compare' => '=')
-    : array('key' => '_kihiro_article_topic', 'value' => array_keys($topics), 'compare' => 'IN');
+$entries = get_posts(array('post_type' => 'post', 'post_status' => 'publish', 'has_password' => false, 'post__in' => array_keys($selection), 'orderby' => 'post__in', 'posts_per_page' => count($selection), 'ignore_sticky_posts' => true));
+if ($selected) $entries = array_values(array_filter($entries, function ($entry) use ($selection, $selected) { return $selection[$entry->ID]['topic'] === $selected; }));
 $current_page = max(1, absint(kihiro_get_request_value('articles_page')));
-$articles = new WP_Query(array('post_type' => 'post', 'post_status' => 'publish', 'has_password' => false, 'posts_per_page' => 12, 'paged' => $current_page, 'orderby' => 'date', 'order' => 'DESC', 'ignore_sticky_posts' => true, 'post__not_in' => kihiro_excluded_post_ids(), 'meta_query' => array($topic_filter)));
+$total_pages = (int) ceil(count($entries) / kihiro_home_posts_per_page());
+$entries = array_slice($entries, ($current_page - 1) * kihiro_home_posts_per_page(), kihiro_home_posts_per_page());
 ?>
-<main id="main-content" class="case-page case-index technical-articles">
+<main id="main-content" class="article-timeline article-timeline--cards case-study-timeline">
 <?php while (have_posts()) : the_post(); ?>
-  <figure class="article-timeline__main-view">
-    <img src="<?php echo esc_url(add_query_arg('ver', kihiro_asset_version('/assets/images/articles-main-view.jpg'), get_theme_file_uri('/assets/images/articles-main-view.jpg'))); ?>" width="4032" height="3024" alt="豊かな草木と木々に囲まれた石段の風景" fetchpriority="high" decoding="async">
-  </figure>
-  <header class="case-hero"><p class="case-eyebrow">Webエンジニアの実践と学び</p><h1>技術記事</h1><div><?php the_content(); ?></div></header>
-  <nav class="technical-topics" aria-label="技術記事の分野">
-    <a href="<?php echo esc_url(get_permalink()); ?>" <?php if (!$selected) echo 'aria-current="page"'; ?>>すべて</a>
-    <?php foreach ($topics as $key => $topic) : ?><a href="<?php echo esc_url(add_query_arg('topic', $key, get_permalink())); ?>" <?php if ($selected === $key) echo 'aria-current="page"'; ?>><?php echo esc_html($topic['label']); ?></a><?php endforeach; ?>
-  </nav>
-  <p class="technical-count"><?php echo esc_html(number_format_i18n($articles->found_posts)); ?>件の技術記事</p>
-  <div class="case-list">
-  <?php foreach ($articles->posts as $entry) : ?>
-    <article class="case-card">
-      <p class="case-eyebrow"><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?></time></p>
-      <h2><a href="<?php echo esc_url(get_permalink($entry)); ?>"><?php echo esc_html(get_the_title($entry)); ?></a></h2>
-      <?php $labels = array(); foreach (get_post_meta($entry->ID, '_kihiro_article_topic', false) as $entry_topic) if (isset($topics[$entry_topic])) $labels[] = $topics[$entry_topic]['label']; ?>
-      <p class="case-tech"><?php echo esc_html(implode(' / ', array_unique($labels))); ?></p>
-      <a class="case-link" href="<?php echo esc_url(get_permalink($entry)); ?>">[ 技術記事を読む ]</a>
-    </article>
-  <?php endforeach; ?>
-  <?php if (!$articles->posts) : ?><p>該当する技術記事はありません。</p><?php endif; ?>
-  </div>
-  <?php if ($articles->max_num_pages > 1) : ?>
-    <nav class="technical-pagination" aria-label="技術記事のページ">
-    <?php echo wp_kses_post(paginate_links(array('base' => add_query_arg('articles_page', '%#%', get_permalink()), 'format' => '', 'current' => $current_page, 'total' => $articles->max_num_pages, 'add_args' => $selected ? array('topic' => $selected) : array(), 'prev_text' => '前へ', 'next_text' => '次へ'))); ?>
-    </nav>
-  <?php endif; ?>
+  <aside class="case-experience-entry"><h1>技術ブログ</h1><p>課題をどう捉え、実装し、確かめてきたか。技術への取り組み方が伝わる記事を、日々のジャーナルから厳選しました。</p><a href="<?php echo esc_url(add_query_arg(array('view' => 'archive-all', 'article_category' => ($term = get_term_by('name', '技術・開発', 'category')) instanceof WP_Term ? $term->term_id : ''), home_url('/'))); ?>">技術・開発の記事をすべて読む →</a></aside>
+  <section class="article-filters" aria-label="技術ブログの絞り込み"><nav class="article-filters__categories" aria-label="取り組みの種類">
+    <a href="<?php the_permalink(); ?>" <?php if (!$selected) echo 'aria-current="true"'; ?>>すべて</a>
+    <?php foreach ($topics as $key => $label) : ?><a href="<?php echo esc_url(add_query_arg('topic', $key, get_permalink())); ?>" <?php if ($selected === $key) echo 'aria-current="true"'; ?>><?php echo esc_html($label); ?></a><?php endforeach; ?>
+  </nav></section>
+  <section class="article-timeline__year" aria-label="厳選した技術ブログ一覧"><ol>
+    <?php foreach ($entries as $entry) : ?>
+      <?php $image = kihiro_case_study_image($entry); ?>
+      <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo $image ? wp_kses_post($image) : '<img src="' . esc_url(get_theme_file_uri('/assets/images/case-study-placeholder.svg')) . '" alt="" width="320" height="200" loading="lazy">'; ?></span><span class="article-card-dates"><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</time></span><span><?php echo esc_html(get_the_title($entry)); ?></span><p class="technical-article-reason"><?php echo esc_html($selection[$entry->ID]['reason']); ?></p></a></li>
+    <?php endforeach; ?>
+  </ol><?php if (!$entries) : ?><p>該当する記事はありません。</p><?php endif; ?></section>
+  <?php if ($total_pages > 1) : ?><nav class="navigation pagination" aria-label="技術ブログのページ送り"><div class="nav-links"><?php echo wp_kses_post(paginate_links(array('base' => add_query_arg('articles_page', '%#%', get_permalink()), 'format' => '', 'current' => $current_page, 'total' => $total_pages, 'show_all' => true, 'prev_next' => false, 'add_args' => $selected ? array('topic' => $selected) : array()))); ?></div></nav><?php endif; ?>
 <?php endwhile; ?>
 </main>
 <?php get_footer(); ?>
