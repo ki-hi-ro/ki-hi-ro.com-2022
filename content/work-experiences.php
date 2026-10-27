@@ -38,7 +38,7 @@ return array(
         'tech' => 'HTML / CSS / Sass / JavaScript / jQuery / PHP / WordPress / MySQL',
     ),
     'maintenance' => array(
-        'article_ids' => array(36342, 30750),
+        'article_ids' => array(36342, 36435),
         'title' => '就業管理システムで、問い合わせの原因調査と移行を担当',
         'period' => '2025.11–2026.05', 'role' => '約6名のチームのメンバー',
         'context' => '就業管理パッケージの保守運用と、旧システムからの移行を担当しました。',
