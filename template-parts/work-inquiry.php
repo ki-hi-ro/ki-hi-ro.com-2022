@@ -20,8 +20,8 @@ if (!$case_detail && $case_index) {
 ?>
 <aside class="work-entry" aria-label="開発・制作のご相談">
   <h2><?php echo $case_detail ? '同じような課題をご相談ください' : '技術を、実際の課題解決へ'; ?></h2>
-  <p>日々の業務やシステムで、困っていることをお聞かせください。現在の状況を確認し、改善する範囲と進め方を一緒に考えます。</p>
-  <p>要件が固まっていない段階でも構いません。内容を確認して、対応可否とお見積もりをメールでご案内します。</p>
+  <p>日々の業務やシステムで、困っていることをお聞かせください。<br>現在の状況を確認し、改善する範囲と進め方を一緒に考えます。</p>
+  <p>要件が固まっていない段階でも構いません。<br>内容を確認して、対応可否とお見積もりをメールでご案内します。</p>
   <?php if ($related_cases) : ?>
     <ul class="work-entry__cases"><?php foreach ($related_cases as $case) : ?><li><a href="<?php echo esc_url(get_permalink($case)); ?>"><?php echo esc_html(get_the_title($case)); ?></a></li><?php endforeach; ?></ul>
   <?php endif; ?>
