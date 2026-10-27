@@ -50,6 +50,8 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
   </section>
   <?php endif; ?>
 
+  <?php get_template_part('template-parts/work-help-articles'); ?>
+
   <section class="work-profile" id="work-profile" aria-labelledby="work-profile-heading">
     <div><p class="magazine-eyebrow">ABOUT</p><h2 id="work-profile-heading">柴田 浩貴</h2><p class="work-profile__role">WEBエンジニア</p></div>
     <div><p>Web制作、データ処理の移行、API開発、システム保守などを経験してきました。既存の仕組みや仕様を読み解き、確認しながら改善を進めることを大切にしています。日々の試行錯誤も、このブログに残しています。</p><div class="work-home__profile-links"><?php $about_page = get_page_by_path('about'); if ($about_page && 'publish' === $about_page->post_status) : ?><a href="<?php echo esc_url(get_permalink($about_page)); ?>">自己紹介を読む →</a><?php endif; ?><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナルを読む →</a></div></div>
