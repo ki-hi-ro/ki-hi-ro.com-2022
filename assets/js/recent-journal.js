@@ -30,6 +30,7 @@
       const more = next?.querySelector('.work-home__more');
       if (!grid || !more) throw new Error('Journal section missing');
       if (sequence !== request) return;
+      const position = { left: window.scrollX, top: window.scrollY };
       section.querySelector('.recent-journal__grid').replaceWith(grid);
       section.querySelector('.work-home__more').replaceWith(more);
       navigation.querySelectorAll('a').forEach((item) => {
@@ -38,6 +39,7 @@
       });
       // Updating the URL without navigation avoids the fragment's scroll jump.
       history.replaceState(history.state, '', link.href);
+      window.scrollTo({ ...position, behavior: 'instant' });
       status.textContent = `${link.textContent.trim()}の記事を表示しました。`;
     } catch (error) {
       if (error.name !== 'AbortError' && sequence === request) {

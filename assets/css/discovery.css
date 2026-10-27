@@ -600,7 +600,7 @@ body .about-body > section:first-child { padding-top: 0; }
 }
 
 /* 日々の更新を、サイト共通の色と余白を使った読み物のカードで並べる。 */
-.recent-journal { scroll-margin-top: 24px; }
+.recent-journal { scroll-margin-top: 24px; overflow-anchor: none; }
 .recent-journal__categories { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; }
 .recent-journal__categories a { padding: 10px 14px; border-radius: 9px; color: var(--mag-muted); font-size: 14px; line-height: 1.6; }
 .recent-journal__categories a[aria-current] { background: #292929; color: #fff; }
