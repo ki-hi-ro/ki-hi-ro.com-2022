@@ -1,6 +1,5 @@
 <?php
 $experiences = kihiro_work_experiences();
-$technical_category = get_term_by('name', '技術・開発', 'category');
 ?>
 <section class="work-experiences" id="work-experience" aria-labelledby="work-experience-heading">
   <header class="work-home__heading"><p class="magazine-eyebrow">MY EXPERIENCE</p><h2 id="work-experience-heading">私が、現場で取り組んできたこと。</h2><p>実際の業務で、私自身が担当した範囲と、そのときの進め方をまとめています。</p></header>
@@ -15,12 +14,11 @@ $technical_category = get_term_by('name', '技術・開発', 'category');
         <h4>そのとき、どう進めたか</h4><p><?php echo esc_html($experience['approach']); ?></p>
         <p class="work-experience__tech"><?php echo esc_html($experience['tech']); ?></p>
         <?php
-        $related_articles = !empty($experience['article_ids']) && $technical_category instanceof WP_Term
+        $related_articles = !empty($experience['article_ids'])
             ? get_posts(array(
                 'post_type' => 'post', 'post_status' => 'publish', 'has_password' => false,
                 'post__in' => array_map('absint', $experience['article_ids']),
                 'post__not_in' => kihiro_excluded_post_ids(),
-                'cat' => $technical_category->term_id,
                 'posts_per_page' => 3, 'orderby' => 'post__in', 'ignore_sticky_posts' => true,
             )) : array();
         ?>

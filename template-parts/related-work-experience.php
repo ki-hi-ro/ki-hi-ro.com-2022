@@ -1,6 +1,6 @@
 <?php
 /** Explicit article-to-experience links share the same mapping as the profile. */
-if (post_password_required() || !is_singular('post') || !has_category('技術・開発', get_the_ID())) return;
+if (post_password_required() || !is_singular('post')) return;
 $related_experiences = array();
 foreach (kihiro_work_experiences() as $key => $experience) {
     if (in_array(get_the_ID(), array_map('absint', $experience['article_ids'] ?? array()), true)) {
