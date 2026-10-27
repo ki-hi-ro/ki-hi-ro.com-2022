@@ -269,6 +269,8 @@ function kihiro_configure_main_query($query) {
         $query->set('posts_per_page', 10);
         if ($query->is_search()) {
             $query->set('post_type', 'post');
+            // 検索結果もタイムラインとして公開日時の新しい順に並べる。
+            $query->set('orderby', array('date' => 'DESC', 'ID' => 'DESC'));
         }
     } else {
         return;
