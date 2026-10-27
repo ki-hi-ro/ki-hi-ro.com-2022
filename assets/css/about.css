@@ -24,3 +24,7 @@
 .about-body > section:first-child { padding-top: 0; }
 
 .about-body > section:last-child { border-bottom: 0; }
+
+/* 文章を囲むdiv内の見出しも、隣の写真と上端を揃える。 */
+.about-maru > div { min-width: 0; }
+body .about-body .about-maru > div > h2:first-child { margin-top: 0; }
