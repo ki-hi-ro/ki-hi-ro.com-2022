@@ -30,6 +30,8 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
     <p class="work-home__more"><a href="<?php echo esc_url(get_permalink($services_page)); ?>">進め方・料金について見る <span aria-hidden="true">→</span></a></p>
   </section>
 
+  <?php get_template_part('template-parts/work-reasons'); ?>
+
   <?php if ($experience_url) : ?>
   <section class="work-home__section" id="work-projects" aria-labelledby="work-projects-heading">
     <header class="work-home__heading"><p class="magazine-eyebrow">MY EXPERIENCE</p><h2 id="work-projects-heading">私が現場で、向き合ってきた課題。</h2><p>実際の業務で経験した課題と、私が担当した対応内容をご紹介します。</p></header>
