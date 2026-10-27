@@ -20,7 +20,6 @@ $entries = array_slice($entries, ($current_page - 1) * kihiro_home_posts_per_pag
   </nav></section>
   <section class="article-timeline__year" aria-label="厳選した技術ブログ一覧"><ol>
     <?php foreach ($entries as $entry) : ?>
-      
       <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?></span><span class="article-card-dates"><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</time></span><span><?php echo esc_html(get_the_title($entry)); ?></span><p class="technical-article-reason"><?php echo esc_html($selection[$entry->ID]['reason']); ?></p></a></li>
     <?php endforeach; ?>
   </ol><?php if (!$entries) : ?><p>該当する記事はありません。</p><?php endif; ?></section>
