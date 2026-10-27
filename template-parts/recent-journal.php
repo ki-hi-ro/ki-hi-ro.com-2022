@@ -22,6 +22,7 @@ $journal_url = $selected ? add_query_arg('article_category', $selected, kihiro_j
     <a href="<?php echo esc_url(home_url('/#recent-journal')); ?>" <?php if (!$selected) echo 'aria-current="true"'; ?>>すべて</a>
     <?php foreach ($categories as $term) : ?><a href="<?php echo esc_url(add_query_arg('recent_category', $term->term_id, home_url('/')) . '#recent-journal'); ?>" <?php if ($selected === $term->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($term->name); ?></a><?php endforeach; ?>
   </nav>
+  <p class="screen-reader-text" role="status" aria-live="polite" data-recent-journal-status></p>
   <div class="recent-journal__grid">
     <?php foreach ($recent as $entry) :
         $tags = get_the_tags($entry->ID);

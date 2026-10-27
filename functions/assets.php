@@ -11,6 +11,9 @@ function kihiro_asset_version($relative_path) {
 }
 
 function kihiro_enqueue_assets() {
+    if (is_home() && '' === kihiro_get_request_value('view')) {
+        wp_enqueue_script('kihiro-recent-journal', get_theme_file_uri('/assets/js/recent-journal.js'), array(), kihiro_asset_version('/assets/js/recent-journal.js'), true);
+    }
     if (is_singular('post') && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
