@@ -588,7 +588,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .technology-map__branches > li { position: relative; margin: 6px 0; padding: 0; min-width: 0; }
 .technology-map__branches > li::before { content: ''; position: absolute; left: -20px; top: 20px; width: 12px; border-top: 1px solid #dcdce2; }
 .technology-map__tag { display: inline-block; max-width: 100%; box-sizing: border-box; padding: 7px 12px; border-radius: 7px; color: var(--mag-muted); overflow-wrap: anywhere; }
-.technology-map__tag--current { background: var(--discovery-soft); color: #292929; font-weight: 600; box-shadow: inset 3px 0 #292929; }
+.technology-map__tag--current { background: var(--discovery-soft); color: #292929; font-weight: 600; }
 .technology-map__tag:hover { background: var(--discovery-soft); color: #292929; }
 .technology-map__marker { display: inline-block; margin-left: 10px; padding: 1px 7px; border-radius: 5px; background: var(--discovery-soft); color: var(--mag-muted); font-size: 10px; font-weight: 400; vertical-align: middle; }
 .technology-map__note { margin: 16px 0 0; color: var(--mag-muted); font-size: 11px; }
