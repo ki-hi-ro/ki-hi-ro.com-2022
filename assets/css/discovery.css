@@ -624,11 +624,11 @@ body .about-body > section:first-child { padding-top: 0; }
  .recent-journal__categories a { padding: 8px 10px; font-size: 12px; }
 }
 
-/* 記事一覧の間で、書き手の紹介を落ち着いた濃色の面として区切る。 */
-.work-profile { padding: 40px; border-radius: 20px; background: #292929; color: #f7f7f8; }
-.work-profile .magazine-eyebrow, .work-profile__role { color: #c8c8ce; }
-.work-profile > div:last-child > p { color: #e4e4e8; }
-.work-profile .work-home__profile-links a { color: #fff; text-decoration: underline; text-decoration-color: #909096; }
-.work-profile .work-home__profile-links a:hover { text-decoration-color: #fff; }
-.work-profile a:focus-visible { outline: 2px solid #fff; outline-offset: 5px; border-radius: 3px; }
+/* 書き手の紹介を、ほかのカードと馴染む淡いグレーの面で区切る。 */
+.work-profile { padding: 40px; border-radius: 20px; background: var(--discovery-soft); color: var(--mag-ink); }
+.work-profile .magazine-eyebrow, .work-profile__role { color: var(--mag-muted); }
+.work-profile > div:last-child > p { color: #48484f; }
+.work-profile .work-home__profile-links a { color: var(--mag-ink); text-decoration: underline; text-decoration-color: #bcbcc5; }
+.work-profile .work-home__profile-links a:hover { text-decoration-color: currentColor; }
+.work-profile a:focus-visible { outline: 2px solid #48484f; outline-offset: 5px; border-radius: 3px; }
 @media (max-width: 700px) { .work-profile { padding: 28px 24px; } }
