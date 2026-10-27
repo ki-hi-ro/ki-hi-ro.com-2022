@@ -32,16 +32,6 @@ get_header(); ?>
           <?php endif; ?>
         </dl>
 
-        <?php $brief = array(); foreach (kihiro_case_brief_fields() as $key => $label) {
-            $value = get_post_meta(get_the_ID(), '_kihiro_case_' . $key, true);
-            if (is_string($value) && trim($value) !== '') $brief[$label] = $value;
-        } ?>
-        <?php if ($brief && !post_password_required()) : ?>
-          <section class="case-brief" aria-label="開発事例の概要"><h2>開発事例の概要</h2><dl>
-            <?php foreach ($brief as $label => $value) : ?><div><dt><?php echo esc_html($label); ?></dt><dd><?php echo nl2br(esc_html($value)); ?></dd></div><?php endforeach; ?>
-          </dl></section>
-        <?php endif; ?>
-
         <?php if (has_post_thumbnail() && !post_password_required()) : ?>
           <figure class="article-featured-image">
             <?php the_post_thumbnail('full', array('loading' => 'eager', 'fetchpriority' => 'high', 'decoding' => 'async', 'sizes' => '(max-width: 900px) 100vw, 900px')); ?>
