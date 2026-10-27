@@ -7,8 +7,7 @@ $about_page = get_page_by_path('about');
 $experience_url = $about_page && 'publish' === $about_page->post_status ? get_permalink($about_page) : '';
 ?>
 <div class="work-home">
-  <section class="work-hero work-hero--forest" aria-labelledby="work-intro-heading">
-    <img class="work-hero__photo" src="<?php echo esc_url(get_theme_file_uri('/assets/images/work-hero-forest.webp')); ?>" alt="" width="1920" height="1440" fetchpriority="high" decoding="async">
+  <section class="work-hero" aria-labelledby="work-intro-heading">
     <p class="magazine-eyebrow">PYTHON / BUSINESS AUTOMATION</p>
     <h2 id="work-intro-heading"><span><span>Excel・CSVの</span><span>手作業を減らす</span></span><span>仕組みをつくります。</span></h2>
     <p class="work-hero__lead">毎月繰り返すデータの整形・集計・突合を、Pythonで効率化。</p>
