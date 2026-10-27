@@ -614,7 +614,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .recent-journal__tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0 0 16px; }
 .recent-journal__tags li { max-width: 100%; box-sizing: border-box; border: 1px solid #e6e6e9; border-radius: 999px; padding: 2px 8px; font-size: 11px; line-height: 1.6; color: var(--mag-muted); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .recent-journal__excerpt { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; margin: 0 0 20px; color: var(--mag-muted); font-size: 13px; line-height: 1.9; overflow-wrap: anywhere; }
-.recent-journal__dates { display: flex; flex-direction: column; gap: 3px; margin-top: auto; color: var(--mag-muted); font-size: 11px; line-height: 1.7; font-variant-numeric: tabular-nums; }
+.recent-journal__dates { display: flex; flex-wrap: nowrap; align-items: baseline; gap: 4px; white-space: nowrap; margin-top: auto; color: var(--mag-muted); font-size: 11px; line-height: 1.7; font-variant-numeric: tabular-nums; }
 .recent-journal__read { display: block; margin-top: 16px; font-size: 13px; }
 @media (max-width: 1000px) { .recent-journal__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 540px) {

@@ -32,7 +32,7 @@ $journal_url = $selected ? add_query_arg('article_category', $selected, kihiro_j
       <h3><?php echo esc_html(get_the_title($entry)); ?></h3>
       <?php if ($tags && !is_wp_error($tags)) : ?><ul class="recent-journal__tags" aria-label="タグ"><?php foreach (array_slice($tags, 0, 3) as $tag) : ?><li><?php echo esc_html($tag->name); ?></li><?php endforeach; ?></ul><?php endif; ?>
       <p class="recent-journal__excerpt"><?php echo esc_html($excerpt); ?></p>
-      <div class="recent-journal__dates"><time datetime="<?php echo esc_attr(get_the_modified_date('c', $entry)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</time><time datetime="<?php echo esc_attr(get_the_date('c', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</time></div>
+      <div class="recent-journal__dates"><time datetime="<?php echo esc_attr(get_the_modified_date('c', $entry)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</time><span aria-hidden="true"> / </span><time datetime="<?php echo esc_attr(get_the_date('c', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</time></div>
       <span class="recent-journal__read">記事を読む <span aria-hidden="true">→</span></span>
     </a></article>
     <?php endforeach; ?>
