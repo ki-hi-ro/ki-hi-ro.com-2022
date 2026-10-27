@@ -418,7 +418,7 @@ body .about-body > section:first-child { padding-top: 0; }
  .work-home__experience-links { justify-content: flex-start; }
 }
 .case-experience-entry { margin: 0 0 36px; padding: 24px; border-radius: 14px; background: var(--discovery-soft); line-height: 1.9; }
-.case-experience-entry h2 { font-size: 22px; font-weight: 600; margin: 0 0 12px; }
+.case-experience-entry h1, .case-experience-entry h2 { font-size: 22px; font-weight: 600; margin: 0 0 12px; }
 .case-experience-entry p { font-size: 14px; margin-bottom: 16px; }
 .case-experience-entry a { font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
 
@@ -576,5 +576,3 @@ body .about-body > section:first-child { padding-top: 0; }
  .db-single__content .article-reader-guide { padding: 20px; margin-bottom: 28px; }
 }
 
-/* 厳選記事の見出しも開発事例の案内と揃える。 */
-.case-experience-entry h1 { margin: 0 0 12px; font-size: 24px; line-height: 1.5; }
