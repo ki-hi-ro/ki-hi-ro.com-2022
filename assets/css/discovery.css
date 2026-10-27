@@ -515,3 +515,33 @@ body .about-body > section:first-child { padding-top: 0; }
  .services-page__content .services-page__section-heading { scroll-margin-top: 28px; }
  .services-page__intro { text-align: left; }
 }
+
+/* 狭い画面はロゴ横のボタンから開く。JSなしでもナビゲーションは利用できる。 */
+.site-nav-toggle { display: none; }
+@media (max-width: 1100px) {
+ .site-header--collapsible .site-header__inner { display: grid; grid-template-columns: minmax(0, 1fr) 44px; gap: 16px; }
+ .site-header--collapsible .site-title { font-size: clamp(26px, 4vw, 36px); }
+ .site-header--collapsible .site-nav-toggle { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 10px; background: var(--discovery-soft); color: var(--mag-ink); cursor: pointer; }
+ .site-nav-toggle__icon { position: relative; display: block; width: 20px; height: 16px; }
+ .site-nav-toggle__icon > span { position: absolute; left: 0; width: 20px; height: 2px; border-radius: 1px; background: currentColor; }
+ .site-nav-toggle__icon > span:nth-child(1) { top: 0; }
+ .site-nav-toggle__icon > span:nth-child(2) { top: 7px; }
+ .site-nav-toggle__icon > span:nth-child(3) { top: 14px; }
+ .site-header--menu-open .site-nav-toggle__icon > span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+ .site-header--menu-open .site-nav-toggle__icon > span:nth-child(2) { opacity: 0; }
+ .site-header--menu-open .site-nav-toggle__icon > span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+ .site-header--collapsible .site-header__inner > .search-form { grid-column: 1 / -1; width: 100%; margin: 0; }
+ .site-header--collapsible .site-header__menu-row { gap: 16px; }
+ .site-header--collapsible .site-header__menu-row .site-main-nav { display: none; }
+ .site-header--collapsible.site-header--menu-open .site-main-nav { display: flex; flex-direction: column; align-items: stretch; width: 100%; box-sizing: border-box; gap: 4px; padding: 8px; border: 1px solid var(--mag-line); border-radius: 14px; }
+ .site-header--collapsible .site-main-nav > a,
+ .site-header--collapsible .site-main-nav .journal-menu summary { min-height: 44px; padding: 10px 12px; }
+ .site-header--collapsible .site-header__menu-row .site-main-nav a { font-size: 14px; }
+ .site-header--collapsible .journal-menu summary { justify-content: space-between; }
+ .site-header--collapsible .journal-menu summary > a { flex: 1; }
+ .site-header--collapsible .journal-menu__panel { position: static; box-sizing: border-box; width: 100%; max-width: none; margin-top: 4px; padding: 4px 8px; border: 0; background: transparent; box-shadow: none; }
+ .site-header--collapsible .journal-menu__panel::before { display: none; }
+}
+@media (max-width: 1100px) and (prefers-reduced-motion: no-preference) {
+ .site-nav-toggle__icon > span { transition: transform .2s ease, opacity .2s ease; }
+}

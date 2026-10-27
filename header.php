@@ -24,12 +24,13 @@
   <header id="page-top" class="site-header">
     <div class="site-header__inner">
       <a class="site-title" href="<?php echo esc_url(kihiro_logo_home_url()); ?>">ki-hi-ro.com</a>
+      <button class="site-nav-toggle" type="button" aria-controls="site-main-navigation" aria-expanded="false" aria-label="メニューを開く"><span class="site-nav-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
       <?php if ($journal_active) get_search_form(); ?>
     </div>
     <div class="site-header__menu-row">
       <span class="site-header__category">柴田浩貴です。Excel・CSVの手作業を減らす仕組みを、Pythonで開発しています。</span>
     <?php $case_index = kihiro_case_study_index(); ?>
-      <nav class="site-main-nav" aria-label="メインナビゲーション">
+      <nav id="site-main-navigation" class="site-main-nav" aria-label="メインナビゲーション">
         <?php if ($case_index) : ?>
           <a href="<?php echo esc_url(get_permalink($case_index)); ?>" <?php if (is_page_template(array('page-case-study.php', 'page-case-study-index.php'))) echo 'aria-current="page"'; ?>>開発事例</a>
         <?php endif; ?>

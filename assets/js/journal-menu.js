@@ -3,7 +3,7 @@
     var menu = document.querySelector('.journal-menu');
     if (!menu) return;
     var summary = menu.querySelector('summary');
-    var hover = window.matchMedia('(hover: hover) and (pointer: fine)');
+    var hover = window.matchMedia('(min-width: 1101px) and (hover: hover) and (pointer: fine)');
     var closeTimer;
     // マウスではホバー、タッチとキーボードではdetails標準の開閉を使う。
     menu.addEventListener('pointerenter', function () {

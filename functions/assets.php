@@ -18,6 +18,7 @@ function kihiro_enqueue_assets() {
         wp_enqueue_script('kihiro-tag-tree', get_theme_file_uri('/assets/js/tag-tree.js'), array(), kihiro_asset_version('/assets/js/tag-tree.js'), true);
     }
     wp_enqueue_script('kihiro-journal-menu', get_theme_file_uri('/assets/js/journal-menu.js'), array(), kihiro_asset_version('/assets/js/journal-menu.js'), true);
+    wp_enqueue_script('kihiro-site-navigation', get_theme_file_uri('/assets/js/site-navigation.js'), array(), kihiro_asset_version('/assets/js/site-navigation.js'), true);
     wp_enqueue_script('kihiro-category-scroll', get_theme_file_uri('/assets/js/category-scroll.js'), array(), kihiro_asset_version('/assets/js/category-scroll.js'), true);
     wp_enqueue_script('kihiro-page-scroll', get_theme_file_uri('/assets/js/page-scroll.js'), array(), kihiro_asset_version('/assets/js/page-scroll.js'), true);
     // 記事本文がある画面だけで目次・コードコピーを読み込み、他画面の処理を抑える。
