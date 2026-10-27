@@ -11,6 +11,7 @@ return array(
         'tech' => 'Python / pandas / NumPy / SQLAlchemy / PostgreSQL / Pentaho / Linux / GitLab',
     ),
     'bi' => array(
+        'article_ids' => array(22934, 20894),
         'title' => 'Power BIのクラウド移行で、環境差による問題を切り分ける',
         'period' => '2024.04–2024.09', 'role' => '約10名のチームのメンバー',
         'context' => 'オンプレミス環境のPower BIレポートをクラウドへ移行するプロジェクトに参画しました。',
@@ -19,6 +20,7 @@ return array(
         'tech' => 'Power BI / Power BI Service / Power Query M / DAX / SharePoint / PostgreSQL / Oracle Database / SQL Server',
     ),
     'api' => array(
+        'article_ids' => array(31176, 31678, 31722),
         'title' => '工場搬送システムで、位置情報と経路を返すAPIを追加',
         'period' => '2025.07–2025.09', 'role' => '開発メンバー',
         'context' => '工場内のAGV（無人搬送車）の搬送経路を管理するシステムで、Python・FastAPIによるAPI機能追加を担当しました。',
@@ -27,6 +29,7 @@ return array(
         'tech' => 'Python / FastAPI / REST API / JSON / Docker / Red Hat系Linux',
     ),
     'web' => array(
+        'article_ids' => array(3666, 3279, 14146),
         'title' => '制作会社の継続案件で、デザインからWordPressを実装',
         'period' => '2020.03–2022.10', 'role' => 'フリーランスのコーダー・Web制作者',
         'context' => 'Web制作会社からの継続案件を中心に、デザインカンプをもとにしたWeb制作を担当しました。',
@@ -35,6 +38,7 @@ return array(
         'tech' => 'HTML / CSS / Sass / JavaScript / jQuery / PHP / WordPress / MySQL',
     ),
     'maintenance' => array(
+        'article_ids' => array(36342, 30750),
         'title' => '就業管理システムで、問い合わせの原因調査と移行を担当',
         'period' => '2025.11–2026.05', 'role' => '約6名のチームのメンバー',
         'context' => '就業管理パッケージの保守運用と、旧システムからの移行を担当しました。',
@@ -43,6 +47,8 @@ return array(
         'tech' => 'SQL Server / システム設定 / データ移行 / 通信テスト',
     ),
     'specification' => array(
+        'article_note' => 'この案件そのものの記録ではなく、課題を整理して要件を言語化する考え方についての記事です。',
+        'article_ids' => array(40497),
         'title' => '英語の法規文書と既存仕様を確認し、自動車関連の仕様書を改版',
         'period' => '2023.03–2024.03', 'role' => '仕様書改版の担当メンバー',
         'context' => '居眠り運転防止システムで、欧州法規ADDWへの対応に伴う仕様書改版を担当しました。',

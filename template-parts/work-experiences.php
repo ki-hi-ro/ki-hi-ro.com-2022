@@ -27,6 +27,7 @@ $technical_category = get_term_by('name', '技術・開発', 'category');
         <?php if ($related_articles) : ?>
           <div class="work-experience__articles">
             <h4>関連する技術記事</h4>
+            <?php if (!empty($experience['article_note'])) : ?><p><?php echo esc_html($experience['article_note']); ?></p><?php endif; ?>
             <ul><?php foreach ($related_articles as $related_article) : ?>
               <li><a href="<?php echo esc_url(get_permalink($related_article)); ?>"><?php echo esc_html(get_the_title($related_article)); ?></a><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $related_article)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $related_article)); ?> 公開</time></li>
             <?php endforeach; ?></ul>
