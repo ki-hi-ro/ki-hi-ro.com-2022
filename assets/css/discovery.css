@@ -576,3 +576,4 @@ body .about-body > section:first-child { padding-top: 0; }
  .db-single__content .article-reader-guide { padding: 20px; margin-bottom: 28px; }
 }
 
+.work-help-article__phrase { display: inline-block; max-width: 100%; }

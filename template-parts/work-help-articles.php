@@ -18,7 +18,7 @@ if (!$articles) return;
           <span class="work-help-article__image" aria-hidden="true"><?php echo kihiro_article_thumbnail($article->ID, 'medium_large'); ?></span>
           <div class="work-help-article__body">
             <p class="work-help-article__topic"><?php echo esc_html($guide['topic']); ?></p>
-            <h3><?php echo esc_html($guide['heading']); ?></h3>
+            <h3><?php if (!empty($guide['heading_parts'])) : ?><?php foreach ($guide['heading_parts'] as $part) : ?><span class="work-help-article__phrase"><?php echo esc_html($part); ?></span><?php endforeach; ?><?php else : ?><?php echo esc_html($guide['heading']); ?><?php endif; ?></h3>
             <p class="work-help-article__summary"><?php echo esc_html($guide['summary']); ?></p>
             <span class="work-help-article__more">記事を読む <span aria-hidden="true">→</span></span>
           </div>
