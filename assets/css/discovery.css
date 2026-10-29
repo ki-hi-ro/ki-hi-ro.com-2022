@@ -681,3 +681,6 @@ body .about-body > section:first-child { padding-top: 0; }
 .article-timeline--cards > .archive-tag-filter { margin-bottom: 32px; }
 
 .article-edit--actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-block: 20px 28px; }
+
+.site-footer__note { margin-left: auto; padding-block: 8px; font-size: 13px; color: var(--mag-muted); text-decoration: underline; text-underline-offset: 4px; }
+.site-footer__note:hover { color: var(--mag-ink); }
