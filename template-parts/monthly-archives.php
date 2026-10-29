@@ -5,7 +5,7 @@ global $wpdb;
 // 一覧側の除外ID条件とは別のため、除外記事しかない月が候補に残る可能性がある。
 $months = $wpdb->get_results("SELECT DISTINCT YEAR(post_date) AS year, MONTH(post_date) AS month FROM {$wpdb->posts} WHERE post_type = 'post' AND post_status = 'publish' AND post_password = '' ORDER BY year DESC, month DESC");
 if (!$months) return;
-$selected_month = is_date() ? sprintf('%04d%02d', get_query_var('year'), get_query_var('monthnum')) : '';
+$selected_month = is_date() ? (get_query_var('m') ?: sprintf('%04d%02d', get_query_var('year'), get_query_var('monthnum'))) : '';
 ?>
 <section class="monthly-archives" aria-label="年月アーカイブ">
   <form action="<?php echo esc_url(home_url('/')); ?>" method="get">

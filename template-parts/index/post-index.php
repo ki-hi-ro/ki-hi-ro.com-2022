@@ -54,7 +54,12 @@ if (is_home() && !$is_full_archive) {
       <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/home-main-view.jpg')); ?>" width="4032" height="3024" alt="木々に囲まれたログハウスの風景" fetchpriority="high" decoding="async">
     </figure>
   <?php elseif (is_date()) : ?>
-    <header class="article-timeline__header"><div><h1><?php echo esc_html(wp_strip_all_tags(get_the_archive_title())); ?></h1><p>公開日で探す記事一覧</p></div></header>
+    <?php
+      $date_title = wp_strip_all_tags(get_the_archive_title());
+      $requested_month = (string) get_query_var('m');
+      if (preg_match('/^(\d{4})(0[1-9]|1[0-2])$/', $requested_month, $month_parts)) $date_title = (int) $month_parts[1] . '年' . (int) $month_parts[2] . '月';
+    ?>
+    <header class="article-timeline__header"><div><h1><?php echo esc_html($date_title); ?></h1><p>公開日で探す記事一覧</p></div></header>
   <?php else : ?>
   <header class="article-timeline__header">
     <div>
