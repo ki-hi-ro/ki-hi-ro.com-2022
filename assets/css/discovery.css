@@ -679,3 +679,5 @@ body .about-body > section:first-child { padding-top: 0; }
 .article-timeline--cards .article-timeline__year .writing-card__tags > a:hover,
 .article-timeline--cards .article-timeline__year .writing-card__tags > a[aria-current] { background: #e8e8ed; color: #292929; }
 .article-timeline--cards > .archive-tag-filter { margin-bottom: 32px; }
+
+.article-edit--actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-block: 20px 28px; }

@@ -11,11 +11,12 @@
 
         <p class="journal-single-date"><?php echo esc_html(get_the_date('Y年n月j日 G時i分')); ?></p>
         <h1><?php echo esc_html(get_the_title()); ?></h1>
-        <?php if (is_user_logged_in() && current_user_can('edit_post', get_the_ID())) : ?>
-          <?php $edit_url = get_edit_post_link(get_the_ID(), 'raw'); ?>
-          <?php if ($edit_url) : ?>
-            <p class="article-edit"><a class="article-edit__link" href="<?php echo esc_url($edit_url); ?>">記事を編集</a></p>
-          <?php endif; ?>
+        <?php if (is_user_logged_in() && (current_user_can('edit_post', get_the_ID()) || current_user_can('edit_posts'))) : ?>
+          <div class="article-edit article-edit--actions">
+            <?php $edit_url = current_user_can('edit_post', get_the_ID()) ? get_edit_post_link(get_the_ID(), 'raw') : ''; ?>
+            <?php if ($edit_url) : ?><a class="article-edit__link" href="<?php echo esc_url($edit_url); ?>">記事を編集</a><?php endif; ?>
+            <?php if (current_user_can('edit_posts')) : ?><a class="article-edit__link" href="<?php echo esc_url(admin_url('post-new.php')); ?>"><span aria-hidden="true">＋</span> 新規投稿</a><?php endif; ?>
+          </div>
         <?php endif; ?>
 
         <dl class="db-single__fields">
