@@ -10,7 +10,8 @@ $archive_category_id = $is_full_archive ? kihiro_selected_article_category() : 0
 $archive_category = $archive_category_id ? get_term($archive_category_id, 'category') : null;
 $archive_title = $archive_category instanceof WP_Term ? $archive_category->name : 'すべての記事';
 $is_article_search = is_search();
-$is_timeline_view = $is_article_search;
+// 年月アーカイブは時系列、検索結果と通常一覧はカード表示。
+$is_timeline_view = is_date();
 $is_article_tag = is_tag();
 $is_article_home = is_home() && !$is_article_search && '' === kihiro_get_request_value('view');
 // 取得はメインクエリ側で完了している。ここでは取得済みの投稿を年ごとに整理する。
