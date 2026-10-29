@@ -341,3 +341,15 @@ function kihiro_article_thumbnail($post_id, $size = 'medium') {
     if (!$url) $url = get_theme_file_uri('/assets/images/article-placeholder.svg');
     return '<img src="' . esc_url($url) . '" alt="" width="320" height="200" loading="lazy" decoding="async">';
 }
+
+/** Empty filtered journal/date results are a valid listing, not a missing page. */
+function kihiro_handle_empty_journal_archive($preempt, $query) {
+    if (false !== $preempt || is_admin() || 'archive-all' !== kihiro_get_request_value('view')) return $preempt;
+    // Keep actual missing articles and other routes as 404s, even if view is appended.
+    if (!$query->is_home() && !$query->is_date()) return $preempt;
+    if ($query->posts) return $preempt;
+    status_header(200);
+    nocache_headers();
+    return true;
+}
+add_filter('pre_handle_404', 'kihiro_handle_empty_journal_archive', 10, 2);

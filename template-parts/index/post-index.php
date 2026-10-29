@@ -109,7 +109,18 @@ if (is_home() && !$is_full_archive) {
       </ol>
     </section>
   <?php endforeach; ?>
-  <?php if (!$years) : ?><p>該当する記事はありません。</p><?php endif; ?>
+  <?php if (!$years) : ?>
+    <div class="article-empty">
+      <p>該当する記事はありません。</p>
+      <?php if ($is_full_archive) : ?>
+        <p>選択した年月・カテゴリー・タグの組み合わせ、またはページ番号に一致する記事がありません。条件を変更してお探しください。</p>
+        <div class="work-entry__links">
+          <?php if (kihiro_selected_article_tag()) : ?><a href="<?php echo esc_url(add_query_arg(array_filter(array('view' => 'archive-all', 'article_category' => $archive_category_id, 'm' => kihiro_get_request_value('m'))), home_url('/'))); ?>">タグを解除して表示する</a><?php endif; ?>
+          <a href="<?php echo esc_url(kihiro_journal_url()); ?>">すべての記事を表示する</a>
+        </div>
+      <?php endif; ?>
+    </div>
+  <?php endif; ?>
   <?php if ($is_full_archive && $wp_query->max_num_pages > 1) : ?>
     <nav class="navigation pagination" aria-label="ジャーナルのページ送り"><div class="nav-links"><?php echo wp_kses_post(paginate_links(array(
       'base' => add_query_arg('paged', '%#%', home_url('/')), 'format' => '',
