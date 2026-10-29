@@ -15,7 +15,7 @@ $filter_tags = $args['tags'] ?? get_tags(array('hide_empty' => true, 'orderby' =
           <p class="tag-tree-picker__hint">テーマを開いてタグを選ぶと、自動で絞り込みます。</p>
           <fieldset class="tag-tree"><legend class="screen-reader-text">タグを1つ選択</legend>
             <label class="tag-tree__tag tag-tree__all"><input type="radio" name="article_tag" value="" data-tag-label="すべてのタグ" <?php checked($tag_id, 0); ?>><span>すべてのタグ</span></label>
-            <?php kihiro_render_tag_tree(kihiro_tag_display_tree($filter_tags), $tag_id); ?>
+            <?php kihiro_render_tag_tree(kihiro_tag_display_tree($filter_tags, $args['root'] ?? ''), $tag_id); ?>
           </fieldset>
         </div>
       </details>

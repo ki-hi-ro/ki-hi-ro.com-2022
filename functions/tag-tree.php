@@ -1,6 +1,6 @@
 <?php
 /** Build a display tree from live terms, retaining every available tag once. */
-function kihiro_tag_display_tree($tags) {
+function kihiro_tag_display_tree($tags, $root = '') {
     $by_name = array();
     foreach ($tags as $tag) $by_name[$tag->name] = $tag;
     $used = array();
@@ -21,7 +21,10 @@ function kihiro_tag_display_tree($tags) {
         }
         return $nodes;
     };
-    $tree = $build(require get_template_directory() . '/content/tag-tree.php');
+    $definition = require get_template_directory() . '/content/tag-tree.php';
+    // 特定分野の一覧では、その子分類を最上位として表示する。
+    if ($root && isset($definition[$root])) return $build($definition[$root]);
+    $tree = $build($definition);
     $remaining = array();
     foreach ($tags as $tag) {
         if (!isset($used[$tag->term_id])) $remaining[] = array('tag' => $tag, 'ids' => array($tag->term_id));
