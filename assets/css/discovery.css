@@ -636,3 +636,17 @@ body .about-body > section:first-child { padding-top: 0; }
 /* H4と説明・画像を近づけ、ひとまとまりとして読める間隔にする。 */
 :is(.db-single__content, .case-content) h4 { margin-bottom: 8px; }
 :is(.db-single__content, .case-content) h4 + :not(h1, h2, h3, h4, h5, h6) { margin-top: 8px; }
+
+/* 引用は共通の淡い背景で本文と区別し、強い罫線や斜体を使わない。 */
+:is(.db-single__content, .case-content, .about-body, .services-page__content) blockquote {
+ margin: 28px 0; padding: 24px 28px; border: 0; border-radius: 14px;
+ background: var(--discovery-soft); color: var(--mag-ink); font-style: normal;
+ font-size: inherit; line-height: 2; overflow-wrap: anywhere;
+}
+:is(.db-single__content, .case-content, .about-body, .services-page__content) blockquote > :first-child { margin-top: 0; }
+:is(.db-single__content, .case-content, .about-body, .services-page__content) blockquote > :last-child { margin-bottom: 0; }
+:is(.db-single__content, .case-content, .about-body, .services-page__content) blockquote p { margin: 0 0 16px; }
+:is(.db-single__content, .case-content, .about-body, .services-page__content) blockquote cite { display: block; margin-top: 16px; color: var(--mag-muted); font-size: 13px; font-style: normal; line-height: 1.8; }
+@media (max-width: 640px) {
+ :is(.db-single__content, .case-content, .about-body, .services-page__content) blockquote { margin-block: 24px; padding: 20px; }
+}
