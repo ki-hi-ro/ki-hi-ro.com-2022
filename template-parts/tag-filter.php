@@ -19,6 +19,5 @@ $filter_tags = $args['tags'] ?? get_tags(array('hide_empty' => true, 'orderby' =
           </fieldset>
         </div>
       </details>
-      <button type="submit">絞り込む</button>
       <?php if ($tag_id) : ?><a href="<?php echo esc_url($clear_url); ?>">タグを解除</a><?php endif; ?>
     </form>
