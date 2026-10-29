@@ -5,6 +5,7 @@
     <?php while (have_posts()) : the_post(); ?>
       <?php
       $post_tags       = get_the_tag_list('', ', ');
+      $post_categories = get_the_category();
       ?>
       <article class="journal-panel journal-panel--single db-single">
 
@@ -22,6 +23,12 @@
             <dt>最終更新</dt>
             <dd><?php echo esc_html(get_the_modified_date('Y年n月j日 G時i分')); ?></dd>
           </div>
+          <?php if ($post_categories) : ?>
+            <div>
+              <dt>カテゴリー</dt>
+              <dd><?php foreach ($post_categories as $index => $category) : ?><?php if ($index) echo ' / '; ?><a href="<?php echo esc_url(add_query_arg(array('view' => 'archive-all', 'article_category' => $category->term_id), home_url('/'))); ?>"><?php echo esc_html($category->name); ?></a><?php endforeach; ?></dd>
+            </div>
+          <?php endif; ?>
           <?php if ($post_tags) : ?>
             <div>
               <dt>タグ</dt>
