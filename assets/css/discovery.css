@@ -650,3 +650,23 @@ body .about-body > section:first-child { padding-top: 0; }
 @media (max-width: 640px) {
  :is(.db-single__content, .case-content, .about-body, .services-page__content) blockquote { margin-block: 24px; padding: 20px; }
 }
+
+/* 実務経験を根拠に、未知の技術への取り組み方と相談に適した条件を伝える。 */
+.work-learning__columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.work-learning__columns > article { min-width: 0; padding-top: 24px; border-top: 1px solid var(--mag-line); }
+.work-learning h3 { margin: 0 0 16px; font-size: 19px; font-weight: 600; line-height: 1.7; text-wrap: balance; }
+.work-learning__columns p { margin: 0 0 16px; font-size: 14px; line-height: 2; }
+.work-learning__evidence { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 24px; font-size: 13px; }
+.work-learning__evidence a { text-decoration: underline; }
+.work-learning__timing { margin-top: 28px; padding: 24px 28px; border-radius: 14px; background: var(--discovery-soft); }
+.work-learning__timing h3 { margin-bottom: 10px; font-size: 16px; }
+.work-learning__timing p { margin: 0; font-size: 13px; line-height: 1.9; color: #48484f; }
+.work-learning__invitation { margin-top: 28px; text-align: center; }
+.work-learning__invitation p { margin: 0 0 20px; font-size: 15px; line-height: 1.9; }
+@media (max-width: 700px) {
+ .work-learning__columns { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+ .work-learning h3 { font-size: 18px; }
+ .work-learning__timing { padding: 20px; }
+ .work-learning__timing h3 { font-size: 15px; }
+ .work-learning__invitation { text-align: left; }
+}

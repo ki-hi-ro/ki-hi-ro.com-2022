@@ -50,6 +50,8 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
   </section>
   <?php endif; ?>
 
+  <?php get_template_part('template-parts/work-learning-approach'); ?>
+
   <?php get_template_part('template-parts/work-help-articles'); ?>
 
   <section class="work-profile" id="work-profile" aria-labelledby="work-profile-heading">
