@@ -17,7 +17,7 @@ function kihiro_enqueue_assets() {
     if (is_singular('post') && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
-    if ('archive-all' === kihiro_get_request_value('view')) {
+    if ('archive-all' === kihiro_get_request_value('view') || is_page_template('page-technical-articles.php')) {
         wp_enqueue_script('kihiro-tag-tree', get_theme_file_uri('/assets/js/tag-tree.js'), array(), kihiro_asset_version('/assets/js/tag-tree.js'), true);
     }
     wp_enqueue_script('kihiro-journal-menu', get_theme_file_uri('/assets/js/journal-menu.js'), array(), kihiro_asset_version('/assets/js/journal-menu.js'), true);

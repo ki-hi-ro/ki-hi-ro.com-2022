@@ -227,11 +227,11 @@ function kihiro_configure_main_query($query) {
     }
 
     if ($query->is_home() && 'archive-all' === kihiro_get_request_value('view')) {
-        // 全期間アーカイブは、選択カテゴリーの全件をページ分割せず表示する。
-        $query->set('posts_per_page', -1);
+        // ジャーナルは画像付きカードを12件ずつ表示する。
+        $query->set('posts_per_page', 12);
         if (kihiro_selected_article_category()) $query->set('cat', kihiro_selected_article_category());
         if (kihiro_selected_article_tag()) $query->set('tag_id', kihiro_selected_article_tag());
-        $query->set('no_found_rows', true);
+        $query->set('no_found_rows', false);
         $query->set('ignore_sticky_posts', true);
         $query->set('orderby', array('date' => 'DESC', 'ID' => 'DESC'));
     } elseif ($query->is_home()) {

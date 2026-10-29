@@ -10,7 +10,7 @@ $archive_category_id = $is_full_archive ? kihiro_selected_article_category() : 0
 $archive_category = $archive_category_id ? get_term($archive_category_id, 'category') : null;
 $archive_title = $archive_category instanceof WP_Term ? $archive_category->name : 'すべての記事';
 $is_article_search = is_search();
-$is_timeline_view = $is_full_archive || $is_article_search;
+$is_timeline_view = $is_article_search;
 $is_article_tag = is_tag();
 $is_article_home = is_home() && !$is_article_search && '' === kihiro_get_request_value('view');
 // 取得はメインクエリ側で完了している。ここでは取得済みの投稿を年ごとに整理する。
@@ -61,7 +61,7 @@ if (is_home() && !$is_full_archive) {
       <h1><?php echo esc_html($archive_title); ?></h1>
       <p>つくり、考え、書き続けてきた記録。</p>
     </div>
-    <p class="article-timeline__total"><strong><?php echo esc_html(number_format_i18n(count($wp_query->posts))); ?></strong><span>記事の積み重ね</span></p>
+    <p class="article-timeline__total"><strong><?php echo esc_html(number_format_i18n($is_full_archive ? $wp_query->found_posts : count($wp_query->posts))); ?></strong><span>記事の積み重ね</span></p>
   </header>
   <?php endif; ?>
   <?php if ($is_full_archive) : ?>
@@ -99,13 +99,21 @@ if (is_home() && !$is_full_archive) {
               </div>
             </li>
           <?php else : ?>
-          <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?><?php if (get_the_modified_date('Y-m-d', $entry) === $today) : ?><span class="article-card-new">本日更新</span><?php endif; ?></span><span class="article-card-dates"><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</time> ／ <time datetime="<?php echo esc_attr(get_the_modified_date('Y-m-d', $entry)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</time></span><span><?php if (get_the_modified_date('Y-m-d', $entry) === $today) : ?><span class="screen-reader-text">本日更新： </span><?php endif; ?><?php echo esc_html(get_the_title($entry)); ?></span></a></li>
+          <?php get_template_part('template-parts/writing-card', null, array('entry' => $entry, 'tag_base' => home_url('/'), 'tag_args' => array_filter(array('view' => 'archive-all', 'article_category' => $archive_category_id)))); ?>
           <?php endif; ?>
         <?php endforeach; ?>
       </ol>
     </section>
   <?php endforeach; ?>
   <?php if (!$years) : ?><p>該当する記事はありません。</p><?php endif; ?>
+  <?php if ($is_full_archive && $wp_query->max_num_pages > 1) : ?>
+    <nav class="navigation pagination" aria-label="ジャーナルのページ送り"><div class="nav-links"><?php echo wp_kses_post(paginate_links(array(
+      'base' => add_query_arg('paged', '%#%', home_url('/')), 'format' => '',
+      'current' => max(1, (int) get_query_var('paged')), 'total' => $wp_query->max_num_pages,
+      'show_all' => true, 'prev_next' => false,
+      'add_args' => array_filter(array('view' => 'archive-all', 'article_category' => $archive_category_id, 'article_tag' => kihiro_selected_article_tag(), 'm' => kihiro_get_request_value('m'))),
+    ))); ?></div></nav>
+  <?php endif; ?>
   <?php if (!$is_full_archive && (is_home() || $is_article_search || $is_article_tag)) : ?>
     <?php the_posts_pagination(array('show_all' => true, 'prev_next' => false, 'add_fragment' => is_home() ? '#year-latest' : '')); ?>
   <?php endif; ?>

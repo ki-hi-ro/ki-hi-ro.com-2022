@@ -26,24 +26,11 @@ $filter_url = function ($category, $tag) use ($archive_mode) {
     <?php endforeach; ?>
   </nav>
   <?php if ($archive_mode) : $filter_tags = get_tags(array('hide_empty' => true, 'orderby' => 'name', 'order' => 'ASC')); ?>
-    <form class="archive-tag-filter" action="<?php echo esc_url(home_url('/')); ?>" method="get">
-      <input type="hidden" name="view" value="archive-all">
-      <?php if ($category_id) : ?><input type="hidden" name="article_category" value="<?php echo esc_attr($category_id); ?>"><?php endif; ?>
-      <?php if (is_date()) : ?><input type="hidden" name="m" value="<?php echo esc_attr(get_query_var('m') ?: sprintf('%04d%02d', get_query_var('year'), get_query_var('monthnum'))); ?>"><?php endif; ?>
-      <span id="archive-tag-label">タグ</span>
-      <?php $selected_tag = $tag_id ? get_term($tag_id, 'post_tag') : null; ?>
-      <details class="tag-tree-picker">
-        <summary aria-labelledby="archive-tag-label archive-tag-selection"><span id="archive-tag-selection" data-selected-tag><?php echo $selected_tag instanceof WP_Term ? esc_html($selected_tag->name) : 'すべてのタグ'; ?></span><span class="tag-tree-picker__chevron" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="m3 6 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
-        <div class="tag-tree-picker__panel">
-          <p class="tag-tree-picker__hint">テーマを開いてタグを選ぶと、自動で絞り込みます。</p>
-          <fieldset class="tag-tree"><legend class="screen-reader-text">タグを1つ選択</legend>
-            <label class="tag-tree__tag tag-tree__all"><input type="radio" name="article_tag" value="" data-tag-label="すべてのタグ" <?php checked($tag_id, 0); ?>><span>すべてのタグ</span></label>
-            <?php kihiro_render_tag_tree(kihiro_tag_display_tree($filter_tags), $tag_id); ?>
-          </fieldset>
-        </div>
-      </details>
-      <button type="submit">絞り込む</button>
-      <?php if ($tag_id) : ?><a href="<?php echo esc_url($filter_url($category_id, 0)); ?>">タグを解除</a><?php endif; ?>
-    </form>
+    <?php
+      $hidden = array('view' => 'archive-all');
+      if ($category_id) $hidden['article_category'] = $category_id;
+      if (is_date()) $hidden['m'] = get_query_var('m') ?: sprintf('%04d%02d', get_query_var('year'), get_query_var('monthnum'));
+      get_template_part('template-parts/tag-filter', null, array('hidden' => $hidden, 'clear_url' => $filter_url($category_id, 0), 'tags' => $filter_tags));
+    ?>
   <?php endif; ?>
 </section>
