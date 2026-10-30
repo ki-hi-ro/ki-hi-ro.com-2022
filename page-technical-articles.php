@@ -17,6 +17,9 @@ $total_pages = $technical_category instanceof WP_Term ? (int) $articles->max_num
 <main id="main-content" class="article-timeline article-timeline--cards case-study-timeline">
 <?php while (have_posts()) : the_post(); ?>
   <aside class="case-experience-entry"><h1>技術ブログ</h1><p>日々のジャーナルの「技術・開発」の記事を、公開日の新しい順に掲載しています。各記事の冒頭で、扱う技術がどの分野に位置するかを樹形図で確認できます。</p></aside>
+  <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
+    <div class="article-create"><a class="article-edit__link" href="<?php echo esc_url(admin_url('post-new.php')); ?>"><span aria-hidden="true">＋</span> 新規投稿</a></div>
+  <?php endif; ?>
   <?php get_template_part('template-parts/tag-filter', null, array('action' => get_permalink(), 'clear_url' => get_permalink(), 'root' => '技術・開発')); ?>
   <section class="article-timeline__year" aria-label="技術・開発の記事一覧"><ol>
     <?php foreach ($entries as $entry) : ?>
