@@ -25,7 +25,7 @@ $filter_url = function ($category, $tag) use ($archive_mode) {
       <a href="<?php echo esc_url($filter_url($category->term_id, $tag_id)); ?>" <?php if ($category_id === $category->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($category->name); ?></a>
     <?php endforeach; ?>
   </nav>
-  <?php if ($archive_mode) : $filter_tags = get_tags(array('hide_empty' => true, 'orderby' => 'name', 'order' => 'ASC')); ?>
+  <?php if ($archive_mode) : $filter_tags = kihiro_category_filter_tags($category_id); ?>
     <?php
       $hidden = array('view' => 'archive-all');
       if ($category_id) $hidden['article_category'] = $category_id;

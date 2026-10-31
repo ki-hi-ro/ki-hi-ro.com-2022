@@ -1,4 +1,20 @@
 <?php
+/** カテゴリー内の公開記事で使われるタグを、ページ送り・タグ選択に依存せず取得する。 */
+function kihiro_category_filter_tags($category_id = 0) {
+    $args = array('hide_empty' => true, 'orderby' => 'name', 'order' => 'ASC');
+    if ($category_id) {
+        $post_ids = get_posts(array(
+            'post_type' => 'post', 'post_status' => 'publish', 'has_password' => false,
+            'cat' => (int) $category_id, 'posts_per_page' => -1, 'fields' => 'ids',
+            'post__not_in' => kihiro_excluded_post_ids(),
+            'ignore_sticky_posts' => true, 'no_found_rows' => true,
+        ));
+        if (!$post_ids) return array();
+        $args['object_ids'] = $post_ids;
+    }
+    return get_tags($args);
+}
+
 /** Build a display tree from live terms, retaining every available tag once. */
 function kihiro_tag_display_tree($tags, $root = '') {
     $by_name = array();
