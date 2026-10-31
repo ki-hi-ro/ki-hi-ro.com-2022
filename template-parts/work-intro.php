@@ -9,7 +9,7 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
 <div class="work-home">
   <section class="work-hero" aria-labelledby="work-intro-heading">
     <p class="magazine-eyebrow">個人事業主・柴田浩貴</p>
-    <h2 id="work-intro-heading"><span>自分自身を、</span><span>更新し続ける。</span></h2>
+    <h2 id="work-intro-heading"><span>自分自身を<i class="work-hero__punctuation">、</i></span><span>更新し続ける<i class="work-hero__punctuation">。</i></span></h2>
     <p class="work-hero__statement">日々、いろんな現実に触れるたび、<br>過去の正解が、正解ではなくなる。<br>だからこそ、考え、試し、自分を更新していきます。</p>
     <p class="work-hero__lead">その過程を、毎日ブログに。<br>人との対話を、新しい仕事のきっかけに。</p>
     <div class="work-home__actions">
