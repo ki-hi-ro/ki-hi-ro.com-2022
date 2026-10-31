@@ -5,11 +5,10 @@
   if (!viewport || !current) return;
 
   const alignCurrent = () => {
-    const list = viewport.querySelector('.post-timeline__list');
-    list.style.paddingBottom = '0px';
+    viewport.style.maxHeight = '';
     const top = current.getBoundingClientRect().top - viewport.getBoundingClientRect().top + viewport.scrollTop;
-    // ページ末尾の記事でも先頭に置けるだけの余白を確保する。
-    list.style.paddingBottom = `${Math.max(0, top + viewport.clientHeight - viewport.scrollHeight)}px`;
+    // ページ末尾では残りの記事に合わせて高さを縮め、空白を作らず先頭に揃える。
+    viewport.style.maxHeight = `${Math.min(viewport.clientHeight, viewport.scrollHeight - top)}px`;
     viewport.scrollTop = top;
   };
   alignCurrent();
