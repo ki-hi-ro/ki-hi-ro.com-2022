@@ -318,6 +318,36 @@ function kihiro_selected_article_category() {
     return 0;
 }
 
+/** カテゴリー一覧から新規投稿へ、初期選択するカテゴリーを渡す。 */
+function kihiro_new_post_url($category_id = 0) {
+    $url = admin_url('post-new.php');
+    $category = $category_id ? get_term($category_id, 'category') : null;
+    return $category instanceof WP_Term
+        ? add_query_arg('kihiro_category', $category->term_id, $url)
+        : $url;
+}
+
+/** 新規投稿画面のリクエスト内だけ既定値を変更し、サイト設定は変更しない。 */
+function kihiro_set_new_post_category() {
+    $post_type = kihiro_get_request_value('post_type');
+    $requested = kihiro_get_request_value('kihiro_category');
+    if (('' !== $post_type && 'post' !== $post_type) || !ctype_digit($requested)) {
+        return;
+    }
+
+    $taxonomy = get_taxonomy('category');
+    $category = get_term((int) $requested, 'category');
+    if (!$category instanceof WP_Term || !current_user_can('edit_posts') || !$taxonomy || !current_user_can($taxonomy->cap->assign_terms)) {
+        return;
+    }
+
+    // 自動下書きの作成にも同じ値を使うため、両方のエディターで選択される。
+    add_filter('pre_option_default_category', function ($default) use ($category) {
+        return $category->term_id;
+    });
+}
+add_action('load-post-new.php', 'kihiro_set_new_post_category');
+
 function kihiro_selected_article_tag() {
     $value = kihiro_get_request_value('article_tag');
     return ctype_digit($value) ? absint($value) : 0;

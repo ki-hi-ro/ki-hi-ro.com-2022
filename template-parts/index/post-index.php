@@ -73,7 +73,7 @@ if (is_home() && !$is_full_archive) {
   <?php endif; ?>
   <?php if ($is_full_archive) : ?>
     <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
-      <div class="article-create"><a class="article-edit__link" href="<?php echo esc_url(admin_url('post-new.php')); ?>"><span aria-hidden="true">＋</span> 新規投稿</a></div>
+      <div class="article-create"><a class="article-edit__link" href="<?php echo esc_url(kihiro_new_post_url($archive_category_id)); ?>"><span aria-hidden="true">＋</span> 新規投稿</a></div>
     <?php endif; ?>
     <?php get_template_part('template-parts/index/article-filters'); ?>
   <?php endif; ?>
