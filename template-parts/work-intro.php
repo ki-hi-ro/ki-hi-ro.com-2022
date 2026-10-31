@@ -8,15 +8,15 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
 ?>
 <div class="work-home">
   <section class="work-hero" aria-labelledby="work-intro-heading">
-    <p class="magazine-eyebrow">PYTHON / BUSINESS AUTOMATION</p>
-    <h2 id="work-intro-heading"><span><span>Excel・CSVの</span><span>手作業を減らす</span></span><span>仕組みをつくります。</span></h2>
-    <p class="work-hero__lead">毎月繰り返すデータの整形・集計・突合を、Pythonで効率化。</p>
-    <p class="work-hero__lead">手作業にかかる時間を減らし、本来の業務に集中できる環境づくりをお手伝いします。</p>
+    <p class="magazine-eyebrow">個人事業主・柴田浩貴</p>
+    <h2 id="work-intro-heading"><span>相談から、</span><span>仕事をつくる。</span></h2>
+    <p class="work-hero__lead">話を聞き、一緒に考え、できることを形にしていく。個人事業主として、そんな仕事のつくり方を大切にしています。</p>
+    <p class="work-hero__lead">日々の気づきや試行錯誤を、毎日ブログに書いています。仕事のことも、暮らしのことも。私を知っていただく入口になればうれしいです。</p>
     <div class="work-home__actions">
       <a class="work-home__button work-home__button--primary" href="<?php echo esc_url(home_url('/contact-us/')); ?>">仕事について相談する</a>
-      <a class="work-home__button" href="#work-projects">私が取り組んできたこと <span aria-hidden="true">↓</span></a>
+      <a class="work-home__button" href="<?php echo esc_url(kihiro_journal_url()); ?>">毎日更新のブログを読む <span aria-hidden="true">→</span></a>
     </div>
-    <p class="work-hero__note">要件が固まっていなくても構いません。対応可否とお見積もりをメールでご案内します。</p>
+    <p class="work-hero__note">まだ具体的になっていないことも、お聞かせください。メールでお話を伺います。</p>
     <nav class="work-home__nav" aria-label="トップページの案内"><a href="#work-services">ご相談できること</a><a href="#work-projects">私の経験</a><a href="#work-profile">自己紹介</a><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナル</a></nav>
   </section>
 
@@ -55,7 +55,7 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
   <?php get_template_part('template-parts/work-help-articles'); ?>
 
   <section class="work-profile" id="work-profile" aria-labelledby="work-profile-heading">
-    <div><p class="magazine-eyebrow">ABOUT</p><h2 id="work-profile-heading">柴田 浩貴</h2><p class="work-profile__role">WEBエンジニア</p></div>
+    <div><p class="magazine-eyebrow">ABOUT</p><h2 id="work-profile-heading">柴田 浩貴</h2><p class="work-profile__role">個人事業主 / Webエンジニア</p></div>
     <div><p>Web制作、データ処理の移行、API開発、システム保守などを経験してきました。既存の仕組みや仕様を読み解き、確認しながら改善を進めることを大切にしています。日々の試行錯誤も、このブログに残しています。</p><div class="work-home__profile-links"><?php $about_page = get_page_by_path('about'); if ($about_page && 'publish' === $about_page->post_status) : ?><a href="<?php echo esc_url(get_permalink($about_page)); ?>">自己紹介を読む →</a><?php endif; ?><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナルを読む →</a></div></div>
   </section>
 

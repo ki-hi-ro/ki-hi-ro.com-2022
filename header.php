@@ -28,7 +28,7 @@
       <?php if ($journal_active) get_search_form(); ?>
     </div>
     <div class="site-header__menu-row">
-      <span class="site-header__category">柴田浩貴です。Excel・CSVの手作業を減らす仕組みを、Pythonで開発しています。</span>
+      <span class="site-header__category">個人事業主の柴田浩貴です。相談から仕事をつくり、毎日ブログを書いています。</span>
     <?php
       $case_index = kihiro_case_study_index();
       $technical_blog_page = get_page_by_path('articles');
