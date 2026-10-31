@@ -4,7 +4,7 @@
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <?php
-      $post_tags       = get_the_tag_list('', ', ');
+      $post_tags       = get_the_tag_list('', '');
       $post_categories = get_the_category();
       ?>
       <article class="journal-panel journal-panel--single db-single">
@@ -33,7 +33,7 @@
           <?php if ($post_tags) : ?>
             <div>
               <dt>タグ</dt>
-              <dd><?php echo wp_kses_post($post_tags); ?></dd>
+              <dd class="db-single__tags"><?php echo wp_kses_post($post_tags); ?></dd>
             </div>
           <?php endif; ?>
         </dl>
