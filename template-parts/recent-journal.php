@@ -39,5 +39,5 @@ $journal_url = $selected ? add_query_arg('article_category', $selected, kihiro_j
     <?php endforeach; ?>
     <?php if (!$recent) : ?><p>このカテゴリーの記事はまだありません。</p><?php endif; ?>
   </div>
-  <p class="work-home__more"><a class="work-home__button" href="<?php echo esc_url($journal_url); ?>">日々のジャーナルをもっと読む <span aria-hidden="true">→</span></a></p>
+  <p class="work-home__more"><a class="work-home__button" href="<?php echo esc_url($journal_url); ?>">日々のジャーナルをもっと読む&#x3000;<span aria-hidden="true">→</span></a></p>
 </section>
