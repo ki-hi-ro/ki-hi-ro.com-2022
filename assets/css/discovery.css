@@ -717,3 +717,8 @@ body .about-body > section:first-child { padding-top: 0; }
 
 .site-footer__note { margin-left: auto; padding-block: 8px; font-size: 13px; color: var(--mag-muted); text-decoration: underline; text-underline-offset: 4px; }
 .site-footer__note:hover { color: var(--mag-ink); }
+.journal-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 12px; margin-bottom: 20px; }
+.journal-tools__search { display: flex; flex: 0 1 360px; min-width: 0; max-width: 100%; border: 1px solid var(--mag-line); border-radius: 999px; overflow: hidden; background: #fff; }
+.journal-tools__search input[type="search"] { flex: 1; min-width: 0; width: 100%; padding: 12px 16px; border: 0; background: transparent; color: var(--mag-ink); font: inherit; font-size: 14px; }
+.journal-tools__search button { flex-shrink: 0; padding: 12px 18px; border: 0; border-left: 1px solid var(--mag-line); background: var(--discovery-soft); color: var(--mag-ink); font: inherit; font-size: 14px; cursor: pointer; }
+.journal-tools__search:focus-within { outline: 2px solid var(--mag-muted); outline-offset: 2px; }
