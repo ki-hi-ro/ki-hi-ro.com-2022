@@ -107,6 +107,7 @@
 .db-single__fields dt { color: var(--mag-muted); font-weight: 500; }
 .db-single__fields .db-single__tags { display: block; }
 .db-single__tags > a { display: inline-block; max-width: 100%; line-height: 1.8; overflow-wrap: anywhere; }
+.db-single__tags > a + a { margin-inline-start: .2em; }
 @media (max-width: 700px) {
  .db-single__fields .db-single__tags > a { text-underline-offset: 5px; }
 }
