@@ -609,7 +609,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .recent-journal__categories a[aria-current] { background: #292929; color: #fff; }
 .recent-journal__categories a:hover { background: var(--discovery-soft); color: #292929; }
 .recent-journal__categories a[aria-current]:hover { background: #292929; color: #fff; }
-.recent-journal__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.recent-journal__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .recent-journal__card { min-width: 0; border: 1px solid var(--mag-line); border-radius: 14px; background: #fff; overflow: hidden; }
 .recent-journal__card > a { display: flex; flex-direction: column; height: 100%; box-sizing: border-box; padding: 22px; color: inherit; }
 .recent-journal__card > a:hover { background: var(--discovery-soft); }

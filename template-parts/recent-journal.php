@@ -9,7 +9,7 @@ $selected = absint(kihiro_get_request_value('recent_category'));
 if (!isset($categories[$selected])) $selected = 0;
 $args = array(
     'post_type' => 'post', 'post_status' => 'publish', 'has_password' => false,
-    'posts_per_page' => 8, 'ignore_sticky_posts' => true,
+    'posts_per_page' => 3, 'ignore_sticky_posts' => true,
     'post__not_in' => kihiro_excluded_post_ids(), 'orderby' => array('modified' => 'DESC', 'ID' => 'DESC'),
 );
 if ($selected) $args['cat'] = $selected;
@@ -17,7 +17,7 @@ $recent = get_posts($args);
 $journal_url = $selected ? add_query_arg('article_category', $selected, kihiro_journal_url()) : kihiro_journal_url();
 ?>
 <section class="work-home__section recent-journal" id="recent-journal" aria-labelledby="recent-journal-heading">
-  <header class="work-home__heading"><p class="magazine-eyebrow">LATEST JOURNAL</p><h2 id="recent-journal-heading">日々のジャーナル、最近の更新。</h2><p>技術の学びも、日々の思考や経験も。最近書き直した記事を含め、更新順にご紹介します。</p></header>
+  <header class="work-home__heading"><p class="magazine-eyebrow">DAILY JOURNAL</p><h2 id="recent-journal-heading">毎日書く。日々、更新する。</h2><p>技術の学びや日々の気づきを、毎日ブログに書いています。<br>過去の記事の見直しも含め、最近更新した3件をご紹介します。</p></header>
   <nav class="recent-journal__categories" aria-label="最近更新した記事のカテゴリー">
     <a href="<?php echo esc_url(home_url('/#recent-journal')); ?>" <?php if (!$selected) echo 'aria-current="true"'; ?>>すべて</a>
     <?php foreach ($categories as $term) : ?><a href="<?php echo esc_url(add_query_arg('recent_category', $term->term_id, home_url('/')) . '#recent-journal'); ?>" <?php if ($selected === $term->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($term->name); ?></a><?php endforeach; ?>

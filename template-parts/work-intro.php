@@ -20,6 +20,8 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
     <nav class="work-home__nav" aria-label="トップページの案内"><a href="#work-services">ご相談できること</a><a href="#work-projects">私の経験</a><a href="#work-profile">自己紹介</a><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナル</a></nav>
   </section>
 
+  <?php get_template_part('template-parts/recent-journal'); ?>
+
   <?php get_template_part('template-parts/work-reasons'); ?>
 
   <section class="work-home__section" id="work-services" aria-labelledby="work-services-heading">
@@ -58,8 +60,6 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
     <div><p class="magazine-eyebrow">ABOUT</p><h2 id="work-profile-heading">柴田 浩貴</h2><p class="work-profile__role">個人事業主 / Webエンジニア</p></div>
     <div><p>Web制作、データ処理の移行、API開発、システム保守などを経験してきました。既存の仕組みや仕様を読み解き、確認しながら改善を進めることを大切にしています。日々の試行錯誤も、このブログに残しています。</p><div class="work-home__profile-links"><?php $about_page = get_page_by_path('about'); if ($about_page && 'publish' === $about_page->post_status) : ?><a href="<?php echo esc_url(get_permalink($about_page)); ?>">自己紹介を読む →</a><?php endif; ?><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナルを読む →</a></div></div>
   </section>
-
-  <?php get_template_part('template-parts/recent-journal'); ?>
 
   <section class="work-home-contact" aria-labelledby="work-contact-heading"><h2 id="work-contact-heading">まずは、今のお困りごとから。</h2><p>「この作業を減らしたい」「この機能をつくりたい」。<br>要件を確認して、対応可否と個別のお見積もりをご案内します。</p><a class="work-home__button work-home__button--primary" href="<?php echo esc_url(home_url('/contact-us/')); ?>">メールでの相談へ進む <span aria-hidden="true">→</span></a><p class="work-home-contact__note">フォームからお送りいただき、メールでやりとりします。</p></section>
 </div>
