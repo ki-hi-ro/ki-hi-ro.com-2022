@@ -330,7 +330,7 @@ body .about-body > section:first-child { padding-top: 0; }
 @media (max-width: 700px) {
  .post-timeline > summary span { display: block; margin: 4px 0 0 16px; }
  .post-timeline__item { grid-template-columns: minmax(0, 1fr); gap: 4px; }
- .post-timeline__item::before { top: calc(14px + 23.8px + 4px + .85em); }
+ .post-timeline__item::before { top: calc(14px + .85em); }
 }
 .work-intro > p { max-width: 820px; line-height: 1.9; margin-bottom: 12px; }
 .work-intro .work-intro__note { color: var(--mag-muted); font-size: 14px; }
