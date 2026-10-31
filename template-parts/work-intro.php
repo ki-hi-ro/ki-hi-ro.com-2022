@@ -20,6 +20,8 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
     <nav class="work-home__nav" aria-label="トップページの案内"><a href="#work-services">ご相談できること</a><a href="#work-projects">私の経験</a><a href="#work-profile">自己紹介</a><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナル</a></nav>
   </section>
 
+  <?php get_template_part('template-parts/work-reasons'); ?>
+
   <section class="work-home__section" id="work-services" aria-labelledby="work-services-heading">
     <header class="work-home__heading"><p class="magazine-eyebrow">HOW I CAN HELP</p><h2 id="work-services-heading">課題が、言葉になっていなくても。</h2><p>特定の技術や作業を決める前に、現場の状況から一緒に考えます。</p></header>
     <div class="work-services-grid">
@@ -29,8 +31,6 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
     </div>
     <p class="work-home__more"><a href="<?php echo esc_url(get_permalink($services_page)); ?>">進め方・料金について見る <span aria-hidden="true">→</span></a></p>
   </section>
-
-  <?php get_template_part('template-parts/work-reasons'); ?>
 
   <?php if ($experience_url) : ?>
   <section class="work-home__section" id="work-projects" aria-labelledby="work-projects-heading">
