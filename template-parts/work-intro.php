@@ -9,9 +9,9 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
 <div class="work-home">
   <section class="work-hero" aria-labelledby="work-intro-heading">
     <p class="magazine-eyebrow">個人事業主・柴田浩貴</p>
-    <h2 id="work-intro-heading"><span>過去の正解は日々いろんな現実に触れることで正解ではなくなります。</span><span>だからこそ、私は自分自身を更新し続けます。</span></h2>
-    <p class="work-hero__lead">話を聞き、一緒に考え、できることを形にしていく。個人事業主として、そんな仕事のつくり方を大切にしています。</p>
-    <p class="work-hero__lead">日々の気づきや試行錯誤を、毎日ブログに書いています。仕事のことも、暮らしのことも。私を知っていただく入口になればうれしいです。</p>
+    <h2 id="work-intro-heading"><span>自分自身を、</span><span>更新し続ける。</span></h2>
+    <p class="work-hero__statement">日々、いろんな現実に触れるたび、<br>過去の正解が、正解ではなくなる。<br>だからこそ、考え、試し、自分を更新していきます。</p>
+    <p class="work-hero__lead">その過程を、毎日ブログに。<br>人との対話を、新しい仕事のきっかけに。</p>
     <div class="work-home__actions">
       <a class="work-home__button work-home__button--primary" href="<?php echo esc_url(home_url('/contact-us/')); ?>">仕事について相談する</a>
       <a class="work-home__button" href="<?php echo esc_url(kihiro_journal_url()); ?>">毎日更新のブログを読む <span aria-hidden="true">→</span></a>
