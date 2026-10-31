@@ -38,6 +38,8 @@
           <?php endif; ?>
         </dl>
 
+        <?php get_template_part('template-parts/article-post-timeline'); ?>
+
         <?php get_template_part('template-parts/article-technology-map'); ?>
 
         <?php get_template_part('template-parts/related-work-experience'); ?>
