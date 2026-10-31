@@ -327,7 +327,7 @@ function kihiro_new_post_url($category_id = 0) {
         : $url;
 }
 
-/** 新規投稿画面のリクエスト内だけ既定値を変更し、サイト設定は変更しない。 */
+/** 新規投稿画面で作られる自動下書きに、指定カテゴリーを設定する。 */
 function kihiro_set_new_post_category() {
     $post_type = kihiro_get_request_value('post_type');
     $requested = kihiro_get_request_value('kihiro_category');
@@ -341,10 +341,13 @@ function kihiro_set_new_post_category() {
         return;
     }
 
-    // 自動下書きの作成にも同じ値を使うため、両方のエディターで選択される。
-    add_filter('pre_option_default_category', function ($default) use ($category) {
-        return $category->term_id;
-    });
+    // WordPressは自動下書きに既定カテゴリーを付けないため、実際の関連を設定する。
+    // ブロックエディターは、この関連をREST API経由で初期データとして読み込む。
+    add_action('wp_after_insert_post', function ($post_id, $post, $update) use ($category) {
+        if (!$update && 'post' === $post->post_type && 'auto-draft' === $post->post_status) {
+            wp_set_post_categories($post_id, array($category->term_id));
+        }
+    }, 10, 3);
 }
 add_action('load-post-new.php', 'kihiro_set_new_post_category');
 
