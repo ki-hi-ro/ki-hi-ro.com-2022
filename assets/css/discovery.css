@@ -105,10 +105,9 @@
 .article-edit__link:hover { background: #e8e8eb; opacity: 1; }
 .db-single__fields { margin-top: 28px; padding: 20px; border: 0; border-radius: 14px; background: var(--discovery-soft); }
 .db-single__fields dt { color: var(--mag-muted); font-weight: 500; }
-.db-single__fields .db-single__tags { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 14px; }
+.db-single__fields .db-single__tags { display: block; }
 .db-single__tags > a { display: inline-block; max-width: 100%; line-height: 1.8; overflow-wrap: anywhere; }
 @media (max-width: 700px) {
- .db-single__fields .db-single__tags { gap: 12px 14px; }
  .db-single__fields .db-single__tags > a { text-underline-offset: 5px; }
 }
 .article-featured-image img, .db-single__content :is(img, video), .about-body .about-maru img { border-radius: 14px; }
@@ -640,6 +639,8 @@ body .about-body > section:first-child { padding-top: 0; }
 .recent-journal__card { min-width: 0; border: 1px solid var(--mag-line); border-radius: 14px; background: #fff; overflow: hidden; }
 .recent-journal__card > a { display: flex; flex-direction: column; height: 100%; box-sizing: border-box; padding: 22px; color: inherit; }
 .recent-journal__card > a:hover { background: var(--discovery-soft); }
+.recent-journal__thumbnail { display: block; flex-shrink: 0; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 8px; margin-bottom: 18px; background: var(--discovery-soft); }
+.recent-journal__thumbnail img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .recent-journal__card h3 { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; margin: 0 0 14px; font-size: 16px; font-weight: 600; line-height: 1.8; overflow-wrap: anywhere; }
 .recent-journal__tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0 0 16px; }
 .recent-journal__tags li { max-width: 100%; box-sizing: border-box; border: 1px solid #e6e6e9; border-radius: 999px; padding: 2px 8px; font-size: 11px; line-height: 1.6; color: var(--mag-muted); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }

@@ -30,6 +30,7 @@ $journal_url = $selected ? add_query_arg('article_category', $selected, kihiro_j
         $excerpt = wp_html_excerpt(preg_replace('/\s+/u', ' ', wp_strip_all_tags(strip_shortcodes($excerpt))), 90, '…');
     ?>
     <article class="recent-journal__card"><a href="<?php echo esc_url(get_permalink($entry)); ?>">
+      <span class="recent-journal__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?></span>
       <h3><?php echo esc_html(get_the_title($entry)); ?></h3>
       <?php if ($tags && !is_wp_error($tags)) : ?><ul class="recent-journal__tags" aria-label="タグ"><?php foreach (array_slice($tags, 0, 3) as $tag) : ?><li><?php echo esc_html($tag->name); ?></li><?php endforeach; ?></ul><?php endif; ?>
       <p class="recent-journal__excerpt"><?php echo esc_html($excerpt); ?></p>

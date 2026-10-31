@@ -4,7 +4,7 @@
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <?php
-      $post_tags       = get_the_tag_list('', '');
+      $post_tags       = get_the_tag_list('', ', ');
       $post_categories = get_the_category();
       ?>
       <article class="journal-panel journal-panel--single db-single">
