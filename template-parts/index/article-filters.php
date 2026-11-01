@@ -20,17 +20,17 @@ $filter_url = function ($category, $tag) use ($archive_mode) {
 ?>
 <section class="article-filters" aria-label="記事の絞り込み">
   <nav class="article-filters__categories" aria-label="カテゴリー">
-    <a href="<?php echo esc_url($filter_url(0, $tag_id)); ?>" <?php if (!$category_id) echo 'aria-current="true"'; ?>><?php echo $archive_mode ? 'すべて' : '最新の更新'; ?></a>
+    <a href="<?php echo esc_url($filter_url(0, 0)); ?>" <?php if (!$category_id) echo 'aria-current="true"'; ?>><?php echo $archive_mode ? 'すべて' : '最新の更新'; ?></a>
     <?php foreach ($categories as $category) : ?>
-      <a href="<?php echo esc_url($filter_url($category->term_id, $tag_id)); ?>" <?php if ($category_id === $category->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($category->name); ?></a>
+      <a href="<?php echo esc_url($filter_url($category->term_id, 0)); ?>" <?php if ($category_id === $category->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($category->name); ?></a>
     <?php endforeach; ?>
   </nav>
   <?php if ($archive_mode) : $filter_tags = kihiro_category_filter_tags($category_id); ?>
-    <?php
-      $hidden = array('view' => 'archive-all');
-      if ($category_id) $hidden['article_category'] = $category_id;
-      if (is_date()) $hidden['m'] = get_query_var('m') ?: sprintf('%04d%02d', get_query_var('year'), get_query_var('monthnum'));
-      get_template_part('template-parts/tag-filter', null, array('hidden' => $hidden, 'clear_url' => $filter_url($category_id, 0), 'tags' => $filter_tags));
-    ?>
+    <nav class="article-filters__categories article-filters__tags" aria-label="タグ">
+      <a href="<?php echo esc_url($filter_url($category_id, 0)); ?>" <?php if (!$tag_id) echo 'aria-current="true"'; ?>>すべてのタグ</a>
+      <?php foreach ($filter_tags as $filter_tag) : ?>
+        <a href="<?php echo esc_url($filter_url($category_id, $filter_tag->term_id)); ?>" <?php if ($tag_id === $filter_tag->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($filter_tag->name); ?></a>
+      <?php endforeach; ?>
+    </nav>
   <?php endif; ?>
 </section>

@@ -139,3 +139,5 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), textarea,
 .article-title-list > li > a:hover { color: var(--mag-accent); background: #f8f9fc; }
 @media (max-width: 600px) { .article-title-list { padding-left: 16px; } .article-title-list > li::before { left: -20px; } .article-title-list > li > a { font-size: 14px; } }
 @media (max-width: 600px) { .article-title-list > li { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 12px; } .article-title-list > li > a { padding-top: 4px; } }
+
+.article-filters__tags { margin-top: 12px; }
