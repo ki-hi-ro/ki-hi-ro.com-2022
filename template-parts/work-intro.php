@@ -17,20 +17,10 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
       <a class="work-home__button" href="<?php echo esc_url(kihiro_journal_url()); ?>">毎日更新のブログを読む <span aria-hidden="true">→</span></a>
     </div>
     <p class="work-hero__note">まだ具体的になっていないことも、お聞かせください。メールでお話を伺います。</p>
-    <nav class="work-home__nav" aria-label="トップページの案内"><a href="#work-services">ご相談できること</a><a href="#work-projects">私の経験</a><a href="#work-profile">自己紹介</a><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナル</a></nav>
+    <nav class="work-home__nav" aria-label="トップページの案内"><a href="#work-projects">私の経験</a><a href="#work-profile">自己紹介</a><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナル</a></nav>
   </section>
 
   <?php get_template_part('template-parts/recent-journal'); ?>
-
-  <section class="work-home__section" id="work-services" aria-labelledby="work-services-heading">
-    <header class="work-home__heading"><p class="magazine-eyebrow">HOW I CAN HELP</p><h2 id="work-services-heading">課題が、言葉になっていなくても。</h2><p>特定の技術や作業を決める前に、現場の状況から一緒に考えます。</p></header>
-    <div class="work-services-grid">
-      <article class="work-service"><span class="work-service__number" aria-hidden="true">01</span><h3>課題を整理する</h3><p>何に時間がかかり、どこで困っているのか。作業の流れや既存の資料・システムを確認し、目指す状態と改善する範囲を整理します。</p><details><summary>ご相談の進め方</summary><p>現在の手順、お困りごと、変えたいことを伺います。仕様や解決方法が決まっていなくても構いません。確認すべきことから一緒に整理します。</p></details></article>
-      <article class="work-service"><span class="work-service__number" aria-hidden="true">02</span><h3>必要な仕組みをつくる</h3><p>整理した課題に合わせて、必要な機能や処理を具体化します。既存環境や使う方の手順に合わせ、実装と動作確認を進めます。</p><details><summary>ご相談の進め方</summary><p>対応内容・成果物・確認方法を相談し、費用と納期に合意してから着手します。私の経験で対応できることと、追加の確認が必要なことをお伝えします。</p></details></article>
-      <article class="work-service"><span class="work-service__number" aria-hidden="true">03</span><h3>いまある仕組みを改善する</h3><p>不具合や使いにくさ、移行に伴う問題を、既存の仕様とデータから確認します。影響範囲を確かめながら、必要な修正と検証に取り組みます。</p><details><summary>ご相談の進め方</summary><p>データ、設定、処理の流れなどを分けて原因を調べます。既存の仕組みを生かせるか、新しくする必要があるかも含めて確認します。</p></details></article>
-    </div>
-    <p class="work-home__more"><a href="<?php echo esc_url(get_permalink($services_page)); ?>">進め方・料金について見る <span aria-hidden="true">→</span></a></p>
-  </section>
 
   <?php if ($experience_url) : ?>
   <section class="work-home__section" id="work-projects" aria-labelledby="work-projects-heading">
