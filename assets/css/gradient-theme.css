@@ -82,7 +82,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), textarea,
   .site-main-nav a, .recent-journal__categories a { transition: background-color .25s ease, color .25s ease; }
   :is(.recent-journal__thumbnail, .work-help-article__image, .discovery-artwork) img { transition: transform .7s cubic-bezier(.2,.65,.3,1); }
   @media (hover: hover) {
-    :is(.work-project, .work-help-article > a, .magazine-card__link):hover { transform: translateY(-5px); box-shadow: 0 20px 44px rgb(55 66 105 / 12%); border-color: #bdc9e4; }
+    :is(.work-project, .magazine-card__link):hover { transform: translateY(-5px); box-shadow: 0 20px 44px rgb(55 66 105 / 12%); border-color: #bdc9e4; }
     .work-home__button:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgb(55 66 105 / 14%); }
     :is(.recent-journal__card > a, .work-help-article > a):hover img, .discovery-artwork:hover img { transform: scale(1.035); }
   }
