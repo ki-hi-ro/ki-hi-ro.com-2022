@@ -78,11 +78,11 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), textarea,
 .site-reading-progress { position: fixed; top: 0; inset-inline: 0; height: 3px; background: linear-gradient(90deg, #8cadde, #b9a0d4, #e9b99b); transform: scaleX(0); transform-origin: left; z-index: 100000; pointer-events: none; }
 @media (prefers-reduced-motion: no-preference) {
   :is(.work-home-contact, .work-profile, .services-page__header, .case-hero, .story-hero, .discovery-heading) { background-size: 180% 180%; animation: ambient-drift 18s ease-in-out infinite alternate; }
-  :is(.work-home__button, .work-project, .work-help-article > a, .recent-journal__card, .discovery-artwork, .magazine-card__link) { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+  :is(.work-home__button, .work-project, .work-help-article > a, .discovery-artwork, .magazine-card__link) { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
   .site-main-nav a, .recent-journal__categories a { transition: background-color .25s ease, color .25s ease; }
   :is(.recent-journal__thumbnail, .work-help-article__image, .discovery-artwork) img { transition: transform .7s cubic-bezier(.2,.65,.3,1); }
   @media (hover: hover) {
-    :is(.work-project, .work-help-article > a, .recent-journal__card, .magazine-card__link):hover { transform: translateY(-5px); box-shadow: 0 20px 44px rgb(55 66 105 / 12%); border-color: #bdc9e4; }
+    :is(.work-project, .work-help-article > a, .magazine-card__link):hover { transform: translateY(-5px); box-shadow: 0 20px 44px rgb(55 66 105 / 12%); border-color: #bdc9e4; }
     .work-home__button:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgb(55 66 105 / 14%); }
     :is(.recent-journal__card > a, .work-help-article > a):hover img, .discovery-artwork:hover img { transform: scale(1.035); }
   }
@@ -153,3 +153,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), textarea,
 .work-experiences__controls button:hover:not(:disabled) { background: var(--ambient-gradient); }
 @media (max-width: 700px) { .work-experiences__list { grid-auto-columns: 90%; gap: 16px; } }
 @media print { .work-experiences__list { grid-auto-flow: row; grid-template-columns: 1fr; overflow: visible; } .work-experiences__controls { display: none !important; } }
+
+/* Journal cards remain white and stationary while browsing. */
+.recent-journal__card { background: #fff; }
+.recent-journal__card > a:hover { background: transparent; }
