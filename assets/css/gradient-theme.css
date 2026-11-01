@@ -1,0 +1,109 @@
+/* A shared atmosphere: blue, lavender and peach, with quiet reading surfaces. */
+:root {
+  --mag-paper: #fcfcff;
+  --mag-ink: #252936;
+  --mag-muted: #626878;
+  --mag-line: #dfe3ee;
+  --mag-accent: #485d91;
+  --discovery-soft: #eef1f9;
+  --ambient-gradient: linear-gradient(120deg, #e0ebf8, #eee5f5 55%, #f8e9df);
+  --ambient-shadow: 0 12px 40px rgb(55 66 105 / 6%);
+}
+body { isolation: isolate; }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 0 18%, #e7eef980, transparent 52%), radial-gradient(ellipse at 100% 70%, #eee5f570, transparent 55%);
+}
+::selection { background: #d9dff3; color: #252936; }
+.site-header { position: relative; }
+.site-header__inner { border-bottom-color: var(--mag-line); }
+.site-title { color: #303746; }
+.site-header__menu-row { border-bottom-color: var(--mag-line); }
+.site-header__menu-row .site-main-nav a { border-radius: 999px; }
+.site-header__menu-row .site-main-nav a:hover,
+.site-header__menu-row .site-main-nav a[aria-current] { background: var(--ambient-gradient); color: #303b57; }
+.site-header__category { color: var(--mag-muted); }
+.journal-menu__panel { background: #fcfcff; border-color: var(--mag-line); box-shadow: var(--ambient-shadow); border-radius: 18px; }
+.magazine-eyebrow { color: #5e6d90; letter-spacing: .18em; }
+.work-hero { border-radius: 28px; border: 1px solid #e8eaf2; box-shadow: var(--ambient-shadow); padding-bottom: clamp(40px, 5vw, 72px); }
+.work-hero h2 { letter-spacing: -.04em; }
+.work-home__section { margin-top: clamp(64px, 8vw, 112px); }
+.work-home__heading h2 { font-size: clamp(26px, 3vw, 40px); letter-spacing: -.035em; line-height: 1.5; }
+.work-home__heading > p:last-child { max-width: 48em; margin-inline: auto; }
+.work-home__heading::before {
+  content: ""; display: block; width: 48px; height: 4px; border-radius: 4px;
+  background: linear-gradient(90deg, #99b9e6, #b9a7d6, #e5bb9d); margin: 0 auto 24px;
+}
+.work-profile {
+  padding: clamp(28px, 4vw, 52px); border-radius: 26px;
+  background: linear-gradient(120deg, #e8effa, #f1eaf7 60%, #faeee5);
+  border: 1px solid #e3e4ef; box-shadow: var(--ambient-shadow);
+}
+.work-profile h2 { font-size: clamp(28px, 3vw, 40px); letter-spacing: .06em; }
+.work-home__profile-links a { color: #415780; }
+.recent-journal__card > a, .work-project, .work-help-article > a {
+  background: #ffffffdf; border: 1px solid var(--mag-line); border-radius: 22px;
+  box-shadow: var(--ambient-shadow);
+}
+.recent-journal__thumbnail, .work-help-article__image { border-radius: 20px 20px 0 0; }
+.work-project { position: relative; overflow: hidden; }
+.work-project::before { content: ""; position: absolute; top: 0; inset-inline: 0; height: 4px; background: var(--ambient-gradient); }
+.work-project__label, .work-help-article__topic { color: #5e6d90; }
+.recent-journal__categories a, .article-filters__categories a { border: 1px solid transparent; }
+.recent-journal__categories a:hover, .journal-discovery .article-filters__categories a:hover { background: #e9edf8; }
+.recent-journal__categories a[aria-current], .journal-discovery .article-filters__categories a[aria-current] { background: #354361; color: #fff; }
+.work-home .work-home__button {
+  border-radius: 14px; border-color: #d9dfed; background: #ffffffed;
+  box-shadow: 0 4px 14px rgb(55 66 105 / 4%);
+}
+.work-home .work-home__button--primary { color: #fff; border-color: #30394d; background: linear-gradient(120deg, #293344, #44405b); box-shadow: 0 8px 22px rgb(49 56 85 / 15%); }
+.work-home__button:hover { opacity: 1; }
+.work-home-contact {
+  padding: clamp(32px, 5vw, 64px) 24px; border-radius: 28px; border: 1px solid #e5e4ee;
+  background: var(--ambient-gradient); background-size: 180% 180%;
+}
+/* Carry the same visual language into journal, services and profile pages. */
+:is(.services-page__header, .case-hero, .story-hero, .discovery-heading) {
+  padding: clamp(24px, 4vw, 48px); border-radius: 24px; background: var(--ambient-gradient);
+  border: 1px solid #e4e7f0;
+}
+:is(.services-page__header, .case-hero, .story-hero, .discovery-heading) h1 { letter-spacing: -.035em; }
+.discovery-artwork, .magazine-hero__photo img, .about-maru img { border-radius: 18px; }
+.discovery-tracks li { border-color: var(--mag-line); }
+.discovery-tracks a:hover { background: #edf0f9; }
+.magazine-card__link { border-radius: 18px; }
+:is(.article-body, .about-body, .story-body) h2 { border-color: #a9b6d6; }
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), textarea, select { accent-color: #526893; }
+:is(input, textarea, select):focus-visible { outline-color: #7489bc; }
+.site-footer { padding: 32px clamp(20px, 4vw, 48px); border-radius: 24px 24px 0 0; background: linear-gradient(120deg, #e7eef9, #eee7f4 65%, #f7eae1); border: 1px solid #e2e5ee; }
+.site-footer__bottom { border: 0; padding-top: 0; }
+.floating-page-top { background: #30394d; color: #fff; border: 1px solid #ffffff80; box-shadow: 0 6px 24px #30394d26; }
+.site-reading-progress { position: fixed; top: 0; inset-inline: 0; height: 3px; background: linear-gradient(90deg, #8cadde, #b9a0d4, #e9b99b); transform: scaleX(0); transform-origin: left; z-index: 100000; pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) {
+  :is(.work-home-contact, .work-profile, .services-page__header, .case-hero, .story-hero, .discovery-heading) { background-size: 180% 180%; animation: ambient-drift 18s ease-in-out infinite alternate; }
+  :is(.work-home__button, .work-project, .work-help-article > a, .recent-journal__card > a, .discovery-artwork, .magazine-card__link) { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+  .site-main-nav a, .recent-journal__categories a { transition: background-color .25s ease, color .25s ease; }
+  :is(.recent-journal__thumbnail, .work-help-article__image, .discovery-artwork) img { transition: transform .7s cubic-bezier(.2,.65,.3,1); }
+  @media (hover: hover) {
+    :is(.work-project, .work-help-article > a, .recent-journal__card > a, .magazine-card__link):hover { transform: translateY(-5px); box-shadow: 0 20px 44px rgb(55 66 105 / 12%); border-color: #bdc9e4; }
+    .work-home__button:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgb(55 66 105 / 14%); }
+    :is(.recent-journal__card > a, .work-help-article > a):hover img, .discovery-artwork:hover img { transform: scale(1.035); }
+  }
+}
+@keyframes ambient-drift { from { background-position: 0% 20%; } to { background-position: 100% 80%; } }
+@media (max-width: 700px) {
+  .work-hero { border-radius: 22px; }
+  .work-home__heading h2 { font-size: 26px; }
+  .work-profile { border-radius: 22px; }
+  .work-home-contact { border-radius: 22px; }
+  .site-footer { margin-top: 48px; }
+  .discovery-heading { align-items: flex-start; flex-wrap: wrap; gap: 16px; }
+}
+@media print {
+  body::before, .site-reading-progress { display: none; }
+  .work-profile, .work-home-contact, .site-footer { background: #fff; box-shadow: none; }
+}

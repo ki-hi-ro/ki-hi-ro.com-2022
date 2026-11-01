@@ -63,6 +63,8 @@ function kihiro_enqueue_assets() {
     if (kihiro_is_story()) {
         $styles['kihiro-story'] = '/assets/css/story.css';
     }
+    $styles['kihiro-gradient-theme'] = '/assets/css/gradient-theme.css';
+    wp_enqueue_script('kihiro-gradient-theme', get_theme_file_uri('/assets/js/gradient-theme.js'), array(), kihiro_asset_version('/assets/js/gradient-theme.js'), true);
 
     foreach ($styles as $handle => $relative_path) {
         wp_enqueue_style(
