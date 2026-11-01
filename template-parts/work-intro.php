@@ -16,8 +16,6 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
       <a class="work-home__button work-home__button--primary" href="<?php echo esc_url(home_url('/contact-us/')); ?>">仕事について相談する</a>
       <a class="work-home__button" href="<?php echo esc_url(kihiro_journal_url()); ?>">毎日更新のブログを読む <span aria-hidden="true">→</span></a>
     </div>
-    <p class="work-hero__note">まだ具体的になっていないことも、お聞かせください。メールでお話を伺います。</p>
-    <nav class="work-home__nav" aria-label="トップページの案内"><a href="#work-projects">私の経験</a><a href="#work-profile">自己紹介</a><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナル</a></nav>
   </section>
 
   <?php get_template_part('template-parts/recent-journal'); ?>
