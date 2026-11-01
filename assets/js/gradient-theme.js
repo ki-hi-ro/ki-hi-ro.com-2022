@@ -7,7 +7,7 @@
     const animation = element.animate([
       { opacity: .35, transform: 'translateY(24px)' },
       { opacity: 1, transform: 'translateY(0)' }
-    ], { duration: 700, delay, easing: 'cubic-bezier(.2,.65,.3,1)' });
+    ], { duration: 1000, delay, easing: 'cubic-bezier(.2,.65,.3,1)' });
     animations.add(animation);
     animation.finished.then(() => animations.delete(animation)).catch(() => {});
   };
@@ -19,10 +19,10 @@
     observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        animate(entry.target);
+        animate(entry.target, 120);
         observer.unobserve(entry.target);
       });
-    }, { threshold: .08 });
+    }, { threshold: .08, rootMargin: '0px 0px -80px 0px' });
     document.querySelectorAll('.work-home__heading, .work-profile, .work-project, .work-help-article, .recent-journal__card, .work-home-contact, .discovery-section-heading, .services-page__header, .case-hero, .story-hero').forEach(element => observer.observe(element));
   };
   setup();
