@@ -46,20 +46,7 @@
         <?php $services_page = kihiro_services_page(); if ($services_page) : ?>
           <a href="<?php echo esc_url(get_permalink($services_page)); ?>" <?php if (is_page($services_page->ID)) echo 'aria-current="page"'; ?>>サービス・ご依頼</a>
         <?php endif; ?>
-        <details class="journal-menu<?php if ($journal_active && !$technical_blog_active) echo ' journal-menu--active'; ?>">
-          <summary><a href="<?php echo esc_url(kihiro_journal_url()); ?>" <?php if (!$technical_blog_active && is_home() && in_array(kihiro_get_request_value('view'), array('journal', 'archive-all'), true)) echo 'aria-current="page"'; ?>>日々のジャーナル</a><span class="journal-menu__chevron" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
-          <div class="journal-menu__panel">
-            <div class="journal-menu__categories">
-              <a href="<?php echo esc_url(kihiro_journal_url()); ?>">すべて</a>
-              <?php foreach (array('技術・開発', '思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度') as $menu_category_name) :
-                $menu_category = get_term_by('name', $menu_category_name, 'category');
-                if (!$menu_category instanceof WP_Term) continue;
-              ?>
-                <a href="<?php echo esc_url(add_query_arg(array('view' => 'archive-all', 'article_category' => $menu_category->term_id), home_url('/'))); ?>"><?php echo esc_html($menu_category->name); ?></a>
-              <?php endforeach; ?>
-            </div>
-          </div>
-        </details>
+        <a href="<?php echo esc_url(kihiro_journal_url()); ?>" <?php if ($journal_active && !$technical_blog_active) echo 'aria-current="page"'; ?>>日々のジャーナル</a>
         <?php $about_page = get_page_by_path('about'); if ($about_page && $about_page->post_status === 'publish') : ?>
           <a href="<?php echo esc_url(get_permalink($about_page)); ?>" <?php if (is_page($about_page->ID)) echo 'aria-current="page"'; ?>>自己紹介</a>
         <?php endif; ?>
