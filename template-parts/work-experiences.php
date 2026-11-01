@@ -3,7 +3,12 @@ $experiences = kihiro_work_experiences();
 ?>
 <section class="work-experiences" id="work-experience" aria-labelledby="work-experience-heading">
   <header class="work-home__heading"><p class="magazine-eyebrow">MY EXPERIENCE</p><h2 id="work-experience-heading">私が、現場で取り組んできたこと。</h2><p>実際の業務で、私自身が担当した範囲と、そのときの進め方をまとめています。</p></header>
-  <div class="work-experiences__list">
+  <div class="work-experiences__controls" hidden>
+    <span data-experience-position aria-live="polite"></span>
+    <button type="button" data-experience-prev aria-label="前の経験へ" aria-controls="experience-slides">←</button>
+    <button type="button" data-experience-next aria-label="次の経験へ" aria-controls="experience-slides">→</button>
+  </div>
+  <div class="work-experiences__list" id="experience-slides" role="region" aria-label="実務経験のスライダー" tabindex="0">
     <?php foreach ($experiences as $key => $experience) : ?>
       <article class="work-experience" id="experience-<?php echo esc_attr($key); ?>">
         <p class="work-experience__period"><?php echo esc_html($experience['period']); ?></p>

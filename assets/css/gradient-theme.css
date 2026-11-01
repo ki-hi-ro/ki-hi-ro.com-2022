@@ -141,3 +141,15 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), textarea,
 @media (max-width: 600px) { .article-title-list > li { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 12px; } .article-title-list > li > a { padding-top: 4px; } }
 
 .article-filters__tags { margin-top: 12px; }
+
+/* Full experience cards slide horizontally without reveal effects. */
+.work-experiences__list { position: relative; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: calc((100% - 48px) / 2.15); gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none; padding-bottom: 16px; }
+.work-experiences__list::-webkit-scrollbar { display: none; width: 0; height: 0; }
+.work-experience { min-width: 0; scroll-snap-align: start; }
+.work-experiences__controls:not([hidden]) { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin-bottom: 16px; }
+.work-experiences__controls > span { margin-right: 8px; font-size: 13px; color: var(--mag-muted); font-variant-numeric: tabular-nums; }
+.work-experiences__controls button { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--mag-line); border-radius: 50%; background: #fff; color: var(--mag-ink); font: inherit; font-size: 20px; cursor: pointer; }
+.work-experiences__controls button:disabled { opacity: .3; cursor: default; }
+.work-experiences__controls button:hover:not(:disabled) { background: var(--ambient-gradient); }
+@media (max-width: 700px) { .work-experiences__list { grid-auto-columns: 90%; gap: 16px; } }
+@media print { .work-experiences__list { grid-auto-flow: row; grid-template-columns: 1fr; overflow: visible; } .work-experiences__controls { display: none !important; } }
