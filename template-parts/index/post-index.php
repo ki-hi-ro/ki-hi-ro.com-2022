@@ -91,7 +91,7 @@ if (is_home() && !$is_full_archive) {
       <?php endif; ?>
       <ol class="article-title-list">
         <?php foreach ($entries as $entry) : ?>
-          <li><a href="<?php echo esc_url(get_permalink($entry)); ?>"><?php echo esc_html(get_the_title($entry)); ?></a></li>
+          <li><time datetime="<?php echo esc_attr(get_the_date('c', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d H:i', $entry)); ?></time><a href="<?php echo esc_url(get_permalink($entry)); ?>"><?php echo esc_html(get_the_title($entry)); ?></a></li>
         <?php endforeach; ?>
       </ol>
     </section>

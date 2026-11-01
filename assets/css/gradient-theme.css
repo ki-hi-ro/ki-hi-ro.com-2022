@@ -132,8 +132,10 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), textarea,
 .article-title-year h2 span { margin-left: 5px; font-size: 14px; }
 .article-title-year > header p { margin: 0; color: var(--mag-muted); font-size: 12px; }
 .article-title-list { list-style: none; margin: 0 0 0 5px; padding: 0 0 0 20px; border-left: 1px solid var(--mag-line); }
-.article-title-list > li { position: relative; border-bottom: 1px solid var(--mag-line); }
+.article-title-list > li { position: relative; display: grid; grid-template-columns: 145px minmax(0, 1fr); align-items: baseline; gap: 12px; border-bottom: 1px solid var(--mag-line); }
+.article-title-list > li > time { color: var(--mag-muted); font-size: 12px; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .article-title-list > li::before { content: ""; position: absolute; left: -24px; top: 23px; width: 7px; height: 7px; border-radius: 50%; background: #a6b3ce; }
 .article-title-list > li > a { display: block; padding: 14px 4px; font-size: 15px; font-weight: 500; line-height: 1.8; overflow-wrap: anywhere; }
 .article-title-list > li > a:hover { color: var(--mag-accent); background: #f8f9fc; }
 @media (max-width: 600px) { .article-title-list { padding-left: 16px; } .article-title-list > li::before { left: -20px; } .article-title-list > li > a { font-size: 14px; } }
+@media (max-width: 600px) { .article-title-list > li { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 12px; } .article-title-list > li > a { padding-top: 4px; } }
