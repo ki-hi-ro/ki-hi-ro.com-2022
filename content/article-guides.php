@@ -3,7 +3,7 @@
 return array(
     21845 => array(
         'title' => 'Excelの転記作業を減らしたい方へ｜Pythonでファイル一覧を出力する方法',
-        'heading' => 'Excelの転記作業に時間がかかる方へ',
+        'heading' => 'Excelへの転記を繰り返し、時間がかかる',
         'topic' => 'EXCEL / PYTHON',
         'summary' => 'まずは小さな作業から。フォルダ内のCSVファイル名をExcelへ一覧出力する例と、PythonでExcelを扱い始めたときの記録を紹介します。',
         'intro' => <<<'HTML'
@@ -44,7 +44,7 @@ HTML
     ),
     28408 => array(
         'title' => 'CSVの新規・更新ファイルを見分けたい方へ｜pandas・SQLによる判定の実践記録',
-        'heading' => 'CSVを毎回すべて処理している方へ',
+        'heading' => '更新分だけでよいのに、毎回すべてのCSVを処理している',
         'topic' => 'CSV / DATA PROCESSING',
         'summary' => '取り込み履歴とファイルの最終更新日時を比べ、新規・更新ファイルを判定する考え方を、サンプルと期待結果で解説します。',
         'intro' => <<<'HTML'
@@ -62,8 +62,8 @@ HTML
     ),
     3666 => array(
         'title' => 'サイト変更後、フォームが送れずお困りの方へ｜ドメイン移管時の不具合対応記録',
-        'heading' => 'サイト変更後、フォームが送れない方へ',
-        'heading_parts' => array('サイト変更後、', 'フォームが送れない方へ'),
+        'heading' => 'サイト変更後、問い合わせフォームが送れなくなった',
+        'heading_parts' => array('サイト変更後、', '問い合わせフォームが送れなくなった'),
         'topic' => 'WEB / MAINTENANCE',
         'summary' => 'ドメイン変更後に問い合わせフォームが動かなくなった経験から、原因の確認と、納品前のチェックについて振り返ります。',
         'intro' => <<<'HTML'

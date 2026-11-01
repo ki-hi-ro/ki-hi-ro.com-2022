@@ -22,8 +22,6 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
 
   <?php get_template_part('template-parts/recent-journal'); ?>
 
-  <?php get_template_part('template-parts/work-reasons'); ?>
-
   <section class="work-home__section" id="work-services" aria-labelledby="work-services-heading">
     <header class="work-home__heading"><p class="magazine-eyebrow">HOW I CAN HELP</p><h2 id="work-services-heading">課題が、言葉になっていなくても。</h2><p>特定の技術や作業を決める前に、現場の状況から一緒に考えます。</p></header>
     <div class="work-services-grid">
@@ -52,8 +50,6 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
   </section>
   <?php endif; ?>
 
-  <?php get_template_part('template-parts/work-learning-approach'); ?>
-
   <?php get_template_part('template-parts/work-help-articles'); ?>
 
   <section class="work-profile" id="work-profile" aria-labelledby="work-profile-heading">
@@ -61,5 +57,5 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
     <div><p>Web制作、データ処理の移行、API開発、システム保守などを経験してきました。既存の仕組みや仕様を読み解き、確認しながら改善を進めることを大切にしています。日々の試行錯誤も、このブログに残しています。</p><div class="work-home__profile-links"><?php $about_page = get_page_by_path('about'); if ($about_page && 'publish' === $about_page->post_status) : ?><a href="<?php echo esc_url(get_permalink($about_page)); ?>">自己紹介を読む →</a><?php endif; ?><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナルを読む →</a></div></div>
   </section>
 
-  <section class="work-home-contact" aria-labelledby="work-contact-heading"><h2 id="work-contact-heading">まずは、今のお困りごとから。</h2><p>「この作業を減らしたい」「この機能をつくりたい」。<br>要件を確認して、対応可否と個別のお見積もりをご案内します。</p><a class="work-home__button work-home__button--primary" href="<?php echo esc_url(home_url('/contact-us/')); ?>">メールでの相談へ進む <span aria-hidden="true">→</span></a><p class="work-home-contact__note">フォームからお送りいただき、メールでやりとりします。</p></section>
+  <section class="work-home-contact" aria-labelledby="work-contact-heading"><h2 id="work-contact-heading">まずは、今のお困りごとから。</h2><p>「この作業を減らしたい」「この機能をつくりたい」。<br>要件を確認して、対応可否と個別のお見積もりをご案内します。</p><a class="work-home__button work-home__button--primary" href="<?php echo esc_url(home_url('/contact-us/')); ?>">メールでの相談へ進む <span aria-hidden="true">→</span></a><p class="work-home-contact__note">フォームからお送りいただいた後、メールを中心に、必要に応じてWeb会議も交えてお話を伺います。</p></section>
 </div>
