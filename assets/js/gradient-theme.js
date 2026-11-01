@@ -23,7 +23,7 @@
         observer.unobserve(entry.target);
       });
     }, { threshold: .08, rootMargin: '0px 0px -80px 0px' });
-    document.querySelectorAll('.work-home__heading, .work-profile, .work-project, .work-help-article, .recent-journal__card, .work-home-contact, .discovery-section-heading, .services-page__header, .case-hero, .story-hero').forEach(element => observer.observe(element));
+    document.querySelectorAll('.work-home__heading, .work-profile, .work-project, .work-help-article, .work-home-contact, .discovery-section-heading, .services-page__header, .case-hero, .story-hero').forEach(element => observer.observe(element));
   };
   setup();
   preference.addEventListener('change', setup);
