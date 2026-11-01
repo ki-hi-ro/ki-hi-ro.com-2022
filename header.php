@@ -4,7 +4,7 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f6fc">
+  <meta name="theme-color" content="#ffffff">
   <meta name="color-scheme" content="light">
   <?php wp_head(); ?>
   <!-- Google Analytics 4 -->

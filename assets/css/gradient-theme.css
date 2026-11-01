@@ -1,6 +1,6 @@
 /* A shared atmosphere: blue, lavender and peach, with quiet reading surfaces. */
 :root {
-  --mag-paper: #f5f6fc;
+  --mag-paper: #fff;
   --mag-ink: #252936;
   --mag-muted: #626878;
   --mag-line: #dfe3ee;
@@ -10,14 +10,6 @@
   --ambient-shadow: 0 12px 40px rgb(55 66 105 / 6%);
 }
 body { isolation: isolate; }
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: radial-gradient(ellipse at 0 18%, #e7eef980, transparent 52%), radial-gradient(ellipse at 100% 70%, #eee5f570, transparent 55%);
-}
 ::selection { background: #d9dff3; color: #252936; }
 .site-header { position: relative; }
 .site-header__inner { border-bottom-color: var(--mag-line); }
