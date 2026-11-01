@@ -25,12 +25,4 @@ $filter_url = function ($category, $tag) use ($archive_mode) {
       <a href="<?php echo esc_url($filter_url($category->term_id, 0)); ?>" <?php if ($category_id === $category->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($category->name); ?></a>
     <?php endforeach; ?>
   </nav>
-  <?php if ($archive_mode) : $filter_tags = kihiro_category_filter_tags($category_id); ?>
-    <nav class="article-filters__categories article-filters__tags" aria-label="タグ">
-      <a href="<?php echo esc_url($filter_url($category_id, 0)); ?>" <?php if (!$tag_id) echo 'aria-current="true"'; ?>>すべてのタグ</a>
-      <?php foreach ($filter_tags as $filter_tag) : ?>
-        <a href="<?php echo esc_url($filter_url($category_id, $filter_tag->term_id)); ?>" <?php if ($tag_id === $filter_tag->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($filter_tag->name); ?></a>
-      <?php endforeach; ?>
-    </nav>
-  <?php endif; ?>
 </section>
