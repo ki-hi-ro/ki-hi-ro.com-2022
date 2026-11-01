@@ -131,3 +131,26 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), textarea,
 .work-home-contact__phrase { display: inline-block; max-width: 100%; }
 .work-home-contact__note { text-wrap: pretty; }
 @media (max-width: 360px) { .work-home-contact h2 { font-size: 20px; } }
+
+/* Image-first archive: ten compact tiles per desktop row. */
+.article-timeline.article-gallery-view { width: min(100%, 1600px); max-width: 1600px; margin-inline: auto; }
+.article-gallery-year { margin: 0 0 48px; scroll-margin-top: 24px; }
+.article-gallery-year > header { display: flex; align-items: baseline; gap: 16px; margin: 0 0 20px; }
+.article-gallery-year h2 { margin: 0; font-size: 26px; font-weight: 600; }
+.article-gallery-year h2 span { margin-left: 5px; font-size: 14px; }
+.article-gallery-year > header p { margin: 0; color: var(--mag-muted); font-size: 12px; }
+.article-gallery-grid { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 24px 14px; list-style: none; padding: 0; margin: 0; }
+.article-gallery-card { min-width: 0; }
+.article-gallery-card > a { display: flex; flex-direction: column; gap: 7px; height: 100%; border-radius: 10px; }
+.article-gallery-card__image { display: block; width: 100%; aspect-ratio: 1; overflow: hidden; border-radius: 10px; background: #edf0f7; }
+.article-gallery-card__image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.article-gallery-card__title { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; font-size: 13px; font-weight: 500; line-height: 1.65; overflow-wrap: anywhere; }
+.article-gallery-card time { color: var(--mag-muted); font-size: 10px; font-variant-numeric: tabular-nums; }
+.article-gallery-card > a:hover .article-gallery-card__title { color: var(--mag-accent); }
+@media (prefers-reduced-motion: no-preference) and (hover: hover) {
+  .article-gallery-card__image img { transition: transform .45s ease; }
+  .article-gallery-card > a:hover img { transform: scale(1.045); }
+}
+@media (max-width: 1279px) { .article-gallery-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+@media (max-width: 1000px) { .article-gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .article-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; } .article-gallery-card__title { font-size: 14px; } }
