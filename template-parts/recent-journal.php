@@ -9,7 +9,7 @@ $selected = absint(kihiro_get_request_value('recent_category'));
 if (!isset($categories[$selected])) $selected = 0;
 $args = array(
     'post_type' => 'post', 'post_status' => 'publish', 'has_password' => false,
-    'posts_per_page' => 3, 'ignore_sticky_posts' => true,
+    'posts_per_page' => 9, 'ignore_sticky_posts' => true,
     'post__not_in' => kihiro_excluded_post_ids(), 'orderby' => array('modified' => 'DESC', 'ID' => 'DESC'),
 );
 if ($selected) $args['cat'] = $selected;
@@ -23,7 +23,12 @@ $journal_url = $selected ? add_query_arg('article_category', $selected, kihiro_j
     <?php foreach ($categories as $term) : ?><a href="<?php echo esc_url(add_query_arg('recent_category', $term->term_id, home_url('/')) . '#recent-journal'); ?>" <?php if ($selected === $term->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($term->name); ?></a><?php endforeach; ?>
   </nav>
   <p class="screen-reader-text" role="status" aria-live="polite" data-recent-journal-status></p>
-  <div class="recent-journal__grid">
+  <div class="recent-journal__slider-controls" hidden>
+    <span data-journal-position aria-live="polite"></span>
+    <button type="button" data-journal-prev aria-label="前の記事へ" aria-controls="recent-journal-slides">←</button>
+    <button type="button" data-journal-next aria-label="次の記事へ" aria-controls="recent-journal-slides">→</button>
+  </div>
+  <div class="recent-journal__grid" id="recent-journal-slides" tabindex="0" role="region" aria-label="最近更新した記事のスライダー">
     <?php foreach ($recent as $entry) :
         $tags = get_the_tags($entry->ID);
         $excerpt = $entry->post_excerpt ?: $entry->post_content;

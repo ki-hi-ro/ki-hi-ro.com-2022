@@ -107,3 +107,20 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), textarea,
   body::before, .site-reading-progress { display: none; }
   .work-profile, .work-home-contact, .site-footer { background: #fff; box-shadow: none; }
 }
+
+/* Recent journal: native swipe and keyboard scrolling, with explicit controls. */
+.recent-journal__grid {
+  position: relative; display: grid; grid-template-columns: none; grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 40px) / 3); gap: 20px;
+  overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0; padding: 6px 0 20px; scrollbar-width: thin; scrollbar-color: #b8c4de transparent;
+}
+.recent-journal__card { scroll-snap-align: start; }
+.recent-journal__slider-controls:not([hidden]) { display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin: 0 0 16px; }
+.recent-journal__slider-controls > span { color: var(--mag-muted); font-size: 13px; font-variant-numeric: tabular-nums; margin-right: 8px; }
+.recent-journal__slider-controls button { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid #d9dfed; border-radius: 50%; background: #fff; color: var(--mag-ink); font: inherit; font-size: 20px; cursor: pointer; }
+.recent-journal__slider-controls button:hover:not(:disabled) { background: var(--ambient-gradient); }
+.recent-journal__slider-controls button:disabled { opacity: .3; cursor: default; }
+@media (max-width: 1100px) { .recent-journal__grid { grid-auto-columns: calc((100% - 20px) / 2); } }
+@media (max-width: 700px) { .recent-journal__grid { grid-auto-columns: 88%; gap: 14px; } }
+@media print { .recent-journal__grid { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); overflow: visible; } .recent-journal__slider-controls { display: none !important; } }
