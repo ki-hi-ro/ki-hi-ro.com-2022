@@ -64,6 +64,7 @@ function kihiro_enqueue_assets() {
         $styles['kihiro-story'] = '/assets/css/story.css';
     }
     $styles['kihiro-gradient-theme'] = '/assets/css/gradient-theme.css';
+    $styles['kihiro-editorial-theme'] = '/assets/css/editorial-theme.css';
     wp_enqueue_script('kihiro-gradient-theme', get_theme_file_uri('/assets/js/gradient-theme.js'), array(), kihiro_asset_version('/assets/js/gradient-theme.js'), true);
     wp_enqueue_script('kihiro-experience-slider', get_theme_file_uri('/assets/js/experience-slider.js'), array(), kihiro_asset_version('/assets/js/experience-slider.js'), true);
 

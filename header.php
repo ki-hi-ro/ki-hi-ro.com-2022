@@ -50,6 +50,7 @@
         <?php $about_page = get_page_by_path('about'); if ($about_page && $about_page->post_status === 'publish') : ?>
           <a href="<?php echo esc_url(get_permalink($about_page)); ?>" <?php if (is_page($about_page->ID)) echo 'aria-current="page"'; ?>>自己紹介</a>
         <?php endif; ?>
+        <a class="site-main-nav__contact" href="<?php echo esc_url(home_url('/contact-us/')); ?>" <?php if (is_page('contact-us')) echo 'aria-current="page"'; ?>>仕事のご相談</a>
       </nav>
     </div>
   </header>

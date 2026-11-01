@@ -14,7 +14,7 @@ $articles = new WP_Query(array(
 $entries = $technical_category instanceof WP_Term ? $articles->posts : array();
 $total_pages = $technical_category instanceof WP_Term ? (int) $articles->max_num_pages : 0;
 ?>
-<main id="main-content" class="article-timeline article-timeline--cards case-study-timeline">
+<main id="main-content" class="article-timeline article-timeline--cards case-study-timeline technical-reading-list">
 <h1 class="screen-reader-text">技術ブログ</h1>
 <?php while (have_posts()) : the_post(); ?>
   <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
