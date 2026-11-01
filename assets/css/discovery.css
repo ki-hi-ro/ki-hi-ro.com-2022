@@ -371,6 +371,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .work-hero__lead { color: var(--mag-muted); font-size: clamp(15px, 1.5vw, 18px); line-height: 1.9; max-width: 800px; margin: 0 auto; }
 .work-hero__statement { max-width: 36em; margin: 0 auto 24px; color: var(--mag-ink); font-size: clamp(15px, 1.5vw, 18px); line-height: 2; text-wrap: pretty; }
 .work-home__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin: 32px 0 20px; }
+.work-home__actions > .work-home__button { box-sizing: border-box; width: 244px; max-width: 100%; }
 .work-home .work-home__button { display: inline-flex; align-items: center; justify-content: center; gap: 14px; min-height: 48px; padding: 12px 24px; border: 1px solid #dedee1; border-radius: 10px; background: #fff; color: var(--mag-ink); font-size: 15px; line-height: 1.6; text-decoration: none; }
 .work-home .work-home__button--primary { border-color: #292929; background: #292929; color: #fff; }
 .work-home__button:hover { opacity: .8; }
