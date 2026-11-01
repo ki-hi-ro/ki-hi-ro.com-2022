@@ -157,3 +157,24 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), textarea,
 /* Journal cards remain white and stationary while browsing. */
 .recent-journal__card { background: #fff; }
 .recent-journal__card > a:hover { background: transparent; }
+
+/* The three home panels share a clearly flowing, softly blended gradient. */
+.work-profile, .work-home-contact { position: relative; isolation: isolate; overflow: hidden; background: #fafafb; animation: none; }
+.work-hero::before, .work-profile::before, .work-home-contact::before {
+  content: ""; position: absolute; inset: -35%; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 15% 25%, #cfdef3 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 35%, #e7d7f1 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 85%, #f7dfcc 0%, transparent 55%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .work-hero::before, .work-profile::before, .work-home-contact::before { animation: home-gradient-flow 14s ease-in-out infinite alternate; }
+  .work-profile::before { animation-delay: -5s; }
+  .work-home-contact::before { animation-delay: -10s; }
+}
+@keyframes home-gradient-flow {
+  0% { transform: translate(-10%, -7%) rotate(-10deg) scale(1.05); }
+  50% { transform: translate(8%, -3%) rotate(8deg) scale(1.12); }
+  100% { transform: translate(3%, 10%) rotate(-4deg) scale(1.06); }
+}
+@media print { .work-hero::before, .work-profile::before, .work-home-contact::before { display: none; } }
