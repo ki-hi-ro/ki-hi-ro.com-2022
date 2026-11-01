@@ -1,6 +1,6 @@
 /* A shared atmosphere: blue, lavender and peach, with quiet reading surfaces. */
 :root {
-  --mag-paper: #fcfcff;
+  --mag-paper: #f5f6fc;
   --mag-ink: #252936;
   --mag-muted: #626878;
   --mag-line: #dfe3ee;
@@ -45,11 +45,12 @@ body::before {
 }
 .work-profile h2 { font-size: clamp(28px, 3vw, 40px); letter-spacing: .06em; }
 .work-home__profile-links a { color: #415780; }
-.recent-journal__card > a, .work-project, .work-help-article > a {
+.recent-journal__card, .work-project, .work-help-article > a {
   background: #ffffffdf; border: 1px solid var(--mag-line); border-radius: 22px;
   box-shadow: var(--ambient-shadow);
 }
-.recent-journal__thumbnail, .work-help-article__image { border-radius: 20px 20px 0 0; }
+.recent-journal__card > a { border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.recent-journal__thumbnail, .work-help-article__image { border-radius: 0; }
 .work-project { position: relative; overflow: hidden; }
 .work-project::before { content: ""; position: absolute; top: 0; inset-inline: 0; height: 4px; background: var(--ambient-gradient); }
 .work-project__label, .work-help-article__topic { color: #5e6d90; }
@@ -85,11 +86,11 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), textarea,
 .site-reading-progress { position: fixed; top: 0; inset-inline: 0; height: 3px; background: linear-gradient(90deg, #8cadde, #b9a0d4, #e9b99b); transform: scaleX(0); transform-origin: left; z-index: 100000; pointer-events: none; }
 @media (prefers-reduced-motion: no-preference) {
   :is(.work-home-contact, .work-profile, .services-page__header, .case-hero, .story-hero, .discovery-heading) { background-size: 180% 180%; animation: ambient-drift 18s ease-in-out infinite alternate; }
-  :is(.work-home__button, .work-project, .work-help-article > a, .recent-journal__card > a, .discovery-artwork, .magazine-card__link) { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+  :is(.work-home__button, .work-project, .work-help-article > a, .recent-journal__card, .discovery-artwork, .magazine-card__link) { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
   .site-main-nav a, .recent-journal__categories a { transition: background-color .25s ease, color .25s ease; }
   :is(.recent-journal__thumbnail, .work-help-article__image, .discovery-artwork) img { transition: transform .7s cubic-bezier(.2,.65,.3,1); }
   @media (hover: hover) {
-    :is(.work-project, .work-help-article > a, .recent-journal__card > a, .magazine-card__link):hover { transform: translateY(-5px); box-shadow: 0 20px 44px rgb(55 66 105 / 12%); border-color: #bdc9e4; }
+    :is(.work-project, .work-help-article > a, .recent-journal__card, .magazine-card__link):hover { transform: translateY(-5px); box-shadow: 0 20px 44px rgb(55 66 105 / 12%); border-color: #bdc9e4; }
     .work-home__button:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgb(55 66 105 / 14%); }
     :is(.recent-journal__card > a, .work-help-article > a):hover img, .discovery-artwork:hover img { transform: scale(1.035); }
   }
@@ -113,8 +114,9 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), textarea,
   position: relative; display: grid; grid-template-columns: none; grid-auto-flow: column;
   grid-auto-columns: calc((100% - 60px) / 3.2); gap: 20px;
   overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
-  scroll-padding-inline: 0; padding: 6px 0 20px; scrollbar-width: thin; scrollbar-color: #b8c4de transparent;
+  scroll-padding-inline: 0; padding: 6px 0 20px; scrollbar-width: none;
 }
+.recent-journal__grid::-webkit-scrollbar { display: none; width: 0; height: 0; }
 .recent-journal__card { scroll-snap-align: start; }
 .recent-journal__slider-controls:not([hidden]) { display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin: 0 0 16px; }
 .recent-journal__slider-controls > span { color: var(--mag-muted); font-size: 13px; font-variant-numeric: tabular-nums; margin-right: 8px; }
