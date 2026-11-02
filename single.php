@@ -43,7 +43,6 @@
 
 
 
-        <?php get_template_part('template-parts/article-technology-map'); ?>
 
         <?php get_template_part('template-parts/related-work-experience'); ?>
 
@@ -55,11 +54,7 @@
 
         <?php get_template_part('template-parts/article-like'); ?>
 
-        <?php if (comments_open() || get_comments_number()) : ?>
-          <?php comments_template(); ?>
-        <?php endif; ?>
 
-        <?php get_template_part('template-parts/article-post-timeline'); ?>
 
         <?php
         $previous_post = get_previous_post();
