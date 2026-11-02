@@ -338,3 +338,8 @@ body .db-single__content h2 { margin: 64px 0 26px; padding: 18px 0 0; border: 0;
 /* Article reading uses space, rather than horizontal rules, between sections. */
 .article-detail-layout .db-single__content :is(hr, .wp-block-separator) { display: none; }
 body .article-detail-layout .db-single__content :is(h2, h3) { border: 0; }
+
+/* Give embedded article cards breathing room before the following paragraph. */
+.db-single__content .wp-block-embed { margin: 40px 0; }
+.db-single__content .wp-block-embed + p { margin-top: 0; }
+@media (max-width: 700px) { .db-single__content .wp-block-embed { margin-block: 32px; } }
