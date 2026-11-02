@@ -28,6 +28,7 @@ function kihiro_enqueue_assets() {
     wp_enqueue_script('kihiro-category-scroll', get_theme_file_uri('/assets/js/category-scroll.js'), array(), kihiro_asset_version('/assets/js/category-scroll.js'), true);
     // 記事本文がある画面だけでレイアウト・コードコピーを読み込み、他画面の処理を抑える。
     if (is_single() || is_page_template('page-case-study.php')) {
+        wp_enqueue_script('kihiro-article-tables', get_theme_file_uri('/assets/js/article-tables.js'), array(), kihiro_asset_version('/assets/js/article-tables.js'), true);
         wp_enqueue_script(
             'kihiro-code-copy',
             get_theme_file_uri('/assets/js/code-copy.js'),

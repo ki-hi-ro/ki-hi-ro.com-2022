@@ -497,3 +497,32 @@ body.keyboard-focus .contact-index .work-contact :is(input,select,textarea):focu
 /* Keep body headings close enough to the preceding paragraph. */
 body .article-detail-layout .db-single__content h2 { margin-top: 32px; padding-top: 0; }
 body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-top: 0; }
+
+/* Preserve readable table columns without widening the mobile page. */
+.article-detail-layout .db-single__content :is(.wp-block-table, .article-table-scroll) {
+ max-width: 100%;
+ overflow-x: auto;
+ -webkit-overflow-scrolling: touch;
+ margin: 24px 0;
+}
+@media (max-width: 700px) {
+ .article-detail-layout .db-single__content table {
+  width: max-content;
+  min-width: 100%;
+  max-width: none;
+  table-layout: auto;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.8;
+ }
+ .article-detail-layout .db-single__content :is(th, td) {
+  min-width: 100px;
+  max-width: 320px;
+  padding: 12px 16px;
+  vertical-align: top;
+  word-break: normal;
+  overflow-wrap: break-word;
+  border: 1px solid #ddd;
+ }
+ .article-detail-layout .db-single__content th { background: #f5f5f5; text-align: left; }
+}
