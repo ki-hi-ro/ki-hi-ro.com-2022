@@ -28,7 +28,7 @@ get_header(); ?>
   $current_page = max(1, (int) get_query_var('paged'), (int) get_query_var('page'));
   $cases = array_slice($cases, ($current_page - 1) * $per_page, $per_page);
   ?>
-  <h1 class="screen-reader-text">開発事例</h1>
+  <?php get_template_part('template-parts/page-heading', null, array('eyebrow' => 'SELECTED WORKS', 'title' => '開発事例', 'description' => '制作案件・個人開発・サンプルを通して、技術と解決への取り組みをご紹介します。')); ?>
   <?php $experience_page = get_page_by_path('about'); if ($experience_page && 'publish' === $experience_page->post_status) : ?>
   <?php endif; ?>
   <section class="article-filters" aria-label="開発事例の絞り込み">

@@ -15,7 +15,7 @@ $entries = $technical_category instanceof WP_Term ? $articles->posts : array();
 $total_pages = $technical_category instanceof WP_Term ? (int) $articles->max_num_pages : 0;
 ?>
 <main id="main-content" class="article-timeline article-timeline--cards case-study-timeline technical-reading-list">
-<h1 class="screen-reader-text">技術ブログ</h1>
+<?php get_template_part('template-parts/page-heading', null, array('eyebrow' => 'TECHNICAL JOURNAL', 'title' => '技術ブログ', 'description' => 'Web制作と業務自動化の学びを、実践の記録から。')); ?>
 <?php while (have_posts()) : the_post(); ?>
   <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
     <div class="article-create"><a class="article-edit__link" href="<?php echo esc_url(kihiro_new_post_url($technical_category instanceof WP_Term ? $technical_category->term_id : 0)); ?>"><span aria-hidden="true">＋</span> 新規投稿</a></div>

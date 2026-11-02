@@ -3,13 +3,11 @@
 <?php if (is_page('contact-us')) : ?>
   <main id="main-content" class="case-page case-index contact-index">
     <?php while (have_posts()) : the_post(); ?>
-      <figure class="article-timeline__main-view">
-        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/contact-main-view.jpg')); ?>" width="4032" height="3024" alt="街中で豊かに育つ草木の風景" fetchpriority="high" decoding="async">
-      </figure>
+      <?php get_template_part('template-parts/page-heading', null, array('eyebrow' => 'CONTACT', 'title' => '仕事のご相談', 'description' => 'いまのお困りごとや、実現したいことをお聞かせください。')); ?>
       <article class="contact-page">
-        <header class="case-hero">
+        <div class="contact-page__body">
           <div class="case-content"><?php the_content(); ?></div>
-        </header>
+        </div>
       </article>
     <?php endwhile; ?>
   </main>
@@ -21,7 +19,7 @@
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <article class="journal-panel journal-panel--single db-single">
-        <h1><?php the_title(); ?></h1>
+        <?php get_template_part('template-parts/page-heading', null, array('eyebrow' => 'INFORMATION')); ?>
         <div class="db-single__content">
           <?php the_content(); ?>
         </div>

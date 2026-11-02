@@ -9,8 +9,10 @@
       ?>
       <article class="journal-panel journal-panel--single db-single">
 
+        <header class="interior-heading interior-heading--article">
         <p class="journal-single-date"><?php echo esc_html(get_the_date('Y年n月j日 G時i分')); ?></p>
         <h1><?php echo esc_html(get_the_title()); ?></h1>
+        </header>
         <?php if (is_user_logged_in() && (current_user_can('edit_post', get_the_ID()) || current_user_can('edit_posts'))) : ?>
           <div class="article-edit article-edit--actions">
             <?php $edit_url = current_user_can('edit_post', get_the_ID()) ? get_edit_post_link(get_the_ID(), 'raw') : ''; ?>

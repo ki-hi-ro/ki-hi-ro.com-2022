@@ -156,3 +156,49 @@ body .db-single__content h2 { margin: 64px 0 26px; padding: 18px 0 0; border: 0;
 @media (max-width: 1000px) and (min-width: 701px) { .work-hero--business { grid-template-columns: 1fr; } .work-hero--business h2 { grid-row: auto; } .work-hero--business > * { grid-column: 1; } }
 @media (max-width: 700px) { .work-hero--business h2 { font-size: clamp(24px, 6.5vw, 40px); } .work-hero--business .work-hero__statement { font-size: 15px; } }
 @media (max-width: 360px) { .work-hero--business h2 { font-size: 20px; } }
+
+/* Interior pages share the service page's quiet, centered introduction. */
+#main-content :is(.interior-heading, .services-page__header, .story-hero),
+#main-content > .article-timeline__header {
+  display: block; box-sizing: border-box; width: 100%; max-width: none;
+  margin: 0 0 44px; padding: 48px 32px; border: 0; border-radius: 12px;
+  background: #f5f5f5; box-shadow: none; text-align: center;
+}
+#main-content :is(.interior-heading, .services-page__header, .story-hero) h1,
+#main-content > .article-timeline__header h1 {
+  max-width: 28em; margin: 16px auto 24px; padding: 0;
+  font-size: clamp(26px, 3vw, 36px); font-weight: 600; line-height: 1.65;
+  letter-spacing: -.025em; text-align: center; overflow-wrap: anywhere;
+}
+#main-content :is(.interior-heading, .services-page__header, .story-hero) > :is(.magazine-eyebrow, .story-eyebrow),
+#main-content > .article-timeline__header .magazine-eyebrow {
+  margin: 0; color: #707070; font-size: 10px; font-weight: 600; letter-spacing: .18em;
+}
+#main-content .interior-heading__description,
+#main-content .services-page__header > p:not(.magazine-eyebrow),
+#main-content > .article-timeline__header > div > p:not(.magazine-eyebrow) {
+  max-width: 48em; margin: 0 auto; font-size: 15px; line-height: 1.9; color: #656565; text-align: center;
+}
+#main-content .services-page__header .work-entry__links { margin-top: 28px; }
+#main-content > .article-timeline__header .article-timeline__total { justify-content: center; margin-top: 24px; }
+#main-content .interior-heading--article .journal-single-date { margin: 0; color: #707070; font-size: 12px; }
+#main-content .interior-heading--article h1 { margin-bottom: 0; }
+#main-content .story-hero .story-intro { max-width: 48em; margin-inline: auto; }
+#main-content .story-hero .story-back { display: block; margin-bottom: 24px; }
+#main-content .story-hero h1 > span { display: inline; }
+#main-content .contact-page__body { max-width: 900px; margin-inline: auto; }
+#main-content .contact-page__body .case-content { padding: 0; }
+#main-content .interior-heading + .article-filters { margin-top: 0; }
+#main-content .work-experience { box-shadow: none; border: 0; }
+@media (max-width: 700px) {
+  #main-content :is(.interior-heading, .services-page__header, .story-hero),
+  #main-content > .article-timeline__header { padding: 32px 22px; margin-bottom: 32px; border-radius: 10px; }
+  #main-content :is(.interior-heading, .services-page__header, .story-hero) h1,
+  #main-content > .article-timeline__header h1 { font-size: 26px; margin-block: 12px 18px; }
+  #main-content .interior-heading--article h1 { font-size: 24px; margin-bottom: 0; }
+  #main-content .interior-heading__description,
+  #main-content .services-page__header > p:not(.magazine-eyebrow),
+  #main-content > .article-timeline__header > div > p:not(.magazine-eyebrow) { font-size: 14px; }
+  #main-content > .article-timeline__header > div { text-align: center; }
+  #main-content > .article-timeline__header .article-timeline__total { align-self: auto; }
+}
