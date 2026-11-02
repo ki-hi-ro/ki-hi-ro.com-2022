@@ -4,7 +4,6 @@ if (!$services_page) return;
 ?>
 <div class="work-home">
   <section class="work-hero work-hero--business" aria-labelledby="work-intro-heading">
-    <p class="magazine-eyebrow">個人事業主・Webエンジニア / 柴田浩貴</p>
     <h2 id="work-intro-heading"><span>小さな事業の、</span><span>WebとITをシンプルに。</span></h2>
     <p class="work-hero__statement">個人事業主・小規模事業者向けに、ホームページ制作や日々の業務を効率化する仕組みづくりをお手伝いします。</p>
     <p class="work-hero__lead">新しくつくることも、いまある仕組みを改善することも。<br>お困りごとを伺い、必要な対応を一緒に整理します。</p>

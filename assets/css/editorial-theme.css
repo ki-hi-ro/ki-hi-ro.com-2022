@@ -450,3 +450,4 @@ body.keyboard-focus .contact-index .work-contact :is(input,select,textarea):focu
 .article-detail-layout > .journal-panel--single,
 .article-detail-layout > .article-detail-heading { width: 100%; max-width: 800px; margin-inline: auto; }
 .article-detail-layout .article-toc { display: none; }
+@media (min-width: 1001px) { .work-hero--business h2 { grid-row: 1 / 4; } }
