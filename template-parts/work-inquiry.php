@@ -26,7 +26,7 @@ if (!$case_detail && $case_index) {
     <ul class="work-entry__cases"><?php foreach ($related_cases as $case) : ?><li><a href="<?php echo esc_url(get_permalink($case)); ?>"><?php echo esc_html(get_the_title($case)); ?></a></li><?php endforeach; ?></ul>
   <?php endif; ?>
   <div class="work-entry__links">
-    <a href="<?php echo esc_url(get_permalink($services_page)); ?>">サービス・ご依頼</a>
+    <a href="<?php echo esc_url(get_permalink($services_page)); ?>">できること</a>
     <?php if (!$case_detail && $case_index) : ?><a href="<?php echo esc_url(get_permalink($case_index)); ?>">開発事例を見る</a><?php endif; ?>
     <a href="<?php echo esc_url(home_url('/contact-us/')); ?>">相談する</a>
   </div>

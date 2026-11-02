@@ -44,13 +44,13 @@
           <a href="<?php echo esc_url(get_permalink($technical_blog_page)); ?>" <?php if ($technical_blog_active) echo 'aria-current="page"'; ?>>技術ブログ</a>
         <?php endif; ?>
         <?php $services_page = kihiro_services_page(); if ($services_page) : ?>
-          <a href="<?php echo esc_url(get_permalink($services_page)); ?>" <?php if (is_page($services_page->ID)) echo 'aria-current="page"'; ?>>サービス・ご依頼</a>
+          <a href="<?php echo esc_url(get_permalink($services_page)); ?>" <?php if (is_page($services_page->ID)) echo 'aria-current="page"'; ?>>できること</a>
         <?php endif; ?>
         <a href="<?php echo esc_url(kihiro_journal_url()); ?>" <?php if ($journal_active && !$technical_blog_active) echo 'aria-current="page"'; ?>>日々のジャーナル</a>
         <?php $about_page = get_page_by_path('about'); if ($about_page && $about_page->post_status === 'publish') : ?>
           <a href="<?php echo esc_url(get_permalink($about_page)); ?>" <?php if (is_page($about_page->ID)) echo 'aria-current="page"'; ?>>自己紹介</a>
         <?php endif; ?>
-        <a class="site-main-nav__contact" href="<?php echo esc_url(home_url('/contact-us/')); ?>" <?php if (is_page('contact-us')) echo 'aria-current="page"'; ?>>仕事のご相談</a>
+        <a class="site-main-nav__contact" href="<?php echo esc_url(home_url('/contact-us/')); ?>" <?php if (is_page('contact-us')) echo 'aria-current="page"'; ?>>仕事の相談をする</a>
       </nav>
     </div>
   </header>
