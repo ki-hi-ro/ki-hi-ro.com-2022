@@ -17,9 +17,7 @@
 
 </footer>
 
-<a class="floating-page-top" href="#page-bottom" aria-label="ページの最後へ移動">
-  <span aria-hidden="true">↓</span>
-</a>
+
 
 <?php wp_footer(); ?>
 
