@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="main-content" class="journal-app journal-app--single article-detail-layout">
+<main id="main-content" class="journal-app journal-app--single article-detail-layout has-article-toc">
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <?php
@@ -81,6 +81,7 @@
 
         <?php get_template_part('template-parts/monthly-archives'); ?>
       </article>
+      <aside class="article-toc" aria-label="記事サイドバー"></aside>
     <?php endwhile; ?>
   <?php endif; ?>
 </main>

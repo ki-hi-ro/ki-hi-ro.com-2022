@@ -22,8 +22,8 @@
     });
     if (!headings.length) return;
 
-    var aside = document.createElement('aside');
-    aside.className = 'article-toc';
+    var aside = main.querySelector('.article-toc');
+    if (!aside) return;
     var nav = document.createElement('nav');
     nav.setAttribute('aria-label', 'この記事の目次');
     var list = document.createElement('ul');
@@ -55,8 +55,6 @@
     });
     nav.appendChild(list);
     aside.appendChild(nav);
-    main.appendChild(aside);
-    main.classList.add('has-article-toc');
 
     var queued = false;
     var activeIndex = -1;

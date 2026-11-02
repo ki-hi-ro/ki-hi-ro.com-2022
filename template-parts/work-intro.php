@@ -26,7 +26,7 @@ if (!$services_page) return;
   <?php get_template_part('template-parts/recent-journal'); ?>
 
   <section class="work-profile" id="work-profile" aria-labelledby="work-profile-heading">
-    <div><p class="magazine-eyebrow">ABOUT</p><h2 id="work-profile-heading">柴田 浩貴</h2><p class="work-profile__role">個人事業主 / Webエンジニア</p></div>
+    <header class="work-home__heading"><p class="magazine-eyebrow">ABOUT</p><h2 id="work-profile-heading">柴田 浩貴</h2><p class="work-profile__role">個人事業主 / Webエンジニア</p></header>
     <div><p>Web制作、データ処理の移行、API開発、システム保守などを経験してきました。既存の仕組みを読み解き、確認しながら改善することを大切にしています。「自分自身を、更新し続ける」という姿勢で、学びや日々の気づきもブログに記録しています。</p><div class="work-home__profile-links"><?php $about_page = get_page_by_path('about'); if ($about_page && 'publish' === $about_page->post_status) : ?><a href="<?php echo esc_url(get_permalink($about_page)); ?>">自己紹介を読む →</a><?php endif; ?><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナルを読む →</a></div></div>
   </section>
 
