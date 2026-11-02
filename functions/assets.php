@@ -26,13 +26,13 @@ function kihiro_enqueue_assets() {
     wp_enqueue_script('kihiro-journal-menu', get_theme_file_uri('/assets/js/journal-menu.js'), array(), kihiro_asset_version('/assets/js/journal-menu.js'), true);
     wp_enqueue_script('kihiro-site-navigation', get_theme_file_uri('/assets/js/site-navigation.js'), array(), kihiro_asset_version('/assets/js/site-navigation.js'), true);
     wp_enqueue_script('kihiro-category-scroll', get_theme_file_uri('/assets/js/category-scroll.js'), array(), kihiro_asset_version('/assets/js/category-scroll.js'), true);
-    // 記事本文がある画面だけで目次・コードコピーを読み込み、他画面の処理を抑える。
+    // 記事本文がある画面だけでレイアウト・コードコピーを読み込み、他画面の処理を抑える。
     if (is_single() || is_page_template('page-case-study.php')) {
         wp_enqueue_script(
-            'kihiro-article-toc',
-            get_theme_file_uri('/assets/js/article-toc.js'),
+            'kihiro-article-layout',
+            get_theme_file_uri('/assets/js/article-layout.js'),
             array(),
-            kihiro_asset_version('/assets/js/article-toc.js'),
+            kihiro_asset_version('/assets/js/article-layout.js'),
             true
         );
         wp_enqueue_script(

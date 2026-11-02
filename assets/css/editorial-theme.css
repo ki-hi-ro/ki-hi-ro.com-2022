@@ -444,3 +444,9 @@ body.keyboard-focus .contact-index .work-contact :is(input,select,textarea):focu
 .service-detail { border-block: 0; }
 .service-investment li { border-top: 0; }
 .journal-app--single.has-article-toc > .article-toc { border-bottom: 0; }
+
+/* Article detail: a centered reading column without a table of contents. */
+.journal-app--single.article-detail-layout { display: block; }
+.article-detail-layout > .journal-panel--single,
+.article-detail-layout > .article-detail-heading { width: 100%; max-width: 800px; margin-inline: auto; }
+.article-detail-layout .article-toc { display: none; }
