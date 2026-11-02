@@ -138,3 +138,14 @@ body .db-single__content h2 { margin: 64px 0 26px; padding: 18px 0 0; border: 0;
   .site-footer { padding-bottom: 88px; }
 }
 @media (max-width: 360px) { .work-home-contact h2 { font-size: 22px; } .technical-reading-list .article-timeline__year .writing-card > .writing-card__link { grid-template-columns: 84px minmax(0, 1fr); gap: 8px 12px; } }
+
+/* Connect the author's thinking and records to work and independent building. */
+.work-hero__statement strong { display: block; margin-bottom: 12px; font-size: 18px; font-weight: 600; line-height: 1.8; }
+.work-opportunities__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.work-opportunity { display: flex; flex-direction: column; padding: 32px; border: 1px solid #e2e2e2; border-radius: 10px; }
+.work-opportunity h3 { margin: 16px 0 20px; font-size: 23px; line-height: 1.6; font-weight: 600; }
+.work-opportunity > p:not(.magazine-eyebrow) { margin: 0 0 18px; font-size: 14px; line-height: 2; color: #656565; }
+.work-opportunity > a, .work-opportunity__links { margin-top: auto; padding-top: 12px; }
+.work-opportunity a { font-size: 13px; text-decoration: underline; text-underline-offset: 5px; }
+.work-opportunity__links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+@media (max-width: 700px) { .work-opportunities__grid { grid-template-columns: 1fr; gap: 18px; } .work-opportunity { padding: 24px; } .work-opportunity h3 { font-size: 21px; } .work-hero__statement strong { font-size: 17px; } }
