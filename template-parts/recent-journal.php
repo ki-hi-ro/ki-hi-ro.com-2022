@@ -6,10 +6,10 @@ foreach (array('技術・開発', '思考・生き方', '健康・セルフケ�
     if ($term instanceof WP_Term) $categories[$term->term_id] = $term;
 }
 $selected = absint(kihiro_get_request_value('recent_category'));
-if (!isset($categories[$selected])) $selected = 0;
+if (!isset($categories[$selected])) $selected = $categories ? (int) array_key_first($categories) : 0;
 $args = array(
     'post_type' => 'post', 'post_status' => 'publish', 'has_password' => false,
-    'posts_per_page' => 9, 'ignore_sticky_posts' => true,
+    'posts_per_page' => 3, 'ignore_sticky_posts' => true,
     'post__not_in' => kihiro_excluded_post_ids(), 'orderby' => array('modified' => 'DESC', 'ID' => 'DESC'),
 );
 if ($selected) $args['cat'] = $selected;
@@ -33,25 +33,18 @@ $journal_url = $selected ? add_query_arg('article_category', $selected, kihiro_j
   <?php endif; ?>
 <h2 id="recent-journal-heading">毎日書く。日々、更新する。</h2><p>技術の学びから、仕事への向き合い方、日々の気づきまで。毎日書いています。</p></header>
   <nav class="recent-journal__categories" aria-label="最近更新した記事のカテゴリー">
-    <a href="<?php echo esc_url(home_url('/#recent-journal')); ?>" <?php if (!$selected) echo 'aria-current="true"'; ?>>すべて</a>
     <?php foreach ($categories as $term) : ?><a href="<?php echo esc_url(add_query_arg('recent_category', $term->term_id, home_url('/')) . '#recent-journal'); ?>" <?php if ($selected === $term->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($term->name); ?></a><?php endforeach; ?>
   </nav>
   <p class="screen-reader-text" role="status" aria-live="polite" data-recent-journal-status></p>
-  <div class="recent-journal__slider-controls" hidden>
-    <span data-journal-position aria-live="polite"></span>
-    <button type="button" data-journal-prev aria-label="前の記事へ" aria-controls="recent-journal-slides">←</button>
-    <button type="button" data-journal-next aria-label="次の記事へ" aria-controls="recent-journal-slides">→</button>
-  </div>
-  <div class="recent-journal__grid" id="recent-journal-slides" tabindex="0" role="region" aria-label="最近更新した記事のスライダー">
+  <div class="recent-journal__grid" id="recent-journal-posts">
     <?php foreach ($recent as $entry) :
-        $tags = get_the_tags($entry->ID);
         $excerpt = $entry->post_excerpt ?: $entry->post_content;
         $excerpt = wp_html_excerpt(preg_replace('/\s+/u', ' ', wp_strip_all_tags(strip_shortcodes($excerpt))), 90, '…');
     ?>
     <article class="recent-journal__card"><a href="<?php echo esc_url(get_permalink($entry)); ?>">
       <span class="recent-journal__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?></span>
       <h3><?php echo esc_html(get_the_title($entry)); ?></h3>
-      <?php if ($tags && !is_wp_error($tags)) : ?><ul class="recent-journal__tags" aria-label="タグ"><?php foreach (array_slice($tags, 0, 3) as $tag) : ?><li><?php echo esc_html($tag->name); ?></li><?php endforeach; ?></ul><?php endif; ?>
+
       <p class="recent-journal__excerpt"><?php echo esc_html($excerpt); ?></p>
       <div class="recent-journal__dates"><time datetime="<?php echo esc_attr(get_the_modified_date('c', $entry)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</time><span aria-hidden="true"> / </span><time datetime="<?php echo esc_attr(get_the_date('c', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</time></div>
       <span class="recent-journal__read">記事を読む <span aria-hidden="true">→</span></span>

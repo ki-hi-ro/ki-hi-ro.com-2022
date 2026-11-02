@@ -4,6 +4,17 @@
     var main = document.querySelector('.journal-app--single');
     var content = main && main.querySelector('.db-single__content');
     if (!content) return;
+    var article = main.querySelector('.journal-panel--single');
+    var title = main.querySelector('.article-detail-heading');
+    var visual = main.querySelector('.article-main-visual');
+    var narrow = window.matchMedia('(max-width: 1099px)');
+    function placeTitle() {
+        if (!title || !article) return;
+        if (narrow.matches) main.insertBefore(title, visual || article);
+        else article.insertBefore(title, article.firstChild);
+    }
+    placeTitle();
+    narrow.addEventListener('change', placeTitle);
     // 表示中の本文だけを対象にし、既存の目次プラグインが作った見出しは除外する。
     // DB本文を更新せず、現在のブラウザーDOMへIDとナビゲーションを追加する。
     var headings = Array.from(content.querySelectorAll('h2, h3')).filter(function (heading) {

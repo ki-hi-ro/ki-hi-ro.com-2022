@@ -11,6 +11,8 @@
       &copy; <?php echo esc_html(wp_date('Y')); ?> ki-hi-ro.com
     </span>
 
+    <a class="site-footer__top" href="#page-top">ページトップ ↑</a>
+
     <a class="site-footer__note" href="https://note.com/khiro_maru">note</a>
 
   </div>

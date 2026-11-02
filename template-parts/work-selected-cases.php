@@ -6,7 +6,7 @@ $cases = array_slice(array_values(array_filter($cases, function ($case) { return
 if (!$cases) return;
 ?>
 <section class="work-home__section" id="work-cases" aria-labelledby="work-cases-heading">
-  <header class="work-home__heading"><p class="magazine-eyebrow">WORKS</p><h2 id="work-cases-heading">つくったものと、解決への取り組み。</h2><p>Web制作と業務自動化の開発事例をご紹介します。制作案件・個人開発・サンプルそれぞれの背景や担当範囲は、詳細ページにまとめています。</p></header>
+  <header class="work-home__heading"><p class="magazine-eyebrow">WORKS</p><h2 id="work-cases-heading"><span class="work-heading-phrase">つくったものと、</span><span class="work-heading-phrase">解決への取り組み。</span></h2><p>Web制作と業務自動化の開発事例をご紹介します。制作案件・個人開発・サンプルそれぞれの背景や担当範囲は、詳細ページにまとめています。</p></header>
   <div class="work-help-grid">
     <?php foreach ($cases as $case) : $image = kihiro_case_study_image($case); ?>
     <article class="work-help-article"><a href="<?php echo esc_url(get_permalink($case)); ?>">
