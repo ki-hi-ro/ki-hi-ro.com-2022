@@ -1,15 +1,16 @@
 <?php get_header(); ?>
 
-<main id="main-content" class="journal-app journal-app--single">
+<main id="main-content" class="journal-app journal-app--single article-detail-layout">
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <?php
       $post_tags       = get_the_tag_list('', ', ');
       $post_categories = get_the_category();
       ?>
+      <?php get_template_part('template-parts/article-main-visual'); ?>
       <article class="journal-panel journal-panel--single db-single">
 
-        <header class="interior-heading interior-heading--article">
+        <header class="article-detail-heading">
         <p class="journal-single-date"><?php echo esc_html(get_the_date('Y年n月j日 G時i分')); ?></p>
         <h1><?php echo esc_html(get_the_title()); ?></h1>
         </header>
@@ -40,11 +41,7 @@
           <?php endif; ?>
         </dl>
 
-        <?php if (has_post_thumbnail() && !post_password_required()) : ?>
-          <figure class="article-featured-image">
-            <?php the_post_thumbnail('full', array('loading' => 'eager', 'fetchpriority' => 'high', 'decoding' => 'async', 'sizes' => '(max-width: 900px) 100vw, 900px')); ?>
-          </figure>
-        <?php endif; ?>
+
 
         <?php get_template_part('template-parts/article-technology-map'); ?>
 

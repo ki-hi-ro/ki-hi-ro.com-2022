@@ -13,12 +13,6 @@
 
     var aside = document.createElement('aside');
     aside.className = 'article-toc';
-    var details = document.createElement('details');
-    var summary = document.createElement('summary');
-    var summaryLabel = document.createElement('span');
-    summaryLabel.className = 'article-toc__label';
-    summaryLabel.textContent = '目次';
-    summary.append(summaryLabel);
     var nav = document.createElement('nav');
     nav.setAttribute('aria-label', 'この記事の目次');
     var list = document.createElement('ul');
@@ -39,7 +33,6 @@
             // 別タブで開く操作は通常のリンクとして扱う。
             if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
             event.preventDefault();
-            if (!desktop.matches) details.open = false;
             heading.scrollIntoView({ block: 'start' });
             // Keep keyboard navigation at the destination after closing the menu.
             if (!heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1');
@@ -50,21 +43,9 @@
         return link;
     });
     nav.appendChild(list);
-    details.append(summary, nav);
-    aside.appendChild(details);
+    aside.appendChild(nav);
     main.appendChild(aside);
     main.classList.add('has-article-toc');
-
-    var desktop = window.matchMedia('(min-width: 1100px)');
-    function syncLayout() { details.open = desktop.matches; }
-    syncLayout();
-    desktop.addEventListener('change', syncLayout);
-    details.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape' && !desktop.matches) {
-            details.open = false;
-            summary.focus();
-        }
-    });
 
     var queued = false;
     var activeIndex = -1;
@@ -81,7 +62,7 @@
             else link.removeAttribute('aria-current');
         });
         var link = links[current];
-        if (details.open) {
+        if (nav.clientHeight < nav.scrollHeight) {
             nav.scrollTop += link.getBoundingClientRect().top - nav.getBoundingClientRect().top - nav.clientHeight / 2 + link.offsetHeight / 2;
         }
     }

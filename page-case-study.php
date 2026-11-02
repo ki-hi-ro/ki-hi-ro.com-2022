@@ -2,15 +2,16 @@
 /** Template Name: CASE STUDY — 詳細 */
 get_header(); ?>
 
-<main id="main-content" class="journal-app journal-app--single case-detail">
+<main id="main-content" class="journal-app journal-app--single case-detail article-detail-layout">
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <?php
       $post_tags       = get_the_tag_list('', ', ');
       ?>
+      <?php get_template_part('template-parts/article-main-visual'); ?>
       <article class="journal-panel journal-panel--single db-single">
 
-        <header class="interior-heading interior-heading--article">
+        <header class="article-detail-heading">
         <p class="journal-single-date"><?php echo esc_html(get_the_date('Y年n月j日 G時i分')); ?></p>
         <h1><?php echo esc_html(get_the_title()); ?></h1>
         </header>
@@ -34,11 +35,7 @@ get_header(); ?>
           <?php endif; ?>
         </dl>
 
-        <?php if (has_post_thumbnail() && !post_password_required()) : ?>
-          <figure class="article-featured-image">
-            <?php the_post_thumbnail('full', array('loading' => 'eager', 'fetchpriority' => 'high', 'decoding' => 'async', 'sizes' => '(max-width: 900px) 100vw, 900px')); ?>
-          </figure>
-        <?php endif; ?>
+
 
         <div class="db-single__content">
           <?php the_content(); ?>
