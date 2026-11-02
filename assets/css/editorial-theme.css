@@ -493,3 +493,7 @@ body.keyboard-focus .contact-index .work-contact :is(input,select,textarea):focu
 .db-single__fields { row-gap: 18px; }
 .db-single__fields .db-single__tags { display: flex; flex-wrap: wrap; gap: 8px 12px; }
 .db-single__fields .db-single__tags > a { margin-inline-start: 0; }
+
+/* Keep body headings close enough to the preceding paragraph. */
+body .article-detail-layout .db-single__content h2 { margin-top: 32px; padding-top: 0; }
+body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-top: 0; }
