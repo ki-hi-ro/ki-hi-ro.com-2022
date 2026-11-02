@@ -29,7 +29,8 @@ get_header(); ?>
   $cases = array_slice($cases, ($current_page - 1) * $per_page, $per_page);
   ?>
   <?php get_template_part('template-parts/page-heading', null, array('eyebrow' => 'SELECTED WORKS', 'title' => '開発事例', 'description' => '制作案件・個人開発・サンプルを通して、技術と解決への取り組みをご紹介します。')); ?>
-  <?php $experience_page = get_page_by_path('about'); if ($experience_page && 'publish' === $experience_page->post_status) : ?>
+  <?php if (current_user_can('edit_pages')) : ?>
+    <div class="article-create"><a class="article-edit__link" href="<?php echo esc_url(add_query_arg(array('post_type' => 'page', 'kihiro_case_parent' => get_the_ID()), admin_url('post-new.php'))); ?>"><span aria-hidden="true">＋</span> 新規投稿</a></div>
   <?php endif; ?>
   <section class="article-filters" aria-label="開発事例の絞り込み">
     <nav class="article-filters__categories" aria-label="カテゴリー">

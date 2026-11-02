@@ -386,3 +386,18 @@ function kihiro_handle_empty_journal_archive($preempt, $query) {
     return true;
 }
 add_filter('pre_handle_404', 'kihiro_handle_empty_journal_archive', 10, 2);
+
+/** 開発事例一覧から、親ページと詳細テンプレートを設定した新規固定ページを開く。 */
+function kihiro_set_new_case_page_defaults() {
+    $requested = kihiro_get_request_value('kihiro_case_parent');
+    if ('page' !== kihiro_get_request_value('post_type') || !ctype_digit($requested) || !current_user_can('edit_pages')) return;
+    $parent = get_post((int) $requested);
+    if (!$parent || 'page' !== $parent->post_type || 'page-case-study-index.php' !== get_page_template_slug($parent) || !current_user_can('edit_post', $parent->ID)) return;
+    add_action('wp_after_insert_post', function ($post_id, $post, $update) use ($parent) {
+        if (!$update && 'page' === $post->post_type && 'auto-draft' === $post->post_status) {
+            wp_update_post(array('ID' => $post_id, 'post_parent' => $parent->ID));
+            update_post_meta($post_id, '_wp_page_template', 'page-case-study.php');
+        }
+    }, 10, 3);
+}
+add_action('load-post-new.php', 'kihiro_set_new_case_page_defaults');
