@@ -478,3 +478,13 @@ body.keyboard-focus .contact-index .work-contact :is(input,select,textarea):focu
 @media (max-width: 700px) {
  .work-home :is(.selected-works, .recent-journal) .recent-journal__card:nth-child(n + 2) { display: none; }
 }
+
+/* Center English section labels across the content area. */
+#main-content .magazine-eyebrow,
+#main-content .story-eyebrow {
+ width: 100%;
+ text-align: center;
+ align-self: center;
+ justify-self: stretch;
+ grid-column: 1 / -1;
+}

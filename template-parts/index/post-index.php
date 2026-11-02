@@ -65,7 +65,7 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
     <div>
       <p class="magazine-eyebrow">WRITING ARCHIVE</p>
       <h1><?php echo esc_html($archive_title); ?></h1>
-      <p>つくり、考え、書き続けてきた<?php echo esc_html(number_format_i18n($is_full_archive ? $wp_query->found_posts : count($wp_query->posts))); ?>記事の記録。</p>
+      <p><?php echo esc_html(number_format_i18n($is_full_archive ? $wp_query->found_posts : count($wp_query->posts))); ?>記事の記録。</p>
     </div>
   </header>
   <?php endif; ?>
