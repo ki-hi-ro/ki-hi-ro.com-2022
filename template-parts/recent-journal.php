@@ -17,7 +17,7 @@ $recent = get_posts($args);
 $journal_url = $selected ? add_query_arg('article_category', $selected, kihiro_journal_url()) : kihiro_journal_url();
 ?>
 <section class="work-home__section recent-journal" id="recent-journal" aria-labelledby="recent-journal-heading">
-  <header class="work-home__heading"><p class="magazine-eyebrow">DAILY JOURNAL</p><h2 id="recent-journal-heading">毎日書く。日々、更新する。</h2><p>技術の学びから、仕事への向き合い方、日々の気づきまで。毎日書いています。</p></header>
+  <header class="work-home__heading"><p class="magazine-eyebrow">DAILY JOURNAL</p>
   <?php if (is_user_logged_in()) : ?>
     <div class="journal-tools">
       <form class="journal-tools__search" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
@@ -31,6 +31,7 @@ $journal_url = $selected ? add_query_arg('article_category', $selected, kihiro_j
       <?php endif; ?>
     </div>
   <?php endif; ?>
+<h2 id="recent-journal-heading">毎日書く。日々、更新する。</h2><p>技術の学びから、仕事への向き合い方、日々の気づきまで。毎日書いています。</p></header>
   <nav class="recent-journal__categories" aria-label="最近更新した記事のカテゴリー">
     <a href="<?php echo esc_url(home_url('/#recent-journal')); ?>" <?php if (!$selected) echo 'aria-current="true"'; ?>>すべて</a>
     <?php foreach ($categories as $term) : ?><a href="<?php echo esc_url(add_query_arg('recent_category', $term->term_id, home_url('/')) . '#recent-journal'); ?>" <?php if ($selected === $term->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($term->name); ?></a><?php endforeach; ?>

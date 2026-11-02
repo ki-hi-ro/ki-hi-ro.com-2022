@@ -11,6 +11,7 @@ $archive_category = $archive_category_id ? get_term($archive_category_id, 'categ
 $archive_title = $archive_category instanceof WP_Term ? $archive_category->name : 'すべての記事';
 $is_article_search = is_search();
 $is_article_tag = is_tag();
+$is_reading_list = $is_full_archive || $is_article_search || $is_article_tag;
 $is_article_home = is_home() && !$is_article_search && '' === kihiro_get_request_value('view');
 // 取得はメインクエリ側で完了している。ここでは取得済みの投稿を年ごとに整理する。
 // 2021年以前はまとめるが、ホームは年で分断せず更新順を維持する。
@@ -22,11 +23,11 @@ foreach ($wp_query->posts as $entry) {
     $years[$entry_year < 2022 ? 0 : $entry_year][] = $entry;
 }
 krsort($years);
-if ($is_full_archive || (is_home() && !$is_full_archive)) {
+if ($is_reading_list || (is_home() && !$is_full_archive)) {
     $years = $wp_query->posts ? array('latest' => $wp_query->posts) : array();
 }
 ?>
-<main id="main-content" class="article-timeline <?php echo $is_full_archive ? 'article-timeline--cards technical-reading-list' : 'article-title-timeline'; ?>">
+<main id="main-content" class="article-timeline <?php echo $is_reading_list ? 'article-timeline--cards technical-reading-list' : 'article-title-timeline'; ?>">
   <?php if ($is_article_search) : ?>
     <header class="article-timeline__header">
       <div>
@@ -82,15 +83,15 @@ if ($is_full_archive || (is_home() && !$is_full_archive)) {
     <?php get_template_part('template-parts/index/article-filters'); ?>
   <?php endif; ?>
   <?php foreach ($years as $year => $entries) : ?>
-    <section class="<?php echo $is_full_archive ? 'article-timeline__year' : 'article-title-year'; ?>" id="year-<?php echo esc_attr($year); ?>" aria-labelledby="year-heading-<?php echo esc_attr($year); ?>">
-      <?php if ($is_full_archive || (is_home() && !$is_full_archive)) : ?>
+    <section class="<?php echo $is_reading_list ? 'article-timeline__year' : 'article-title-year'; ?>" id="year-<?php echo esc_attr($year); ?>" aria-labelledby="year-heading-<?php echo esc_attr($year); ?>">
+      <?php if ($is_reading_list || (is_home() && !$is_full_archive)) : ?>
         <h2 id="year-heading-latest" class="screen-reader-text">記事一覧</h2>
       <?php else : ?>
         <header><h2 id="year-heading-<?php echo esc_attr($year); ?>"><?php echo $year ? esc_html($year) . '<span>年</span>' : '2021<span>年より前</span>'; ?></h2><p><?php echo esc_html(number_format_i18n(count($entries))); ?>記事を表示</p></header>
       <?php endif; ?>
-      <ol<?php if (!$is_full_archive) echo ' class="article-title-list"'; ?>>
+      <ol<?php if (!$is_reading_list) echo ' class="article-title-list"'; ?>>
         <?php foreach ($entries as $entry) : ?>
-          <?php if ($is_full_archive) : ?>
+          <?php if ($is_reading_list) : ?>
             <?php get_template_part('template-parts/writing-card', null, array('entry' => $entry, 'show_tags' => false, 'date_format' => 'Y.m.d H:i')); ?>
           <?php else : ?>
           <li><time datetime="<?php echo esc_attr(get_the_date('c', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d H:i', $entry)); ?></time><a href="<?php echo esc_url(get_permalink($entry)); ?>"><?php echo esc_html(get_the_title($entry)); ?></a></li>

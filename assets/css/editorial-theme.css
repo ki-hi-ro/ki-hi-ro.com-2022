@@ -360,3 +360,24 @@ body .journal-app--single + .site-footer { margin-top: 104px; }
  body .site-footer,
  body .journal-app--single + .site-footer { margin-top: 80px; }
 }
+
+/* Separate sections with whitespace, and keep card dates close to the excerpt. */
+.work-home__heading { border: 0; padding-top: 0; }
+.work-profile { border: 0; }
+.recent-journal__dates { border: 0; padding-top: 0; margin-top: 0; }
+.recent-journal__excerpt { margin-bottom: 12px; }
+.recent-journal__read { padding-top: 12px; }
+.technical-reading-list .article-timeline__year .writing-card { border-bottom: 0; }
+.about-page .about-body { max-width: none; width: 100%; }
+body .about-body h2 { border: 0; padding-bottom: 0; }
+.recent-journal .work-home__heading { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 12px 24px; }
+.recent-journal .work-home__heading > .magazine-eyebrow { grid-column: 1; grid-row: 1; margin: 0; }
+.recent-journal .work-home__heading > .journal-tools { grid-column: 2; grid-row: 1; margin: 0; }
+.recent-journal .work-home__heading > h2,
+.recent-journal .work-home__heading > p:last-child { grid-column: 1 / -1; }
+@media(max-width:700px) {
+ .recent-journal .work-home__heading { display: flex; flex-direction: column; align-items: stretch; gap: 12px; }
+ .recent-journal .work-home__heading > .journal-tools { justify-content: flex-start; }
+ .recent-journal .journal-tools__search { flex-basis: 100%; }
+ .recent-journal .work-home__heading > h2 { margin-block: 0; }
+}

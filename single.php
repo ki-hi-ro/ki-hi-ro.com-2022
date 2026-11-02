@@ -52,7 +52,6 @@
 
         <?php get_template_part('template-parts/work-inquiry'); ?>
 
-        <?php get_template_part('template-parts/article-like'); ?>
 
 
 
