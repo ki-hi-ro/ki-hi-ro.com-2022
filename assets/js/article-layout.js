@@ -8,8 +8,13 @@
     var narrow = window.matchMedia('(max-width: 1099px)');
     function placeTitle() {
         if (!title || !article) return;
-        if (narrow.matches) main.insertBefore(title, visual || article);
-        else article.insertBefore(title, article.firstChild);
+        if (narrow.matches) {
+            if (visual) main.insertBefore(visual, article);
+            main.insertBefore(title, visual || article);
+        } else {
+            article.insertBefore(title, article.firstChild);
+            if (visual) article.insertBefore(visual, title.nextSibling);
+        }
     }
     placeTitle();
     narrow.addEventListener('change', placeTitle);
