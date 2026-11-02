@@ -1,19 +1,19 @@
 <?php
+/** Shared compact card for all article and case study indexes. */
 $entry = $args['entry'];
-$tag_base = $args['tag_base'] ?? home_url('/');
-$tag_args = $args['tag_args'] ?? array();
-$tags = ($args['show_tags'] ?? true) ? get_the_tags($entry->ID) : false;
 $date_format = $args['date_format'] ?? 'Y.m.d';
+$is_case = !empty($args['is_case']);
+$image = $is_case ? kihiro_case_study_image($entry) : kihiro_article_thumbnail($entry->ID, 'large');
+if (!$image && $is_case) $image = '<img src="' . esc_url(get_theme_file_uri('/assets/images/case-study-placeholder.svg')) . '" alt="" loading="lazy">';
+$excerpt = $entry->post_excerpt ?: $entry->post_content;
+$excerpt = wp_html_excerpt(preg_replace('/\s+/u', ' ', wp_strip_all_tags(strip_shortcodes($excerpt))), 90, '…');
 ?>
 <li class="writing-card">
   <a class="writing-card__link" href="<?php echo esc_url(get_permalink($entry)); ?>">
-    <span class="article-timeline__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?></span>
-    <span class="article-card-dates"><time datetime="<?php echo esc_attr(get_the_date('c', $entry)); ?>"><?php echo esc_html(get_the_date($date_format, $entry)); ?> 公開</time> / <time datetime="<?php echo esc_attr(get_the_modified_date('c', $entry)); ?>"><?php echo esc_html(get_the_modified_date($date_format, $entry)); ?> 更新</time></span>
-    <span class="writing-card__title"><?php echo esc_html(get_the_title($entry)); ?></span>
+    <span class="article-timeline__thumbnail" aria-hidden="true"><?php echo wp_kses_post($image); ?></span>
+    <h3 class="writing-card__title"><?php echo esc_html(get_the_title($entry)); ?></h3>
+    <p class="writing-card__excerpt"><?php echo esc_html($excerpt); ?></p>
+    <span class="article-card-dates"><time datetime="<?php echo esc_attr(get_the_modified_date('c', $entry)); ?>"><?php echo esc_html(get_the_modified_date($date_format, $entry)); ?> 更新</time> / <time datetime="<?php echo esc_attr(get_the_date('c', $entry)); ?>"><?php echo esc_html(get_the_date($date_format, $entry)); ?> 公開</time></span>
+    <span class="writing-card__read"><?php echo $is_case ? '課題と実装内容を見る' : '記事を読む'; ?> <span aria-hidden="true">→</span></span>
   </a>
-  <?php if ($tags && !is_wp_error($tags)) : ?>
-  <div class="writing-card__tags" aria-label="タグ">
-    <?php foreach ($tags as $tag) : ?><a href="<?php echo esc_url(add_query_arg(array_merge($tag_args, array('article_tag' => $tag->term_id)), $tag_base)); ?>" <?php if (kihiro_selected_article_tag() === $tag->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($tag->name); ?></a><?php endforeach; ?>
-  </div>
-  <?php endif; ?>
 </li>

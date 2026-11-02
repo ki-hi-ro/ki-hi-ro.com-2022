@@ -43,8 +43,7 @@ get_header(); ?>
       <section class="article-timeline__year" aria-label="開発事例一覧">
         <ol>
           <?php foreach ($cases as $case) : ?>
-            <?php $image = kihiro_case_study_image($case); ?>
-            <li class="writing-card"><a class="writing-card__link" href="<?php echo esc_url(get_permalink($case)); ?>"><span class="article-timeline__thumbnail" aria-hidden="true"><?php echo $image ? wp_kses_post($image) : '<img src="' . esc_url(get_theme_file_uri('/assets/images/case-study-placeholder.svg')) . '" alt="" width="320" height="200" loading="lazy">'; ?></span><span class="article-card-dates"><time datetime="<?php echo esc_attr(get_the_date('Y-m-d', $case)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $case)); ?> 公開</time> ／ <time datetime="<?php echo esc_attr(get_the_modified_date('Y-m-d', $case)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $case)); ?> 更新</time></span><span class="writing-card__title"><?php echo esc_html($case->post_title); ?></span></a></li>
+            <?php get_template_part('template-parts/writing-card', null, array('entry' => $case, 'is_case' => true)); ?>
           <?php endforeach; ?>
         </ol>
       </section>
