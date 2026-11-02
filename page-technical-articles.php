@@ -3,6 +3,36 @@
 get_header();
 $technical_category = get_term_by('name', '技術・開発', 'category');
 $current_page = max(1, absint(kihiro_get_request_value('articles_page')));
+// Count only the published, visible technical articles, independently of the active filter.
+$technical_tags = array();
+$selected_tag_id = kihiro_selected_article_tag();
+if ($technical_category instanceof WP_Term) {
+    $technical_ids = get_posts(array(
+        'post_type' => 'post', 'post_status' => 'publish', 'has_password' => false,
+        'category__in' => array($technical_category->term_id),
+        'post__not_in' => kihiro_excluded_post_ids(),
+        'posts_per_page' => -1, 'fields' => 'ids', 'no_found_rows' => true,
+    ));
+    if ($technical_ids) {
+        $tag_assignments = wp_get_object_terms($technical_ids, 'post_tag', array('fields' => 'all_with_object_id'));
+        if (!is_wp_error($tag_assignments)) {
+            foreach ($tag_assignments as $tag) {
+                if (!isset($technical_tags[$tag->term_id])) $technical_tags[$tag->term_id] = array('term' => $tag, 'count' => 0);
+                $technical_tags[$tag->term_id]['count']++;
+            }
+        }
+    }
+}
+uasort($technical_tags, function ($a, $b) {
+    return ($b['count'] <=> $a['count']) ?: strcmp($a['term']->name, $b['term']->name);
+});
+$filter_tags = array_slice($technical_tags, 0, 10, true);
+// Keep a directly linked tag visible while retaining the ten-tag limit.
+if ($selected_tag_id && isset($technical_tags[$selected_tag_id]) && !isset($filter_tags[$selected_tag_id])) {
+    if (count($filter_tags) >= 10) array_pop($filter_tags);
+    $filter_tags[$selected_tag_id] = $technical_tags[$selected_tag_id];
+}
+
 $articles = new WP_Query(array(
     'post_type' => 'post', 'post_status' => 'publish', 'has_password' => false,
     'category__in' => $technical_category instanceof WP_Term ? array($technical_category->term_id) : array(0),
@@ -20,6 +50,14 @@ $total_pages = $technical_category instanceof WP_Term ? (int) $articles->max_num
   <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
     <div class="article-create"><a class="article-edit__link" href="<?php echo esc_url(kihiro_new_post_url($technical_category instanceof WP_Term ? $technical_category->term_id : 0)); ?>"><span aria-hidden="true">＋</span> 新規投稿</a></div>
   <?php endif; ?>
+  <section class="article-filters" aria-label="技術ブログの絞り込み">
+    <nav class="article-filters__categories" aria-label="タグ">
+      <a href="<?php echo esc_url(get_permalink()); ?>" <?php if (!$selected_tag_id) echo 'aria-current="true"'; ?>>すべて</a>
+      <?php foreach ($filter_tags as $tag_id => $item) : ?>
+        <a href="<?php echo esc_url(add_query_arg('article_tag', $tag_id, get_permalink())); ?>" <?php if ($selected_tag_id === $tag_id) echo 'aria-current="true"'; ?>><?php echo esc_html($item['term']->name); ?></a>
+      <?php endforeach; ?>
+    </nav>
+  </section>
   <section class="article-timeline__year" aria-label="技術・開発の記事一覧"><ol>
     <?php foreach ($entries as $entry) : ?>
       <?php get_template_part('template-parts/writing-card', null, array('entry' => $entry, 'tag_base' => get_permalink())); ?>
