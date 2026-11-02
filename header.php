@@ -47,6 +47,9 @@
           <a href="<?php echo esc_url(get_permalink($services_page)); ?>" <?php if (is_page($services_page->ID)) echo 'aria-current="page"'; ?>>できること</a>
         <?php endif; ?>
         <a href="<?php echo esc_url(kihiro_journal_url()); ?>" <?php if ($journal_active && !$technical_blog_active) echo 'aria-current="page"'; ?>>日々のジャーナル</a>
+        <?php $career_page = get_page_by_path('career'); if ($career_page && 'publish' === $career_page->post_status) : ?>
+          <a href="<?php echo esc_url(get_permalink($career_page)); ?>" <?php if (is_page($career_page->ID)) echo 'aria-current="page"'; ?>>職務経歴</a>
+        <?php endif; ?>
         <?php $about_page = get_page_by_path('about'); if ($about_page && $about_page->post_status === 'publish') : ?>
           <a href="<?php echo esc_url(get_permalink($about_page)); ?>" <?php if (is_page($about_page->ID)) echo 'aria-current="page"'; ?>>自己紹介</a>
         <?php endif; ?>

@@ -30,3 +30,13 @@ add_action('save_post_page', function ($post_id) {
         if (isset($values[$key]) && is_scalar($values[$key])) update_post_meta($post_id, '_kihiro_case_' . $key, sanitize_textarea_field($values[$key]));
     }
 });
+
+/** Create the explicitly requested career page without overwriting existing pages. */
+add_action('init', function () {
+    if (get_page_by_path('career', OBJECT, 'page')) return;
+    wp_insert_post(array(
+        'post_type' => 'page', 'post_status' => 'publish', 'post_name' => 'career',
+        'post_title' => '職務経歴', 'post_content' => '',
+        'page_template' => 'page-career.php', 'comment_status' => 'closed',
+    ));
+});

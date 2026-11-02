@@ -1,5 +1,5 @@
 <?php
-$about_page = get_page_by_path('about');
+$about_page = get_page_by_path('career');
 $etl_article = get_post(25448);
 ?>
 <section class="work-home__section work-learning" id="work-learning" aria-labelledby="work-learning-heading">

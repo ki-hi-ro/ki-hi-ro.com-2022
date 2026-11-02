@@ -8,7 +8,7 @@ foreach (kihiro_work_experiences() as $key => $experience) {
     }
 }
 if (!$related_experiences) return;
-$experience_page = get_page_by_path('about');
+$experience_page = get_page_by_path('career');
 if (!$experience_page || 'publish' !== $experience_page->post_status || post_password_required($experience_page)) return;
 ?>
 <aside class="article-related-experience" aria-label="関連する実務経験">
