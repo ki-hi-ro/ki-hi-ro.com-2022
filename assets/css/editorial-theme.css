@@ -471,3 +471,5 @@ body.keyboard-focus .contact-index .work-contact :is(input,select,textarea):focu
 .technical-reading-list .writing-card__read { display: block; margin-top: 10px; font-size: 12px; line-height: 1.8; }
 .technical-reading-list .writing-card__link:hover { transform: none; background: #fff; box-shadow: none; }
 @media(max-width:700px) { .technical-reading-list .article-timeline__year > ol { grid-template-columns: minmax(0,1fr); gap: 32px; } }
+.technical-reading-list .article-timeline__year .writing-card__link > .article-card-dates { order: 0; }
+.technical-reading-list .article-timeline__year .writing-card__link > .writing-card__read { order: 0; flex: none; padding: 0; font-size: 12px; font-weight: 400; }
