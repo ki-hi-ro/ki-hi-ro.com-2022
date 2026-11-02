@@ -488,3 +488,8 @@ body.keyboard-focus .contact-index .work-contact :is(input,select,textarea):focu
  justify-self: stretch;
  grid-column: 1 / -1;
 }
+
+/* Separate metadata rows and align wrapped tags to the same starting edge. */
+.db-single__fields { row-gap: 18px; }
+.db-single__fields .db-single__tags { display: flex; flex-wrap: wrap; gap: 8px 12px; }
+.db-single__fields .db-single__tags > a { margin-inline-start: 0; }
