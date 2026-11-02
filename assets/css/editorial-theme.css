@@ -296,3 +296,5 @@ body .db-single__content h2 { margin: 64px 0 26px; padding: 18px 0 0; border: 0;
  .article-toc a { padding-block: 6px; font-size: 12px; }
  .article-detail-layout .article-main-visual { margin-bottom: 32px; }
 }
+/* Clear the former floating control's inset so the index starts below the visual. */
+.article-toc { bottom: auto; right: auto; left: auto; }
