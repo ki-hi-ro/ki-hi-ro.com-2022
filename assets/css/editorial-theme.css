@@ -352,3 +352,11 @@ body .article-detail-layout .db-single__content :is(h2, h3) { border: 0; }
 .article-toc a:hover,
 .article-toc a:focus-visible,
 .article-toc a[aria-current] { font-weight: 600; }
+
+/* Separate the footer from the end of the main content. */
+body .site-footer,
+body .journal-app--single + .site-footer { margin-top: 104px; }
+@media (max-width: 700px) {
+ body .site-footer,
+ body .journal-app--single + .site-footer { margin-top: 80px; }
+}
