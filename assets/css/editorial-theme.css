@@ -298,3 +298,38 @@ body .db-single__content h2 { margin: 64px 0 26px; padding: 18px 0 0; border: 0;
 }
 /* Clear the former floating control's inset so the index starts below the visual. */
 .article-toc { bottom: auto; right: auto; left: auto; }
+
+/* Contact: a quiet introduction and a generous single-column form. */
+#main-content.contact-index > .interior-heading { padding: 24px 24px 0; margin-bottom: 24px; background: none; }
+#main-content.contact-index > .interior-heading h1 { margin-bottom: 0; }
+.contact-index .contact-page__body { max-width: 1000px; }
+.contact-index .work-contact__welcome { max-width: 760px; margin: 0 auto 44px; text-align: center; }
+.contact-index .work-contact__welcome p { font-size: 15px; line-height: 2; color: #656565; margin: 0 0 14px; }
+.contact-index .work-contact .wpcf7 { padding: 56px 100px; background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; box-shadow: 0 16px 64px #00000006; }
+.contact-index .work-contact .wpcf7-form { max-width: 720px; margin: auto; }
+.contact-index .work-contact__grid { display: block; }
+.contact-index .work-contact .wpcf7-form > p,
+.contact-index .work-contact__grid > p { margin: 0 0 30px; }
+.contact-index .work-contact label { display: block; font-size: 15px; font-weight: 600; line-height: 1.8; }
+.contact-index .work-contact :is(.work-contact__required,.work-contact__optional) { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 4px; font-size: 10px; line-height: 1.6; vertical-align: middle; font-weight: 500; }
+.contact-index .work-contact__required { background: #ededed; color: #333; }
+.contact-index .work-contact__optional { background: none; color: #888; }
+.contact-index .work-contact .wpcf7-form-control-wrap { display: block; margin-top: 10px; }
+.contact-index .work-contact :is(input[type="text"],input[type="email"],input[type="url"],select,textarea) { box-sizing: border-box; width: 100%; max-width: 100%; border: 1px solid #dedede; border-radius: 6px; background: #fff; color: #292929; padding: 16px 18px; font-size: 16px; line-height: 1.7; font-weight: 400; box-shadow: none; }
+.contact-index .work-contact :is(input,textarea)::placeholder { color: #999; opacity: 1; }
+.contact-index .work-contact textarea { min-height: 260px; resize: vertical; }
+.contact-index .work-contact :is(input,select,textarea):focus-visible { outline: 2px solid #555; outline-offset: 3px; }
+.contact-index .work-contact .work-contact__privacy { font-size: 12px; line-height: 1.9; color: #777; text-align: center; margin-block: 32px !important; }
+.contact-index .work-contact input[type="submit"] { display: block; box-sizing: border-box; width: 100%; min-height: 56px; border: 0; border-radius: 6px; padding: 16px 24px; font-size: 16px; font-weight: 600; background: #292929; color: #fff; box-shadow: none; transform: none; cursor: pointer; }
+.contact-index .work-contact input[type="submit"]:hover { background: #444; transform: none; box-shadow: none; }
+.contact-index .work-contact .wpcf7-not-valid-tip { font-size: 12px; font-weight: 400; margin-top: 8px; }
+.contact-index .work-contact .wpcf7-response-output { margin: 24px 0 0; padding: 16px; font-size: 14px; }
+@media(max-width:700px) {
+ #main-content.contact-index > .interior-heading { padding: 8px 0 0; }
+ .contact-index .work-contact__welcome { text-align: left; margin-bottom: 30px; }
+ .contact-index .work-contact__welcome p { font-size: 14px; }
+ .contact-index .work-contact .wpcf7 { padding: 28px 20px; border-radius: 10px; box-shadow: none; }
+ .contact-index .work-contact .wpcf7-form > p,.contact-index .work-contact__grid > p { margin-bottom: 26px; }
+ .contact-index .work-contact label { font-size: 14px; }
+ .contact-index .work-contact :is(input[type="text"],input[type="email"],input[type="url"],select,textarea) { padding: 13px 12px; }
+}
