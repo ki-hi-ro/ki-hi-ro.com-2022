@@ -40,3 +40,11 @@ add_action('init', function () {
         'page_template' => 'page-career.php', 'comment_status' => 'closed',
     ));
 });
+
+/** Use the public service label in browser tabs. */
+add_filter('document_title_parts', function ($parts) {
+    if (is_page('services') || is_page_template('page-services.php')) {
+        $parts['title'] = 'Web制作・業務自動化';
+    }
+    return $parts;
+});

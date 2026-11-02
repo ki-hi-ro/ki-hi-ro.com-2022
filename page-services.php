@@ -1,10 +1,13 @@
 <?php
-/** Template Name: サービス・ご依頼 */
+/** Template Name: Web制作・業務自動化 */
 get_header(); ?>
-<main id="main-content" class="services-page services-page--showcase">
+<main id="main-content" class="services-page">
 <?php while (have_posts()) : the_post(); ?>
-  <header class="services-page__header"><p class="magazine-eyebrow">WEB & AUTOMATION</p><h1>お手伝いできること</h1><p>Web制作・業務自動化で、事業の「伝える」と「進める」を。</p></header>
-  <?php get_template_part('template-parts/service-showcase'); ?>
+  <?php get_template_part('template-parts/page-heading', null, array(
+      'eyebrow' => 'WEB & AUTOMATION',
+      'title' => 'Web制作・業務自動化',
+      'description' => '掲載内容の準備中です。',
+  )); ?>
 <?php endwhile; ?>
 </main>
 <?php get_footer(); ?>
