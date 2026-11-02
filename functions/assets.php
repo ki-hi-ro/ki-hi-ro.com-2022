@@ -13,6 +13,8 @@ function kihiro_asset_version($relative_path) {
 function kihiro_enqueue_assets() {
     if (is_singular('post')) {
         wp_enqueue_script('kihiro-article-toc', get_theme_file_uri('/assets/js/article-toc.js'), array(), kihiro_asset_version('/assets/js/article-toc.js'), true);
+        wp_enqueue_script('kihiro-article-layout', get_theme_file_uri('/assets/js/article-layout.js'), array(), kihiro_asset_version('/assets/js/article-layout.js'), true);
+        wp_enqueue_script('kihiro-page-scroll', get_theme_file_uri('/assets/js/page-scroll.js'), array(), kihiro_asset_version('/assets/js/page-scroll.js'), true);
         wp_enqueue_script('kihiro-post-timeline', get_theme_file_uri('/assets/js/post-timeline.js'), array(), kihiro_asset_version('/assets/js/post-timeline.js'), true);
     }
     if (is_home() && '' === kihiro_get_request_value('view')) {

@@ -4,17 +4,6 @@
     var main = document.querySelector('.journal-app--single');
     var content = main && main.querySelector('.db-single__content');
     if (!content) return;
-    var article = main.querySelector('.journal-panel--single');
-    var title = main.querySelector('.article-detail-heading');
-    var visual = main.querySelector('.article-main-visual');
-    var narrow = window.matchMedia('(max-width: 1099px)');
-    function placeTitle() {
-        if (!title || !article) return;
-        if (narrow.matches) main.insertBefore(title, visual || article);
-        else article.insertBefore(title, article.firstChild);
-    }
-    placeTitle();
-    narrow.addEventListener('change', placeTitle);
     // 表示中の本文だけを対象にし、既存の目次プラグインが作った見出しは除外する。
     // DB本文を更新せず、現在のブラウザーDOMへIDとナビゲーションを追加する。
     var headings = Array.from(content.querySelectorAll('h2, h3')).filter(function (heading) {
@@ -22,8 +11,14 @@
     });
     if (!headings.length) return;
 
-    var aside = main.querySelector('.article-toc');
-    if (!aside) return;
+    var aside = document.createElement('aside');
+    aside.className = 'article-toc';
+    var details = document.createElement('details');
+    var summary = document.createElement('summary');
+    var summaryLabel = document.createElement('span');
+    summaryLabel.className = 'article-toc__label';
+    summaryLabel.textContent = '目次';
+    summary.append(summaryLabel);
     var nav = document.createElement('nav');
     nav.setAttribute('aria-label', 'この記事の目次');
     var list = document.createElement('ul');
@@ -44,6 +39,7 @@
             // 別タブで開く操作は通常のリンクとして扱う。
             if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
             event.preventDefault();
+            if (!desktop.matches) details.open = false;
             heading.scrollIntoView({ block: 'start' });
             // Keep keyboard navigation at the destination after closing the menu.
             if (!heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1');
@@ -54,7 +50,21 @@
         return link;
     });
     nav.appendChild(list);
-    aside.appendChild(nav);
+    details.append(summary, nav);
+    aside.appendChild(details);
+    main.appendChild(aside);
+    main.classList.add('has-article-toc');
+
+    var desktop = window.matchMedia('(min-width: 1100px)');
+    function syncLayout() { details.open = desktop.matches; }
+    syncLayout();
+    desktop.addEventListener('change', syncLayout);
+    details.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !desktop.matches) {
+            details.open = false;
+            summary.focus();
+        }
+    });
 
     var queued = false;
     var activeIndex = -1;
@@ -71,7 +81,7 @@
             else link.removeAttribute('aria-current');
         });
         var link = links[current];
-        if (nav.clientHeight < nav.scrollHeight) {
+        if (details.open) {
             nav.scrollTop += link.getBoundingClientRect().top - nav.getBoundingClientRect().top - nav.clientHeight / 2 + link.offsetHeight / 2;
         }
     }

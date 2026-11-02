@@ -11,7 +11,7 @@
       &copy; <?php echo esc_html(wp_date('Y')); ?> ki-hi-ro.com
     </span>
 
-    <a class="site-footer__top" href="#page-top">ページトップ ↑</a>
+    <?php if (!is_singular('post')) : ?><a class="site-footer__top" href="#page-top">ページトップ ↑</a><?php endif; ?>
 
 
 
@@ -19,6 +19,11 @@
 
 </footer>
 
+<?php if (is_singular('post')) : ?>
+<a class="floating-page-top" href="#page-bottom" aria-label="ページの最後へ移動">
+  <span aria-hidden="true">↓</span>
+</a>
+<?php endif; ?>
 
 
 <?php wp_footer(); ?>
