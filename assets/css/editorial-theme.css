@@ -333,3 +333,4 @@ body .db-single__content h2 { margin: 64px 0 26px; padding: 18px 0 0; border: 0;
  .contact-index .work-contact label { font-size: 14px; }
  .contact-index .work-contact :is(input[type="text"],input[type="email"],input[type="url"],select,textarea) { padding: 13px 12px; }
 }
+.contact-index .work-contact { max-width: none; margin-inline: auto; }
