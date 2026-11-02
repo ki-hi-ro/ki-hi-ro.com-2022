@@ -391,22 +391,22 @@ body .about-body h2 { border: 0; padding-bottom: 0; }
 .work-home a:not(.work-home__button), .about-body a, .service-text-link, .service-story__visual figcaption a, .site-footer a { text-underline-offset: 16px; text-decoration-thickness: 1px; }
 .site-footer__top { margin-left: auto; font-size: 12px; text-decoration: underline; }
 .site-footer__note { margin-left: 0; }
-.recent-journal .recent-journal__grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); grid-auto-flow: row; grid-auto-columns: auto; gap: 28px; overflow: visible; scroll-snap-type: none; padding: 0; }
-.recent-journal .recent-journal__card { scroll-snap-align: none; }
-.recent-journal .recent-journal__card > a { height: auto; padding: 0; background: #fff; }
-.recent-journal .recent-journal__thumbnail { aspect-ratio: 16 / 10; margin-bottom: 16px; background: #fff; }
-.recent-journal .recent-journal__thumbnail img { object-fit: contain; }
-.recent-journal .recent-journal__card h3 { -webkit-line-clamp: 2; font-size: 17px; margin-bottom: 10px; }
-.recent-journal .recent-journal__excerpt { -webkit-line-clamp: 2; margin-bottom: 10px; }
-.recent-journal .recent-journal__dates { margin-top: 0; padding-top: 0; border: 0; font-size: 10px; white-space: normal; flex-wrap: wrap; }
-.recent-journal .recent-journal__read { margin-top: 10px; padding-top: 0; }
+:is(.recent-journal, .selected-works) .recent-journal__grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); grid-auto-flow: row; grid-auto-columns: auto; gap: 28px; overflow: visible; scroll-snap-type: none; padding: 0; }
+:is(.recent-journal, .selected-works) .recent-journal__card { scroll-snap-align: none; }
+:is(.recent-journal, .selected-works) .recent-journal__card > a { height: auto; padding: 0; background: #fff; }
+:is(.recent-journal, .selected-works) .recent-journal__thumbnail { aspect-ratio: 16 / 10; margin-bottom: 16px; background: #fff; }
+:is(.recent-journal, .selected-works) .recent-journal__thumbnail img { object-fit: contain; }
+:is(.recent-journal, .selected-works) .recent-journal__card h3 { -webkit-line-clamp: 2; font-size: 17px; margin-bottom: 10px; }
+:is(.recent-journal, .selected-works) .recent-journal__excerpt { -webkit-line-clamp: 2; margin-bottom: 10px; }
+:is(.recent-journal, .selected-works) .recent-journal__dates { margin-top: 0; padding-top: 0; border: 0; font-size: 10px; white-space: normal; flex-wrap: wrap; }
+:is(.recent-journal, .selected-works) .recent-journal__read { margin-top: 10px; padding-top: 0; }
 .recent-journal .work-home__heading { grid-template-rows: auto auto auto; }
 .recent-journal .work-home__heading > .journal-tools { align-self: start; justify-self: end; flex-wrap: nowrap; }
 .recent-journal .journal-tools__search { flex: 0 1 340px; }
 .work-heading-phrase { display: inline-block; }
 @media(max-width:700px) {
- .recent-journal .recent-journal__grid { grid-template-columns: minmax(0,1fr); gap: 32px; }
- .recent-journal .recent-journal__card h3 { font-size: 17px; }
+ :is(.recent-journal, .selected-works) .recent-journal__grid { grid-template-columns: minmax(0,1fr); gap: 32px; }
+ :is(.recent-journal, .selected-works) .recent-journal__card h3 { font-size: 17px; }
  .recent-journal .work-home__heading { display: flex; }
  .recent-journal .work-home__heading > .magazine-eyebrow { order: 0; }
  .recent-journal .work-home__heading > .journal-tools { order: 1; justify-content: flex-start; flex-wrap: wrap; width: 100%; }
