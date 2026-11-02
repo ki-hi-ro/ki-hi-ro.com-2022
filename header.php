@@ -37,14 +37,14 @@
       $technical_blog_active = is_page_template('page-technical-articles.php');
     ?>
       <nav id="site-main-navigation" class="site-main-nav" aria-label="メインナビゲーション">
+        <?php $services_page = kihiro_services_page(); if ($services_page) : ?>
+          <a href="<?php echo esc_url(get_permalink($services_page)); ?>" <?php if (is_page($services_page->ID)) echo 'aria-current="page"'; ?>>Web制作・業務自動化</a>
+        <?php endif; ?>
         <?php if ($case_index) : ?>
           <a href="<?php echo esc_url(get_permalink($case_index)); ?>" <?php if (is_page_template(array('page-case-study.php', 'page-case-study-index.php'))) echo 'aria-current="page"'; ?>>開発事例</a>
         <?php endif; ?>
         <?php if ($technical_blog_page && 'publish' === $technical_blog_page->post_status) : ?>
           <a href="<?php echo esc_url(get_permalink($technical_blog_page)); ?>" <?php if ($technical_blog_active) echo 'aria-current="page"'; ?>>技術ブログ</a>
-        <?php endif; ?>
-        <?php $services_page = kihiro_services_page(); if ($services_page) : ?>
-          <a href="<?php echo esc_url(get_permalink($services_page)); ?>" <?php if (is_page($services_page->ID)) echo 'aria-current="page"'; ?>>Web制作・業務自動化</a>
         <?php endif; ?>
         <a href="<?php echo esc_url(kihiro_journal_url()); ?>" <?php if ($journal_active && !$technical_blog_active) echo 'aria-current="page"'; ?>>日々のジャーナル</a>
         <?php $career_page = get_page_by_path('career'); if ($career_page && 'publish' === $career_page->post_status) : ?>
