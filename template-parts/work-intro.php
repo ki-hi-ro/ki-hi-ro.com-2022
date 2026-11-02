@@ -1,10 +1,6 @@
 <?php
 $services_page = kihiro_services_page();
 if (!$services_page) return;
-$case_index = kihiro_case_study_index();
-$experiences = kihiro_work_experiences();
-$about_page = get_page_by_path('about');
-$experience_url = $about_page && 'publish' === $about_page->post_status ? get_permalink($about_page) : '';
 ?>
 <div class="work-home">
   <section class="work-hero work-hero--business" aria-labelledby="work-intro-heading">
@@ -19,6 +15,11 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
   </section>
   <?php get_template_part('template-parts/recent-journal'); ?>
 
+  <section class="work-profile" id="work-profile" aria-labelledby="work-profile-heading">
+    <div><p class="magazine-eyebrow">ABOUT</p><h2 id="work-profile-heading">柴田 浩貴</h2><p class="work-profile__role">個人事業主 / Webエンジニア</p></div>
+    <div><p>Web制作、データ処理の移行、API開発、システム保守などを経験してきました。既存の仕組みを読み解き、確認しながら改善することを大切にしています。「自分自身を、更新し続ける。」という姿勢で、学びや日々の気づきもブログに記録しています。</p><div class="work-home__profile-links"><?php $about_page = get_page_by_path('about'); if ($about_page && 'publish' === $about_page->post_status) : ?><a href="<?php echo esc_url(get_permalink($about_page)); ?>">自己紹介を読む →</a><?php endif; ?><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナルを読む →</a></div></div>
+  </section>
+
   <section class="work-home__section" id="work-services" aria-labelledby="work-services-heading">
     <header class="work-home__heading"><p class="magazine-eyebrow">SERVICES</p><h2 id="work-services-heading">Web制作と業務自動化で、お手伝いします。</h2><p>事業の情報を届けるWebサイトと、日々の手間を減らす仕組み。いま必要なことからご相談ください。</p></header>
     <div class="work-opportunities__grid">
@@ -26,34 +27,6 @@ $experience_url = $about_page && 'publish' === $about_page->post_status ? get_pe
       <article class="work-opportunity"><p class="magazine-eyebrow">AUTOMATION</p><h3>繰り返す作業を、仕組みにする。</h3><p>Excel・CSVの集計や整形、データの照合・転記、Pythonによる自動化。現在の手順を確認し、手作業を減らせる範囲と進め方をご案内します。</p><a href="<?php echo esc_url(home_url('/contact-us/')); ?>">業務の困りごとを相談する →</a></article>
     </div>
   </section>
-
-
-
-  <?php get_template_part('template-parts/work-help-articles'); ?>
-
-
-  <section class="work-profile" id="work-profile" aria-labelledby="work-profile-heading">
-    <div><p class="magazine-eyebrow">ABOUT</p><h2 id="work-profile-heading">柴田 浩貴</h2><p class="work-profile__role">個人事業主 / Webエンジニア</p></div>
-    <div><p>Web制作、データ処理の移行、API開発、システム保守などを経験してきました。既存の仕組みを読み解き、確認しながら改善することを大切にしています。「自分自身を、更新し続ける。」という姿勢で、学びや日々の気づきもブログに記録しています。</p><div class="work-home__profile-links"><?php $about_page = get_page_by_path('about'); if ($about_page && 'publish' === $about_page->post_status) : ?><a href="<?php echo esc_url(get_permalink($about_page)); ?>">自己紹介を読む →</a><?php endif; ?><a href="<?php echo esc_url(kihiro_journal_url()); ?>">日々のジャーナルを読む →</a></div></div>
-  </section>
-
-  <?php if ($experience_url) : ?>
-  <section class="work-home__section" id="work-projects" aria-labelledby="work-projects-heading">
-    <header class="work-home__heading"><p class="magazine-eyebrow">MY EXPERIENCE</p><h2 id="work-projects-heading">私が現場で、向き合ってきた課題。</h2><p>実際の業務で経験した課題と、私が担当した対応内容をご紹介します。</p></header>
-    <div class="work-projects-grid">
-      <?php foreach (array('etl', 'api', 'bi') as $key) : $experience = $experiences[$key]; ?>
-      <article class="work-project work-project--experience">
-        <p class="work-project__label"><?php echo esc_html($experience['period']); ?> ／ 実務経験</p>
-        <h3><a href="<?php echo esc_url($experience_url . '#experience-' . $key); ?>"><?php echo esc_html($experience['title']); ?></a></h3>
-        <p class="work-project__summary"><?php echo esc_html($experience['approach']); ?></p>
-        <p class="work-project__technology"><?php echo esc_html($experience['tech']); ?></p>
-        <a class="work-project__link" href="<?php echo esc_url($experience_url . '#experience-' . $key); ?>">私の担当範囲・進め方を見る <span aria-hidden="true">→</span></a>
-      </article>
-      <?php endforeach; ?>
-    </div>
-    <div class="work-home__experience-links"><a href="<?php echo esc_url($experience_url . '#work-experience'); ?>">Web制作・保守・仕様書改版を含む6つの経験を見る →</a><?php if ($case_index) : ?><a href="<?php echo esc_url(get_permalink($case_index)); ?>">公開できる成果物・開発事例を見る →</a><?php endif; ?></div>
-  </section>
-  <?php endif; ?>
 
   <?php get_template_part('template-parts/work-selected-cases'); ?>
 
