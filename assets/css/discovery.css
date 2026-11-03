@@ -576,7 +576,7 @@ body .about-body > section:first-child { padding-top: 0; }
 
 /* 狭い画面はロゴ横のボタンから開く。JSなしでもナビゲーションは利用できる。 */
 .site-nav-toggle { display: none; }
-@media (max-width: 1100px) {
+@media (max-width: 1218px) {
  .site-header--collapsible .site-header__inner { display: grid; grid-template-columns: minmax(0, 1fr) 44px; gap: 16px; }
  .site-header--collapsible .site-title { font-size: clamp(26px, 4vw, 36px); }
  .site-header--collapsible .site-nav-toggle { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 10px; background: var(--discovery-soft); color: var(--mag-ink); cursor: pointer; }
@@ -600,7 +600,7 @@ body .about-body > section:first-child { padding-top: 0; }
  .site-header--collapsible .journal-menu__panel { position: static; box-sizing: border-box; width: 100%; max-width: none; margin-top: 4px; padding: 4px 8px; border: 0; background: transparent; box-shadow: none; }
  .site-header--collapsible .journal-menu__panel::before { display: none; }
 }
-@media (max-width: 1100px) and (prefers-reduced-motion: no-preference) {
+@media (max-width: 1218px) and (prefers-reduced-motion: no-preference) {
  .site-nav-toggle__icon > span { transition: transform .2s ease, opacity .2s ease; }
 }
 

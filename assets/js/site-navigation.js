@@ -7,7 +7,7 @@
   var toggle = header.querySelector('.site-nav-toggle');
   var nav = header.querySelector('.site-main-nav');
   if (!toggle || !nav) return;
-  var narrow = window.matchMedia('(max-width: 1100px)');
+  var narrow = window.matchMedia('(max-width: 1218px)');
 
   function setOpen(open) {
     header.classList.toggle('site-header--menu-open', open);
