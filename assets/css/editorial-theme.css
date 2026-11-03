@@ -673,7 +673,7 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
 }
 
 /* Published records form a timeline, with one date shared by each day's entries. */
-.journal-chronology__months { max-width: 960px; margin-inline: auto; }
+.journal-chronology__months { width: 100%; max-width: none; margin-inline: 0; }
 .journal-chronology__month + .journal-chronology__month { margin-top: 64px; }
 .journal-chronology__month > h2 { margin: 0 0 28px; font-size: 25px; line-height: 1.5; font-weight: 600; }
 .journal-chronology__days { list-style: none; padding: 0; margin: 0; }
