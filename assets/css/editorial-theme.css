@@ -379,7 +379,7 @@ body .about-body h2 { border: 0; padding-bottom: 0; }
  .recent-journal .work-home__heading > p:last-child { order: 3; }
  .recent-journal .journal-tools__search { flex: 1 1 100%; }
  #work-cases-heading { font-size: clamp(22px,6vw,25px); }
- .site-footer__top { margin-left: 0; }
+ .site-footer__top { margin-left: auto; }
 }
 /* On narrow screens the title leads, and the entire index stays in page flow. */
 @media(max-width:1099px) {
@@ -737,3 +737,7 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
  .work-home .featured-preview .work-home__more { display: none; }
  .work-home .featured-preview + .featured-preview { margin-top: 48px; }
 }
+
+/* Align the footer's page-top link with the content's right edge. */
+.site-footer .site-footer__bottom { padding-right: 0; }
+.site-footer .site-footer__top { margin-left: auto; text-align: right; }
