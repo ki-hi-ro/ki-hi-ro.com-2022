@@ -11,8 +11,6 @@
 
   function setOpen(open) {
     header.classList.toggle('site-header--menu-open', open);
-    document.body.classList.toggle('site-menu-open', open);
-    document.querySelectorAll('body > main, body > .site-footer').forEach(function (element) { element.inert = open; });
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
     if (!open) {
@@ -25,13 +23,6 @@
     setOpen(narrow.matches && toggle.getAttribute('aria-expanded') !== 'true');
   });
   header.addEventListener('keydown', function (event) {
-    if (event.key === 'Tab' && narrow.matches && toggle.getAttribute('aria-expanded') === 'true') {
-      var focusable = Array.from(header.querySelectorAll('a, button, input')).filter(function (element) { return element.getClientRects().length && !element.disabled; });
-      var first = focusable[0], last = focusable[focusable.length - 1];
-      if (event.shiftKey && document.activeElement === first) { last.focus(); event.preventDefault(); }
-      else if (!event.shiftKey && document.activeElement === last) { first.focus(); event.preventDefault(); }
-    }
-
     if (event.key !== 'Escape' || !narrow.matches || toggle.getAttribute('aria-expanded') !== 'true') return;
     setOpen(false);
     toggle.focus();

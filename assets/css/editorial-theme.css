@@ -387,17 +387,6 @@ body .about-body h2 { border: 0; padding-bottom: 0; }
  .journal-app--single.article-detail-layout > .article-main-visual { order: -2; }
  .article-detail-layout .article-detail-heading h1 { font-size: clamp(24px,6vw,32px); }
 }
-/* A full white mobile menu obscures the page and keeps navigation centered. */
-@media(max-width:1218px) {
- body.site-menu-open { overflow: hidden; }
- body.site-menu-open > main, body.site-menu-open > .site-footer { visibility: hidden; }
- .site-header.site-header--collapsible.site-header--menu-open { position: fixed; inset: 0; z-index: 1000; width: 100%; max-width: none; box-sizing: border-box; margin: 0; padding: 0 20px 24px; background: #fff; overflow-y: auto; height: 100dvh; }
- .site-header--menu-open .site-header__inner { width: 100%; max-width: 1180px; margin-inline: auto; }
- .site-header--menu-open .site-header__menu-row { border: 0; display: flex; flex-direction: column; width: 100%; gap: 24px; }
- .site-header--collapsible.site-header--menu-open .site-main-nav { border: 0; border-radius: 0; padding: 0; gap: 8px; background: #fff; align-items: center; }
- .site-header--menu-open .site-header__menu-row .site-main-nav > a { justify-content: center; text-align: center; width: min(100%,400px); padding: 12px 16px; }
- .site-header--menu-open .site-header__category { text-align: center; }
-}
 .contact-index .work-contact :is(input,select,textarea):focus { outline: none; box-shadow: none; border-color: #dedede; }
 body.keyboard-focus .contact-index .work-contact :is(input,select,textarea):focus { outline: 2px solid #555; outline-offset: 3px; }
 .technical-reading-list .article-timeline__thumbnail img { object-fit: contain; }
@@ -409,13 +398,6 @@ body.keyboard-focus .contact-index .work-contact :is(input,select,textarea):focu
 .article-detail-layout > .journal-panel--single,
 .article-detail-layout > .article-detail-heading { width: 100%; max-width: 800px; margin-inline: auto; }
 @media (min-width: 1001px) { .work-hero--business h2 { grid-row: 1 / 4; } }
-
-@media (max-width: 1218px) {
- .site-header--menu-open .site-header__inner { position: relative; }
- .site-header--menu-open .site-header__inner > .site-title { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: 0; white-space: nowrap; font-size: clamp(20px, 6vw, 32px); }
- .site-header--menu-open .site-nav-toggle { grid-column: 2; justify-self: end; }
- .site-header--menu-open .site-header__inner > .search-form { display: none; }
-}
 
 /* Interior indexes share the homepage's compact three-card presentation. */
 .technical-reading-list .article-timeline__year > ol { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 40px 28px; }
@@ -590,7 +572,7 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
 @media (max-width: 1218px) {
  .site-header:not(.site-header--menu-open) .site-header__menu-row { padding: 0; }
  .site-header .site-header__inner { border-bottom: 0; }
- .site-header:not(.site-header--menu-open) .site-header__inner { padding-top: 32px; }
+ .site-header .site-header__inner { padding-top: 32px; }
  #page-top + #main-content { margin-top: 24px; }
 }
 
@@ -698,4 +680,39 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
  .journal-chronology__date > span { margin: 0; }
  .journal-chronology__entries { padding-left: 18px; padding-bottom: 32px; }
  .journal-chronology__entry h3 { font-size: 20px; }
+}
+
+/* A compact disclosure below the header keeps the current page in view. */
+@media (max-width: 1218px) {
+ .site-header--collapsible.site-header--menu-open .site-header__menu-row {
+  display: block;
+  padding: 16px 0 8px;
+  border-top: 1px solid var(--mag-line);
+ }
+ .site-header--collapsible.site-header--menu-open .site-main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+ }
+ .site-header--collapsible.site-header--menu-open .site-header__menu-row .site-main-nav > a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 16px;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: left;
+  background: transparent;
+  color: var(--mag-ink);
+ }
+ .site-header--collapsible.site-header--menu-open .site-header__menu-row .site-main-nav > a:hover,
+ .site-header--collapsible.site-header--menu-open .site-header__menu-row .site-main-nav > a[aria-current] { background: #f5f5f5; }
 }
