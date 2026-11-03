@@ -734,12 +734,6 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
   font-size: 14px;
   font-weight: 400;
  }
- .work-home .featured-preview .work-home__more {
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid var(--mag-line);
-  text-align: left;
- }
- .work-home .featured-preview .work-home__more .work-home__button { font-size: 14px; }
+ .work-home .featured-preview .work-home__more { display: none; }
  .work-home .featured-preview + .featured-preview { margin-top: 48px; }
 }
