@@ -12,6 +12,8 @@ if (!$services_page) return;
     </div>
   </section>
 
+  <?php get_template_part('template-parts/recent-journal'); ?>
+
   <section class="work-home__section" id="work-services" aria-labelledby="work-services-heading">
     <header class="work-home__heading"><p class="magazine-eyebrow">SERVICES</p><h2 id="work-services-heading">Web制作と業務自動化で、お手伝いします。</h2><p>事業の情報を届けるWebサイトと、日々の手間を減らす仕組み。いま必要なことからご相談ください。</p></header>
     <div class="work-opportunities__grid">
@@ -21,8 +23,6 @@ if (!$services_page) return;
   </section>
 
   <?php get_template_part('template-parts/work-selected-cases'); ?>
-
-  <?php get_template_part('template-parts/recent-journal'); ?>
 
   <section class="work-profile" id="work-profile" aria-labelledby="work-profile-heading">
     <header class="work-home__heading"><p class="magazine-eyebrow">ABOUT</p><h2 id="work-profile-heading">柴田 浩貴</h2><p class="work-profile__role">個人事業主 / Webエンジニア</p></header>

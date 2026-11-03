@@ -1,12 +1,16 @@
 <?php
 /** 最近更新した公開記事を、ジャーナルと同じカテゴリーで紹介する。 */
 $categories = array();
-foreach (array('技術・開発', '思考・生き方', '健康・セルフケア', '仕事・キャリア', '旅・場所', 'お金・制度') as $name) {
+$category_labels = array();
+foreach (array('思考・生き方' => '思考', '健康・セルフケア' => '健康', '技術・開発' => '技術', '仕事・キャリア' => '仕事', 'お金・制度' => 'お金', '旅・場所' => '旅') as $name => $label) {
     $term = get_term_by('name', $name, 'category');
-    if ($term instanceof WP_Term) $categories[$term->term_id] = $term;
+    if ($term instanceof WP_Term) {
+        $categories[$term->term_id] = $term;
+        $category_labels[$term->term_id] = $label;
+    }
 }
 $selected = absint(kihiro_get_request_value('recent_category'));
-if (!isset($categories[$selected])) $selected = $categories ? (int) array_key_first($categories) : 0;
+if (!isset($categories[$selected])) $selected = 0;
 $args = array(
     'post_type' => 'post', 'post_status' => 'publish', 'has_password' => false,
     'posts_per_page' => 3, 'ignore_sticky_posts' => true,
@@ -18,9 +22,10 @@ $journal_url = $selected ? add_query_arg('article_category', $selected, kihiro_j
 ?>
 <section class="work-home__section recent-journal" id="recent-journal" aria-labelledby="recent-journal-heading">
   <header class="work-home__heading"><p class="magazine-eyebrow">DAILY JOURNAL</p>
-<h2 id="recent-journal-heading">毎日書く。日々、更新する。</h2><p>技術の学びから、仕事への向き合い方、日々の気づきまで。毎日書いています。</p></header>
+<h2 id="recent-journal-heading">日々の記録</h2><p>心に浮かんだ言葉を書き続けています。最近はAIの思考も取り入れています。</p></header>
   <nav class="recent-journal__categories" aria-label="最近更新した記事のカテゴリー">
-    <?php foreach ($categories as $term) : ?><a href="<?php echo esc_url(add_query_arg('recent_category', $term->term_id, home_url('/')) . '#recent-journal'); ?>" <?php if ($selected === $term->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($term->name); ?></a><?php endforeach; ?>
+    <a href="<?php echo esc_url(add_query_arg('recent_category', 0, home_url('/')) . '#recent-journal'); ?>" <?php if (!$selected) echo 'aria-current="true"'; ?>>すべて</a>
+    <?php foreach ($categories as $term) : ?><a href="<?php echo esc_url(add_query_arg('recent_category', $term->term_id, home_url('/')) . '#recent-journal'); ?>" <?php if ($selected === $term->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($category_labels[$term->term_id]); ?></a><?php endforeach; ?>
   </nav>
   <p class="screen-reader-text" role="status" aria-live="polite" data-recent-journal-status></p>
   <div class="recent-journal__grid" id="recent-journal-posts">
