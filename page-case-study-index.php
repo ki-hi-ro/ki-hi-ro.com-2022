@@ -28,7 +28,7 @@ get_header(); ?>
   $current_page = max(1, (int) get_query_var('paged'), (int) get_query_var('page'));
   $cases = array_slice($cases, ($current_page - 1) * $per_page, $per_page);
   ?>
-  <?php get_template_part('template-parts/page-heading', null, array('eyebrow' => 'SELECTED WORKS', 'title' => '開発事例', 'description' => '制作案件・個人開発・サンプルを通して、技術と解決への取り組みをご紹介します。')); ?>
+  <?php get_template_part('template-parts/page-heading', null, array('eyebrow' => 'WORKS', 'title' => '制作実績', 'description' => '制作案件・個人開発・サンプルを通して、技術と解決への取り組みをご紹介します。')); ?>
   <?php if (current_user_can('edit_pages')) : ?>
     <div class="article-create"><a class="article-edit__link" href="<?php echo esc_url(add_query_arg(array('post_type' => 'page', 'kihiro_case_parent' => get_the_ID()), admin_url('post-new.php'))); ?>"><span aria-hidden="true">＋</span> 新規投稿</a></div>
   <?php endif; ?>
