@@ -11,14 +11,14 @@ $selected = absint(kihiro_get_request_value('recent_category'));
 if (!isset($categories[$selected])) $selected = 0;
 $args = array(
     'post_type' => 'post', 'post_status' => 'publish', 'has_password' => false,
-    'posts_per_page' => 3, 'ignore_sticky_posts' => true,
+    'posts_per_page' => 1, 'ignore_sticky_posts' => true,
     'post__not_in' => kihiro_excluded_post_ids(), 'orderby' => array('modified' => 'DESC', 'ID' => 'DESC'),
 );
 if ($selected) $args['cat'] = $selected;
 $recent = get_posts($args);
 $journal_url = $selected ? add_query_arg('article_category', $selected, kihiro_journal_url()) : kihiro_journal_url();
 ?>
-<section class="work-home__section recent-journal" id="recent-journal" aria-labelledby="recent-journal-heading">
+<section class="work-home__section recent-journal featured-preview" id="recent-journal" aria-labelledby="recent-journal-heading">
   <header class="work-home__heading"><p class="magazine-eyebrow">DAILY JOURNAL</p>
 <h2 id="recent-journal-heading">日々の記録</h2><p>心に浮かんだ言葉を書き続けています。最近はAIの思考も取り入れています。</p></header>
   <nav class="recent-journal__categories" aria-label="最近更新した記事のカテゴリー">
@@ -29,10 +29,13 @@ $journal_url = $selected ? add_query_arg('article_category', $selected, kihiro_j
   <div class="recent-journal__grid" id="recent-journal-posts">
     <?php foreach ($recent as $entry) :
         $excerpt = $entry->post_excerpt ?: $entry->post_content;
-        $excerpt = wp_html_excerpt(preg_replace('/\s+/u', ' ', wp_strip_all_tags(strip_shortcodes($excerpt))), 90, '…');
+        $excerpt = wp_html_excerpt(preg_replace('/\s+/u', ' ', wp_strip_all_tags(strip_shortcodes($excerpt))), 150, '…');
     ?>
     <article class="recent-journal__card"><a href="<?php echo esc_url(get_permalink($entry)); ?>">
       <span class="recent-journal__thumbnail" aria-hidden="true"><?php echo kihiro_article_thumbnail($entry->ID, 'large'); ?></span>
+      <?php $entry_categories = get_the_category($entry->ID); if ($entry_categories) : ?>
+        <span class="featured-preview__category"><?php echo esc_html($entry_categories[0]->name); ?></span>
+      <?php endif; ?>
       <h3><?php echo esc_html(get_the_title($entry)); ?></h3>
 
       <p class="recent-journal__excerpt"><?php echo esc_html($excerpt); ?></p>
