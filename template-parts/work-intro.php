@@ -7,7 +7,7 @@ if (!$services_page) return;
     <p class="work-hero__concept">CONCEPT</p>
     <h2 id="work-intro-heading">自分 × 何か</h2>
     <p class="work-hero__statement">私はこの公式を大事にしています。</p>
-    <p class="work-hero__lead">自分の身体の状態を整える、自分の思考を整える、<br class="work-hero__mobile-break">仕事に必要なスキルを整える。<br>その自分自身で自分以外の何かと関わっていきます。</p>
+    <p class="work-hero__lead"><span class="work-hero__lead-desktop">自分の身体の状態を整える、自分の思考を整える、仕事に必要なスキルを整える。<br>その自分自身で自分以外の何かと関わっていきます。</span><span class="work-hero__lead-mobile">自分の身体の状態を整える。<br>自分の思考を整える。<br>仕事に必要なスキルを整える。<br>その自分自身で自分以外の何かと関わっていきます。</span></p>
   </section>
 
   <?php get_template_part('template-parts/recent-journal'); ?>
