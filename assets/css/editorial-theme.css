@@ -790,6 +790,6 @@ body .site-footer { padding-bottom: 16px; }
 @media (max-width: 700px) {
  body .site-footer,
  body .journal-app--single + .site-footer { margin-top: 0; padding-top: 40px; padding-bottom: 34px; }
- .site-footer .site-footer__bottom { gap: 8px 20px; }
+ .site-footer .site-footer__bottom { gap: 1px 20px; }
  .site-footer .site-footer__logo { flex-basis: 100%; width: 100%; }
 }
