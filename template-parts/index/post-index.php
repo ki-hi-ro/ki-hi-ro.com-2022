@@ -120,8 +120,7 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
     <nav class="navigation pagination" aria-label="ジャーナルのページ送り"><div class="nav-links"><?php echo wp_kses_post(paginate_links(array(
       'base' => add_query_arg('paged', '%#%', home_url('/')), 'format' => '',
       'current' => max(1, (int) get_query_var('paged')), 'total' => $wp_query->max_num_pages,
-      'show_all' => false, 'mid_size' => 2, 'end_size' => 1,
-      'prev_next' => true, 'prev_text' => '← 新しい記録', 'next_text' => '過去の記録 →',
+      'show_all' => true, 'prev_next' => false,
       'add_args' => array_filter(array('view' => 'archive-all', 'article_category' => $archive_category_id, 'article_tag' => kihiro_selected_article_tag(), 'm' => kihiro_get_request_value('m'))),
     ))); ?></div></nav>
   <?php endif; ?>
