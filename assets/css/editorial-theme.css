@@ -527,26 +527,26 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
  .article-detail-layout.has-article-toc > .journal-panel--single { grid-column: 1; }
  .article-detail-layout.has-article-toc > .article-toc { grid-column: 2; }
 }
-.single-post .floating-page-top {
+:is(.single-post, .page-template-page-case-study) .floating-page-top {
  background: var(--mag-paper);
  color: var(--mag-accent);
  border: 1px solid var(--mag-accent);
  box-shadow: 0 3px 14px rgba(40, 40, 40, .12);
 }
-.single-post .floating-page-top:hover { background: var(--mag-accent); color: #fff; }
+:is(.single-post, .page-template-page-case-study) .floating-page-top:hover { background: var(--mag-accent); color: #fff; }
 
 /* Keep the page navigation flush with the contents panel's right edge. */
 @media (min-width: 1100px) {
- .single-post:has(.article-toc) .floating-page-top { right: max(48px, calc((100% - 1180px) / 2)); }
+ :is(.single-post, .page-template-page-case-study):has(.article-toc) .floating-page-top { right: max(48px, calc((100% - 1180px) / 2)); }
 }
 @media (max-width: 1099px) {
- .single-post .article-toc {
+ :is(.single-post, .page-template-page-case-study) .article-toc {
   left: 12px;
   right: auto;
   bottom: calc(12px + env(safe-area-inset-bottom, 0px));
   width: min(340px, calc(100vw - 84px));
  }
- .single-post:has(.article-toc) .floating-page-top {
+ :is(.single-post, .page-template-page-case-study):has(.article-toc) .floating-page-top {
   right: 12px;
   bottom: calc(12px + env(safe-area-inset-bottom, 0px));
  }

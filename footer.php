@@ -11,7 +11,7 @@
       &copy; <?php echo esc_html(wp_date('Y')); ?> ki-hi-ro.com
     </span>
 
-    <?php if (!is_singular('post')) : ?><a class="site-footer__top" href="#page-top">ページトップ ↑</a><?php endif; ?>
+    <?php if (!(is_singular('post') || is_page_template('page-case-study.php'))) : ?><a class="site-footer__top" href="#page-top">ページトップ ↑</a><?php endif; ?>
 
 
 
@@ -19,7 +19,7 @@
 
 </footer>
 
-<?php if (is_singular('post')) : ?>
+<?php if (is_singular('post') || is_page_template('page-case-study.php')) : ?>
 <a class="floating-page-top" href="#page-bottom" aria-label="ページの最後へ移動">
   <span aria-hidden="true">↓</span>
 </a>
