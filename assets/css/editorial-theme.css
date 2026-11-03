@@ -571,3 +571,26 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
   bottom: calc(12px + env(safe-area-inset-bottom, 0px));
  }
 }
+
+/* Share one desktop row between the logo and navigation. */
+@media (min-width: 1219px) {
+ .site-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 16px 40px;
+  padding-block: 24px;
+ }
+ .site-header .site-header__inner { display: contents; }
+ .site-header__inner > .site-title { grid-column: 1; grid-row: 1; }
+ .site-header .site-header__menu-row { grid-column: 2; grid-row: 1; padding: 0; }
+ .site-header__menu-row .site-main-nav { justify-content: flex-end; flex-wrap: nowrap; }
+ .site-header__menu-row .site-main-nav > a { white-space: nowrap; }
+ .site-header__inner > .search-form { grid-column: 2; grid-row: 2; justify-self: end; margin: 0; }
+}
+#page-top + #main-content { margin-top: 40px; }
+@media (max-width: 1218px) {
+ .site-header:not(.site-header--menu-open) .site-header__menu-row { padding: 0; }
+ .site-header .site-header__inner { border-bottom: 0; }
+ #page-top + #main-content { margin-top: 24px; }
+}
