@@ -596,3 +596,10 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
  .site-header:not(.site-header--menu-open) .site-header__inner { padding-top: 32px; }
  #page-top + #main-content { margin-top: 24px; }
 }
+
+/* Place article search beneath the page heading, aligned with the content. */
+.journal-search { width: min(100%, 360px); margin: 24px 0; }
+.journal-search .search-form { width: 100%; margin: 0; gap: 0; border: 1px solid var(--mag-line); border-radius: 999px; overflow: hidden; }
+.journal-search .search-form__input { flex: 1; width: 0; min-width: 0; padding: 10px 16px; border: 0; }
+.journal-search .search-form__btn { flex: 0 0 44px; }
+.journal-search .search-form:focus-within { outline: 2px solid var(--mag-ink); outline-offset: 2px; }

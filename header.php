@@ -27,7 +27,7 @@
     <div class="site-header__inner">
       <a class="site-title" href="<?php echo esc_url(kihiro_logo_home_url()); ?>">ki-hi-ro.com</a>
       <button class="site-nav-toggle" type="button" aria-controls="site-main-navigation" aria-expanded="false" aria-label="メニューを開く"><span class="site-nav-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
-      <?php if ($journal_active) get_search_form(); ?>
+      <?php if ($journal_active && !(is_home() && in_array(kihiro_get_request_value('view'), array('journal', 'all', 'archive-all'), true))) get_search_form(); ?>
     </div>
     <div class="site-header__menu-row">
     <?php
