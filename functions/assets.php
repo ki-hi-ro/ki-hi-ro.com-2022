@@ -11,6 +11,9 @@ function kihiro_asset_version($relative_path) {
 }
 
 function kihiro_enqueue_assets() {
+    if (is_home() && !is_paged() && '' === kihiro_get_request_value('view') && '' === kihiro_get_request_value('journal_date')) {
+        wp_enqueue_script('kihiro-concept-scene', get_theme_file_uri('/assets/js/concept-scene.js'), array(), kihiro_asset_version('/assets/js/concept-scene.js'), true);
+    }
     if (is_singular('post') || is_page_template('page-case-study.php')) {
         wp_enqueue_script('kihiro-article-toc', get_theme_file_uri('/assets/js/article-toc.js'), array(), kihiro_asset_version('/assets/js/article-toc.js'), true);
         wp_enqueue_script('kihiro-article-layout', get_theme_file_uri('/assets/js/article-layout.js'), array(), kihiro_asset_version('/assets/js/article-layout.js'), true);

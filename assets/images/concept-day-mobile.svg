@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="760" viewBox="0 0 900 760">
+ <defs>
+  <linearGradient id="sky" x1="0" y1="1" x2=".8" y2="0"><stop stop-color="#edf8ff"/><stop offset=".5" stop-color="#dcedfb"/><stop offset="1" stop-color="#9dcef5"/></linearGradient>
+  <radialGradient id="light" cx=".1" cy=".15" r="1"><stop stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <linearGradient id="far" x2="1" y2="0"><stop stop-color="#e1e3ef"/><stop offset="1" stop-color="#96b9e9"/></linearGradient>
+  <linearGradient id="near" x2="1" y2="0"><stop stop-color="#b2cfec"/><stop offset="1" stop-color="#318ed6"/></linearGradient>
+ </defs>
+ <path fill="url(#sky)" d="M0 0h900v760H0z"/><path fill="url(#light)" d="M0 0h900v760H0z"/>
+ <circle cx="675" cy="560" r="47" fill="#fffbdc" opacity=".95"/>
+ <path d="M0 715C70 716 90 694 155 700S235 676 300 678 420 646 490 636 568 665 642 658 783 587 826 597 875 616 900 615V760H0Z" fill="url(#far)"/>
+ <path d="M0 760C110 754 185 727 260 729S370 704 458 705 590 675 650 660 805 621 900 623V760Z" fill="#94b8e3" opacity=".7"/>
+ <path d="M390 760C520 737 651 703 720 690S849 670 900 655V760Z" fill="url(#near)"/>
+</svg>

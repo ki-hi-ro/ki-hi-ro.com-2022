@@ -849,3 +849,17 @@ body .site-footer { padding-bottom: 16px; }
  .work-hero__lead-desktop { display: none; }
  .work-hero__lead-mobile { display: inline; }
 }
+
+/* The concept landscape follows Japan's morning, day, dusk and night. */
+.work-landing .work-hero--business[data-scene="day"] { background-image: url('../images/concept-day.svg'); }
+.work-landing .work-hero--business[data-scene="dusk"] { background-image: url('../images/concept-dusk.svg'); }
+.work-landing .work-hero--business[data-scene="night"] { background-color: #17243d; background-image: url('../images/concept-night.svg'); color: #f6f7fc; }
+.work-landing .work-hero--business[data-scene="night"] .work-hero__concept { color: #d3dced; }
+.work-landing .work-hero--business[data-scene="night"] h2,
+.work-landing .work-hero--business[data-scene="night"] .work-hero__statement { color: #f6f7fc; }
+.work-landing .work-hero--business[data-scene="night"] .work-hero__lead { color: #e0e6f2; }
+@media (max-width: 700px) {
+ .work-landing .work-hero--business[data-scene="day"] { background-image: url('../images/concept-day-mobile.svg'); }
+ .work-landing .work-hero--business[data-scene="dusk"] { background-image: url('../images/concept-dusk-mobile.svg'); }
+ .work-landing .work-hero--business[data-scene="night"] { background-image: url('../images/concept-night-mobile.svg'); }
+}

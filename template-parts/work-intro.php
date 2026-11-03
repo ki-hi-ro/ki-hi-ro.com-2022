@@ -1,9 +1,11 @@
 <?php
 $services_page = kihiro_services_page();
 if (!$services_page) return;
+$concept_hour = (int) wp_date('G', null, new DateTimeZone('Asia/Tokyo'));
+$concept_scene = $concept_hour < 5 || $concept_hour >= 19 ? 'night' : ($concept_hour < 10 ? 'dawn' : ($concept_hour < 17 ? 'day' : 'dusk'));
 ?>
 <div class="work-home">
-  <section class="work-hero work-hero--business" aria-labelledby="work-intro-heading">
+  <section class="work-hero work-hero--business" data-scene="<?php echo esc_attr($concept_scene); ?>" aria-labelledby="work-intro-heading">
     <p class="work-hero__concept">CONCEPT</p>
     <h2 id="work-intro-heading">自分 × 何か</h2>
     <p class="work-hero__statement">私はこの公式を大事にしています。</p>
