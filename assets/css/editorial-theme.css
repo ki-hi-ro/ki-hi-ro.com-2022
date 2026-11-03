@@ -671,9 +671,3 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
  #main-content.article-detail-layout .article-detail-heading { padding: 32px 22px; margin-bottom: 32px; border-radius: 10px; }
  #main-content.article-detail-layout .article-detail-heading h1 { font-size: 26px; margin-block: 12px 18px; }
 }
-
-/* Match the space below the main visual to the space above it. */
-.work-landing .work-hero + .work-home__section { margin-top: 40px; }
-@media (max-width: 1218px) {
- .work-landing .work-hero + .work-home__section { margin-top: 24px; }
-}
