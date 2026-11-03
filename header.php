@@ -34,13 +34,13 @@
       $case_index = kihiro_case_study_index();
     ?>
       <nav id="site-main-navigation" class="site-main-nav" aria-label="メインナビゲーション">
+        <a href="<?php echo esc_url(kihiro_journal_url()); ?>" <?php if ($journal_active) echo 'aria-current="page"'; ?>>日々の記録</a>
         <?php $services_page = kihiro_services_page(); if ($services_page) : ?>
           <a href="<?php echo esc_url(get_permalink($services_page)); ?>" <?php if (is_page($services_page->ID)) echo 'aria-current="page"'; ?>>Web制作・業務自動化</a>
         <?php endif; ?>
         <?php if ($case_index) : ?>
           <a href="<?php echo esc_url(get_permalink($case_index)); ?>" <?php if (is_page_template(array('page-case-study.php', 'page-case-study-index.php'))) echo 'aria-current="page"'; ?>>制作実績</a>
         <?php endif; ?>
-        <a href="<?php echo esc_url(kihiro_journal_url()); ?>" <?php if ($journal_active) echo 'aria-current="page"'; ?>>日々の記録</a>
         <?php $about_page = get_page_by_path('about'); if ($about_page && $about_page->post_status === 'publish') : ?>
           <a href="<?php echo esc_url(get_permalink($about_page)); ?>" <?php if (is_page($about_page->ID)) echo 'aria-current="page"'; ?>>自己紹介</a>
         <?php endif; ?>
