@@ -59,7 +59,7 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
       if (!$requested_month && get_query_var('year') && get_query_var('monthnum')) $requested_month = sprintf('%04d%02d', get_query_var('year'), get_query_var('monthnum'));
       if (preg_match('/^(\d{4})(0[1-9]|1[0-2])$/', $requested_month, $month_parts)) $date_title = (int) $month_parts[1] . '年' . (int) $month_parts[2] . '月';
     ?>
-    <header class="article-timeline__header"><div><h1><?php echo esc_html($date_title); ?></h1><p><?php echo esc_html(number_format_i18n($wp_query->found_posts)); ?>記事の記録。</p></div></header>
+    <header class="article-timeline__header"><div><h1><?php echo esc_html($date_title); ?></h1><p><?php echo esc_html(number_format_i18n(count($wp_query->posts))); ?>記事の記録。</p></div></header>
   <?php else : ?>
   <header class="article-timeline__header">
     <div>
