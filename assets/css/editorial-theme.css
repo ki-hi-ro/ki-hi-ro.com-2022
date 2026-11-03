@@ -775,3 +775,7 @@ body .site-footer { padding-bottom: 16px; }
  .work-home .featured-preview .recent-journal__thumbnail { grid-column: 1; grid-row: 1 / 6; width: 100%; margin: 0; }
  .work-home .featured-preview .recent-journal__card > a > :not(.recent-journal__thumbnail) { grid-column: 2; margin: 0; }
 }
+
+/* Excerpts also open the record without changing the quiet reading style. */
+.journal-chronology__excerpt a { display: block; color: inherit; text-decoration: none; }
+.journal-chronology__excerpt a:hover { color: var(--mag-ink); }
