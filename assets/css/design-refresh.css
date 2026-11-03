@@ -408,7 +408,7 @@ svg {
 .journal-entry__link:hover .journal-entry__title,
 .journal-entry__link:focus-visible .journal-entry__title {
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1px;
   text-underline-offset: var(--link-underline-offset, 10px);
 }
 

@@ -1,4 +1,4 @@
-:root { --link-underline-offset: 7px; }
+:root { --link-underline-offset: 10px; }
 /* White foundation with monochrome interface colors. */
 :root {
   --mag-paper: #fff;

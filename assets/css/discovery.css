@@ -109,7 +109,7 @@
 .db-single__tags > a { display: inline-block; max-width: 100%; line-height: 1.8; overflow-wrap: anywhere; }
 .db-single__tags > a + a { margin-inline-start: .2em; }
 @media (max-width: 700px) {
- .db-single__fields .db-single__tags > a { text-underline-offset: 5px; }
+ .db-single__fields .db-single__tags > a { text-underline-offset: var(--link-underline-offset, 10px); }
 }
 .article-featured-image img, .db-single__content :is(img, video), .about-body .about-maru img { border-radius: 14px; }
 body .db-single__content h2, body .about-body h2, body .case-content h2 {
@@ -270,7 +270,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .archive-tag-filter select { appearance: none; -webkit-appearance: none; min-width: 160px; max-width: min(100%, 300px); min-height: 44px; padding: 8px 44px 8px 14px; border: 1px solid transparent; border-radius: 10px; background-color: var(--discovery-soft); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='m3 6 5 5 5-5' fill='none' stroke='%23292929' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-size: 14px; color: var(--mag-ink); font: inherit; }
 @media (forced-colors: active) { .archive-tag-filter select { appearance: auto; background-image: none; } }
 .archive-tag-filter button { min-height: 44px; padding: 8px 18px; border: 0; border-radius: 999px; background: var(--mag-ink); color: #fff; font: inherit; cursor: pointer; }
-.archive-tag-filter a { padding: 8px 0; color: var(--mag-muted); text-decoration: underline; text-underline-offset: 4px; }
+.archive-tag-filter a { padding: 8px 0; color: var(--mag-muted); text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); }
 .archive-tag-filter select:focus-visible { outline: 2px solid var(--mag-ink); outline-offset: 0; }
 
 /* ヘッダーからカテゴリー別の全記事へ移動するプルダウン。 */
@@ -303,7 +303,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .work-entry h2 { font-size: 22px; font-weight: 600; margin: 0 0 12px; }
 .work-entry p { margin: 0 0 20px; }
 .work-entry__links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 28px; }
-.work-entry__links a, .work-entry__cases a { text-decoration: underline; text-underline-offset: 4px; }
+.work-entry__links a, .work-entry__cases a { text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); }
 .work-entry__cases { padding-left: 1.25em; margin: 20px 0; }
 .case-brief { margin: 32px 0; padding: 24px; border-radius: 14px; background: var(--discovery-soft); }
 .case-brief h2 { font-size: 22px; font-weight: 600; margin: 0 0 20px; }
@@ -327,7 +327,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .post-timeline__item::before { content: ''; position: absolute; left: -4px; top: calc(14px + .85em); transform: translateY(-50%); width: 7px; height: 7px; border-radius: 50%; background: #a0a0a5; }
 .post-timeline__item time { font-size: 12px; line-height: calc(14px * 1.7); color: var(--mag-muted); font-variant-numeric: tabular-nums; }
 .post-timeline__item a { overflow-wrap: anywhere; font-size: inherit; line-height: inherit; }
-.post-timeline__item a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.post-timeline__item a:hover { text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); }
 .post-timeline__item.is-current::before { background: var(--mag-ink); }
 .post-timeline__item.is-current a { font-weight: 600; }
 .post-timeline__current { display: inline-block; margin-left: 8px; padding: 1px 6px; border-radius: 4px; background: var(--discovery-soft); font-size: 11px; white-space: nowrap; }
@@ -345,7 +345,7 @@ body .about-body > section:first-child { padding-top: 0; }
 
 /* 提供価値から対応内容・事例・相談へ進むトップページ。 */
 .work-home { color: var(--mag-ink); margin-bottom: 88px; }
-.work-home a { text-underline-offset: 5px; }
+.work-home a { text-underline-offset: var(--link-underline-offset, 10px); }
 .work-hero { position: relative; isolation: isolate; overflow: hidden; text-align: center; padding: clamp(36px, 6vw, 88px) 24px 36px; border-radius: 20px; background: #fafafb; }
 .work-hero::before {
  content: "";
@@ -470,7 +470,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .case-experience-entry { margin: 0 0 36px; padding: 24px; border-radius: 14px; background: var(--discovery-soft); line-height: 1.9; }
 .case-experience-entry h1, .case-experience-entry h2 { font-size: 22px; font-weight: 600; margin: 0 0 12px; }
 .case-experience-entry p { font-size: 14px; margin-bottom: 16px; }
-.case-experience-entry a { font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+.case-experience-entry a { font-size: 14px; text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); }
 
 /* ナビゲーションの通常リンクとプルダウンの高さ・文字位置を統一する。 */
 .site-header__menu-row .site-main-nav { align-items: center; }
@@ -485,7 +485,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .work-experience__articles { margin-top: 24px; }
 .work-experience__articles ul { padding-left: 1.3em; }
 .work-experience__articles li { margin-bottom: 14px; }
-.work-experience__articles a { text-decoration: underline; text-underline-offset: 4px; }
+.work-experience__articles a { text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); }
 .work-experience__articles time { display: block; margin-top: 4px; font-size: 12px; color: var(--mag-muted); }
 /* 抽象的なテーマから、具体的なタグへ辿る。 */
 .tag-tree-picker { position: relative; width: min(300px, 100%); min-width: 180px; }
@@ -547,7 +547,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .article-related-experience__link + .article-related-experience__link { margin-top: 20px; }
 .article-related-experience__title { font-size: 17px; font-weight: 500; line-height: 1.7; }
 .article-related-experience__meta { font-size: 12px; color: var(--mag-muted); line-height: 1.8; }
-.article-related-experience__more { font-size: 13px; text-decoration: underline; text-underline-offset: 4px; line-height: 1.8; }
+.article-related-experience__more { font-size: 13px; text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); line-height: 1.8; }
 .article-related-experience__link:focus-visible { outline: 2px solid var(--mag-ink); outline-offset: 5px; border-radius: 4px; }
 @media (max-width: 700px) { .article-related-experience { padding: 20px; margin: 24px 0; } .article-related-experience__title { font-size: 16px; } }
 /* サービスページも自己紹介と同じ余白・2列カードで読む。 */
@@ -565,7 +565,7 @@ body .about-body > section:first-child { padding-top: 0; }
 .services-page__content .service-card :is(p, ul, ol) { font-size: 14px; line-height: 1.9; margin: 12px 0 20px; }
 .services-page__content .service-card > :last-child { margin-bottom: 0; }
 .service-card li { margin-bottom: 12px; }
-.service-card a { text-decoration: underline; text-underline-offset: 4px; }
+.service-card a { text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); }
 @media (max-width: 700px) {
  .services-page { padding: 28px 0 48px; }
  .services-page__content { grid-template-columns: minmax(0, 1fr); gap: 20px; }
@@ -735,7 +735,7 @@ body .about-body > section:first-child { padding-top: 0; }
 
 .article-edit--actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-block: 20px 28px; }
 
-.site-footer__note { margin-left: auto; padding-block: 8px; font-size: 13px; color: var(--mag-muted); text-decoration: underline; text-underline-offset: 4px; }
+.site-footer__note { margin-left: auto; padding-block: 8px; font-size: 13px; color: var(--mag-muted); text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); }
 .site-footer__note:hover { color: var(--mag-ink); }
 .journal-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 12px; margin-bottom: 20px; }
 .journal-tools__search { display: flex; flex: 0 1 360px; min-width: 0; max-width: 100%; border: 1px solid var(--mag-line); border-radius: 999px; overflow: hidden; background: #fff; }
