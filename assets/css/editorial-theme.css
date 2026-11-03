@@ -277,8 +277,6 @@ body .db-single__content h2 { margin: 64px 0 26px; padding: 18px 0 0; border: 0;
 }
 
 /* Contact: a quiet introduction and a generous single-column form. */
-#main-content.contact-index > .interior-heading { padding: 24px 24px 0; margin-bottom: 24px; background: none; }
-#main-content.contact-index > .interior-heading h1 { margin-bottom: 0; }
 .contact-index .contact-page__body { max-width: 1000px; }
 .contact-index .work-contact__welcome { max-width: 760px; margin: 0 auto 44px; text-align: center; }
 .contact-index .work-contact__welcome p { font-size: 15px; line-height: 2; color: #656565; margin: 0 0 14px; }
@@ -302,7 +300,6 @@ body .db-single__content h2 { margin: 64px 0 26px; padding: 18px 0 0; border: 0;
 .contact-index .work-contact .wpcf7-not-valid-tip { font-size: 12px; font-weight: 400; margin-top: 8px; }
 .contact-index .work-contact .wpcf7-response-output { margin: 24px 0 0; padding: 16px; font-size: 14px; }
 @media(max-width:700px) {
- #main-content.contact-index > .interior-heading { padding: 8px 0 0; }
  .contact-index .work-contact__welcome { text-align: left; margin-bottom: 30px; }
  .contact-index .work-contact__welcome p { font-size: 14px; }
  .contact-index .work-contact .wpcf7 { padding: 28px 20px; border-radius: 10px; box-shadow: none; }

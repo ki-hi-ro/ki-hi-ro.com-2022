@@ -3,7 +3,7 @@
 <?php if (is_page('contact-us')) : ?>
   <main id="main-content" class="case-page case-index contact-index">
     <?php while (have_posts()) : the_post(); ?>
-      <?php get_template_part('template-parts/page-heading', null, array('eyebrow' => 'CONTACT', 'title' => '仕事のご相談', 'description' => '')); ?>
+      <?php get_template_part('template-parts/page-heading', null, array('eyebrow' => 'CONTACT', 'title' => 'お問い合わせ', 'description' => '')); ?>
       <article class="contact-page">
         <div class="contact-page__body">
           <div class="case-content"><?php the_content(); ?></div>
