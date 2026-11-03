@@ -11,7 +11,7 @@ if (!$cases) return;
     <?php foreach ($cases as $case) :
         $image = kihiro_case_study_image($case);
         $excerpt = $case->post_excerpt ?: $case->post_content;
-        $excerpt = wp_html_excerpt(preg_replace('/\s+/u', ' ', wp_strip_all_tags(strip_shortcodes($excerpt))), 150, '…');
+        $excerpt = wp_html_excerpt(preg_replace('/\s+/u', ' ', wp_strip_all_tags(strip_shortcodes($excerpt))), 300, '…');
     ?>
     <article class="recent-journal__card"><a href="<?php echo esc_url(get_permalink($case)); ?>">
       <span class="recent-journal__thumbnail" aria-hidden="true"><?php echo $image ? wp_kses_post($image) : '<img src="' . esc_url(get_theme_file_uri('/assets/images/case-study-placeholder.svg')) . '" alt="" loading="lazy">'; ?></span>
@@ -24,7 +24,6 @@ if (!$cases) return;
       <h3><?php echo esc_html(get_the_title($case)); ?></h3>
       <p class="recent-journal__excerpt"><?php echo esc_html($excerpt); ?></p>
       <div class="recent-journal__dates"><time datetime="<?php echo esc_attr(get_the_modified_date('c', $case)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $case)); ?> 更新</time><span aria-hidden="true"> / </span><time datetime="<?php echo esc_attr(get_the_date('c', $case)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $case)); ?> 公開</time></div>
-      <span class="recent-journal__read">課題と実装内容を見る <span aria-hidden="true">→</span></span>
     </a></article>
     <?php endforeach; ?>
   </div>
