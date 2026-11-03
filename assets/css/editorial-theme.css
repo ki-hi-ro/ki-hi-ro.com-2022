@@ -541,13 +541,13 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
 }
 @media (max-width: 1099px) {
  :is(.single-post, .page-template-page-case-study) .article-toc {
-  left: 12px;
+  left: 20px;
   right: auto;
   bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-  width: min(340px, calc(100vw - 84px));
+  width: min(340px, calc(100vw - 100px));
  }
  :is(.single-post, .page-template-page-case-study):has(.article-toc) .floating-page-top {
-  right: 12px;
+  right: 20px;
   bottom: calc(12px + env(safe-area-inset-bottom, 0px));
  }
 }
