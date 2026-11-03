@@ -451,6 +451,11 @@ body.keyboard-focus .contact-index .work-contact :is(input,select,textarea):focu
 }
 
 /* Homepage section introductions share alignment and spacing at every width. */
+#main-content.work-landing #work-services .work-opportunity > .magazine-eyebrow {
+ text-align: left;
+ align-self: flex-start;
+}
+
 #main-content.work-landing .work-home__heading {
  display: flex;
  flex-direction: column;
