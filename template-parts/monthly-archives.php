@@ -12,7 +12,6 @@ $selected_month = is_date() ? (get_query_var('m') ?: sprintf('%04d%02d', get_que
     <label for="archive-month">年月アーカイブ</label>
     <input type="hidden" name="view" value="archive-all">
     <select id="archive-month" name="m">
-      <option value="">すべての記事</option>
       <?php foreach ($months as $month) : $value = sprintf('%04d%02d', $month->year, $month->month); ?>
         <option value="<?php echo esc_attr($value); ?>" <?php selected($selected_month, $value); ?>><?php echo esc_html($month->year . '年' . $month->month . '月'); ?></option>
       <?php endforeach; ?>
