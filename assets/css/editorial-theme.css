@@ -811,7 +811,7 @@ body .site-footer { padding-bottom: 16px; }
  min-height: 280px;
  padding: 42px 52px 40px;
  border-radius: 16px;
- background: #eef2fa url('../images/concept-dawn.svg') center bottom / cover no-repeat;
+ background: #eef2fa url('../images/concept-dawn.svg?v=2') center bottom / cover no-repeat;
  text-align: left;
 }
 .work-hero--business .work-hero__concept {
