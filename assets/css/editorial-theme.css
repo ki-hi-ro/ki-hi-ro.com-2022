@@ -550,3 +550,19 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
  box-shadow: 0 3px 14px rgba(40, 40, 40, .12);
 }
 .single-post .floating-page-top:hover { background: var(--mag-accent); color: #fff; }
+
+/* Keep the page navigation flush with the contents panel's right edge. */
+@media (min-width: 1100px) {
+ .single-post:has(.article-toc) .floating-page-top { right: max(48px, calc((100% - 1180px) / 2)); }
+}
+@media (max-width: 1099px) {
+ .single-post .article-toc {
+  right: 12px;
+  bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  width: min(340px, calc(100vw - 24px));
+ }
+ .single-post:has(.article-toc) .floating-page-top {
+  right: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+ }
+}
