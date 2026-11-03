@@ -16,8 +16,8 @@ if (!$services_page) return;
   <section class="work-home__section" id="work-services" aria-labelledby="work-services-heading">
     <header class="work-home__heading"><p class="magazine-eyebrow">SERVICES</p><h2 id="work-services-heading">Web制作と業務自動化で、お手伝いします。</h2><p>事業の情報を届けるWebサイトと、日々の手間を減らす仕組み。いま必要なことからご相談ください。</p></header>
     <div class="work-opportunities__grid">
-      <article class="work-opportunity"><p class="magazine-eyebrow">WEB</p><h3>ホームページをつくる・整える。</h3><p>事業やサービスを伝えるホームページの制作、WordPressの実装・改修、既存サイトの保守や不具合対応。使う方と運用する方の両方を考えて整えます。</p><a href="<?php echo esc_url(get_permalink($services_page)); ?>">お手伝いできることを見る →</a></article>
-      <article class="work-opportunity"><p class="magazine-eyebrow">AUTOMATION</p><h3>繰り返す作業を、仕組みにする。</h3><p>Excel・CSVの集計や整形、データの照合・転記、Pythonによる自動化。現在の手順を確認し、手作業を減らせる範囲と進め方をご案内します。</p><a href="<?php echo esc_url(home_url('/contact-us/')); ?>">業務の困りごとを相談する →</a></article>
+      <article class="work-opportunity"><p class="magazine-eyebrow">WEB</p><h3>ホームページをつくる・整える。</h3><p>事業の魅力を伝えるWebサイトを制作・改善します。</p><a href="<?php echo esc_url(get_permalink($services_page)); ?>">詳しく見る →</a></article>
+      <article class="work-opportunity"><p class="magazine-eyebrow">AUTOMATION</p><h3>繰り返す作業を、仕組みにする。</h3><p>Excel・CSVなどの定型作業をPythonで自動化します。</p><a href="<?php echo esc_url(home_url('/contact-us/')); ?>">詳しく見る →</a></article>
     </div>
   </section>
 
