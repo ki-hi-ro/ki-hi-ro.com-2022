@@ -6,10 +6,7 @@ if (!$services_page) return;
   <section class="work-hero work-hero--business" aria-labelledby="work-intro-heading">
     <h2 id="work-intro-heading">自分 × 何か</h2>
     <p class="work-hero__statement">私はこの公式を大事にしています。</p>
-    <p class="work-hero__lead">自分の身体の状態を整える、自分の思考を整える、仕事に必要なスキルを整える。その自分自身で自分以外の何かと関わっていきます。</p>
-    <div class="work-home__actions">
-      <a class="work-home__button work-home__button--primary" href="<?php echo esc_url(kihiro_journal_url()); ?>">日々の記録を見る <span aria-hidden="true">→</span></a>
-    </div>
+    <p class="work-hero__lead">自分の身体の状態を整える、<br class="work-hero__mobile-break">自分の思考を整える、<br class="work-hero__mobile-break">仕事に必要なスキルを整える。<br class="work-hero__mobile-break">その自分自身で<br class="work-hero__mobile-break">自分以外の何かと関わっていきます。</p>
   </section>
 
   <?php get_template_part('template-parts/recent-journal'); ?>
