@@ -8,7 +8,7 @@ if (is_home() && 'archive-all' !== kihiro_get_request_value('view')) {
 $is_full_archive = 'archive-all' === kihiro_get_request_value('view');
 $archive_category_id = $is_full_archive ? kihiro_selected_article_category() : 0;
 $archive_category = $archive_category_id ? get_term($archive_category_id, 'category') : null;
-$archive_title = $archive_category instanceof WP_Term ? $archive_category->name : 'すべての記事';
+$archive_title = $archive_category instanceof WP_Term ? $archive_category->name : '日々の記録';
 $is_article_search = is_search();
 $is_article_tag = is_tag();
 $is_reading_list = $is_full_archive || $is_article_search || $is_article_tag;
@@ -63,7 +63,7 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
   <?php else : ?>
   <header class="article-timeline__header">
     <div>
-      <p class="magazine-eyebrow">WRITING ARCHIVE</p>
+      <p class="magazine-eyebrow"><?php echo $is_full_archive ? 'DAILY JOURNAL' : 'WRITING ARCHIVE'; ?></p>
       <h1><?php echo esc_html($archive_title); ?></h1>
       <p><?php echo esc_html(number_format_i18n($is_full_archive ? $wp_query->found_posts : count($wp_query->posts))); ?>記事の記録。</p>
     </div>
