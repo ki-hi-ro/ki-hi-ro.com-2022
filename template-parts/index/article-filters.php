@@ -1,6 +1,8 @@
 <?php
 $category_id = kihiro_selected_article_category();
 $tag_id = kihiro_selected_article_tag();
+// タグ一覧ではタグを主題にし、カテゴリー絞り込みは表示しない。
+if (is_tag() || ($tag_id && get_term($tag_id, 'post_tag') instanceof WP_Term)) return;
 $archive_mode = 'archive-all' === kihiro_get_request_value('view');
 $categories = get_categories(array('hide_empty' => true, 'orderby' => 'count', 'order' => 'DESC'));
 // 記事件数が変わっても、カテゴリータブは指定した順番を維持する。

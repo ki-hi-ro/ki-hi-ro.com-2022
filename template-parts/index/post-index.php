@@ -8,7 +8,9 @@ if (is_home() && 'archive-all' !== kihiro_get_request_value('view')) {
 $is_full_archive = 'archive-all' === kihiro_get_request_value('view');
 $archive_category_id = $is_full_archive ? kihiro_selected_article_category() : 0;
 $archive_category = $archive_category_id ? get_term($archive_category_id, 'category') : null;
-$archive_title = $archive_category instanceof WP_Term ? $archive_category->name : '日々の記録';
+$archive_tag_id = $is_full_archive ? kihiro_selected_article_tag() : 0;
+$archive_tag = $archive_tag_id ? get_term($archive_tag_id, 'post_tag') : null;
+$archive_title = $archive_tag instanceof WP_Term ? $archive_tag->name : ($archive_category instanceof WP_Term ? $archive_category->name : '日々の記録');
 $is_article_search = is_search();
 $is_article_tag = is_tag();
 $is_reading_list = $is_full_archive || $is_article_search || $is_article_tag;
@@ -52,7 +54,7 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
     <figure class="article-timeline__main-view">
       <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/home-main-view.jpg')); ?>" width="4032" height="3024" alt="木々に囲まれたログハウスの風景" fetchpriority="high" decoding="async">
     </figure>
-  <?php elseif (is_date()) : ?>
+  <?php elseif (is_date() && !($archive_tag instanceof WP_Term)) : ?>
     <?php
       $date_title = wp_strip_all_tags(get_the_archive_title());
       $requested_month = kihiro_get_request_value('m') ?: (string) get_query_var('m');
