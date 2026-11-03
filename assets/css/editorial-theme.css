@@ -863,3 +863,14 @@ body .site-footer { padding-bottom: 16px; }
  .work-landing .work-hero--business[data-scene="dusk"] { background-image: url('../images/concept-dusk-mobile.svg'); }
  .work-landing .work-hero--business[data-scene="night"] { background-image: url('../images/concept-night-mobile.svg'); }
 }
+
+/* Detail footer spacing belongs below the copyright, away from fixed controls. */
+@media (max-width: 1099px) {
+ #main-content.article-detail-layout { padding-bottom: 0; }
+ #main-content.article-detail-layout > .journal-panel--single { padding-bottom: 0; }
+ body:has(> .article-detail-layout) > .site-footer {
+  margin-top: 0;
+  padding-top: 24px;
+  padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+ }
+}
