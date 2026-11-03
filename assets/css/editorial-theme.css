@@ -755,3 +755,9 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
  .site-breadcrumbs { margin-top: 16px; font-size: 11px; }
  .site-breadcrumbs + #main-content { margin-top: 20px; }
 }
+
+/* Keep the footer's lower edge compact, reserving room for floating controls. */
+body .site-footer { padding-bottom: 16px; }
+@media (max-width: 1099px) {
+ body:has(.has-article-toc) .site-footer { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+}
