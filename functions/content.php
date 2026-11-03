@@ -227,8 +227,8 @@ function kihiro_configure_main_query($query) {
     }
 
     if ($query->is_home() && 'archive-all' === kihiro_get_request_value('view')) {
-        // 全記事のタイムラインは100件ずつ表示する。
-        $query->set('posts_per_page', 100);
+        // 全記事のタイムラインは公開日時順に10件ずつ表示する。
+        $query->set('posts_per_page', 10);
         if (kihiro_selected_article_category()) $query->set('cat', kihiro_selected_article_category());
         if (kihiro_selected_article_tag()) $query->set('tag_id', kihiro_selected_article_tag());
         $query->set('no_found_rows', false);

@@ -27,7 +27,7 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
     $years = $wp_query->posts ? array('latest' => $wp_query->posts) : array();
 }
 ?>
-<main id="main-content" class="article-timeline <?php echo $is_reading_list ? 'article-timeline--cards technical-reading-list' : 'article-title-timeline'; ?>">
+<main id="main-content" class="article-timeline <?php echo $is_full_archive ? 'journal-chronology' : ($is_reading_list ? 'article-timeline--cards technical-reading-list' : 'article-title-timeline'); ?>">
   <?php if ($is_article_search) : ?>
     <header class="article-timeline__header">
       <div>
@@ -82,6 +82,9 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
     <?php endif; ?>
     <?php get_template_part('template-parts/index/article-filters'); ?>
   <?php endif; ?>
+  <?php if ($is_full_archive) : ?>
+    <?php get_template_part('template-parts/journal-timeline', null, array('entries' => $wp_query->posts)); ?>
+  <?php else : ?>
   <?php foreach ($years as $year => $entries) : ?>
     <section class="<?php echo $is_reading_list ? 'article-timeline__year' : 'article-title-year'; ?>" id="year-<?php echo esc_attr($year); ?>" aria-labelledby="year-heading-<?php echo esc_attr($year); ?>">
       <?php if ($is_reading_list || (is_home() && !$is_full_archive)) : ?>
@@ -100,6 +103,7 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
       </ol>
     </section>
   <?php endforeach; ?>
+  <?php endif; ?>
   <?php if (!$years) : ?>
     <div class="article-empty">
       <p>該当する記事はありません。</p>
@@ -116,7 +120,8 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
     <nav class="navigation pagination" aria-label="ジャーナルのページ送り"><div class="nav-links"><?php echo wp_kses_post(paginate_links(array(
       'base' => add_query_arg('paged', '%#%', home_url('/')), 'format' => '',
       'current' => max(1, (int) get_query_var('paged')), 'total' => $wp_query->max_num_pages,
-      'show_all' => true, 'prev_next' => false,
+      'show_all' => false, 'mid_size' => 2, 'end_size' => 1,
+      'prev_next' => true, 'prev_text' => '← 新しい記録', 'next_text' => '過去の記録 →',
       'add_args' => array_filter(array('view' => 'archive-all', 'article_category' => $archive_category_id, 'article_tag' => kihiro_selected_article_tag(), 'm' => kihiro_get_request_value('m'))),
     ))); ?></div></nav>
   <?php endif; ?>
