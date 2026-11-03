@@ -28,5 +28,5 @@ if (!$cases) return;
     </a></article>
     <?php endforeach; ?>
   </div>
-  <p class="work-home__more"><a class="work-home__button" href="<?php echo esc_url(get_permalink($index)); ?>">制作・開発事例をすべて見る <span aria-hidden="true">→</span></a></p>
+  <p class="work-home__more"><a class="work-home__button" href="<?php echo esc_url(get_permalink($index)); ?>"><span class="featured-preview__more-desktop">制作・開発事例をすべて見る</span><span class="featured-preview__more-mobile">すべての制作実績を見る</span> <span aria-hidden="true">→</span></a></p>
 </section>

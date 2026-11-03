@@ -716,3 +716,29 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
  .site-header--collapsible.site-header--menu-open .site-header__menu-row .site-main-nav > a:hover,
  .site-header--collapsible.site-header--menu-open .site-header__menu-row .site-main-nav > a[aria-current] { background: #f5f5f5; }
 }
+
+/* Compact, left-aligned reading links on phones; preserve desktop previews. */
+.featured-preview__more-mobile { display: none; }
+@media (max-width: 700px) {
+ .featured-preview__more-desktop { display: none; }
+ .featured-preview__more-mobile { display: inline; }
+ .work-home .featured-preview .recent-journal__card > a { gap: 16px; text-align: left; }
+ .work-home .featured-preview .recent-journal__read,
+ .work-home .featured-preview .recent-journal__card > a:hover .recent-journal__read {
+  padding: 4px 0;
+  border-radius: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  color: var(--mag-ink);
+  font-size: 14px;
+  font-weight: 400;
+ }
+ .work-home .featured-preview .work-home__more {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--mag-line);
+  text-align: left;
+ }
+ .work-home .featured-preview .work-home__more .work-home__button { font-size: 14px; }
+ .work-home .featured-preview + .featured-preview { margin-top: 48px; }
+}

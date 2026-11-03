@@ -30,5 +30,5 @@ $journal_url = kihiro_journal_url();
     <?php endforeach; ?>
     <?php if (!$recent) : ?><p>記事はまだありません。</p><?php endif; ?>
   </div>
-  <p class="work-home__more"><a class="work-home__button" href="<?php echo esc_url($journal_url); ?>">日々のジャーナルをもっと読む <span aria-hidden="true">→</span></a></p>
+  <p class="work-home__more"><a class="work-home__button" href="<?php echo esc_url($journal_url); ?>"><span class="featured-preview__more-desktop">日々のジャーナルをもっと読む</span><span class="featured-preview__more-mobile">すべての記事を見る</span> <span aria-hidden="true">→</span></a></p>
 </section>
