@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500">
+ <defs>
+  <linearGradient id="sky" x1="0" y1="1" x2=".8" y2="0"><stop stop-color="#fff4e8"/><stop offset=".45" stop-color="#f9e9ed"/><stop offset="1" stop-color="#c4e0fb"/></linearGradient>
+  <radialGradient id="light" cx=".1" cy=".2" r="1"><stop stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <linearGradient id="far" x2="1" y2=".1"><stop stop-color="#dee1ed"/><stop offset="1" stop-color="#a0bce8"/></linearGradient>
+  <linearGradient id="near" x2="1" y2="0"><stop stop-color="#bdd1ec"/><stop offset="1" stop-color="#5499d4"/></linearGradient>
+ </defs>
+ <path fill="url(#sky)" d="M0 0h1600v500H0z"/><path fill="url(#light)" d="M0 0h1600v500H0z"/>
+ <circle cx="1305" cy="345" r="39" fill="#fffef7" opacity=".95"/>
+ <path d="M0 500C280 490 420 492 630 470S930 430 1040 390 1135 405 1240 395 1375 322 1430 326 1520 356 1600 348V500Z" fill="url(#far)"/>
+ <path d="M410 500C700 494 830 470 1000 463S1260 413 1370 395 1510 381 1600 370V500Z" fill="#95b9e2" opacity=".7"/>
+ <path d="M790 500C1020 480 1270 434 1410 421S1530 402 1600 392V500Z" fill="url(#near)"/>
+</svg>

@@ -803,3 +803,42 @@ body .site-footer { padding-bottom: 16px; }
  .work-hero__mobile-break { display: inline; }
  .work-hero--business .work-hero__lead { margin-bottom: 0; }
 }
+
+/* A quiet dawn frames the homepage concept across desktop and mobile. */
+.work-landing .work-hero--business {
+ display: block;
+ box-sizing: border-box;
+ min-height: 280px;
+ padding: 42px 52px 40px;
+ border-radius: 16px;
+ background: #eef2fa url('../images/concept-dawn.svg') center bottom / cover no-repeat;
+ text-align: left;
+}
+.work-hero--business .work-hero__concept {
+ display: flex;
+ align-items: center;
+ gap: 14px;
+ margin: 0 0 24px;
+ color: #666;
+ font-size: 10px;
+ font-weight: 600;
+ line-height: 1.6;
+ letter-spacing: .2em;
+}
+.work-hero__concept::before { content: ''; width: 32px; height: 1px; background: currentColor; }
+.work-landing .work-hero--business h2 { margin: 0 0 18px; font-size: clamp(36px, 3.6vw, 48px); line-height: 1.4; letter-spacing: .01em; }
+.work-landing .work-hero--business .work-hero__statement { margin: 0 0 14px; max-width: none; font-size: 18px; font-weight: 600; line-height: 1.8; }
+.work-landing .work-hero--business .work-hero__lead { margin: 0; max-width: none; color: #444; font-size: 15px; line-height: 1.9; }
+@media (max-width: 700px) {
+ .work-landing .work-hero--business {
+  min-height: 310px;
+  padding: 28px 26px 104px;
+  border-radius: 14px;
+  background-image: url('../images/concept-dawn-mobile.svg');
+ }
+ .work-hero--business .work-hero__concept { margin-bottom: 20px; font-size: 10px; gap: 12px; }
+ .work-hero__concept::before { width: 28px; }
+ .work-landing .work-hero--business h2 { font-size: clamp(32px, 8.8vw, 44px); margin-bottom: 14px; }
+ .work-landing .work-hero--business .work-hero__statement { font-size: 15px; line-height: 1.8; margin-bottom: 10px; }
+ .work-landing .work-hero--business .work-hero__lead { font-size: 13px; line-height: 1.8; }
+}
