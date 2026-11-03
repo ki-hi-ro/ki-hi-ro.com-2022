@@ -761,13 +761,3 @@ body .site-footer { padding-bottom: 16px; }
 @media (max-width: 1099px) {
  body:has(.has-article-toc) .site-footer { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
 }
-
-/* Detail content shares the header's full container width. */
-.journal-app--single.article-detail-layout > .article-detail-heading,
-.journal-app--single.article-detail-layout > .article-main-visual,
-.journal-app--single.article-detail-layout > .journal-panel--single { width: 100%; max-width: none; }
-@media (min-width: 1100px) {
- .journal-app--single.article-detail-layout.has-article-toc { grid-template-columns: minmax(0, 1fr) 260px; }
- .article-detail-layout.has-article-toc > .article-detail-heading,
- .article-detail-layout.has-article-toc > .article-main-visual { grid-column: 1 / -1; grid-row: auto; }
-}
