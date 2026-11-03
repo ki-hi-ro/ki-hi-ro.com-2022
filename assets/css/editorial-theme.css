@@ -580,7 +580,7 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
   justify-content: space-between;
   align-items: center;
   gap: 16px 40px;
-  padding-block: 16px 24px;
+  padding-block: 40px 24px;
  }
  .site-header .site-header__inner { display: contents; }
  .site-header__inner > .site-title { order: 0; }
@@ -593,6 +593,6 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
 @media (max-width: 1218px) {
  .site-header:not(.site-header--menu-open) .site-header__menu-row { padding: 0; }
  .site-header .site-header__inner { border-bottom: 0; }
- .site-header:not(.site-header--menu-open) .site-header__inner { padding-top: 16px; }
+ .site-header:not(.site-header--menu-open) .site-header__inner { padding-top: 32px; }
  #page-top + #main-content { margin-top: 24px; }
 }
