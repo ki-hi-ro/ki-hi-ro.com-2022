@@ -1,12 +1,10 @@
 <?php
 /** 最近更新した公開記事を、ジャーナルと同じカテゴリーで紹介する。 */
 $categories = array();
-$category_labels = array();
-foreach (array('思考・生き方' => '思考', '健康・セルフケア' => '健康', '技術・開発' => '技術', '仕事・キャリア' => '仕事', 'お金・制度' => 'お金', '旅・場所' => '旅') as $name => $label) {
+foreach (array('思考・生き方', '健康・セルフケア', '技術・開発', '仕事・キャリア', 'お金・制度', '旅・場所') as $name) {
     $term = get_term_by('name', $name, 'category');
     if ($term instanceof WP_Term) {
         $categories[$term->term_id] = $term;
-        $category_labels[$term->term_id] = $label;
     }
 }
 $selected = absint(kihiro_get_request_value('recent_category'));
@@ -25,7 +23,7 @@ $journal_url = $selected ? add_query_arg('article_category', $selected, kihiro_j
 <h2 id="recent-journal-heading">日々の記録</h2><p>心に浮かんだ言葉を書き続けています。最近はAIの思考も取り入れています。</p></header>
   <nav class="recent-journal__categories" aria-label="最近更新した記事のカテゴリー">
     <a href="<?php echo esc_url(add_query_arg('recent_category', 0, home_url('/')) . '#recent-journal'); ?>" <?php if (!$selected) echo 'aria-current="true"'; ?>>すべて</a>
-    <?php foreach ($categories as $term) : ?><a href="<?php echo esc_url(add_query_arg('recent_category', $term->term_id, home_url('/')) . '#recent-journal'); ?>" <?php if ($selected === $term->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($category_labels[$term->term_id]); ?></a><?php endforeach; ?>
+    <?php foreach ($categories as $term) : ?><a href="<?php echo esc_url(add_query_arg('recent_category', $term->term_id, home_url('/')) . '#recent-journal'); ?>" <?php if ($selected === $term->term_id) echo 'aria-current="true"'; ?>><?php echo esc_html($term->name); ?></a><?php endforeach; ?>
   </nav>
   <p class="screen-reader-text" role="status" aria-live="polite" data-recent-journal-status></p>
   <div class="recent-journal__grid" id="recent-journal-posts">
