@@ -761,3 +761,25 @@ body .site-footer { padding-bottom: 16px; }
 @media (max-width: 1099px) {
  body:has(.has-article-toc) .site-footer { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
 }
+
+/* Journal preview follows one left edge, with a full-width image and longer text. */
+.work-home .recent-journal.featured-preview .recent-journal__card > a {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 24px;
+ text-align: left;
+}
+.work-home .recent-journal.featured-preview .recent-journal__thumbnail {
+ width: 100%;
+ aspect-ratio: 16 / 9;
+ margin: 0;
+}
+.work-home .recent-journal.featured-preview .recent-journal__card h3,
+.work-home .recent-journal.featured-preview .recent-journal__excerpt,
+.work-home .recent-journal.featured-preview .recent-journal__dates { width: 100%; margin: 0; }
+.work-home .recent-journal.featured-preview .featured-preview__category { margin: 0; }
+.work-home .recent-journal.featured-preview .work-home__more { text-align: left; }
+@media (max-width: 700px) {
+ .work-home .recent-journal.featured-preview .recent-journal__card > a { gap: 16px; }
+}
