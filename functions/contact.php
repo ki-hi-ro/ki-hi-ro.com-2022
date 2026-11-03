@@ -32,7 +32,7 @@ function kihiro_contact_form() {
         return '<p>現在、お問い合わせフォームを準備しています。</p>';
     }
     return '<div class="work-contact">'
-        . '<div class="work-contact__welcome"><p>Web制作・業務自動化のご相談を承ります。<br>「何から始めればよいか分からない」という段階でも、お気軽にお聞かせください。</p>'
+        . '<div class="work-contact__welcome"><p>「何から始めればよいか分からない」という段階でも、お気軽にお聞かせください。</p>'
         . '<p>内容を確認し、対応できる範囲とお見積もりをご案内します。<br>メールを中心に、必要に応じてWeb会議も活用します。</p></div>'
         . do_shortcode('[contact-form-7 id="' . $form_id . '"]')
         . '</div>';
