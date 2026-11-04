@@ -52,3 +52,14 @@ html[data-sky] .work-landing .work-hero--business::after {
 @media (max-width: 700px) {
  html[data-sky] .work-landing .work-hero--business::after { background: linear-gradient(180deg, var(--sky-text-veil) 0%, var(--sky-text-veil) 65%, transparent 92%); }
 }
+
+/* A rounded, padded reading surface separates content from the changing sky. */
+html[data-sky] body #main-content {
+ box-sizing: border-box;
+ padding: 32px;
+ border-radius: 20px;
+ background: color-mix(in srgb, var(--sky-paper) 25%, #fff);
+}
+@media (max-width: 700px) {
+ html[data-sky] body #main-content { padding: 20px; border-radius: 16px; }
+}
