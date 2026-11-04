@@ -6,6 +6,7 @@ $concept_scene = $concept_hour < 5 || $concept_hour >= 19 ? 'night' : ($concept_
 ?>
 <div class="work-home">
   <section class="work-hero work-hero--business" data-scene="<?php echo esc_attr($concept_scene); ?>" aria-labelledby="work-intro-heading">
+    <?php get_template_part('template-parts/concept-landscape'); ?>
     <p class="work-hero__concept">CONCEPT</p>
     <h2 id="work-intro-heading">自分 × 何か</h2>
     <p class="work-hero__statement">私はこの公式を大事にしています。</p>

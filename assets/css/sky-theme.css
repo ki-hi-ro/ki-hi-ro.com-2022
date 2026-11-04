@@ -1,0 +1,54 @@
+/* A site-wide palette follows the same continuous sky as the concept landscape. */
+html[data-sky] {
+ --mag-paper: var(--sky-paper);
+ --mag-ink: var(--sky-ink);
+ --mag-muted: var(--sky-muted);
+ --mag-line: var(--sky-line);
+ --mag-accent: var(--sky-accent);
+ --mag-heading-line: var(--sky-accent);
+ --discovery-soft: var(--sky-panel);
+ background: var(--sky-paper);
+}
+html[data-sky] body { background: var(--sky-paper); color: var(--sky-ink); }
+html[data-sky] :is(.site-title,.site-footer__logo,h1,h2,h3,h4,h5,h6) { color: var(--sky-ink); }
+html[data-sky] :is(.site-header,.site-footer,.journal-panel,.about-page,.case-page,.contact-page) { background-color: transparent; }
+html[data-sky] :is(.site-header__menu-row .site-main-nav a,.site-breadcrumbs,.site-breadcrumbs [aria-current],.article-toc a,.journal-chronology__date,.db-single__fields a) { color: var(--sky-ink); }
+html[data-sky] :is(.magazine-eyebrow,.work-hero__concept,.journal-chronology__excerpt,.journal-chronology__tags a,.journal-chronology__date > span,.recent-journal__excerpt,.recent-journal__dates,.site-footer,.site-footer__top,.db-single__fields,.journal-single-date,.interior-heading__description,.work-profile__role) { color: var(--sky-muted); }
+html[data-sky] :is(.work-home__heading,.interior-heading,.about-body,.case-content,.db-single__content,.work-opportunity,.work-profile,.work-contact__welcome,.service-story) p { color: var(--sky-muted); }
+html[data-sky] :is(.interior-heading,.services-page__header,.story-hero,.monthly-archives,.db-single__fields,.work-opportunity,.work-profile,.work-home-contact,.article-toc details,.featured-preview__category,.article-edit__link,.site-nav-toggle) { background-color: var(--sky-panel); border-color: var(--sky-line); }
+html[data-sky] #main-content :is(.interior-heading,.services-page__header,.story-hero,.article-detail-heading),
+html[data-sky] #main-content > .article-timeline__header { background: var(--sky-panel); color: var(--sky-ink); }
+html[data-sky] #main-content :is(.interior-heading__description,.services-page__header > p,.article-timeline__header p) { color: var(--sky-muted); }
+html[data-sky] :is(.work-home__button,.search-form,.monthly-archives select,.contact-index .work-contact .wpcf7,.contact-index .work-contact input,.contact-index .work-contact textarea,.contact-index .work-contact select) { background-color: var(--sky-paper); border-color: var(--sky-line); color: var(--sky-ink); }
+html[data-sky] :is(.work-home__button--primary,.site-header .site-main-nav .site-main-nav__contact,.monthly-archives button,.contact-index .work-contact input[type="submit"]) { background: var(--sky-ink); color: var(--sky-paper); border-color: var(--sky-ink); }
+html[data-sky] :is(.article-filters__categories a[aria-current],.site-main-nav a[aria-current],.pagination .current) { background: var(--sky-panel); color: var(--sky-ink); }
+html[data-sky] .site-header.site-header--menu-open :is(.site-header__menu-row,.site-main-nav) { background: var(--sky-paper); }
+html[data-sky] :is(.single-post,.page-template-page-case-study) .floating-page-top { background: var(--sky-paper); color: var(--sky-ink); border-color: var(--sky-line); }
+html[data-sky] .work-home .featured-preview .recent-journal__card > a { background: transparent; }
+html[data-sky] .work-home .featured-preview .work-home__more .work-home__button { background: transparent; }
+html[data-sky] .work-landing .work-hero--business[data-scene] { background: var(--sky-horizon); color: var(--sky-ink); }
+.concept-landscape { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
+.concept-landscape--mobile { display: none; }
+html[data-sky] .work-landing .work-hero--business > :not(.concept-landscape) { position: relative; }
+html[data-sky] .work-landing .work-hero--business :is(h2,.work-hero__statement) { color: var(--sky-hero-ink); }
+html[data-sky] .work-landing .work-hero--business .work-hero__lead,
+html[data-sky] .work-landing .work-hero--business .work-hero__concept { color: var(--sky-hero-ink); }
+.concept-sun { fill: #fff9d9; opacity: var(--sky-sun-opacity, 1); }
+.concept-moon { fill: #fff4da; opacity: var(--sky-night-opacity, 0); }
+.concept-stars { fill: #edf2ff; opacity: var(--sky-night-opacity, 0); }
+@media (max-width: 700px) {
+ .concept-landscape--desktop { display: none; }
+ .concept-landscape--mobile { display: block; }
+}
+
+html[data-sky] .work-landing .work-hero--business::after {
+ content: '';
+ position: absolute;
+ inset: 0;
+ z-index: -1;
+ pointer-events: none;
+ background: linear-gradient(90deg, var(--sky-text-veil) 0%, var(--sky-text-veil) 62%, transparent 90%);
+}
+@media (max-width: 700px) {
+ html[data-sky] .work-landing .work-hero--business::after { background: linear-gradient(180deg, var(--sky-text-veil) 0%, var(--sky-text-veil) 65%, transparent 92%); }
+}
