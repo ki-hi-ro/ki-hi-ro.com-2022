@@ -164,6 +164,12 @@ html[data-sky] body .monthly-archives { background: #edf1f5; color: #23334d; bor
 html[data-sky] body .monthly-archives button,
 html[data-sky] body .monthly-archives button:hover { background: #e0e6ee; color: #23334d; border: 0; }
 html[data-sky] body .monthly-archives #archive-month { background-color: #e0e6ee; color: #23334d; border: 0; }
+html[data-sky] body .monthly-archives { padding: 20px; border-radius: 14px; }
+html[data-sky] body .monthly-archives form { display: flex; flex-direction: column; align-items: stretch; gap: 10px; }
+html[data-sky] body .monthly-archives label { margin: 0; font-size: 13px; line-height: 1.5; }
+html[data-sky] body .monthly-archives #archive-month { box-sizing: border-box; width: 100%; min-width: 0; min-height: 44px; margin: 0; padding: 12px 44px 12px 14px; }
+html[data-sky] body .monthly-archives #archive-month:focus,
+html[data-sky] body .monthly-archives #archive-month:focus-visible { border: 0; outline: 2px solid #536580; outline-offset: 0; box-shadow: none; }
 html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link { background: #edf1f5; }
 html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link:hover { background: #e0e6ee; }
 html[data-sky] :is(.single-post,.page-template-page-case-study) .floating-page-top {
