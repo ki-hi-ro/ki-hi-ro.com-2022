@@ -18,8 +18,8 @@ $concept_scene = $concept_hour < 5 || $concept_hour >= 19 ? 'night' : ($concept_
   <section class="work-home__section" id="work-services" aria-labelledby="work-services-heading">
     <header class="work-home__heading"><p class="magazine-eyebrow">SERVICES</p><h2 id="work-services-heading">Web制作と業務自動化で、お手伝いします。</h2><p>事業の情報を届けるWebサイトと、日々の手間を減らす仕組み。いま必要なことからご相談ください。</p></header>
     <div class="work-opportunities__grid">
-      <a class="work-opportunity work-opportunity--linked" href="<?php echo esc_url(get_permalink($services_page)); ?>"><p class="magazine-eyebrow">WEB</p><h3>ホームページをつくる・整える。</h3><p>事業の魅力を伝えるWebサイトを制作・改善します。</p></a>
-      <a class="work-opportunity work-opportunity--linked" href="<?php echo esc_url(get_permalink($services_page)); ?>"><p class="magazine-eyebrow">AUTOMATION</p><h3>繰り返す作業を、仕組みにする。</h3><p>Excel・CSVなどの定型作業をPythonで自動化します。</p></a>
+      <a class="work-opportunity work-opportunity--linked" href="<?php echo esc_url(get_permalink($services_page)); ?>"><p class="magazine-eyebrow">WEB</p><?php get_template_part('template-parts/service-illustration', null, array('kind' => 'web')); ?><h3>ホームページをつくる・整える。</h3><p>事業の魅力を伝えるWebサイトを制作・改善します。</p></a>
+      <a class="work-opportunity work-opportunity--linked" href="<?php echo esc_url(get_permalink($services_page)); ?>"><p class="magazine-eyebrow">AUTOMATION</p><?php get_template_part('template-parts/service-illustration', null, array('kind' => 'automation')); ?><h3>繰り返す作業を、仕組みにする。</h3><p>Excel・CSVなどの定型作業をPythonで自動化します。</p></a>
     </div>
   </section>
 

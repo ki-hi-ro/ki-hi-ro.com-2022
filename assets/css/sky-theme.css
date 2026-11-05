@@ -297,3 +297,6 @@ html[data-sky] #main-content.work-landing :is(#work-services,#work-profile) {
 html[data-sky] #main-content.work-landing :is(#work-services,#work-profile) :is(h2,h3,p,a) { color: var(--sky-hero-ink); }
 html[data-sky] #main-content.work-landing :is(#work-services,#work-profile) .magazine-eyebrow::before { background: var(--sky-hero-ink); }
 html[data-sky] #main-content.work-landing #work-services .work-opportunity { border-color: color-mix(in srgb, var(--sky-hero-ink) 25%, transparent); }
+
+#main-content.work-landing #work-services .service-illustration { display: block; width: 100%; max-width: 360px; height: auto; align-self: center; margin: 20px 0 8px; color: var(--sky-hero-ink); }
+@media (max-width: 700px) { #main-content.work-landing #work-services .service-illustration { max-width: 300px; margin-block: 16px 4px; } }
