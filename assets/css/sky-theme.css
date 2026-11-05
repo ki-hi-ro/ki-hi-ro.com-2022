@@ -18,6 +18,9 @@ html[data-sky] :is(.work-home__heading,.interior-heading,.about-body,.case-conte
 html[data-sky] :is(.interior-heading,.services-page__header,.story-hero,.monthly-archives,.db-single__fields,.work-opportunity,.work-profile,.work-home-contact,.article-toc details,.featured-preview__category,.article-edit__link,.site-nav-toggle) { background-color: var(--sky-panel); border-color: var(--sky-line); }
 html[data-sky] .work-home :is(.work-opportunity,.work-profile) { background-color: #fff; }
 html[data-sky] .work-home .work-opportunity { border: 0; }
+html[data-sky] .article-navigation { border: 0; }
+html[data-sky] .article-navigation .article-navigation__link,
+html[data-sky] .article-navigation .article-navigation__link:hover { background: #fff; border: 0; }
 /* The closing landscape opens out into a low, uninterrupted horizon. */
 html[data-sky] .work-home .work-home-contact--horizon {
  position: relative;
