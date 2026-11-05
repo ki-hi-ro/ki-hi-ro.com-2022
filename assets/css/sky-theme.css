@@ -30,7 +30,7 @@ html[data-sky] .work-home .work-home-contact--horizon {
 .contact-horizon { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
 html[data-sky] .work-home-contact--horizon::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: var(--sky-text-veil,transparent); }
 html[data-sky] .work-home .work-home-contact--horizon :is(h2,p) { color: inherit; }
-html[data-sky] .work-home-contact--horizon .work-home__button--primary { background: var(--sky-hero-ink); color: var(--sky-top); border-color: transparent; }
+html[data-sky] .work-home .work-home-contact--horizon .work-home__button.work-home__button--primary { background: var(--sky-hero-ink); color: var(--sky-top); border-color: transparent; }
 @media (max-width: 700px) {
  html[data-sky] .work-home .work-home-contact--horizon { padding-bottom: 100px; }
 }
