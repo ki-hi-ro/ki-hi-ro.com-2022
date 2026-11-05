@@ -6,7 +6,7 @@ html[data-sky] {
  --mag-line: var(--sky-line);
  --mag-accent: var(--sky-accent);
  --mag-heading-line: var(--sky-accent);
- --discovery-soft: var(--sky-panel);
+ --discovery-soft: #fff;
  background: var(--sky-paper);
 }
 html[data-sky] body { background: var(--sky-paper); color: var(--sky-ink); }
@@ -23,6 +23,9 @@ html[data-sky] .article-navigation .article-navigation__link,
 html[data-sky] .article-navigation .article-navigation__link:hover { background: #fff; border: 0; }
 html[data-sky] .monthly-archives,
 html[data-sky] .article-toc details { background: #fff; border: 0; }
+/* Keep supporting content surfaces neutral; landscapes retain their sky. */
+html[data-sky] :is(.db-single__fields,.article-edit__link,.featured-preview__category,.site-nav-toggle,.work-project,.work-experience,.service-story__visual,.service-investment,.work-contact__required) { background-color: #fff; border: 0; }
+html[data-sky] :is(.article-edit__link:hover,.site-nav-toggle:hover) { background-color: #fff; }
 /* The closing landscape opens out into a low, uninterrupted horizon. */
 html[data-sky] .work-home .work-home-contact--horizon {
  position: relative;
@@ -42,9 +45,9 @@ html[data-sky] .work-home .work-home-contact--horizon .work-home__button.work-ho
 html[data-sky] #main-content :is(.interior-heading,.services-page__header,.story-hero,.article-detail-heading),
 html[data-sky] #main-content > .article-timeline__header { background: var(--sky-panel); color: var(--sky-ink); }
 html[data-sky] #main-content :is(.interior-heading__description,.services-page__header > p,.article-timeline__header p) { color: var(--sky-muted); }
-html[data-sky] :is(.work-home__button,.search-form,.monthly-archives select,.contact-index .work-contact .wpcf7,.contact-index .work-contact input,.contact-index .work-contact textarea,.contact-index .work-contact select) { background-color: var(--sky-paper); border-color: var(--sky-line); color: var(--sky-ink); }
+html[data-sky] :is(.work-home__button,.search-form,.monthly-archives select,.contact-index .work-contact .wpcf7,.contact-index .work-contact input,.contact-index .work-contact textarea,.contact-index .work-contact select) { background-color: #fff; border-color: var(--sky-line); color: var(--sky-ink); }
 html[data-sky] :is(.work-home__button--primary,.site-header .site-main-nav .site-main-nav__contact,.monthly-archives button,.contact-index .work-contact input[type="submit"]) { background: var(--sky-ink); color: var(--sky-paper); border-color: var(--sky-ink); }
-html[data-sky] :is(.article-filters__categories a[aria-current],.site-main-nav a[aria-current],.pagination .current) { background: var(--sky-panel); color: var(--sky-ink); }
+html[data-sky] :is(.article-filters__categories a[aria-current],.site-main-nav a[aria-current],.pagination .current) { background: #fff; color: var(--sky-ink); }
 html[data-sky] .site-header.site-header--menu-open :is(.site-header__menu-row,.site-main-nav) { background: var(--sky-paper); }
 html[data-sky] :is(.single-post,.page-template-page-case-study) .floating-page-top { background: var(--sky-paper); color: var(--sky-ink); border-color: var(--sky-line); }
 html[data-sky] .work-home .featured-preview .recent-journal__card > a { background: transparent; }
