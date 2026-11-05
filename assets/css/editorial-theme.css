@@ -148,7 +148,7 @@ body .db-single__content h2 { margin: 64px 0 26px; padding: 18px 0 0; border: 0;
 .work-opportunity a { font-size: 13px; text-decoration: underline; text-underline-offset: var(--link-underline-offset, 10px); }
 .work-opportunity__links { display: flex; flex-wrap: wrap; gap: 12px 24px; }
 .work-home a.work-opportunity--linked { color: inherit; text-decoration: none; }
-.work-home .work-opportunity--linked > .magazine-eyebrow { text-align: left; align-self: flex-start; }
+#main-content .work-home .work-opportunity--linked > .magazine-eyebrow { text-align: left; align-self: flex-start; }
 .work-home a.work-opportunity--linked:focus-visible { outline: 2px solid var(--mag-ink); outline-offset: 4px; }
 .work-case-preview .work-case-preview__image { display: block; margin: 24px 0 0; padding: 0; aspect-ratio: 1.4; overflow: hidden; border-radius: 8px; }
 .work-case-preview__image img { display: block; width: 100%; height: 100%; object-fit: cover; }
