@@ -163,6 +163,10 @@ body .db-single__content h2 { margin: 64px 0 26px; padding: 18px 0 0; border: 0;
   align-items: start;
  }
  .works-by-service .work-case-preview > :not(.work-case-preview__image) { grid-column: 2; margin: 0; }
+ #main-content .works-by-service .work-case-preview > .magazine-eyebrow { grid-column: 2; grid-row: 1; width: auto; justify-self: start; }
+ .works-by-service .work-case-preview > h3 { grid-row: 2; }
+ .works-by-service .work-case-preview > .recent-journal__excerpt { grid-row: 3; }
+ .works-by-service .work-case-preview > .recent-journal__dates { grid-row: 4; }
  .works-by-service .work-case-preview .work-case-preview__image {
   grid-column: 1;
   grid-row: 1 / 5;
