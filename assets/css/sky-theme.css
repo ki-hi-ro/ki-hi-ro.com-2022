@@ -163,7 +163,7 @@ html[data-sky] #main-content.article-detail-layout .code-copy__button { border: 
 html[data-sky] body .monthly-archives { background: #edf1f5; color: #23334d; border: 0; }
 html[data-sky] body .monthly-archives button,
 html[data-sky] body .monthly-archives button:hover { background: #e0e6ee; color: #23334d; border: 0; }
-html[data-sky] body .monthly-archives #archive-month { background-color: #f0f3f7; color: #23334d; border: 0; }
+html[data-sky] body .monthly-archives #archive-month { background-color: #e0e6ee; color: #23334d; border: 0; }
 html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link { background: #edf1f5; }
 html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link:hover { background: #e0e6ee; }
 html[data-sky] :is(.single-post,.page-template-page-case-study) .floating-page-top {
