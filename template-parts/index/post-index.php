@@ -71,6 +71,9 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
     </div>
   </header>
   <?php endif; ?>
+  <?php if ($is_article_search && !$is_full_archive) : ?>
+    <div class="journal-index-tools"><?php get_template_part('template-parts/journal-search'); ?></div>
+  <?php endif; ?>
   <?php if ($is_full_archive) : ?>
     <div class="journal-index-tools">
     <?php get_template_part('template-parts/journal-search'); ?>
