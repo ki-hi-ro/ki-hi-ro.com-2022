@@ -15,8 +15,6 @@ $concept_scene = $concept_hour < 5 || $concept_hour >= 19 ? 'night' : ($concept_
 
   <?php get_template_part('template-parts/recent-journal'); ?>
 
-  <?php get_template_part('template-parts/work-selected-cases'); ?>
-
   <section class="work-home__section" id="work-services" aria-labelledby="work-services-heading">
     <header class="work-home__heading"><p class="magazine-eyebrow">SERVICES</p><h2 id="work-services-heading">Web制作と業務自動化で、お手伝いします。</h2><p>事業の情報を届けるWebサイトと、日々の手間を減らす仕組み。いま必要なことからご相談ください。</p></header>
     <div class="work-opportunities__grid">
@@ -24,6 +22,8 @@ $concept_scene = $concept_hour < 5 || $concept_hour >= 19 ? 'night' : ($concept_
       <article class="work-opportunity"><p class="magazine-eyebrow">AUTOMATION</p><h3>繰り返す作業を、仕組みにする。</h3><p>Excel・CSVなどの定型作業をPythonで自動化します。</p><a href="<?php echo esc_url(get_permalink($services_page)); ?>">詳しく見る →</a></article>
     </div>
   </section>
+
+  <?php get_template_part('template-parts/work-selected-cases'); ?>
 
   <section class="work-profile" id="work-profile" aria-labelledby="work-profile-heading">
     <header class="work-home__heading"><p class="magazine-eyebrow">ABOUT</p><h2 id="work-profile-heading">柴田 浩貴</h2><p class="work-profile__role">個人事業主 / Webエンジニア</p></header>
