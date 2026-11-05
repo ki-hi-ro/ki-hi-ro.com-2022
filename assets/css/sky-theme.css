@@ -320,3 +320,21 @@ html[data-sky] #main-content.work-landing #work-services .work-opportunity > p:n
  html[data-sky] #main-content.work-landing #work-services .work-opportunity { padding: 24px 20px; }
  html[data-sky] #main-content.work-landing #work-services .service-illustration { margin: 24px 0 12px; }
 }
+
+/* Article panels share the active navigation's live sky gradient. */
+html[data-sky] #main-content.article-detail-layout .article-detail-heading,
+html[data-sky] #main-content.article-detail-layout .article-edit .article-edit__link,
+html[data-sky] #main-content.article-detail-layout .article-create .article-edit__link,
+html[data-sky] #main-content.article-detail-layout .db-single .db-single__fields,
+html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link {
+ background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon));
+ color: var(--sky-hero-ink);
+}
+html[data-sky] #main-content.article-detail-layout .article-detail-heading :is(h1,p),
+html[data-sky] #main-content.article-detail-layout .db-single .db-single__fields :is(dt,dd,a),
+html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link :is(span,time) { color: var(--sky-hero-ink); }
+html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link:hover,
+html[data-sky] #main-content.article-detail-layout .article-edit .article-edit__link:hover {
+ background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon));
+ color: var(--sky-hero-ink);
+}
