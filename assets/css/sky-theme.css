@@ -132,6 +132,8 @@ html[data-sky] #main-content.article-detail-layout {
 }
 html[data-sky] #main-content.article-detail-layout :is(.article-toc details,.db-single__fields,.article-edit__link,.article-navigation__link),
 html[data-sky] #main-content.article-detail-layout :is(.article-edit__link,.article-navigation__link):hover { background: transparent; border: 0; color: #23334d; box-shadow: none; }
+html[data-sky] #main-content.article-detail-layout .article-edit__link,
+html[data-sky] #main-content.article-detail-layout .article-edit__link:hover { background: #edf1f5; }
 html[data-sky] #main-content.article-detail-layout .db-single__content :is(blockquote,pre,th,td,.wp-block-group.has-background) { background-color: #f0f3f7; color: #23334d; }
 html[data-sky] #main-content.article-detail-layout .db-single__content :is(blockquote,pre) { border: 0; border-radius: 8px; }
 html[data-sky] #main-content.article-detail-layout .db-single__content :is(h2,h3,h4,h5,h6) { background: transparent; color: #23334d; }
