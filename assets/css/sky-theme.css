@@ -1,4 +1,12 @@
 /* A site-wide palette follows the same continuous sky as the concept landscape. */
+.sky-loader { position: fixed; inset: 0; z-index: 9999; display: grid; place-items: center; background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon)); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .3s ease, visibility .3s; }
+.sky-loader--visible { opacity: 1; visibility: visible; }
+.sky-loader__scene { position: relative; width: 120px; height: 80px; overflow: hidden; }
+.sky-loader__orb { position: absolute; left: 44px; top: 22px; width: 32px; height: 32px; border-radius: 50%; background: #fff4c3; box-shadow: 0 0 24px #fff4c344; animation: sky-loader-rise 1.4s ease-in-out infinite; }
+html[data-sky-cursor="moon"] .sky-loader__orb { background: transparent; box-shadow: inset 9px -3px 0 #fff4da; }
+.sky-loader__horizon { position: absolute; inset: auto 0 8px; height: 2px; background: var(--sky-hero-ink); opacity: .45; }
+@keyframes sky-loader-rise { 0%,100% { transform: translateY(10px); opacity: .5; } 50% { transform: translateY(-10px); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .sky-loader { display: none; } }
 @media (hover: hover) and (pointer: fine) {
  html[data-sky-cursor="sun"] { --sky-cursor: url('../images/cursor-sun.svg') 16 16; }
  html[data-sky-cursor="moon"] { --sky-cursor: url('../images/cursor-moon.svg') 16 16; }

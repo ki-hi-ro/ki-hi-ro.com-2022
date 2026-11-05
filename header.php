@@ -19,6 +19,7 @@
 
 <body <?php body_class('db-output-page'); ?>>
   <?php wp_body_open(); ?>
+  <div class="sky-loader" aria-hidden="true"><div class="sky-loader__scene"><span class="sky-loader__orb"></span><span class="sky-loader__horizon"></span></div></div>
   <a class="skip-link" href="#main-content">本文へスキップ</a>
   <?php $journal_active = is_singular('post') || is_search() || is_category() || is_tag() || is_date()
       || (is_home() && (in_array(kihiro_get_request_value('view'), array('journal', 'all', 'archive-all'), true)

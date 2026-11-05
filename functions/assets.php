@@ -11,6 +11,7 @@ function kihiro_asset_version($relative_path) {
 }
 
 function kihiro_enqueue_assets() {
+    wp_enqueue_script('kihiro-sky-loader', get_theme_file_uri('/assets/js/sky-loader.js'), array('kihiro-concept-scene'), kihiro_asset_version('/assets/js/sky-loader.js'), true);
     wp_enqueue_script('kihiro-monthly-archives', get_theme_file_uri('/assets/js/monthly-archives.js'), array(), kihiro_asset_version('/assets/js/monthly-archives.js'), true);
     wp_enqueue_script('kihiro-concept-scene', get_theme_file_uri('/assets/js/concept-scene.js'), array(), kihiro_asset_version('/assets/js/concept-scene.js'), true);
     if (is_singular('post') || is_page_template('page-case-study.php')) {
