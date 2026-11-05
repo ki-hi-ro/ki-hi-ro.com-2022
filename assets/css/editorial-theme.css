@@ -664,7 +664,7 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
 .work-home .featured-preview .work-home__more { margin: 24px 0 0; text-align: left; }
 .work-home .featured-preview .work-home__more .work-home__button { display: inline-flex; align-items: center; gap: 8px; padding: 8px 0 10px; min-height: 0; border: 0; border-bottom: 1px solid currentColor; border-radius: 0; background: transparent; text-decoration: none; }
 @media (max-width: 700px) {
- .work-home .featured-preview .recent-journal__card > a { padding: 20px; border-radius: 16px; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; gap: 20px; }
+ .work-home .featured-preview .recent-journal__card > a { padding: 0; border-radius: 16px; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; gap: 20px; }
  .work-home .featured-preview .recent-journal__thumbnail { grid-column: 1; grid-row: auto; }
  .work-home .featured-preview .recent-journal__card > a > :not(.recent-journal__thumbnail) { grid-column: 1; }
  .work-home .featured-preview .recent-journal__card h3 { font-size: 23px; }
