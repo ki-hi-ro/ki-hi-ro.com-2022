@@ -38,7 +38,7 @@ html[data-sky] #main-content .db-single__fields {
 }
 html[data-sky] #main-content .db-single__fields :is(dt,dd,a) { color: var(--sky-ink); }
 /* Quiet article chrome keeps attention on the text. */
-html[data-sky] #main-content.article-detail-layout .article-detail-heading { background: #edf1f5; color: var(--sky-ink); }
+html[data-sky] #main-content.article-detail-layout .article-detail-heading { background: var(--sky-panel); color: var(--sky-ink); }
 html[data-sky] :is(.single-post,.page-template-page-case-study) .article-toc details { background: #fff; color: var(--sky-ink); }
 html[data-sky] :is(.single-post,.page-template-page-case-study) .article-toc details :is(summary,a) { color: var(--sky-ink); }
 html[data-sky] :is(.single-post,.page-template-page-case-study) .article-toc a:hover,
@@ -120,25 +120,23 @@ html[data-sky] body #main-content {
 /* Give the homepage profile the same rounded, inset treatment as content. */
 /* Article interiors share a quiet, consistent reading palette. */
 html[data-sky] #main-content.article-detail-layout {
- --mag-paper: #fafbfe;
- --mag-ink: #23334d;
- --mag-muted: #536580;
- --mag-accent: #23334d;
- --mag-line: #e1e5eb;
- --sky-ink: #23334d;
- --sky-muted: #536580;
- background: #fafbfe;
- color: #23334d;
+ --mag-paper: var(--sky-paper);
+ --mag-ink: var(--sky-ink);
+ --mag-muted: var(--sky-muted);
+ --mag-accent: var(--sky-accent);
+ --mag-line: var(--sky-line);
+ background: color-mix(in srgb, var(--sky-paper) 25%, #fff);
+ color: var(--sky-ink);
 }
 html[data-sky] #main-content.article-detail-layout :is(.article-toc details,.db-single__fields,.article-edit__link,.article-navigation__link),
-html[data-sky] #main-content.article-detail-layout :is(.article-edit__link,.article-navigation__link):hover { background: transparent; border: 0; color: #23334d; box-shadow: none; }
+html[data-sky] #main-content.article-detail-layout :is(.article-edit__link,.article-navigation__link):hover { background: transparent; border: 0; color: var(--sky-ink); box-shadow: none; }
 html[data-sky] #main-content.article-detail-layout .article-edit .article-edit__link,
 html[data-sky] #main-content.article-detail-layout .article-create .article-edit__link,
 html[data-sky] #main-content.article-detail-layout .article-edit__link:hover,
-html[data-sky] #main-content.article-detail-layout .db-single .db-single__fields { background: #edf1f5; }
-html[data-sky] #main-content.article-detail-layout .db-single__content :is(blockquote,pre,th,td,.wp-block-group.has-background) { background-color: #f0f3f7; color: #23334d; }
+html[data-sky] #main-content.article-detail-layout .db-single .db-single__fields { background: var(--sky-panel); }
+html[data-sky] #main-content.article-detail-layout .db-single__content :is(blockquote,pre,th,td,.wp-block-group.has-background) { background-color: color-mix(in srgb, var(--sky-panel) 70%, #fff); color: var(--sky-ink); }
 html[data-sky] #main-content.article-detail-layout .db-single__content :is(blockquote,pre) { border: 0; border-radius: 8px; }
-html[data-sky] #main-content.article-detail-layout .db-single__content :is(h2,h3,h4,h5,h6) { background: transparent; color: #23334d; }
+html[data-sky] #main-content.article-detail-layout .db-single__content :is(h2,h3,h4,h5,h6) { background: transparent; color: var(--sky-ink); }
 html[data-sky] .work-home .work-profile {
  box-sizing: border-box;
  padding: 32px;
@@ -149,15 +147,15 @@ html[data-sky] .work-home .work-profile {
 }
 
 @media (max-width: 1099px) {
- html[data-sky] #main-content.article-detail-layout .article-toc details { background: #fafbfe; }
+ html[data-sky] #main-content.article-detail-layout .article-toc details { background: var(--sky-panel); }
 }
-html[data-sky] #main-content.article-detail-layout .article-toc details { background: #edf1f5; }
+html[data-sky] #main-content.article-detail-layout .article-toc details { background: var(--sky-panel); }
 html[data-sky] #main-content.article-detail-layout .article-toc a[aria-current],
-html[data-sky] #main-content.article-detail-layout .article-toc a:hover { background: #e0e6ee; }
+html[data-sky] #main-content.article-detail-layout .article-toc a:hover { background: color-mix(in srgb, var(--sky-panel) 92%, var(--sky-ink)); }
 html[data-sky] #main-content.article-detail-layout .db-single__content :is(.code-copy,.code-copy__toolbar,.code-copy__button,.code-copy pre),
-html[data-sky] #main-content.article-detail-layout .db-single__content .code-copy__button:hover { background: #f0f3f7; color: #23334d; }
+html[data-sky] #main-content.article-detail-layout .db-single__content .code-copy__button:hover { background: color-mix(in srgb, var(--sky-panel) 70%, #fff); color: var(--sky-ink); }
 html[data-sky] #main-content.article-detail-layout .db-single__content .code-copy .code-copy__button,
-html[data-sky] #main-content.article-detail-layout .db-single__content .code-copy .code-copy__button:hover { background: #e0e6ee; }
+html[data-sky] #main-content.article-detail-layout .db-single__content .code-copy .code-copy__button:hover { background: color-mix(in srgb, var(--sky-panel) 92%, var(--sky-ink)); }
 html[data-sky] #main-content.article-detail-layout .code-copy__toolbar { border-bottom: 0; }
 html[data-sky] #main-content.article-detail-layout .code-copy__button { border: 0; }
 html[data-sky] body .monthly-archives { background: #edf1f5; color: #23334d; border: 0; }
@@ -170,8 +168,8 @@ html[data-sky] body .monthly-archives label { margin: 0; font-size: 13px; line-h
 html[data-sky] body .monthly-archives #archive-month { box-sizing: border-box; width: 100%; min-width: 0; min-height: 44px; margin: 0; padding: 12px 44px 12px 14px; }
 html[data-sky] body .monthly-archives #archive-month:focus,
 html[data-sky] body .monthly-archives #archive-month:focus-visible { border: 1px solid #536580; outline: none; box-shadow: none; }
-html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link { background: #edf1f5; }
-html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link:hover { background: #e0e6ee; }
+html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link { background: var(--sky-panel); }
+html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link:hover { background: color-mix(in srgb, var(--sky-panel) 92%, var(--sky-ink)); }
 html[data-sky] #main-content .article-filters__categories a[aria-current],
 html[data-sky] #main-content .pagination .current {
  background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon));
