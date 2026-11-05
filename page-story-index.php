@@ -4,7 +4,7 @@ get_header();
 ?>
 <main id="main-content" class="story-page story-index">
   <?php while (have_posts()) : the_post(); ?>
-    <header class="story-hero">
+    <header class="story-hero sky-page-heading"><?php get_template_part('template-parts/concept-landscape'); ?>
       <p class="story-eyebrow">STORY</p>
       <h1><?php the_title(); ?></h1>
       <div class="story-intro"><?php the_content(); ?></div>

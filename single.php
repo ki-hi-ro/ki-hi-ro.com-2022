@@ -7,7 +7,7 @@
       $post_tags       = get_the_tag_list('', '');
       $post_categories = get_the_category();
       ?>
-        <header class="article-detail-heading">
+        <header class="article-detail-heading sky-page-heading"><?php get_template_part('template-parts/concept-landscape'); ?>
         <p class="magazine-eyebrow">DAILY JOURNAL</p>
         <h1><?php echo esc_html(get_the_title()); ?></h1>
         <p class="journal-single-date"><?php echo esc_html(get_the_date('Y年n月j日 G時i分')); ?></p>

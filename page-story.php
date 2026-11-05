@@ -10,7 +10,7 @@ get_header();
     $title_parts = explode('、', get_the_title(), 2);
     ?>
     <article>
-      <header class="story-hero">
+      <header class="story-hero sky-page-heading"><?php get_template_part('template-parts/concept-landscape'); ?>
         <a class="story-back" href="<?php echo esc_url($story_index_url); ?>">← Story</a>
         <p class="story-eyebrow">STORY</p>
         <h1>

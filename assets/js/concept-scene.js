@@ -64,8 +64,10 @@
         root.setAttribute('data-sky', 'active');
         if (hero) {
             hero.setAttribute('data-scene', hour < 5 || hour >= 19 ? 'night' : hour < 10 ? 'dawn' : hour < 17 ? 'day' : 'dusk');
+        }
+        {
             var nightProgress = ((hour + 5) % 24) / 10;
-            hero.querySelectorAll('.concept-landscape').forEach(function (svg) {
+            document.querySelectorAll('.concept-landscape').forEach(function (svg) {
                 var mobile = svg.classList.contains('concept-landscape--mobile');
                 var width = mobile ? 900 : 1600;
                 var sun = svg.querySelector('.concept-sun');

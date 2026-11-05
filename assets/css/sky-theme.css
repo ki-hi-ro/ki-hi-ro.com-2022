@@ -72,6 +72,15 @@ html[data-sky] .work-landing .work-hero--business::after {
 }
 
 /* A rounded, padded reading surface separates content from the changing sky. */
+html[data-sky] #main-content .sky-page-heading {
+ position: relative;
+ isolation: isolate;
+ overflow: hidden;
+ background: var(--sky-horizon);
+ color: var(--sky-hero-ink);
+}
+html[data-sky] #main-content .sky-page-heading::after { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: var(--sky-text-veil,transparent); }
+html[data-sky] #main-content .sky-page-heading :is(h1,p,.magazine-eyebrow,.story-eyebrow,.interior-heading__description) { color: var(--sky-hero-ink); }
 html[data-sky] body #main-content {
  box-sizing: border-box;
  padding: 32px;

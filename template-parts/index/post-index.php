@@ -31,7 +31,7 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
 ?>
 <main id="main-content" class="article-timeline <?php echo $is_full_archive ? 'journal-chronology' : ($is_reading_list ? 'article-timeline--cards technical-reading-list' : 'article-title-timeline'); ?>">
   <?php if ($is_article_search) : ?>
-    <header class="article-timeline__header">
+    <header class="article-timeline__header sky-page-heading"><?php get_template_part('template-parts/concept-landscape'); ?>
       <div>
         <h1>検索結果</h1>
         <p>「<?php echo esc_html(get_search_query()); ?>」の記事一覧</p>
@@ -39,7 +39,7 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
       <p class="article-timeline__total"><strong><?php echo esc_html(number_format_i18n($wp_query->found_posts)); ?></strong><span>件の記事</span></p>
     </header>
   <?php elseif ($is_article_tag) : ?>
-    <header class="article-timeline__header">
+    <header class="article-timeline__header sky-page-heading"><?php get_template_part('template-parts/concept-landscape'); ?>
       <div>
         <h1><?php single_tag_title(); ?></h1>
         <p>このタグが付いた記事</p>
@@ -61,9 +61,9 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
       if (!$requested_month && get_query_var('year') && get_query_var('monthnum')) $requested_month = sprintf('%04d%02d', get_query_var('year'), get_query_var('monthnum'));
       if (preg_match('/^(\d{4})(0[1-9]|1[0-2])$/', $requested_month, $month_parts)) $date_title = (int) $month_parts[1] . '年' . (int) $month_parts[2] . '月';
     ?>
-    <header class="article-timeline__header"><div><h1><?php echo esc_html($date_title); ?></h1><p><?php echo esc_html(number_format_i18n(count($wp_query->posts))); ?>記事の記録。</p></div></header>
+    <header class="article-timeline__header sky-page-heading"><?php get_template_part('template-parts/concept-landscape'); ?><div><h1><?php echo esc_html($date_title); ?></h1><p><?php echo esc_html(number_format_i18n(count($wp_query->posts))); ?>記事の記録。</p></div></header>
   <?php else : ?>
-  <header class="article-timeline__header">
+  <header class="article-timeline__header sky-page-heading"><?php get_template_part('template-parts/concept-landscape'); ?>
     <div>
       <p class="magazine-eyebrow"><?php echo $is_full_archive ? 'DAILY JOURNAL' : 'WRITING ARCHIVE'; ?></p>
       <h1><?php echo esc_html($archive_title); ?></h1>
