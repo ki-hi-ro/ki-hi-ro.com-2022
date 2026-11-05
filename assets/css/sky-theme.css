@@ -57,7 +57,7 @@ html[data-sky] .work-landing .work-hero--business :is(h2,.work-hero__statement) 
 html[data-sky] .work-landing .work-hero--business .work-hero__lead,
 html[data-sky] .work-landing .work-hero--business .work-hero__concept { color: var(--sky-hero-ink); }
 .concept-sun { fill: #fff9d9; opacity: var(--sky-sun-opacity, 1); }
-.concept-moon { fill: #fff4da; opacity: var(--sky-night-opacity, 0); }
+.concept-moon { display: none; }
 .concept-stars { fill: #edf2ff; opacity: var(--sky-night-opacity, 0); }
 @media (max-width: 700px) {
  .concept-landscape--desktop { display: none; }
