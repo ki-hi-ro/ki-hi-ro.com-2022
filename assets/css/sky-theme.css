@@ -338,3 +338,5 @@ html[data-sky] #main-content.article-detail-layout .article-edit .article-edit__
  background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon));
  color: var(--sky-hero-ink);
 }
+
+#main-content.work-landing #work-cases .work-case-preview { padding-inline: 0; }
