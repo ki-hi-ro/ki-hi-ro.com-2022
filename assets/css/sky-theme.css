@@ -38,7 +38,7 @@ html[data-sky] #main-content .db-single__fields {
 }
 html[data-sky] #main-content .db-single__fields :is(dt,dd,a) { color: var(--sky-ink); }
 /* Quiet article chrome keeps attention on the text. */
-html[data-sky] #main-content.article-detail-layout .article-detail-heading { background: transparent; color: var(--sky-ink); }
+html[data-sky] #main-content.article-detail-layout .article-detail-heading { background: #e0e6ee; color: var(--sky-ink); }
 html[data-sky] :is(.single-post,.page-template-page-case-study) .article-toc details { background: #fff; color: var(--sky-ink); }
 html[data-sky] :is(.single-post,.page-template-page-case-study) .article-toc details :is(summary,a) { color: var(--sky-ink); }
 html[data-sky] :is(.single-post,.page-template-page-case-study) .article-toc a:hover,
