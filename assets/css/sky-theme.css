@@ -226,14 +226,12 @@ html[data-sky] #main-content.work-landing :is(#recent-journal,#work-services,#wo
 #main-content.work-landing .work-home .work-hero__concept::before { background: var(--sky-hero-ink); }
 
 html[data-sky] #main-content.work-landing #work-services .work-opportunity { border: 1px solid #bdc9d9; }
-html[data-sky] #main-content.work-landing #work-cases .work-case-preview { transition: background-color .2s ease, box-shadow .2s ease; }
 html[data-sky] #main-content.work-landing #work-cases .work-case-preview:focus-visible { outline: 2px solid var(--sky-accent); outline-offset: 4px; }
-@media (hover: hover) {
- html[data-sky] #main-content.work-landing #work-cases .work-case-preview:hover { background-color: #eef2f7; box-shadow: 0 4px 16px #23334d12; }
- html[data-sky] #main-content.work-landing #work-cases .work-case-preview:hover h3 { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
-}
-@media (prefers-reduced-motion: reduce) {
- html[data-sky] #main-content.work-landing #work-cases .work-case-preview { transition: none; }
+@media (prefers-reduced-motion: no-preference) {
+ #main-content.work-landing .work-case-preview__image img { transition: transform .7s cubic-bezier(.2,.65,.3,1); }
+ @media (hover: hover) {
+  #main-content.work-landing .work-case-preview:hover img { transform: scale(1.035); }
+ }
 }
 
 /* Give each alternating surface the same inset and rounded boundary. */
