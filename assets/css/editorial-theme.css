@@ -590,13 +590,13 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
  padding: 32px;
  display: grid;
  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
- grid-template-rows: auto auto auto auto 1fr;
+ grid-template-rows: auto auto auto auto;
  gap: 24px 48px;
  align-items: start;
 }
 .work-home .featured-preview .recent-journal__thumbnail {
  grid-column: 1;
- grid-row: 1 / 6;
+ grid-row: 1 / 5;
  aspect-ratio: 1.4;
  width: 100%;
  margin: 0;
@@ -768,12 +768,12 @@ body .site-footer { padding-bottom: 16px; }
  .work-home .featured-preview .recent-journal__card > a {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  grid-template-rows: auto auto auto auto 1fr;
+  grid-template-rows: auto auto auto auto;
   gap: 24px 48px;
   align-items: start;
   text-align: left;
  }
- .work-home .featured-preview .recent-journal__thumbnail { grid-column: 1; grid-row: 1 / 6; width: 100%; margin: 0; }
+ .work-home .featured-preview .recent-journal__thumbnail { grid-column: 1; grid-row: 1 / 5; width: 100%; margin: 0; }
  .work-home .featured-preview .recent-journal__thumbnail {
   position: relative;
   align-self: stretch;
