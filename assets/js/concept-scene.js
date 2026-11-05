@@ -62,6 +62,8 @@
         root.style.setProperty('--sky-sun-opacity', sunOpacity.toFixed(4));
         root.style.setProperty('--sky-night-opacity', darkness.toFixed(4));
         root.setAttribute('data-sky', 'active');
+        var cursorScene = hour >= 5 && hour < 19 ? 'sun' : 'moon';
+        if (root.getAttribute('data-sky-cursor') !== cursorScene) root.setAttribute('data-sky-cursor', cursorScene);
         if (hero) {
             hero.setAttribute('data-scene', hour < 5 || hour >= 19 ? 'night' : hour < 10 ? 'dawn' : hour < 17 ? 'day' : 'dusk');
         }
