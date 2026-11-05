@@ -929,3 +929,27 @@ body .site-footer { padding-bottom: 16px; }
   padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
  }
 }
+
+/* Compact footer: a close brand pair and an accessible return-to-top target. */
+body #page-bottom.site-footer {
+ margin-top: 0;
+ padding-block: 24px;
+}
+#page-bottom.site-footer .site-footer__bottom {
+ display: flex;
+ flex-wrap: nowrap;
+ justify-content: space-between;
+ align-items: center;
+ gap: 16px;
+ padding: 0;
+}
+#page-bottom .site-footer__brand { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-width: 0; }
+#page-bottom.site-footer .site-footer__logo { flex-basis: auto; width: auto; margin: 0; line-height: 1.2; }
+#page-bottom .site-footer__brand > span { margin: 0; font-size: 11px; line-height: 1.5; }
+#page-bottom.site-footer .site-footer__top { display: flex; align-items: center; justify-content: center; flex: 0 0 44px; width: 44px; height: 44px; min-height: 44px; margin: 0; padding: 0; font-size: 22px; line-height: 1; text-decoration: none; }
+@media (max-width: 1099px) {
+ body:has(> .article-detail-layout) > #page-bottom.site-footer { padding-top: 24px; padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (max-width: 700px) {
+ body #page-bottom.site-footer { padding-block: 20px; }
+}

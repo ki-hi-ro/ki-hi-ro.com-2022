@@ -1,7 +1,7 @@
 <footer id="page-bottom" class="site-footer">
 
   <div class="site-footer__bottom">
-
+    <div class="site-footer__brand">
     <a class="site-footer__logo"
        href="<?php echo esc_url(kihiro_logo_home_url()); ?>">
       ki-hi-ro.com
@@ -10,8 +10,8 @@
     <span>
       &copy; <?php echo esc_html(wp_date('Y')); ?> ki-hi-ro.com
     </span>
-
-    <?php if (!(is_singular('post') || is_page_template('page-case-study.php'))) : ?><a class="site-footer__top" href="#page-top">ページトップ ↑</a><?php endif; ?>
+    </div>
+    <a class="site-footer__top" href="#page-top" aria-label="ページトップへ戻る"><span aria-hidden="true">↑</span></a>
 
 
 
