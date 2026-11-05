@@ -32,6 +32,12 @@ html[data-sky] .article-edit__link:hover { background: linear-gradient(135deg, v
 html[data-sky] .article-toc details :is(summary,a) { color: var(--sky-hero-ink); }
 html[data-sky] .article-toc a:hover,
 html[data-sky] .article-toc a[aria-current] { background: color-mix(in srgb, var(--sky-hero-ink) 12%, transparent); color: var(--sky-hero-ink); }
+html[data-sky] #main-content .db-single__fields {
+ background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon));
+ color: var(--sky-hero-ink);
+ border: 0;
+}
+html[data-sky] #main-content .db-single__fields :is(dt,dd,a) { color: var(--sky-hero-ink); }
 /* The closing landscape opens out into a low, uninterrupted horizon. */
 html[data-sky] .work-home .work-home-contact--horizon {
  position: relative;
