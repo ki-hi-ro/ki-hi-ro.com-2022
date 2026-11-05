@@ -207,3 +207,25 @@ html[data-sky] #main-content.work-landing :is(#recent-journal,#work-services,#wo
  --sky-muted: #536580;
  color: #23334d;
 }
+
+/* One understated label treatment across homepage section introductions. */
+#main-content.work-landing .work-home :is(.work-hero__concept,.work-home__heading > .magazine-eyebrow) {
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ gap: 16px;
+ text-align: left;
+ align-self: flex-start;
+ margin-left: 0;
+ padding-left: 0;
+}
+#main-content.work-landing .work-home :is(.work-hero__concept,.work-home__heading > .magazine-eyebrow)::before {
+ content: '';
+ display: block;
+ flex: 0 0 32px;
+ width: 32px;
+ height: 2px;
+ margin: 0;
+ background: #536580;
+}
+#main-content.work-landing .work-home .work-hero__concept::before { background: #f6f7fc; }
