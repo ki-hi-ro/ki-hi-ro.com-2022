@@ -229,3 +229,16 @@ html[data-sky] #main-content.work-landing :is(#recent-journal,#work-services,#wo
  background: #536580;
 }
 #main-content.work-landing .work-home .work-hero__concept::before { background: #f6f7fc; }
+
+/* Give each alternating surface the same inset and rounded boundary. */
+html[data-sky] #main-content.work-landing :is(#recent-journal,#work-services,#work-cases,#work-profile) {
+ box-sizing: border-box;
+ padding: 32px;
+ border-radius: 20px;
+}
+@media (max-width: 700px) {
+ html[data-sky] #main-content.work-landing :is(#recent-journal,#work-services,#work-cases,#work-profile) {
+  padding: 20px;
+  border-radius: 16px;
+ }
+}
