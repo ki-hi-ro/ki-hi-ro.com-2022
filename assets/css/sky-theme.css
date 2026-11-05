@@ -26,18 +26,17 @@ html[data-sky] .article-toc details { background: #fff; border: 0; }
 /* Keep supporting content surfaces neutral; landscapes retain their sky. */
 html[data-sky] :is(.db-single__fields,.article-edit__link,.featured-preview__category,.site-nav-toggle,.work-project,.work-experience,.service-story__visual,.service-investment,.work-contact__required) { background-color: #fff; border: 0; }
 html[data-sky] :is(.article-edit__link:hover,.site-nav-toggle:hover) { background-color: #fff; }
-html[data-sky] .article-toc details,
 html[data-sky] .article-edit__link,
-html[data-sky] .article-edit__link:hover { background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon)); color: var(--sky-hero-ink); border: 0; }
+html[data-sky] .article-edit__link:hover { background: #fff; color: var(--sky-ink); border: 0; }
 html[data-sky] .article-toc details :is(summary,a) { color: var(--sky-hero-ink); }
 html[data-sky] .article-toc a:hover,
 html[data-sky] .article-toc a[aria-current] { background: color-mix(in srgb, var(--sky-hero-ink) 12%, transparent); color: var(--sky-hero-ink); }
 html[data-sky] #main-content .db-single__fields {
- background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon));
- color: var(--sky-hero-ink);
+ background: #fff;
+ color: var(--sky-ink);
  border: 0;
 }
-html[data-sky] #main-content .db-single__fields :is(dt,dd,a) { color: var(--sky-hero-ink); }
+html[data-sky] #main-content .db-single__fields :is(dt,dd,a) { color: var(--sky-ink); }
 /* Quiet article chrome keeps attention on the text. */
 html[data-sky] #main-content.article-detail-layout .article-detail-heading { background: transparent; color: var(--sky-ink); }
 html[data-sky] :is(.single-post,.page-template-page-case-study) .article-toc details { background: #fff; color: var(--sky-ink); }
