@@ -620,7 +620,10 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
 .journal-search .search-form { width: 100%; margin: 0; gap: 0; border: 1px solid var(--mag-line); border-radius: 999px; overflow: hidden; }
 .journal-search .search-form__input { flex: 1; width: 0; min-width: 0; padding: 10px 16px; border: 0; }
 .journal-search .search-form__btn { flex: 0 0 44px; }
-.journal-search .search-form:focus-within { outline: 2px solid var(--mag-ink); outline-offset: 2px; }
+.journal-search .search-form:focus-within { border-color: var(--mag-ink); outline: 0; box-shadow: 0 0 0 1px var(--mag-ink); }
+.journal-search .search-form :is(.search-form__input,.search-form__btn),
+.journal-search .search-form :is(.search-form__input,.search-form__btn):focus,
+.journal-search .search-form :is(.search-form__input,.search-form__btn):focus-visible { border: 0; outline: 0; box-shadow: none; }
 .journal-index-tools { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-block: 24px; }
 .journal-index-tools .journal-search { flex: 0 1 380px; width: 100%; max-width: 380px; min-width: 0; margin: 0; }
 .journal-index-tools .article-create { flex-shrink: 0; margin: 0; padding: 0; }
