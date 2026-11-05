@@ -8,7 +8,7 @@ get_header(); ?>
       <?php
       $post_tags       = get_the_tag_list('', ', ');
       ?>
-        <header class="article-detail-heading sky-page-heading"><?php get_template_part('template-parts/concept-landscape'); ?>
+        <header class="article-detail-heading">
         <p class="magazine-eyebrow">WORKS</p>
         <h1><?php echo esc_html(get_the_title()); ?></h1>
         <p class="journal-single-date"><?php echo esc_html(get_the_date('Y年n月j日 G時i分')); ?></p>

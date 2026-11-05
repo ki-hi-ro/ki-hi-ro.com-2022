@@ -38,6 +38,12 @@ html[data-sky] #main-content .db-single__fields {
  border: 0;
 }
 html[data-sky] #main-content .db-single__fields :is(dt,dd,a) { color: var(--sky-hero-ink); }
+/* Quiet article chrome keeps attention on the text. */
+html[data-sky] #main-content.article-detail-layout .article-detail-heading { background: transparent; color: var(--sky-ink); }
+html[data-sky] :is(.single-post,.page-template-page-case-study) .article-toc details { background: #fff; color: var(--sky-ink); }
+html[data-sky] :is(.single-post,.page-template-page-case-study) .article-toc details :is(summary,a) { color: var(--sky-ink); }
+html[data-sky] :is(.single-post,.page-template-page-case-study) .article-toc a:hover,
+html[data-sky] :is(.single-post,.page-template-page-case-study) .article-toc a[aria-current] { background: #edf1f5; color: var(--sky-ink); }
 /* The closing landscape opens out into a low, uninterrupted horizon. */
 html[data-sky] .work-home .work-home-contact--horizon {
  position: relative;

@@ -70,6 +70,14 @@ body { -webkit-font-smoothing: antialiased; }
 .db-single__fields { background: #f5f5f5; border: 0; border-radius: 8px; padding: 20px 24px; }
 .db-single__content { font-size: 17px; line-height: 2.05; letter-spacing: .015em; }
 .db-single__content > p { margin-block: 0 1.6em; }
+.article-detail-layout .db-single__content > :is(p,h2,h3,h4,h5,h6,figure,.wp-block-image,.wp-block-embed,.wp-block-table,.alignwide,.alignfull) {
+ box-sizing: border-box;
+ width: 100%;
+ max-width: 100%;
+ margin-inline: 0;
+}
+.article-detail-layout .db-single__content :is(figure,.wp-block-image,.wp-block-embed,.wp-block-table) { margin-block: 28px; }
+.article-detail-layout .db-single__content :is(figure,.wp-block-image) img { display: block; max-width: 100%; height: auto; margin-inline: auto; }
 body .db-single__content h2 { margin: 64px 0 26px; padding: 18px 0 0; border: 0; border-top: 2px solid #333; background: none; font-size: 26px; font-weight: 600; line-height: 1.65; }
 .db-single__content h3 { margin: 40px 0 18px; font-size: 21px; line-height: 1.7; font-weight: 600; }
 .db-single__content :is(ul, ol) { padding-left: 1.5em; margin-block: 24px; }
