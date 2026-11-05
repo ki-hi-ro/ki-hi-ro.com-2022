@@ -151,3 +151,6 @@ html[data-sky] .work-home .work-profile {
 @media (max-width: 1099px) {
  html[data-sky] #main-content.article-detail-layout .article-toc details { background: #fafbfe; }
 }
+html[data-sky] #main-content.article-detail-layout .article-toc details { background: #edf1f5; }
+html[data-sky] #main-content.article-detail-layout .article-toc a[aria-current],
+html[data-sky] #main-content.article-detail-layout .article-toc a:hover { background: #e0e6ee; }
