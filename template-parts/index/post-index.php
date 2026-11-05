@@ -61,7 +61,7 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
       if (!$requested_month && get_query_var('year') && get_query_var('monthnum')) $requested_month = sprintf('%04d%02d', get_query_var('year'), get_query_var('monthnum'));
       if (preg_match('/^(\d{4})(0[1-9]|1[0-2])$/', $requested_month, $month_parts)) $date_title = (int) $month_parts[1] . '年' . (int) $month_parts[2] . '月';
     ?>
-    <header class="article-timeline__header sky-page-heading"><?php get_template_part('template-parts/concept-landscape'); ?><div><h1><?php echo esc_html($date_title); ?></h1><p><?php echo esc_html(number_format_i18n(count($wp_query->posts))); ?>記事の記録。</p></div></header>
+    <header class="article-timeline__header sky-page-heading"><?php get_template_part('template-parts/concept-landscape'); ?><div><h1><?php echo esc_html($date_title); ?></h1><p><?php echo esc_html(number_format_i18n($wp_query->found_posts)); ?>記事の記録。</p></div></header>
   <?php else : ?>
   <header class="article-timeline__header sky-page-heading"><?php get_template_part('template-parts/concept-landscape'); ?>
     <div>
@@ -126,10 +126,10 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
       'base' => add_query_arg('paged', '%#%', home_url('/')), 'format' => '',
       'current' => max(1, (int) get_query_var('paged')), 'total' => $wp_query->max_num_pages,
       'show_all' => true, 'prev_next' => false,
-      'add_args' => array_filter(array('view' => 'archive-all', 'article_category' => $archive_category_id, 'article_tag' => kihiro_selected_article_tag(), 'm' => kihiro_get_request_value('m'))),
+      'add_args' => array_filter(array('view' => 'archive-all', 'article_category' => $archive_category_id, 'article_tag' => kihiro_selected_article_tag(), 'm' => kihiro_get_request_value('m') ?: (is_date() ? ($requested_month ?? '') : ''))),
     ))); ?></div></nav>
   <?php endif; ?>
-  <?php if (!$is_full_archive && (is_home() || $is_article_search || $is_article_tag)) : ?>
+  <?php if (!$is_full_archive && (is_home() || is_date() || $is_article_search || $is_article_tag)) : ?>
     <?php the_posts_pagination(array('show_all' => true, 'prev_next' => false, 'add_fragment' => is_home() ? '#year-latest' : '')); ?>
   <?php endif; ?>
   <?php get_template_part('template-parts/monthly-archives'); ?>

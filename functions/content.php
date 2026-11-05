@@ -261,9 +261,10 @@ function kihiro_configure_main_query($query) {
     } elseif ($query->is_date()) {
         if (kihiro_selected_article_category()) $query->set('cat', kihiro_selected_article_category());
         if (kihiro_selected_article_tag()) $query->set('tag_id', kihiro_selected_article_tag());
-        // 年月アーカイブは対象期間の全記事を一度に表示する。
-        $query->set('posts_per_page', -1);
-        $query->set('no_found_rows', true);
+        // 年月の条件を保ちながら、一覧と同じ10記事ずつ表示する。
+        $query->set('posts_per_page', 10);
+        $query->set('no_found_rows', false);
+        $query->set('ignore_sticky_posts', true);
         $query->set('orderby', array('date' => 'DESC', 'ID' => 'DESC'));
     } elseif ($query->is_search() || $query->is_archive()) {
         $query->set('posts_per_page', 10);
