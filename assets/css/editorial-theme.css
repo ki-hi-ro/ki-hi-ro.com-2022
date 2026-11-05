@@ -153,6 +153,27 @@ body .db-single__content h2 { margin: 64px 0 26px; padding: 18px 0 0; border: 0;
 .work-case-preview .work-case-preview__image { display: block; margin: 24px 0 0; padding: 0; aspect-ratio: 1.4; overflow: hidden; border-radius: 8px; }
 .work-case-preview__image img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .work-case-preview .recent-journal__dates { margin-bottom: 20px; font-size: 12px; flex-wrap: wrap; white-space: normal; }
+.works-by-service .work-opportunities__grid { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 701px) {
+ .works-by-service .work-case-preview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(4, auto);
+  gap: 24px 48px;
+  align-items: start;
+ }
+ .works-by-service .work-case-preview > :not(.work-case-preview__image) { grid-column: 2; margin: 0; }
+ .works-by-service .work-case-preview .work-case-preview__image {
+  grid-column: 1;
+  grid-row: 1 / 5;
+  position: relative;
+  align-self: stretch;
+  aspect-ratio: auto;
+  min-height: 0;
+  margin: 0;
+ }
+ .works-by-service .work-case-preview__image img { position: absolute; inset: 0; }
+}
 @media (max-width: 700px) { .work-opportunities__grid { grid-template-columns: 1fr; gap: 18px; } .work-opportunity { padding: 24px; } .work-opportunity h3 { font-size: 21px; } .work-hero__statement strong { font-size: 17px; } }
 
 .work-hero--business { grid-template-columns: 1.2fr 1fr; gap: 22px 44px; }
