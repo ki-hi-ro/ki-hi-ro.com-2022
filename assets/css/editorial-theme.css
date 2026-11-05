@@ -569,12 +569,11 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
  .site-header__menu-row .site-main-nav > a { white-space: nowrap; }
  .site-header__inner > .search-form { order: 2; margin: 0 0 0 auto; }
 }
-#page-top + #main-content { margin-top: 40px; }
+#page-top + #main-content { margin-top: 0; }
 @media (max-width: 1218px) {
  .site-header:not(.site-header--menu-open) .site-header__menu-row { padding: 0; }
  .site-header .site-header__inner { border-bottom: 0; }
  .site-header .site-header__inner { padding-top: 32px; }
- #page-top + #main-content { margin-top: 24px; }
 }
 
 /* Place article search beneath the page heading, aligned with the content. */
