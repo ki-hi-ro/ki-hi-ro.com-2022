@@ -222,6 +222,7 @@ html[data-sky] #main-content.work-landing :is(#recent-journal,#work-services,#wo
  background: var(--sky-muted);
 }
 #main-content.work-landing .work-home .work-hero__concept::before { background: var(--sky-hero-ink); }
+#main-content.work-landing .work-home .work-home__heading > .magazine-eyebrow::before { flex-basis: 24px; width: 24px; }
 
 html[data-sky] #main-content.work-landing #work-services .work-opportunity { border: 1px solid var(--sky-line); }
 html[data-sky] #main-content.work-landing #work-cases .work-case-preview:focus-visible { outline: 2px solid var(--sky-accent); outline-offset: 4px; }
