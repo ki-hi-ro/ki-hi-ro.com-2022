@@ -16,6 +16,7 @@ html[data-sky] :is(.site-header__menu-row .site-main-nav a,.site-breadcrumbs,.si
 html[data-sky] :is(.magazine-eyebrow,.work-hero__concept,.journal-chronology__excerpt,.journal-chronology__tags a,.journal-chronology__date > span,.recent-journal__excerpt,.recent-journal__dates,.site-footer,.site-footer__top,.db-single__fields,.journal-single-date,.interior-heading__description,.work-profile__role) { color: var(--sky-muted); }
 html[data-sky] :is(.work-home__heading,.interior-heading,.about-body,.case-content,.db-single__content,.work-opportunity,.work-profile,.work-contact__welcome,.service-story) p { color: var(--sky-muted); }
 html[data-sky] :is(.interior-heading,.services-page__header,.story-hero,.monthly-archives,.db-single__fields,.work-opportunity,.work-profile,.work-home-contact,.article-toc details,.featured-preview__category,.article-edit__link,.site-nav-toggle) { background-color: var(--sky-panel); border-color: var(--sky-line); }
+html[data-sky] .work-home :is(.work-opportunity,.work-profile) { background-color: #fff; }
 html[data-sky] #main-content :is(.interior-heading,.services-page__header,.story-hero,.article-detail-heading),
 html[data-sky] #main-content > .article-timeline__header { background: var(--sky-panel); color: var(--sky-ink); }
 html[data-sky] #main-content :is(.interior-heading__description,.services-page__header > p,.article-timeline__header p) { color: var(--sky-muted); }
