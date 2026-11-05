@@ -118,6 +118,23 @@ html[data-sky] body #main-content {
 }
 
 /* Give the homepage profile the same rounded, inset treatment as content. */
+/* Article interiors share a quiet, consistent reading palette. */
+html[data-sky] #main-content.article-detail-layout {
+ --mag-paper: #fafbfe;
+ --mag-ink: #23334d;
+ --mag-muted: #536580;
+ --mag-accent: #23334d;
+ --mag-line: #e1e5eb;
+ --sky-ink: #23334d;
+ --sky-muted: #536580;
+ background: #fafbfe;
+ color: #23334d;
+}
+html[data-sky] #main-content.article-detail-layout :is(.article-toc details,.db-single__fields,.article-edit__link,.article-navigation__link),
+html[data-sky] #main-content.article-detail-layout :is(.article-edit__link,.article-navigation__link):hover { background: transparent; border: 0; color: #23334d; box-shadow: none; }
+html[data-sky] #main-content.article-detail-layout .db-single__content :is(blockquote,pre,th,td,.wp-block-group.has-background,.wp-block-cover) { background-color: #f0f3f7; color: #23334d; }
+html[data-sky] #main-content.article-detail-layout .db-single__content :is(blockquote,pre) { border: 0; border-radius: 8px; }
+html[data-sky] #main-content.article-detail-layout .db-single__content :is(h2,h3,h4,h5,h6) { background: transparent; color: #23334d; }
 html[data-sky] .work-home .work-profile {
  box-sizing: border-box;
  padding: 32px;
