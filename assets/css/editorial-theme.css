@@ -906,7 +906,7 @@ body .site-footer { padding-bottom: 16px; }
  .work-hero__concept::before { width: 28px; }
  .work-landing .work-hero--business h2 { font-size: clamp(32px, 8.8vw, 44px); margin-bottom: 14px; }
  .work-landing .work-hero--business .work-hero__statement { font-size: 15px; line-height: 1.8; margin-bottom: 10px; }
- .work-landing .work-hero--business .work-hero__lead { font-size: 13px; line-height: 1.8; }
+ .work-landing .work-hero--business .work-hero__lead { font-size: 13px; line-height: 2.5; }
 }
 
 /* Mobile concept copy is presented as four calm, separate sentences. */
