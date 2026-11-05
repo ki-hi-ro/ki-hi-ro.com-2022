@@ -155,6 +155,8 @@ html[data-sky] #main-content.article-detail-layout .article-toc details { backgr
 html[data-sky] #main-content.article-detail-layout .article-toc a[aria-current],
 html[data-sky] #main-content.article-detail-layout .article-toc a:hover { background: #e0e6ee; }
 html[data-sky] #main-content.article-detail-layout .db-single__content :is(.code-copy,.code-copy__toolbar,.code-copy__button,.code-copy pre),
-html[data-sky] #main-content.article-detail-layout .db-single__content .code-copy__button:hover { background: #edf1f5; color: #23334d; }
+html[data-sky] #main-content.article-detail-layout .db-single__content .code-copy__button:hover { background: #f0f3f7; color: #23334d; }
+html[data-sky] #main-content.article-detail-layout .db-single__content .code-copy .code-copy__button,
+html[data-sky] #main-content.article-detail-layout .db-single__content .code-copy .code-copy__button:hover { background: #e0e6ee; }
 html[data-sky] #main-content.article-detail-layout .code-copy__toolbar { border-bottom: 0; }
 html[data-sky] #main-content.article-detail-layout .code-copy__button { border: 0; }
