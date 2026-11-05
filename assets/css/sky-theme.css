@@ -164,3 +164,5 @@ html[data-sky] body .monthly-archives { background: #edf1f5; color: #23334d; bor
 html[data-sky] body .monthly-archives:has(#archive-month) button,
 html[data-sky] body .monthly-archives:has(#archive-month) button:hover { background: #e0e6ee; color: #23334d; border: 0; }
 html[data-sky] body .monthly-archives #archive-month { background-color: #f0f3f7; color: #23334d; border: 0; }
+html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link { background: #edf1f5; }
+html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link:hover { background: #e0e6ee; }
