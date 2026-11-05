@@ -9,7 +9,7 @@ $selected_month = is_date() ? (get_query_var('m') ?: sprintf('%04d%02d', get_que
 ?>
 <section class="monthly-archives" aria-label="年月アーカイブ">
   <form action="<?php echo esc_url(home_url('/')); ?>" method="get">
-    <label for="archive-month">年月アーカイブ</label>
+    <label class="screen-reader-text" for="archive-month">年月アーカイブ</label>
     <input type="hidden" name="view" value="archive-all">
     <select id="archive-month" name="m">
       <?php if (!$selected_month) : ?><option value="" disabled selected>年月を選択</option><?php endif; ?>
