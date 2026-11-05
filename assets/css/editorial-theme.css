@@ -774,6 +774,20 @@ body .site-footer { padding-bottom: 16px; }
   text-align: left;
  }
  .work-home .featured-preview .recent-journal__thumbnail { grid-column: 1; grid-row: 1 / 6; width: 100%; margin: 0; }
+ .work-home .featured-preview .recent-journal__thumbnail {
+  position: relative;
+  align-self: stretch;
+  aspect-ratio: auto;
+  min-height: 0;
+  overflow: hidden;
+ }
+ .work-home .featured-preview .recent-journal__thumbnail img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ }
  .work-home .featured-preview .recent-journal__card > a > :not(.recent-journal__thumbnail) { grid-column: 2; margin: 0; }
 }
 
