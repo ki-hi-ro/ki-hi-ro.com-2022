@@ -576,7 +576,7 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
 
 /* Keep the page navigation flush with the contents panel's right edge. */
 @media (min-width: 1100px) {
- :is(.single-post, .page-template-page-case-study):has(.article-toc) .floating-page-top { right: max(48px, calc((100% - 1180px) / 2)); }
+ :is(.single-post, .page-template-page-case-study):has(.article-toc) .floating-page-top { right: max(48px, calc((100% - 1118px) / 2)); bottom: 12px; }
 }
 @media (max-width: 1099px) {
  :is(.single-post, .page-template-page-case-study) .article-toc {
