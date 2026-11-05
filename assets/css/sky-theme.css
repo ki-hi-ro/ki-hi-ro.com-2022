@@ -280,3 +280,12 @@ html[data-sky] body .floating-page-top:focus-visible {
 html[data-sky] body #main-content .article-navigation__link:focus-visible :is(span,time) { color: inherit; }
 /* Search has a single container ring rather than separate input/button rings. */
 html[data-sky] body #main-content .journal-search .search-form :is(input,button):focus-visible { outline: none; box-shadow: none; }
+
+/* Supporting homepage sections use the exact sky stops of Concept. */
+html[data-sky] #main-content.work-landing :is(#work-services,#work-profile) {
+ background: linear-gradient(to top right, var(--sky-horizon) 0%, var(--sky-middle) 50%, var(--sky-top) 100%);
+ color: var(--sky-hero-ink);
+}
+html[data-sky] #main-content.work-landing :is(#work-services,#work-profile) :is(h2,h3,p,a) { color: var(--sky-hero-ink); }
+html[data-sky] #main-content.work-landing :is(#work-services,#work-profile) .magazine-eyebrow::before { background: var(--sky-hero-ink); }
+html[data-sky] #main-content.work-landing #work-services .work-opportunity { border-color: color-mix(in srgb, var(--sky-hero-ink) 25%, transparent); }
