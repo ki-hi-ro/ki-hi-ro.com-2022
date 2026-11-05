@@ -29,7 +29,7 @@ html[data-sky] :is(.article-edit__link:hover,.site-nav-toggle:hover) { backgroun
 html[data-sky] .article-toc details,
 html[data-sky] .article-edit__link,
 html[data-sky] .article-edit__link:hover { background: #23334d; color: #fff; border: 0; }
-html[data-sky] .article-toc :is(summary,a) { color: #fff; }
+html[data-sky] .article-toc details :is(summary,a) { color: #fff; }
 html[data-sky] .article-toc a:hover,
 html[data-sky] .article-toc a[aria-current] { background: #ffffff1f; color: #fff; }
 /* The closing landscape opens out into a low, uninterrupted horizon. */
