@@ -186,3 +186,24 @@ html[data-sky] :is(.single-post,.page-template-page-case-study) .floating-page-t
  box-shadow: none;
 }
 html[data-sky] :is(.single-post,.page-template-page-case-study) .floating-page-top:hover { background: #e0e6ee; color: #23334d; }
+
+/* Homepage section rhythm; keep the existing layout and landscape artwork. */
+html[data-sky] #main-content.work-landing #recent-journal,
+html[data-sky] #main-content.work-landing #work-cases { background-color: #fff; }
+html[data-sky] #main-content.work-landing #work-services,
+html[data-sky] #main-content.work-landing #work-profile { background-color: #eef2f7; }
+html[data-sky] #main-content.work-landing #work-services .work-opportunity { background-color: transparent; }
+html[data-sky] #main-content.work-landing :is(.work-hero--business,.work-home-contact--horizon) {
+ --sky-top: #1c2945;
+ --sky-middle: #1c2945;
+ --sky-horizon: #1c2945;
+ --sky-hero-ink: #f6f7fc;
+ --sky-text-veil: transparent;
+ background: #1c2945;
+ color: #f6f7fc;
+}
+html[data-sky] #main-content.work-landing :is(#recent-journal,#work-services,#work-cases,#work-profile) {
+ --sky-ink: #23334d;
+ --sky-muted: #536580;
+ color: #23334d;
+}
