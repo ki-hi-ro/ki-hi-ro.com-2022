@@ -172,6 +172,12 @@ html[data-sky] body .monthly-archives #archive-month:focus,
 html[data-sky] body .monthly-archives #archive-month:focus-visible { border: 0; outline: 2px solid #536580; outline-offset: 0; box-shadow: none; }
 html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link { background: #edf1f5; }
 html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link:hover { background: #e0e6ee; }
+html[data-sky] #main-content .article-filters__categories a[aria-current] {
+ background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon));
+ color: var(--sky-hero-ink);
+ border: 0;
+ border-radius: 999px;
+}
 html[data-sky] :is(.single-post,.page-template-page-case-study) .floating-page-top {
  background: #edf1f5;
  color: #23334d;
