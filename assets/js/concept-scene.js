@@ -55,6 +55,7 @@
         var veil = 0;
         while (veil < .8 && Math.min.apply(null, colors.slice(0, 3).map(function (color) { return contrast(mix(color, veilColor, veil), heroInk); })) < 4.5) veil += .02;
         root.style.setProperty('--sky-hero-ink', heroInk);
+        root.style.setProperty('--sky-button-ink', useLight ? darkInk : '#ffffff');
         root.style.setProperty('--sky-text-veil', (useLight ? 'rgba(16,28,54,' : 'rgba(255,255,255,') + veil.toFixed(2) + ')');
         var daylight = Math.max(0, Math.min(1, (hour - 5) / 14));
         var sunOpacity = Math.min(1, Math.max(0, (hour - 5) * 2), Math.max(0, (19 - hour) * 2));
