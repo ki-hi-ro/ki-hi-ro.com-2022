@@ -55,6 +55,12 @@ function kihiro_get_request_value($key) {
     return sanitize_text_field(wp_unslash($_GET[$key]));
 }
 
+/** Preserve the explicit month on the query-based journal archive route. */
+add_filter('redirect_canonical', function ($redirect) {
+    if ('archive-all' === kihiro_get_request_value('view') && preg_match('/^\d{4}(0[1-9]|1[0-2])$/', kihiro_get_request_value('m'))) return false;
+    return $redirect;
+});
+
 function kihiro_redirect_empty_search() {
     if (is_admin() || !isset($_GET['s']) || !is_scalar($_GET['s'])) {
         return;
