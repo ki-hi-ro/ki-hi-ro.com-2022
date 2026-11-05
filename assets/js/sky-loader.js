@@ -11,11 +11,11 @@
         window.setTimeout(function () {
             loader.classList.remove('sky-loader--visible');
             window.setTimeout(function () { loader.remove(); }, 300);
-        }, Math.max(0, 3000 - (performance.now() - started)));
+        }, Math.max(0, 1500 - (performance.now() - started)));
     }
     if (document.readyState === 'complete') finish();
     else window.addEventListener('load', finish, { once: true });
-    window.setTimeout(finish, 3000);
+    window.setTimeout(finish, 1500);
     window.addEventListener('pageshow', function (event) {
         if (event.persisted) loader.remove();
     });
