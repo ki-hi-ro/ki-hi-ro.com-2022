@@ -300,3 +300,23 @@ html[data-sky] #main-content.work-landing #work-services .work-opportunity { bor
 
 #main-content.work-landing #work-services .service-illustration { display: block; width: 100%; max-width: 360px; height: auto; align-self: center; margin: 20px 0 8px; color: var(--sky-hero-ink); }
 @media (max-width: 700px) { #main-content.work-landing #work-services .service-illustration { max-width: 300px; margin-block: 16px 4px; } }
+
+/* Service cards follow the centered illustration-led reference. */
+html[data-sky] #main-content.work-landing #work-services .work-opportunity {
+ align-items: center;
+ text-align: center;
+ padding: 32px;
+}
+html[data-sky] #main-content.work-landing #work-services .work-opportunity > .magazine-eyebrow {
+ align-self: center;
+ width: auto;
+ text-align: center;
+ margin: 0;
+}
+html[data-sky] #main-content.work-landing #work-services .service-illustration { margin: 28px 0 20px; }
+html[data-sky] #main-content.work-landing #work-services .work-opportunity h3 { width: 100%; margin: 16px 0 24px; }
+html[data-sky] #main-content.work-landing #work-services .work-opportunity > p:not(.magazine-eyebrow) { margin: 0 0 18px; }
+@media (max-width: 700px) {
+ html[data-sky] #main-content.work-landing #work-services .work-opportunity { padding: 24px 20px; }
+ html[data-sky] #main-content.work-landing #work-services .service-illustration { margin: 24px 0 12px; }
+}
