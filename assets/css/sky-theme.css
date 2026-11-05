@@ -172,7 +172,8 @@ html[data-sky] body .monthly-archives #archive-month:focus,
 html[data-sky] body .monthly-archives #archive-month:focus-visible { border: 1px solid #536580; outline: none; box-shadow: none; }
 html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link { background: #edf1f5; }
 html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link:hover { background: #e0e6ee; }
-html[data-sky] #main-content .article-filters__categories a[aria-current] {
+html[data-sky] #main-content .article-filters__categories a[aria-current],
+html[data-sky] #main-content .pagination .current {
  background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon));
  color: var(--sky-hero-ink);
  border: 0;
