@@ -63,7 +63,7 @@ html[data-sky] #main-content :is(.interior-heading,.services-page__header,.story
 html[data-sky] #main-content > .article-timeline__header { background: var(--sky-panel); color: var(--sky-ink); }
 html[data-sky] #main-content :is(.interior-heading__description,.services-page__header > p,.article-timeline__header p) { color: var(--sky-muted); }
 html[data-sky] :is(.work-home__button,.search-form,.monthly-archives select,.contact-index .work-contact .wpcf7,.contact-index .work-contact input,.contact-index .work-contact textarea,.contact-index .work-contact select) { background-color: #fff; border-color: var(--sky-line); color: var(--sky-ink); }
-html[data-sky] :is(.work-home__button--primary,.site-header .site-main-nav .site-main-nav__contact,.monthly-archives button,.contact-index .work-contact input[type="submit"]) { background: var(--sky-ink); color: var(--sky-paper); border-color: var(--sky-ink); }
+html[data-sky] :is(.work-home__button--primary,.site-header .site-main-nav .site-main-nav__contact,.contact-index .work-contact input[type="submit"]) { background: var(--sky-ink); color: var(--sky-paper); border-color: var(--sky-ink); }
 html[data-sky] :is(.article-filters__categories a[aria-current],.pagination .current) { background: #fff; color: var(--sky-ink); }
 html[data-sky] .site-main-nav a[aria-current] { background: var(--sky-panel); color: var(--sky-ink); }
 html[data-sky] .site-header.site-header--menu-open :is(.site-header__menu-row,.site-main-nav) { background: var(--sky-paper); }
@@ -161,8 +161,8 @@ html[data-sky] #main-content.article-detail-layout .db-single__content .code-cop
 html[data-sky] #main-content.article-detail-layout .code-copy__toolbar { border-bottom: 0; }
 html[data-sky] #main-content.article-detail-layout .code-copy__button { border: 0; }
 html[data-sky] body .monthly-archives { background: #edf1f5; color: #23334d; border: 0; }
-html[data-sky] body .monthly-archives:has(#archive-month) button,
-html[data-sky] body .monthly-archives:has(#archive-month) button:hover { background: #e0e6ee; color: #23334d; border: 0; }
+html[data-sky] body .monthly-archives button,
+html[data-sky] body .monthly-archives button:hover { background: #e0e6ee; color: #23334d; border: 0; }
 html[data-sky] body .monthly-archives #archive-month { background-color: #f0f3f7; color: #23334d; border: 0; }
 html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link { background: #edf1f5; }
 html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link:hover { background: #e0e6ee; }
