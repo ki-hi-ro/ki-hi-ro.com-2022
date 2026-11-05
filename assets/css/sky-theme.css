@@ -21,6 +21,8 @@ html[data-sky] .work-home .work-opportunity { border: 0; }
 html[data-sky] .article-navigation { border: 0; }
 html[data-sky] .article-navigation .article-navigation__link,
 html[data-sky] .article-navigation .article-navigation__link:hover { background: #fff; border: 0; }
+html[data-sky] .monthly-archives,
+html[data-sky] .article-toc details { background: #fff; border: 0; }
 /* The closing landscape opens out into a low, uninterrupted horizon. */
 html[data-sky] .work-home .work-home-contact--horizon {
  position: relative;
