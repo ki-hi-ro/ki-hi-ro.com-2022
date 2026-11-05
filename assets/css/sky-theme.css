@@ -243,3 +243,32 @@ html[data-sky] #main-content.work-landing :is(#recent-journal,#work-services,#wo
   border-radius: 16px;
  }
 }
+
+/* Keyboard focus shares the current category's time-of-day palette. */
+html[data-sky] { --sky-focus-fill: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon)); }
+html[data-sky] body #main-content .journal-search .search-form:focus-within {
+ background: var(--sky-focus-fill);
+ border-color: var(--sky-accent);
+ box-shadow: 0 0 0 1px var(--sky-accent);
+}
+html[data-sky] body #main-content .journal-search .search-form:focus-within :is(input,button) { background: transparent; color: var(--sky-hero-ink); }
+html[data-sky] body #main-content .journal-search .search-form:focus-within input::placeholder { color: var(--sky-hero-ink); opacity: .8; }
+html[data-sky] body .monthly-archives #archive-month:focus-visible {
+ background-color: var(--sky-panel);
+ border-color: var(--sky-accent);
+ box-shadow: none;
+ outline: none;
+}
+html[data-sky] body :is(a,button,input,select,textarea):focus-visible {
+ outline: 2px solid var(--sky-accent);
+ outline-offset: 2px;
+}
+html[data-sky] body #main-content :is(.article-edit__link,.code-copy__button,.article-navigation__link,.article-filters__categories a,.pagination a):focus-visible,
+html[data-sky] body .site-header .site-main-nav a:focus-visible,
+html[data-sky] body .floating-page-top:focus-visible {
+ background: var(--sky-focus-fill);
+ color: var(--sky-hero-ink);
+}
+html[data-sky] body #main-content .article-navigation__link:focus-visible :is(span,time) { color: inherit; }
+/* Search has a single container ring rather than separate input/button rings. */
+html[data-sky] body #main-content .journal-search .search-form :is(input,button):focus-visible { outline: none; box-shadow: none; }
