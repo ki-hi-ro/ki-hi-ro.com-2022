@@ -2,7 +2,7 @@
     'use strict';
     var loader = document.querySelector('.sky-loader');
     if (!loader || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var started = performance.now();
+    var started = window.skyLoadingStarted || performance.now();
     var finished = false;
     loader.classList.add('sky-loader--visible');
     function finish() {
@@ -10,6 +10,7 @@
         finished = true;
         window.setTimeout(function () {
             loader.classList.remove('sky-loader--visible');
+            document.documentElement.classList.remove('sky-loading');
             window.setTimeout(function () { loader.remove(); }, 300);
         }, Math.max(0, 1500 - (performance.now() - started)));
     }
@@ -17,6 +18,9 @@
     else window.addEventListener('load', finish, { once: true });
     window.setTimeout(finish, 1500);
     window.addEventListener('pageshow', function (event) {
-        if (event.persisted) loader.remove();
+        if (event.persisted) {
+            document.documentElement.classList.remove('sky-loading');
+            loader.remove();
+        }
     });
 }());

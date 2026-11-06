@@ -7,6 +7,14 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="color-scheme" content="light">
   <?php wp_head(); ?>
+  <style>html.sky-loading .sky-loader{opacity:1;visibility:visible;background:linear-gradient(135deg,var(--sky-top,#eef2f7),var(--sky-middle,#f5f3f6),var(--sky-horizon,#fff6ef))}</style>
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('sky-loading');
+      window.skyLoadingStarted = performance.now();
+      window.setTimeout(function () { document.documentElement.classList.remove('sky-loading'); }, 6000);
+    }
+  </script>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MLVT1B3MQP"></script>
   <script>
