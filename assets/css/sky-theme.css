@@ -379,3 +379,12 @@ html[data-sky] #main-content .pagination .current {
  background: linear-gradient(135deg, color-mix(in srgb, var(--sky-top) 18%, #fff), color-mix(in srgb, var(--sky-middle) 18%, #fff), color-mix(in srgb, var(--sky-horizon) 18%, #fff));
  color: var(--sky-ink);
 }
+
+/* Keep informational homepage sections quieter than the concept landscape. */
+html[data-sky] #main-content.work-landing :is(#work-services,#work-profile) {
+ background: linear-gradient(to top right, color-mix(in srgb, var(--sky-horizon) 18%, #fff), color-mix(in srgb, var(--sky-middle) 18%, #fff), color-mix(in srgb, var(--sky-top) 18%, #fff));
+ color: var(--sky-ink);
+}
+html[data-sky] #main-content.work-landing :is(#work-services,#work-profile) :is(h2,h3,p,a,.service-illustration) { color: var(--sky-ink); }
+html[data-sky] #main-content.work-landing :is(#work-services,#work-profile) .magazine-eyebrow::before { background: var(--sky-muted); }
+html[data-sky] #main-content.work-landing #work-services .work-opportunity { border-color: var(--sky-line); }
