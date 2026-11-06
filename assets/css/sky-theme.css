@@ -724,3 +724,17 @@ html[data-sky] body.single-post #main-content.article-detail-layout .article-nav
  html[data-sky] body.single-post #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,1fr) 240px; column-gap: 24px; }
  html[data-sky] body.single-post #main-content.article-detail-layout :is(.journal-panel--single,.article-detail-heading,.article-main-visual,.article-edit--actions) { max-width: none; }
 }
+
+/* Mobile contents follow the bottom edge, aligned to the article's inset. */
+@media (max-width: 1099px) {
+ html[data-sky] body.single-post #main-content.article-detail-layout .article-toc {
+  top: auto;
+  bottom: calc(12px + env(safe-area-inset-bottom,0px));
+  left: var(--toc-inset-left,40px);
+  right: var(--toc-inset-right,40px);
+  visibility: visible;
+  pointer-events: auto;
+ }
+ html[data-sky] body.single-post #main-content.article-detail-layout .article-toc details { border: 0; border-radius: 16px; overflow: hidden; background: #edf1f5; }
+ html[data-sky] body.single-post #main-content.article-detail-layout .article-toc nav { max-height: 50vh; }
+}

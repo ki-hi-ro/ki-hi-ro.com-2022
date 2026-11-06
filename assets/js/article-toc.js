@@ -73,24 +73,16 @@
         }
     });
 
-    var previousScroll = Math.max(0, window.scrollY);
     function updateMobilePosition() {
         if (desktop.matches || !document.body.classList.contains('single-post')) return;
-        var current = Math.max(0, window.scrollY);
-        var header = document.querySelector('.site-header');
-        if (header) {
-            aside.style.setProperty('--toc-header-bottom', (header.offsetHeight + (parseFloat(window.getComputedStyle(header).top) || 0)) + 'px');
-        }
-        if (Math.abs(current - previousScroll) >= 8) {
-            var show = current < previousScroll && main.getBoundingClientRect().top < 0;
-            aside.classList.toggle('article-toc--scroll-visible', show);
-            if (!show) details.open = false;
-            previousScroll = current;
-        }
-        if (current < 32) aside.classList.remove('article-toc--scroll-visible');
+        var bounds = main.getBoundingClientRect();
+        var style = window.getComputedStyle(main);
+        aside.style.setProperty('--toc-inset-left', (bounds.left + parseFloat(style.paddingLeft)) + 'px');
+        aside.style.setProperty('--toc-inset-right', (window.innerWidth - bounds.right + parseFloat(style.paddingRight)) + 'px');
     }
-    window.addEventListener('scroll', function () { window.requestAnimationFrame(updateMobilePosition); }, { passive: true });
     window.addEventListener('resize', updateMobilePosition);
+    window.addEventListener('load', updateMobilePosition);
+    updateMobilePosition();
 
     var queued = false;
     var activeIndex = -1;
