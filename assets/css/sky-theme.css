@@ -1,9 +1,9 @@
 /* A site-wide palette follows the same continuous sky as the concept landscape. */
 html[data-sky] body .site-header--scroll-aware { position: sticky; top: 0; z-index: 50; background: var(--sky-paper); transition: transform .22s ease; }
 html[data-sky] body .site-header--scroll-hidden { transform: translateY(calc(-100% - 48px)); }
-body.admin-bar .site-header--scroll-aware { top: 32px; }
-@media (min-width: 601px) and (max-width: 782px) { body.admin-bar .site-header--scroll-aware { top: 46px; } }
-@media (max-width: 600px) { body.admin-bar .site-header--scroll-aware { top: 0; } }
+html[data-sky] body.admin-bar .site-header--scroll-aware { top: 32px; }
+@media (min-width: 601px) and (max-width: 782px) { html[data-sky] body.admin-bar .site-header--scroll-aware { top: 46px; } }
+@media (max-width: 600px) { html[data-sky] body.admin-bar .site-header--scroll-aware { top: 0; } }
 @media (prefers-reduced-motion: reduce) { html[data-sky] body .site-header--scroll-aware { transition: none; } }
 .sky-loader { position: fixed; inset: 0; z-index: 9999; display: grid; place-items: center; background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon)); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .3s ease, visibility .3s; }
 .sky-loader--visible { opacity: 1; visibility: visible; }
