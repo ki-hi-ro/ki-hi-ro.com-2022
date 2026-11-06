@@ -9,39 +9,24 @@ get_header(); ?>
       $post_tags       = get_the_tag_list('', ', ');
       ?>
         <header class="article-detail-heading">
-        <p class="magazine-eyebrow">WORKS</p>
-        <h1><?php echo esc_html(get_the_title()); ?></h1>
         <p class="journal-single-date"><?php echo esc_html(get_the_date('Y年n月j日 G時i分')); ?></p>
+        <h1><?php echo esc_html(get_the_title()); ?></h1>
+        <p class="article-updated-date">最終更新：<?php echo esc_html(get_the_modified_date('Y年n月j日 G時i分')); ?></p>
         </header>
+      <?php if (current_user_can('manage_options')) : ?>
+        <div class="article-edit article-edit--actions">
+          <?php if (current_user_can('edit_post', get_the_ID())) : ?><a class="article-edit__link" href="<?php echo esc_url(get_edit_post_link(get_the_ID(), 'raw')); ?>">記事を編集</a><?php endif; ?>
+        </div>
+      <?php endif; ?>
       <?php get_template_part('template-parts/article-main-visual'); ?>
       <article class="journal-panel journal-panel--single db-single">
-
-
-        <?php if (is_user_logged_in() && current_user_can('edit_post', get_the_ID())) : ?>
-          <?php $edit_url = get_edit_post_link(get_the_ID(), 'raw'); ?>
-          <?php if ($edit_url) : ?>
-            <p class="article-edit"><a class="article-edit__link" href="<?php echo esc_url($edit_url); ?>">記事を編集</a></p>
-          <?php endif; ?>
-        <?php endif; ?>
-
-        <dl class="db-single__fields">
-          <div>
-            <dt>最終更新</dt>
-            <dd><?php echo esc_html(get_the_modified_date('Y年n月j日 G時i分')); ?></dd>
-          </div>
-          <?php if ($post_tags) : ?>
-            <div>
-              <dt>タグ</dt>
-              <dd><?php echo wp_kses_post($post_tags); ?></dd>
-            </div>
-          <?php endif; ?>
-        </dl>
-
 
 
         <div class="db-single__content">
           <?php the_content(); ?>
         </div>
+
+        <?php if ($post_tags) : ?><p class="article-end-tags">タグ：<?php echo wp_kses_post($post_tags); ?></p><?php endif; ?>
 
         <?php get_template_part('template-parts/work-inquiry'); ?>
       </article>

@@ -504,19 +504,19 @@ html[data-sky] #main-content .writing-card .article-timeline__thumbnail img { bo
 }
 
 /* Journal details read as a continuous document rather than nested cards. */
-html[data-sky] body.single-post #main-content.article-detail-layout {
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout {
  background: transparent;
  border-radius: 0;
  box-shadow: none;
 }
-html[data-sky] body.single-post #main-content.article-detail-layout .journal-panel--single {
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .journal-panel--single {
  background: transparent;
  border: 0;
  border-radius: 0;
  box-shadow: none;
  padding: 0;
 }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-detail-heading {
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-detail-heading {
  display: flex;
  flex-wrap: wrap;
  align-items: baseline;
@@ -527,74 +527,74 @@ html[data-sky] body.single-post #main-content.article-detail-layout .article-det
  border-radius: 0;
  text-align: left;
 }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-detail-heading > :is(p,h1) { text-align: left; margin: 0; color: var(--sky-ink); }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-detail-heading .journal-single-date { color: var(--sky-muted); font-size: 13px; }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-detail-heading h1 { flex-basis: 100%; font-size: clamp(24px,2.5vw,32px); line-height: 1.65; margin-top: 8px; }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-main-visual { background: transparent; border-radius: 0; margin: 0 0 28px; }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-main-visual img { display: block; width: auto; max-width: 100%; max-height: 480px; height: auto; margin-inline: auto; object-fit: contain; border-radius: 0; }
-html[data-sky] body.single-post #main-content.article-detail-layout .db-single .db-single__fields { background: transparent; padding: 0; border-radius: 0; margin-bottom: 32px; row-gap: 10px; font-size: 13px; }
-html[data-sky] body.single-post #main-content.article-detail-layout .db-single__content { background: transparent; padding: 0; border: 0; border-radius: 0; }
-html[data-sky] body.single-post #main-content.article-detail-layout .db-single__content :is(p,figure) { margin-block: 0 1.75em; }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-navigation .article-navigation__link { background: transparent; padding: 20px 0; border-radius: 0; box-shadow: none; }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-toc details { background: color-mix(in srgb,var(--sky-paper) 45%,#fff); box-shadow: none; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-detail-heading > :is(p,h1) { text-align: left; margin: 0; color: var(--sky-ink); }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-detail-heading .journal-single-date { color: var(--sky-muted); font-size: 13px; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-detail-heading h1 { flex-basis: 100%; font-size: clamp(24px,2.5vw,32px); line-height: 1.65; margin-top: 8px; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-main-visual { background: transparent; border-radius: 0; margin: 0 0 28px; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-main-visual img { display: block; width: auto; max-width: 100%; max-height: 480px; height: auto; margin-inline: auto; object-fit: contain; border-radius: 0; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .db-single .db-single__fields { background: transparent; padding: 0; border-radius: 0; margin-bottom: 32px; row-gap: 10px; font-size: 13px; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .db-single__content { background: transparent; padding: 0; border: 0; border-radius: 0; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .db-single__content :is(p,figure) { margin-block: 0 1.75em; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-navigation .article-navigation__link { background: transparent; padding: 20px 0; border-radius: 0; box-shadow: none; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc details { background: color-mix(in srgb,var(--sky-paper) 45%,#fff); box-shadow: none; }
 @media (max-width: 700px) {
- html[data-sky] body.single-post #main-content.article-detail-layout .article-main-visual img { max-height: 360px; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-main-visual img { max-height: 360px; }
 }
 
 /* A 720px reading column with a quiet 240px desktop contents rail. */
-html[data-sky] body.single-post #main-content.article-detail-layout { max-width: 1072px; margin-inline: auto; padding: 24px 32px; }
-html[data-sky] body.single-post #main-content.article-detail-layout :is(.journal-panel--single,.article-detail-heading,.article-main-visual) { width: 100%; max-width: 720px; margin-inline: 0; }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-main-visual img { margin-inline: 0; max-height: 400px; }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-heading-categories { font-size: 13px; color: var(--sky-muted); }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-edit--actions { margin: 32px 0; padding-top: 16px; border-top: 1px solid var(--sky-line); }
-html[data-sky] body.single-post #main-content.article-detail-layout .db-single__content :is(figure,img,video,iframe) { max-width: 100%; }
-html[data-sky] body.single-post #main-content.article-detail-layout .db-single__content :is(img,video) { height: auto; }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-toc details { background: transparent; border: 0; border-radius: 0; box-shadow: none; }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-toc summary { border: 0; padding: 0 0 16px; }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-toc nav { padding: 0; }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-toc a { padding: 8px; border-radius: 4px; font-size: 13px; line-height: 1.7; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout { max-width: 1072px; margin-inline: auto; padding: 24px 32px; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout :is(.journal-panel--single,.article-detail-heading,.article-main-visual) { width: 100%; max-width: 720px; margin-inline: 0; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-main-visual img { margin-inline: 0; max-height: 400px; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-heading-categories { font-size: 13px; color: var(--sky-muted); }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-edit--actions { margin: 32px 0; padding-top: 16px; border-top: 1px solid var(--sky-line); }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .db-single__content :is(figure,img,video,iframe) { max-width: 100%; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .db-single__content :is(img,video) { height: auto; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc details { background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc summary { border: 0; padding: 0 0 16px; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc nav { padding: 0; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc a { padding: 8px; border-radius: 4px; font-size: 13px; line-height: 1.7; }
 @media (min-width: 1100px) {
- html[data-sky] body.single-post #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,720px) 240px; gap: 48px; }
- html[data-sky] body.single-post #main-content.article-detail-layout .article-toc { width: 240px; position: sticky; top: 24px; border-left: 1px solid var(--sky-line); padding-left: 16px; box-sizing: border-box; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,720px) 240px; gap: 48px; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc { width: 240px; position: sticky; top: 24px; border-left: 1px solid var(--sky-line); padding-left: 16px; box-sizing: border-box; }
 }
 @media (max-width: 1099px) {
- html[data-sky] body.single-post #main-content.article-detail-layout { max-width: 768px; }
- html[data-sky] body.single-post #main-content.article-detail-layout .article-toc { position: static; width: 100%; max-width: 720px; margin: 24px 0; }
- html[data-sky] body.single-post #main-content.article-detail-layout .article-toc summary { padding: 16px 0; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout { max-width: 768px; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc { position: static; width: 100%; max-width: 720px; margin: 24px 0; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc summary { padding: 16px 0; }
 }
 @media (max-width: 700px) {
- html[data-sky] body.single-post #main-content.article-detail-layout { padding: 16px; }
- html[data-sky] body.single-post #main-content.article-detail-layout .article-main-visual img { max-height: 320px; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout { padding: 16px; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-main-visual img { max-height: 320px; }
 }
 
 /* Align the complete article-and-contents frame with the shared header. */
-html[data-sky] body.single-post #main-content.article-detail-layout {
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout {
  width: min(100%,1180px);
  max-width: 1180px;
  padding-inline: 0;
 }
 @media (min-width: 1100px) {
- html[data-sky] body.single-post #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,1fr) 240px; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,1fr) 240px; }
 }
 
 /* One quiet white surface contains the article and its contents rail. */
-html[data-sky] body.single-post #main-content.article-detail-layout {
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout {
  background: #fff;
  border-radius: 20px;
  padding: 32px;
 }
 @media (max-width: 700px) {
- html[data-sky] body.single-post #main-content.article-detail-layout { border-radius: 16px; padding: 20px; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout { border-radius: 16px; padding: 20px; }
 }
 
 /* Dates introduce the record; categories become an end-of-article path. */
-html[data-sky] body.single-post #main-content.article-detail-layout .article-detail-heading > .article-updated-date { flex-basis: 100%; font-size: 12px; color: var(--sky-muted); }
-html[data-sky] body.single-post #main-content.article-detail-layout :is(.article-end-categories,.article-end-tags) { margin: 24px 0 0; font-size: 14px; color: var(--sky-muted); }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-end-categories { padding-top: 24px; border-top: 1px solid var(--sky-line); }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-detail-heading > .article-updated-date { flex-basis: 100%; font-size: 12px; color: var(--sky-muted); }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout :is(.article-end-categories,.article-end-tags) { margin: 24px 0 0; font-size: 14px; color: var(--sky-muted); }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-end-categories { padding-top: 24px; border-top: 1px solid var(--sky-line); }
 
 /* On phones, an upward scroll brings the contents below the revealed header. */
 @media (max-width: 1099px) {
- html[data-sky] body.single-post #main-content.article-detail-layout .article-toc {
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc {
   position: fixed;
   top: var(--toc-header-bottom,0px);
   bottom: auto;
@@ -607,10 +607,10 @@ html[data-sky] body.single-post #main-content.article-detail-layout .article-end
   visibility: hidden;
   pointer-events: none;
  }
- html[data-sky] body.single-post #main-content.article-detail-layout .article-toc--scroll-visible { visibility: visible; pointer-events: auto; }
- html[data-sky] body.single-post #main-content.article-detail-layout .article-toc details { background: #fff; border-bottom: 1px solid var(--sky-line); }
- html[data-sky] body.single-post #main-content.article-detail-layout .article-toc summary { padding: 16px; }
- html[data-sky] body.single-post #main-content.article-detail-layout .article-toc nav { max-height: 50vh; overflow-y: auto; padding: 0 8px 8px; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc--scroll-visible { visibility: visible; pointer-events: auto; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc details { background: #fff; border-bottom: 1px solid var(--sky-line); }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc summary { padding: 16px; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc nav { max-height: 50vh; overflow-y: auto; padding: 0 8px 8px; }
 }
 
 .recent-journal__excerpt-mobile { display: none; }
@@ -646,7 +646,7 @@ html[data-sky] #main-content.work-landing #recent-journal .recent-journal__creat
 }
 
 /* Tighten the space between contents entries without changing text size. */
-html[data-sky] body.single-post #main-content.article-detail-layout .article-toc a { padding-block: 4px; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc a { padding-block: 4px; }
 
 .recent-journal__mobile-break { display: none; }
 @media (max-width: 700px) {
@@ -677,9 +677,9 @@ html[data-sky] body #main-content > .article-timeline__header.sky-page-heading .
 #main-content .journal-chronology__thumbnail img { display: block; width: 100%; height: auto; max-height: 240px; object-fit: contain; object-position: left center; border-radius: 8px; }
 
 /* Restore contents entry spacing; tighten the gap from the reading column. */
-html[data-sky] body.single-post #main-content.article-detail-layout .article-toc a { padding-block: 8px; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc a { padding-block: 8px; }
 @media (min-width: 1100px) {
- html[data-sky] body.single-post #main-content.article-detail-layout.has-article-toc {
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout.has-article-toc {
   grid-template-columns: minmax(0,720px) 240px;
   column-gap: 24px;
  }
@@ -693,41 +693,41 @@ html[data-sky] body.single-post #main-content.article-detail-layout .article-toc
  html[data-sky-cursor] :is(a,button,summary,[role="button"]) * { cursor: pointer; }
 }
 
-html[data-sky] body.single-post #main-content.article-detail-layout .article-edit--actions { width: 100%; max-width: 720px; margin: 0 0 24px; padding: 0; border: 0; }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-edit--actions .article-edit__link { background: var(--sky-ink); color: #fff; transition: opacity .2s ease; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-edit--actions { width: 100%; max-width: 720px; margin: 0 0 24px; padding: 0; border: 0; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-edit--actions .article-edit__link { background: var(--sky-ink); color: #fff; transition: opacity .2s ease; }
 @media (hover: hover) {
- html[data-sky] body.single-post #main-content.article-detail-layout .article-edit--actions .article-edit__link:hover { background: var(--sky-ink); color: #fff; opacity: .75; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-edit--actions .article-edit__link:hover { background: var(--sky-ink); color: #fff; opacity: .75; }
 }
 @media (max-width: 1099px) {
- html[data-sky] body.single-post #main-content.article-detail-layout > .article-edit--actions { order: -2; }
- html[data-sky] body.single-post #main-content.article-detail-layout > .article-main-visual { order: -1; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout > .article-edit--actions { order: -2; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout > .article-main-visual { order: -1; }
 }
 
 /* Balance the category row's space above and below its text. */
-html[data-sky] body.single-post #main-content.article-detail-layout .article-end-categories { padding-block: 24px; margin-block: 24px 0; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-end-categories { padding-block: 24px; margin-block: 24px 0; }
 
 /* Previous and next records share the contact action's navy palette. */
-html[data-sky] body.single-post #main-content.article-detail-layout .article-navigation .article-navigation__link {
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-navigation .article-navigation__link {
  background: var(--sky-ink);
  color: #fff;
  padding: 24px;
  border-radius: 16px;
  transition: opacity .2s ease;
 }
-html[data-sky] body.single-post #main-content.article-detail-layout .article-navigation .article-navigation__link :is(span,time) { color: #fff; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-navigation .article-navigation__link :is(span,time) { color: #fff; }
 @media (hover: hover) {
- html[data-sky] body.single-post #main-content.article-detail-layout .article-navigation .article-navigation__link:hover { background: var(--sky-ink); color: #fff; opacity: .75; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-navigation .article-navigation__link:hover { background: var(--sky-ink); color: #fff; opacity: .75; }
 }
 
 /* Fill the article frame while retaining the compact contents gap. */
 @media (min-width: 1100px) {
- html[data-sky] body.single-post #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,1fr) 240px; column-gap: 24px; }
- html[data-sky] body.single-post #main-content.article-detail-layout :is(.journal-panel--single,.article-detail-heading,.article-main-visual,.article-edit--actions) { max-width: none; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,1fr) 240px; column-gap: 24px; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout :is(.journal-panel--single,.article-detail-heading,.article-main-visual,.article-edit--actions) { max-width: none; }
 }
 
 /* Mobile contents follow the bottom edge, aligned to the article's inset. */
 @media (max-width: 1099px) {
- html[data-sky] body.single-post #main-content.article-detail-layout .article-toc {
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc {
   top: auto;
   bottom: calc(12px + env(safe-area-inset-bottom,0px));
   left: var(--toc-inset-left,40px);
@@ -735,8 +735,8 @@ html[data-sky] body.single-post #main-content.article-detail-layout .article-nav
   visibility: visible;
   pointer-events: auto;
  }
- html[data-sky] body.single-post #main-content.article-detail-layout .article-toc details { border: 0; border-radius: 16px; overflow: hidden; background: #edf1f5; }
- html[data-sky] body.single-post #main-content.article-detail-layout .article-toc nav { max-height: 50vh; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc details { border: 0; border-radius: 16px; overflow: hidden; background: #edf1f5; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc nav { max-height: 50vh; }
 }
 
 /* All interior landscape headings follow the journal archive's live sky. */

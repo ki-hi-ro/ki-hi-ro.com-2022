@@ -58,7 +58,7 @@
     var desktop = window.matchMedia('(min-width: 1100px)');
     function syncLayout() {
         details.open = desktop.matches;
-        if (document.body.classList.contains('single-post')) {
+        if (document.body.matches('.single-post,.page-template-page-case-study')) {
             var article = main.querySelector('.journal-panel--single');
             if (!desktop.matches && article) main.insertBefore(aside, article);
             else main.appendChild(aside);
@@ -74,7 +74,7 @@
     });
 
     function updateMobilePosition() {
-        if (desktop.matches || !document.body.classList.contains('single-post')) return;
+        if (desktop.matches || !document.body.matches('.single-post,.page-template-page-case-study')) return;
         var bounds = main.getBoundingClientRect();
         var style = window.getComputedStyle(main);
         aside.style.setProperty('--toc-inset-left', (bounds.left + parseFloat(style.paddingLeft)) + 'px');
