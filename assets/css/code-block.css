@@ -1,0 +1,63 @@
+/* Compact code presentation; no rules target prose or quotes. */
+html[data-sky] body #main-content.article-detail-layout .db-single__content .code-copy {
+ min-width: 0;
+ max-width: 100%;
+ margin: 24px 0;
+ padding: 0;
+ background: #F5F7FA;
+ border: 0;
+ border-radius: 8px;
+ overflow: hidden;
+ box-shadow: none;
+ color: #23334d;
+}
+html[data-sky] body #main-content.article-detail-layout .db-single__content .code-copy .code-copy__toolbar {
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+ flex-wrap: wrap;
+ gap: 8px;
+ min-height: 40px;
+ padding: 4px 12px;
+ margin: 0;
+ background: #F5F7FA;
+ border: 0;
+ border-bottom: 1px solid #dce3ec;
+ border-radius: 0;
+ box-shadow: none;
+}
+html[data-sky] body #main-content.article-detail-layout .db-single__content .code-copy .code-copy__language { margin-right: auto; font: 12px/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; color: #65748a; }
+html[data-sky] body #main-content.article-detail-layout .db-single__content .code-copy .code-copy__status { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+html[data-sky] body #main-content.article-detail-layout .db-single__content .code-copy .code-copy__button {
+ min-height: 32px;
+ padding: 4px 10px;
+ border: 0;
+ border-radius: 4px;
+ background: #e0e6ee;
+ color: #23334d;
+ font: 12px/1.6 system-ui, sans-serif;
+ box-shadow: none;
+}
+html[data-sky] body #main-content.article-detail-layout .db-single__content .code-copy .code-copy__button:hover { background: #d5ddea; color: #23334d; }
+html[data-sky] body #main-content.article-detail-layout .db-single__content :is(.code-copy pre,pre.wp-block-code) {
+ box-sizing: border-box;
+ min-width: 0;
+ max-width: 100%;
+ margin: 0;
+ padding: 16px 20px;
+ border: 0;
+ border-radius: 0;
+ background: #F5F7FA;
+ color: #23334d;
+ box-shadow: none;
+ font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+ white-space: pre;
+ overflow-x: auto;
+ overflow-wrap: normal;
+ word-break: normal;
+ tab-size: 4;
+}
+html[data-sky] body #main-content.article-detail-layout .db-single__content :is(.code-copy pre,pre.wp-block-code) code { display: block; margin: 0; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; white-space: pre; overflow-wrap: normal; word-break: normal; }
+@media (max-width: 700px) {
+ html[data-sky] body #main-content.article-detail-layout .db-single__content :is(.code-copy pre,pre.wp-block-code) { padding: 16px; }
+}

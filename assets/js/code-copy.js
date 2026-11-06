@@ -49,6 +49,15 @@
         button.className = 'code-copy__button';
         button.textContent = 'コピー';
         button.setAttribute('aria-label', 'コードブロックの内容をコピー');
+        var codeElement = pre.querySelector('code') || pre;
+        var languageClass = (pre.className + ' ' + codeElement.className).match(/(?:^|\s)(?:language|lang)-([a-zA-Z0-9_+#.-]+)(?=\s|$)/);
+        var language = pre.getAttribute('data-language') || codeElement.getAttribute('data-language') || (languageClass && languageClass[1]);
+        if (language && language.length <= 40) {
+            var label = document.createElement('span');
+            label.className = 'code-copy__language';
+            label.textContent = language;
+            toolbar.appendChild(label);
+        }
         toolbar.append(status, button);
         pre.before(wrapper);
         wrapper.append(toolbar, pre);
@@ -66,6 +75,7 @@
                     br.replaceWith('\n');
                 });
                 await copyText(content.textContent);
+                button.textContent = 'コピーしました';
                 status.textContent = 'コピーしました';
             } catch (error) {
                 status.textContent = 'コピーできませんでした。本文を選択してコピーしてください。';
@@ -73,7 +83,8 @@
                 button.disabled = false;
                 resetTimer = setTimeout(function () {
                     status.textContent = '';
-                }, 5000);
+                    button.textContent = 'コピー';
+                }, 2500);
             }
         });
     });

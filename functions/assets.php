@@ -64,6 +64,7 @@ function kihiro_enqueue_assets() {
     $styles['kihiro-sky-theme'] = '/assets/css/sky-theme.css';
     if (is_singular('post') || is_page_template('page-case-study.php')) {
         $styles['kihiro-quote-block'] = '/assets/css/quote-block.css';
+        $styles['kihiro-code-block'] = '/assets/css/code-block.css';
     }
     wp_enqueue_script('kihiro-experience-slider', get_theme_file_uri('/assets/js/experience-slider.js'), array(), kihiro_asset_version('/assets/js/experience-slider.js'), true);
 
