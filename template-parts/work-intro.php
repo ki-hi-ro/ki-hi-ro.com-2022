@@ -10,7 +10,7 @@ $concept_scene = $concept_hour < 5 || $concept_hour >= 19 ? 'night' : ($concept_
     <p class="work-hero__concept">CONCEPT</p>
     <h2 id="work-intro-heading">自分 × 何か</h2>
     <p class="work-hero__statement">私はこの公式を大事にしています。</p>
-    <p class="work-hero__lead"><span class="work-hero__lead-desktop">自分の身体の状態を整える、自分の思考を整える、仕事に必要なスキルを整える。<br>整えた自分で、世界と関わっていく。</span><span class="work-hero__lead-mobile">自分の身体の状態を整える。<br>自分の思考を整える。<br>仕事に必要なスキルを整える。<br>整えた自分で、世界と関わっていく。</span></p>
+    <p class="work-hero__lead"><span class="work-hero__lead-desktop">自分の身体の状態を整える、自分の思考を整える、仕事に必要なスキルを整える。<br>整った自分 × 何か = ∞</span><span class="work-hero__lead-mobile">自分の身体の状態を整える。<br>自分の思考を整える。<br>仕事に必要なスキルを整える。<br>整った自分 × 何か = ∞</span></p>
   </section>
 
   <?php get_template_part('template-parts/recent-journal'); ?>
