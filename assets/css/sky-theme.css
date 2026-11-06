@@ -415,3 +415,12 @@ html[data-sky] #main-content.work-landing :is(.work-hero--business,.work-home-co
 }
 html[data-sky] #main-content.work-landing .work-hero--business { background: #fff; }
 html[data-sky] #main-content.work-landing :is(.work-hero--business .concept-landscape,.work-home-contact--horizon .contact-horizon) { opacity: .18; }
+
+/* Interior page introductions share the pale, time-aware landscape. */
+html[data-sky] body #main-content .sky-page-heading {
+ --sky-hero-ink: var(--sky-ink);
+ --sky-text-veil: transparent;
+ background: #fff;
+ color: var(--sky-ink);
+}
+html[data-sky] body #main-content .sky-page-heading .concept-landscape { opacity: .18; }
