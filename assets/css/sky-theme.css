@@ -502,3 +502,41 @@ html[data-sky] #main-content .writing-card .article-timeline__thumbnail img { bo
 @media (max-width: 700px) {
  html[data-sky] #main-content .writing-card .writing-card__link { padding: 20px; border-radius: 16px; }
 }
+
+/* Journal details read as a continuous document rather than nested cards. */
+html[data-sky] body.single-post #main-content.article-detail-layout {
+ background: transparent;
+ border-radius: 0;
+ box-shadow: none;
+}
+html[data-sky] body.single-post #main-content.article-detail-layout .journal-panel--single {
+ background: transparent;
+ border: 0;
+ border-radius: 0;
+ box-shadow: none;
+ padding: 0;
+}
+html[data-sky] body.single-post #main-content.article-detail-layout .article-detail-heading {
+ display: flex;
+ flex-wrap: wrap;
+ align-items: baseline;
+ gap: 8px 16px;
+ padding: 0;
+ margin: 0 0 24px;
+ background: transparent;
+ border-radius: 0;
+ text-align: left;
+}
+html[data-sky] body.single-post #main-content.article-detail-layout .article-detail-heading > :is(p,h1) { text-align: left; margin: 0; color: var(--sky-ink); }
+html[data-sky] body.single-post #main-content.article-detail-layout .article-detail-heading .journal-single-date { color: var(--sky-muted); font-size: 13px; }
+html[data-sky] body.single-post #main-content.article-detail-layout .article-detail-heading h1 { flex-basis: 100%; font-size: clamp(24px,2.5vw,32px); line-height: 1.65; margin-top: 8px; }
+html[data-sky] body.single-post #main-content.article-detail-layout .article-main-visual { background: transparent; border-radius: 0; margin: 0 0 28px; }
+html[data-sky] body.single-post #main-content.article-detail-layout .article-main-visual img { display: block; width: auto; max-width: 100%; max-height: 480px; height: auto; margin-inline: auto; object-fit: contain; border-radius: 0; }
+html[data-sky] body.single-post #main-content.article-detail-layout .db-single .db-single__fields { background: transparent; padding: 0; border-radius: 0; margin-bottom: 32px; row-gap: 10px; font-size: 13px; }
+html[data-sky] body.single-post #main-content.article-detail-layout .db-single__content { background: transparent; padding: 0; border: 0; border-radius: 0; }
+html[data-sky] body.single-post #main-content.article-detail-layout .db-single__content :is(p,figure) { margin-block: 0 1.75em; }
+html[data-sky] body.single-post #main-content.article-detail-layout .article-navigation .article-navigation__link { background: transparent; padding: 20px 0; border-radius: 0; box-shadow: none; }
+html[data-sky] body.single-post #main-content.article-detail-layout .article-toc details { background: color-mix(in srgb,var(--sky-paper) 45%,#fff); box-shadow: none; }
+@media (max-width: 700px) {
+ html[data-sky] body.single-post #main-content.article-detail-layout .article-main-visual img { max-height: 360px; }
+}
