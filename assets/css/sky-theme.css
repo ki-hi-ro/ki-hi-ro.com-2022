@@ -434,3 +434,27 @@ html[data-sky] body .site-header .site-main-nav a.site-main-nav__contact { trans
   opacity: .75;
  }
 }
+
+/* A publishing shortcut sits at the top right of the journal introduction. */
+html[data-sky] #main-content.work-landing #recent-journal .work-home__heading {
+ display: grid;
+ grid-template-columns: minmax(0,1fr) auto;
+ align-items: center;
+ column-gap: 16px;
+}
+html[data-sky] #main-content.work-landing #recent-journal .work-home__heading > .magazine-eyebrow { grid-column: 1; grid-row: 1; }
+html[data-sky] #main-content.work-landing #recent-journal .recent-journal__create { grid-column: 2; grid-row: 1; margin: 0; }
+html[data-sky] #main-content.work-landing #recent-journal .recent-journal__create a {
+ background: linear-gradient(135deg,color-mix(in srgb,var(--sky-top) 18%,#fff),color-mix(in srgb,var(--sky-middle) 18%,#fff),color-mix(in srgb,var(--sky-horizon) 18%,#fff));
+ color: var(--sky-ink);
+ text-decoration: none;
+ white-space: nowrap;
+}
+html[data-sky] #main-content.work-landing #recent-journal .work-home__heading > :is(h2,p:not(.magazine-eyebrow)) { grid-column: 1 / -1; }
+@media (hover: hover) {
+ html[data-sky] #main-content.work-landing #recent-journal .recent-journal__create a:hover { background: linear-gradient(135deg,color-mix(in srgb,var(--sky-top) 36%,#fff),color-mix(in srgb,var(--sky-middle) 36%,#fff),color-mix(in srgb,var(--sky-horizon) 36%,#fff)); }
+}
+@media (max-width: 480px) {
+ html[data-sky] #main-content.work-landing #recent-journal .recent-journal__create a { padding: 10px 12px; font-size: 12px; }
+ html[data-sky] #main-content.work-landing #recent-journal .work-home__heading { column-gap: 8px; }
+}
