@@ -136,6 +136,7 @@ html[data-sky] body #main-content {
 /* Give the homepage profile the same rounded, inset treatment as content. */
 /* Article interiors share a quiet, consistent reading palette. */
 html[data-sky] #main-content.article-detail-layout {
+ --article-sky-surface: linear-gradient(135deg, color-mix(in srgb, var(--sky-top) 18%, #fff), color-mix(in srgb, var(--sky-middle) 18%, #fff), color-mix(in srgb, var(--sky-horizon) 18%, #fff));
  --mag-paper: var(--sky-paper);
  --mag-ink: var(--sky-ink);
  --mag-muted: var(--sky-muted);
@@ -327,29 +328,29 @@ html[data-sky] #main-content.article-detail-layout .article-edit .article-edit__
 html[data-sky] #main-content.article-detail-layout .article-create .article-edit__link,
 html[data-sky] #main-content.article-detail-layout .db-single .db-single__fields,
 html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link {
- background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon));
- color: var(--sky-hero-ink);
+ background: var(--article-sky-surface);
+ color: var(--sky-ink);
 }
 html[data-sky] #main-content.article-detail-layout .article-detail-heading :is(h1,p),
 html[data-sky] #main-content.article-detail-layout .db-single .db-single__fields :is(dt,dd,a),
-html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link :is(span,time) { color: var(--sky-hero-ink); }
+html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link :is(span,time) { color: var(--sky-ink); }
 html[data-sky] #main-content.article-detail-layout .article-navigation .article-navigation__link:hover,
 html[data-sky] #main-content.article-detail-layout .article-edit .article-edit__link:hover {
- background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon));
- color: var(--sky-hero-ink);
+ background: var(--article-sky-surface);
+ color: var(--sky-ink);
 }
 
 #main-content.work-landing #work-cases .work-case-preview { padding-inline: 0; }
 
 /* TOC matches the article title's live sky surface on desktop and mobile. */
 html[data-sky] #main-content.article-detail-layout .article-toc details {
- background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon));
- color: var(--sky-hero-ink);
+ background: var(--article-sky-surface);
+ color: var(--sky-ink);
 }
-html[data-sky] #main-content.article-detail-layout .article-toc details :is(summary,a) { color: var(--sky-hero-ink); }
+html[data-sky] #main-content.article-detail-layout .article-toc details :is(summary,a) { color: var(--sky-ink); }
 html[data-sky] #main-content.article-detail-layout .article-toc a[aria-current],
 html[data-sky] #main-content.article-detail-layout .article-toc a:hover {
- background: color-mix(in srgb, var(--sky-hero-ink) 12%, transparent);
- color: var(--sky-hero-ink);
+ background: color-mix(in srgb, var(--sky-ink) 12%, transparent);
+ color: var(--sky-ink);
 }
-html[data-sky] #main-content.article-detail-layout .article-toc nav { border-color: color-mix(in srgb, var(--sky-hero-ink) 18%, transparent); }
+html[data-sky] #main-content.article-detail-layout .article-toc nav { border-color: color-mix(in srgb, var(--sky-ink) 18%, transparent); }
