@@ -662,3 +662,12 @@ html[data-sky] body.single-post #main-content.article-detail-layout .article-toc
   box-shadow: none;
  }
 }
+
+/* Journal archive headings share the opening concept's unmuted landscape. */
+html[data-sky] body #main-content > .article-timeline__header.sky-page-heading {
+ --sky-hero-ink: inherit;
+ --sky-text-veil: inherit;
+ background: linear-gradient(135deg,var(--sky-top),var(--sky-middle),var(--sky-horizon));
+ color: var(--sky-hero-ink);
+}
+html[data-sky] body #main-content > .article-timeline__header.sky-page-heading .concept-landscape { opacity: 1; }
