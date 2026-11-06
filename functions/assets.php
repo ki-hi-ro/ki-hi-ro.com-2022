@@ -62,6 +62,9 @@ function kihiro_enqueue_assets() {
     $styles['kihiro-gradient-theme'] = '/assets/css/gradient-theme.css';
     $styles['kihiro-editorial-theme'] = '/assets/css/editorial-theme.css';
     $styles['kihiro-sky-theme'] = '/assets/css/sky-theme.css';
+    if (is_singular('post') || is_page_template('page-case-study.php')) {
+        $styles['kihiro-quote-block'] = '/assets/css/quote-block.css';
+    }
     wp_enqueue_script('kihiro-experience-slider', get_theme_file_uri('/assets/js/experience-slider.js'), array(), kihiro_asset_version('/assets/js/experience-slider.js'), true);
 
     foreach ($styles as $handle => $relative_path) {
@@ -108,4 +111,10 @@ function kihiro_site_icons() {
 /** Embedded previews render in a separate WordPress document. */
 add_action('embed_head', function () {
     printf('<link rel="stylesheet" href="%s">', esc_url(add_query_arg('ver', kihiro_asset_version('/assets/css/embed.css'), get_theme_file_uri('/assets/css/embed.css'))));
+});
+
+/** Load the same Quote block rules inside both iframe and classic block editors. */
+add_action('enqueue_block_assets', function () {
+    if (!is_admin()) return;
+    wp_enqueue_style('kihiro-quote-block', get_theme_file_uri('/assets/css/quote-block.css'), array(), kihiro_asset_version('/assets/css/quote-block.css'));
 });
