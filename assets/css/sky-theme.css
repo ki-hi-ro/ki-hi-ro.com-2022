@@ -586,3 +586,8 @@ html[data-sky] body.single-post #main-content.article-detail-layout {
 @media (max-width: 700px) {
  html[data-sky] body.single-post #main-content.article-detail-layout { border-radius: 16px; padding: 20px; }
 }
+
+/* Dates introduce the record; categories become an end-of-article path. */
+html[data-sky] body.single-post #main-content.article-detail-layout .article-detail-heading > .article-updated-date { flex-basis: 100%; font-size: 12px; color: var(--sky-muted); }
+html[data-sky] body.single-post #main-content.article-detail-layout :is(.article-end-categories,.article-end-tags) { margin: 24px 0 0; font-size: 14px; color: var(--sky-muted); }
+html[data-sky] body.single-post #main-content.article-detail-layout .article-end-categories { padding-top: 24px; border-top: 1px solid var(--sky-line); }

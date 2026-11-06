@@ -8,27 +8,15 @@
       $post_categories = get_the_category();
       ?>
         <header class="article-detail-heading">
-        <p class="magazine-eyebrow">DAILY JOURNAL</p>
         <p class="journal-single-date"><?php echo esc_html(get_the_date('Y年n月j日 G時i分')); ?></p>
-        <?php if ($post_categories) : ?><p class="article-heading-categories"><?php foreach ($post_categories as $index => $category) : ?><?php if ($index) echo ' / '; ?><a href="<?php echo esc_url(add_query_arg(array('view' => 'archive-all', 'article_category' => $category->term_id), home_url('/'))); ?>"><?php echo esc_html($category->name); ?></a><?php endforeach; ?></p><?php endif; ?>
         <h1><?php echo esc_html(get_the_title()); ?></h1>
+        <p class="article-updated-date">最終更新：<?php echo esc_html(get_the_modified_date('Y年n月j日 G時i分')); ?></p>
         </header>
       <?php get_template_part('template-parts/article-main-visual'); ?>
       <article class="journal-panel journal-panel--single db-single">
 
 
-        <dl class="db-single__fields">
-          <div>
-            <dt>最終更新</dt>
-            <dd><?php echo esc_html(get_the_modified_date('Y年n月j日 G時i分')); ?></dd>
-          </div>
-          <?php if ($post_tags) : ?>
-            <div>
-              <dt>タグ</dt>
-              <dd class="db-single__tags"><?php echo wp_kses_post($post_tags); ?></dd>
-            </div>
-          <?php endif; ?>
-        </dl>
+
 
 
 
@@ -38,6 +26,9 @@
         <div class="db-single__content">
           <?php the_content(); ?>
         </div>
+
+        <?php if ($post_categories) : ?><p class="article-end-categories">カテゴリー：<?php foreach ($post_categories as $index => $category) : ?><?php if ($index) echo ' / '; ?><a href="<?php echo esc_url(add_query_arg(array('view' => 'archive-all', 'article_category' => $category->term_id), home_url('/'))); ?>"><?php echo esc_html($category->name); ?></a><?php endforeach; ?></p><?php endif; ?>
+        <?php if ($post_tags) : ?><p class="article-end-tags">タグ：<?php echo wp_kses_post($post_tags); ?></p><?php endif; ?>
 
         <?php if (current_user_can('manage_options')) : ?>
           <div class="article-edit article-edit--actions">
