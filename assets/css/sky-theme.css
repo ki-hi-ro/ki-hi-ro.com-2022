@@ -404,3 +404,14 @@ html[data-sky] #main-content.work-landing #work-services .work-opportunity { bor
   color: var(--sky-ink);
  }
 }
+
+/* Opening and closing landscapes retain the live sky in a quieter tint. */
+html[data-sky] #main-content.work-landing :is(.work-hero--business,.work-home-contact--horizon) {
+ --sky-hero-ink: var(--sky-ink);
+ --sky-button-ink: #fff;
+ --sky-text-veil: transparent;
+ background: linear-gradient(135deg, color-mix(in srgb, var(--sky-top) 18%, #fff), color-mix(in srgb, var(--sky-middle) 18%, #fff), color-mix(in srgb, var(--sky-horizon) 18%, #fff));
+ color: var(--sky-ink);
+}
+html[data-sky] #main-content.work-landing .work-hero--business { background: #fff; }
+html[data-sky] #main-content.work-landing :is(.work-hero--business .concept-landscape,.work-home-contact--horizon .contact-horizon) { opacity: .18; }
