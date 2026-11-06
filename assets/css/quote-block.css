@@ -1,13 +1,13 @@
 /* Core Quote only: keep default and Large variations in the reading rhythm. */
-:is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote.wp-block-quote {
+:is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote:not(.wp-block-pullquote blockquote) {
  box-sizing: border-box;
  background: transparent;
  border: 0;
  border-left: 3px solid #A7B8CC;
  border-radius: 0;
  box-shadow: none;
- padding: 4px 0 4px 20px;
- margin: 24px 0;
+ padding: 12px 20px;
+ margin: 16px 0;
  color: inherit;
  font-family: inherit;
  font-size: inherit;
@@ -16,10 +16,10 @@
  line-height: 1.85;
  text-align: inherit;
 }
-:is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote.wp-block-quote::before,
-:is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote.wp-block-quote::after { content: none; display: none; }
-:is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote.wp-block-quote p {
- margin: 0 0 16px;
+:is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote:not(.wp-block-pullquote blockquote)::before,
+:is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote:not(.wp-block-pullquote blockquote)::after { content: none; display: none; }
+:is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote:not(.wp-block-pullquote blockquote) p {
+ margin: 0 0 8px;
  color: inherit;
  font-family: inherit;
  font-size: inherit;
@@ -27,8 +27,8 @@
  font-style: normal;
  line-height: 1.85;
 }
-:is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote.wp-block-quote > :last-child { margin-bottom: 0; }
-:is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote.wp-block-quote cite {
+:is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote:not(.wp-block-pullquote blockquote) > :last-child { margin-bottom: 0; }
+:is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote:not(.wp-block-pullquote blockquote) cite {
  display: block;
  margin: 16px 0 0;
  color: var(--sky-muted, #65748a);
