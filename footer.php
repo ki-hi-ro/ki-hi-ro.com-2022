@@ -19,7 +19,7 @@
 
 </footer>
 
-<?php if (is_singular('post') || is_page_template('page-case-study.php')) : ?>
+<?php if (is_page_template('page-case-study.php')) : ?>
 <a class="floating-page-top" href="#page-bottom" aria-label="ページの最後へ移動">
   <span aria-hidden="true">↓</span>
 </a>
