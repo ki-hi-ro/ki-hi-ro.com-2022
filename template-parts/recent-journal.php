@@ -26,7 +26,7 @@ $journal_url = kihiro_journal_url();
       <?php endif; ?>
       <h3><?php echo esc_html(get_the_title($entry)); ?></h3>
 
-      <p class="recent-journal__excerpt"><?php echo esc_html($excerpt); ?></p>
+      <p class="recent-journal__excerpt"><span class="recent-journal__excerpt-desktop"><?php echo esc_html($excerpt); ?></span><span class="recent-journal__excerpt-mobile"><?php echo esc_html(wp_html_excerpt($excerpt, 150, '…')); ?></span></p>
       <div class="recent-journal__dates"><time datetime="<?php echo esc_attr(get_the_modified_date('c', $entry)); ?>"><?php echo esc_html(get_the_modified_date('Y.m.d', $entry)); ?> 更新</time><span aria-hidden="true"> / </span><time datetime="<?php echo esc_attr(get_the_date('c', $entry)); ?>"><?php echo esc_html(get_the_date('Y.m.d', $entry)); ?> 公開</time></div>
     </a></article>
     <?php endforeach; ?>
