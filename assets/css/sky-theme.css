@@ -738,3 +738,12 @@ html[data-sky] body.single-post #main-content.article-detail-layout .article-nav
  html[data-sky] body.single-post #main-content.article-detail-layout .article-toc details { border: 0; border-radius: 16px; overflow: hidden; background: #edf1f5; }
  html[data-sky] body.single-post #main-content.article-detail-layout .article-toc nav { max-height: 50vh; }
 }
+
+/* All interior landscape headings follow the journal archive's live sky. */
+html[data-sky] body #main-content .sky-page-heading {
+ --sky-hero-ink: inherit;
+ --sky-text-veil: inherit;
+ background: linear-gradient(135deg,var(--sky-top),var(--sky-middle),var(--sky-horizon));
+ color: var(--sky-hero-ink);
+}
+html[data-sky] body #main-content .sky-page-heading .concept-landscape { opacity: 1; }
