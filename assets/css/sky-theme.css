@@ -374,8 +374,8 @@ html[data-sky] #main-content > .article-timeline__header.sky-page-heading {
 }
 html[data-sky] #main-content > .article-timeline__header.sky-page-heading .concept-landscape { opacity: .18; }
 html[data-sky] #main-content > .article-timeline__header.sky-page-heading { background: #fff; }
-html[data-sky] #main-content .article-filters__categories a[aria-current],
-html[data-sky] #main-content .pagination .current {
+html[data-sky] body #main-content .article-filters__categories a[aria-current],
+html[data-sky] body #main-content .pagination .current {
  background: linear-gradient(135deg, color-mix(in srgb, var(--sky-top) 18%, #fff), color-mix(in srgb, var(--sky-middle) 18%, #fff), color-mix(in srgb, var(--sky-horizon) 18%, #fff));
  color: var(--sky-ink);
 }
