@@ -56,7 +56,14 @@
     main.classList.add('has-article-toc');
 
     var desktop = window.matchMedia('(min-width: 1100px)');
-    function syncLayout() { details.open = desktop.matches; }
+    function syncLayout() {
+        details.open = desktop.matches;
+        if (document.body.classList.contains('single-post')) {
+            var article = main.querySelector('.journal-panel--single');
+            if (!desktop.matches && article) main.insertBefore(aside, article);
+            else main.appendChild(aside);
+        }
+    }
     syncLayout();
     desktop.addEventListener('change', syncLayout);
     details.addEventListener('keydown', function (event) {
