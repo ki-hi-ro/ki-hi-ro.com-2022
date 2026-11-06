@@ -964,3 +964,9 @@ body #page-bottom.site-footer {
 @media (max-width: 700px) {
  body #page-bottom.site-footer { padding-block: 20px; }
 }
+
+/* The whole timeline entry opens its article; tags keep their own targets. */
+.journal-chronology__entry { position: relative; }
+.journal-chronology__entry > h3 > a::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+.journal-chronology__entry .journal-chronology__tags a { position: relative; z-index: 2; }
+.journal-chronology__entry > h3 > a:focus-visible::after { outline: 2px solid var(--mag-accent); outline-offset: 4px; border-radius: 6px; }
