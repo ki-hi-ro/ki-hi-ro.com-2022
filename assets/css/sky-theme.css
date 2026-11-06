@@ -566,3 +566,13 @@ html[data-sky] body.single-post #main-content.article-detail-layout .article-toc
  html[data-sky] body.single-post #main-content.article-detail-layout { padding: 16px; }
  html[data-sky] body.single-post #main-content.article-detail-layout .article-main-visual img { max-height: 320px; }
 }
+
+/* Align the complete article-and-contents frame with the shared header. */
+html[data-sky] body.single-post #main-content.article-detail-layout {
+ width: min(100%,1180px);
+ max-width: 1180px;
+ padding-inline: 0;
+}
+@media (min-width: 1100px) {
+ html[data-sky] body.single-post #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,1fr) 240px; }
+}
