@@ -20,6 +20,16 @@
         if (!scheduled) { scheduled = true; window.requestAnimationFrame(update); }
     }, { passive: true });
     header.addEventListener('focusin', function () { header.classList.remove('site-header--scroll-hidden'); });
+    document.querySelectorAll('a[href="#page-top"]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            header.classList.remove('site-header--scroll-hidden');
+            window.scrollTo({
+                top: 0,
+                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+            });
+        });
+    });
     window.addEventListener('pageshow', update);
     update();
 }());
