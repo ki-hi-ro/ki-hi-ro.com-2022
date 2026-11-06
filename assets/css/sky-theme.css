@@ -705,3 +705,16 @@ html[data-sky] body.single-post #main-content.article-detail-layout .article-edi
 
 /* Balance the category row's space above and below its text. */
 html[data-sky] body.single-post #main-content.article-detail-layout .article-end-categories { padding-block: 24px; margin-block: 24px 0; }
+
+/* Previous and next records share the contact action's navy palette. */
+html[data-sky] body.single-post #main-content.article-detail-layout .article-navigation .article-navigation__link {
+ background: var(--sky-ink);
+ color: #fff;
+ padding: 24px;
+ border-radius: 16px;
+ transition: opacity .2s ease;
+}
+html[data-sky] body.single-post #main-content.article-detail-layout .article-navigation .article-navigation__link :is(span,time) { color: #fff; }
+@media (hover: hover) {
+ html[data-sky] body.single-post #main-content.article-detail-layout .article-navigation .article-navigation__link:hover { background: var(--sky-ink); color: #fff; opacity: .75; }
+}
