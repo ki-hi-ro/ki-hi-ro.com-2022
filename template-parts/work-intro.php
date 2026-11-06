@@ -26,7 +26,7 @@ $concept_scene = $concept_hour < 5 || $concept_hour >= 19 ? 'night' : ($concept_
   <?php get_template_part('template-parts/work-selected-cases'); ?>
 
   <section class="work-profile" id="work-profile" aria-labelledby="work-profile-heading">
-    <header class="work-home__heading"><p class="magazine-eyebrow">ABOUT</p><h2 id="work-profile-heading">柴田 浩貴</h2><p class="work-profile__role">個人事業主 / Webエンジニア</p></header>
+    <header class="work-home__heading"><p class="magazine-eyebrow">ABOUT</p><h2 id="work-profile-heading">柴田 浩貴</h2><p class="work-profile__role">個人事業主 / Webエンジニア</p><?php get_template_part('template-parts/profile-illustration'); ?></header>
     <div><p>Web制作、データ処理の移行、API開発、システム保守などを経験してきました。既存の仕組みを読み解き、確認しながら改善することを大切にしています。「自分自身を、更新し続ける」という姿勢で、学びや日々の気づきもブログに記録しています。</p><div class="work-home__profile-links"><?php $about_page = get_page_by_path('about'); if ($about_page && 'publish' === $about_page->post_status) : ?><a href="<?php echo esc_url(get_permalink($about_page)); ?>">自己紹介を読む →</a><?php endif; ?></div></div>
   </section>
 
