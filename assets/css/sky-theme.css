@@ -87,7 +87,7 @@ html[data-sky] #main-content :is(.interior-heading__description,.services-page__
 html[data-sky] :is(.work-home__button,.search-form,.monthly-archives select,.contact-index .work-contact .wpcf7,.contact-index .work-contact input,.contact-index .work-contact textarea,.contact-index .work-contact select) { background-color: #fff; border-color: var(--sky-line); color: var(--sky-ink); }
 html[data-sky] :is(.work-home__button--primary,.site-header .site-main-nav .site-main-nav__contact,.contact-index .work-contact input[type="submit"]) { background: var(--sky-ink); color: var(--sky-paper); border-color: var(--sky-ink); }
 html[data-sky] :is(.article-filters__categories a[aria-current],.pagination .current) { background: #fff; color: var(--sky-ink); }
-html[data-sky] .site-header .site-main-nav a[aria-current] { background: linear-gradient(135deg, var(--sky-top), var(--sky-middle), var(--sky-horizon)); color: var(--sky-hero-ink); }
+html[data-sky] .site-header .site-main-nav a[aria-current] { background: linear-gradient(135deg, color-mix(in srgb, var(--sky-top) 18%, #fff), color-mix(in srgb, var(--sky-middle) 18%, #fff), color-mix(in srgb, var(--sky-horizon) 18%, #fff)); color: var(--sky-ink); }
 html[data-sky] .site-header.site-header--menu-open :is(.site-header__menu-row,.site-main-nav) { background: var(--sky-paper); }
 html[data-sky] :is(.single-post,.page-template-page-case-study) .floating-page-top { background: var(--sky-paper); color: var(--sky-ink); border-color: var(--sky-line); }
 html[data-sky] .work-home .featured-preview .recent-journal__card > a { background: transparent; }
