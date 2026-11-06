@@ -644,3 +644,6 @@ html[data-sky] #main-content.work-landing #recent-journal .recent-journal__creat
   opacity: .75;
  }
 }
+
+/* Tighten the space between contents entries without changing text size. */
+html[data-sky] body.single-post #main-content.article-detail-layout .article-toc a { padding-block: 4px; }
