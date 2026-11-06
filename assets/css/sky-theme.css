@@ -478,3 +478,13 @@ html[data-sky] #main-content.work-landing .work-hero--business {
  color: var(--sky-hero-ink);
 }
 html[data-sky] #main-content.work-landing .work-hero--business .concept-landscape { opacity: 1; }
+
+/* The journal feature opens with an uncropped, full-width image. */
+#main-content.work-landing #recent-journal .recent-journal__card > a {
+ grid-template-columns: minmax(0,1fr);
+ grid-template-rows: auto;
+ padding-inline: 0;
+}
+#main-content.work-landing #recent-journal .recent-journal__card > a > * { grid-column: 1; grid-row: auto; }
+#main-content.work-landing #recent-journal .recent-journal__thumbnail { width: 100%; aspect-ratio: auto; height: auto; }
+#main-content.work-landing #recent-journal .recent-journal__thumbnail img { position: static; display: block; width: 100%; height: auto; object-fit: contain; }
