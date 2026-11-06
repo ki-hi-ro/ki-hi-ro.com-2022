@@ -684,3 +684,11 @@ html[data-sky] body.single-post #main-content.article-detail-layout .article-toc
   column-gap: 24px;
  }
 }
+
+/* Use the native text-selection cursor over copyable prose. */
+@media (hover: hover) and (pointer: fine) {
+ html[data-sky-cursor] :is(p,h1,h2,h3,h4,h5,h6,blockquote,figcaption,cite,dt,dd,pre,code,td,th,time),
+ html[data-sky-cursor] .db-single__content { cursor: text; }
+ html[data-sky-cursor] :is(a,button,select,summary,[role="button"]),
+ html[data-sky-cursor] :is(a,button,summary,[role="button"]) * { cursor: pointer; }
+}
