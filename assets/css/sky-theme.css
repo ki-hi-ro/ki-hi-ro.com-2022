@@ -458,3 +458,6 @@ html[data-sky] #main-content.work-landing #recent-journal .work-home__heading > 
  html[data-sky] #main-content.work-landing #recent-journal .recent-journal__create a { padding: 10px 12px; font-size: 12px; }
  html[data-sky] #main-content.work-landing #recent-journal .work-home__heading { column-gap: 8px; }
 }
+
+/* Services and selected works share the same white section surface. */
+html[data-sky] #main-content.work-landing #work-services { background: #fff; }
