@@ -13,7 +13,7 @@ $journal_url = kihiro_journal_url();
     <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
       <div class="article-create recent-journal__create"><a class="article-edit__link" href="<?php echo esc_url(admin_url('post-new.php')); ?>"><span aria-hidden="true">＋</span>新規投稿</a></div>
     <?php endif; ?>
-<h2 id="recent-journal-heading">日々の記録</h2><p>心に浮かんだ言葉を書き続けています。最近はAIの思考も取り入れています。</p></header>
+<h2 id="recent-journal-heading">日々の記録</h2><p>心に浮かんだ言葉を書き続けています。<br class="recent-journal__mobile-break">最近はAIの思考も取り入れています。</p></header>
   <div class="recent-journal__grid" id="recent-journal-posts">
     <?php foreach ($recent as $entry) :
         $excerpt = $entry->post_excerpt ?: $entry->post_content;
