@@ -11,7 +11,7 @@ html[data-sky-cursor="moon"] .sky-loader__orb { background: transparent; box-sha
  html[data-sky-cursor="sun"] { --sky-cursor: url('../images/cursor-arrow.svg') 3 2; }
  html[data-sky-cursor="moon"] { --sky-cursor: url('../images/cursor-arrow.svg') 3 2; }
  html[data-sky-cursor], html[data-sky-cursor] body { cursor: var(--sky-cursor), auto; }
- html[data-sky-cursor] :is(a,button,select,summary,[role="button"]) { cursor: var(--sky-cursor), pointer; }
+ html[data-sky-cursor] :is(a,button,select,summary,[role="button"]) { cursor: pointer; }
  html[data-sky-cursor] :is(input[type="text"],input[type="search"],input[type="email"],input[type="url"],textarea,[contenteditable="true"]) { cursor: text; }
  html[data-sky-cursor] :is(button,input,select):disabled { cursor: not-allowed; }
 }
