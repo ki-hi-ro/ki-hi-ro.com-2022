@@ -8,8 +8,8 @@ html[data-sky-cursor="moon"] .sky-loader__orb { background: transparent; box-sha
 @keyframes sky-loader-rise { 0%,100% { transform: translateY(10px); opacity: .5; } 50% { transform: translateY(-10px); opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .sky-loader { display: none; } }
 @media (hover: hover) and (pointer: fine) {
- html[data-sky-cursor="sun"] { --sky-cursor: url('../images/cursor-sun.svg') 16 16; }
- html[data-sky-cursor="moon"] { --sky-cursor: url('../images/cursor-moon.svg') 16 16; }
+ html[data-sky-cursor="sun"] { --sky-cursor: url('../images/cursor-arrow.svg') 3 2; }
+ html[data-sky-cursor="moon"] { --sky-cursor: url('../images/cursor-arrow.svg') 3 2; }
  html[data-sky-cursor], html[data-sky-cursor] body { cursor: var(--sky-cursor), auto; }
  html[data-sky-cursor] :is(a,button,select,summary,[role="button"]) { cursor: var(--sky-cursor), pointer; }
  html[data-sky-cursor] :is(input[type="text"],input[type="search"],input[type="email"],input[type="url"],textarea,[contenteditable="true"]) { cursor: text; }
@@ -354,3 +354,9 @@ html[data-sky] #main-content.article-detail-layout .article-toc a:hover {
  color: var(--sky-ink);
 }
 html[data-sky] #main-content.article-detail-layout .article-toc nav { border-color: color-mix(in srgb, var(--sky-ink) 18%, transparent); }
+
+@media (hover: hover) and (pointer: fine) {
+ html[data-sky-cursor] .sky-loader--visible,
+ html[data-sky-cursor]:has(.sky-loader--visible) body,
+ html[data-sky-cursor]:has(.sky-loader--visible) body * { cursor: var(--sky-cursor), auto; }
+}
