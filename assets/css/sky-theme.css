@@ -461,3 +461,6 @@ html[data-sky] #main-content.work-landing #recent-journal .work-home__heading > 
 
 /* Services, profile and selected works share the same white section surface. */
 html[data-sky] #main-content.work-landing :is(#work-services,#work-profile) { background: #fff; }
+
+/* Keep homepage sections close, with a consistent gap on every screen. */
+#main-content.work-landing .work-home__section { margin-top: 33px; }
