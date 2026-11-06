@@ -469,3 +469,12 @@ html[data-sky] #main-content.work-landing :is(#work-services,#work-profile) { ba
  #main-content.work-landing .work-hero--business { padding-bottom: 73px; margin-top: 12px; }
  #main-content.work-landing .work-home__section { margin-top: 27px; }
 }
+
+/* The first view uses the same full sky palette as the loading screen. */
+html[data-sky] #main-content.work-landing .work-hero--business {
+ --sky-hero-ink: inherit;
+ --sky-text-veil: inherit;
+ background: linear-gradient(135deg,var(--sky-top),var(--sky-middle),var(--sky-horizon));
+ color: var(--sky-hero-ink);
+}
+html[data-sky] #main-content.work-landing .work-hero--business .concept-landscape { opacity: 1; }
