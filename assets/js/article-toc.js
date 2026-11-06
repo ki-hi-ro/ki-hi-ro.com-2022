@@ -73,6 +73,25 @@
         }
     });
 
+    var previousScroll = Math.max(0, window.scrollY);
+    function updateMobilePosition() {
+        if (desktop.matches || !document.body.classList.contains('single-post')) return;
+        var current = Math.max(0, window.scrollY);
+        var header = document.querySelector('.site-header');
+        if (header) {
+            aside.style.setProperty('--toc-header-bottom', Math.max(0, header.getBoundingClientRect().bottom) + 'px');
+        }
+        if (Math.abs(current - previousScroll) >= 8) {
+            var show = current < previousScroll && main.getBoundingClientRect().top < 0;
+            aside.classList.toggle('article-toc--scroll-visible', show);
+            if (!show) details.open = false;
+            previousScroll = current;
+        }
+        if (current < 32) aside.classList.remove('article-toc--scroll-visible');
+    }
+    window.addEventListener('scroll', function () { window.requestAnimationFrame(updateMobilePosition); }, { passive: true });
+    window.addEventListener('resize', updateMobilePosition);
+
     var queued = false;
     var activeIndex = -1;
     function updateCurrent() {
