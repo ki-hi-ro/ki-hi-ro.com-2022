@@ -366,3 +366,16 @@ html[data-sky] #main-content.article-detail-layout .article-toc nav { border-col
  html[data-sky-cursor]:has(.sky-loader--visible) body,
  html[data-sky-cursor]:has(.sky-loader--visible) body * { cursor: var(--sky-cursor), auto; }
 }
+
+/* Listing introductions and selected categories use a restrained sky tint. */
+html[data-sky] #main-content > .article-timeline__header.sky-page-heading {
+ --sky-hero-ink: var(--sky-ink);
+ --sky-text-veil: transparent;
+}
+html[data-sky] #main-content > .article-timeline__header.sky-page-heading .concept-landscape { opacity: .18; }
+html[data-sky] #main-content > .article-timeline__header.sky-page-heading { background: #fff; }
+html[data-sky] #main-content .article-filters__categories a[aria-current],
+html[data-sky] #main-content .pagination .current {
+ background: linear-gradient(135deg, color-mix(in srgb, var(--sky-top) 18%, #fff), color-mix(in srgb, var(--sky-middle) 18%, #fff), color-mix(in srgb, var(--sky-horizon) 18%, #fff));
+ color: var(--sky-ink);
+}
