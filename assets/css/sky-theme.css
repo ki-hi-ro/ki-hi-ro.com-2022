@@ -464,3 +464,8 @@ html[data-sky] #main-content.work-landing :is(#work-services,#work-profile) { ba
 
 /* Keep homepage sections close, with a consistent gap on every screen. */
 #main-content.work-landing .work-home__section { margin-top: 33px; }
+
+@media (max-width: 700px) {
+ #main-content.work-landing .work-hero--business { padding-bottom: 73px; margin-top: 12px; }
+ #main-content.work-landing .work-hero--business + .work-home__section { margin-top: 48px; }
+}
