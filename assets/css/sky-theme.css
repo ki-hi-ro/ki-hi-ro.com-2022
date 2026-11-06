@@ -618,3 +618,13 @@ html[data-sky] body.single-post #main-content.article-detail-layout .article-end
  .recent-journal__excerpt-desktop { display: none; }
  .recent-journal__excerpt-mobile { display: inline; }
 }
+
+/* The closing horizon shares the opening concept's full live sky palette. */
+html[data-sky] #main-content.work-landing .work-home-contact--horizon {
+ --sky-hero-ink: inherit;
+ --sky-button-ink: inherit;
+ --sky-text-veil: inherit;
+ background: linear-gradient(135deg,var(--sky-top),var(--sky-middle),var(--sky-horizon));
+ color: var(--sky-hero-ink);
+}
+html[data-sky] #main-content.work-landing .work-home-contact--horizon .contact-horizon { opacity: 1; }
