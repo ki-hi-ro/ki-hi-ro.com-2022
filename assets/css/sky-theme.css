@@ -702,3 +702,6 @@ html[data-sky] body.single-post #main-content.article-detail-layout .article-edi
  html[data-sky] body.single-post #main-content.article-detail-layout > .article-edit--actions { order: -2; }
  html[data-sky] body.single-post #main-content.article-detail-layout > .article-main-visual { order: -1; }
 }
+
+/* Balance the category row's space above and below its text. */
+html[data-sky] body.single-post #main-content.article-detail-layout .article-end-categories { padding-block: 24px; margin-block: 24px 0; }
