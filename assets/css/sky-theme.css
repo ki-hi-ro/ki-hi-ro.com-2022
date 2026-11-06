@@ -671,3 +671,7 @@ html[data-sky] body #main-content > .article-timeline__header.sky-page-heading {
  color: var(--sky-hero-ink);
 }
 html[data-sky] body #main-content > .article-timeline__header.sky-page-heading .concept-landscape { opacity: 1; }
+
+/* A modest image separates each timeline title from its excerpt. */
+#main-content .journal-chronology__thumbnail { width: min(100%,360px); margin: 16px 0; }
+#main-content .journal-chronology__thumbnail img { display: block; width: 100%; height: auto; max-height: 240px; object-fit: contain; object-position: left center; border-radius: 8px; }

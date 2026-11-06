@@ -25,6 +25,9 @@ foreach ($args['entries'] ?? array() as $entry) {
                 ?>
                 <article class="journal-chronology__entry">
                   <h3><a href="<?php echo esc_url(get_permalink($entry)); ?>"><?php echo esc_html(get_the_title($entry)); ?></a></h3>
+                  <?php $thumbnail = kihiro_article_thumbnail($entry->ID, 'medium_large'); if ($thumbnail) : ?>
+                    <div class="journal-chronology__thumbnail" aria-hidden="true"><?php echo wp_kses_post($thumbnail); ?></div>
+                  <?php endif; ?>
                   <?php if ($excerpt) : ?><p class="journal-chronology__excerpt"><a href="<?php echo esc_url(get_permalink($entry)); ?>"><?php echo esc_html($excerpt); ?></a></p><?php endif; ?>
                   <?php if ($tags) : ?>
                     <ul class="journal-chronology__tags" aria-label="記事のタグ">
