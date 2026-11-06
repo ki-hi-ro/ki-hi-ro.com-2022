@@ -23,9 +23,17 @@ add_action('after_setup_theme', 'kihiro_theme_setup');
 
 /** Keep the site tagline and homepage search description aligned. */
 function kihiro_site_description() {
-    return '個人事業主の柴田浩貴です。毎日ブログを更新しています。';
+    return '柴田浩貴です。毎日ブログを更新しています。';
 }
 add_filter('option_blogdescription', 'kihiro_site_description');
+
+add_filter('document_title_parts', function ($parts) {
+    if (is_front_page() || is_home()) {
+        $parts['title'] = kihiro_site_description();
+        $parts['tagline'] = get_bloginfo('name');
+    }
+    return $parts;
+});
 
 add_action('wp_head', function () {
     if (!is_front_page() && !is_home()) return;
