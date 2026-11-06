@@ -79,7 +79,7 @@
         var current = Math.max(0, window.scrollY);
         var header = document.querySelector('.site-header');
         if (header) {
-            aside.style.setProperty('--toc-header-bottom', Math.max(0, header.getBoundingClientRect().bottom) + 'px');
+            aside.style.setProperty('--toc-header-bottom', (header.offsetHeight + (parseFloat(window.getComputedStyle(header).top) || 0)) + 'px');
         }
         if (Math.abs(current - previousScroll) >= 8) {
             var show = current < previousScroll && main.getBoundingClientRect().top < 0;
