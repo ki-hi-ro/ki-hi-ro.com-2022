@@ -488,3 +488,17 @@ html[data-sky] #main-content.work-landing .work-hero--business .concept-landscap
 #main-content.work-landing #recent-journal .recent-journal__card > a > * { grid-column: 1; grid-row: auto; }
 #main-content.work-landing #recent-journal .recent-journal__thumbnail { width: 100%; aspect-ratio: auto; height: auto; }
 #main-content.work-landing #recent-journal .recent-journal__thumbnail img { position: static; display: block; width: 100%; height: auto; object-fit: contain; }
+
+/* Index cards keep images and text comfortably inside a rounded surface. */
+html[data-sky] #main-content .writing-card .writing-card__link {
+ box-sizing: border-box;
+ padding: 24px;
+ border-radius: 20px;
+ overflow: hidden;
+ background: #fff;
+}
+html[data-sky] #main-content .writing-card .article-timeline__thumbnail { border-radius: 12px; overflow: hidden; }
+html[data-sky] #main-content .writing-card .article-timeline__thumbnail img { border-radius: 12px; }
+@media (max-width: 700px) {
+ html[data-sky] #main-content .writing-card .writing-card__link { padding: 20px; border-radius: 16px; }
+}
