@@ -67,7 +67,6 @@
           </nav>
         <?php endif; ?>
 
-        <?php get_template_part('template-parts/monthly-archives'); ?>
       </article>
     <?php endwhile; ?>
   <?php endif; ?>
