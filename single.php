@@ -12,6 +12,13 @@
         <h1><?php echo esc_html(get_the_title()); ?></h1>
         <p class="article-updated-date">最終更新：<?php echo esc_html(get_the_modified_date('Y年n月j日 G時i分')); ?></p>
         </header>
+        <?php if (current_user_can('manage_options')) : ?>
+          <div class="article-edit article-edit--actions">
+            <?php $edit_url = current_user_can('edit_post', get_the_ID()) ? get_edit_post_link(get_the_ID(), 'raw') : ''; ?>
+            <?php if ($edit_url) : ?><a class="article-edit__link" href="<?php echo esc_url($edit_url); ?>">記事を編集</a><?php endif; ?>
+            <?php if (current_user_can('edit_posts')) : ?><a class="article-edit__link" href="<?php echo esc_url(admin_url('post-new.php')); ?>"><span aria-hidden="true">＋</span> 新規投稿</a><?php endif; ?>
+          </div>
+        <?php endif; ?>
       <?php get_template_part('template-parts/article-main-visual'); ?>
       <article class="journal-panel journal-panel--single db-single">
 
@@ -30,13 +37,7 @@
         <?php if ($post_categories) : ?><p class="article-end-categories">カテゴリー：<?php foreach ($post_categories as $index => $category) : ?><?php if ($index) echo ' / '; ?><a href="<?php echo esc_url(add_query_arg(array('view' => 'archive-all', 'article_category' => $category->term_id), home_url('/'))); ?>"><?php echo esc_html($category->name); ?></a><?php endforeach; ?></p><?php endif; ?>
         <?php if ($post_tags) : ?><p class="article-end-tags">タグ：<?php echo wp_kses_post($post_tags); ?></p><?php endif; ?>
 
-        <?php if (current_user_can('manage_options')) : ?>
-          <div class="article-edit article-edit--actions">
-            <?php $edit_url = current_user_can('edit_post', get_the_ID()) ? get_edit_post_link(get_the_ID(), 'raw') : ''; ?>
-            <?php if ($edit_url) : ?><a class="article-edit__link" href="<?php echo esc_url($edit_url); ?>">記事を編集</a><?php endif; ?>
-            <?php if (current_user_can('edit_posts')) : ?><a class="article-edit__link" href="<?php echo esc_url(admin_url('post-new.php')); ?>"><span aria-hidden="true">＋</span> 新規投稿</a><?php endif; ?>
-          </div>
-        <?php endif; ?>
+
 
         <?php get_template_part('template-parts/work-inquiry'); ?>
 
