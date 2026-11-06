@@ -424,3 +424,13 @@ html[data-sky] body #main-content .sky-page-heading {
  color: var(--sky-ink);
 }
 html[data-sky] body #main-content .sky-page-heading .concept-landscape { opacity: .18; }
+
+/* Keep the contact action recognizable while softening it on hover. */
+html[data-sky] body .site-header .site-main-nav a.site-main-nav__contact { transition: opacity .2s ease; }
+@media (hover: hover) {
+ html[data-sky] body .site-header .site-main-nav a.site-main-nav__contact:hover {
+  background: var(--sky-ink);
+  color: #fff;
+  opacity: .75;
+ }
+}
