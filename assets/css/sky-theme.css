@@ -396,3 +396,11 @@ html[data-sky] #main-content.work-landing #work-services .work-opportunity { bor
   color: var(--sky-ink);
  }
 }
+
+/* Editing actions deepen the current time palette on hover. */
+@media (hover: hover) {
+ html[data-sky] body #main-content :is(.article-edit,.article-create) .article-edit__link:hover {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--sky-top) 36%, #fff), color-mix(in srgb, var(--sky-middle) 36%, #fff), color-mix(in srgb, var(--sky-horizon) 36%, #fff));
+  color: var(--sky-ink);
+ }
+}
