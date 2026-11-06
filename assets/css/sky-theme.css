@@ -576,3 +576,13 @@ html[data-sky] body.single-post #main-content.article-detail-layout {
 @media (min-width: 1100px) {
  html[data-sky] body.single-post #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,1fr) 240px; }
 }
+
+/* One quiet white surface contains the article and its contents rail. */
+html[data-sky] body.single-post #main-content.article-detail-layout {
+ background: #fff;
+ border-radius: 20px;
+ padding: 32px;
+}
+@media (max-width: 700px) {
+ html[data-sky] body.single-post #main-content.article-detail-layout { border-radius: 16px; padding: 20px; }
+}
