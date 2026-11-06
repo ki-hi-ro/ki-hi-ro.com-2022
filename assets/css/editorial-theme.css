@@ -970,3 +970,11 @@ body #page-bottom.site-footer {
 .journal-chronology__entry > h3 > a::after { content: ''; position: absolute; inset: 0; z-index: 1; }
 .journal-chronology__entry .journal-chronology__tags a { position: relative; z-index: 2; }
 .journal-chronology__entry > h3 > a:focus-visible::after { outline: 2px solid var(--mag-accent); outline-offset: 4px; border-radius: 6px; }
+
+/* Give adjacent article titles and dates enough breathing room. */
+.article-navigation .article-navigation__link { padding: 28px; gap: 20px; }
+.article-navigation .article-navigation__title { line-height: 1.95; }
+.article-navigation .article-navigation__link time { padding-top: 8px; }
+@media (max-width: 700px) {
+ .article-navigation .article-navigation__link { padding: 24px; gap: 20px; }
+}
