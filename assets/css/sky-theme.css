@@ -628,3 +628,19 @@ html[data-sky] #main-content.work-landing .work-home-contact--horizon {
  color: var(--sky-hero-ink);
 }
 html[data-sky] #main-content.work-landing .work-home-contact--horizon .contact-horizon { opacity: 1; }
+
+/* Publishing actions use the same navy treatment as the header contact action. */
+html[data-sky] body #main-content .article-create .article-edit__link,
+html[data-sky] #main-content.work-landing #recent-journal .recent-journal__create a {
+ background: var(--sky-ink);
+ color: #fff;
+ transition: opacity .2s ease;
+}
+@media (hover: hover) {
+ html[data-sky] body #main-content .article-create .article-edit__link:hover,
+ html[data-sky] #main-content.work-landing #recent-journal .recent-journal__create a:hover {
+  background: var(--sky-ink);
+  color: #fff;
+  opacity: .75;
+ }
+}
