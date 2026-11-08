@@ -158,6 +158,7 @@ html[data-sky] #main-content.article-detail-layout .article-create .article-edit
 html[data-sky] #main-content.article-detail-layout .article-edit__link:hover,
 html[data-sky] #main-content.article-detail-layout .db-single .db-single__fields { background: var(--sky-panel); }
 html[data-sky] #main-content.article-detail-layout .db-single__content :is(blockquote,pre,th,td,.wp-block-group.has-background) { background-color: color-mix(in srgb, var(--sky-panel) 70%, #fff); color: var(--sky-ink); }
+#main-content.article-detail-layout.case-detail .db-single__content :is(th,td) { background-color: #fff; }
 html[data-sky] #main-content.article-detail-layout .db-single__content :is(blockquote,pre) { border: 0; border-radius: 8px; }
 html[data-sky] #main-content.article-detail-layout .db-single__content :is(h2,h3,h4,h5,h6) { background: transparent; color: var(--sky-ink); }
 html[data-sky] .work-home .work-profile {
