@@ -7,7 +7,7 @@
  border-radius: 0;
  box-shadow: none;
  padding: 12px 20px;
- margin: 16px 0;
+ margin-block: 16px;
  color: inherit;
  font-family: inherit;
  font-size: inherit;
@@ -15,6 +15,12 @@
  font-style: normal;
  line-height: 1.85;
  text-align: inherit;
+}
+html[data-sky] body #main-content.article-detail-layout .db-single__content blockquote:not(.wp-block-pullquote blockquote) {
+ margin-inline: 0;
+}
+.editor-styles-wrapper blockquote.wp-block-quote:not(.alignleft, .alignright) {
+ margin-inline: auto;
 }
 :is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote:not(.wp-block-pullquote blockquote)::before,
 :is(html[data-sky] body #main-content.article-detail-layout .db-single__content, .editor-styles-wrapper) blockquote:not(.wp-block-pullquote blockquote)::after { content: none; display: none; }
