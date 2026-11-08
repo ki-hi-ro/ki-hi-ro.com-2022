@@ -695,9 +695,9 @@ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-conten
 }
 
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-edit--actions { width: 100%; max-width: 720px; margin: 0 0 24px; padding: 0; border: 0; }
-html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-edit--actions .article-edit__link { background: var(--sky-ink); color: #fff; transition: opacity .2s ease; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-edit--actions .article-edit__link { background: #edf1f5; color: var(--sky-ink); transition: opacity .2s ease; }
 @media (hover: hover) {
- html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-edit--actions .article-edit__link:hover { background: var(--sky-ink); color: #fff; opacity: .75; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-edit--actions .article-edit__link:hover { background: #edf1f5; color: var(--sky-ink); opacity: .75; }
 }
 @media (max-width: 1099px) {
  html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout > .article-edit--actions { order: -2; }
