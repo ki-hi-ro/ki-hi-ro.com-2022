@@ -703,7 +703,7 @@ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-conten
  html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout > .article-main-visual { order: -1; }
 }
 
-html[data-sky] #main-content.article-detail-layout .article-end-tags a + a { margin-inline-start: 12px; }
+html[data-sky] #main-content.article-detail-layout .article-end-tags a + a { margin-inline-start: 8px; }
 
 /* Balance the category row's space above and below its text. */
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-end-categories { padding-block: 24px; margin-block: 24px 0; }
