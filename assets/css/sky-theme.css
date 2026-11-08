@@ -364,7 +364,7 @@ html[data-sky] #main-content.article-detail-layout .article-toc a[aria-current] 
   text-decoration: underline;
  }
 }
-html[data-sky] #main-content.article-detail-layout .article-toc nav { border-color: color-mix(in srgb, var(--sky-ink) 18%, transparent); }
+html[data-sky] #main-content.article-detail-layout .article-toc nav { border-top: 0; }
 
 @media (hover: hover) and (pointer: fine) {
  html[data-sky-cursor] .sky-loader--visible,
