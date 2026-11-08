@@ -544,7 +544,7 @@ html[data-sky] #main-content.article-detail-layout .db-single__content p:not([cl
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-navigation .article-navigation__link { background: transparent; padding: 20px 0; border-radius: 0; box-shadow: none; }
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc details { background: color-mix(in srgb,var(--sky-paper) 45%,#fff); box-shadow: none; }
 
-/* A 720px reading column with a quiet 240px desktop contents rail. */
+/* A 720px reading column with a quiet desktop contents rail. */
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout { max-width: 1072px; margin-inline: auto; padding: 24px 32px; }
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout :is(.journal-panel--single,.article-detail-heading,.article-main-visual) { width: 100%; max-width: 720px; margin-inline: 0; }
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-heading-categories { font-size: 13px; color: var(--sky-muted); }
@@ -556,8 +556,8 @@ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-conten
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc nav { padding: 0; }
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc a { padding: 8px; border-radius: 4px; font-size: 13px; line-height: 1.7; }
 @media (min-width: 1100px) {
- html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,720px) 240px; gap: 48px; }
- html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc { width: 240px; position: sticky; top: 24px; border-left: 1px solid var(--sky-line); padding-left: 16px; box-sizing: border-box; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,720px) 360px; gap: 48px; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc { width: 100%; position: sticky; top: 24px; border-left: 1px solid var(--sky-line); padding-left: 16px; box-sizing: border-box; }
 }
 @media (max-width: 1099px) {
  html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout { max-width: 768px; }
@@ -575,7 +575,7 @@ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-conten
  padding-inline: 0;
 }
 @media (min-width: 1100px) {
- html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,1fr) 240px; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,1fr) 360px; }
 }
 
 /* One quiet white surface contains the article and its contents rail. */
@@ -680,7 +680,7 @@ html[data-sky] body #main-content > .article-timeline__header.sky-page-heading .
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-toc a { padding-block: 8px; }
 @media (min-width: 1100px) {
  html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout.has-article-toc {
-  grid-template-columns: minmax(0,720px) 240px;
+  grid-template-columns: minmax(0,720px) 360px;
   column-gap: 24px;
  }
 }
@@ -725,7 +725,7 @@ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-conten
 
 /* Fill the article frame while retaining the compact contents gap. */
 @media (min-width: 1100px) {
- html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,1fr) 240px; column-gap: 24px; }
+ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout.has-article-toc { grid-template-columns: minmax(0,1fr) 360px; column-gap: 24px; }
  html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout :is(.journal-panel--single,.article-detail-heading,.article-main-visual,.article-edit--actions) { max-width: none; }
 }
 
