@@ -20,7 +20,7 @@ foreach ($args['entries'] ?? array() as $entry) {
               <?php foreach ($entries as $entry) : ?>
                 <?php
                 $excerpt = $entry->post_excerpt ?: $entry->post_content;
-                $excerpt = wp_html_excerpt(preg_replace('/\s+/u', ' ', wp_strip_all_tags(strip_shortcodes($excerpt))), 110, '…');
+                $excerpt = wp_html_excerpt(preg_replace('/\s+/u', ' ', wp_strip_all_tags(strip_shortcodes($excerpt))), 330, '…');
                 $tags = get_the_tags($entry->ID);
                 ?>
                 <article class="journal-chronology__entry">
