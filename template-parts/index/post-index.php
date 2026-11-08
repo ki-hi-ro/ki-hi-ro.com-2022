@@ -11,6 +11,19 @@ $archive_category = $archive_category_id ? get_term($archive_category_id, 'categ
 $archive_tag_id = $is_full_archive ? kihiro_selected_article_tag() : 0;
 $archive_tag = $archive_tag_id ? get_term($archive_tag_id, 'post_tag') : null;
 $archive_title = $archive_tag instanceof WP_Term ? $archive_tag->name : ($archive_category instanceof WP_Term ? $archive_category->name : '日々の記録');
+// Curated lines from published posts. The travel line is a short adaptation.
+$category_quotes = array(
+    '技術・開発' => '結局、AIがいくら進化しても学び続けなければならない', // Post 43629.
+    '思考・生き方' => '何度だって立ち上がっていける', // Post 43873.
+    '健康・セルフケア' => '疲れや負の感情をしっかりと受信して、休んだほうがいい。', // Post 43353.
+    '仕事・キャリア' => '説明力はブログを書くことで磨かれるはずだ。', // Post 43403.
+    '旅・場所' => '場所が変われば、思考も変わる', // Post 40263.
+    'お金・制度' => 'そもそも、住居などの基本的なセーフティーは全国民に確保されている', // Post 42901.
+    '趣味・娯楽' => '内側からの熱量で、人を感動させる', // Post 42802.
+);
+$category_quote = $archive_category instanceof WP_Term && !($archive_tag instanceof WP_Term)
+    ? ($category_quotes[$archive_category->name] ?? '')
+    : '';
 $is_article_search = is_search();
 $is_article_tag = is_tag();
 $is_reading_list = $is_full_archive || $is_article_search || $is_article_tag;
@@ -67,7 +80,11 @@ if ($is_reading_list || (is_home() && !$is_full_archive)) {
     <div>
       <p class="magazine-eyebrow"><?php echo $is_full_archive ? 'DAILY JOURNAL' : 'WRITING ARCHIVE'; ?></p>
       <h1><?php echo esc_html($archive_title); ?></h1>
-      <p><?php echo esc_html(number_format_i18n($is_full_archive ? $wp_query->found_posts : count($wp_query->posts))); ?>記事の記録。</p>
+      <?php if ($category_quote !== '') : ?>
+        <p>「<?php echo esc_html($category_quote); ?>」</p>
+      <?php else : ?>
+        <p><?php echo esc_html(number_format_i18n($is_full_archive ? $wp_query->found_posts : count($wp_query->posts))); ?>記事の記録。</p>
+      <?php endif; ?>
     </div>
   </header>
   <?php endif; ?>
