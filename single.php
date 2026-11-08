@@ -4,7 +4,7 @@
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <?php
-      $post_tags       = get_the_tag_list('', '');
+      $post_tags       = get_the_tag_list('', ' ');
       $post_categories = get_the_category();
       ?>
         <header class="article-detail-heading">
@@ -36,13 +36,6 @@
 
         <?php if ($post_categories) : ?><p class="article-end-categories">カテゴリー：<?php foreach ($post_categories as $index => $category) : ?><?php if ($index) echo ' / '; ?><a href="<?php echo esc_url(add_query_arg(array('view' => 'archive-all', 'article_category' => $category->term_id), home_url('/'))); ?>"><?php echo esc_html($category->name); ?></a><?php endforeach; ?></p><?php endif; ?>
         <?php if ($post_tags) : ?><p class="article-end-tags">タグ：<?php echo wp_kses_post($post_tags); ?></p><?php endif; ?>
-
-
-
-        <?php get_template_part('template-parts/work-inquiry'); ?>
-
-
-
 
         <?php
         $previous_post = get_previous_post();
