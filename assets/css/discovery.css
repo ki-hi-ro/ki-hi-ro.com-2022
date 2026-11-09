@@ -455,6 +455,13 @@ body .about-body > section:first-child { padding-top: 0; }
 .work-experience { padding: 28px; background: #f5f5f7; border-radius: 16px; scroll-margin-top: 40px; overflow-wrap: anywhere; }
 .work-experience__period, .work-experience__role, .work-experience__tech { color: #6e6e73; font-size: 13px; line-height: 1.8; }
 .work-experience h3 { font-size: 21px; font-weight: 600; line-height: 1.7; margin: 12px 0; }
+.work-experience .work-experience__illustration {
+  display: block;
+  width: 100%;
+  max-width: 384px;
+  height: auto;
+  margin-block: 16px;
+}
 .work-experience h4 { font-size: 15px; font-weight: 600; margin: 24px 0 8px; }
 .work-experience > p:not([class]), .work-experience ul { font-size: 14px; line-height: 1.9; }
 .work-experience ul { padding-left: 1.4em; }

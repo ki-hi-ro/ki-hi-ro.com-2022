@@ -8,6 +8,9 @@ $experiences = kihiro_work_experiences();
       <article class="work-experience" id="experience-<?php echo esc_attr($key); ?>">
         <p class="work-experience__period"><?php echo esc_html($experience['period']); ?></p>
         <h3><?php echo esc_html($experience['title']); ?></h3>
+        <?php if (!empty($experience['illustration'])) : ?>
+          <img class="work-experience__illustration" src="<?php echo esc_url(get_theme_file_uri('assets/images/experience/' . $experience['illustration'])); ?>" alt="" width="384" height="120" decoding="async">
+        <?php endif; ?>
         <p class="work-experience__role"><?php echo esc_html($experience['role']); ?></p>
         <p><?php echo esc_html($experience['context']); ?></p>
         <h4>私が担当したこと</h4><ul><?php foreach ($experience['tasks'] as $task) : ?><li><?php echo esc_html($task); ?></li><?php endforeach; ?></ul>

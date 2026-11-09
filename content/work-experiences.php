@@ -2,6 +2,7 @@
 /** 本人提供の職務経歴書と補足・訂正に基づく、担当経験の公開用要約。 */
 return array(
     'etl' => array(
+        'illustration' => 'etl.svg',
         'article_ids' => array(25448, 28408, 28891),
         'title' => '既存の処理を読み解き、PentahoからPythonへ移行',
         'period' => '2024.10–2025.06', 'role' => '3名のチームのメンバー',
@@ -11,6 +12,7 @@ return array(
         'tech' => 'Python / pandas / NumPy / SQLAlchemy / PostgreSQL / Pentaho / Linux / GitLab',
     ),
     'bi' => array(
+        'illustration' => 'bi.svg',
         'article_ids' => array(22934, 20894),
         'title' => 'Power BIのクラウド移行で、環境差による問題を切り分ける',
         'period' => '2024.04–2024.09', 'role' => '約10名のチームのメンバー',
@@ -20,6 +22,7 @@ return array(
         'tech' => 'Power BI / Power BI Service / Power Query M / DAX / SharePoint / PostgreSQL / Oracle Database / SQL Server',
     ),
     'api' => array(
+        'illustration' => 'api.svg',
         'article_ids' => array(31176, 31678, 31722),
         'title' => '工場搬送システムで、位置情報と経路を返すAPIを追加',
         'period' => '2025.07–2025.09', 'role' => '開発メンバー',
@@ -29,6 +32,7 @@ return array(
         'tech' => 'Python / FastAPI / REST API / JSON / Docker / Red Hat系Linux',
     ),
     'web' => array(
+        'illustration' => 'web.svg',
         'article_ids' => array(3666, 3279, 14146),
         'title' => '制作会社の継続案件で、デザインからWordPressを実装',
         'period' => '2020.03–2022.10', 'role' => 'フリーランスのコーダー・Web制作者',
@@ -38,6 +42,7 @@ return array(
         'tech' => 'HTML / CSS / Sass / JavaScript / jQuery / PHP / WordPress / MySQL',
     ),
     'maintenance' => array(
+        'illustration' => 'maintenance.svg',
         'article_ids' => array(36342, 36435),
         'title' => '就業管理システムで、問い合わせの原因調査と移行を担当',
         'period' => '2025.11–2026.05', 'role' => '約6名のチームのメンバー',
@@ -47,6 +52,7 @@ return array(
         'tech' => 'SQL Server / システム設定 / データ移行 / 通信テスト',
     ),
     'specification' => array(
+        'illustration' => 'specification.svg',
         'article_note' => 'この案件そのものの記録ではなく、課題を整理して要件を言語化する考え方についての記事です。',
         'article_ids' => array(40497),
         'title' => '英語の法規文書と既存仕様を確認し、自動車関連の仕様書を改版',
