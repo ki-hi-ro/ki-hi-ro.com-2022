@@ -65,9 +65,9 @@
         root.setAttribute('data-sky', 'active');
         var cursorScene = hour >= 5 && hour < 19 ? 'sun' : 'moon';
         if (root.getAttribute('data-sky-cursor') !== cursorScene) root.setAttribute('data-sky-cursor', cursorScene);
-        if (hero) {
-            hero.setAttribute('data-scene', hour < 5 || hour >= 19 ? 'night' : hour < 10 ? 'dawn' : hour < 17 ? 'day' : 'dusk');
-        }
+        var scene = hour < 5 || hour >= 19 ? 'night' : hour < 10 ? 'dawn' : hour < 17 ? 'day' : 'dusk';
+        if (root.getAttribute('data-sky-scene') !== scene) root.setAttribute('data-sky-scene', scene);
+        if (hero) hero.setAttribute('data-scene', scene);
         {
             var nightProgress = ((hour + 5) % 24) / 10;
             document.querySelectorAll('.concept-landscape').forEach(function (svg) {

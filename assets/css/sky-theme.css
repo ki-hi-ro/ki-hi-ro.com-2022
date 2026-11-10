@@ -385,6 +385,9 @@ html[data-sky] body #main-content .pagination .current {
  background: linear-gradient(135deg, color-mix(in srgb, var(--sky-top) 18%, #fff), color-mix(in srgb, var(--sky-middle) 18%, #fff), color-mix(in srgb, var(--sky-horizon) 18%, #fff));
  color: var(--sky-ink);
 }
+html[data-sky-scene="day"] body #main-content :is(.article-filters__categories a[aria-current],.pagination .current) {
+ background: var(--sky-paper);
+}
 
 /* Keep informational homepage sections quieter than the concept landscape. */
 html[data-sky] #main-content.work-landing :is(#work-services,#work-profile) {
