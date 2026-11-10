@@ -309,7 +309,7 @@ body .db-single__content h2 { margin: 64px 0 26px; padding: 18px 0 0; border: 0;
 .article-detail-layout .article-main-visual { width: 100%; margin: 0 0 52px; border-radius: 0; overflow: hidden; background: transparent; }
 .article-main-visual img { display: block; width: 100%; height: auto; max-height: 660px; object-fit: contain; margin: auto; }
 .article-detail-layout .article-detail-heading { background: none; border: 0; border-radius: 0; padding: 0; margin-bottom: 32px; text-align: left; }
-.article-detail-layout .article-detail-heading h1 { font-size: clamp(28px,3vw,42px); line-height: 1.6; margin: 12px 0 0; text-align: left; }
+.article-detail-layout .article-detail-heading h1 { font-size: clamp(28px,3vw,42px); line-height: 1.6; margin: 0; text-align: left; }
 .article-detail-heading .journal-single-date { color: #707070; font-size: 12px; margin: 0; }
 @media(max-width:1099px) {
  .article-detail-layout .article-main-visual { margin-bottom: 32px; }
@@ -693,7 +693,7 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
  text-align: center;
 }
 #main-content.article-detail-layout .article-detail-heading h1 {
- margin: 16px auto 24px;
+ margin: 0 auto 24px;
  padding: 0;
  font-size: clamp(26px, 3vw, 36px);
  font-weight: 600;
@@ -705,7 +705,7 @@ body .article-detail-layout .db-single__content h3 { margin-top: 28px; padding-t
 #main-content.article-detail-layout .article-detail-heading .journal-single-date { margin: 0; text-align: center; }
 @media (max-width: 700px) {
  #main-content.article-detail-layout .article-detail-heading { padding: 32px 22px; margin-bottom: 32px; border-radius: 10px; }
- #main-content.article-detail-layout .article-detail-heading h1 { font-size: 26px; margin-block: 12px 18px; }
+ #main-content.article-detail-layout .article-detail-heading h1 { font-size: 26px; margin-block: 0 18px; }
 }
 
 /* Published records form a timeline, with one date shared by each day's entries. */

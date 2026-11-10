@@ -538,7 +538,7 @@ html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-conten
 }
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-detail-heading > :is(p,h1) { text-align: left; margin: 0; color: var(--sky-ink); }
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-detail-heading .journal-single-date { color: var(--sky-muted); font-size: 13px; }
-html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-detail-heading h1 { flex-basis: 100%; font-size: clamp(24px,2.5vw,32px); line-height: 1.65; margin-top: 8px; }
+html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-detail-heading h1 { flex-basis: 100%; font-size: clamp(24px,2.5vw,32px); line-height: 1.65; }
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-main-visual { background: transparent; border-radius: 0; margin: 0 0 28px; }
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .article-main-visual img { display: block; width: 100%; max-width: 100%; max-height: none; height: auto; margin-inline: 0; border-radius: 0; }
 html[data-sky] body:is(.single-post,.page-template-page-case-study) #main-content.article-detail-layout .db-single .db-single__fields { background: transparent; padding: 0; border-radius: 0; margin-bottom: 32px; row-gap: 10px; font-size: 13px; }
