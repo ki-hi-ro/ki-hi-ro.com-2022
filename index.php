@@ -9,6 +9,12 @@ if (is_home() && !is_paged() && '' === kihiro_get_request_value('view') && '' ==
     return;
 }
 
+if (is_home() && 'all-titles' === kihiro_get_request_value('view')) {
+    get_template_part('template-parts/index/all-titles');
+    get_footer();
+    return;
+}
+
 if (is_search()) {
     get_template_part('template-parts/index/search-results');
     get_footer();

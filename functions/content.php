@@ -70,7 +70,7 @@ function kihiro_redirect_empty_search() {
         return;
     }
 
-    wp_safe_redirect(add_query_arg('view', 'archive-all', kihiro_logo_home_url()));
+    wp_safe_redirect(add_query_arg('view', 'all-titles', kihiro_logo_home_url()));
     exit;
 }
 add_action('template_redirect', 'kihiro_redirect_empty_search', 0);
@@ -232,7 +232,15 @@ function kihiro_configure_main_query($query) {
         return;
     }
 
-    if ($query->is_home() && 'archive-all' === kihiro_get_request_value('view')) {
+    if ($query->is_home() && 'all-titles' === kihiro_get_request_value('view')) {
+        $query->set('post_type', 'post');
+        $query->set('posts_per_page', -1);
+        $query->set('post_status', 'publish');
+        $query->set('has_password', false);
+        $query->set('no_found_rows', true);
+        $query->set('ignore_sticky_posts', true);
+        $query->set('orderby', array('date' => 'ASC', 'ID' => 'ASC'));
+    } elseif ($query->is_home() && 'archive-all' === kihiro_get_request_value('view')) {
         // 全記事のタイムラインは公開日時順に10件ずつ表示する。
         $query->set('posts_per_page', 10);
         if (kihiro_selected_article_category()) $query->set('cat', kihiro_selected_article_category());

@@ -498,6 +498,18 @@ body .about-body > section:first-child { padding-top: 0; }
   text-underline-offset: 0.18em;
 }
 .work-experience__articles time { display: block; margin-top: 4px; font-size: 12px; color: var(--mag-muted); }
+.all-article-titles__header { margin-bottom: 40px; }
+.all-article-titles__header .search-form { width: 100%; max-width: 400px; }
+.all-article-titles__month { margin-block: 32px; }
+.all-article-titles__month h2 { font-size: 20px; margin-bottom: 16px; }
+.all-article-titles__month ul { list-style: none; margin: 0; padding: 0 0 0 16px; border-left: 1px solid var(--sky-line, #cdddeb); }
+.all-article-titles__month li { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 16px; padding-block: 12px; }
+.all-article-titles__month time { color: var(--sky-muted, #52667e); font-size: 13px; line-height: 1.8; }
+.all-article-titles__month a { color: var(--sky-ink, #23354b); line-height: 1.8; overflow-wrap: anywhere; }
+.all-article-titles__month a:hover { text-decoration: underline; text-underline-offset: .18em; }
+@media (max-width: 700px) {
+ .all-article-titles__month li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+}
 /* 抽象的なテーマから、具体的なタグへ辿る。 */
 .tag-tree-picker { position: relative; width: min(300px, 100%); min-width: 180px; }
 .tag-tree-picker > summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; box-sizing: border-box; padding: 10px 14px; list-style: none; border-radius: 10px; background: var(--discovery-soft); color: var(--mag-ink); cursor: pointer; }
